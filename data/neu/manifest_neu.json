@@ -1,8 +1,8 @@
 {
-  "erzeugt_utc": "2026-09-23T16:46:42Z",
+  "erzeugt_utc": "2026-09-23T20:51:14Z",
   "reihen": {
     "cboe_skew:skew": {
-      "abruf_utc": "2026-09-23T16:46:42Z",
+      "abruf_utc": "2026-09-23T20:51:14Z",
       "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
       "datei": "data/neu/cboe_skew/skew.csv.gz",
       "einheit": "Indexpunkte",
@@ -17,7 +17,7 @@
       "zeilen": 9232
     },
     "ecb_fx:eurchf": {
-      "abruf_utc": "2026-09-23T16:46:42Z",
+      "abruf_utc": "2026-09-23T20:51:14Z",
       "beschreibung": "EZB Referenzkurs CHF/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurchf.csv.gz",
       "einheit": "CHF je EUR",
@@ -32,7 +32,7 @@
       "zeilen": 7099
     },
     "ecb_fx:eurcny": {
-      "abruf_utc": "2026-09-23T16:46:42Z",
+      "abruf_utc": "2026-09-23T20:51:14Z",
       "beschreibung": "EZB Referenzkurs CNY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurcny.csv.gz",
       "einheit": "CNY je EUR",
@@ -47,7 +47,7 @@
       "zeilen": 6832
     },
     "ecb_fx:eurjpy": {
-      "abruf_utc": "2026-09-23T16:46:42Z",
+      "abruf_utc": "2026-09-23T20:51:14Z",
       "beschreibung": "EZB Referenzkurs JPY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurjpy.csv.gz",
       "einheit": "JPY je EUR",
@@ -61,8 +61,23 @@
       "verfuegbar_nach_tagen": 0,
       "zeilen": 7099
     },
+    "nyfed_rrp:rrp": {
+      "abruf_utc": "2026-09-23T20:51:14Z",
+      "beschreibung": "NY Fed Overnight Reverse Repo Facility (ON RRP), taegliches Gesamtvolumen der akzeptierten Gebote (Treasury-Sicherheiten)",
+      "datei": "data/neu/nyfed_rrp/rrp.csv.gz",
+      "einheit": "Milliarden USD",
+      "erste": "2003-02-07",
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich, Handelstage)",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 3332
+    },
     "snb_saron:saron": {
-      "abruf_utc": "2026-09-23T16:46:42Z",
+      "abruf_utc": "2026-09-23T20:51:14Z",
       "beschreibung": "SARON Uebernacht-Referenzzinssatz (Schlusskurs), SNB Datenportal Cube zirepo, Dimension H0",
       "datei": "data/neu/snb_saron/saron.csv.gz",
       "einheit": "Prozent",
@@ -77,22 +92,22 @@
       "zeilen": 6863
     },
     "treasury_tga:tga": {
-      "abruf_utc": "2026-09-23T16:46:42Z",
+      "abruf_utc": "2026-09-23T20:51:14Z",
       "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
       "datei": "data/neu/treasury_tga/tga.csv.gz",
       "einheit": "Millionen USD",
       "erste": "2005-10-03",
-      "letzte": "2026-09-21",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
       "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 5267
+      "zeilen": 5268
     },
     "usgs_erdbeben:anzahl_m5": {
-      "abruf_utc": "2026-09-23T16:46:42Z",
+      "abruf_utc": "2026-09-23T20:51:14Z",
       "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
       "datei": "data/neu/usgs_erdbeben/anzahl_m5.csv.gz",
       "einheit": "Anzahl Ereignisse",

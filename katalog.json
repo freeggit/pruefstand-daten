@@ -83,15 +83,26 @@
   },
   {
     "id": "nyfed_rrp",
-    "name": "NY Fed Reverse Repo Operations Volume",
-    "url": "https://markets.newyorkfed.org",
-    "domain": "markets.newyorkfed.org",
+    "name": "NY Fed Overnight Reverse Repo Facility (ON RRP), taegliches Volumen",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD",
+    "domain": "fred.stlouisfed.org",
     "bereich": "Geldmarkt",
-    "status": "kandidat",
-    "grund": "",
-    "reihen": [],
+    "status": "aktiv",
+    "grund": "K1-K7 erfuellt: taeglich an Handelstagen (Gesamt-Median 1 Tag; die direkte NY-Fed-API markets.newyorkfed.org/api/rp/... unter mehreren dokumentierten Pfadvarianten (last/N.json, results/search.json mit startDate/endDate) liefert entweder nur ein rollendes Fenster von max. ca. 900 Operationen (400 Bad Request darueber) oder 400 ohne Body fuer die Datumsbereichs-Suche, daher stattdessen die von NY Fed gespeiste, oeffentliche FRED-CSV-Spiegelung RRPONTSYD ohne Login/Schluessel verwendet, Wert 2026-09-23 = 0.461 Mrd. deckt sich mit dem direkt bei der NY-Fed-API abgefragten Tageswert totalAmtAccepted=461000000 USD). Historie ab 2003 mit vereinzelten Werten vor 2013 (Testoperationen) und durchgehend taeglich seit September 2013, erster Wert 2003-02-07 weit vor 31.12.2015, ueber 3300 Werte. Reihe ist das tatsaechliche, nicht revidierbare Ergebnis abgeschlossener Fed-Operationen (kein Schaetzwert), letzter Wert vom Abruftag selbst. Nicht im bestehenden Spiegel (RRPONTSYD ist keine der gelisteten FRED-Serien). Datei klein, Abruf <5 Sek. Werte 0 bis 2553.7 Mrd. plausibel (Hoechststand 2022/2023 bekannt).",
+    "reihen": [
+      {
+        "reihe": "rrp",
+        "zeilen": 3332,
+        "erste": "2003-02-07",
+        "letzte": "2026-09-23",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0258,
+        "min": 0.0,
+        "max": 2553.716
+      }
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T20:47:00Z"
   },
   {
     "id": "ecb_fx",
@@ -245,14 +256,14 @@
   {
     "id": "gfz_kp",
     "name": "GFZ geomagnetischer Kp-Index",
-    "url": "https://kp.gfz.de",
+    "url": "https://kp.gfz.de/app/json/",
     "domain": "kp.gfz.de",
     "bereich": "Kontrolle",
-    "status": "kandidat",
-    "grund": "",
+    "status": "abgelehnt",
+    "grund": "K4 verletzt: die GFZ-Webservice-API (kp.gfz.de/app/json) markiert jeden Wert mit einem Status 'pre' (praeliminaer) oder 'def' (definitiv). Werte werden erst nach Pruefung aller Bodenobservatorien von 'pre' auf 'def' gesetzt; Stichprobe am Lauftag zeigte noch am 2026-09-10 (13 Tage zurueck) durchgehend Status 'pre', 'def' fuer den Status-Filter im September 2026 komplett leer. D.h. entweder man nimmt nur status=def (dann ist K5 'laufend, hoechstens 10 Tage alt' verletzt, da 'def' erst mit mehrwoechiger Verzoegerung vorliegt) oder man nimmt 'pre'-Werte (dann werden diese Werte spaeter auf 'def' revidiert, K4 verletzt, analog zu revidierter Wirtschaftsstatistik). Bei kuenftig kuerzerer Definitiv-Verzoegerung oder Nachweis, dass 'pre' praktisch nie von 'def' abweicht, erneut pruefen.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T20:47:00Z"
   },
   {
     "id": "gdelt_ereignisse",
@@ -268,14 +279,14 @@
   },
   {
     "id": "wikipedia_weitere",
-    "name": "Wikipedia Pageviews weiterer Artikel",
-    "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/",
+    "name": "Wikipedia Pageviews weiterer Artikel (de.wikipedia: Zinssenkung, Konkurs, Duerre, Hurrikan, Streik, Pandemie)",
+    "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/",
     "domain": "wikimedia.org",
     "bereich": "Aufmerksamkeit",
-    "status": "kandidat",
-    "grund": "",
+    "status": "fehler",
+    "grund": "Abrufversuch scheiterte an Rate-Limit der Wikimedia-API (HTTP 429, x-envoy-ratelimited, retry-after 30-40s) auf der geteilten Ausgangs-IP dieser Umgebung; wiederholt auch nach Wartezeit und fuer verschiedene Artikel/Datumsbereiche reproduziert, daher gemaess Vorgabe (403/429 = Befund, Status 'fehler', naechster Lauf erneut) nicht umgangen (kein Proxy-/Kennungswechsel). quellen/wikipedia_weitere.py ist fertig implementiert (6 Artikel, Retry mit Retry-After-Header, Enddatum 2 Tage vor Abruf wegen Publikationsverzug) und sollte beim naechsten Lauf erneut versucht werden; zusaetzlich noch zu pruefen, ob der Artikeltitel 'Zinssenkung' auf de.wikipedia existiert (ein 404 trat unabhaengig vom Rate-Limit einmal auf, evtl. falscher/nicht eigenstaendiger Lemma-Titel).",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T20:50:00Z"
   }
 ]
