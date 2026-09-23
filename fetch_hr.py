@@ -7,13 +7,15 @@ Fehler landen in data/hr/manifest_hr.json, alte Dateien bleiben stehen."""
 import csv, gzip, io, json, os, sys, time, urllib.request, urllib.parse
 from datetime import datetime, timezone, date, timedelta
 
-UA = {"User-Agent": "pruefstand-daten/1.1 (GitHub Actions; public research mirror; contact via github.com/freeggit)"}
+UA = {"User-Agent": "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"}
 OUT = "data/hr"
 HEUTE = datetime.now(timezone.utc).date()
 JAHR = HEUTE.year
 man = {"erzeugt_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "reihen": {}}
 START = time.time()
 BUDGET_MIN = float(os.environ.get("HR_BUDGET_MIN", "25"))   # danach wird gespeichert, der Rest folgt im nächsten Lauf
+TEILE = [t.strip() for t in os.environ.get("HR_TEILE", "pegel,wiki,energie,wetter").split(",") if t.strip()]
+MANIFEST = os.environ.get("HR_MANIFEST", "manifest_hr.json")   # Zweig claude/daten-energie: manifest_energie.json
 
 def zeit_um(key=None):
     if (time.time() - START) / 60 > BUDGET_MIN:
@@ -257,7 +259,7 @@ def inventar():
 
 def manifest_schreiben():
     inventar()
-    with open(f"{OUT}/manifest_hr.json", "w", encoding="utf-8") as f:
+    with open(f"{OUT}/{MANIFEST}", "w", encoding="utf-8") as f:
         json.dump(man, f, ensure_ascii=False, indent=1)
     n_err = sum(1 for v in man["reihen"].values() if "fehler" in v)
     log(f"Manifest: {len(man['reihen'])} Reihen, {n_err} mit Fehlern")
@@ -267,7 +269,9 @@ if __name__ == "__main__":
     if "--manifest" in sys.argv:          # nur Bestand inventarisieren (Sicherheitsschritt im Workflow)
         manifest_schreiben(); sys.exit(0)
     umstellen()
-    for teil in (pegel, wiki, energie, wetter):   # Pegel zuerst: Quelle hält nur 31 Tage
+    alle = {"pegel": pegel, "wiki": wiki, "energie": energie, "wetter": wetter}   # Pegel zuerst: Quelle hält nur 31 Tage
+    man["teile"] = TEILE
+    for teil in [alle[t] for t in TEILE]:
         log(f"Start {teil.__name__}")
         try:
             teil()
