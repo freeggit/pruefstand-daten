@@ -1,0 +1,48 @@
+{
+ "erzeugt_utc": "2026-09-23T14:30:11Z",
+ "reihen": {
+  "energie:preis_ch": {
+   "dateien": [
+    "data/hr/energie/preis_ch_2017.csv.gz",
+    "data/hr/energie/preis_ch_2019.csv.gz",
+    "data/hr/energie/preis_ch_2021.csv.gz",
+    "data/hr/energie/preis_ch_2023.csv.gz",
+    "data/hr/energie/preis_ch_2024.csv.gz",
+    "data/hr/energie/preis_ch_2026.csv.gz"
+   ],
+   "zeilen": 50207,
+   "letzte": "2026-09-23T21:00:00Z",
+   "einheit": "EUR/MWh",
+   "aufloesung": "1h",
+   "quelle": "energy-charts.info",
+   "fehler": "2015: <urlopen error _ssl.c:999: The handshake operation timed out>",
+   "erste": "2016-12-31T23:00:00Z"
+  },
+  "energie:erzeugung_ch": {
+   "dateien": [
+    "data/hr/energie/erzeugung_ch_2025.csv.gz",
+    "data/hr/energie/erzeugung_ch_2026.csv.gz"
+   ],
+   "zeilen": 15133,
+   "letzte": "2026-09-23T11:00:00Z",
+   "einheit": "MW",
+   "quelle": "energy-charts.info",
+   "hinweis": "Zeitbudget 8 min erschöpft, fehlende Jahre folgen im nächsten Lauf",
+   "erste": "2024-12-31T23:00:00Z"
+  },
+  "energie:preis_de": {
+   "dateien": [],
+   "zeilen": 0,
+   "hinweis": "Zeitbudget 8 min erschöpft, fehlende Jahre folgen im nächsten Lauf"
+  },
+  "energie:erzeugung_de": {
+   "dateien": [],
+   "zeilen": 0,
+   "hinweis": "Zeitbudget 8 min erschöpft, fehlende Jahre folgen im nächsten Lauf"
+  }
+ },
+ "teile": [
+  "energie"
+ ],
+ "zeitbudget_erschoepft": true
+}
