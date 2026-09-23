@@ -2,6 +2,7 @@
 # US-ETFs (Stooq-Suffix .us wird vom Skript angehängt)
 spy
 acwi
+efa
 ewj
 xlb
 xlc

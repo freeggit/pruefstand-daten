@@ -72,8 +72,13 @@ def yahoo_chart(ticker):
         raise RuntimeError(f"Yahoo lieferte Granularitaet {gran} statt 1d")
     ts = res["timestamp"]; q = res["indicators"]["quote"][0]
     adj = res["indicators"].get("adjclose", [{}])[0].get("adjclose", [None] * len(ts))
+    # Laufender Handelstag: Balken ist unvollständig (Abruf während der Börsenzeit) -> weglassen
+    reg = (res.get("meta", {}).get("currentTradingPeriod") or {}).get("regular") or {}
+    offen_ab = reg.get("start") if reg.get("end") and time.time() < reg["end"] else None
     rows = []
     for i, t in enumerate(ts):
+        if offen_ab is not None and t >= offen_ab:
+            continue
         o, h, l, c, v = q["open"][i], q["high"][i], q["low"][i], q["close"][i], q["volume"][i]
         if None in (o, h, l, c):
             continue

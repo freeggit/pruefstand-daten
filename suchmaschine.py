@@ -23,7 +23,7 @@ import io, json, os, sys, urllib.request, zipfile
 import numpy as np, pandas as pd
 
 STICHTAG = pd.Timestamp("2020-12-31")
-HORIZONTE = [1, 5, 20, 126]
+HORIZONTE = [1, 5, 20]          # V3.2 (E1): 126 Tage gestrichen, passt nicht zum Ziel Kurzsprung
 T_MIN, T_VOR = 4.5, 3.5
 T_BASIS = 4.5
 KUM_VORHER = int(os.environ.get("PS_KUM_VORHER", "0"))   # V3.1: Kandidaten aller früheren Suchläufe (aus suche/S####)
@@ -62,17 +62,47 @@ for k, v in man["reihen"].items():
     if k.startswith("kurse:") and "fehler" not in v and v.get("granularitaet") == "1d":
         t = k.split(":", 1)[1]
         d = pd.read_csv(lade(f"kurse/{t}_d.csv"), parse_dates=["Date"]).drop_duplicates("Date").set_index("Date").sort_index()
-        kurse[t] = d[["Open", "Close"]].astype(float)
+        if "AdjClose" in d and d.AdjClose.notna().mean() > 0.99:
+            f = (d.AdjClose / d.Close).astype(float)            # Dividenden und Splits: Gesamtrendite
+            kurse[t] = pd.DataFrame({"Open": d.Open * f, "Close": d.AdjClose}).astype(float)
+        else:
+            kurse[t] = d[["Open", "Close"]].astype(float)
+            print(f"Hinweis: {t} ohne AdjClose, Kursrendite ohne Dividenden", flush=True)
 acwi = kurse.pop("acwi")
-KAL = acwi.index                                   # Handelskalender = ACWI
-ZIELE = sorted(t for t in kurse if "." not in t)   # V3 O3: Einzeltitel nur Indikator, nie Ziel
+# V3.2 (E2): Ersatz-Benchmark vor dem ACWI-Start (28.3.2008), nur für die Discovery:
+# 55% SPY + 45% EFA, fest gewichtet je Wechsel (Kauf zur Eröffnung, Verkauf zum Schluss).
+BENCH_NUR = {"efa"}                                # Reihen nur für den Ersatz-Benchmark, nie Ziel
+ERSATZ = {"spy": 0.55, "efa": 0.45}
+ACWI_START = acwi.index[0]
+if all(t in kurse for t in ERSATZ):
+    vor = kurse["spy"].index.intersection(kurse["efa"].index)
+    vor = vor[vor < ACWI_START]
+    KAL = vor.append(acwi.index)                   # Handelskalender: SPY/EFA vor 2008, danach ACWI
+    print(f"Ersatz-Benchmark 55% SPY + 45% EFA von {vor[0].date()} bis {ACWI_START.date()}", flush=True)
+else:
+    KAL = acwi.index
+    print("Ersatz-Benchmark nicht verfügbar (EFA fehlt), Kalender = ACWI", flush=True)
+ZIELE = sorted(t for t in kurse if "." not in t and t not in BENCH_NUR)   # V3 O3: Einzeltitel nie Ziel
+
+def bench_rendite(h):
+    """Rendite des Benchmarks über h Tage ab Eröffnung Tag i: ACWI, vor dem ACWI-Start der Ersatz."""
+    a = acwi.reindex(KAL)
+    ra = a.Close.shift(-(h - 1)) / a.Open - 1
+    if KAL[0] < ACWI_START:
+        re = sum(w * (kurse[t].reindex(KAL).Close.shift(-(h - 1)) / kurse[t].reindex(KAL).Open - 1) for t, w in ERSATZ.items())
+        vorher = KAL < ACWI_START
+        # Fenster, das über den Wechsel ACWI/Ersatz reicht, bleibt leer (nichts zusammenstückeln)
+        ueber = vorher & (np.arange(len(KAL)) + h - 1 >= KAL.searchsorted(ACWI_START))
+        ra = ra.where(~vorher, re).where(~ueber)
+    return ra
+
+BR = {h: bench_rendite(h) for h in HORIZONTE}
 
 def mehrrendite(ziel, h):
-    """Serie über den ACWI-Kalender: Einstieg Open am Tag i, Ausstieg Close am Tag i+h-1, Ziel minus ACWI in %."""
+    """Serie über den Kalender: Einstieg Open am Tag i, Ausstieg Close am Tag i+h-1, Ziel minus Benchmark in %."""
     z = kurse[ziel].reindex(KAL)
     ro = z.Close.shift(-(h - 1)) / z.Open - 1
-    ra = acwi.Close.shift(-(h - 1)) / acwi.Open - 1
-    return 100 * (ro - ra)
+    return 100 * (ro - BR[h])
 
 MR = {(z, h): mehrrendite(z, h) for z in ZIELE for h in HORIZONTE}
 
