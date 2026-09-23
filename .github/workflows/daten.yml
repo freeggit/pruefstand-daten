@@ -1,22 +1,26 @@
 name: Prüfstand Datenspiegel
 on:
   schedule:
-    - cron: "15 5 * * *"
+    - cron: "15 3 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["fetch.py", "tickers.txt", "fred_series.txt", ".github/workflows/daten.yml"]
+    paths: ["fetch.py", "fetch_hr.py", "tickers.txt", "fred_series.txt", ".github/workflows/daten.yml"]
 permissions:
   contents: write
 jobs:
   spiegel:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - name: Reihen holen
+      - name: Kurse, FRED, Ken French
         run: python fetch.py
+      - name: Hochaufgelöste Reihen
+        run: python fetch_hr.py
+        continue-on-error: true
       - name: Einchecken
         run: |
           git config user.name "pruefstand-bot"
