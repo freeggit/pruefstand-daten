@@ -290,6 +290,14 @@ def manifest_schreiben():
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     if "--manifest" in sys.argv:          # nur Bestand inventarisieren (Sicherheitsschritt im Workflow)
+        try:                              # Befunde des Hauptlaufs (fehler, teile, hinweise) behalten
+            alt = json.load(open(f"{OUT}/{MANIFEST}", encoding="utf-8"))
+            man["reihen"] = alt.get("reihen", {})
+            for k in ("teile", "zeitbudget_erschoepft", "umgestellt_auf_gzip"):
+                if k in alt: man[k] = alt[k]
+            man["inventur_utc"] = man.pop("erzeugt_utc"); man["erzeugt_utc"] = alt.get("erzeugt_utc", man["inventur_utc"])
+        except Exception:
+            pass
         manifest_schreiben(); sys.exit(0)
     umstellen()
     alle = {"pegel": pegel, "wiki": wiki, "energie": energie, "wetter": wetter}   # Pegel zuerst: Quelle hält nur 31 Tage
