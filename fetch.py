@@ -60,10 +60,16 @@ def write_if_ok(path, raw, key, expect_first_col, date_col=0):
 
 def yahoo_chart(ticker):
     """Unadjustierte Tageskurse plus Adj Close aus dem Yahoo-Chart-Endpunkt (kein Schluessel)."""
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker.upper()}?range=max&interval=1d&events=div%2Csplit"
+    # period1/period2 statt range=max: mit range=max liefert Yahoo stillschweigend Monatsbalken
+    p2 = int(time.time()) + 86400
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker.upper()}"
+           f"?period1=631152000&period2={p2}&interval=1d&events=div%2Csplit")
     raw = get(url)
     j = json.loads(raw.decode("utf-8"))
     res = j["chart"]["result"][0]
+    gran = res.get("meta", {}).get("dataGranularity")
+    if gran != "1d":
+        raise RuntimeError(f"Yahoo lieferte Granularitaet {gran} statt 1d")
     ts = res["timestamp"]; q = res["indicators"]["quote"][0]
     adj = res["indicators"].get("adjclose", [{}])[0].get("adjclose", [None] * len(ts))
     rows = []
@@ -77,6 +83,20 @@ def yahoo_chart(ticker):
     out = io.StringIO(); w = csv.writer(out); w.writerow(head); w.writerows(rows)
     return out.getvalue().encode("utf-8")
 
+def taeglich_pruefen(path, key):
+    """Median-Abstand der letzten 300 Zeilen muss 1 Tag sein, sonst ist die Reihe nicht taeglich."""
+    from datetime import date
+    with open(path, encoding="utf-8") as f:
+        ds = [date.fromisoformat(r[0]) for r in csv.reader(f) if r and r[0][:1].isdigit()]
+    ds = ds[-300:]
+    gaps = sorted((b - a).days for a, b in zip(ds, ds[1:]))
+    med = gaps[len(gaps) // 2] if gaps else None
+    manifest["reihen"][key]["median_abstand_tage"] = med
+    manifest["reihen"][key]["granularitaet"] = "1d" if med == 1 else f"nicht taeglich ({med} Tage)"
+    if med != 1:
+        manifest["reihen"][key]["fehler"] = f"Reihe nicht taeglich, Median-Abstand {med} Tage"
+        print(f"FEHLER {key}: nicht taeglich ({med} Tage)", file=sys.stderr)
+
 def kurse():
     """Je Ticker: zuerst Stooq (bevorzugt), sonst Yahoo-Chart. Quelle steht im Manifest."""
     for t in lines("tickers.txt"):
@@ -87,8 +107,8 @@ def kurse():
             parsed, err = check_csv(raw, "Date")
         except Exception as e:
             parsed, err = None, f"Abruf: {e}"
-        if parsed:
-            write_if_ok(path, raw, key, "Date"); manifest["reihen"][key]["quelle"] = "stooq"
+        if parsed and write_if_ok(path, raw, key, "Date"):
+            manifest["reihen"][key]["quelle"] = "stooq"; taeglich_pruefen(path, key)
             time.sleep(1.5); continue
         stooq_err = err
         # 2. Yahoo-Chart
@@ -97,6 +117,7 @@ def kurse():
             if write_if_ok(path, raw, key, "Date"):
                 manifest["reihen"][key]["quelle"] = "yahoo-chart"
                 manifest["reihen"][key]["stooq_fehler"] = stooq_err
+                taeglich_pruefen(path, key)
         except Exception as e:
             manifest["reihen"][key] = {"fehler": f"stooq: {stooq_err}; yahoo: {e}", "datei": path if os.path.exists(path) else None}
             print(f"FEHLER {key}: {manifest['reihen'][key]['fehler']}", file=sys.stderr)
