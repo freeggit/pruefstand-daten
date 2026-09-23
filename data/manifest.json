@@ -1,163 +1,211 @@
 {
- "erzeugt_utc": "2026-09-23T08:31:55Z",
+ "erzeugt_utc": "2026-09-23T08:38:13Z",
  "reihen": {
-  "stooq:spy.us": {
-   "abruf_utc": "2026-09-23T08:31:56Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:spy": {
+   "abruf_utc": "2026-09-23T08:38:14Z",
+   "datei": "data/kurse/spy_d.csv",
+   "zeilen": 405,
+   "erste": "1993-02-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:acwi.us": {
-   "abruf_utc": "2026-09-23T08:31:58Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:acwi": {
+   "abruf_utc": "2026-09-23T08:38:16Z",
+   "datei": "data/kurse/acwi_d.csv",
+   "zeilen": 223,
+   "erste": "2008-04-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:ewj.us": {
-   "abruf_utc": "2026-09-23T08:32:00Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:ewj": {
+   "abruf_utc": "2026-09-23T08:38:18Z",
+   "datei": "data/kurse/ewj_d.csv",
+   "zeilen": 367,
+   "erste": "1996-04-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlb.us": {
-   "abruf_utc": "2026-09-23T08:32:02Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlb": {
+   "abruf_utc": "2026-09-23T08:38:21Z",
+   "datei": "data/kurse/xlb_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlc.us": {
-   "abruf_utc": "2026-09-23T08:32:04Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlc": {
+   "abruf_utc": "2026-09-23T08:38:23Z",
+   "datei": "data/kurse/xlc_d.csv",
+   "zeilen": 433,
+   "erste": "2018-06-18",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xle.us": {
-   "abruf_utc": "2026-09-23T08:32:06Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xle": {
+   "abruf_utc": "2026-09-23T08:38:25Z",
+   "datei": "data/kurse/xle_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlf.us": {
-   "abruf_utc": "2026-09-23T08:32:08Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlf": {
+   "abruf_utc": "2026-09-23T08:38:27Z",
+   "datei": "data/kurse/xlf_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xli.us": {
-   "abruf_utc": "2026-09-23T08:32:10Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xli": {
+   "abruf_utc": "2026-09-23T08:38:30Z",
+   "datei": "data/kurse/xli_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlk.us": {
-   "abruf_utc": "2026-09-23T08:32:12Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlk": {
+   "abruf_utc": "2026-09-23T08:38:32Z",
+   "datei": "data/kurse/xlk_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlp.us": {
-   "abruf_utc": "2026-09-23T08:32:14Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlp": {
+   "abruf_utc": "2026-09-23T08:38:34Z",
+   "datei": "data/kurse/xlp_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlre.us": {
-   "abruf_utc": "2026-09-23T08:32:16Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlre": {
+   "abruf_utc": "2026-09-23T08:38:36Z",
+   "datei": "data/kurse/xlre_d.csv",
+   "zeilen": 132,
+   "erste": "2015-11-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlu.us": {
-   "abruf_utc": "2026-09-23T08:32:18Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlu": {
+   "abruf_utc": "2026-09-23T08:38:38Z",
+   "datei": "data/kurse/xlu_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xlv.us": {
-   "abruf_utc": "2026-09-23T08:32:21Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xlv": {
+   "abruf_utc": "2026-09-23T08:38:40Z",
+   "datei": "data/kurse/xlv_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
-  "stooq:xly.us": {
-   "abruf_utc": "2026-09-23T08:32:23Z",
-   "fehler": "HTML statt CSV (Limit oder Sperre der Quelle)",
-   "datei": null
+  "kurse:xly": {
+   "abruf_utc": "2026-09-23T08:38:43Z",
+   "datei": "data/kurse/xly_d.csv",
+   "zeilen": 334,
+   "erste": "1999-01-01",
+   "letzte": "2026-09-22",
+   "quelle": "yahoo-chart",
+   "stooq_fehler": "HTML statt CSV (Limit oder Sperre der Quelle)"
   },
   "fred:T10Y2Y": {
-   "abruf_utc": "2026-09-23T08:32:24Z",
+   "abruf_utc": "2026-09-23T08:38:45Z",
    "datei": "data/fred/T10Y2Y.csv",
    "zeilen": 13126,
    "erste": "1976-06-01",
-   "letzte": "2026-09-22",
-   "quelle": "fred"
+   "letzte": "2026-09-22"
   },
   "fred:BAA10Y": {
-   "abruf_utc": "2026-09-23T08:32:26Z",
+   "abruf_utc": "2026-09-23T08:38:46Z",
    "datei": "data/fred/BAA10Y.csv",
    "zeilen": 10623,
    "erste": "1986-01-02",
-   "letzte": "2026-09-21",
-   "quelle": "fred"
+   "letzte": "2026-09-21"
   },
   "fred:DGS10": {
-   "abruf_utc": "2026-09-23T08:32:27Z",
+   "abruf_utc": "2026-09-23T08:38:47Z",
    "datei": "data/fred/DGS10.csv",
    "zeilen": 16885,
    "erste": "1962-01-02",
-   "letzte": "2026-09-21",
-   "quelle": "fred"
+   "letzte": "2026-09-21"
   },
   "fred:VIXCLS": {
-   "abruf_utc": "2026-09-23T08:32:28Z",
+   "abruf_utc": "2026-09-23T08:38:48Z",
    "datei": "data/fred/VIXCLS.csv",
    "zeilen": 9580,
    "erste": "1990-01-02",
-   "letzte": "2026-09-21",
-   "quelle": "fred"
+   "letzte": "2026-09-21"
   },
   "fred:ICSA": {
-   "abruf_utc": "2026-09-23T08:32:29Z",
+   "abruf_utc": "2026-09-23T08:38:49Z",
    "datei": "data/fred/ICSA.csv",
    "zeilen": 3115,
    "erste": "1967-01-07",
-   "letzte": "2026-09-12",
-   "quelle": "fred"
+   "letzte": "2026-09-12"
   },
   "fred:WALCL": {
-   "abruf_utc": "2026-09-23T08:32:30Z",
+   "abruf_utc": "2026-09-23T08:38:50Z",
    "datei": "data/fred/WALCL.csv",
    "zeilen": 1240,
    "erste": "2002-12-18",
-   "letzte": "2026-09-16",
-   "quelle": "fred"
+   "letzte": "2026-09-16"
   },
   "fred:WEI": {
-   "abruf_utc": "2026-09-23T08:32:31Z",
+   "abruf_utc": "2026-09-23T08:38:51Z",
    "datei": "data/fred/WEI.csv",
    "zeilen": 976,
    "erste": "2008-01-05",
-   "letzte": "2026-09-12",
-   "quelle": "fred"
+   "letzte": "2026-09-12"
   },
   "fred:SP500": {
-   "abruf_utc": "2026-09-23T08:32:32Z",
+   "abruf_utc": "2026-09-23T08:38:52Z",
    "datei": "data/fred/SP500.csv",
    "zeilen": 2608,
    "erste": "2016-09-23",
-   "letzte": "2026-09-22",
-   "quelle": "fred"
+   "letzte": "2026-09-22"
   },
   "french:F-F_Research_Data_Factors_CSV.zip": {
-   "abruf_utc": "2026-09-23T08:31:55Z",
+   "abruf_utc": "2026-09-23T08:38:13Z",
    "dateien": [
     "F-F_Research_Data_Factors.csv"
    ],
    "bytes": 13067
   },
   "french:F-F_Research_Data_5_Factors_2x3_CSV.zip": {
-   "abruf_utc": "2026-09-23T08:31:55Z",
+   "abruf_utc": "2026-09-23T08:38:13Z",
    "dateien": [
     "F-F_Research_Data_5_Factors_2x3.csv"
    ],
    "bytes": 11948
   },
   "french:12_Industry_Portfolios_CSV.zip": {
-   "abruf_utc": "2026-09-23T08:31:55Z",
+   "abruf_utc": "2026-09-23T08:38:13Z",
    "dateien": [
     "12_Industry_Portfolios.csv"
    ],
    "bytes": 138954
   },
   "french:F-F_Momentum_Factor_CSV.zip": {
-   "abruf_utc": "2026-09-23T08:31:55Z",
+   "abruf_utc": "2026-09-23T08:38:13Z",
    "dateien": [
     "F-F_Momentum_Factor.csv"
    ],
