@@ -1,0 +1,26 @@
+{
+  "eurchf": {
+    "beschreibung": "EZB Referenzkurs CHF/EUR, 14:15 MEZ",
+    "einheit": "CHF je EUR",
+    "quelle_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.CHF.EUR.SP00.A",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "eurcny": {
+    "beschreibung": "EZB Referenzkurs CNY/EUR, 14:15 MEZ",
+    "einheit": "CNY je EUR",
+    "quelle_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.CNY.EUR.SP00.A",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "eurjpy": {
+    "beschreibung": "EZB Referenzkurs JPY/EUR, 14:15 MEZ",
+    "einheit": "JPY je EUR",
+    "quelle_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.JPY.EUR.SP00.A",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

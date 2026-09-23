@@ -1,8 +1,8 @@
 {
-  "erzeugt_utc": "2026-09-23T15:50:43Z",
+  "erzeugt_utc": "2026-09-23T16:46:42Z",
   "reihen": {
     "cboe_skew:skew": {
-      "abruf_utc": "2026-09-23T15:50:43Z",
+      "abruf_utc": "2026-09-23T16:46:42Z",
       "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
       "datei": "data/neu/cboe_skew/skew.csv.gz",
       "einheit": "Indexpunkte",
@@ -16,8 +16,68 @@
       "verfuegbar_nach_tagen": 0,
       "zeilen": 9232
     },
+    "ecb_fx:eurchf": {
+      "abruf_utc": "2026-09-23T16:46:42Z",
+      "beschreibung": "EZB Referenzkurs CHF/EUR, 14:15 MEZ",
+      "datei": "data/neu/ecb_fx/eurchf.csv.gz",
+      "einheit": "CHF je EUR",
+      "erste": "1999-01-04",
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1.0,
+      "quelle_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.CHF.EUR.SP00.A",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 7099
+    },
+    "ecb_fx:eurcny": {
+      "abruf_utc": "2026-09-23T16:46:42Z",
+      "beschreibung": "EZB Referenzkurs CNY/EUR, 14:15 MEZ",
+      "datei": "data/neu/ecb_fx/eurcny.csv.gz",
+      "einheit": "CNY je EUR",
+      "erste": "2000-01-13",
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.CNY.EUR.SP00.A",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 6832
+    },
+    "ecb_fx:eurjpy": {
+      "abruf_utc": "2026-09-23T16:46:42Z",
+      "beschreibung": "EZB Referenzkurs JPY/EUR, 14:15 MEZ",
+      "datei": "data/neu/ecb_fx/eurjpy.csv.gz",
+      "einheit": "JPY je EUR",
+      "erste": "1999-01-04",
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1.0,
+      "quelle_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.JPY.EUR.SP00.A",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 7099
+    },
+    "snb_saron:saron": {
+      "abruf_utc": "2026-09-23T16:46:42Z",
+      "beschreibung": "SARON Uebernacht-Referenzzinssatz (Schlusskurs), SNB Datenportal Cube zirepo, Dimension H0",
+      "datei": "data/neu/snb_saron/saron.csv.gz",
+      "einheit": "Prozent",
+      "erste": "1999-06-21",
+      "letzte": "2026-09-15",
+      "median_abstand_tage": 1.0,
+      "quelle_url": "https://data.snb.ch/en/topics/ziredev/cube/zirepo",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 8,
+      "zeilen": 6863
+    },
     "treasury_tga:tga": {
-      "abruf_utc": "2026-09-23T15:50:43Z",
+      "abruf_utc": "2026-09-23T16:46:42Z",
       "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
       "datei": "data/neu/treasury_tga/tga.csv.gz",
       "einheit": "Millionen USD",
@@ -32,7 +92,7 @@
       "zeilen": 5267
     },
     "usgs_erdbeben:anzahl_m5": {
-      "abruf_utc": "2026-09-23T15:50:43Z",
+      "abruf_utc": "2026-09-23T16:46:42Z",
       "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
       "datei": "data/neu/usgs_erdbeben/anzahl_m5.csv.gz",
       "einheit": "Anzahl Ereignisse",

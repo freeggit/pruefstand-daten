@@ -1,0 +1,10 @@
+{
+  "saron": {
+    "beschreibung": "SARON Uebernacht-Referenzzinssatz (Schlusskurs), SNB Datenportal Cube zirepo, Dimension H0",
+    "einheit": "Prozent",
+    "quelle_url": "https://data.snb.ch/en/topics/ziredev/cube/zirepo",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 8
+  }
+}

@@ -99,11 +99,42 @@
     "url": "https://data-api.ecb.europa.eu",
     "domain": "data-api.ecb.europa.eu",
     "bereich": "Waehrung",
-    "status": "kandidat",
-    "grund": "",
-    "reihen": [],
+    "status": "aktiv",
+    "grund": "K1-K7 erfuellt: taeglich an Handelstagen (Median 1 Tag je Paar), Historie seit 1999-01-04 (CNY seit 2000-01-13), oeffentliche EZB SDMX-API ohne Login/Schluessel, Referenzkurse werden nach Publikation (14:15 MEZ) nicht revidiert, letzter Wert vom Abruftag selbst (0 Tage), neu gegenueber Spiegel (DEXSZUS in FRED ist USD/CHF, kein EUR-Kreuzkurs), je Reihe klein, Abruf aller drei Paare <5 Sek. Kurse plausibel im jeweiligen historischen Band.",
+    "reihen": [
+      {
+        "reihe": "eurchf",
+        "zeilen": 7099,
+        "erste": "1999-01-04",
+        "letzte": "2026-09-23",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.0214,
+        "min": 0.9008,
+        "max": 1.6803
+      },
+      {
+        "reihe": "eurjpy",
+        "zeilen": 7099,
+        "erste": "1999-01-04",
+        "letzte": "2026-09-23",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.0079,
+        "min": 89.3,
+        "max": 187.72
+      },
+      {
+        "reihe": "eurcny",
+        "zeilen": 6832,
+        "erste": "2000-01-13",
+        "letzte": "2026-09-23",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0025,
+        "min": 6.5552,
+        "max": 11.284
+      }
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T16:45:54Z"
   },
   {
     "id": "snb_saron",
@@ -111,11 +142,22 @@
     "url": "https://data.snb.ch",
     "domain": "data.snb.ch",
     "bereich": "Geldmarkt",
-    "status": "kandidat",
-    "grund": "",
-    "reihen": [],
+    "status": "aktiv",
+    "grund": "K1-K7 erfuellt: taeglich an Handelstagen (Median 1 Tag), Historie seit 1999-06-21, oeffentliche REST-API des SNB Datenportals ohne Login/Schluessel (Cube zirepo, Dimension H0 'Overnight (SARON), close of trading'), Referenzzinssatz wird nach Publikation nicht revidiert, letzter Wert rund 8 Tage alt bei stabiler Publikationsverzoegerung (Cube-Update woechentlich nachlaufend), Reihe neu gegenueber Spiegel, Datei klein, Abruf <5 Sek. Werte -1.69% bis 3.72% plausibel fuer CHF-Tagesgeld 1999-2026 (inkl. Negativzinsphase 2015-2022).",
+    "reihen": [
+      {
+        "reihe": "saron",
+        "zeilen": 6863,
+        "erste": "1999-06-21",
+        "letzte": "2026-09-15",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.0019,
+        "min": -1.693478,
+        "max": 3.721498
+      }
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T16:45:54Z"
   },
   {
     "id": "boe_sonia",
@@ -194,11 +236,11 @@
     "url": "https://www.sidc.be/SILSO/DATA/SN_d_tot_V2.0.csv",
     "domain": "www.sidc.be",
     "bereich": "Kontrolle",
-    "status": "kandidat",
-    "grund": "",
+    "status": "abgelehnt",
+    "grund": "K5 verletzt: definitive Tagesreihe SN_d_tot_V2.0.csv hat rund 23 Tage Publikationsverzug (letzter Wert bei Pruefung 2026-08-31, Abruf 2026-09-23), damit ausserhalb 'hoechstens 10 Tage alt'. Die aktuelle Ersatzreihe EISN_current.csv (provisorische taegliche Schaetzung) deckt nur ein rollendes Fenster des laufenden Monats ab und erfuellt K2 (Historie ab 2015) nicht; eine Verkettung von definitiver und provisorischer Reihe wuerde zudem K4 verletzen, da der provisorische Teil nachtraeglich auf den definitiven Wert revidiert wird. Bei kuenftig kuerzerem SILSO-Publikationsverzug erneut pruefen.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T16:45:54Z"
   },
   {
     "id": "gfz_kp",
