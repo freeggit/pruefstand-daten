@@ -21,10 +21,16 @@ jobs:
         with: { python-version: "3.12" }
       - name: Kurse, FRED, Ken French
         run: python fetch.py
+        timeout-minutes: 10
       - name: Hochaufgelöste Reihen
         run: python fetch_hr.py
+        timeout-minutes: 30
         continue-on-error: true
+      - name: Manifest sichern
+        if: always()
+        run: python fetch_hr.py --manifest
       - name: Einchecken
+        if: always()
         run: |
           git config user.name "pruefstand-bot"
           git config user.email "pruefstand-bot@users.noreply.github.com"
