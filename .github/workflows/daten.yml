@@ -24,6 +24,8 @@ jobs:
         timeout-minutes: 10
       - name: Hochaufgelöste Reihen
         run: python fetch_hr.py
+        env:
+          HR_TEILE: pegel,wiki,wetter   # Strom kommt über die Claude-Code-Routine (Zweig claude/daten-energie)
         timeout-minutes: 30
         continue-on-error: true
       - name: Manifest sichern
