@@ -1,0 +1,9 @@
+# FRED-Serien, eine je Zeile
+T10Y2Y
+BAA10Y
+DGS10
+VIXCLS
+ICSA
+WALCL
+WEI
+SP500

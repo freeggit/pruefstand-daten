@@ -1,0 +1,16 @@
+# Stooq-Ticker, einer je Zeile, Kommentar mit #
+# US-ETFs (Stooq-Suffix .us wird vom Skript angehängt)
+spy
+acwi
+ewj
+xlb
+xlc
+xle
+xlf
+xli
+xlk
+xlp
+xlre
+xlu
+xlv
+xly
