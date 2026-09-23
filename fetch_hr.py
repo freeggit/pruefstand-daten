@@ -4,7 +4,7 @@ Holt öffentliche Reihen mit Stunden- oder Tagesauflösung und langer Historie f
 Ablage: data/hr/<quelle>/<name>_<jahr>.csv, ein File je Jahr, damit tägliche Läufe nur das
 laufende Jahr neu schreiben. Grundsatz wie fetch.py: nichts schätzen, nichts reparieren;
 Fehler landen in data/hr/manifest_hr.json, alte Dateien bleiben stehen."""
-import csv, io, json, os, sys, time, urllib.request, urllib.parse
+import csv, gzip, io, json, os, sys, time, urllib.request, urllib.parse
 from datetime import datetime, timezone, date, timedelta
 
 UA = {"User-Agent": "pruefstand-daten/1.1 (GitHub Actions; public research mirror; contact via github.com/freeggit)"}
@@ -25,9 +25,24 @@ def get(url, tries=3, pause=4):
     raise last
 
 def schreibe(path, head, rows):
+    """Schreibt gzip-komprimiert (.csv.gz, mtime 0 für stabile Bytes); entfernt die alte unkomprimierte Datei."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f); w.writerow(head); w.writerows(rows)
+    buf = io.StringIO(); w = csv.writer(buf); w.writerow(head); w.writerows(rows)
+    with open(path, "wb") as f:
+        with gzip.GzipFile(fileobj=f, mode="wb", mtime=0, compresslevel=9) as g:
+            g.write(buf.getvalue().encode("utf-8"))
+    alt = path[:-3] if path.endswith(".gz") else None
+    if alt and os.path.exists(alt):
+        os.remove(alt)
+
+def lies(path):
+    """Liest .csv.gz oder, für den Übergang, die alte .csv."""
+    for p in (path, path[:-3] if path.endswith(".gz") else None):
+        if p and os.path.exists(p):
+            opener = gzip.open if p.endswith(".gz") else open
+            with opener(p, "rt", encoding="utf-8") as f:
+                return list(csv.reader(f))[1:]
+    return []
 
 def eintrag(key, **kw):
     e = man["reihen"].setdefault(key, {"dateien": [], "zeilen": 0})
@@ -54,7 +69,7 @@ ENERGIE_LAENDER = [("ch", "CH"), ("de", "DE-LU")]
 def energie():
     for land, zone in ENERGIE_LAENDER:
         # Day-Ahead-Preis stündlich, ab 2015
-        key = f"energie:preis_{land}"; pfad = f"{OUT}/energie/preis_{land}_{{y}}.csv"
+        key = f"energie:preis_{land}"; pfad = f"{OUT}/energie/preis_{land}_{{y}}.csv.gz"
         for y in jahre(2015, pfad):
             rows = []
             try:
@@ -74,7 +89,7 @@ def energie():
             except Exception as e:
                 eintrag(key, fehler=f"{y}: {e}")
         # Erzeugung und Last nach Typ, stündlich/viertelstündlich, ab 2015
-        key = f"energie:erzeugung_{land}"; pfad = f"{OUT}/energie/erzeugung_{land}_{{y}}.csv"
+        key = f"energie:erzeugung_{land}"; pfad = f"{OUT}/energie/erzeugung_{land}_{{y}}.csv.gz"
         for y in jahre(2015, pfad):
             data, typen = {}, []
             try:
@@ -106,7 +121,7 @@ WETTER_VAR = "temperature_2m,precipitation,wind_speed_10m,cloud_cover"
 
 def wetter():
     for name, lat, lon in ORTE:
-        key = f"wetter:{name}"; pfad = f"{OUT}/wetter/{name}_{{y}}.csv"
+        key = f"wetter:{name}"; pfad = f"{OUT}/wetter/{name}_{{y}}.csv.gz"
         for y in jahre(2000, pfad):
             a = date(y, 1, 1); b = min(date(y, 12, 31), HEUTE - timedelta(days=6))
             if b < a: continue
@@ -134,12 +149,8 @@ def pegel():
             url = f"https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/{urllib.parse.quote(st)}/W/measurements.json?start=P31D"
             neu = {m["timestamp"]: m["value"] for m in json.loads(get(url))}
             for y in sorted({k[:4] for k in neu}):          # jede Messung in die Datei ihres Jahres
-                pfad = f"{OUT}/pegel/{slug}_{y}.csv"
-                alt = {}
-                if os.path.exists(pfad):
-                    with open(pfad, encoding="utf-8") as f:
-                        for r in list(csv.reader(f))[1:]:
-                            alt[r[0]] = r[1]
+                pfad = f"{OUT}/pegel/{slug}_{y}.csv.gz"
+                alt = {r[0]: r[1] for r in lies(pfad)}
                 alt.update({k: v for k, v in neu.items() if k[:4] == y})
                 rows = sorted(alt.items())
                 schreibe(pfad, ["zeit", "wasserstand_cm"], rows)
@@ -161,7 +172,7 @@ def wiki():
     ende = (HEUTE - timedelta(days=1)).strftime("%Y%m%d")
     for proj, art in ARTIKEL:
         slug = f"{proj}_{art}".lower().replace(",", "").replace(".", "").replace("é", "e")
-        key = f"wiki:{slug}"; pfad = f"{OUT}/wiki/{slug}.csv"
+        key = f"wiki:{slug}"; pfad = f"{OUT}/wiki/{slug}.csv.gz"
         try:
             url = (f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{proj}.wikipedia/all-access/user/"
                    f"{urllib.parse.quote(art, safe='')}/daily/20150701/{ende}")
@@ -176,8 +187,23 @@ def wiki():
             eintrag(key, fehler=str(e))
         time.sleep(0.3)
 
+def umstellen():
+    """Einmalig: vorhandene .csv ohne neuen Abruf in .csv.gz umwandeln, damit nichts neu geladen wird."""
+    n = 0
+    for wurzel, _, dateien in os.walk(OUT):
+        for d in dateien:
+            if d.endswith(".csv"):
+                p = os.path.join(wurzel, d)
+                with open(p, encoding="utf-8") as f:
+                    r = list(csv.reader(f))
+                if r:
+                    schreibe(p + ".gz", r[0], r[1:]); n += 1
+    if n:
+        man["umgestellt_auf_gzip"] = n
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
+    umstellen()
     for teil in (energie, wetter, pegel, wiki):
         try:
             teil()
