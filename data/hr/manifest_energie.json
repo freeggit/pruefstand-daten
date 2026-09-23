@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-09-23T14:38:29Z",
+ "erzeugt_utc": "2026-09-23T14:46:51Z",
  "reihen": {
   "energie:preis_ch": {
    "dateien": [
@@ -17,25 +17,29 @@
    "einheit": "EUR/MWh",
    "aufloesung": "1h",
    "quelle": "energy-charts.info",
-   "fehler": "2016: <urlopen error [Errno 104] Connection reset by peer>",
+   "fehler": "2016: HTTP Error 429: Too Many Requests",
    "erste": "2015-01-01T00:00:00Z"
   },
   "energie:erzeugung_ch": {
    "dateien": [
+    "data/hr/energie/erzeugung_ch_2016.csv.gz",
+    "data/hr/energie/erzeugung_ch_2017.csv.gz",
     "data/hr/energie/erzeugung_ch_2018.csv.gz",
+    "data/hr/energie/erzeugung_ch_2019.csv.gz",
     "data/hr/energie/erzeugung_ch_2020.csv.gz",
     "data/hr/energie/erzeugung_ch_2021.csv.gz",
     "data/hr/energie/erzeugung_ch_2022.csv.gz",
+    "data/hr/energie/erzeugung_ch_2023.csv.gz",
+    "data/hr/energie/erzeugung_ch_2024.csv.gz",
     "data/hr/energie/erzeugung_ch_2025.csv.gz",
     "data/hr/energie/erzeugung_ch_2026.csv.gz"
    ],
-   "zeilen": 50197,
+   "zeilen": 94045,
+   "fehler": "2015: <urlopen error [Errno 104] Connection reset by peer>",
    "letzte": "2026-09-23T11:00:00Z",
    "einheit": "MW",
    "quelle": "energy-charts.info",
-   "fehler": "2019: <urlopen error [Errno 104] Connection reset by peer>",
-   "hinweis": "Zeitbudget 8 min erschöpft, fehlende Jahre folgen im nächsten Lauf",
-   "erste": "2017-12-31T23:00:00Z"
+   "erste": "2015-12-31T23:00:00Z"
   },
   "energie:preis_de": {
    "dateien": [],
