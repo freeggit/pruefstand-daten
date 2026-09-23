@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-09-23T16:45:32Z",
+ "erzeugt_utc": "2026-09-23T16:49:40Z",
  "reihen": {
   "wiki:de_inflation": {
    "dateien": [
@@ -329,33 +329,33 @@
    "dateien": [
     "data/hr/pegel/duisburg-ruhrort_2026.csv.gz"
    ],
-   "zeilen": 2987,
+   "zeilen": 2988,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T18:30:00+02:00"
+   "letzte": "2026-09-23T18:45:00+02:00"
   },
   "pegel:kaub": {
    "dateien": [
     "data/hr/pegel/kaub_2026.csv.gz"
    ],
-   "zeilen": 2985,
+   "zeilen": 2986,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T18:30:00+02:00"
+   "letzte": "2026-09-23T18:45:00+02:00"
   },
   "pegel:koeln": {
    "dateien": [
     "data/hr/pegel/koeln_2026.csv.gz"
    ],
-   "zeilen": 2983,
+   "zeilen": 2984,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T18:30:00+02:00"
+   "letzte": "2026-09-23T18:45:00+02:00"
   },
   "pegel:maxau": {
    "dateien": [
     "data/hr/pegel/maxau_2026.csv.gz"
    ],
-   "zeilen": 2986,
+   "zeilen": 2987,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T18:30:00+02:00"
+   "letzte": "2026-09-23T18:45:00+02:00"
   },
   "energie:erzeugung_ch": {
    "dateien": [
@@ -365,7 +365,15 @@
    "erste": "2025-12-31T23:00:00Z",
    "letzte": "2026-09-23T10:00:00Z"
   },
-  "energie:erzeugung_de": {
+  "wiki:de_niedrigwasser": {
+   "dateien": [
+    "data/hr/wiki/de_niedrigwasser.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:de_rezession": {
    "dateien": [
     "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
