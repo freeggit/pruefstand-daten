@@ -1,0 +1,239 @@
+[
+  {
+    "id": "cboe_skew",
+    "name": "Cboe SKEW Index",
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv",
+    "domain": "cdn.cboe.com",
+    "bereich": "Stimmung",
+    "status": "aktiv",
+    "grund": "K1-K7 erfuellt: taeglich (Median 1 Tag), Historie seit 1990, oeffentlich ohne Login/Schluessel abrufbar, Marktdaten unrevidiert, letzter Wert 1 Tag alt, in bestehendem Spiegel nicht vorhanden, Datei klein (<1 MB), Abruf <1 Min.",
+    "reihen": [
+      {
+        "reihe": "skew",
+        "zeilen": 9232,
+        "erste": "1990-01-02",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0026,
+        "min": 101.23,
+        "max": 183.12
+      }
+    ],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": "2026-09-23T15:49:48Z"
+  },
+  {
+    "id": "cboe_vvix",
+    "name": "Cboe VVIX Index",
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv",
+    "domain": "cdn.cboe.com",
+    "bereich": "Stimmung",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "cboe_vix9d",
+    "name": "Cboe VIX9D Index",
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX9D_History.csv",
+    "domain": "cdn.cboe.com",
+    "bereich": "Stimmung",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "cboe_vix3m",
+    "name": "Cboe VIX3M Index",
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX3M_History.csv",
+    "domain": "cdn.cboe.com",
+    "bereich": "Stimmung",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "treasury_tga",
+    "name": "US Treasury Daily Treasury Statement - Operating Cash Balance (TGA)",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance",
+    "domain": "api.fiscaldata.treasury.gov",
+    "bereich": "Staat",
+    "status": "aktiv",
+    "grund": "K1-K7 erfuellt: taeglich an Handelstagen (Median 1 Tag), Historie seit 2005 (Reihen Federal Reserve Account / TGA / TGA Closing Balance ueber Namenswechsel verkettet), oeffentliche API ohne Schluessel, Tageskassenbestand wird nach Veroeffentlichung nicht revidiert, letzter Wert 2 Tage alt, neu gegenueber Spiegel, Datei klein, Abruf <10 Sek.",
+    "reihen": [
+      {
+        "reihe": "tga",
+        "zeilen": 5267,
+        "erste": "2005-10-03",
+        "letzte": "2026-09-21",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.0,
+        "min": 2637.0,
+        "max": 1830546.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": "2026-09-23T15:49:48Z"
+  },
+  {
+    "id": "nyfed_rrp",
+    "name": "NY Fed Reverse Repo Operations Volume",
+    "url": "https://markets.newyorkfed.org",
+    "domain": "markets.newyorkfed.org",
+    "bereich": "Geldmarkt",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "ecb_fx",
+    "name": "EZB Referenzkurse EUR/CHF, EUR/JPY, EUR/CNY",
+    "url": "https://data-api.ecb.europa.eu",
+    "domain": "data-api.ecb.europa.eu",
+    "bereich": "Waehrung",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "snb_saron",
+    "name": "SNB Datenportal Tageszinsen",
+    "url": "https://data.snb.ch",
+    "domain": "data.snb.ch",
+    "bereich": "Geldmarkt",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "boe_sonia",
+    "name": "Bank of England SONIA (IADB)",
+    "url": "https://www.bankofengland.co.uk/boeapps/database/",
+    "domain": "bankofengland.co.uk",
+    "bereich": "Geldmarkt",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "bundesbank_umlauf",
+    "name": "Bundesbank Zeitreihen-API taegliche Umlaufsrenditen",
+    "url": "https://api.statistiken.bundesbank.de",
+    "domain": "api.statistiken.bundesbank.de",
+    "bereich": "Zinsen",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "usgs_mississippi",
+    "name": "USGS Mississippi bei St. Louis (07010000) Tagesabfluss",
+    "url": "https://waterservices.usgs.gov/nwis/dv/?sites=07010000&parameterCd=00060&format=json",
+    "domain": "waterservices.usgs.gov",
+    "bereich": "Natur",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "usgs_ohio",
+    "name": "USGS Ohio bei Metropolis (03611500) Tagesabfluss",
+    "url": "https://waterservices.usgs.gov/nwis/dv/?sites=03611500&parameterCd=00060&format=json",
+    "domain": "waterservices.usgs.gov",
+    "bereich": "Natur",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "usgs_erdbeben",
+    "name": "USGS weltweite Erdbeben ab Magnitude 5, Tageszahl",
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+    "domain": "earthquake.usgs.gov",
+    "bereich": "Kontrolle",
+    "status": "aktiv",
+    "grund": "K1-K7 erfuellt: taeglich, vollstaendige Tagesreihe seit 2015-01-01 inkl. echter Nulltage, oeffentliche FDSN-API ohne Schluessel, Ereigniszaehlung wird nicht revidiert, letzter Wert 1 Tag alt, Kontrollreihe ohne erwarteten Kurszusammenhang, Datei klein, Abruf ca. 20 Sek. Max 143 (2025-07-30) durch Nachbebenserie des M8.8-Bebens vor Kamtschatka plausibel.",
+    "reihen": [
+      {
+        "reihe": "anzahl_m5",
+        "zeilen": 4283,
+        "erste": "2015-01-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.128,
+        "min": 0.0,
+        "max": 143.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": "2026-09-23T15:49:48Z"
+  },
+  {
+    "id": "silso_sonnenflecken",
+    "name": "SILSO Tageszahl Sonnenflecken",
+    "url": "https://www.sidc.be/SILSO/DATA/SN_d_tot_V2.0.csv",
+    "domain": "www.sidc.be",
+    "bereich": "Kontrolle",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "gfz_kp",
+    "name": "GFZ geomagnetischer Kp-Index",
+    "url": "https://kp.gfz.de",
+    "domain": "kp.gfz.de",
+    "bereich": "Kontrolle",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "gdelt_ereignisse",
+    "name": "GDELT 1.0 Tagesdateien Ereignisse und Ton",
+    "url": "http://data.gdeltproject.org/events/",
+    "domain": "data.gdeltproject.org",
+    "bereich": "Nachrichten",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "wikipedia_weitere",
+    "name": "Wikipedia Pageviews weiterer Artikel",
+    "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/",
+    "domain": "wikimedia.org",
+    "bereich": "Aufmerksamkeit",
+    "status": "kandidat",
+    "grund": "",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T15:44:36Z",
+    "geprueft_utc": null
+  }
+]

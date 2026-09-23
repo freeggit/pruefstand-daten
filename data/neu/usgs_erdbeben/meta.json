@@ -1,0 +1,10 @@
+{
+  "anzahl_m5": {
+    "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
+    "einheit": "Anzahl Ereignisse",
+    "quelle_url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+    "revidiert": false,
+    "verdichtung": "Summe der Ereignisse je UTC-Tag",
+    "verfuegbar_nach_tagen": 0
+  }
+}

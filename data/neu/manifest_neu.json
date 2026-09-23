@@ -1,0 +1,50 @@
+{
+  "erzeugt_utc": "2026-09-23T15:50:43Z",
+  "reihen": {
+    "cboe_skew:skew": {
+      "abruf_utc": "2026-09-23T15:50:43Z",
+      "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
+      "datei": "data/neu/cboe_skew/skew.csv.gz",
+      "einheit": "Indexpunkte",
+      "erste": "1990-01-02",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 9232
+    },
+    "treasury_tga:tga": {
+      "abruf_utc": "2026-09-23T15:50:43Z",
+      "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
+      "datei": "data/neu/treasury_tga/tga.csv.gz",
+      "einheit": "Millionen USD",
+      "erste": "2005-10-03",
+      "letzte": "2026-09-21",
+      "median_abstand_tage": 1.0,
+      "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 1,
+      "zeilen": 5267
+    },
+    "usgs_erdbeben:anzahl_m5": {
+      "abruf_utc": "2026-09-23T15:50:43Z",
+      "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
+      "datei": "data/neu/usgs_erdbeben/anzahl_m5.csv.gz",
+      "einheit": "Anzahl Ereignisse",
+      "erste": "2015-01-01",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1.0,
+      "quelle_url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "Summe der Ereignisse je UTC-Tag",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 4283
+    }
+  }
+}
