@@ -14,3 +14,14 @@ xlre
 xlu
 xlv
 xly
+# Ziele für Wechselregeln (ab 23.9.2026): Länder, Rohstoffe, Zinsen, Einzeltitel mit benanntem Mechanismus
+ewl
+ewg
+uso
+ung
+gld
+dba
+tlt
+bas.de
+hlag.de
+knin.sw
