@@ -31,8 +31,13 @@ class Budget(Exception):
 def log(msg):
     print(f"[{(time.time() - START) / 60:5.1f} min] {msg}", flush=True)
 
+class KeineDaten(Exception):
+    """HTTP 404: die Quelle hat für diesen Abschnitt keine Daten (kein Fehler des Laufs)."""
+
 def get(url, tries=2, pause=3):
-    """Jeder Abruf prüft das Zeitbudget; kurze Timeouts, damit eine hängende Quelle den Lauf nicht auffrisst."""
+    """Jeder Abruf prüft das Zeitbudget; kurze Timeouts, damit eine hängende Quelle den Lauf nicht auffrisst.
+    404 = keine Daten für diesen Abschnitt (KeineDaten). 429 = Quelle bremst: länger warten und erneut, nie umgehen."""
+    import urllib.error
     last = None
     for i in range(tries):
         if (time.time() - START) / 60 > BUDGET_MIN:
@@ -41,6 +46,13 @@ def get(url, tries=2, pause=3):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
                 return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                raise KeineDaten(url)
+            last = e
+            warte = 20 * (i + 1) if e.code == 429 else pause
+            log(f"HTTP {e.code} ({i + 1}/{tries}), warte {warte}s | {url[:90]}")
+            time.sleep(warte)
         except Exception as e:  # noqa
             last = e
             log(f"Fehler nach {time.time() - t0:.0f}s ({i + 1}/{tries}): {str(e)[:80]} | {url[:90]}")
@@ -95,21 +107,27 @@ def energie():
         key = f"energie:preis_{land}"; pfad = f"{OUT}/energie/preis_{land}_{{y}}.csv.gz"
         for y in reversed(jahre(2015, pfad)):
             if zeit_um(key): break
-            rows = []
+            rows, leer = [], []
             try:
                 for m in range(1, 13):
                     a = date(y, m, 1)
                     if a > HEUTE: break
                     b = (date(y + (m == 12), m % 12 + 1, 1) - timedelta(days=1))
                     b = min(b, HEUTE)
-                    j = json.loads(get(f"https://api.energy-charts.info/price?bzn={zone}&start={a}&end={b}"))
+                    z = "DE-AT-LU" if zone == "DE-LU" and a < date(2018, 10, 1) else zone   # Zonentrennung DE/AT am 1.10.2018
+                    try:
+                        j = json.loads(get(f"https://api.energy-charts.info/price?bzn={z}&start={a}&end={b}", tries=3))
+                    except KeineDaten:
+                        leer.append(f"{a:%Y-%m}"); continue
                     for t, p in zip(j.get("unix_seconds", []), j.get("price", [])):
                         rows.append([datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "" if p is None else p])
-                    time.sleep(0.4)
+                    time.sleep(1.0)
                 rows = sorted({r[0]: r for r in rows}.values())
                 if rows:
                     schreibe(pfad.format(y=y), ["zeit_utc", "preis_eur_mwh"], rows)
                     eintrag(key, datei=pfad.format(y=y), zeilen=len(rows), letzte=rows[-1][0], einheit="EUR/MWh", aufloesung="1h", quelle="energy-charts.info")
+                if leer:
+                    eintrag(key, **{f"ohne_daten_{y}": leer})
             except Budget:
                 zeit_um(key); break
             except Exception as e:
@@ -119,24 +137,29 @@ def energie():
         key = f"energie:erzeugung_{land}"; pfad = f"{OUT}/energie/erzeugung_{land}_{{y}}.csv.gz"
         for y in reversed(jahre(2015, pfad)):
             if zeit_um(key): break
-            data, typen = {}, []
+            data, typen, leer = {}, [], []
             try:
                 for m in range(1, 13):
                     a = date(y, m, 1)
                     if a > HEUTE: break
                     b = min(date(y + (m == 12), m % 12 + 1, 1) - timedelta(days=1), HEUTE)
-                    j = json.loads(get(f"https://api.energy-charts.info/public_power?country={land}&start={a}&end={b}"))
+                    try:
+                        j = json.loads(get(f"https://api.energy-charts.info/public_power?country={land}&start={a}&end={b}", tries=3))
+                    except KeineDaten:
+                        leer.append(f"{a:%Y-%m}"); continue
                     ts = j.get("unix_seconds", [])
                     for pt in j.get("production_types", []):
                         n = pt.get("name", "?")
                         if n not in typen: typen.append(n)
                         for t, v in zip(ts, pt.get("data", [])):
                             data.setdefault(t, {})[n] = v
-                    time.sleep(0.4)
+                    time.sleep(1.0)
                 if data:
                     rows = [[datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")] + ["" if data[t].get(n) is None else data[t][n] for n in typen] for t in sorted(data)]
                     schreibe(pfad.format(y=y), ["zeit_utc"] + typen, rows)
                     eintrag(key, datei=pfad.format(y=y), zeilen=len(rows), letzte=rows[-1][0], einheit="MW", quelle="energy-charts.info")
+                if leer:
+                    eintrag(key, **{f"ohne_daten_{y}": leer})
             except Budget:
                 zeit_um(key); break
             except Exception as e:
