@@ -1,21 +1,125 @@
 {
- "erzeugt_utc": "2026-09-23T15:59:05Z",
+ "erzeugt_utc": "2026-09-23T16:45:32Z",
  "reihen": {
-  "energie:erzeugung_ch": {
+  "wiki:de_inflation": {
    "dateien": [
-    "data/hr/energie/erzeugung_ch_2026.csv.gz"
+    "data/hr/wiki/de_inflation.csv.gz"
    ],
-   "zeilen": 6372,
-   "erste": "2025-12-31T23:00:00Z",
-   "letzte": "2026-09-23T10:00:00Z"
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
   },
-  "energie:erzeugung_de": {
+  "wiki:de_niedrigwasser": {
    "dateien": [
-    "data/hr/energie/erzeugung_de_2026.csv.gz"
+    "data/hr/wiki/de_niedrigwasser.csv.gz"
    ],
-   "zeilen": 25495,
-   "erste": "2025-12-31T23:00:00Z",
-   "letzte": "2026-09-23T12:30:00Z"
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:de_rezession": {
+   "dateien": [
+    "data/hr/wiki/de_rezession.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_bitcoin": {
+   "dateien": [
+    "data/hr/wiki/en_bitcoin.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_heat_wave": {
+   "dateien": [
+    "data/hr/wiki/en_heat_wave.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_inflation": {
+   "dateien": [
+    "data/hr/wiki/en_inflation.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_nestle": {
+   "dateien": [
+    "data/hr/wiki/en_nestle.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_novartis": {
+   "dateien": [
+    "data/hr/wiki/en_novartis.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_nvidia": {
+   "dateien": [
+    "data/hr/wiki/en_nvidia.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_oil_price": {
+   "dateien": [
+    "data/hr/wiki/en_oil_price.csv.gz"
+   ],
+   "zeilen": 4101,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_recession": {
+   "dateien": [
+    "data/hr/wiki/en_recession.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_roche": {
+   "dateien": [
+    "data/hr/wiki/en_roche.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_stock_market_crash": {
+   "dateien": [
+    "data/hr/wiki/en_stock_market_crash.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_tesla_inc": {
+   "dateien": [
+    "data/hr/wiki/en_tesla_inc.csv.gz"
+   ],
+   "zeilen": 3520,
+   "erste": "2017-02-02",
+   "letzte": "2026-09-22"
+  },
+  "wiki:en_ubs": {
+   "dateien": [
+    "data/hr/wiki/en_ubs.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-22"
   },
   "wetter:basel": {
    "dateien": [
@@ -53,6 +157,14 @@
   },
   "wetter:chicago": {
    "dateien": [
+    "data/hr/wetter/chicago_2000.csv.gz",
+    "data/hr/wetter/chicago_2001.csv.gz",
+    "data/hr/wetter/chicago_2002.csv.gz",
+    "data/hr/wetter/chicago_2003.csv.gz",
+    "data/hr/wetter/chicago_2004.csv.gz",
+    "data/hr/wetter/chicago_2005.csv.gz",
+    "data/hr/wetter/chicago_2006.csv.gz",
+    "data/hr/wetter/chicago_2007.csv.gz",
     "data/hr/wetter/chicago_2008.csv.gz",
     "data/hr/wetter/chicago_2009.csv.gz",
     "data/hr/wetter/chicago_2010.csv.gz",
@@ -73,8 +185,8 @@
     "data/hr/wetter/chicago_2025.csv.gz",
     "data/hr/wetter/chicago_2026.csv.gz"
    ],
-   "zeilen": 164040,
-   "erste": "2008-01-01T00:00:00Z",
+   "zeilen": 234168,
+   "erste": "2000-01-01T00:00:00Z",
    "letzte": "2026-09-17T23:00:00Z"
   },
   "wetter:frankfurt": {
@@ -217,145 +329,49 @@
    "dateien": [
     "data/hr/pegel/duisburg-ruhrort_2026.csv.gz"
    ],
-   "zeilen": 2979,
+   "zeilen": 2987,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T16:30:00+02:00"
+   "letzte": "2026-09-23T18:30:00+02:00"
   },
   "pegel:kaub": {
    "dateien": [
     "data/hr/pegel/kaub_2026.csv.gz"
    ],
-   "zeilen": 2977,
+   "zeilen": 2985,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T16:30:00+02:00"
+   "letzte": "2026-09-23T18:30:00+02:00"
   },
   "pegel:koeln": {
    "dateien": [
     "data/hr/pegel/koeln_2026.csv.gz"
    ],
-   "zeilen": 2975,
+   "zeilen": 2983,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T16:30:00+02:00"
+   "letzte": "2026-09-23T18:30:00+02:00"
   },
   "pegel:maxau": {
    "dateien": [
     "data/hr/pegel/maxau_2026.csv.gz"
    ],
-   "zeilen": 2978,
+   "zeilen": 2986,
    "erste": "2026-08-23T16:00:00+02:00",
-   "letzte": "2026-09-23T16:30:00+02:00"
+   "letzte": "2026-09-23T18:30:00+02:00"
   },
-  "wiki:de_inflation": {
+  "energie:erzeugung_ch": {
    "dateien": [
-    "data/hr/wiki/de_inflation.csv.gz"
+    "data/hr/energie/erzeugung_ch_2026.csv.gz"
    ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
+   "zeilen": 6372,
+   "erste": "2025-12-31T23:00:00Z",
+   "letzte": "2026-09-23T10:00:00Z"
   },
-  "wiki:de_rezession": {
+  "energie:erzeugung_de": {
    "dateien": [
-    "data/hr/wiki/de_rezession.csv.gz"
+    "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_bitcoin": {
-   "dateien": [
-    "data/hr/wiki/en_bitcoin.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_heat_wave": {
-   "dateien": [
-    "data/hr/wiki/en_heat_wave.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_inflation": {
-   "dateien": [
-    "data/hr/wiki/en_inflation.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_nestle": {
-   "dateien": [
-    "data/hr/wiki/en_nestle.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_novartis": {
-   "dateien": [
-    "data/hr/wiki/en_novartis.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_nvidia": {
-   "dateien": [
-    "data/hr/wiki/en_nvidia.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_oil_price": {
-   "dateien": [
-    "data/hr/wiki/en_oil_price.csv.gz"
-   ],
-   "zeilen": 4101,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_recession": {
-   "dateien": [
-    "data/hr/wiki/en_recession.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_roche": {
-   "dateien": [
-    "data/hr/wiki/en_roche.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_stock_market_crash": {
-   "dateien": [
-    "data/hr/wiki/en_stock_market_crash.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_tesla_inc": {
-   "dateien": [
-    "data/hr/wiki/en_tesla_inc.csv.gz"
-   ],
-   "zeilen": 3520,
-   "erste": "2017-02-02",
-   "letzte": "2026-09-22"
-  },
-  "wiki:en_ubs": {
-   "dateien": [
-    "data/hr/wiki/en_ubs.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22"
+   "zeilen": 25495,
+   "erste": "2025-12-31T23:00:00Z",
+   "letzte": "2026-09-23T12:30:00Z"
   }
  }
 }
