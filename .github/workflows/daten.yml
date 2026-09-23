@@ -13,15 +13,15 @@ concurrency:
   cancel-in-progress: false
 jobs:
   spiegel:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with: { python-version: "3.12" }
       - name: Kurse, FRED, Ken French
         run: python fetch.py
-        timeout-minutes: 10
+        timeout-minutes: 20
       - name: Hochaufgelöste Reihen
         run: python fetch_hr.py
         env:
