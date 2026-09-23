@@ -1,0 +1,10 @@
+{
+  "vvix": {
+    "beschreibung": "Cboe VVIX Index (Volatilitaet der Volatilitaet, aus VIX-Optionen), taeglicher Schlusswert",
+    "einheit": "Indexpunkte",
+    "quelle_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

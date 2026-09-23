@@ -28,11 +28,12 @@
     "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv",
     "domain": "cdn.cboe.com",
     "bereich": "Stimmung",
-    "status": "kandidat",
-    "grund": "",
+    "status": "aktiv",
+    "grund": "K1-K7 erfuellt: taeglich (Median 1 Tag), Historie seit 2006-03-06, oeffentlich ohne Login/Schluessel ueber cdn.cboe.com, Marktdaten unrevidiert, laufend bis 2026-09-22 fortgeschrieben, neu (nicht im bestehenden Spiegel), unter 1 MB komprimiert.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T22:10:19Z",
+    "mechanismus": "VVIX misst die implizite Volatilitaet von VIX-Optionen (Vol-of-Vol); ein Anstieg zeigt Stress in der Optionsmarktstruktur, der sich innert 1-20 Handelstagen auf breite Aktienindizes wie den Weltindex uebertragen kann, bevor er in Kursen sichtbar wird."
   },
   {
     "id": "cboe_vix9d",
@@ -200,11 +201,12 @@
     "url": "https://waterservices.usgs.gov/nwis/dv/?sites=07010000&parameterCd=00060&format=json",
     "domain": "waterservices.usgs.gov",
     "bereich": "Natur",
-    "status": "kandidat",
-    "grund": "",
+    "status": "abgelehnt",
+    "grund": "K4 verletzt: USGS-Tageswerte (waterservices.usgs.gov/nwis/dv) sind bis zur Qualitaetspruefung als provisorisch markiert (qualifier 'P') und werden danach auf 'A' (approved) korrigiert; Stichprobe 07010000 zeigt die letzten rund 4 Monate durchgehend als 'P', also genau der fuer K5 (< 10 Tage) noetige aktuelle Rand ist stets revisionsfaellig. Damit nicht gleichzeitig punktgenau (K4) und laufend (K5) erfuellbar. Kein Abruf/keine Ablage der Historie.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T22:10:19Z",
+    "mechanismus": "Pegelstaende/Abfluss grosser Fluesse beeinflussen kurzfristig Binnenschifffahrt- und Erntetransportkosten und damit Agrarrohstoffpreise (z.B. DBA) gegenueber dem Weltindex."
   },
   {
     "id": "usgs_ohio",
@@ -212,11 +214,12 @@
     "url": "https://waterservices.usgs.gov/nwis/dv/?sites=03611500&parameterCd=00060&format=json",
     "domain": "waterservices.usgs.gov",
     "bereich": "Natur",
-    "status": "kandidat",
-    "grund": "",
+    "status": "abgelehnt",
+    "grund": "K4 verletzt: identisches USGS-Tageswerte-System (waterservices.usgs.gov/nwis/dv) wie usgs_mississippi; aktuelle Werte sind als provisorisch ('P') markiert und koennen bis zur Freigabe ('A') revidiert werden, der fuer K5 relevante juengste Rand ist somit dauerhaft revisionsfaellig. Gleiche Pruefung wie bei usgs_mississippi durchgefuehrt, nicht erneut einzeln abgerufen. Kein Abruf/keine Ablage der Historie.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-23T22:10:19Z",
+    "mechanismus": "Abfluss des Ohio bei Metropolis (Anbindung an Mississippi-Schifffahrt) kann kurzfristig Kohle-, Stahl- und Agrartransportkosten beeinflussen."
   },
   {
     "id": "usgs_erdbeben",
@@ -288,5 +291,33 @@
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-23T20:50:00Z"
+  },
+  {
+    "id": "sec_insider_sektor",
+    "name": "SEC Formular-4-Insiderkaeufe je Sektor (offene Marktkaeufe/-verkaeufe)",
+    "url": "https://www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets",
+    "domain": "www.sec.gov",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "hoch",
+    "mechanismus": "Offene Marktkaeufe von Firmeninsidern (Formular 4, Code 'P') buendeln privates Wissen ueber die kurzfristigen Aussichten eines Sektors; ein Anstieg der Kaeuferzahl/des Kaufwerts je SPDR-Sektor kann dem Sektor gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen einen Vorteil anzeigen, bevor sich das in Kursen niederschlaegt.",
+    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): Zugriff auf alle gepruefte SEC-Endpunkte gescheitert, siehe status=fehler unten. HTTP 403 (Forbidden) auf allen getesteten Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/files/structureddata/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/cgi-bin/browse-edgar, data.sec.gov/submissions/*.json, www.sec.gov/Archives/edgar/daily-index/*. Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel), naechster Lauf erneut versuchen; SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) noch nicht erstellt, da ohne Datenzugriff nicht pruefbar.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T22:10:19Z",
+    "geprueft_utc": "2026-09-23T22:10:19Z"
+  },
+  {
+    "id": "twitter_unsicherheit",
+    "name": "Twitter-based Economic Uncertainty Index (Baker/Bloom/Davis/Renault)",
+    "url": "https://www.policyuncertainty.com/twitter_uncert.html",
+    "domain": "www.policyuncertainty.com",
+    "bereich": "Aufmerksamkeit",
+    "status": "abgelehnt",
+    "prioritaet": "hoch",
+    "mechanismus": "Ein taeglicher, aus Tweets abgeleiteter Unsicherheitsindex koennte kurzfristig auf erhoehte Risikopraemien breiter Marktindizes hindeuten, bevor sich Stimmung in Kursen niederschlaegt.",
+    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet. Etappe 1 (2026-09-23): K5-Pruefung siehe status unten. K5 verletzt: die Quellseite policyuncertainty.com/twitter_uncert.html vermerkt explizit 'Due to removal of Academic Research access to the Twitter/X API, we are unable to further update the index.' Die Reihe wird nicht mehr fortgeschrieben, letzter Wert absehbar aelter als 10 Tage. Historie (Dropbox-XLSX) daher nicht abgerufen/abgelegt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-23T22:10:19Z",
+    "geprueft_utc": "2026-09-23T22:10:19Z"
   }
 ]
