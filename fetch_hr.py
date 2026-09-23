@@ -13,7 +13,7 @@ HEUTE = datetime.now(timezone.utc).date()
 JAHR = HEUTE.year
 man = {"erzeugt_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "reihen": {}}
 START = time.time()
-BUDGET_MIN = float(os.environ.get("HR_BUDGET_MIN", "35"))   # danach wird gespeichert, der Rest folgt im nächsten Lauf
+BUDGET_MIN = float(os.environ.get("HR_BUDGET_MIN", "25"))   # danach wird gespeichert, der Rest folgt im nächsten Lauf
 
 def zeit_um(key=None):
     if (time.time() - START) / 60 > BUDGET_MIN:
@@ -23,15 +23,26 @@ def zeit_um(key=None):
         return True
     return False
 
-def get(url, tries=3, pause=4):
+class Budget(Exception):
+    pass
+
+def log(msg):
+    print(f"[{(time.time() - START) / 60:5.1f} min] {msg}", flush=True)
+
+def get(url, tries=2, pause=3):
+    """Jeder Abruf prüft das Zeitbudget; kurze Timeouts, damit eine hängende Quelle den Lauf nicht auffrisst."""
     last = None
     for i in range(tries):
+        if (time.time() - START) / 60 > BUDGET_MIN:
+            raise Budget("Zeitbudget erschöpft")
+        t0 = time.time()
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
                 return r.read()
         except Exception as e:  # noqa
             last = e
-            time.sleep(pause * (i + 1))
+            log(f"Fehler nach {time.time() - t0:.0f}s ({i + 1}/{tries}): {str(e)[:80]} | {url[:90]}")
+            time.sleep(pause)
     raise last
 
 def schreibe(path, head, rows):
@@ -97,8 +108,11 @@ def energie():
                 if rows:
                     schreibe(pfad.format(y=y), ["zeit_utc", "preis_eur_mwh"], rows)
                     eintrag(key, datei=pfad.format(y=y), zeilen=len(rows), letzte=rows[-1][0], einheit="EUR/MWh", aufloesung="1h", quelle="energy-charts.info")
+            except Budget:
+                zeit_um(key); break
             except Exception as e:
                 eintrag(key, fehler=f"{y}: {e}")
+            log(f"{key} {y} fertig")
         # Erzeugung und Last nach Typ, stündlich/viertelstündlich, ab 2015
         key = f"energie:erzeugung_{land}"; pfad = f"{OUT}/energie/erzeugung_{land}_{{y}}.csv.gz"
         for y in reversed(jahre(2015, pfad)):
@@ -121,8 +135,11 @@ def energie():
                     rows = [[datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")] + ["" if data[t].get(n) is None else data[t][n] for n in typen] for t in sorted(data)]
                     schreibe(pfad.format(y=y), ["zeit_utc"] + typen, rows)
                     eintrag(key, datei=pfad.format(y=y), zeilen=len(rows), letzte=rows[-1][0], einheit="MW", quelle="energy-charts.info")
+            except Budget:
+                zeit_um(key); break
             except Exception as e:
                 eintrag(key, fehler=f"{y}: {e}")
+            log(f"{key} {y} fertig")
 
 # ---------------------------------------------------------------- Wetter (Open-Meteo, Reanalyse ERA5)
 ORTE = [
@@ -147,8 +164,11 @@ def wetter():
                 schreibe(pfad.format(y=y), ["zeit_utc"] + var, rows)
                 eintrag(key, datei=pfad.format(y=y), zeilen=len(rows), letzte=rows[-1][0], aufloesung="1h", quelle="open-meteo ERA5",
                         einheiten="°C, mm, km/h, %")
+            except Budget:
+                zeit_um(key); break
             except Exception as e:
                 eintrag(key, fehler=f"{y}: {e}")
+            log(f"{key} {y} fertig")
             time.sleep(3.0)  # Open-Meteo zählt ein Jahr als ~26 Aufrufe; Grenze 600 pro Minute
 
 # ---------------------------------------------------------------- Rheinpegel (WSV PEGELONLINE), nur 31 Tage verfügbar -> fortschreiben
@@ -235,16 +255,24 @@ def inventar():
                 zeilen += len(r); erste = erste or r[0][0]; letzte = r[-1][0]
         e.update(zeilen=zeilen, erste=erste, letzte=letzte)
 
-if __name__ == "__main__":
-    os.makedirs(OUT, exist_ok=True)
-    umstellen()
-    for teil in (pegel, wiki, energie, wetter):   # Pegel zuerst: Quelle hält nur 31 Tage
-        try:
-            teil()
-        except Exception as e:  # ein Teil darf die anderen nicht mitreissen
-            man["reihen"][f"{teil.__name__}:gesamt"] = {"fehler": str(e)}
+def manifest_schreiben():
     inventar()
     with open(f"{OUT}/manifest_hr.json", "w", encoding="utf-8") as f:
         json.dump(man, f, ensure_ascii=False, indent=1)
     n_err = sum(1 for v in man["reihen"].values() if "fehler" in v)
-    print(f"fertig: {len(man['reihen'])} Reihen, {n_err} mit Fehlern")
+    log(f"Manifest: {len(man['reihen'])} Reihen, {n_err} mit Fehlern")
+
+if __name__ == "__main__":
+    os.makedirs(OUT, exist_ok=True)
+    if "--manifest" in sys.argv:          # nur Bestand inventarisieren (Sicherheitsschritt im Workflow)
+        manifest_schreiben(); sys.exit(0)
+    umstellen()
+    for teil in (pegel, wiki, energie, wetter):   # Pegel zuerst: Quelle hält nur 31 Tage
+        log(f"Start {teil.__name__}")
+        try:
+            teil()
+        except Budget:
+            man["zeitbudget_erschoepft"] = True
+        except Exception as e:  # ein Teil darf die anderen nicht mitreissen
+            man["reihen"][f"{teil.__name__}:gesamt"] = {"fehler": str(e)}
+        manifest_schreiben()                       # nach jeder Quelle, damit ein Abbruch nichts verliert
