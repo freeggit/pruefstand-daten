@@ -1,0 +1,26 @@
+name: Prüfstand Datenspiegel
+on:
+  schedule:
+    - cron: "15 5 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["fetch.py", "tickers.txt", "fred_series.txt", ".github/workflows/daten.yml"]
+permissions:
+  contents: write
+jobs:
+  spiegel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Reihen holen
+        run: python fetch.py
+      - name: Einchecken
+        run: |
+          git config user.name "pruefstand-bot"
+          git config user.email "pruefstand-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && echo "keine Änderung" || git commit -m "Datenspiegel $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git push
