@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-09-23T15:05:39Z",
+ "erzeugt_utc": "2026-09-23T15:59:05Z",
  "reihen": {
   "energie:erzeugung_ch": {
    "dateien": [
@@ -87,6 +87,7 @@
     "data/hr/wetter/frankfurt_2005.csv.gz",
     "data/hr/wetter/frankfurt_2006.csv.gz",
     "data/hr/wetter/frankfurt_2007.csv.gz",
+    "data/hr/wetter/frankfurt_2008.csv.gz",
     "data/hr/wetter/frankfurt_2009.csv.gz",
     "data/hr/wetter/frankfurt_2010.csv.gz",
     "data/hr/wetter/frankfurt_2011.csv.gz",
@@ -106,7 +107,7 @@
     "data/hr/wetter/frankfurt_2025.csv.gz",
     "data/hr/wetter/frankfurt_2026.csv.gz"
    ],
-   "zeilen": 225384,
+   "zeilen": 234168,
    "erste": "2000-01-01T00:00:00Z",
    "letzte": "2026-09-17T23:00:00Z"
   },
