@@ -16,12 +16,12 @@ def lines(path):
             if ln:
                 yield ln
 
-def get(url, tries=3, pause=3):
+def get(url, tries=3, pause=3, timeout=30):
     last = None
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers=UA)
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read()
         except Exception as e:  # noqa
             last = e
@@ -106,15 +106,18 @@ def kurse():
     """Je Ticker: zuerst Stooq (bevorzugt), sonst Yahoo-Chart. Quelle steht im Manifest."""
     for t in lines("tickers.txt"):
         t = t.lower(); path = f"{OUT}/kurse/{t}_d.csv"; key = f"kurse:{t}"
-        # 1. Stooq
-        try:
-            raw = get(f"https://stooq.com/q/d/l/?s={t}.us&i=d")
-            parsed, err = check_csv(raw, "Date")
-        except Exception as e:
-            parsed, err = None, f"Abruf: {e}"
+        # 1. Stooq – sperrt Rechenzentrums-IPs (auch GitHub); nur mit STOOQ=1 versuchen, dann kurz
+        if os.environ.get("STOOQ") == "1":
+            try:
+                raw = get(f"https://stooq.com/q/d/l/?s={t}.us&i=d", tries=1, timeout=10)
+                parsed, err = check_csv(raw, "Date")
+            except Exception as e:
+                parsed, err = None, f"Abruf: {e}"
+        else:
+            parsed, err = None, "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)"
         if parsed and write_if_ok(path, raw, key, "Date"):
             manifest["reihen"][key]["quelle"] = "stooq"; taeglich_pruefen(path, key)
-            time.sleep(1.5); continue
+            time.sleep(0.5); continue
         stooq_err = err
         # 2. Yahoo-Chart
         try:
@@ -126,7 +129,8 @@ def kurse():
         except Exception as e:
             manifest["reihen"][key] = {"fehler": f"stooq: {stooq_err}; yahoo: {e}", "datei": path if os.path.exists(path) else None}
             print(f"FEHLER {key}: {manifest['reihen'][key]['fehler']}", file=sys.stderr)
-        time.sleep(1.5)
+        print(f"{key}: {manifest['reihen'].get(key, {}).get('quelle', 'fehler')}", flush=True)
+        time.sleep(0.5)
 
 def fred():
     for s in lines("fred_series.txt"):
