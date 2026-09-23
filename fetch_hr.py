@@ -12,6 +12,16 @@ OUT = "data/hr"
 HEUTE = datetime.now(timezone.utc).date()
 JAHR = HEUTE.year
 man = {"erzeugt_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "reihen": {}}
+START = time.time()
+BUDGET_MIN = float(os.environ.get("HR_BUDGET_MIN", "35"))   # danach wird gespeichert, der Rest folgt im nächsten Lauf
+
+def zeit_um(key=None):
+    if (time.time() - START) / 60 > BUDGET_MIN:
+        if key:
+            eintrag(key, hinweis=f"Zeitbudget {BUDGET_MIN:.0f} min erschöpft, fehlende Jahre folgen im nächsten Lauf")
+        man["zeitbudget_erschoepft"] = True
+        return True
+    return False
 
 def get(url, tries=3, pause=4):
     last = None
@@ -70,7 +80,8 @@ def energie():
     for land, zone in ENERGIE_LAENDER:
         # Day-Ahead-Preis stündlich, ab 2015
         key = f"energie:preis_{land}"; pfad = f"{OUT}/energie/preis_{land}_{{y}}.csv.gz"
-        for y in jahre(2015, pfad):
+        for y in reversed(jahre(2015, pfad)):
+            if zeit_um(key): break
             rows = []
             try:
                 for m in range(1, 13):
@@ -90,7 +101,8 @@ def energie():
                 eintrag(key, fehler=f"{y}: {e}")
         # Erzeugung und Last nach Typ, stündlich/viertelstündlich, ab 2015
         key = f"energie:erzeugung_{land}"; pfad = f"{OUT}/energie/erzeugung_{land}_{{y}}.csv.gz"
-        for y in jahre(2015, pfad):
+        for y in reversed(jahre(2015, pfad)):
+            if zeit_um(key): break
             data, typen = {}, []
             try:
                 for m in range(1, 13):
@@ -122,7 +134,8 @@ WETTER_VAR = "temperature_2m,precipitation,wind_speed_10m,cloud_cover"
 def wetter():
     for name, lat, lon in ORTE:
         key = f"wetter:{name}"; pfad = f"{OUT}/wetter/{name}_{{y}}.csv.gz"
-        for y in jahre(2000, pfad):
+        for y in reversed(jahre(2000, pfad)):     # jüngste Jahre zuerst
+            if zeit_um(key): break
             a = date(y, 1, 1); b = min(date(y, 12, 31), HEUTE - timedelta(days=6))
             if b < a: continue
             url = ("https://archive-api.open-meteo.com/v1/archive?" + urllib.parse.urlencode(
@@ -201,14 +214,36 @@ def umstellen():
     if n:
         man["umgestellt_auf_gzip"] = n
 
+def inventar():
+    """Manifest aus dem Dateibestand bauen: jede Reihe listet ALLE ihre Jahresdateien, nicht nur die heute geholten."""
+    import re
+    bestand = {}
+    for wurzel, _, dateien in os.walk(OUT):
+        for d in sorted(dateien):
+            if not d.endswith(".csv.gz"):
+                continue
+            quelle = os.path.basename(wurzel)
+            name = re.sub(r"(_\d{4})?\.csv\.gz$", "", d)
+            bestand.setdefault(f"{quelle}:{name}", []).append(os.path.join(wurzel, d))
+    for key, dateien in bestand.items():
+        e = man["reihen"].setdefault(key, {})
+        e["dateien"] = sorted(dateien)
+        zeilen, erste, letzte = 0, None, None
+        for pf in e["dateien"]:
+            r = lies(pf)
+            if r:
+                zeilen += len(r); erste = erste or r[0][0]; letzte = r[-1][0]
+        e.update(zeilen=zeilen, erste=erste, letzte=letzte)
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     umstellen()
-    for teil in (energie, wetter, pegel, wiki):
+    for teil in (pegel, wiki, energie, wetter):   # Pegel zuerst: Quelle hält nur 31 Tage
         try:
             teil()
         except Exception as e:  # ein Teil darf die anderen nicht mitreissen
             man["reihen"][f"{teil.__name__}:gesamt"] = {"fehler": str(e)}
+    inventar()
     with open(f"{OUT}/manifest_hr.json", "w", encoding="utf-8") as f:
         json.dump(man, f, ensure_ascii=False, indent=1)
     n_err = sum(1 for v in man["reihen"].values() if "fehler" in v)
