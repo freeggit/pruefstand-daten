@@ -5,7 +5,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["fetch.py", "fetch_hr.py", "tickers.txt", "fred_series.txt", ".github/workflows/daten.yml"]
+    paths: ["fetch.py", "fetch_hr.py", "fetch_sec.py", "tickers.txt", "fred_series.txt", ".github/workflows/daten.yml"]
 permissions:
   contents: write
 concurrency:
@@ -14,7 +14,7 @@ concurrency:
 jobs:
   spiegel:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -27,6 +27,13 @@ jobs:
         env:
           HR_TEILE: pegel,wiki,wetter   # Strom kommt über die Claude-Code-Routine (Zweig claude/daten-energie)
         timeout-minutes: 30
+        continue-on-error: true
+      - name: SEC Insider (Formular 4)
+        if: always()
+        run: python fetch_sec.py
+        env:
+          SEC_BUDGET_MIN: "15"
+        timeout-minutes: 20
         continue-on-error: true
       - name: Manifest sichern
         if: always()
