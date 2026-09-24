@@ -1,0 +1,6 @@
+{
+ "erzeugt_utc": "2026-09-24T17:06:38Z",
+ "reihen": {},
+ "hinweise": [],
+ "fehler": "HTTP 403 der SEC (https://www.sec.gov/files/structureddata/data/insider-transactions-data-sets/2006q1_form345.zip); nicht umgangen, nächster Lauf erneut"
+}
