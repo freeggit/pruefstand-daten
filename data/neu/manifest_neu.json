@@ -1,8 +1,8 @@
 {
-  "erzeugt_utc": "2026-09-24T06:13:11Z",
+  "erzeugt_utc": "2026-09-24T08:15:29Z",
   "reihen": {
     "bitcoin_onchain:gebuehren": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Summe der Transaktionsgebuehren im Bitcoin-Netzwerk pro Tag, in BTC",
       "datei": "data/neu/bitcoin_onchain/gebuehren.csv.gz",
       "einheit": "BTC",
@@ -17,7 +17,7 @@
       "zeilen": 6449
     },
     "bitcoin_onchain:hashrate": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Geschaetzte Bitcoin-Netzwerk-Hashrate (Terahashes pro Sekunde), aus Blockzeit und Difficulty berechnet",
       "datei": "data/neu/bitcoin_onchain/hashrate.csv.gz",
       "einheit": "TH/s",
@@ -32,7 +32,7 @@
       "zeilen": 6463
     },
     "bitcoin_onchain:transaktionen": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Bestaetigte Bitcoin-Transaktionen pro Tag",
       "datei": "data/neu/bitcoin_onchain/transaktionen.csv.gz",
       "einheit": "Anzahl",
@@ -47,7 +47,7 @@
       "zeilen": 6449
     },
     "boe_sonia:sonia": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "SONIA (Sterling Overnight Index Average), von der Bank of England administrierter GBP-Tagesgeldsatz, IADB-Serie IUDSOIA",
       "datei": "data/neu/boe_sonia/sonia.csv.gz",
       "einheit": "Prozent",
@@ -62,7 +62,7 @@
       "zeilen": 7509
     },
     "bundesbank_umlauf:bund10y": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Rendite der aktuellen zehnjaehrigen Bundesanleihe (Daily yield of current 10-year federal bond)",
       "datei": "data/neu/bundesbank_umlauf/bund10y.csv.gz",
       "einheit": "Prozent",
@@ -77,7 +77,7 @@
       "zeilen": 6344
     },
     "bundesbank_umlauf:bund2y": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Rendite der aktuellen zweijaehrigen Bundesschatzanweisung (Daily yield of current two-year Federal Treasury notes)",
       "datei": "data/neu/bundesbank_umlauf/bund2y.csv.gz",
       "einheit": "Prozent",
@@ -92,7 +92,7 @@
       "zeilen": 3227
     },
     "cboe_skew:skew": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
       "datei": "data/neu/cboe_skew/skew.csv.gz",
       "einheit": "Indexpunkte",
@@ -107,7 +107,7 @@
       "zeilen": 9232
     },
     "cboe_vix3m:vix3m": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Cboe VIX3M Index (implizite 3-Monats-Volatilitaet des S&P 500), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vix3m/vix3m.csv.gz",
       "einheit": "Indexpunkte",
@@ -122,7 +122,7 @@
       "zeilen": 4278
     },
     "cboe_vix9d:vix9d": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Cboe VIX9D Index (implizite 9-Tage-Volatilitaet des S&P 500), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vix9d/vix9d.csv.gz",
       "einheit": "Indexpunkte",
@@ -137,7 +137,7 @@
       "zeilen": 3952
     },
     "cboe_vvix:vvix": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Cboe VVIX Index (Volatilitaet der Volatilitaet, aus VIX-Optionen), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vvix/vvix.csv.gz",
       "einheit": "Indexpunkte",
@@ -152,7 +152,7 @@
       "zeilen": 5109
     },
     "ecb_fx:eurchf": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "EZB Referenzkurs CHF/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurchf.csv.gz",
       "einheit": "CHF je EUR",
@@ -167,7 +167,7 @@
       "zeilen": 7099
     },
     "ecb_fx:eurcny": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "EZB Referenzkurs CNY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurcny.csv.gz",
       "einheit": "CNY je EUR",
@@ -182,7 +182,7 @@
       "zeilen": 6832
     },
     "ecb_fx:eurjpy": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "EZB Referenzkurs JPY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurjpy.csv.gz",
       "einheit": "JPY je EUR",
@@ -197,7 +197,7 @@
       "zeilen": 7099
     },
     "kalender_ereignisse:opex_verfall": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
       "datei": "data/neu/kalender_ereignisse/opex_verfall.csv.gz",
       "einheit": "Indikator (0/1)",
@@ -212,7 +212,7 @@
       "zeilen": 9398
     },
     "kalender_ereignisse:ustax": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "1 an US-Steuerterminen (15.1., 15.4., 15.6., 15.9., 15.12., feste Kalenderdaten ohne Wochenend-/Feiertagsverschiebung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
       "datei": "data/neu/kalender_ereignisse/ustax.csv.gz",
       "einheit": "Indikator (0/1)",
@@ -227,7 +227,7 @@
       "zeilen": 9398
     },
     "nyfed_rrp:rrp": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "NY Fed Overnight Reverse Repo Facility (ON RRP), taegliches Gesamtvolumen der akzeptierten Gebote (Treasury-Sicherheiten)",
       "datei": "data/neu/nyfed_rrp/rrp.csv.gz",
       "einheit": "Milliarden USD",
@@ -242,7 +242,7 @@
       "zeilen": 3332
     },
     "snb_saron:saron": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "SARON Uebernacht-Referenzzinssatz (Schlusskurs), SNB Datenportal Cube zirepo, Dimension H0",
       "datei": "data/neu/snb_saron/saron.csv.gz",
       "einheit": "Prozent",
@@ -257,7 +257,7 @@
       "zeilen": 6863
     },
     "treasury_auktionen:bid_to_cover": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Mittleres Bid-to-Cover-Verhaeltnis aller an diesem Tag abgeschlossenen US-Treasury-Auktionen (Bills, Notes, Bonds); Mass fuer die Nachfrage nach neu emittierten US-Staatsanleihen",
       "datei": "data/neu/treasury_auktionen/bid_to_cover.csv.gz",
       "einheit": "Verhaeltnis (Gebote/Zuteilung)",
@@ -271,8 +271,53 @@
       "verfuegbar_nach_tagen": 1,
       "zeilen": 4249
     },
+    "treasury_debt_penny:gesamt": {
+      "abruf_utc": "2026-09-24T08:15:29Z",
+      "beschreibung": "Gesamte ausstehende Bundesschuld der USA (Debt to the Penny, Total Public Debt Outstanding)",
+      "datei": "data/neu/treasury_debt_penny/gesamt.csv.gz",
+      "einheit": "USD",
+      "erste": "1993-04-01",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
+      "verfuegbar_nach_tagen": 1,
+      "zeilen": 8398
+    },
+    "treasury_debt_penny:intragovernmental": {
+      "abruf_utc": "2026-09-24T08:15:29Z",
+      "beschreibung": "US-Bundesschuld, regierungsinterner Anteil (Intragovernmental Holdings)",
+      "datei": "data/neu/treasury_debt_penny/intragovernmental.csv.gz",
+      "einheit": "USD",
+      "erste": "1997-09-30",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
+      "verfuegbar_nach_tagen": 1,
+      "zeilen": 5440
+    },
+    "treasury_debt_penny:oeffentlich_gehalten": {
+      "abruf_utc": "2026-09-24T08:15:29Z",
+      "beschreibung": "US-Bundesschuld, vom Publikum gehaltener Anteil (Debt Held by the Public)",
+      "datei": "data/neu/treasury_debt_penny/oeffentlich_gehalten.csv.gz",
+      "einheit": "USD",
+      "erste": "1997-09-30",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
+      "verfuegbar_nach_tagen": 1,
+      "zeilen": 5440
+    },
     "treasury_tga:tga": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
       "datei": "data/neu/treasury_tga/tga.csv.gz",
       "einheit": "Millionen USD",
@@ -287,7 +332,7 @@
       "zeilen": 5268
     },
     "usgs_erdbeben:anzahl_m5": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
       "datei": "data/neu/usgs_erdbeben/anzahl_m5.csv.gz",
       "einheit": "Anzahl Ereignisse",
@@ -302,7 +347,7 @@
       "zeilen": 4284
     },
     "wikipedia_weitere:duerre": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Dürre', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/duerre.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -317,7 +362,7 @@
       "zeilen": 4102
     },
     "wikipedia_weitere:hurrikan": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Hurrikan', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/hurrikan.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -332,7 +377,7 @@
       "zeilen": 4102
     },
     "wikipedia_weitere:konkurs": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Konkurs', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/konkurs.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -347,7 +392,7 @@
       "zeilen": 4097
     },
     "wikipedia_weitere:pandemie": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Pandemie', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/pandemie.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -362,7 +407,7 @@
       "zeilen": 4102
     },
     "wikipedia_weitere:streik": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Streik', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/streik.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -377,7 +422,7 @@
       "zeilen": 4102
     },
     "wikipedia_weitere:zinssatz": {
-      "abruf_utc": "2026-09-24T06:13:11Z",
+      "abruf_utc": "2026-09-24T08:15:29Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Zinssatz', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/zinssatz.csv.gz",
       "einheit": "Aufrufe pro Tag",

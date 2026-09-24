@@ -429,10 +429,10 @@
     "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Offene Marktkaeufe von Firmeninsidern (Formular 4, Code 'P') buendeln privates Wissen ueber die kurzfristigen Aussichten eines Sektors; ein Anstieg der Kaeuferzahl/des Kaufwerts je SPDR-Sektor kann dem Sektor gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen einen Vorteil anzeigen, bevor sich das in Kursen niederschlaegt.",
-    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen. Etappe 3 (2026-09-24, weiterer Lauf): erneut geprueft, diesmal auch die SEC-Startseite (www.sec.gov/) und die EDGAR-Volltextsuche (efts.sec.gov) getestet, nicht nur die Insider-Datensatz-Endpunkte -- ebenfalls HTTP 403 auf allen. Damit ist die Sperre als domainweit (nicht endpunktspezifisch) und ueber mehrere Laeufe hinweg reproduzierbar bestaetigt (blockiert vermutlich die Cloud-Ausgangs-IP-Range dieser Umgebung, wie von der SEC fuer Rechenzentrums-IPs praktiziert). Gemaess Vorgabe bleibt Status 'fehler' (403 = Befund, nicht umgehen); wird im naechsten Lauf erneut versucht, SIC-Sektor-Mapping weiterhin nicht erstellbar ohne Datenzugriff. Etappe 4 (2026-09-24T04:06Z, vierter Lauf): erneut geprueft (www.sec.gov/, www.sec.gov/data-research/..., data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/cgi-bin/browse-edgar) -- unveraendert HTTP 403 auf allen vier, identische UA-Kennung. Vierter unabhaengiger Lauf mit identischem Befund; die domainweite IP-Sperre ist damit stabil ueber vier Laeufe (23.-24.9.) reproduziert. Status bleibt 'fehler', kein Umgehungsversuch (kein Proxy/Kennungswechsel). Wird weiterhin bei jedem Lauf kurz erneut geprueft, da Reto hohe Prioritaet vorgegeben hat; sollte die Sperre ueber laengere Zeit unveraendert bleiben, ist ein Uebergang zu 'abgelehnt' (K3, aus dieser Infrastruktur nicht oeffentlich abrufbar) zu erwaegen und Reto zu melden. Etappe 5 (2026-09-24T06:06Z, fuenfter Lauf): erneut geprueft (www.sec.gov/, data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets) -- unveraendert HTTP 403 auf allen drei, identische UA-Kennung, kein Proxy-/Kennungswechsel. Fuenfter unabhaengiger Lauf mit identischem Befund ueber zwei Kalendertage (23.-24.9.); Sperre bleibt stabil. Status bleibt 'fehler' gemaess Vorgabe (403 = Befund, nicht umgehen). SIC-Sektor-Mapping weiterhin nicht erstellbar.",
+    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen. Etappe 3 (2026-09-24, weiterer Lauf): erneut geprueft, diesmal auch die SEC-Startseite (www.sec.gov/) und die EDGAR-Volltextsuche (efts.sec.gov) getestet, nicht nur die Insider-Datensatz-Endpunkte -- ebenfalls HTTP 403 auf allen. Damit ist die Sperre als domainweit (nicht endpunktspezifisch) und ueber mehrere Laeufe hinweg reproduzierbar bestaetigt (blockiert vermutlich die Cloud-Ausgangs-IP-Range dieser Umgebung, wie von der SEC fuer Rechenzentrums-IPs praktiziert). Gemaess Vorgabe bleibt Status 'fehler' (403 = Befund, nicht umgehen); wird im naechsten Lauf erneut versucht, SIC-Sektor-Mapping weiterhin nicht erstellbar ohne Datenzugriff. Etappe 4 (2026-09-24T04:06Z, vierter Lauf): erneut geprueft (www.sec.gov/, www.sec.gov/data-research/..., data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/cgi-bin/browse-edgar) -- unveraendert HTTP 403 auf allen vier, identische UA-Kennung. Vierter unabhaengiger Lauf mit identischem Befund; die domainweite IP-Sperre ist damit stabil ueber vier Laeufe (23.-24.9.) reproduziert. Status bleibt 'fehler', kein Umgehungsversuch (kein Proxy/Kennungswechsel). Wird weiterhin bei jedem Lauf kurz erneut geprueft, da Reto hohe Prioritaet vorgegeben hat; sollte die Sperre ueber laengere Zeit unveraendert bleiben, ist ein Uebergang zu 'abgelehnt' (K3, aus dieser Infrastruktur nicht oeffentlich abrufbar) zu erwaegen und Reto zu melden. Etappe 5 (2026-09-24T06:06Z, fuenfter Lauf): erneut geprueft (www.sec.gov/, data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets) -- unveraendert HTTP 403 auf allen drei, identische UA-Kennung, kein Proxy-/Kennungswechsel. Fuenfter unabhaengiger Lauf mit identischem Befund ueber zwei Kalendertage (23.-24.9.); Sperre bleibt stabil. Status bleibt 'fehler' gemaess Vorgabe (403 = Befund, nicht umgehen). SIC-Sektor-Mapping weiterhin nicht erstellbar. Etappe 6 (2026-09-24T08:11:45Z, sechster Lauf): erneut geprueft (www.sec.gov/, data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=4) -- unveraendert HTTP 403 auf allen vier, identische UA-Kennung, kein Proxy-/Kennungswechsel. Sechster unabhaengiger Lauf mit identischem Befund ueber zwei Kalendertage (23.-24.9.); domainweite Cloud-IP-Sperre bleibt stabil. Status bleibt 'fehler' gemaess Vorgabe.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T22:10:19Z",
-    "geprueft_utc": "2026-09-24T06:09:41Z"
+    "geprueft_utc": "2026-09-24T08:11:45Z"
   },
   {
     "id": "twitter_unsicherheit",
@@ -479,5 +479,51 @@
     ],
     "aufgenommen_utc": "2026-09-24T06:09:41Z",
     "geprueft_utc": "2026-09-24T06:09:41Z"
+  },
+  {
+    "id": "treasury_debt_penny",
+    "name": "US Treasury Debt to the Penny (Gesamtschuld, oeffentlich/intragovernmental)",
+    "url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+    "domain": "api.fiscaldata.treasury.gov",
+    "bereich": "Staat",
+    "status": "aktiv",
+    "prioritaet": "",
+    "mechanismus": "Der taegliche Zuwachs der US-Bundesschuld (Emissionstempo, Verhaeltnis oeffentlich/intragovernmental) zeigt kurzfristigen Angebotsdruck bei US-Staatsanleihen an, der Anleiherenditen (TLT) und ueber den Dollar auch andere Sektoren gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen beeinflussen kann, insbesondere um Schuldenobergrenzen-Episoden.",
+    "grund": "K1-K7 erfuellt: taeglich an US-Bankarbeitstagen (Median-Abstand 1 Tag), Historie 'gesamt' ab 1993-04-01 (8398 Werte), 'oeffentlich_gehalten'/'intragovernmental' ab 1997-09-30 (je 5440 Werte); oeffentliche REST-API ohne Login/Schluessel (v2/accounting/od/debt_to_penny); Werte sind taeglich veroeffentlichte Ist-Stände der Bundesschuld, keine nachtraeglich revidierte Statistik; letzter Wert 2026-09-22 (2 Kalendertage alt), laufend fortgeschrieben; alle drei Reihen neu (nicht im bestehenden Spiegel); Abruf < 2 s, unkomprimiert < 1.2 MB, komprimiert < 100 KB je Reihe. Anteil gleicher Folgewerte < 0.1%, Min/Max plausibel (Gesamtschuld 4.2 Bio. USD 1993 bis 40.2 Bio. USD 2026).",
+    "reihen": [
+      "gesamt",
+      "oeffentlich_gehalten",
+      "intragovernmental"
+    ],
+    "aufgenommen_utc": "2026-09-24T08:11:45Z",
+    "geprueft_utc": "2026-09-24T08:11:45Z"
+  },
+  {
+    "id": "openmeteo_wetter_anbau",
+    "name": "Open-Meteo Historical Weather API, Anbaugebiete (US Corn Belt, Brasilien Soja, Indien Monsun)",
+    "url": "https://open-meteo.com/en/docs/historical-weather-api",
+    "domain": "archive-api.open-meteo.com",
+    "bereich": "Rohstoffe",
+    "status": "kandidat",
+    "prioritaet": "",
+    "mechanismus": "Niederschlags- und Temperaturanomalien in wichtigen Anbaugebieten (US-Maisguertel, Mato Grosso Soja, indischer Monsun) sagen kurzfristig Ernteaussichten voraus und koennten Agrarrohstoffe (DBA) sowie betroffene Laender-/Sektorindizes gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen, bevor sich das in Ernteschaetzungen/Preisen niederschlaegt.",
+    "grund": "Noch nicht abschliessend geprueft. ERA5-Reanalyse-Historie (archive-api.open-meteo.com/v1/archive) taeglich, ohne Login/Schluessel, Historie ab 1940 (K2 erfuellbar), keine Revision der publizierten Reanalyse-Werte (K4 vermutlich erfuellt, noch zu verifizieren). Test am %s: freie oeffentliche IP-Adresse dieser Umgebung hat das taegliche Anfragekontingent des kostenlosen Open-Meteo-Tarifs bereits ausgeschoepft (HTTP 429, 'Daily API request limit exceeded'), vermutlich durch andere Nutzer derselben geteilten Cloud-IP-Range (kein Login/Schluessel noetig, daher kein eigener Kontingent-Zaehler moeglich) -- kein Umgehungsversuch unternommen. Aeltere historische Anfragen (2015) funktionierten zuvor kurz (HTTP 200), auch ein HTTP 200 fuer aktuelle Tage konnte nicht mehr getestet werden, bevor das Tageskontingent aufgebraucht war. Naechster Lauf: Verfuegbarkeit/Kontingent erneut pruefen, insbesondere ob aktuelle Tage (verfuegbar_nach_tagen, Publikationsverzug der ERA5-Reanalyse ca. 5 Tage) K5 (<=10 Tage) einhaelt, dann 2-3 Koordinaten (Iowa/Illinois Maisguertel, Mato Grosso Brasilien, Punjab/Maharashtra Indien) als Reihen quellen/openmeteo_wetter_anbau.py umsetzen.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-24T08:12:16Z",
+    "geprueft_utc": "2026-09-24T08:12:16Z"
+  },
+  {
+    "id": "donau_pegel",
+    "name": "Donau-Wasserstand (WSV Pegelonline, Stationen Passau/Regensburg)",
+    "url": "https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations.json?waters=DONAU",
+    "domain": "www.pegelonline.wsv.de",
+    "bereich": "Rohstoffe",
+    "status": "kandidat",
+    "prioritaet": "",
+    "mechanismus": "Niedrig- oder Hochwasser auf der Donau (Binnenschifffahrtsroute) verknappt kurzfristig Transportkapazitaet fuer Rohstoffe/Energie in Mitteleuropa und kann Logistikkosten sowie betroffene Sektoren (Energie, Grundstoffe) gegenueber dem Weltindex auf Sicht weniger Handelstage beeinflussen, analog zum bereits im bestehenden Spiegel vorhandenen Rheinpegel.",
+    "grund": "Test am %s: die oeffentliche REST-API www.pegelonline.wsv.de/webservices/rest-api/v2/ liefert Donau-Stationen (z.B. PASSAU DONAU 10091008) und Messwerte ohne Login/Schluessel, aber die measurements.json-Endpunkte liefern nur ein rollierendes Fenster von rund 30 Tagen -- keine Historie bis 31.12.2015 (K2 verletzt ueber diese API). Fuer eine lange Historie muesste eine andere oeffentliche Quelle gefunden werden (z.B. laenderspezifische Gewaesserkundliche Dienste mit Tages-Archivdownload, testweise gkd.bayern.de versucht, Pfad noch nicht gefunden/404). Noch nicht abgelehnt, da moeglicherweise mit anderem Endpunkt loesbar; naechster Lauf: gezielt nach Archiv-Download der bayerischen/oesterreichischen Wasserwirtschaft fuer Donau-Pegel suchen, sonst 'abgelehnt' mit Grund K2.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-24T08:12:16Z",
+    "geprueft_utc": "2026-09-24T08:12:16Z"
   }
 ]

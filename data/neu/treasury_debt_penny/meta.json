@@ -1,0 +1,26 @@
+{
+  "gesamt": {
+    "beschreibung": "Gesamte ausstehende Bundesschuld der USA (Debt to the Penny, Total Public Debt Outstanding)",
+    "einheit": "USD",
+    "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "intragovernmental": {
+    "beschreibung": "US-Bundesschuld, regierungsinterner Anteil (Intragovernmental Holdings)",
+    "einheit": "USD",
+    "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "oeffentlich_gehalten": {
+    "beschreibung": "US-Bundesschuld, vom Publikum gehaltener Anteil (Debt Held by the Public)",
+    "einheit": "USD",
+    "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
