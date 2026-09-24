@@ -53,7 +53,10 @@ def get(url, tries=2):
         except urllib.error.HTTPError as e:
             if e.code == 403:
                 try:
-                    txt = e.read()[:3000].decode("utf-8", "replace")
+                    b = e.read()
+                    if b[:2] == b"\x1f\x8b":
+                        b = gzip.decompress(b)
+                    txt = b[:3000].decode("utf-8", "replace")
                 except Exception:
                     txt = ""
                 txt = " ".join(re.sub(r"<[^>]+>", " ", txt).split())[:240]

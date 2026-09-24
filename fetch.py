@@ -85,6 +85,8 @@ def _yahoo_zeilen(ticker, period1):
         rows[d] = [d, f"{o:.4f}", f"{h:.4f}", f"{l:.4f}", f"{c:.4f}", str(int(v or 0)), f"{adj[i]:.4f}" if adj[i] is not None else ""]
     return rows
 
+YAHOO_INFO = {}
+
 def yahoo_chart(ticker):
     """Unadjustierte Tageskurse plus Adj Close aus dem Yahoo-Chart-Endpunkt (kein Schluessel)."""
     # period1/period2 statt range=max: mit range=max liefert Yahoo stillschweigend Monatsbalken
@@ -96,9 +98,11 @@ def yahoo_chart(ticker):
         ergaenzt = sorted(set(kurz) - set(rows))
         for d in ergaenzt:
             rows[d] = kurz[d]
+        YAHOO_INFO[ticker] = {"kurzabfrage_ergaenzt": ergaenzt}
         if ergaenzt:
             print(f"{ticker}: {len(ergaenzt)} Tag(e) aus Kurzabfrage ergaenzt: {', '.join(ergaenzt)}")
     except Exception as e:  # noqa
+        YAHOO_INFO[ticker] = {"kurzabfrage_fehler": str(e)[:200]}
         print(f"{ticker}: Kurzabfrage fehlgeschlagen ({e}); lange Abfrage bleibt", file=sys.stderr)
     head = ["Date", "Open", "High", "Low", "Close", "Volume", "AdjClose"]
     out = io.StringIO(); w = csv.writer(out); w.writerow(head); w.writerows(rows[d] for d in sorted(rows))
@@ -141,12 +145,39 @@ def kurse():
             if write_if_ok(path, raw, key, "Date"):
                 manifest["reihen"][key]["quelle"] = "yahoo-chart"
                 manifest["reihen"][key]["stooq_fehler"] = stooq_err
+                manifest["reihen"][key].update(YAHOO_INFO.get(t, {}))
                 taeglich_pruefen(path, key)
         except Exception as e:
             manifest["reihen"][key] = {"fehler": f"stooq: {stooq_err}; yahoo: {e}", "datei": path if os.path.exists(path) else None}
             print(f"FEHLER {key}: {manifest['reihen'][key]['fehler']}", file=sys.stderr)
         print(f"{key}: {manifest['reihen'].get(key, {}).get('quelle', 'fehler')}", flush=True)
         time.sleep(0.5)
+    luecken_pruefen()
+
+def luecken_pruefen():
+    """US-Ticker gegen den Handelskalender von SPY (letzte 60 Kalendertage) prüfen; fehlende Tage ins Manifest."""
+    from datetime import date, timedelta
+    def tage(t):
+        p = f"{OUT}/kurse/{t}_d.csv"
+        if not os.path.exists(p):
+            return set()
+        with open(p, encoding="utf-8") as f:
+            return {r[0] for r in csv.reader(f) if r and r[0][:1].isdigit()}
+    ab = (date.today() - timedelta(days=60)).isoformat()
+    ref = {d for d in tage("spy") if d >= ab}
+    if not ref:
+        return
+    for t in lines("tickers.txt"):
+        t = t.lower(); key = f"kurse:{t}"
+        if "." in t or t == "spy" or key not in manifest["reihen"]:
+            continue
+        eigene = {d for d in tage(t) if d >= ab}
+        if not eigene:
+            continue
+        fehlt = sorted(d for d in ref - eigene if d >= min(eigene))
+        manifest["reihen"][key]["luecken_60t"] = fehlt
+        if fehlt:
+            print(f"LUECKE {key}: {', '.join(fehlt)} fehlt gegenueber SPY", file=sys.stderr)
 
 def fred():
     for s in lines("fred_series.txt"):
