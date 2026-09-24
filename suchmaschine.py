@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.1).
+"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.3).
 Aufruf: python3 suchmaschine.py <basis main/data> [<basis claude/daten-energie/data>] [<basis claude/daten-neu/data>]
-Umgebung: PS_CACHE (Zwischenspeicher), PS_KUM_VORHER (Kandidaten aller früheren Suchläufe, V3.1).
+Umgebung: PS_CACHE (Zwischenspeicher), PS_KUM_VORHER (kumuliert bis Vorlauf), PS_REGISTER (optional, Register-Datei).
+V3.3: Jede Hypothese (Indikator|Extremtyp|Ziel|h) zählt genau einmal; Register hypothesen.txt.gz wird nachgeführt.
 
 Sucht Ereignisse in hochaufgelösten Reihen, nach denen ein Zielwert den Index (ACWI) schlägt.
 Nur Discovery-Daten (bis STICHTAG). Validation ab STICHTAG+1 wird physisch abgeschnitten.
@@ -26,7 +27,25 @@ STICHTAG = pd.Timestamp("2020-12-31")
 HORIZONTE = [1, 5, 20]          # V3.2 (E1): 126 Tage gestrichen, passt nicht zum Ziel Kurzsprung
 T_MIN, T_VOR = 4.5, 3.5
 T_BASIS = 4.5
-KUM_VORHER = int(os.environ.get("PS_KUM_VORHER", "0"))   # V3.1: Kandidaten aller früheren Suchläufe (aus suche/S####)
+KUM_VORHER = int(os.environ.get("PS_KUM_VORHER", "0"))   # Kandidaten kumuliert bis zum Vorlauf (index.json der Lernrunde)
+
+def register_laden():
+    """V3.3: Register aller je geprüften Hypothesen (Indikator|Extremtyp|Ziel|h). Zuerst claude/lernen, sonst Startbestand auf main."""
+    import gzip
+    quellen = [os.environ.get("PS_REGISTER")]
+    if BASIS and "/main/data" in BASIS:
+        quellen += [BASIS.replace("/main/data", "/claude/lernen") + "/hypothesen.txt.gz",
+                    BASIS.replace("/main/data", "/main") + "/hypothesen_start.txt.gz"]
+    for q in [q for q in quellen if q]:
+        try:
+            raw = open(q, "rb").read() if os.path.exists(q) else urllib.request.urlopen(q, timeout=120).read()
+            reg = set(gzip.decompress(raw).decode("utf-8").split("\n")) - {""}
+            print(f"Register: {len(reg)} bekannte Hypothesen aus {q}", flush=True)
+            return reg
+        except Exception as e:
+            print(f"Register nicht lesbar ({q}): {e}", flush=True)
+    print("Register leer: alle Kandidaten gelten als neu", flush=True)
+    return set()
 
 def huerde_kumulativ(n_kum, alpha=0.05):
     """V3.1 F1: t-Hürde, bei der über alle je geprüften Kandidaten die Chance auf einen Zufallsfund alpha bleibt (zweiseitig, Bonferroni)."""
@@ -179,29 +198,35 @@ if mh:
             s = d.set_index(pd.to_datetime(d.datum)).aufrufe.astype(float)
             ind[f"wiki_{name}_spike"] = (np.log1p(s) - np.log1p(s).rolling(28, min_periods=20).median(), LAG_FRED)
 
-# Neue Tagesreihen aus dem Quellenscout (Vertrag: datum,wert; verfuegbar_nach_tagen je Reihe)
-N_NEU = 0
-if BASIS_N:
+# Neue Tagesreihen nach Vertrag datum,wert: Scout-Zweig (claude/daten-neu) und SEC-Reihen auf main
+def lade_vertrag(basis, manifest_rel, praefix):
+    n_ok = 0
     try:
-        mn = json.load(open(lade("neu/manifest_neu.json", BASIS_N)))
-        for k, v in mn.get("reihen", {}).items():
-            if v.get("fehler") or not v.get("datei") or v.get("status", "aktiv") != "aktiv":
-                continue
-            try:
-                d = pd.read_csv(lade(v["datei"].replace("data/", "", 1), BASIS_N))
-                x = pd.Series(pd.to_numeric(d.wert, errors="coerce").values, index=pd.to_datetime(d.datum)).dropna().sort_index()
-                x = x[~x.index.duplicated(keep="last")]
-                if len(x) < 500 or x.index[0] > pd.Timestamp("2015-12-31") or x.index.to_series().diff().dt.days.median() > 3:
-                    continue                           # nur Tagesreihen mit Historie vor 2016
-                lag = 1 + int(v.get("verfuegbar_nach_tagen", 1))
-                n = "neu_" + k.replace(":", "_")
-                ind[f"{n}_stand"] = (x, lag); ind[f"{n}_d1"] = (x.diff(), lag); ind[f"{n}_d5"] = (x.diff(5), lag)
-                N_NEU += 1
-            except Exception as e:
-                print(f"neu {k}: {e}", flush=True)
-        print(f"Quellenscout-Zweig: {N_NEU} Reihen", flush=True)
+        mn = json.load(open(lade(manifest_rel, basis)))
     except Exception as e:
-        print(f"Quellenscout-Zweig nicht lesbar: {e}", flush=True)
+        print(f"{manifest_rel} nicht lesbar: {e}", flush=True)
+        return 0
+    for k, v in mn.get("reihen", {}).items():
+        if v.get("fehler") or not v.get("datei") or v.get("status", "aktiv") != "aktiv":
+            continue                                   # nur aktive Reihen; «ruhend» und «aufbau» zählen nicht
+        try:
+            d = pd.read_csv(lade(v["datei"].replace("data/", "", 1), basis))
+            x = pd.Series(pd.to_numeric(d.wert, errors="coerce").values, index=pd.to_datetime(d.datum)).dropna().sort_index()
+            x = x[~x.index.duplicated(keep="last")]
+            if len(x) < 500 or x.index[0] > pd.Timestamp("2015-12-31") or x.index.to_series().diff().dt.days.median() > 3:
+                continue                               # nur Tagesreihen mit Historie vor 2016
+            lag = 1 + int(v.get("verfuegbar_nach_tagen", 1))
+            n = praefix + k.replace(":", "_")
+            ind[f"{n}_stand"] = (x, lag); ind[f"{n}_d1"] = (x.diff(), lag); ind[f"{n}_d5"] = (x.diff(5), lag)
+            n_ok += 1
+        except Exception as e:
+            print(f"{praefix}{k}: {e}", flush=True)
+    return n_ok
+
+N_NEU = lade_vertrag(BASIS_N, "neu/manifest_neu.json", "neu_") if BASIS_N else 0
+print(f"Quellenscout-Zweig: {N_NEU} Reihen", flush=True)
+N_SEC = lade_vertrag(BASIS, "sec/manifest_sec.json", "sec_")
+print(f"SEC-Reihen (main): {N_SEC}", flush=True)
 
 # Bitcoin als Tagesindikator (24/7): Tagesrendite und 7-Tage-Rendite
 try:
@@ -290,14 +315,22 @@ if __name__ == "__main__":
     print(f"Ziele {len(ZIELE)}: {', '.join(ZIELE)}")
     print(f"Indikatoren {len(ind)} | Discovery bis {STICHTAG.date()} | Kalender ACWI {KAL[0].date()}..{KAL[-1].date()}")
     roh = suchlauf()
-    KUM = KUM_VORHER + len(roh)
+    import gzip
+    REG = register_laden()
+    schluessel = (roh.indikator + "|" + roh.art + "|" + roh.ziel + "|" + roh.h.astype(str)).tolist()
+    NEU = [k for k in set(schluessel) if k not in REG]
+    KUM = KUM_VORHER + len(NEU)                     # V3.3: nur bisher ungeprüfte Hypothesen erhöhen die Hürde
     T_MIN = huerde_kumulativ(KUM)
-    print(f"V3.1: kumuliert {KUM} Kandidaten -> Hürde t >= {T_MIN:.2f}")
+    with open("hypothesen.txt.gz", "wb") as f:      # nachgeführtes Register, von der Lernrunde auf claude/lernen abzulegen
+        f.write(gzip.compress("\n".join(sorted(REG | set(schluessel))).encode("utf-8"), mtime=0))
+    print(f"V3.3: {len(roh)} Kandidaten, davon {len(NEU)} neu; kumuliert {KUM} -> Hürde t >= {T_MIN:.2f}")
     echt = filtern(roh)
     echt.to_csv("suchlauf_echt.csv", index=False)
     plac = [filtern(suchlauf(placebo=True, seed=s)) for s in range(1, 6)]
     zus = {
         "kandidaten": int(len(echt)),
+        "kandidaten_neu": int(len(NEU)),
+        "kandidaten_bekannt": int(len(echt) - len(NEU)),
         "kandidaten_kumuliert": int(KUM),
         "huerde_t": round(float(T_MIN), 2),
         "echt_alle_filter_positiv": int((echt.alle & (echt.t > 0)).sum()),
