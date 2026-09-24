@@ -41,11 +41,23 @@
     "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX9D_History.csv",
     "domain": "cdn.cboe.com",
     "bereich": "Stimmung",
-    "status": "kandidat",
-    "grund": "",
-    "reihen": [],
+    "status": "aktiv",
+    "mechanismus": "VIX9D misst die implizite 9-Tage-Volatilitaet des S&P 500 (kurzestes Ende der Cboe-Vol-Terminkurve); ein Auseinanderlaufen von VIX9D gegenueber VIX/VIX3M (Backwardation) zeigt akuten kurzfristigen Stress, der breite Indizes gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen belasten kann, bevor er sich in Kursen niederschlaegt.",
+    "grund": "K1-K7 erfuellt: taeglich (Median 1 Tag), Historie seit 2011-01-04, oeffentlich ohne Login/Schluessel ueber cdn.cboe.com, Marktdaten (Schlusswert) unrevidiert, letzter Wert 2 Tage alt (2026-09-22) und laufend fortgeschrieben, neu gegenueber bestehendem Spiegel, Datei klein (<20 KB komprimiert), Abruf <5 Sek. Anteil gleicher Folgewerte 0.35%, Werte 7.1 bis 106.66 plausibel (Hoechststand im Marktstress).",
+    "reihen": [
+      {
+        "reihe": "vix9d",
+        "zeilen": 3952,
+        "erste": "2011-01-04",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0035,
+        "min": 7.1,
+        "max": 106.66
+      }
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-24T00:06:00Z"
   },
   {
     "id": "cboe_vix3m",
@@ -53,11 +65,23 @@
     "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX3M_History.csv",
     "domain": "cdn.cboe.com",
     "bereich": "Stimmung",
-    "status": "kandidat",
-    "grund": "",
-    "reihen": [],
+    "status": "aktiv",
+    "mechanismus": "VIX3M misst die implizite 3-Monats-Volatilitaet des S&P 500 (mittleres Ende der Cboe-Vol-Terminkurve); die Steigung VIX3M minus VIX (Term-Structure) ist ein etablierter kurzfristiger Risikoindikator, dessen Umkehr (Backwardation) Stress anzeigt, der breite Indizes gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen belasten kann.",
+    "grund": "K1-K7 erfuellt: taeglich (Median 1 Tag), Historie seit 2009-09-18, oeffentlich ohne Login/Schluessel ueber cdn.cboe.com, Marktdaten (Schlusswert) unrevidiert, letzter Wert 2 Tage alt (2026-09-22) und laufend fortgeschrieben, neu gegenueber bestehendem Spiegel, Datei klein (<20 KB komprimiert), Abruf <5 Sek. Anteil gleicher Folgewerte 0.91%, Werte 11.85 bis 72.98 plausibel.",
+    "reihen": [
+      {
+        "reihe": "vix3m",
+        "zeilen": 4278,
+        "erste": "2009-09-18",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0091,
+        "min": 11.85,
+        "max": 72.98
+      }
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-24T00:06:00Z"
   },
   {
     "id": "treasury_tga",
@@ -301,10 +325,10 @@
     "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Offene Marktkaeufe von Firmeninsidern (Formular 4, Code 'P') buendeln privates Wissen ueber die kurzfristigen Aussichten eines Sektors; ein Anstieg der Kaeuferzahl/des Kaufwerts je SPDR-Sektor kann dem Sektor gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen einen Vorteil anzeigen, bevor sich das in Kursen niederschlaegt.",
-    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): Zugriff auf alle gepruefte SEC-Endpunkte gescheitert, siehe status=fehler unten. HTTP 403 (Forbidden) auf allen getesteten Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/files/structureddata/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/cgi-bin/browse-edgar, data.sec.gov/submissions/*.json, www.sec.gov/Archives/edgar/daily-index/*. Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel), naechster Lauf erneut versuchen; SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) noch nicht erstellt, da ohne Datenzugriff nicht pruefbar.",
+    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T22:10:19Z",
-    "geprueft_utc": "2026-09-23T22:10:19Z"
+    "geprueft_utc": "2026-09-24T00:05:30Z"
   },
   {
     "id": "twitter_unsicherheit",
