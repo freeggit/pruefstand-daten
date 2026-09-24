@@ -4,8 +4,8 @@
    "dateien": [
     "data/hr/pegel/kaub_2026.csv.gz"
    ],
-   "zeilen": 2986,
-   "letzte": "2026-09-23T18:45:00+02:00",
+   "zeilen": 3028,
+   "letzte": "2026-09-24T05:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -15,8 +15,8 @@
    "dateien": [
     "data/hr/pegel/maxau_2026.csv.gz"
    ],
-   "zeilen": 2987,
-   "letzte": "2026-09-23T18:45:00+02:00",
+   "zeilen": 3029,
+   "letzte": "2026-09-24T05:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -26,8 +26,8 @@
    "dateien": [
     "data/hr/pegel/koeln_2026.csv.gz"
    ],
-   "zeilen": 2984,
-   "letzte": "2026-09-23T18:45:00+02:00",
+   "zeilen": 3026,
+   "letzte": "2026-09-24T05:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -37,28 +37,162 @@
    "dateien": [
     "data/hr/pegel/duisburg-ruhrort_2026.csv.gz"
    ],
-   "zeilen": 2988,
-   "letzte": "2026-09-23T18:45:00+02:00",
+   "zeilen": 3030,
+   "letzte": "2026-09-24T05:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
    "erste": "2026-08-23T16:00:00+02:00"
   },
-  "energie:erzeugung_ch": {
+  "wiki:de_inflation": {
    "dateien": [
-    "data/hr/energie/erzeugung_ch_2026.csv.gz"
+    "data/hr/wiki/de_inflation.csv.gz"
    ],
-   "zeilen": 6372,
-   "erste": "2025-12-31T23:00:00Z",
-   "letzte": "2026-09-23T10:00:00Z"
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
   },
-  "energie:erzeugung_de": {
+  "wiki:de_niedrigwasser": {
    "dateien": [
-    "data/hr/energie/erzeugung_de_2026.csv.gz"
+    "data/hr/wiki/de_niedrigwasser.csv.gz"
    ],
-   "zeilen": 25495,
-   "erste": "2025-12-31T23:00:00Z",
-   "letzte": "2026-09-23T12:30:00Z"
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:de_rezession": {
+   "dateien": [
+    "data/hr/wiki/de_rezession.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_bitcoin": {
+   "dateien": [
+    "data/hr/wiki/en_bitcoin.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_heat_wave": {
+   "dateien": [
+    "data/hr/wiki/en_heat_wave.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_inflation": {
+   "dateien": [
+    "data/hr/wiki/en_inflation.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_nestle": {
+   "dateien": [
+    "data/hr/wiki/en_nestle.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_novartis": {
+   "dateien": [
+    "data/hr/wiki/en_novartis.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_nvidia": {
+   "dateien": [
+    "data/hr/wiki/en_nvidia.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_oil_price": {
+   "dateien": [
+    "data/hr/wiki/en_oil_price.csv.gz"
+   ],
+   "zeilen": 4102,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_recession": {
+   "dateien": [
+    "data/hr/wiki/en_recession.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_roche": {
+   "dateien": [
+    "data/hr/wiki/en_roche.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_stock_market_crash": {
+   "dateien": [
+    "data/hr/wiki/en_stock_market_crash.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_tesla_inc": {
+   "dateien": [
+    "data/hr/wiki/en_tesla_inc.csv.gz"
+   ],
+   "zeilen": 3521,
+   "erste": "2017-02-02",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
+  },
+  "wiki:en_ubs": {
+   "dateien": [
+    "data/hr/wiki/en_ubs.csv.gz"
+   ],
+   "zeilen": 4103,
+   "erste": "2015-07-01",
+   "letzte": "2026-09-23",
+   "aufloesung": "1d",
+   "quelle": "wikimedia pageviews"
   },
   "wetter:basel": {
    "dateien": [
@@ -90,9 +224,9 @@
     "data/hr/wetter/basel_2025.csv.gz",
     "data/hr/wetter/basel_2026.csv.gz"
    ],
-   "zeilen": 234168,
+   "zeilen": 234192,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-09-17T23:00:00Z",
+   "letzte": "2026-09-18T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -127,9 +261,9 @@
     "data/hr/wetter/chicago_2025.csv.gz",
     "data/hr/wetter/chicago_2026.csv.gz"
    ],
-   "zeilen": 234168,
+   "zeilen": 234192,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-09-17T23:00:00Z",
+   "letzte": "2026-09-18T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -164,9 +298,9 @@
     "data/hr/wetter/frankfurt_2025.csv.gz",
     "data/hr/wetter/frankfurt_2026.csv.gz"
    ],
-   "zeilen": 234168,
+   "zeilen": 234192,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-09-17T23:00:00Z",
+   "letzte": "2026-09-18T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -201,9 +335,9 @@
     "data/hr/wetter/houston_2025.csv.gz",
     "data/hr/wetter/houston_2026.csv.gz"
    ],
-   "zeilen": 234168,
+   "zeilen": 234192,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-09-17T23:00:00Z",
+   "letzte": "2026-09-18T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -238,9 +372,9 @@
     "data/hr/wetter/kaub_2025.csv.gz",
     "data/hr/wetter/kaub_2026.csv.gz"
    ],
-   "zeilen": 234168,
+   "zeilen": 234192,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-09-17T23:00:00Z",
+   "letzte": "2026-09-18T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -275,161 +409,28 @@
     "data/hr/wetter/zuerich_2025.csv.gz",
     "data/hr/wetter/zuerich_2026.csv.gz"
    ],
-   "zeilen": 234168,
+   "zeilen": 234192,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-09-17T23:00:00Z",
+   "letzte": "2026-09-18T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
   },
-  "wiki:de_inflation": {
+  "energie:erzeugung_ch": {
    "dateien": [
-    "data/hr/wiki/de_inflation.csv.gz"
+    "data/hr/energie/erzeugung_ch_2026.csv.gz"
    ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
+   "zeilen": 6372,
+   "erste": "2025-12-31T23:00:00Z",
+   "letzte": "2026-09-23T10:00:00Z"
   },
-  "wiki:de_niedrigwasser": {
+  "energie:erzeugung_de": {
    "dateien": [
-    "data/hr/wiki/de_niedrigwasser.csv.gz"
+    "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:de_rezession": {
-   "dateien": [
-    "data/hr/wiki/de_rezession.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_bitcoin": {
-   "dateien": [
-    "data/hr/wiki/en_bitcoin.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_heat_wave": {
-   "dateien": [
-    "data/hr/wiki/en_heat_wave.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_inflation": {
-   "dateien": [
-    "data/hr/wiki/en_inflation.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_nestle": {
-   "dateien": [
-    "data/hr/wiki/en_nestle.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "fehler": "HTTP Error 429: Too Many Requests"
-  },
-  "wiki:en_novartis": {
-   "dateien": [
-    "data/hr/wiki/en_novartis.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_nvidia": {
-   "dateien": [
-    "data/hr/wiki/en_nvidia.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_oil_price": {
-   "dateien": [
-    "data/hr/wiki/en_oil_price.csv.gz"
-   ],
-   "zeilen": 4101,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_recession": {
-   "dateien": [
-    "data/hr/wiki/en_recession.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_roche": {
-   "dateien": [
-    "data/hr/wiki/en_roche.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_stock_market_crash": {
-   "dateien": [
-    "data/hr/wiki/en_stock_market_crash.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_tesla_inc": {
-   "dateien": [
-    "data/hr/wiki/en_tesla_inc.csv.gz"
-   ],
-   "zeilen": 3520,
-   "erste": "2017-02-02",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
-  },
-  "wiki:en_ubs": {
-   "dateien": [
-    "data/hr/wiki/en_ubs.csv.gz"
-   ],
-   "zeilen": 4102,
-   "erste": "2015-07-01",
-   "letzte": "2026-09-22",
-   "aufloesung": "1d",
-   "quelle": "wikimedia pageviews"
+   "zeilen": 25495,
+   "erste": "2025-12-31T23:00:00Z",
+   "letzte": "2026-09-23T12:30:00Z"
   }
  },
  "teile": [
@@ -437,6 +438,6 @@
   "wiki",
   "wetter"
  ],
- "inventur_utc": "2026-09-23T16:56:42Z",
- "erzeugt_utc": "2026-09-23T16:53:51Z"
+ "inventur_utc": "2026-09-24T03:25:55Z",
+ "erzeugt_utc": "2026-09-24T03:23:43Z"
 }
