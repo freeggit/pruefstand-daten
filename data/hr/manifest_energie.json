@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-09-23T15:11:37Z",
+ "erzeugt_utc": "2026-09-24T02:34:46Z",
  "reihen": {
   "energie:preis_ch": {
    "dateien": [
@@ -15,12 +15,12 @@
     "data/hr/energie/preis_ch_2025.csv.gz",
     "data/hr/energie/preis_ch_2026.csv.gz"
    ],
-   "zeilen": 94030,
-   "letzte": "2026-09-23T21:00:00Z",
+   "zeilen": 94054,
+   "letzte": "2026-09-24T21:00:00Z",
    "einheit": "EUR/MWh",
    "aufloesung": "1h",
    "quelle": "energy-charts.info",
-   "fehler": "2020: HTTP Error 429: Too Many Requests",
+   "fehler": "2020: <urlopen error [Errno 104] Connection reset by peer>",
    "erste": "2015-01-01T00:00:00Z"
   },
   "energie:erzeugung_ch": {
@@ -38,29 +38,32 @@
     "data/hr/energie/erzeugung_ch_2025.csv.gz",
     "data/hr/energie/erzeugung_ch_2026.csv.gz"
    ],
-   "zeilen": 102804,
-   "letzte": "2026-09-23T11:00:00Z",
+   "zeilen": 102816,
+   "letzte": "2026-09-23T23:00:00Z",
    "einheit": "MW",
    "quelle": "energy-charts.info",
    "erste": "2015-01-01T00:00:00Z"
   },
   "energie:preis_de": {
    "dateien": [
+    "data/hr/energie/preis_de_2017.csv.gz",
+    "data/hr/energie/preis_de_2018.csv.gz",
     "data/hr/energie/preis_de_2019.csv.gz",
     "data/hr/energie/preis_de_2020.csv.gz",
     "data/hr/energie/preis_de_2021.csv.gz",
+    "data/hr/energie/preis_de_2022.csv.gz",
     "data/hr/energie/preis_de_2023.csv.gz",
     "data/hr/energie/preis_de_2024.csv.gz",
     "data/hr/energie/preis_de_2025.csv.gz",
     "data/hr/energie/preis_de_2026.csv.gz"
    ],
-   "zeilen": 84767,
-   "letzte": "2026-09-23T21:45:00Z",
+   "zeilen": 111143,
+   "letzte": "2026-09-24T21:45:00Z",
    "einheit": "EUR/MWh",
    "aufloesung": "1h",
    "quelle": "energy-charts.info",
-   "fehler": "2015: HTTP Error 404: Not Found",
-   "erste": "2018-12-31T23:00:00Z"
+   "hinweis": "Zeitbudget 8 min erschöpft, fehlende Jahre folgen im nächsten Lauf",
+   "erste": "2016-12-31T23:00:00Z"
   },
   "energie:erzeugung_de": {
    "dateien": [
@@ -71,11 +74,9 @@
     "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
    "zeilen": 165753,
-   "letzte": "2026-09-23T13:00:00Z",
-   "einheit": "MW",
-   "quelle": "energy-charts.info",
    "hinweis": "Zeitbudget 8 min erschöpft, fehlende Jahre folgen im nächsten Lauf",
-   "erste": "2021-12-31T23:00:00Z"
+   "erste": "2021-12-31T23:00:00Z",
+   "letzte": "2026-09-23T13:00:00Z"
   }
  },
  "teile": [
