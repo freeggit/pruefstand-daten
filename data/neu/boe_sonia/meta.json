@@ -1,0 +1,10 @@
+{
+  "sonia": {
+    "beschreibung": "SONIA (Sterling Overnight Index Average), von der Bank of England administrierter GBP-Tagesgeldsatz, IADB-Serie IUDSOIA",
+    "einheit": "Prozent",
+    "quelle_url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, nur Bankarbeitstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

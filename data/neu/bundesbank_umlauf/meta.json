@@ -1,0 +1,18 @@
+{
+  "bund10y": {
+    "beschreibung": "Rendite der aktuellen zehnjaehrigen Bundesanleihe (Daily yield of current 10-year federal bond)",
+    "einheit": "Prozent",
+    "quelle_url": "https://www.bundesbank.de/en/statistics/money-and-capital-markets/interest-rates-and-yields/daily-yields-of-current-federal-securities-772220",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, nur Bankarbeitstage; Tage ohne Wert (Feiertage) ausgelassen)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "bund2y": {
+    "beschreibung": "Rendite der aktuellen zweijaehrigen Bundesschatzanweisung (Daily yield of current two-year Federal Treasury notes)",
+    "einheit": "Prozent",
+    "quelle_url": "https://www.bundesbank.de/en/statistics/money-and-capital-markets/interest-rates-and-yields/daily-yields-of-current-federal-securities-772220",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, nur Bankarbeitstage; Tage ohne Wert (Feiertage) ausgelassen)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

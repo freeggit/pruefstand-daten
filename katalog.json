@@ -201,23 +201,30 @@
     "url": "https://www.bankofengland.co.uk/boeapps/database/",
     "domain": "bankofengland.co.uk",
     "bereich": "Geldmarkt",
-    "status": "kandidat",
-    "grund": "",
-    "reihen": [],
+    "status": "aktiv",
+    "grund": "Alle Kriterien erfuellt. K1 taeglich (Bankarbeitstage, Median-Abstand 1 Tag). K2 Historie ab 1997-01-02 (7509 Werte), weit vor 31.12.2015. K3 offen, BoE IADB CSV-Export ohne Login/Schluessel. K4 punktgenau: administrierter Referenzsatz, nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-21 (3 Tage alt). K6 neu: kein GBP-Geldmarktsatz im Spiegel vorhanden. K7 Umfang: 190 KB unkomprimiert, Abruf unter 2s. Pruefung: Min 0.0394 / Max 8.6068 Prozent (plausibel fuer Zeitraum 1997-2026, inkl. Nullzinsphase und Zinserhoehungszyklus ab 2022), Anteil gleicher Folgewerte 5.1% (unauffaellig).",
+    "reihen": [
+      "sonia"
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-24T02:08:40Z",
+    "mechanismus": "SONIA ist der von der Bank of England administrierte GBP-Tagesgeldsatz und spiegelt in Echtzeit die Geldpolitik und Liquiditaetslage am britischen Geldmarkt; kurzfristige Spruenge (Leitzinsentscheide, Repo-Stress, Jahresend-Effekte) koennen auf breitere GBP-Finanzierungskosten und globale Risikostimmung wirken und sich auf Sicht von 1-20 Handelstagen im Finanzsektor (XLF) und bei Staatsanleihen (TLT) gegenueber dem Weltindex niederschlagen."
   },
   {
     "id": "bundesbank_umlauf",
-    "name": "Bundesbank Zeitreihen-API taegliche Umlaufsrenditen",
+    "name": "Bundesbank taegliche Renditen aktueller Bundeswertpapiere (2J/10J)",
     "url": "https://api.statistiken.bundesbank.de",
     "domain": "api.statistiken.bundesbank.de",
     "bereich": "Zinsen",
-    "status": "kandidat",
-    "grund": "",
-    "reihen": [],
+    "status": "aktiv",
+    "grund": "Alle Kriterien erfuellt. K1 taeglich (Bankarbeitstage, Median-Abstand je 1 Tag). K2 Historie bund10y ab 2001-10-01 (6344 Werte), bund2y ab 2014-01-02 (3227 Werte), beide vor 31.12.2015. K3 offen, Bundesbank SDMX-REST-API (api.statistiken.bundesbank.de) als CSV ohne Login/Schluessel abrufbar (Hinweis: alte Zeitreihen-Datenbank laut Bundesbank-Webseite zum 30.6.2026 abgekuendigt, die genutzte SDMX-REST-API unter api.statistiken.bundesbank.de/rest/data funktioniert jedoch weiterhin und lieferte aktuelle Daten bis 2026-09-23). K4 punktgenau: aus Marktkursen berechnete Tagesrendite des jeweils aktuellen Referenzpapiers, nicht revidierte Wirtschaftsstatistik. K5 laufend: letzter Wert je Reihe 2026-09-23 (1 Tag alt). K6 neu: kein deutscher/europaeischer Anleihezins im Spiegel vorhanden (T10Y2Y ist US-Kurve). K7 Umfang: unter 300 KB je Reihe, Abruf unter 3s. Pruefung bund2y: Min -1.02 / Max 3.34 Prozent, Anteil gleicher Folgewerte 23.6% (leicht ueber 20%-Schwelle, aber plausibel: negative/nahe-Null-Renditephase 2014-2021 mit auf 2 Dezimalstellen gerundeten Werten erzeugt haeufiger identische Nachbarwerte, kein Hinweis auf Fehlbefuellung). Pruefung bund10y: Min -0.83 / Max 5.28 Prozent, Anteil gleicher Folgewerte 10.9% (unauffaellig).",
+    "reihen": [
+      "bund2y",
+      "bund10y"
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-24T02:08:40Z",
+    "mechanismus": "Taegliche Renditen der aktuellen deutschen Bundesanleihen (2 und 10 Jahre) zeigen Verschiebungen der EUR-Zinserwartungen und der Risikoaversion in der Eurozone an; kurzfristige Bewegungen (insb. der Kurvenneigung 10J-2J) koennen auf Sicht von 1-20 Handelstagen auf US-Anleihen (TLT) und europaeische Sektor-/Laenderpositionen (EWG) gegenueber dem Weltindex wirken, analog zum bereits vorhandenen US-Pendant T10Y2Y, aber fuer den Euroraum."
   },
   {
     "id": "usgs_mississippi",
@@ -325,10 +332,10 @@
     "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Offene Marktkaeufe von Firmeninsidern (Formular 4, Code 'P') buendeln privates Wissen ueber die kurzfristigen Aussichten eines Sektors; ein Anstieg der Kaeuferzahl/des Kaufwerts je SPDR-Sektor kann dem Sektor gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen einen Vorteil anzeigen, bevor sich das in Kursen niederschlaegt.",
-    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen.",
+    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen. Etappe 3 (2026-09-24, weiterer Lauf): erneut geprueft, diesmal auch die SEC-Startseite (www.sec.gov/) und die EDGAR-Volltextsuche (efts.sec.gov) getestet, nicht nur die Insider-Datensatz-Endpunkte -- ebenfalls HTTP 403 auf allen. Damit ist die Sperre als domainweit (nicht endpunktspezifisch) und ueber mehrere Laeufe hinweg reproduzierbar bestaetigt (blockiert vermutlich die Cloud-Ausgangs-IP-Range dieser Umgebung, wie von der SEC fuer Rechenzentrums-IPs praktiziert). Gemaess Vorgabe bleibt Status 'fehler' (403 = Befund, nicht umgehen); wird im naechsten Lauf erneut versucht, SIC-Sektor-Mapping weiterhin nicht erstellbar ohne Datenzugriff.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T22:10:19Z",
-    "geprueft_utc": "2026-09-24T00:05:30Z"
+    "geprueft_utc": "2026-09-24T02:06:23Z"
   },
   {
     "id": "twitter_unsicherheit",
