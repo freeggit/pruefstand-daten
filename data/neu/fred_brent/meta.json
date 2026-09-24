@@ -1,0 +1,10 @@
+{
+  "brent": {
+    "beschreibung": "Brent Crude Oil - Europe (DCOILBRENTEU), taeglicher Spotpreis; internationaler Rohoel-Referenzpreis unabhaengig vom bereits vorhandenen WTI (USO/DCOILWTICO)",
+    "einheit": "USD je Barrel",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
