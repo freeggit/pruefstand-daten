@@ -58,12 +58,11 @@ def write_if_ok(path, raw, key, expect_first_col, date_col=0):
     print(f"ok {key}: {len(body)} Zeilen bis {body[-1][date_col]}")
     return True
 
-def yahoo_chart(ticker):
-    """Unadjustierte Tageskurse plus Adj Close aus dem Yahoo-Chart-Endpunkt (kein Schluessel)."""
-    # period1/period2 statt range=max: mit range=max liefert Yahoo stillschweigend Monatsbalken
+def _yahoo_zeilen(ticker, period1):
+    """Tagesbalken {Datum: Zeile} aus dem Yahoo-Chart-Endpunkt ab period1 (Unix-Sekunden)."""
     p2 = int(time.time()) + 86400
     url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker.upper()}"
-           f"?period1=631152000&period2={p2}&interval=1d&events=div%2Csplit")
+           f"?period1={period1}&period2={p2}&interval=1d&events=div%2Csplit")
     raw = get(url)
     j = json.loads(raw.decode("utf-8"))
     res = j["chart"]["result"][0]
@@ -75,7 +74,7 @@ def yahoo_chart(ticker):
     # Laufender Handelstag: Balken ist unvollständig (Abruf während der Börsenzeit) -> weglassen
     reg = (res.get("meta", {}).get("currentTradingPeriod") or {}).get("regular") or {}
     offen_ab = reg.get("start") if reg.get("end") and time.time() < reg["end"] else None
-    rows = []
+    rows = {}
     for i, t in enumerate(ts):
         if offen_ab is not None and t >= offen_ab:
             continue
@@ -83,9 +82,26 @@ def yahoo_chart(ticker):
         if None in (o, h, l, c):
             continue
         d = datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%d")
-        rows.append([d, f"{o:.4f}", f"{h:.4f}", f"{l:.4f}", f"{c:.4f}", str(int(v or 0)), f"{adj[i]:.4f}" if adj[i] is not None else ""])
+        rows[d] = [d, f"{o:.4f}", f"{h:.4f}", f"{l:.4f}", f"{c:.4f}", str(int(v or 0)), f"{adj[i]:.4f}" if adj[i] is not None else ""]
+    return rows
+
+def yahoo_chart(ticker):
+    """Unadjustierte Tageskurse plus Adj Close aus dem Yahoo-Chart-Endpunkt (kein Schluessel)."""
+    # period1/period2 statt range=max: mit range=max liefert Yahoo stillschweigend Monatsbalken
+    rows = _yahoo_zeilen(ticker, 631152000)
+    # Yahoo lässt in der langen Abfrage gelegentlich den vorletzten Handelstag leer (22.9.2026 bei ACWI u.a.).
+    # Darum die letzten 40 Tage separat holen und fehlende Tage ergänzen; vorhandene Tage bleiben unverändert.
+    try:
+        kurz = _yahoo_zeilen(ticker, int(time.time()) - 40 * 86400)
+        ergaenzt = sorted(set(kurz) - set(rows))
+        for d in ergaenzt:
+            rows[d] = kurz[d]
+        if ergaenzt:
+            print(f"{ticker}: {len(ergaenzt)} Tag(e) aus Kurzabfrage ergaenzt: {', '.join(ergaenzt)}")
+    except Exception as e:  # noqa
+        print(f"{ticker}: Kurzabfrage fehlgeschlagen ({e}); lange Abfrage bleibt", file=sys.stderr)
     head = ["Date", "Open", "High", "Low", "Close", "Volume", "AdjClose"]
-    out = io.StringIO(); w = csv.writer(out); w.writerow(head); w.writerows(rows)
+    out = io.StringIO(); w = csv.writer(out); w.writerow(head); w.writerows(rows[d] for d in sorted(rows))
     return out.getvalue().encode("utf-8")
 
 def taeglich_pruefen(path, key):

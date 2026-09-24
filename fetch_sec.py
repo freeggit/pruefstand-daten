@@ -16,10 +16,12 @@ Ablauf je Lauf (in Etappen, Zeitbudget SEC_BUDGET_MIN):
     zugeordnet werden konnten; vorher «aufbau» (die Suchmaschine liest nur «aktiv»).
 Nichts schätzen, nichts auffüllen: Tage ohne Einreichungen fehlen; Tage mit Einreichungen, aber ohne Kauf, sind 0.
 """
-import csv, gzip, io, json, os, sys, time, zipfile, urllib.request, urllib.error
+import csv, gzip, io, json, os, re, sys, time, zipfile, zlib, urllib.request, urllib.error
 from datetime import datetime, timezone, date
 
-UA = {"User-Agent": "pruefstand-daten research freeggit@users.noreply.github.com"}
+UA = {"User-Agent": "pruefstand-daten freeggit@users.noreply.github.com",   # Muster der SEC: Name + Kontakt
+      "Accept-Encoding": "gzip, deflate"}                                   # wie in den Beispiel-Headern der SEC
+PFADE = ["structureddata", "datastandardsinnovation"]                        # die SEC nutzt seit 2026q2 auch den zweiten Pfad
 OUT = "data/sec"
 START = time.time()
 BUDGET_MIN = float(os.environ.get("SEC_BUDGET_MIN", "15"))
@@ -42,10 +44,20 @@ def get(url, tries=2):
         try:
             time.sleep(PAUSE)
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
-                return r.read()
+                daten, enc = r.read(), (r.headers.get("Content-Encoding") or "").lower()
+                if enc == "gzip":
+                    daten = gzip.decompress(daten)
+                elif enc == "deflate":
+                    daten = zlib.decompress(daten, -zlib.MAX_WBITS) if daten[:1] != b"x" else zlib.decompress(daten)
+                return daten
         except urllib.error.HTTPError as e:
             if e.code == 403:
-                raise Gesperrt(url)
+                try:
+                    txt = e.read()[:3000].decode("utf-8", "replace")
+                except Exception:
+                    txt = ""
+                txt = " ".join(re.sub(r"<[^>]+>", " ", txt).split())[:240]
+                raise Gesperrt(f"{url} | Antwort SEC: {txt}")
             if e.code == 404:
                 raise
             last = e; time.sleep(5 * (i + 1))
@@ -125,13 +137,21 @@ def quartal_verarbeiten(y, q):
     ziel = f"{OUT}/zwischen/{y}q{q}.csv.gz"
     if os.path.exists(ziel):
         return "vorhanden"
-    url = f"https://www.sec.gov/files/structureddata/data/insider-transactions-data-sets/{y}q{q}_form345.zip"
-    try:
-        raw = get(url)
-    except urllib.error.HTTPError as e:
-        if e.code == 404:
-            return "nicht publiziert"
-        raise
+    raw, gesperrt, fehlt = None, None, 0
+    for pfad in PFADE:
+        url = f"https://www.sec.gov/files/{pfad}/data/insider-transactions-data-sets/{y}q{q}_form345.zip"
+        try:
+            raw = get(url); break
+        except Gesperrt as e:
+            gesperrt = e                       # kann auch «Datei nicht an diesem Pfad» heissen: zweiten Pfad versuchen
+        except urllib.error.HTTPError as e:
+            if e.code != 404:
+                raise
+            fehlt += 1
+    if raw is None:
+        if gesperrt is not None:
+            raise gesperrt
+        return "nicht publiziert"
     zf = zipfile.ZipFile(io.BytesIO(raw))
     sub = {}
     for r in tsv(zf, "SUBMISSION"):
