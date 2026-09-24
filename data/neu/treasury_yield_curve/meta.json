@@ -1,0 +1,82 @@
+{
+  "m1": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "m3": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 3 Mo (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "m6": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 6 Mo (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y1": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 1 Yr (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y2": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 2 Yr (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y20": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 20 Yr (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y3": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 3 Yr (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y30": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 30 Yr (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y5": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 5 Yr (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y7": {
+    "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 7 Yr (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
