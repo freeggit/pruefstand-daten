@@ -11,23 +11,30 @@ import urllib.request
 ID = "wikipedia_weitere"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
-PROJECT = "de.wikipedia"
 START = "2015070100"
-BASE = (
+BASE_TMPL = (
     "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/"
     "%s/all-access/all-agents/%%s/daily/%s/%%s00"
-) % (PROJECT, START)
+)
 
+# reihe -> (Wikipedia-Projekt, Artikeltitel). DE-Artikel seit dem ersten Lauf,
+# EN-Artikel ergaenzt (Zusatz 2, Punkt 6): englischsprachige Aufmerksamkeit
+# misst etwas anderes als deutschsprachige (globale/US- vs. CH/DE-Leserschaft).
 ARTICLES = {
-    "zinssatz": "Zinssatz",
-    "konkurs": "Konkurs",
-    "duerre": "Dürre",
-    "hurrikan": "Hurrikan",
-    "streik": "Streik",
-    "pandemie": "Pandemie",
-    "oelpreis": "Ölpreis",
-    "halbleiter": "Halbleiter",
-    "rezession": "Rezession",
+    "zinssatz": ("de.wikipedia", "Zinssatz"),
+    "konkurs": ("de.wikipedia", "Konkurs"),
+    "duerre": ("de.wikipedia", "Dürre"),
+    "hurrikan": ("de.wikipedia", "Hurrikan"),
+    "streik": ("de.wikipedia", "Streik"),
+    "pandemie": ("de.wikipedia", "Pandemie"),
+    "oelpreis": ("de.wikipedia", "Ölpreis"),
+    "halbleiter": ("de.wikipedia", "Halbleiter"),
+    "rezession": ("de.wikipedia", "Rezession"),
+    "zinssatz_en": ("en.wikipedia", "Interest rate"),
+    "rezession_en": ("en.wikipedia", "Recession"),
+    "oelpreis_en": ("en.wikipedia", "Price of oil"),
+    "halbleiter_en": ("en.wikipedia", "Semiconductor"),
+    "pandemie_en": ("en.wikipedia", "Pandemic"),
 }
 
 
@@ -35,8 +42,9 @@ def enddate():
     return time.strftime("%Y%m%d", time.gmtime(time.time() - 2 * 86400))
 
 
-def fetch(article):
-    url = BASE % (urllib.parse.quote(article, safe=""), enddate())
+def fetch(project, article):
+    base = BASE_TMPL % (project, START)
+    url = base % (urllib.parse.quote(article, safe=""), enddate())
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
     attempts = 0
     while True:
@@ -82,9 +90,9 @@ def main():
             meta = json.load(f)
     fetched_any = False
     failed = []
-    for reihe, article in ARTICLES.items():
+    for reihe, (project, article) in ARTICLES.items():
         try:
-            data = fetch(article)
+            data = fetch(project, article)
         except urllib.error.HTTPError as e:
             failed.append((reihe, e.code))
             time.sleep(2)
@@ -95,10 +103,11 @@ def main():
             time.sleep(2)
             continue
         gzip_write(os.path.join(OUT_DIR, reihe + ".csv.gz"), rows)
+        base = BASE_TMPL % (project, START)
         meta[reihe] = {
             "einheit": "Aufrufe pro Tag",
-            "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel '%s', alle Zugriffsarten" % article,
-            "quelle_url": BASE % (urllib.parse.quote(article, safe=""), "..."),
+            "beschreibung": "Wikipedia-Seitenaufrufe %s.org Artikel '%s', alle Zugriffsarten" % (project, article),
+            "quelle_url": base % (urllib.parse.quote(article, safe=""), "..."),
             "verdichtung": "keine (bereits taeglich)",
             "verfuegbar_nach_tagen": 2,
             "revidiert": False,

@@ -1,8 +1,8 @@
 {
-  "erzeugt_utc": "2026-09-24T20:16:37Z",
+  "erzeugt_utc": "2026-09-24T22:22:38Z",
   "reihen": {
     "bitcoin_onchain:gebuehren": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Summe der Transaktionsgebuehren im Bitcoin-Netzwerk pro Tag, in BTC",
       "datei": "data/neu/bitcoin_onchain/gebuehren.csv.gz",
       "einheit": "BTC",
@@ -17,7 +17,7 @@
       "zeilen": 6449
     },
     "bitcoin_onchain:hashrate": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Geschaetzte Bitcoin-Netzwerk-Hashrate (Terahashes pro Sekunde), aus Blockzeit und Difficulty berechnet",
       "datei": "data/neu/bitcoin_onchain/hashrate.csv.gz",
       "einheit": "TH/s",
@@ -32,7 +32,7 @@
       "zeilen": 6463
     },
     "bitcoin_onchain:transaktionen": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Bestaetigte Bitcoin-Transaktionen pro Tag",
       "datei": "data/neu/bitcoin_onchain/transaktionen.csv.gz",
       "einheit": "Anzahl",
@@ -47,7 +47,7 @@
       "zeilen": 6449
     },
     "boe_sonia:sonia": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "SONIA (Sterling Overnight Index Average), von der Bank of England administrierter GBP-Tagesgeldsatz, IADB-Serie IUDSOIA",
       "datei": "data/neu/boe_sonia/sonia.csv.gz",
       "einheit": "Prozent",
@@ -62,7 +62,7 @@
       "zeilen": 7510
     },
     "boj_call_rate:call_rate": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Bank of Japan, Uncollateralized Overnight Call Rate (Mutan-Satz), Tagesdurchschnitt, ueber die BOJ Time-Series Data Search API (DB FM01, Series STRDCLUCON).",
       "datei": "data/neu/boj_call_rate/call_rate.csv.gz",
       "einheit": "Prozent p.a.",
@@ -77,12 +77,11 @@
       "zeilen": 7038
     },
     "bundesbank_umlauf:bund10y": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Rendite der aktuellen zehnjaehrigen Bundesanleihe (Daily yield of current 10-year federal bond)",
       "datei": "data/neu/bundesbank_umlauf/bund10y.csv.gz",
       "einheit": "Prozent",
       "erste": "2001-10-01",
-      "fehler": "fehler: urllib.error.HTTPError: HTTP Error 400: Bad Request",
       "letzte": "2026-09-24",
       "median_abstand_tage": 1.0,
       "quelle_url": "https://www.bundesbank.de/en/statistics/money-and-capital-markets/interest-rates-and-yields/daily-yields-of-current-federal-securities-772220",
@@ -93,12 +92,11 @@
       "zeilen": 6345
     },
     "bundesbank_umlauf:bund2y": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Rendite der aktuellen zweijaehrigen Bundesschatzanweisung (Daily yield of current two-year Federal Treasury notes)",
       "datei": "data/neu/bundesbank_umlauf/bund2y.csv.gz",
       "einheit": "Prozent",
       "erste": "2014-01-02",
-      "fehler": "fehler: urllib.error.HTTPError: HTTP Error 400: Bad Request",
       "letzte": "2026-09-24",
       "median_abstand_tage": 1,
       "quelle_url": "https://www.bundesbank.de/en/statistics/money-and-capital-markets/interest-rates-and-yields/daily-yields-of-current-federal-securities-772220",
@@ -109,7 +107,7 @@
       "zeilen": 3228
     },
     "cboe_skew:skew": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
       "datei": "data/neu/cboe_skew/skew.csv.gz",
       "einheit": "Indexpunkte",
@@ -124,7 +122,7 @@
       "zeilen": 9232
     },
     "cboe_vix3m:vix3m": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "Cboe VIX3M Index (implizite 3-Monats-Volatilitaet des S&P 500), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vix3m/vix3m.csv.gz",
       "einheit": "Indexpunkte",
@@ -139,7 +137,7 @@
       "zeilen": 4278
     },
     "cboe_vix9d:vix9d": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "Cboe VIX9D Index (implizite 9-Tage-Volatilitaet des S&P 500), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vix9d/vix9d.csv.gz",
       "einheit": "Indexpunkte",
@@ -154,7 +152,7 @@
       "zeilen": 3952
     },
     "cboe_vvix:vvix": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "Cboe VVIX Index (Volatilitaet der Volatilitaet, aus VIX-Optionen), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vvix/vvix.csv.gz",
       "einheit": "Indexpunkte",
@@ -169,7 +167,7 @@
       "zeilen": 5109
     },
     "ecb_fx:eurchf": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "EZB Referenzkurs CHF/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurchf.csv.gz",
       "einheit": "CHF je EUR",
@@ -184,7 +182,7 @@
       "zeilen": 7100
     },
     "ecb_fx:eurcny": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "EZB Referenzkurs CNY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurcny.csv.gz",
       "einheit": "CNY je EUR",
@@ -199,7 +197,7 @@
       "zeilen": 6833
     },
     "ecb_fx:eurjpy": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "EZB Referenzkurs JPY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurjpy.csv.gz",
       "einheit": "JPY je EUR",
@@ -214,7 +212,7 @@
       "zeilen": 7100
     },
     "fred_brent:brent": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Brent Crude Oil - Europe (DCOILBRENTEU), taeglicher Spotpreis; internationaler Rohoel-Referenzpreis unabhaengig vom bereits vorhandenen WTI (USO/DCOILWTICO)",
       "datei": "data/neu/fred_brent/brent.csv.gz",
       "einheit": "USD je Barrel",
@@ -229,22 +227,22 @@
       "zeilen": 9092
     },
     "fred_effr:effr": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Effective Federal Funds Rate (DFF), volumengewichteter Median-Tagessatz der Fed-Funds-Transaktionen zwischen US-Banken (taeglich inkl. Wochenenden/Feiertage als Fortschreibung des letzten Handelstags durch die Fed)",
       "datei": "data/neu/fred_effr/effr.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1954-07-01",
-      "letzte": "2026-09-22",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1.0,
       "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 26382
+      "zeilen": 26383
     },
     "kalender_ereignisse:opex_verfall": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
       "datei": "data/neu/kalender_ereignisse/opex_verfall.csv.gz",
       "einheit": "Indikator (0/1)",
@@ -259,7 +257,7 @@
       "zeilen": 9398
     },
     "kalender_ereignisse:ustax": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "1 an US-Steuerterminen (15.1., 15.4., 15.6., 15.9., 15.12., feste Kalenderdaten ohne Wochenend-/Feiertagsverschiebung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
       "datei": "data/neu/kalender_ereignisse/ustax.csv.gz",
       "einheit": "Indikator (0/1)",
@@ -274,7 +272,7 @@
       "zeilen": 9398
     },
     "mof_jgb_zinsen:kurz": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), kurzes Ende der Zinskurve, Laufzeit 1 Jahr (keine kuerzere Laufzeit oeffentlich verfuegbar; Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/kurz.csv.gz",
       "einheit": "Prozent p.a.",
@@ -289,7 +287,7 @@
       "zeilen": 12656
     },
     "mof_jgb_zinsen:niveau": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Zinsniveau 10 Jahre, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/niveau.csv.gz",
       "einheit": "Prozent p.a.",
@@ -304,7 +302,7 @@
       "zeilen": 9943
     },
     "mof_jgb_zinsen:steilheit": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Zinskurve Steilheit 10J minus 2J (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/steilheit.csv.gz",
       "einheit": "Prozentpunkte",
@@ -319,7 +317,7 @@
       "zeilen": 9943
     },
     "mof_jgb_zinsen:y1": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 1Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y1.csv.gz",
       "einheit": "Prozent p.a.",
@@ -334,7 +332,7 @@
       "zeilen": 12656
     },
     "mof_jgb_zinsen:y10": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 10Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y10.csv.gz",
       "einheit": "Prozent p.a.",
@@ -349,7 +347,7 @@
       "zeilen": 9943
     },
     "mof_jgb_zinsen:y15": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 15Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y15.csv.gz",
       "einheit": "Prozent p.a.",
@@ -364,7 +362,7 @@
       "zeilen": 8602
     },
     "mof_jgb_zinsen:y2": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 2Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y2.csv.gz",
       "einheit": "Prozent p.a.",
@@ -379,7 +377,7 @@
       "zeilen": 12943
     },
     "mof_jgb_zinsen:y20": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 20Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y20.csv.gz",
       "einheit": "Prozent p.a.",
@@ -394,7 +392,7 @@
       "zeilen": 9830
     },
     "mof_jgb_zinsen:y25": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 25Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y25.csv.gz",
       "einheit": "Prozent p.a.",
@@ -409,7 +407,7 @@
       "zeilen": 5509
     },
     "mof_jgb_zinsen:y3": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 3Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y3.csv.gz",
       "einheit": "Prozent p.a.",
@@ -424,7 +422,7 @@
       "zeilen": 13228
     },
     "mof_jgb_zinsen:y30": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 30Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y30.csv.gz",
       "einheit": "Prozent p.a.",
@@ -439,7 +437,7 @@
       "zeilen": 6627
     },
     "mof_jgb_zinsen:y4": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 4Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y4.csv.gz",
       "einheit": "Prozent p.a.",
@@ -454,7 +452,7 @@
       "zeilen": 13304
     },
     "mof_jgb_zinsen:y40": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 40Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y40.csv.gz",
       "einheit": "Prozent p.a.",
@@ -469,7 +467,7 @@
       "zeilen": 4615
     },
     "mof_jgb_zinsen:y5": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 5Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y5.csv.gz",
       "einheit": "Prozent p.a.",
@@ -484,7 +482,7 @@
       "zeilen": 13304
     },
     "mof_jgb_zinsen:y6": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 6Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y6.csv.gz",
       "einheit": "Prozent p.a.",
@@ -499,7 +497,7 @@
       "zeilen": 13304
     },
     "mof_jgb_zinsen:y7": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 7Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y7.csv.gz",
       "einheit": "Prozent p.a.",
@@ -514,7 +512,7 @@
       "zeilen": 13304
     },
     "mof_jgb_zinsen:y8": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 8Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y8.csv.gz",
       "einheit": "Prozent p.a.",
@@ -529,7 +527,7 @@
       "zeilen": 13304
     },
     "mof_jgb_zinsen:y9": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 9Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y9.csv.gz",
       "einheit": "Prozent p.a.",
@@ -544,7 +542,7 @@
       "zeilen": 13304
     },
     "nyfed_rrp:rrp": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "NY Fed Overnight Reverse Repo Facility (ON RRP), taegliches Gesamtvolumen der akzeptierten Gebote (Treasury-Sicherheiten)",
       "datei": "data/neu/nyfed_rrp/rrp.csv.gz",
       "einheit": "Milliarden USD",
@@ -559,7 +557,7 @@
       "zeilen": 3333
     },
     "snb_saron:saron": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "SARON Uebernacht-Referenzzinssatz (Schlusskurs), SNB Datenportal Cube zirepo, Dimension H0",
       "datei": "data/neu/snb_saron/saron.csv.gz",
       "einheit": "Prozent",
@@ -574,7 +572,7 @@
       "zeilen": 6863
     },
     "treasury_auktionen:bid_to_cover": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Mittleres Bid-to-Cover-Verhaeltnis aller an diesem Tag abgeschlossenen US-Treasury-Auktionen (Bills, Notes, Bonds); Mass fuer die Nachfrage nach neu emittierten US-Staatsanleihen",
       "datei": "data/neu/treasury_auktionen/bid_to_cover.csv.gz",
       "einheit": "Verhaeltnis (Gebote/Zuteilung)",
@@ -589,52 +587,52 @@
       "zeilen": 4250
     },
     "treasury_debt_penny:gesamt": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Gesamte ausstehende Bundesschuld der USA (Debt to the Penny, Total Public Debt Outstanding)",
       "datei": "data/neu/treasury_debt_penny/gesamt.csv.gz",
       "einheit": "USD",
       "erste": "1993-04-01",
-      "letzte": "2026-09-22",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1.0,
       "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 8398
+      "zeilen": 8399
     },
     "treasury_debt_penny:intragovernmental": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Bundesschuld, regierungsinterner Anteil (Intragovernmental Holdings)",
       "datei": "data/neu/treasury_debt_penny/intragovernmental.csv.gz",
       "einheit": "USD",
       "erste": "1997-09-30",
-      "letzte": "2026-09-22",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1.0,
       "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 5440
+      "zeilen": 5441
     },
     "treasury_debt_penny:oeffentlich_gehalten": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Bundesschuld, vom Publikum gehaltener Anteil (Debt Held by the Public)",
       "datei": "data/neu/treasury_debt_penny/oeffentlich_gehalten.csv.gz",
       "einheit": "USD",
       "erste": "1997-09-30",
-      "letzte": "2026-09-22",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-23",
+      "median_abstand_tage": 1.0,
       "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 5440
+      "zeilen": 5441
     },
     "treasury_tga:tga": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:37Z",
       "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
       "datei": "data/neu/treasury_tga/tga.csv.gz",
       "einheit": "Millionen USD",
@@ -649,7 +647,7 @@
       "zeilen": 5269
     },
     "treasury_yield_curve:kurz": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury kurzes Ende der Zinskurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/kurz.csv.gz",
       "einheit": "Prozent p.a.",
@@ -664,7 +662,7 @@
       "zeilen": 6290
     },
     "treasury_yield_curve:m1": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/m1.csv.gz",
       "einheit": "Prozent p.a.",
@@ -679,7 +677,7 @@
       "zeilen": 6290
     },
     "treasury_yield_curve:m3": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 3 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/m3.csv.gz",
       "einheit": "Prozent p.a.",
@@ -694,7 +692,7 @@
       "zeilen": 9186
     },
     "treasury_yield_curve:m6": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 6 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/m6.csv.gz",
       "einheit": "Prozent p.a.",
@@ -709,7 +707,7 @@
       "zeilen": 9189
     },
     "treasury_yield_curve:niveau": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Zinsniveau, 10 Jahre (Dublette FRED DGS10 in main, hier ruhend)",
       "datei": "data/neu/treasury_yield_curve/niveau.csv.gz",
       "einheit": "Prozent p.a.",
@@ -724,7 +722,7 @@
       "zeilen": 9189
     },
     "treasury_yield_curve:steilheit": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Zinskurve Steilheit, 10J minus 2J (Dublette FRED T10Y2Y in main, hier ruhend)",
       "datei": "data/neu/treasury_yield_curve/steilheit.csv.gz",
       "einheit": "Prozentpunkte",
@@ -739,7 +737,7 @@
       "zeilen": 9189
     },
     "treasury_yield_curve:y1": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 1 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y1.csv.gz",
       "einheit": "Prozent p.a.",
@@ -754,7 +752,7 @@
       "zeilen": 9189
     },
     "treasury_yield_curve:y2": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 2 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y2.csv.gz",
       "einheit": "Prozent p.a.",
@@ -769,7 +767,7 @@
       "zeilen": 9189
     },
     "treasury_yield_curve:y20": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 20 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y20.csv.gz",
       "einheit": "Prozent p.a.",
@@ -784,7 +782,7 @@
       "zeilen": 8250
     },
     "treasury_yield_curve:y3": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 3 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y3.csv.gz",
       "einheit": "Prozent p.a.",
@@ -799,7 +797,7 @@
       "zeilen": 9189
     },
     "treasury_yield_curve:y30": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 30 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y30.csv.gz",
       "einheit": "Prozent p.a.",
@@ -814,7 +812,7 @@
       "zeilen": 8195
     },
     "treasury_yield_curve:y5": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 5 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y5.csv.gz",
       "einheit": "Prozent p.a.",
@@ -829,7 +827,7 @@
       "zeilen": 9189
     },
     "treasury_yield_curve:y7": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 7 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y7.csv.gz",
       "einheit": "Prozent p.a.",
@@ -844,7 +842,7 @@
       "zeilen": 9189
     },
     "usgs_erdbeben:anzahl_m5": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
       "datei": "data/neu/usgs_erdbeben/anzahl_m5.csv.gz",
       "einheit": "Anzahl Ereignisse",
@@ -859,7 +857,7 @@
       "zeilen": 4284
     },
     "wikipedia_weitere:duerre": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Dürre', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/duerre.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -874,7 +872,7 @@
       "zeilen": 4102
     },
     "wikipedia_weitere:halbleiter": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Halbleiter', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/halbleiter.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -888,8 +886,23 @@
       "verfuegbar_nach_tagen": 2,
       "zeilen": 4102
     },
+    "wikipedia_weitere:halbleiter_en": {
+      "abruf_utc": "2026-09-24T22:22:38Z",
+      "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Semiconductor', alle Zugriffsarten",
+      "datei": "data/neu/wikipedia_weitere/halbleiter_en.csv.gz",
+      "einheit": "Aufrufe pro Tag",
+      "erste": "2015-07-01",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Semiconductor/daily/2015070100/...00",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 2,
+      "zeilen": 4102
+    },
     "wikipedia_weitere:hurrikan": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Hurrikan', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/hurrikan.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -904,7 +917,7 @@
       "zeilen": 4102
     },
     "wikipedia_weitere:konkurs": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Konkurs', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/konkurs.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -919,7 +932,7 @@
       "zeilen": 4097
     },
     "wikipedia_weitere:oelpreis": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Ölpreis', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/oelpreis.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -933,8 +946,23 @@
       "verfuegbar_nach_tagen": 2,
       "zeilen": 4102
     },
+    "wikipedia_weitere:oelpreis_en": {
+      "abruf_utc": "2026-09-24T22:22:38Z",
+      "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Price of oil', alle Zugriffsarten",
+      "datei": "data/neu/wikipedia_weitere/oelpreis_en.csv.gz",
+      "einheit": "Aufrufe pro Tag",
+      "erste": "2015-07-01",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Price%20of%20oil/daily/2015070100/...00",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 2,
+      "zeilen": 4102
+    },
     "wikipedia_weitere:pandemie": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Pandemie', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/pandemie.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -948,8 +976,23 @@
       "verfuegbar_nach_tagen": 2,
       "zeilen": 4102
     },
+    "wikipedia_weitere:pandemie_en": {
+      "abruf_utc": "2026-09-24T22:22:38Z",
+      "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Pandemic', alle Zugriffsarten",
+      "datei": "data/neu/wikipedia_weitere/pandemie_en.csv.gz",
+      "einheit": "Aufrufe pro Tag",
+      "erste": "2015-07-01",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Pandemic/daily/2015070100/...00",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 2,
+      "zeilen": 4102
+    },
     "wikipedia_weitere:rezession": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Rezession', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/rezession.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -963,8 +1006,23 @@
       "verfuegbar_nach_tagen": 2,
       "zeilen": 4102
     },
+    "wikipedia_weitere:rezession_en": {
+      "abruf_utc": "2026-09-24T22:22:38Z",
+      "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Recession', alle Zugriffsarten",
+      "datei": "data/neu/wikipedia_weitere/rezession_en.csv.gz",
+      "einheit": "Aufrufe pro Tag",
+      "erste": "2015-07-01",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Recession/daily/2015070100/...00",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 2,
+      "zeilen": 4102
+    },
     "wikipedia_weitere:streik": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Streik', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/streik.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -979,7 +1037,7 @@
       "zeilen": 4102
     },
     "wikipedia_weitere:zinssatz": {
-      "abruf_utc": "2026-09-24T20:16:37Z",
+      "abruf_utc": "2026-09-24T22:22:38Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Zinssatz', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/zinssatz.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -987,6 +1045,21 @@
       "letzte": "2026-09-22",
       "median_abstand_tage": 1,
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Zinssatz/daily/2015070100/...00",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglich)",
+      "verfuegbar_nach_tagen": 2,
+      "zeilen": 4102
+    },
+    "wikipedia_weitere:zinssatz_en": {
+      "abruf_utc": "2026-09-24T22:22:38Z",
+      "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Interest rate', alle Zugriffsarten",
+      "datei": "data/neu/wikipedia_weitere/zinssatz_en.csv.gz",
+      "einheit": "Aufrufe pro Tag",
+      "erste": "2015-07-01",
+      "letzte": "2026-09-22",
+      "median_abstand_tage": 1,
+      "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Interest%20rate/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",

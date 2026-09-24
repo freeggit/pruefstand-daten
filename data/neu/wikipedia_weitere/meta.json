@@ -15,6 +15,14 @@
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2
   },
+  "halbleiter_en": {
+    "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Semiconductor', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Semiconductor/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
   "hurrikan": {
     "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Hurrikan', alle Zugriffsarten",
     "einheit": "Aufrufe pro Tag",
@@ -39,6 +47,14 @@
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2
   },
+  "oelpreis_en": {
+    "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Price of oil', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Price%20of%20oil/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
   "pandemie": {
     "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Pandemie', alle Zugriffsarten",
     "einheit": "Aufrufe pro Tag",
@@ -47,10 +63,26 @@
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2
   },
+  "pandemie_en": {
+    "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Pandemic', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Pandemic/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
   "rezession": {
     "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Rezession', alle Zugriffsarten",
     "einheit": "Aufrufe pro Tag",
     "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Rezession/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
+  "rezession_en": {
+    "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Recession', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Recession/daily/2015070100/...00",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2
@@ -67,6 +99,14 @@
     "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Zinssatz', alle Zugriffsarten",
     "einheit": "Aufrufe pro Tag",
     "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Zinssatz/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
+  "zinssatz_en": {
+    "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Interest rate', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Interest%20rate/daily/2015070100/...00",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2
