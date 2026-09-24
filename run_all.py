@@ -107,7 +107,9 @@ def build_manifest(katalog, abruf_fehler):
                 "verdichtung": minfo.get("verdichtung"),
                 "verfuegbar_nach_tagen": minfo.get("verfuegbar_nach_tagen"),
                 "revidiert": minfo.get("revidiert"),
-                "status": "aktiv",
+                # Zusatz 3: je-Reihe-Status aus meta.json uebernehmen (Standard "aktiv"
+                # fuer Quellen ohne eigenes Status-Feld). Die Suchmaschine liest nur "aktiv".
+                "status": minfo.get("status", "aktiv"),
                 "abruf_utc": utcnow(),
             }
             if sid in abruf_fehler:

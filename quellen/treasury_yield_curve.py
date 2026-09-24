@@ -14,7 +14,8 @@ UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefsta
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
 BASE = "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/%d/all"
 
-# "10 Yr" wird ausgeschlossen (Dublette zu FRED DGS10, bereits im Indikatorraum U2).
+# "10 Yr" wird als eigene Reihe ausgeschlossen (Dublette zu FRED DGS10, bereits im
+# Indikatorraum U2), bleibt aber intern fuer die Berechnung von "niveau"/"steilheit" erhalten.
 EXCLUDE_TENORS = {"10 Yr"}
 
 TENOR_TO_ID = {
@@ -23,6 +24,13 @@ TENOR_TO_ID = {
     "3 Yr": "y3", "5 Yr": "y5", "7 Yr": "y7", "10 Yr": "y10",
     "20 Yr": "y20", "30 Yr": "y30",
 }
+
+# Zusatz 3 (Redundanz begrenzen): Zinskurve auf 3 Reihen verdichten. Bei der
+# US-Kurve liegen "niveau" (10J, DGS10) und "steilheit" (10J-2J, T10Y2Y) schon
+# im Spiegel main (K6) -- daher bleibt dort nur "kurz" aktiv, der Rest ruhend.
+KURZ_TENOR = "1 Mo"
+NIVEAU_TENOR = "10 Yr"
+STEIL_KURZ_TENOR = "2 Yr"
 
 
 def fetch_year(year, attempts=3):
@@ -73,8 +81,8 @@ def fetch_all():
                 failed.append((year, exc))
                 continue
             for tenor, series in by_tenor.items():
-                if tenor in EXCLUDE_TENORS:
-                    continue
+                # EXCLUDE_TENORS wird erst beim Schreiben einzelner Reihen
+                # angewendet; "10 Yr" bleibt hier fuer "niveau" erhalten.
                 combined.setdefault(tenor, {}).update(series)
     if failed:
         # Kein Teilergebnis schreiben: bestehende Dateien sollen bei Fehlern
@@ -87,10 +95,7 @@ def fetch_all():
     return combined
 
 
-def write_series(tenor, series):
-    reihe_id = TENOR_TO_ID.get(tenor)
-    if reihe_id is None:
-        return None
+def write_csv(reihe_id, series):
     dates = sorted(series.keys())
     if len(dates) < 500 or dates[0] > "2015-12-31":
         return None
@@ -105,7 +110,12 @@ def write_series(tenor, series):
         w.flush()
     with open(path, "wb") as f:
         f.write(buf.getvalue())
-    return reihe_id, dates[0], dates[-1], len(dates)
+    return dates[0], dates[-1], len(dates)
+
+
+def diff_series(a, b):
+    common = sorted(set(a) & set(b))
+    return {d: a[d] - b[d] for d in common}
 
 
 def main():
@@ -113,11 +123,15 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     written = {}
     meta = {}
+
     for tenor, series in combined.items():
-        result = write_series(tenor, series)
+        reihe_id = TENOR_TO_ID.get(tenor)
+        if reihe_id is None or tenor in EXCLUDE_TENORS:
+            continue
+        result = write_csv(reihe_id, series)
         if result is None:
             continue
-        reihe_id, first, last, n = result
+        first, last, n = result
         written[reihe_id] = (tenor, first, last, n)
         meta[reihe_id] = {
             "einheit": "Prozent p.a.",
@@ -126,11 +140,42 @@ def main():
             "verdichtung": "keine (bereits taeglicher Einzelwert)",
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
+            "status": "ruhend",
         }
+
+    # Zusatz 3: verdichtete 3 Reihen. "niveau" und "steilheit" sind bei der
+    # US-Kurve Dubletten zu main (DGS10, T10Y2Y) -> ruhend; nur "kurz" aktiv.
+    niveau = combined.get(NIVEAU_TENOR, {})
+    kurz_basis = combined.get(KURZ_TENOR, {})
+    steil = diff_series(niveau, combined.get(STEIL_KURZ_TENOR, {}))
+
+    for reihe_id, series, status, beschr in (
+        ("niveau", niveau, "ruhend",
+         "US-Treasury Zinsniveau, 10 Jahre (Dublette FRED DGS10 in main, hier ruhend)"),
+        ("steilheit", steil, "ruhend",
+         "US-Treasury Zinskurve Steilheit, 10J minus 2J (Dublette FRED T10Y2Y in main, hier ruhend)"),
+        ("kurz", kurz_basis, "aktiv",
+         "US-Treasury kurzes Ende der Zinskurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)"),
+    ):
+        result = write_csv(reihe_id, series)
+        if result is None:
+            continue
+        first, last, n = result
+        written[reihe_id] = (reihe_id, first, last, n)
+        meta[reihe_id] = {
+            "einheit": "Prozent p.a." if reihe_id != "steilheit" else "Prozentpunkte",
+            "beschreibung": beschr,
+            "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+            "verdichtung": "keine (Differenz zweier taeglicher Einzelwerte)" if reihe_id == "steilheit" else "keine (bereits taeglicher Einzelwert)",
+            "verfuegbar_nach_tagen": 1,
+            "revidiert": False,
+            "status": status,
+        }
+
     with open(os.path.join(OUT_DIR, "meta.json"), "w") as f:
         json.dump(meta, f, indent=2, ensure_ascii=False, sort_keys=True)
     for reihe_id, (tenor, first, last, n) in sorted(written.items()):
-        print("OK %s (%s): %s..%s, %d Werte" % (reihe_id, tenor, first, last, n))
+        print("OK %s (%s): %s..%s, %d Werte [%s]" % (reihe_id, tenor, first, last, n, meta[reihe_id]["status"]))
 
 
 if __name__ == "__main__":

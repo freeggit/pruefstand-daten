@@ -1,9 +1,19 @@
 {
+  "kurz": {
+    "beschreibung": "US-Treasury kurzes Ende der Zinskurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
   "m1": {
     "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)",
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -12,6 +22,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -20,7 +31,26 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "niveau": {
+    "beschreibung": "US-Treasury Zinsniveau, 10 Jahre (Dublette FRED DGS10 in main, hier ruhend)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "steilheit": {
+    "beschreibung": "US-Treasury Zinskurve Steilheit, 10J minus 2J (Dublette FRED T10Y2Y in main, hier ruhend)",
+    "einheit": "Prozentpunkte",
+    "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "keine (Differenz zweier taeglicher Einzelwerte)",
     "verfuegbar_nach_tagen": 1
   },
   "y1": {
@@ -28,6 +58,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -36,6 +67,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -44,6 +76,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -52,6 +85,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -60,6 +94,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -68,6 +103,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   },
@@ -76,6 +112,7 @@
     "einheit": "Prozent p.a.",
     "quelle_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv",
     "revidiert": false,
+    "status": "ruhend",
     "verdichtung": "keine (bereits taeglicher Einzelwert)",
     "verfuegbar_nach_tagen": 1
   }

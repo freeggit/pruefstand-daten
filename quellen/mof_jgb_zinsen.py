@@ -18,6 +18,12 @@ TENOR_TO_ID = {
     "15Y": "y15", "20Y": "y20", "25Y": "y25", "30Y": "y30", "40Y": "y40",
 }
 
+# Zusatz 3 (Redundanz begrenzen): Zinskurve auf 3 Reihen verdichten. Keine
+# JGB-Laufzeit unter 1Y verfuegbar -> "kurz" = 1 Jahr (Regel "sonst 1 Jahr").
+NIVEAU_TENOR = "10Y"
+STEIL_KURZ_TENOR = "2Y"
+KURZ_TENOR = "1Y"
+
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
@@ -68,6 +74,30 @@ def gzip_write(path, rows):
         f.write(buf.getvalue())
 
 
+def diff_series(a, b):
+    common = sorted(set(a) & set(b))
+    return {d: a[d] - b[d] for d in common}
+
+
+def write_reihe(meta, reihe_id, series, status, einheit, beschreibung, verdichtung):
+    dates = sorted(series.keys())
+    if len(dates) < 500 or dates[0] > "2015-12-31":
+        return None
+    rows = [(d, series[d]) for d in dates]
+    gzip_write(os.path.join(OUT_DIR, reihe_id + ".csv.gz"), rows)
+    meta[reihe_id] = {
+        "einheit": einheit,
+        "beschreibung": beschreibung,
+        "quelle_url": HIST_URL,
+        "verdichtung": verdichtung,
+        "verfuegbar_nach_tagen": 1,
+        "revidiert": False,
+        "status": status,
+    }
+    print("OK %s: %s..%s, %d Werte [%s]" % (reihe_id, dates[0], dates[-1], len(dates), status))
+    return True
+
+
 def main():
     hist = parse(fetch(HIST_URL))
     current = parse(fetch(CURRENT_URL))
@@ -82,20 +112,32 @@ def main():
     meta = {}
     for tenor, series in combined.items():
         reihe_id = TENOR_TO_ID[tenor]
-        dates = sorted(series.keys())
-        if len(dates) < 500 or dates[0] > "2015-12-31":
-            continue
-        rows = [(d, series[d]) for d in dates]
-        gzip_write(os.path.join(OUT_DIR, reihe_id + ".csv.gz"), rows)
-        meta[reihe_id] = {
-            "einheit": "Prozent p.a.",
-            "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit %s, taeglicher Referenzsatz (Ministry of Finance Japan)" % tenor,
-            "quelle_url": HIST_URL,
-            "verdichtung": "keine (bereits taeglicher Einzelwert)",
-            "verfuegbar_nach_tagen": 1,
-            "revidiert": False,
-        }
-        print("OK %s (%s): %s..%s, %d Werte" % (reihe_id, tenor, dates[0], dates[-1], len(dates)))
+        write_reihe(
+            meta, reihe_id, series, "ruhend",
+            "Prozent p.a.",
+            "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit %s, taeglicher Referenzsatz (Ministry of Finance Japan)" % tenor,
+            "keine (bereits taeglicher Einzelwert)",
+        )
+
+    # Zusatz 3: verdichtete 3 Reihen als neue Reihen derselben Quelle.
+    niveau = combined.get(NIVEAU_TENOR, {})
+    steil = diff_series(niveau, combined.get(STEIL_KURZ_TENOR, {}))
+    kurz = combined.get(KURZ_TENOR, {})
+    write_reihe(
+        meta, "niveau", niveau, "aktiv", "Prozent p.a.",
+        "Japanische Staatsanleihen (JGB), Zinsniveau 10 Jahre, taeglicher Referenzsatz (Ministry of Finance Japan)",
+        "keine (bereits taeglicher Einzelwert)",
+    )
+    write_reihe(
+        meta, "steilheit", steil, "aktiv", "Prozentpunkte",
+        "Japanische Staatsanleihen (JGB), Zinskurve Steilheit 10J minus 2J (Ministry of Finance Japan)",
+        "keine (Differenz zweier taeglicher Einzelwerte)",
+    )
+    write_reihe(
+        meta, "kurz", kurz, "aktiv", "Prozent p.a.",
+        "Japanische Staatsanleihen (JGB), kurzes Ende der Zinskurve, Laufzeit 1 Jahr (keine kuerzere Laufzeit oeffentlich verfuegbar; Ministry of Finance Japan)",
+        "keine (bereits taeglicher Einzelwert)",
+    )
 
     if not meta:
         raise SystemExit("keine verwertbaren Reihen")
