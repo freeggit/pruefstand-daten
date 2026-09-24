@@ -1,0 +1,10 @@
+{
+  "call_rate": {
+    "beschreibung": "Bank of Japan, Uncollateralized Overnight Call Rate (Mutan-Satz), Tagesdurchschnitt, ueber die BOJ Time-Series Data Search API (DB FM01, Series STRDCLUCON).",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=csv&lang=en&db=FM01&code=STRDCLUCON",
+    "revidiert": false,
+    "verdichtung": "keine (bereits Tageswert lt. Quelle)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
