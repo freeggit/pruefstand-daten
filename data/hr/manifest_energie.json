@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-09-24T02:42:57Z",
+ "erzeugt_utc": "2026-09-24T02:51:07Z",
  "reihen": {
   "energie:preis_ch": {
    "dateien": [
@@ -68,6 +68,10 @@
   },
   "energie:erzeugung_de": {
    "dateien": [
+    "data/hr/energie/erzeugung_de_2016.csv.gz",
+    "data/hr/energie/erzeugung_de_2017.csv.gz",
+    "data/hr/energie/erzeugung_de_2018.csv.gz",
+    "data/hr/energie/erzeugung_de_2019.csv.gz",
     "data/hr/energie/erzeugung_de_2020.csv.gz",
     "data/hr/energie/erzeugung_de_2021.csv.gz",
     "data/hr/energie/erzeugung_de_2022.csv.gz",
@@ -76,12 +80,12 @@
     "data/hr/energie/erzeugung_de_2025.csv.gz",
     "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
-   "zeilen": 235978,
+   "zeilen": 376234,
    "letzte": "2026-09-24T01:15:00Z",
    "einheit": "MW",
    "quelle": "energy-charts.info",
    "hinweis": "Zeitbudget 8 min erschöpft, fehlende Jahre folgen im nächsten Lauf",
-   "erste": "2019-12-31T23:00:00Z"
+   "erste": "2015-12-31T23:00:00Z"
   }
  },
  "teile": [
