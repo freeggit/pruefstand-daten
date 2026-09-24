@@ -7,6 +7,14 @@
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2
   },
+  "halbleiter": {
+    "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Halbleiter', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Halbleiter/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
   "hurrikan": {
     "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Hurrikan', alle Zugriffsarten",
     "einheit": "Aufrufe pro Tag",
@@ -23,10 +31,26 @@
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2
   },
+  "oelpreis": {
+    "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Ölpreis', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/%C3%96lpreis/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
   "pandemie": {
     "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Pandemie', alle Zugriffsarten",
     "einheit": "Aufrufe pro Tag",
     "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Pandemie/daily/2015070100/...00",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 2
+  },
+  "rezession": {
+    "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Rezession', alle Zugriffsarten",
+    "einheit": "Aufrufe pro Tag",
+    "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Rezession/daily/2015070100/...00",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",
     "verfuegbar_nach_tagen": 2

@@ -25,6 +25,9 @@ ARTICLES = {
     "hurrikan": "Hurrikan",
     "streik": "Streik",
     "pandemie": "Pandemie",
+    "oelpreis": "Ölpreis",
+    "halbleiter": "Halbleiter",
+    "rezession": "Rezession",
 }
 
 

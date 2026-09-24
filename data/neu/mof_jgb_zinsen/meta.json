@@ -1,0 +1,122 @@
+{
+  "y1": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 1Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y10": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 10Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y15": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 15Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y2": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 2Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y20": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 20Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y25": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 25Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y3": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 3Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y30": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 30Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y4": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 4Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y40": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 40Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y5": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 5Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y6": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 6Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y7": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 7Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y8": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 8Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "y9": {
+    "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 9Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+    "einheit": "Prozent p.a.",
+    "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Einzelwert)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
