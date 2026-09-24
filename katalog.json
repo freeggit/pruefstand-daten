@@ -671,5 +671,19 @@
     ],
     "aufgenommen_utc": "2026-09-24T16:14:00Z",
     "geprueft_utc": "2026-09-24T16:14:00Z"
+  },
+  {
+    "id": "fred_sofr",
+    "name": "Secured Overnight Financing Rate (SOFR), FRED-Reihe SOFR",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Geldmarkt",
+    "status": "abgelehnt",
+    "prioritaet": "",
+    "mechanismus": "Der taegliche besicherte US-Repo-Referenzsatz SOFR zeigt Stress/Knappheit im Repomarkt an und koennte kurzfristig Finanzwerte (XLF) und kurzfristige Zinspapiere gegenueber dem Weltindex bewegen.",
+    "grund": "K2 verletzt: Test der oeffentlichen fredgraph.csv-Ausgabe (gleiches Muster wie fred_effr) zeigt ersten Wert erst 2018-04-03 (SOFR wurde erst 2018 eingefuehrt), also nach der Vorgabe 'spaetestens 31.12.2015'. Kein Abruf/keine Ablage der Historie. Aus dem gleichen Grund auch €STR (ECB, erst ab Oktober 2019) nicht weiterverfolgt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-24T16:14:00Z",
+    "geprueft_utc": "2026-09-24T16:14:00Z"
   }
 ]
