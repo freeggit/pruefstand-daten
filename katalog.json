@@ -356,12 +356,66 @@
     "mechanismus": "Sprunghaft erhoehte Wikipedia-Aufrufzahlen zu Themen wie Zinssatz, Konkurs, Duerre, Hurrikan, Streik oder Pandemie zeigen einen Aufmerksamkeitsschock in der breiten Oeffentlichkeit an, der Vorlaeufer oder Begleiter von Kursbewegungen in betroffenen Sektoren/Rohstoffen (z.B. Zinssatz -> Anleihen/TLT, Duerre/Hurrikan -> Agrarrohstoffe DBA, Energie) gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen sein kann.",
     "grund": "Fruehere Laeufe scheiterten an Rate-Limits (HTTP 429) der Wikimedia-API auf der geteilten Ausgangs-IP dieser Umgebung sowie an einem persistenten HTTP 404 fuer den Artikeltitel 'Zinssenkung' (vermutlich Redirect-Ziel ohne eigene Pageview-Zaehlung unter diesem exakten Lemma). Heute (2026-09-24) behoben: (1) Skript robuster gemacht (pro Artikel einzeln fehlertolerant, bestehende Dateien/meta.json bleiben bei Einzel-Fehlschlag erhalten statt Komplettabbruch, Retry-Backoff fuer 429 erhoeht); (2) 'zinssenkung' durch 'Zinssatz' ersetzt (existierender, eigenstaendiger Artikel, lieferte sofort Daten). Alle 6 Artikel erfolgreich abgerufen. K1-K7 erfuellt: taeglich (Median 1 Tag, einzelne Ausreisser-Luecken z.B. konkurs mit 4097 statt 4102 Werten -- Tage ohne gemeldete Aufrufe, kein Revisionsproblem), Historie ab 2015-07-01 (Beginn der Wikimedia-Pageviews-API, vor 31.12.2015), oeffentliche API ohne Login/Schluessel, Zaehlwerte werden nach Publikation nicht revidiert, letzter Wert 2026-09-22 (2 Tage alt wegen dokumentiertem Publikationsverzug, laufend fortschreibbar), neu gegenueber Spiegel (bestehende 15 Wikipedia-Artikel sind andere Themen), je Reihe wenige hundert KB, Abruf aller 6 Artikel unter 1 Minute. Anteil gleicher Folgewerte 0.6% bis 4.8% je Reihe (unauffaellig), Werte plausibel (z.B. pandemie Max 174367 an einem erwartbaren Pandemie-Ereignistag, hurrikan Max 33389 bei grossem Sturmereignis).",
     "reihen": [
-      {"reihe": "zinssatz", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0185, "min": 13.0, "max": 638.0},
-      {"reihe": "konkurs", "zeilen": 4097, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0479, "min": 1.0, "max": 188.0},
-      {"reihe": "duerre", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0178, "min": 11.0, "max": 1257.0},
-      {"reihe": "hurrikan", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0061, "min": 58.0, "max": 33389.0},
-      {"reihe": "streik", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0102, "min": 18.0, "max": 3052.0},
-      {"reihe": "pandemie", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0124, "min": 64.0, "max": 174367.0}
+      {
+        "reihe": "zinssatz",
+        "zeilen": 4102,
+        "erste": "2015-07-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0185,
+        "min": 13.0,
+        "max": 638.0
+      },
+      {
+        "reihe": "konkurs",
+        "zeilen": 4097,
+        "erste": "2015-07-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0479,
+        "min": 1.0,
+        "max": 188.0
+      },
+      {
+        "reihe": "duerre",
+        "zeilen": 4102,
+        "erste": "2015-07-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0178,
+        "min": 11.0,
+        "max": 1257.0
+      },
+      {
+        "reihe": "hurrikan",
+        "zeilen": 4102,
+        "erste": "2015-07-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0061,
+        "min": 58.0,
+        "max": 33389.0
+      },
+      {
+        "reihe": "streik",
+        "zeilen": 4102,
+        "erste": "2015-07-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0102,
+        "min": 18.0,
+        "max": 3052.0
+      },
+      {
+        "reihe": "pandemie",
+        "zeilen": 4102,
+        "erste": "2015-07-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0124,
+        "min": 64.0,
+        "max": 174367.0
+      }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-24T04:30:00Z"
@@ -375,10 +429,10 @@
     "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Offene Marktkaeufe von Firmeninsidern (Formular 4, Code 'P') buendeln privates Wissen ueber die kurzfristigen Aussichten eines Sektors; ein Anstieg der Kaeuferzahl/des Kaufwerts je SPDR-Sektor kann dem Sektor gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen einen Vorteil anzeigen, bevor sich das in Kursen niederschlaegt.",
-    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen. Etappe 3 (2026-09-24, weiterer Lauf): erneut geprueft, diesmal auch die SEC-Startseite (www.sec.gov/) und die EDGAR-Volltextsuche (efts.sec.gov) getestet, nicht nur die Insider-Datensatz-Endpunkte -- ebenfalls HTTP 403 auf allen. Damit ist die Sperre als domainweit (nicht endpunktspezifisch) und ueber mehrere Laeufe hinweg reproduzierbar bestaetigt (blockiert vermutlich die Cloud-Ausgangs-IP-Range dieser Umgebung, wie von der SEC fuer Rechenzentrums-IPs praktiziert). Gemaess Vorgabe bleibt Status 'fehler' (403 = Befund, nicht umgehen); wird im naechsten Lauf erneut versucht, SIC-Sektor-Mapping weiterhin nicht erstellbar ohne Datenzugriff. Etappe 4 (2026-09-24T04:06Z, vierter Lauf): erneut geprueft (www.sec.gov/, www.sec.gov/data-research/..., data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/cgi-bin/browse-edgar) -- unveraendert HTTP 403 auf allen vier, identische UA-Kennung. Vierter unabhaengiger Lauf mit identischem Befund; die domainweite IP-Sperre ist damit stabil ueber vier Laeufe (23.-24.9.) reproduziert. Status bleibt 'fehler', kein Umgehungsversuch (kein Proxy/Kennungswechsel). Wird weiterhin bei jedem Lauf kurz erneut geprueft, da Reto hohe Prioritaet vorgegeben hat; sollte die Sperre ueber laengere Zeit unveraendert bleiben, ist ein Uebergang zu 'abgelehnt' (K3, aus dieser Infrastruktur nicht oeffentlich abrufbar) zu erwaegen und Reto zu melden.",
+    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen. Etappe 3 (2026-09-24, weiterer Lauf): erneut geprueft, diesmal auch die SEC-Startseite (www.sec.gov/) und die EDGAR-Volltextsuche (efts.sec.gov) getestet, nicht nur die Insider-Datensatz-Endpunkte -- ebenfalls HTTP 403 auf allen. Damit ist die Sperre als domainweit (nicht endpunktspezifisch) und ueber mehrere Laeufe hinweg reproduzierbar bestaetigt (blockiert vermutlich die Cloud-Ausgangs-IP-Range dieser Umgebung, wie von der SEC fuer Rechenzentrums-IPs praktiziert). Gemaess Vorgabe bleibt Status 'fehler' (403 = Befund, nicht umgehen); wird im naechsten Lauf erneut versucht, SIC-Sektor-Mapping weiterhin nicht erstellbar ohne Datenzugriff. Etappe 4 (2026-09-24T04:06Z, vierter Lauf): erneut geprueft (www.sec.gov/, www.sec.gov/data-research/..., data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/cgi-bin/browse-edgar) -- unveraendert HTTP 403 auf allen vier, identische UA-Kennung. Vierter unabhaengiger Lauf mit identischem Befund; die domainweite IP-Sperre ist damit stabil ueber vier Laeufe (23.-24.9.) reproduziert. Status bleibt 'fehler', kein Umgehungsversuch (kein Proxy/Kennungswechsel). Wird weiterhin bei jedem Lauf kurz erneut geprueft, da Reto hohe Prioritaet vorgegeben hat; sollte die Sperre ueber laengere Zeit unveraendert bleiben, ist ein Uebergang zu 'abgelehnt' (K3, aus dieser Infrastruktur nicht oeffentlich abrufbar) zu erwaegen und Reto zu melden. Etappe 5 (2026-09-24T06:06Z, fuenfter Lauf): erneut geprueft (www.sec.gov/, data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets) -- unveraendert HTTP 403 auf allen drei, identische UA-Kennung, kein Proxy-/Kennungswechsel. Fuenfter unabhaengiger Lauf mit identischem Befund ueber zwei Kalendertage (23.-24.9.); Sperre bleibt stabil. Status bleibt 'fehler' gemaess Vorgabe (403 = Befund, nicht umgehen). SIC-Sektor-Mapping weiterhin nicht erstellbar.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T22:10:19Z",
-    "geprueft_utc": "2026-09-24T04:06:00Z"
+    "geprueft_utc": "2026-09-24T06:09:41Z"
   },
   {
     "id": "twitter_unsicherheit",
@@ -393,5 +447,37 @@
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T22:10:19Z",
     "geprueft_utc": "2026-09-23T22:10:19Z"
+  },
+  {
+    "id": "bitcoin_onchain",
+    "name": "Bitcoin On-Chain-Kennzahlen (Hashrate, Transaktionszahl, Gebuehren)",
+    "url": "https://www.blockchain.com/explorer/charts",
+    "domain": "api.blockchain.info",
+    "bereich": "Krypto",
+    "status": "aktiv",
+    "mechanismus": "Netzwerk-Hashrate, Transaktionszahl und Gebuehren sind preisunabhaengige Kettendaten, die Mining-Investition, Nutzungsdruck und Netzwerk-Auslastung abbilden; ein Anstieg kann kurzfristig (1-20 Handelstage) erhoehte Risikobereitschaft/Aktivitaet im Kryptosektor gegenueber dem Weltindex anzeigen, bevor sich das im Bitcoin-Kurs niederschlaegt (der bereits im Spiegel ist, hier aber bewusst nicht erneut erhoben wird).",
+    "grund": "K1-K7 erfuellt: taeglich (UTC-Tagesgrenze der Quelle, Median-Abstand 1 Tag je Reihe), Historie ab 2009-01-03/2009-01-17 (weit vor 2015-12-31, >6400 Werte je Reihe), oeffentliche REST-API ohne Login/Schluessel (api.blockchain.info/charts, Parameter sampled=false fuer ungeglaettete Tageswerte statt der standardmaessig auf ca. 4-Tage-Abstand ausgeduennten Default-Antwort), punktgenaue On-Chain-Zaehlwerte/-berechnungen ohne Revision nach Veroeffentlichung, letzter Wert 2026-09-23 (aktuell, taeglich fortgeschrieben), neu (nur der Bitcoin-KURS ist im Spiegel, nicht diese On-Chain-Kennzahlen), Abruf aller drei Reihen unter 3 Sekunden und weit unter 20 MB je Reihe. Pruefung: hashrate 6463 Zeilen (2009-01-03 bis 2026-09-23), Median-Abstand 1 Tag, Anteil gleicher Folgewerte 1.9%, Min 0.0 (Netzwerkstart) Max 1.31e9 TH/s (plausibel wachsend); transaktionen 6449 Zeilen, Median-Abstand 1 Tag, Anteil gleich 0.1%, Min 4 Max 927010 (plausibel); gebuehren 6449 Zeilen, Median-Abstand 1 Tag, Anteil gleich 8.8%, Min 0.0 (fruehe Netzwerkjahre) Max 1495.9 BTC/Tag (plausibel, Gebuehrenspitzen bekannt).",
+    "reihen": [
+      "hashrate",
+      "transaktionen",
+      "gebuehren"
+    ],
+    "aufgenommen_utc": "2026-09-24T06:09:41Z",
+    "geprueft_utc": "2026-09-24T06:09:41Z"
+  },
+  {
+    "id": "treasury_auktionen",
+    "name": "US-Treasury-Auktionen: mittleres Bid-to-Cover-Verhaeltnis je Tag",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
+    "domain": "api.fiscaldata.treasury.gov",
+    "bereich": "Staat",
+    "status": "aktiv",
+    "mechanismus": "Ein hohes Bid-to-Cover-Verhaeltnis bei einer Treasury-Auktion zeigt starke institutionelle Nachfrage nach US-Staatsanleihen und damit tendenziell risikoscheue/liquiditaetsgetriebene Positionierung; ein Rueckgang kann auf nachlassende Nachfrage nach sicheren Anlagen hindeuten und sich kurzfristig (1-20 Handelstage) auf Anleihen (TLT) und risikoreichere Sektoren gegenueber dem Weltindex auswirken. Zugleich Replikationsmoeglichkeit fuer den Beinahe-Treffer TGA -> XLE mit einer zweiten, unabhaengigen Staats-/Liquiditaetsreihe.",
+    "grund": "K1-K7 erfuellt: an den meisten Handelstagen mindestens eine Auktion (Median-Abstand 1 Tag ueber die Gesamthistorie wie auch ab 2015), Historie ab 1994-09-28 (weit vor 2015-12-31, 4249 Tageswerte), oeffentliche REST-API der fiscaldata.treasury.gov ohne Login/Schluessel, Bid-to-Cover-Verhaeltnis wird nach Auktionsschluss festgestellt und nicht nachtraeglich revidiert, letzter Wert 2026-09-23 (aktuell, taeglich fortgeschrieben; heutige Auktionen 2026-09-24 noch ohne Ergebnis und daher ausgeschlossen), neu (kein bestehender Treasury-Auktionswert im Spiegel), Abruf unter 6 Sekunden und Datei weit unter 20 MB. Verdichtung: Tagesmittel ueber alle an diesem Kalendertag abgeschlossenen Auktionen (Bills/Notes/Bonds gemeinsam, da haeufig mehrere Wertpapiere am selben Tag). Pruefung: 4249 Zeilen (1994-09-28 bis 2026-09-23), Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.3%, Min 1.11 Max 10.72 (plausible Bid-to-Cover-Bandbreite).",
+    "reihen": [
+      "bid_to_cover"
+    ],
+    "aufgenommen_utc": "2026-09-24T06:09:41Z",
+    "geprueft_utc": "2026-09-24T06:09:41Z"
   }
 ]

@@ -1,0 +1,26 @@
+{
+  "gebuehren": {
+    "beschreibung": "Summe der Transaktionsgebuehren im Bitcoin-Netzwerk pro Tag, in BTC",
+    "einheit": "BTC",
+    "quelle_url": "https://api.blockchain.info/charts/transaction-fees",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, UTC-Tagesgrenze der Quelle)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "hashrate": {
+    "beschreibung": "Geschaetzte Bitcoin-Netzwerk-Hashrate (Terahashes pro Sekunde), aus Blockzeit und Difficulty berechnet",
+    "einheit": "TH/s",
+    "quelle_url": "https://api.blockchain.info/charts/hash-rate",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, UTC-Tagesgrenze der Quelle)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "transaktionen": {
+    "beschreibung": "Bestaetigte Bitcoin-Transaktionen pro Tag",
+    "einheit": "Anzahl",
+    "quelle_url": "https://api.blockchain.info/charts/n-transactions",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, UTC-Tagesgrenze der Quelle)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

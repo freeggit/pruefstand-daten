@@ -1,0 +1,10 @@
+{
+  "bid_to_cover": {
+    "beschreibung": "Mittleres Bid-to-Cover-Verhaeltnis aller an diesem Tag abgeschlossenen US-Treasury-Auktionen (Bills, Notes, Bonds); Mass fuer die Nachfrage nach neu emittierten US-Staatsanleihen",
+    "einheit": "Verhaeltnis (Gebote/Zuteilung)",
+    "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
+    "revidiert": false,
+    "verdichtung": "Mittelwert ueber alle an diesem Kalendertag abgeschlossenen Auktionen (mehrere Wertpapiere/Tag moeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
