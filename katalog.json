@@ -305,23 +305,66 @@
     "url": "http://data.gdeltproject.org/events/",
     "domain": "data.gdeltproject.org",
     "bereich": "Nachrichten",
-    "status": "kandidat",
-    "grund": "",
+    "status": "abgelehnt",
+    "mechanismus": "Anzahl weltweiter Nachrichtenereignisse und mittlerer Ton (AvgTone) je Tag koennten kurzfristig Stimmungsschocks anzeigen, die sich auf breite Indizes gegenueber dem Weltindex auswirken.",
+    "grund": "K7 verletzt: data.gdeltproject.org/events/index.html liefert seit 2013-04-01 nur Tagesdateien (kein Bereichs-Query, keine konsolidierte Zip fuer 2015-heute; die einzige Sammel-Datei GDELT.MASTERREDUCEDV2.1979-2013.zip (1.1 GB) deckt nur bis 2013). Fuer die ab 2015-12-31 verlangte Historie (K2) waeren ca. 4000 Einzeldateien zu je 3-8 MB (insgesamt >20 GB Rohdaten) herunterzuladen, um daraus die kleine Tagesreihe (Datum, Anzahl, Mittelton) zu berechnen. Das verletzt K7 (Abruf unter 3 Minuten) eklatant und ist mit der Vorgabe, dass jedes aktive Skript bei jedem Lauf die GANZE Historie neu holt, dauerhaft nicht innerhalb des 180s-Zeitbudgets von run_all.py vereinbar -- auch ein gestaffelter Aufbau (in Etappen je Jahr) wuerde das Problem nur beim Erstaufbau verschieben, nicht beim taeglichen Neuabruf loesen. Keine Historie abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-09-24T04:20:00Z"
+  },
+  {
+    "id": "kalender_ereignisse",
+    "name": "Deterministische Kalender-Ereignistage (US-Steuertermine, grosser Quartalsverfall)",
+    "url": "https://www.irs.gov/filing/tax-day-when-are-taxes-due",
+    "domain": "kein externer Abruf (deterministische Kalenderberechnung)",
+    "bereich": "Kalender",
+    "status": "aktiv",
+    "mechanismus": "US-Steuertermine (Kapitalzufluss/-abfluss beim Fiskus, moeglicher Effekt auf Liquiditaet/TGA) und der grosse Quartalsverfall (drei Freitag Maerz/Juni/September/Dezember, zugleich S&P-Quartalsneugewichtung) sind deterministische, im Voraus bekannte Kalendertage, an denen kurzfristig (1-20 Handelstage) erhoehte Umsaetze, Rebalancing-Fluesse oder Liquiditaetsverschiebungen auftreten koennen, die einzelne Sektoren/den Gesamtmarkt gegenueber dem Weltindex beeinflussen. Zweck gemaess Vorgabe (Zusatz 2): Replikation/Zerlegung des Beinahe-Treffers TGA -> XLE, um zu pruefen, ob dahinter ein Steuertermin- oder ein Verfalls-Effekt steht.",
+    "grund": "K1-K7 erfuellt, ohne jeden externen Datenabruf (rein deterministische Kalenderberechnung in Python-Standardbibliothek datetime): K1 taeglich (jeder Kalendertag hat eine Zeile, Median-Abstand 1 Tag). K2 Historie ab 2001-01-01 (9398 Werte je Reihe), weit vor 31.12.2015. K3 offen: kein Login/Schluessel, keine Webabhaengigkeit, Daten sind reine Kalenderarithmetik auf Basis oeffentlich bekannter, fester Regeln (IRS-Steuertermine 15.1./15.4./15.6./15.9./15.12. ohne Wochenend-/Feiertagsverschiebung gemaess Vorgabetext; dritter Freitag der Quartalsmonate als Marktkonvention fuer Quadruple Witching). K4 punktgenau: feste, historische Kalendertage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf automatisch bis zum aktuellen Tag, keine Zukunftszeilen. K6 neu: keine Kalender-/Ereignisreihe im bestehenden Spiegel. K7 Umfang: unter 25 KB komprimiert je Reihe, Berechnung <0.1 Sek. Pruefung: ustax 129 Ereignistage von 9398 Tagen (2001-2026, 2026 erst 4 von 5 Terminen erreicht), opex_verfall 103 Ereignistage von 9398 Tagen (2026 erst 3 von 4 Terminen erreicht); beide Werte 0/1 plausibel, keine Duplikate, Stichprobe (dritter Freitag September 2026 = 2026-09-18, von Hand geprueft) korrekt. Anteil gleicher Folgewerte liegt bei binaeren 0/1-Indikatorreihen naturgemaess weit ueber der 20%-Verdachtsschwelle (>98%, da die meisten Tage 0 sind); das ist bei dieser Reihenart kein Qualitaetsmangel, sondern erwartungsgemaess, da die Schwelle auf stetige Messreihen zielt.",
+    "reihen": [
+      {
+        "reihe": "ustax",
+        "zeilen": 9398,
+        "erste": "2001-01-01",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9863,
+        "min": 0.0,
+        "max": 1.0
+      },
+      {
+        "reihe": "opex_verfall",
+        "zeilen": 9398,
+        "erste": "2001-01-01",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.989,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-24T04:20:00Z",
+    "geprueft_utc": "2026-09-24T04:22:00Z"
   },
   {
     "id": "wikipedia_weitere",
-    "name": "Wikipedia Pageviews weiterer Artikel (de.wikipedia: Zinssenkung, Konkurs, Duerre, Hurrikan, Streik, Pandemie)",
+    "name": "Wikipedia Pageviews weiterer Artikel (de.wikipedia: Zinssatz, Konkurs, Duerre, Hurrikan, Streik, Pandemie)",
     "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/",
     "domain": "wikimedia.org",
     "bereich": "Aufmerksamkeit",
-    "status": "fehler",
-    "grund": "Abrufversuch scheiterte an Rate-Limit der Wikimedia-API (HTTP 429, x-envoy-ratelimited, retry-after 30-40s) auf der geteilten Ausgangs-IP dieser Umgebung; wiederholt auch nach Wartezeit und fuer verschiedene Artikel/Datumsbereiche reproduziert, daher gemaess Vorgabe (403/429 = Befund, Status 'fehler', naechster Lauf erneut) nicht umgangen (kein Proxy-/Kennungswechsel). quellen/wikipedia_weitere.py ist fertig implementiert (6 Artikel, Retry mit Retry-After-Header, Enddatum 2 Tage vor Abruf wegen Publikationsverzug) und sollte beim naechsten Lauf erneut versucht werden; zusaetzlich noch zu pruefen, ob der Artikeltitel 'Zinssenkung' auf de.wikipedia existiert (ein 404 trat unabhaengig vom Rate-Limit einmal auf, evtl. falscher/nicht eigenstaendiger Lemma-Titel).",
-    "reihen": [],
+    "status": "aktiv",
+    "mechanismus": "Sprunghaft erhoehte Wikipedia-Aufrufzahlen zu Themen wie Zinssatz, Konkurs, Duerre, Hurrikan, Streik oder Pandemie zeigen einen Aufmerksamkeitsschock in der breiten Oeffentlichkeit an, der Vorlaeufer oder Begleiter von Kursbewegungen in betroffenen Sektoren/Rohstoffen (z.B. Zinssatz -> Anleihen/TLT, Duerre/Hurrikan -> Agrarrohstoffe DBA, Energie) gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen sein kann.",
+    "grund": "Fruehere Laeufe scheiterten an Rate-Limits (HTTP 429) der Wikimedia-API auf der geteilten Ausgangs-IP dieser Umgebung sowie an einem persistenten HTTP 404 fuer den Artikeltitel 'Zinssenkung' (vermutlich Redirect-Ziel ohne eigene Pageview-Zaehlung unter diesem exakten Lemma). Heute (2026-09-24) behoben: (1) Skript robuster gemacht (pro Artikel einzeln fehlertolerant, bestehende Dateien/meta.json bleiben bei Einzel-Fehlschlag erhalten statt Komplettabbruch, Retry-Backoff fuer 429 erhoeht); (2) 'zinssenkung' durch 'Zinssatz' ersetzt (existierender, eigenstaendiger Artikel, lieferte sofort Daten). Alle 6 Artikel erfolgreich abgerufen. K1-K7 erfuellt: taeglich (Median 1 Tag, einzelne Ausreisser-Luecken z.B. konkurs mit 4097 statt 4102 Werten -- Tage ohne gemeldete Aufrufe, kein Revisionsproblem), Historie ab 2015-07-01 (Beginn der Wikimedia-Pageviews-API, vor 31.12.2015), oeffentliche API ohne Login/Schluessel, Zaehlwerte werden nach Publikation nicht revidiert, letzter Wert 2026-09-22 (2 Tage alt wegen dokumentiertem Publikationsverzug, laufend fortschreibbar), neu gegenueber Spiegel (bestehende 15 Wikipedia-Artikel sind andere Themen), je Reihe wenige hundert KB, Abruf aller 6 Artikel unter 1 Minute. Anteil gleicher Folgewerte 0.6% bis 4.8% je Reihe (unauffaellig), Werte plausibel (z.B. pandemie Max 174367 an einem erwartbaren Pandemie-Ereignistag, hurrikan Max 33389 bei grossem Sturmereignis).",
+    "reihen": [
+      {"reihe": "zinssatz", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0185, "min": 13.0, "max": 638.0},
+      {"reihe": "konkurs", "zeilen": 4097, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0479, "min": 1.0, "max": 188.0},
+      {"reihe": "duerre", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0178, "min": 11.0, "max": 1257.0},
+      {"reihe": "hurrikan", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0061, "min": 58.0, "max": 33389.0},
+      {"reihe": "streik", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0102, "min": 18.0, "max": 3052.0},
+      {"reihe": "pandemie", "zeilen": 4102, "erste": "2015-07-01", "letzte": "2026-09-22", "median_abstand_tage": 1, "anteil_gleiche_folgewerte": 0.0124, "min": 64.0, "max": 174367.0}
+    ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T20:50:00Z"
+    "geprueft_utc": "2026-09-24T04:30:00Z"
   },
   {
     "id": "sec_insider_sektor",
@@ -332,10 +375,10 @@
     "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Offene Marktkaeufe von Firmeninsidern (Formular 4, Code 'P') buendeln privates Wissen ueber die kurzfristigen Aussichten eines Sektors; ein Anstieg der Kaeuferzahl/des Kaufwerts je SPDR-Sektor kann dem Sektor gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen einen Vorteil anzeigen, bevor sich das in Kursen niederschlaegt.",
-    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen. Etappe 3 (2026-09-24, weiterer Lauf): erneut geprueft, diesmal auch die SEC-Startseite (www.sec.gov/) und die EDGAR-Volltextsuche (efts.sec.gov) getestet, nicht nur die Insider-Datensatz-Endpunkte -- ebenfalls HTTP 403 auf allen. Damit ist die Sperre als domainweit (nicht endpunktspezifisch) und ueber mehrere Laeufe hinweg reproduzierbar bestaetigt (blockiert vermutlich die Cloud-Ausgangs-IP-Range dieser Umgebung, wie von der SEC fuer Rechenzentrums-IPs praktiziert). Gemaess Vorgabe bleibt Status 'fehler' (403 = Befund, nicht umgehen); wird im naechsten Lauf erneut versucht, SIC-Sektor-Mapping weiterhin nicht erstellbar ohne Datenzugriff.",
+    "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet, mehrstufiger Aufbau vorgesehen (SIC-Sektor-Mapping, quartalsweise Bulk-ZIPs ab 2006, danach EDGAR-Tagesindex fuer laufende Tage). Etappe 1 (2026-09-23): HTTP 403 auf allen SEC-Endpunkten. Etappe 2 (2026-09-24, rund 2 Std. spaeter erneut versucht): identisches Ergebnis, HTTP 403 (Forbidden) weiterhin auf allen vier zentralen Endpunkten mit UA 'pruefstand-daten research freeggit@users.noreply.github.com': www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets, www.sec.gov/files/dera/data/insider-transactions-data-sets/2024q3_form345.zip, www.sec.gov/Archives/edgar/daily-index/2024/QTR3/, data.sec.gov/submissions/CIK0000320193.json. Die Sperre haengt offenbar nicht von einem kurzfristigen Rate-Limit ab, sondern blockiert die gemeinsame Ausgangs-IP dieser Umgebung dauerhaft (SEC blockt bekanntlich Cloud-/Rechenzentrums-IP-Bereiche pauschal). Gemaess Vorgabe nicht umgangen (kein Proxy-/Kennungswechsel). SIC-Sektor-Mapping (quellen/sec_sic_sektor.json) weiterhin nicht erstellt, da ohne Datenzugriff nicht pruefbar. Naechster Lauf erneut versuchen; falls dauerhaft 403, laengerfristig als 'abgelehnt' mit Grund K3 (nicht oeffentlich abrufbar aus dieser Infrastruktur) zu erwaegen. Etappe 3 (2026-09-24, weiterer Lauf): erneut geprueft, diesmal auch die SEC-Startseite (www.sec.gov/) und die EDGAR-Volltextsuche (efts.sec.gov) getestet, nicht nur die Insider-Datensatz-Endpunkte -- ebenfalls HTTP 403 auf allen. Damit ist die Sperre als domainweit (nicht endpunktspezifisch) und ueber mehrere Laeufe hinweg reproduzierbar bestaetigt (blockiert vermutlich die Cloud-Ausgangs-IP-Range dieser Umgebung, wie von der SEC fuer Rechenzentrums-IPs praktiziert). Gemaess Vorgabe bleibt Status 'fehler' (403 = Befund, nicht umgehen); wird im naechsten Lauf erneut versucht, SIC-Sektor-Mapping weiterhin nicht erstellbar ohne Datenzugriff. Etappe 4 (2026-09-24T04:06Z, vierter Lauf): erneut geprueft (www.sec.gov/, www.sec.gov/data-research/..., data.sec.gov/submissions/CIK0000320193.json, www.sec.gov/cgi-bin/browse-edgar) -- unveraendert HTTP 403 auf allen vier, identische UA-Kennung. Vierter unabhaengiger Lauf mit identischem Befund; die domainweite IP-Sperre ist damit stabil ueber vier Laeufe (23.-24.9.) reproduziert. Status bleibt 'fehler', kein Umgehungsversuch (kein Proxy/Kennungswechsel). Wird weiterhin bei jedem Lauf kurz erneut geprueft, da Reto hohe Prioritaet vorgegeben hat; sollte die Sperre ueber laengere Zeit unveraendert bleiben, ist ein Uebergang zu 'abgelehnt' (K3, aus dieser Infrastruktur nicht oeffentlich abrufbar) zu erwaegen und Reto zu melden.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T22:10:19Z",
-    "geprueft_utc": "2026-09-24T02:06:23Z"
+    "geprueft_utc": "2026-09-24T04:06:00Z"
   },
   {
     "id": "twitter_unsicherheit",

@@ -1,0 +1,18 @@
+{
+  "opex_verfall": {
+    "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.cboe.com/optionsexpirationcalendar/ (Marktkonvention: dritter Freitag der Quartalsmonate)",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "ustax": {
+    "beschreibung": "1 an US-Steuerterminen (15.1., 15.4., 15.6., 15.9., 15.12., feste Kalenderdaten ohne Wochenend-/Feiertagsverschiebung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.irs.gov/filing/tax-day-when-are-taxes-due (feste, oeffentlich bekannte Kalendertermine)",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

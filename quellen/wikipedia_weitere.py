@@ -19,7 +19,7 @@ BASE = (
 ) % (PROJECT, START)
 
 ARTICLES = {
-    "zinssenkung": "Zinssenkung",
+    "zinssatz": "Zinssatz",
     "konkurs": "Konkurs",
     "duerre": "Dürre",
     "hurrikan": "Hurrikan",
@@ -42,8 +42,8 @@ def fetch(article):
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
-            if e.code == 429 and attempts < 3:
-                wait = int(e.headers.get("Retry-After", "10"))
+            if e.code == 429 and attempts < 5:
+                wait = int(e.headers.get("Retry-After", "20"))
                 time.sleep(min(wait, 60))
                 continue
             raise
@@ -72,12 +72,24 @@ def gzip_write(path, rows):
 
 
 def main():
+    meta_path = os.path.join(OUT_DIR, "meta.json")
     meta = {}
+    if os.path.exists(meta_path):
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = json.load(f)
     fetched_any = False
+    failed = []
     for reihe, article in ARTICLES.items():
-        data = fetch(article)
+        try:
+            data = fetch(article)
+        except urllib.error.HTTPError as e:
+            failed.append((reihe, e.code))
+            time.sleep(2)
+            continue
         rows = parse(data.get("items", []))
         if not rows:
+            failed.append((reihe, "leer"))
+            time.sleep(2)
             continue
         gzip_write(os.path.join(OUT_DIR, reihe + ".csv.gz"), rows)
         meta[reihe] = {
@@ -91,12 +103,15 @@ def main():
         fetched_any = True
         time.sleep(2)
 
-    if not fetched_any:
-        raise SystemExit("keine Daten (alle Artikel fehlgeschlagen)")
+    if not fetched_any and not meta:
+        raise SystemExit("keine Daten (alle Artikel fehlgeschlagen): %r" % failed)
 
     os.makedirs(OUT_DIR, exist_ok=True)
-    with open(os.path.join(OUT_DIR, "meta.json"), "w", encoding="utf-8") as f:
+    with open(meta_path, "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+    if failed:
+        print("Teilweise fehlgeschlagen (alte Dateien fuer diese Artikel bleiben stehen, falls vorhanden):", failed)
 
 
 if __name__ == "__main__":
