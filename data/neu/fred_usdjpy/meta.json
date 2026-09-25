@@ -1,0 +1,10 @@
+{
+  "usdjpy": {
+    "beschreibung": "USD/JPY-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXJPUS)",
+    "einheit": "JPY je USD",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXJPUS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

@@ -4,12 +4,30 @@ import gzip
 import io
 import json
 import os
+import re
+import urllib.error
+import urllib.request
 
 ID = "kalender_ereignisse"
+UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
 START = datetime.date(2001, 1, 1)
 TAX_MONTHS_DAYS = ((1, 15), (4, 15), (6, 15), (9, 15), (12, 15))
 QUARTER_MONTHS = (3, 6, 9, 12)
+FOMC_HISTORICAL_LAST_YEAR = 2020
+FOMC_MONTHS = {
+    "January": 1, "February": 2, "March": 3, "April": 4,
+    "May": 5, "June": 6, "July": 7, "August": 8,
+    "September": 9, "October": 10, "November": 11, "December": 12,
+}
+FOMC_HIST_PAT = re.compile(
+    r'([A-Za-z]+) (\d{1,2})(?:-(\d{1,2}))?\s*(?:\([^)]*\)\s*)?(Meeting|Conference Call)'
+)
+FOMC_CAL_PAT = re.compile(
+    r'fomc-meeting__month[^>]*><strong>([A-Za-z]+)</strong></div>\s*'
+    r'<div class="fomc-meeting__date[^>]*>([^<]+)</div>', re.S
+)
+FOMC_CAL_YEAR_PAT = re.compile(r'<h4><a id="\d+">(\d{4}) FOMC Meetings</a></h4>')
 
 
 def third_friday(year, month):
@@ -42,6 +60,65 @@ def build_opex(end):
     return [(d, 1 if d in event_days else 0) for d in daterange(START, end)]
 
 
+def http_get(url):
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return resp.read().decode("utf-8", "replace")
+
+
+def fomc_historical_dates(year):
+    url = "https://www.federalreserve.gov/monetarypolicy/fomchistorical%d.htm" % year
+    try:
+        html = http_get(url)
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return []
+        raise
+    out = []
+    for month_name, d1, d2, _ in FOMC_HIST_PAT.findall(html):
+        month = FOMC_MONTHS.get(month_name)
+        if not month:
+            continue
+        day = int(d2) if d2 else int(d1)
+        out.append(datetime.date(year, month, day))
+    return out
+
+
+def fomc_calendar_dates():
+    html = http_get("https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm")
+    pieces = FOMC_CAL_YEAR_PAT.split(html)
+    out = []
+    for i in range(1, len(pieces), 2):
+        year = int(pieces[i])
+        block = pieces[i + 1]
+        for month_name, daytext in FOMC_CAL_PAT.findall(block):
+            month = FOMC_MONTHS.get(month_name)
+            if not month:
+                continue
+            m = re.match(r"(\d{1,2})(?:-(\d{1,2}))?", daytext.strip())
+            if not m:
+                continue
+            d1, d2 = m.group(1), m.group(2)
+            day = int(d2) if d2 else int(d1)
+            out.append(datetime.date(year, month, day))
+    return out
+
+
+def fomc_decision_days(end):
+    days = set()
+    for year in range(START.year, FOMC_HISTORICAL_LAST_YEAR + 1):
+        days.update(fomc_historical_dates(year))
+    days.update(fomc_calendar_dates())
+    days = {d for d in days if START <= d <= end}
+    if not days:
+        raise SystemExit("keine FOMC-Termine gefunden")
+    return days
+
+
+def build_fomc(end, decision_days):
+    return [(d, 1 if d in decision_days else 0) for d in daterange(START, end)]
+
+
 def gzip_write(path, rows):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     buf = io.BytesIO()
@@ -58,11 +135,15 @@ def gzip_write(path, rows):
 def main():
     end = datetime.datetime.now(datetime.timezone.utc).date()
 
+    fomc_days = fomc_decision_days(end)
+
     rows_ustax = build_ustax(end)
     rows_opex = build_opex(end)
+    rows_fomc = build_fomc(end, fomc_days)
 
     gzip_write(os.path.join(OUT_DIR, "ustax.csv.gz"), rows_ustax)
     gzip_write(os.path.join(OUT_DIR, "opex_verfall.csv.gz"), rows_opex)
+    gzip_write(os.path.join(OUT_DIR, "fomc_sitzung.csv.gz"), rows_fomc)
 
     meta = {
         "ustax": {
@@ -78,6 +159,14 @@ def main():
             "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
             "quelle_url": "https://www.cboe.com/optionsexpirationcalendar/ (Marktkonvention: dritter Freitag der Quartalsmonate)",
             "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+            "verfuegbar_nach_tagen": 0,
+            "revidiert": False,
+        },
+        "fomc_sitzung": {
+            "einheit": "Indikator (0/1)",
+            "beschreibung": "1 am Tag der FOMC-Zinsentscheidung (letzter Sitzungstag bzw. Tag der Erklaerung; alle regulaeren und ausserplanmaessigen Sitzungen/Telefonkonferenzen inklusive Notfallentscheide seit 2001), sonst 0, fuer jeden Kalendertag ab 2001-01-01 bis heute.",
+            "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm (2001-2020) und https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (ab 2021)",
+            "verdichtung": "keine (aus amtlichen FOMC-Sitzungskalendern der Fed abgeleitet)",
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         },

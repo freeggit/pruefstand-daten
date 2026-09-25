@@ -320,7 +320,7 @@
     "bereich": "Kalender",
     "status": "aktiv",
     "mechanismus": "US-Steuertermine (Kapitalzufluss/-abfluss beim Fiskus, moeglicher Effekt auf Liquiditaet/TGA) und der grosse Quartalsverfall (drei Freitag Maerz/Juni/September/Dezember, zugleich S&P-Quartalsneugewichtung) sind deterministische, im Voraus bekannte Kalendertage, an denen kurzfristig (1-20 Handelstage) erhoehte Umsaetze, Rebalancing-Fluesse oder Liquiditaetsverschiebungen auftreten koennen, die einzelne Sektoren/den Gesamtmarkt gegenueber dem Weltindex beeinflussen. Zweck gemaess Vorgabe (Zusatz 2): Replikation/Zerlegung des Beinahe-Treffers TGA -> XLE, um zu pruefen, ob dahinter ein Steuertermin- oder ein Verfalls-Effekt steht.",
-    "grund": "K1-K7 erfuellt, ohne jeden externen Datenabruf (rein deterministische Kalenderberechnung in Python-Standardbibliothek datetime): K1 taeglich (jeder Kalendertag hat eine Zeile, Median-Abstand 1 Tag). K2 Historie ab 2001-01-01 (9398 Werte je Reihe), weit vor 31.12.2015. K3 offen: kein Login/Schluessel, keine Webabhaengigkeit, Daten sind reine Kalenderarithmetik auf Basis oeffentlich bekannter, fester Regeln (IRS-Steuertermine 15.1./15.4./15.6./15.9./15.12. ohne Wochenend-/Feiertagsverschiebung gemaess Vorgabetext; dritter Freitag der Quartalsmonate als Marktkonvention fuer Quadruple Witching). K4 punktgenau: feste, historische Kalendertage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf automatisch bis zum aktuellen Tag, keine Zukunftszeilen. K6 neu: keine Kalender-/Ereignisreihe im bestehenden Spiegel. K7 Umfang: unter 25 KB komprimiert je Reihe, Berechnung <0.1 Sek. Pruefung: ustax 129 Ereignistage von 9398 Tagen (2001-2026, 2026 erst 4 von 5 Terminen erreicht), opex_verfall 103 Ereignistage von 9398 Tagen (2026 erst 3 von 4 Terminen erreicht); beide Werte 0/1 plausibel, keine Duplikate, Stichprobe (dritter Freitag September 2026 = 2026-09-18, von Hand geprueft) korrekt. Anteil gleicher Folgewerte liegt bei binaeren 0/1-Indikatorreihen naturgemaess weit ueber der 20%-Verdachtsschwelle (>98%, da die meisten Tage 0 sind); das ist bei dieser Reihenart kein Qualitaetsmangel, sondern erwartungsgemaess, da die Schwelle auf stetige Messreihen zielt.",
+    "grund": "K1-K7 erfuellt, ohne jeden externen Datenabruf (rein deterministische Kalenderberechnung in Python-Standardbibliothek datetime): K1 taeglich (jeder Kalendertag hat eine Zeile, Median-Abstand 1 Tag). K2 Historie ab 2001-01-01 (9398 Werte je Reihe), weit vor 31.12.2015. K3 offen: kein Login/Schluessel, keine Webabhaengigkeit, Daten sind reine Kalenderarithmetik auf Basis oeffentlich bekannter, fester Regeln (IRS-Steuertermine 15.1./15.4./15.6./15.9./15.12. ohne Wochenend-/Feiertagsverschiebung gemaess Vorgabetext; dritter Freitag der Quartalsmonate als Marktkonvention fuer Quadruple Witching). K4 punktgenau: feste, historische Kalendertage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf automatisch bis zum aktuellen Tag, keine Zukunftszeilen. K6 neu: keine Kalender-/Ereignisreihe im bestehenden Spiegel. K7 Umfang: unter 25 KB komprimiert je Reihe, Berechnung <0.1 Sek. Pruefung: ustax 129 Ereignistage von 9398 Tagen (2001-2026, 2026 erst 4 von 5 Terminen erreicht), opex_verfall 103 Ereignistage von 9398 Tagen (2026 erst 3 von 4 Terminen erreicht); beide Werte 0/1 plausibel, keine Duplikate, Stichprobe (dritter Freitag September 2026 = 2026-09-18, von Hand geprueft) korrekt. Anteil gleicher Folgewerte liegt bei binaeren 0/1-Indikatorreihen naturgemaess weit ueber der 20%-Verdachtsschwelle (>98%, da die meisten Tage 0 sind); das ist bei dieser Reihenart kein Qualitaetsmangel, sondern erwartungsgemaess, da die Schwelle auf stetige Messreihen zielt. Ergaenzung 2026-09-25 (Zusatz 2, Ideenraum 1 Kalender-Ereignisse: 'Termine ... FOMC- und EZB-Zinsentscheide'): neue Reihe fomc_sitzung. Mechanismus: Tag der FOMC-Zinsentscheidung ist im Voraus bekannt (verfuegbar_nach_tagen 0) und kann kurzfristig (1-20 Handelstage) Zinssensitive Sektoren (v.a. XLF, XLRE, XLU) und Anleihen gegenueber dem Weltindex bewegen; ergaenzt ustax/opex_verfall um den dritten im Vorgabetext genannten Terminetyp. K1-K7 wie ustax/opex_verfall erfuellt: K1 taeglich (Median 1 Tag). K2 ab 2001-01-01 (9399 Werte). K3 offen: amtliche FOMC-Sitzungskalender der Fed (federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm fuer 2001-2020, fomccalendars.htm ab 2021), oeffentlich ohne Login/Schluessel, kein Umgehen von Sperren (beide Endpunkte antworten normal). K4 punktgenau: abgeschlossene Sitzungstermine der Vergangenheit werden nie revidiert. K5 laufend: bei jedem Lauf neu bis zum aktuellen Tag berechnet, keine Zukunftszeilen (kuenftige, im Kalender bereits gelistete Sitzungen wie Okt/Dez 2026 werden erst am jeweiligen Tag als Zeile geschrieben). K6 neu: keine FOMC-Termin-Reihe im bestehenden Spiegel oder in dieser Quelle. K7 Umfang: unter 200 KB, Abruf (21 historische Jahresseiten + 1 Kalenderseite) 5 Sekunden. Pruefung: 229 Ereignistage von 9399 Tagen (2001-01-03 bis 2026-09-16 letzter erreichter Termin), Stichprobe gegen bekannte Daten (2001-01-03 Notfall-Telefonkonferenz nach Rezessionssorgen, 2008-10-07/2020-03-02+03-15 Notfall-sitzungen Finanzkrise/Covid, 2019 April/Mai-Sitzung ueber Monatsgrenze als 2019-05-01 erfasst) von Hand bestaetigt; Anteil gleicher Folgewerte 0.9756, bei binaerer 0/1-Indikatorreihe erwartungsgemaess (siehe Begruendung oben bei ustax/opex_verfall).",
     "reihen": [
       {
         "reihe": "ustax",
@@ -341,10 +341,20 @@
         "anteil_gleiche_folgewerte": 0.989,
         "min": 0.0,
         "max": 1.0
+      },
+      {
+        "reihe": "fomc_sitzung",
+        "zeilen": 9399,
+        "erste": "2001-01-01",
+        "letzte": "2026-09-25",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9756,
+        "min": 0.0,
+        "max": 1.0
       }
     ],
     "aufgenommen_utc": "2026-09-24T04:20:00Z",
-    "geprueft_utc": "2026-09-24T04:22:00Z"
+    "geprueft_utc": "2026-09-25T02:21:08Z"
   },
   {
     "id": "wikipedia_weitere",
@@ -839,5 +849,29 @@
     ],
     "aufgenommen_utc": "2026-09-25T00:10:00Z",
     "geprueft_utc": "2026-09-25T00:10:00Z"
+  },
+  {
+    "id": "fred_usdjpy",
+    "name": "USD/JPY Wechselkurs (Federal Reserve H.10, taeglich)",
+    "url": "https://fred.stlouisfed.org/series/DEXJPUS",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Waehrung",
+    "status": "aktiv",
+    "mechanismus": "Der USD/JPY-Wechselkurs spiegelt Carry-Trade- und Risikostimmungs-Flüsse (Yen als Finanzierungswaehrung); eine rasche Yen-Aufwertung/-Abwertung kann kurzfristig (1-20 Handelstage) japanische Aktien (EWJ) und global risikoreiche Sektoren gegenueber dem Weltindex bewegen, bevor sich das vollstaendig in Kursen niederschlaegt.",
+    "grund": "K1-K7 erfuellt: K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen, Serie DEXJPUS). K2 Historie ab 1971-01-04 (13965 Werte), weit vor 31.12.2015. K3 offen: oeffentliche fredgraph.csv-Ausgabe der Federal Reserve Bank of St. Louis, kein Login/Schluessel, Nutzungsbedingungen erlauben Abruf (gleiches erprobtes Muster wie fred_effr/fred_brent). K4 punktgenau: taegliche H.10-Referenz-kurse der Fed werden nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-18, 7 Kalendertage alt (< 10 Tage-Grenze), Serie wird werktaeglich fortgeschrieben. K6 neu: USD/JPY ist weder im Spiegel (main hat DEXSZUS = USD/CHF) noch bei ecb_fx (EUR/JPY, kein USD/JPY) vorhanden. K7 Umfang: 13965 Zeilen, unter 300 KB komprimiert, Abruf unter 2 Sekunden. Pruefung: Zeilen 13965, erste 1971-01-04, letzte 2026-09-18, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.0283 (deutlich unter der 20%-Verdachtsschwelle), Min 75.72/Max 358.44 plausibel fuer USD/JPY seit 1971 (Endes Bretton-Woods-Niveau bis Yen-Staerke 2011/2012).",
+    "reihen": [
+      {
+        "reihe": "usdjpy",
+        "zeilen": 13965,
+        "erste": "1971-01-04",
+        "letzte": "2026-09-18",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0283,
+        "min": 75.72,
+        "max": 358.44
+      }
+    ],
+    "aufgenommen_utc": "2026-09-25T02:25:00Z",
+    "geprueft_utc": "2026-09-25T02:30:00Z"
   }
 ]

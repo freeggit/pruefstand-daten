@@ -1,4 +1,12 @@
 {
+  "fomc_sitzung": {
+    "beschreibung": "1 am Tag der FOMC-Zinsentscheidung (letzter Sitzungstag bzw. Tag der Erklaerung; alle regulaeren und ausserplanmaessigen Sitzungen/Telefonkonferenzen inklusive Notfallentscheide seit 2001), sonst 0, fuer jeden Kalendertag ab 2001-01-01 bis heute.",
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm (2001-2020) und https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (ab 2021)",
+    "revidiert": false,
+    "verdichtung": "keine (aus amtlichen FOMC-Sitzungskalendern der Fed abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  },
   "opex_verfall": {
     "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
     "einheit": "Indikator (0/1)",
