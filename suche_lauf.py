@@ -83,7 +83,7 @@ if zus["langzeit_hinweise"]:
 S = {
     "nr": nr, "sort": nr,
     "zeit": lokal.strftime("%-d.%-m.%Y, %H:%M (Europe/Zurich)"),
-    "verfassung": "V3.4",
+    "verfassung": "V3.5",
     "entstehung": "GitHub Action «Prüfstand Suche» (V3.4 E9)",
     "stichtag": "2020-12-31",
     "horizonte_tage": [1, 5, 20],

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.4).
+"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.5).
 Aufruf: python3 suchmaschine.py <basis main/data> [<basis claude/daten-energie/data>] [<basis claude/daten-neu/data>]
 Basis = URL (https://raw.githubusercontent.com/...) oder lokaler Pfad (file:///...).
 Umgebung: PS_CACHE (Zwischenspeicher), PS_KUM_VORHER (kumuliert bis Vorlauf), PS_REGISTER (Register-Datei oder URL),
@@ -25,6 +25,8 @@ Filter (alle müssen halten):
   F2 Mehrrendite je Ereignis >= KOSTEN (Wechsel hin und zurück, 4 x 15 bp)
   F3 mindestens N_MIN Ereignisse
   F4 beide Hälften der Discovery gleiches Vorzeichen, je t >= 1
+  F6 Robustheit (V3.5 E15): t_rob >= 3 mit gleichem Vorzeichen; t_rob rechnet mit der grösseren Streuung
+     (alle Tage oder Ereignistage) und fängt Scheinfunde aus unruhigen Zeiten ab
   F5 Placebo (Überlebende): echte Mehrrendite besser als 99% von 10'000 Zufallsziehungen (placebo_p < 0.01)
 Zusätzlich PS_PLACEBO vollständige Placebo-Suchläufe (Ereignisdaten zufällig verschoben, gleiche Filter).
 """
@@ -35,6 +37,7 @@ STICHTAG = pd.Timestamp("2020-12-31")
 HORIZONTE = [1, 5, 20]          # V3.2 (E1)
 T_MIN, T_VOR = 4.5, 3.5
 T_BASIS = 4.5
+T_ROB = 3.0                     # V3.5 E15 (F6)
 KOSTEN = 0.60                   # pp je Wechsel hin und zurück
 N_MIN = 30
 LAG_FRED = 2                    # Handelstage bis Einstieg: FRED/Wikipedia erscheinen verzögert
@@ -419,7 +422,8 @@ def filtern(df, t_min):
     df["f_kosten"] = (df.mu - df.mu0).abs() >= KOSTEN
     df["f_n"] = df.n >= N_MIN
     df["f_stabil"] = (np.sign(df.t1) == np.sign(df.t)) & (np.sign(df.t2) == np.sign(df.t)) & (df.t1.abs() >= 1) & (df.t2.abs() >= 1)
-    df["alle"] = df.f_t & df.f_kosten & df.f_n & df.f_stabil
+    df["f_rob"] = (df.t_rob.abs() >= T_ROB) & (np.sign(df.t_rob) == np.sign(df.t))
+    df["alle"] = df.f_t & df.f_kosten & df.f_n & df.f_stabil & df.f_rob
     df["vor"] = (df.t.abs() >= T_VOR) & df.f_kosten & df.f_n & df.f_stabil
     return df
 
