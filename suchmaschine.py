@@ -1,56 +1,51 @@
 #!/usr/bin/env python3
-"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.5).
+"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.6, Methode M2).
 Aufruf: python3 suchmaschine.py <basis main/data> [<basis claude/daten-energie/data>] [<basis claude/daten-neu/data>]
 Basis = URL (https://raw.githubusercontent.com/...) oder lokaler Pfad (file:///...).
-Umgebung: PS_CACHE (Zwischenspeicher), PS_KUM_VORHER (kumuliert bis Vorlauf), PS_REGISTER (Register-Datei oder URL),
-          PS_PLACEBO (Anzahl Placebo-Suchläufe, Standard 5), PS_LANGZEIT (1 = Langzeit-Familie L rechnen, Standard 1),
-          PS_PAARE (Datei mit Paaren, Standard paare.txt neben diesem Skript).
+Umgebung: PS_CACHE, PS_KUM_VORHER (kumuliert bis Vorlauf), PS_REGISTER (Register), PS_PLACEBO (Placebo-Läufe, Standard 20),
+          PS_LANGZEIT (1 = Familie L), PS_PAARE (paare.txt), PS_BASIS_ENERGIE, PS_BASIS_NEU.
 
-Zwei Familien:
-  S (Standard): Ziele = ETF des Spiegels, Benchmark ACWI (vor 28.3.2008 Ersatz 55% SPY + 45% EFA),
-      Einstieg Eröffnung am ersten Handelstag nach Verfügbarkeit, Ausstieg Schluss nach h Handelstagen.
-  L (Langzeit, V3.4 E11): Ziele = 11 Branchenportfolios von Ken French (Tagesrenditen ab 1926, Stellvertreter der
-      Sektor-ETF), Benchmark US-Gesamtmarkt (Mkt-RF + RF). Nur Schlusskurse: Einstieg zum Schluss des Einstiegstags,
-      also einen halben Tag später als in S (vorsichtig). Nur Indikatoren mit Beginn vor 1.1.1995.
-      Ein L-Überlebender wird erst zum Baustein, wenn derselbe Auslöser auf dem zugeordneten ETF in S
-      (2001 bis 2020) gleiches Vorzeichen und |t| >= 2 zeigt.
-Nur Discovery-Daten (bis STICHTAG). Validation ab STICHTAG+1 wird nie ausgewertet (S4).
-
-Kandidat = Indikator x Extremtyp x Ziel x Horizont. V3.3 (E6): jede Hypothese zählt einmal (Register).
-Indikator-Varianten (V3.4 E12): Stand, Änderung 1/5/20 Tage, Abstand zum Jahresmittel in Standardabweichungen (z252);
-Differenzen zweier Reihen nach paare.txt; Ereignisreihen (nur 0/1) nur als Stand.
-
-Filter (alle müssen halten):
-  F1 t >= max(4.5, kumulative Hürde) gegenüber der unbedingten Mehrrendite derselben Reihe
-  F2 Mehrrendite je Ereignis >= KOSTEN (Wechsel hin und zurück, 4 x 15 bp)
-  F3 mindestens N_MIN Ereignisse
-  F4 beide Hälften der Discovery gleiches Vorzeichen, je t >= 1
-  F6 Robustheit (V3.5 E15): t_rob >= 3 mit gleichem Vorzeichen; t_rob rechnet mit der grösseren Streuung
-     (alle Tage oder Ereignistage) und fängt Scheinfunde aus unruhigen Zeiten ab
-  F5 Placebo (Überlebende): echte Mehrrendite besser als 99% von 10'000 Zufallsziehungen (placebo_p < 0.01)
-Zusätzlich PS_PLACEBO vollständige Placebo-Suchläufe (Ereignisdaten zufällig verschoben, gleiche Filter).
+Methode M2 (V3.6, 25.9.2026, nach externer Gegenprüfung):
+- Siegel: jede Rendite, auch in Vergleichswerten und Zufallsziehungen, endet spätestens am STICHTAG (S4).
+- Verfügbarkeit (D2): Tagesfrist je Quelle; H.10-Devisenkurse der Fed ab 2009 erst nach der Wochenpublikation (Montag),
+  EIA-Spotpreise (Öl, Gas, Brent, Propan) erst nach der Wochenpublikation (Mittwoch der Folgewoche),
+  Wetter (Reanalyse) 5 Handelstage. Ereignisse vor Beginn des Kurskalenders werden verworfen (keine Phantomereignisse).
+- Datenprüfung (S1): Eröffnungskurs mit Sprung über 5% zum Vortagesschluss bei Schlusskurs innerhalb 2% gilt als fehlend.
+- Temperaturnorm nur aus Vorjahren (D4).
+- Vergleich (Normalfall) nur über die Laufzeit des Indikators; zwei Hälften am festen Mittelpunkt dieser Laufzeit,
+  je mit eigener Referenz.
+- F1 mit robustem t: Streuung = grössere von Referenz- und Ereignisstreuung (früher F6).
+- F2 = mittlere Mehrrendite gegenüber ACWI >= 0.60 pp (Vorzeichen des Befunds), nicht Differenz zum Normalfall.
+- F5 = Bootstrap aus dem Referenzfenster, p = (k+1)/(N+1).
+- Placebo: Ereignisdaten je Indikator als Block verschoben (Häufung bleibt), ganze Auswahl inkl. F5 und ETF-Bestätigung.
+  Fund nur, wenn Bausteine vorliegen und der Anteil Placebo-Läufe mit mindestens so vielen Bausteinen <= 5% ist.
+- Familie L (Ken French ab 1926) nur bis 31.12.2000; Bestätigung auf dem ETF in S 2001–2020 (zeitlich getrennt).
+- Register mit Methodenversion: Schlüssel «M2|Indikator|Extremtyp|Ziel|h»; jede M2-Hypothese zählt einmal.
 """
-import gzip, io, json, os, sys, urllib.request
+import gzip, hashlib, io, json, os, sys, time, urllib.request
 import numpy as np, pandas as pd
 
+METHODE = "M2"
 STICHTAG = pd.Timestamp("2020-12-31")
-HORIZONTE = [1, 5, 20]          # V3.2 (E1)
-T_MIN, T_VOR = 4.5, 3.5
-T_BASIS = 4.5
-T_ROB = 3.0                     # V3.5 E15 (F6)
-KOSTEN = 0.60                   # pp je Wechsel hin und zurück
+L_ENDE = pd.Timestamp("2000-12-31")            # V3.6: Langzeit-Discovery endet vor der ETF-Periode
+HORIZONTE = [1, 5, 20]
+T_BASIS, T_VOR, T_HAELFTE, T_BEST = 4.5, 3.5, 1.0, 2.0
+KOSTEN = 0.60
 N_MIN = 30
-LAG_FRED = 2                    # Handelstage bis Einstieg: FRED/Wikipedia erscheinen verzögert
-LAG_SOFORT = 1                  # Wetter, Strom: Wert des Tages ist am Abend bekannt
+LAG_FRED, LAG_SOFORT, LAG_WETTER = 2, 1, 6      # Handelstage bis Einstieg (1 = nächster Handelstag)
 L_BEGINN_VOR = pd.Timestamp("1995-01-01")
 KUM_VORHER = int(os.environ.get("PS_KUM_VORHER", "0"))
-N_PLACEBO = int(os.environ.get("PS_PLACEBO", "5"))
+N_PLACEBO = int(os.environ.get("PS_PLACEBO", "20"))
+N_F5 = 10000
 LANGZEIT = os.environ.get("PS_LANGZEIT", "1") == "1"
 PAARE = os.environ.get("PS_PAARE", os.path.join(os.path.dirname(os.path.abspath(__file__)), "paare.txt"))
-RNG = np.random.default_rng(20260923)
-# Branchenportfolio (Ken French, 12 Branchen) -> zugeordneter Sektor-ETF für die Bestätigung in S
 FF_ZIELE = {"nodur": "xlp", "durbl": "xly", "manuf": "xli", "enrgy": "xle", "chems": "xlb", "buseq": "xlk",
             "telcm": "xlc", "utils": "xlu", "shops": "xly", "hlth": "xlv", "money": "xlf"}
+# Publikationsrhythmus je Basisreihe (D2). Alles andere: Tagesfrist.
+H10 = {"fred:DEXSZUS", "fred:DTWEXBGS", "fred:DEXJPUS", "fred:DEXUSEU", "fred:DEXUSUK", "fred:DEXCAUS", "fred:DEXUSAL"}
+H10_SCOUT = ("fred_usdjpy", "fred_fx_lang")
+EIA = {"fred:DCOILWTICO", "fred:DHHNGSP", "fred:DCOILBRENTEU", "fred:DPROPANEMBTX"}
+EIA_SCOUT = ("fred_brent", "fred_propane")
 
 BASIS = sys.argv[1] if len(sys.argv) > 1 else None
 BASIS_E = sys.argv[2] if len(sys.argv) > 2 else os.environ.get("PS_BASIS_ENERGIE")
@@ -71,7 +66,6 @@ def lade(rel, basis=None):
     return p
 
 def register_laden():
-    """V3.3: Register aller je geprüften Hypothesen (Indikator|Extremtyp|Ziel|h)."""
     quellen = [os.environ.get("PS_REGISTER")]
     if BASIS and "/main/data" in BASIS:
         quellen += [BASIS.replace("/main/data", "/claude/lernen") + "/hypothesen.txt.gz",
@@ -80,44 +74,45 @@ def register_laden():
         try:
             raw = open(q, "rb").read() if os.path.exists(q) else urllib.request.urlopen(q, timeout=120).read()
             reg = set(gzip.decompress(raw).decode("utf-8").split("\n")) - {""}
-            log(f"Register: {len(reg)} bekannte Hypothesen aus {q}")
+            log(f"Register: {len(reg)} Einträge aus {q}")
             return reg
         except Exception as e:
             log(f"Register nicht lesbar ({q}): {e}")
-    log("Register leer: alle Kandidaten gelten als neu")
     return set()
 
 def huerde_kumulativ(n_kum, alpha=0.05):
-    """V3.1 F1: zweiseitig, Bonferroni über alle je geprüften Kandidaten."""
     from statistics import NormalDist
     return max(T_BASIS, NormalDist().inv_cdf(1 - alpha / 2 / max(n_kum, 1)))
 
-# ================================================================== Familie S: Kurse und Ziele
+# ================================================================== Familie S: Kurse, Datenprüfung, Ziele
 man = json.load(open(lade("manifest.json")))
-kurse = {}
+kurse, VERDACHT = {}, {}
 for k, v in man["reihen"].items():
     if k.startswith("kurse:") and "fehler" not in v and v.get("granularitaet") == "1d":
         t = k.split(":", 1)[1]
         d = pd.read_csv(lade(f"kurse/{t}_d.csv"), parse_dates=["Date"]).drop_duplicates("Date").set_index("Date").sort_index()
+        vor = d.Close.shift(1)
+        verdacht = ((d.Open / vor - 1).abs() > 0.05) & ((d.Close / vor - 1).abs() < 0.02)
+        if verdacht.any():
+            VERDACHT[t] = [str(x.date()) for x in d.index[verdacht]]
+            d.loc[verdacht, "Open"] = np.nan                  # fehlt, wird nicht geschätzt (D3)
         if "AdjClose" in d and d.AdjClose.notna().mean() > 0.99:
-            f = (d.AdjClose / d.Close).astype(float)            # Dividenden und Splits: Gesamtrendite
+            f = (d.AdjClose / d.Close).astype(float)
             kurse[t] = pd.DataFrame({"Open": d.Open * f, "Close": d.AdjClose}).astype(float)
         else:
             kurse[t] = d[["Open", "Close"]].astype(float)
-            log(f"Hinweis: {t} ohne AdjClose, Kursrendite ohne Dividenden")
+if VERDACHT:
+    log(f"Datenprüfung: verdächtige Eröffnungskurse als fehlend gesetzt: {VERDACHT}")
 acwi = kurse.pop("acwi")
 BENCH_NUR = {"efa"}
 ERSATZ = {"spy": 0.55, "efa": 0.45}
 ACWI_START = acwi.index[0]
 if all(t in kurse for t in ERSATZ):
     vor = kurse["spy"].index.intersection(kurse["efa"].index)
-    vor = vor[vor < ACWI_START]
-    KAL = vor.append(acwi.index)
-    log(f"Ersatz-Benchmark 55% SPY + 45% EFA von {vor[0].date()} bis {ACWI_START.date()}")
+    KAL = vor[vor < ACWI_START].append(acwi.index)
 else:
     KAL = acwi.index
-    log("Ersatz-Benchmark nicht verfügbar (EFA fehlt), Kalender = ACWI")
-ZIELE = sorted(t for t in kurse if "." not in t and t not in BENCH_NUR)   # V3 O3: Einzeltitel nie Ziel
+ZIELE = sorted(t for t in kurse if "." not in t and t not in BENCH_NUR)
 
 def bench_rendite(h):
     a = acwi.reindex(KAL)
@@ -133,15 +128,13 @@ BR = {h: bench_rendite(h) for h in HORIZONTE}
 
 def mehrrendite(ziel, h):
     z = kurse[ziel].reindex(KAL)
-    ro = z.Close.shift(-(h - 1)) / z.Open - 1
-    return (100 * (ro - BR[h])).values
+    return (100 * (z.Close.shift(-(h - 1)) / z.Open - 1 - BR[h])).values
 
 FAM = {"S": dict(kal=KAL, ende=KAL.searchsorted(STICHTAG, side="right"), rand=lambda h: h - 1,
                  mr={(z, h): mehrrendite(z, h) for z in ZIELE for h in HORIZONTE}, ziele=ZIELE)}
 
-# ================================================================== Familie L: Ken French Tagesrenditen (V3.4 E11)
+# ================================================================== Familie L (bis 2000)
 def french_tag(dateiname):
-    """Erster Block (Value Weighted bzw. Faktoren) einer Ken-French-Tagesdatei -> DataFrame in Prozent."""
     zeilen, kopf = [], None
     for ln in open(lade(f"french/{dateiname}"), encoding="latin-1"):
         teile = [t.strip() for t in ln.strip().split(",")]
@@ -163,29 +156,22 @@ def familie_l():
     ind_d = [n for n in dateien if "12_industry" in n.lower() and "daily" in n.lower()]
     fak_d = [n for n in dateien if "research_data_factors" in n.lower() and "daily" in n.lower() and "5_factors" not in n.lower()]
     if not ind_d or not fak_d:
-        log("Langzeit: Ken-French-Tagesdateien noch nicht im Spiegel, Familie L entfällt")
-        return None
+        log("Langzeit: Ken-French-Tagesdateien fehlen, Familie L entfällt"); return None
     br = french_tag(ind_d[0]); fk = french_tag(fak_d[0])
     kal = br.index.intersection(fk.index)
     br, fk = br.reindex(kal), fk.reindex(kal)
-    markt = (fk["mkt_rf"] + fk["rf"]) / 100
-    def summe(r):                                  # kumulierte Log-Rendite, fehlende Tage machen das Fenster leer
-        return np.log1p(r).cumsum().values
-    cm = summe(markt)
+    cm = np.log1p((fk["mkt_rf"] + fk["rf"]) / 100).cumsum().values
     mr = {}
     for z in FF_ZIELE:
         if z not in br:
             continue
-        cz = summe(br[z] / 100)
+        cz = np.log1p(br[z] / 100).cumsum().values
         for h in HORIZONTE:
             i = np.arange(len(kal)); j = i + h; ok = j < len(kal)
             out = np.full(len(kal), np.nan)
-            # Einstieg zum Schluss von Tag i, Ausstieg zum Schluss von Tag i+h: Renditen der Tage i+1 .. i+h
             out[ok] = 100 * (np.expm1(cz[j[ok]] - cz[i[ok]]) - np.expm1(cm[j[ok]] - cm[i[ok]]))
             mr[("ff_" + z, h)] = out
-    log(f"Langzeit: {len(FF_ZIELE)} Branchen von {kal[0].date()} bis {kal[-1].date()}")
-    return dict(kal=kal, ende=kal.searchsorted(STICHTAG, side="right"), rand=lambda h: h,
-                mr=mr, ziele=sorted({z for z, _ in mr}))
+    return dict(kal=kal, ende=kal.searchsorted(L_ENDE, side="right"), rand=lambda h: h, mr=mr, ziele=sorted({z for z, _ in mr}))
 
 if LANGZEIT:
     try:
@@ -195,12 +181,30 @@ if LANGZEIT:
     except Exception as e:
         log(f"Langzeit übersprungen: {e}")
 
-# ================================================================== Indikatoren (Tageswerte, punktgenau)
-ind = {}        # name -> (Serie mit Kalendertag-Index, lag)
-EREIGNIS = set()  # Ereignisreihen (nur 0/1): nur Extremtyp «hoch» (= Ereignistag), die übrigen Typen wären Doppel
-basen = {}      # Basisreihe (für Paare) -> (Serie, lag)
+# Präfixsummen für Vergleichswerte in beliebigen Fenstern (ohne NaN)
+PRAEFIX = {}
+for fam, f in FAM.items():
+    for key, a in f["mr"].items():
+        ok = ~np.isnan(a); v = np.where(ok, a, 0.0)
+        PRAEFIX[(fam,) + key] = (np.concatenate([[0], np.cumsum(v)]), np.concatenate([[0], np.cumsum(v * v)]),
+                                 np.concatenate([[0], np.cumsum(ok)]))
 
-QUELLE = {}      # Indikator -> Quelle (für die Zählung je Bereich, Lernregel L2)
+def fenster(fam, z, h, lo, hi):
+    """Mittel und Streuung der Mehrrendite für Einstiege lo..hi-1, nur Fenster mit Ausstieg <= STICHTAG (Siegel)."""
+    f = FAM[fam]; hi = min(hi, f["ende"] - f["rand"](h)); lo = max(lo, 0)
+    if hi - lo < 30:
+        return None
+    s, q, c = PRAEFIX[(fam, z, h)]
+    n = c[hi] - c[lo]
+    if n < 30:
+        return None
+    m = (s[hi] - s[lo]) / n
+    var = max((q[hi] - q[lo]) / n - m * m, 0.0) * n / (n - 1)
+    return m, np.sqrt(var)
+
+# ================================================================== Indikatoren
+ind = {}          # name -> (Serie, Regeln der Verfügbarkeit)
+EREIGNIS, QUELLE, basen = set(), {}, {}
 
 def quelle_von(name):
     if name in QUELLE:
@@ -210,19 +214,23 @@ def quelle_von(name):
             return q
     return "andere"
 
-def varianten(n, x, lag, neu_varianten=True, quelle=None):
-    """Stand, 1/5-Tage-Änderung (wie bisher) und neu 20-Tage-Änderung und Abstand zum Jahresmittel (z252)."""
+def regeln_fuer(basis_key, lag):
+    if basis_key in H10 or any(basis_key.startswith(f"neu:{s}:") for s in H10_SCOUT):
+        return [("h10",)]
+    if basis_key in EIA or any(basis_key.startswith(f"neu:{s}:") for s in EIA_SCOUT):
+        return [("eia",)]
+    return [("tag", lag)]
+
+def varianten(n, x, regeln, quelle=None):
     x = x.dropna()
     for suffix in ("_stand", "_d1", "_d5", "_d20", "_z252"):
         if quelle:
             QUELLE[n + suffix] = quelle
-    if set(np.unique(x.values)) <= {0.0, 1.0}:       # Ereignisreihe (Kalender, Zinsentscheid): nur Stand
-        ind[f"{n}_stand"] = (x, lag); EREIGNIS.add(f"{n}_stand"); return
-    ind[f"{n}_stand"] = (x, lag); ind[f"{n}_d1"] = (x.diff(), lag); ind[f"{n}_d5"] = (x.diff(5), lag)
-    if neu_varianten:
-        ind[f"{n}_d20"] = (x.diff(20), lag)
-        m = x.rolling(252, min_periods=150)
-        ind[f"{n}_z252"] = ((x - m.mean()) / m.std(), lag)
+    if set(np.unique(x.values)) <= {0.0, 1.0}:
+        ind[f"{n}_stand"] = (x, regeln); EREIGNIS.add(f"{n}_stand"); return
+    m = x.rolling(252, min_periods=150)
+    for suffix, s in (("_stand", x), ("_d1", x.diff()), ("_d5", x.diff(5)), ("_d20", x.diff(20)), ("_z252", (x - m.mean()) / m.std())):
+        ind[n + suffix] = (s, regeln)
 
 def fred(serie):
     f = pd.read_csv(lade(f"fred/{serie}.csv"), na_values=["."])
@@ -234,8 +242,21 @@ for s, v in man["reihen"].items():
         x = fred(s.split(":", 1)[1])
         if len(x) < 500 or (x.index.to_series().diff().dt.days.median() > 3):
             continue
-        basen[s] = (x, LAG_FRED)
-        varianten(s.split(":", 1)[1], x, LAG_FRED, quelle=s)
+        r = regeln_fuer(s, LAG_FRED)
+        basen[s] = (x, r)
+        varianten(s.split(":", 1)[1], x, r, quelle=s)
+
+def norm_vorjahre(s):
+    """Tagesnorm (±7 Tage geglättet) nur aus Vorjahren, mindestens 3 Vorjahre (D4)."""
+    df = pd.DataFrame({"v": s.values, "j": s.index.year, "t": np.minimum(s.index.dayofyear, 365)})
+    tab = df.pivot_table(index="j", columns="t", values="v", aggfunc="mean").reindex(columns=range(1, 366))
+    ext = pd.concat([tab.iloc[:, -7:], tab, tab.iloc[:, :7]], axis=1)
+    ext.columns = range(ext.shape[1])
+    sm = ext.T.rolling(15, center=True, min_periods=5).mean().T.iloc[:, 7:-7]
+    sm.columns = range(1, 366)
+    cs = sm.fillna(0).cumsum().shift(1); cn = sm.notna().cumsum().shift(1)
+    norm = (cs / cn).where(cn >= 3)
+    return pd.Series(norm.stack().reindex(list(zip(df.j, df.t))).values, index=s.index)
 
 def hr_manifest():
     try:
@@ -249,9 +270,7 @@ def hr_manifest():
             me = json.load(open(lade("hr/manifest_energie.json", BASIS_E)))
             for k, v in me["reihen"].items():
                 if v.get("dateien"):
-                    v["_basis"] = BASIS_E
-                    mh["reihen"][k] = v
-            log(f"Strom-Zweig: {sum(1 for v in me['reihen'].values() if v.get('dateien'))} Reihen")
+                    v["_basis"] = BASIS_E; mh["reihen"][k] = v
         except Exception as e:
             log(f"Strom-Zweig nicht lesbar: {e}")
     return mh if mh["reihen"] else None
@@ -274,30 +293,28 @@ if mh:
             for c in tag:
                 s = tag[c].dropna()
                 if c == "temp":
-                    norm = s[s.index <= STICHTAG].groupby(s[s.index <= STICHTAG].index.dayofyear).mean()
-                    s = s - norm.reindex(s.index.dayofyear).values
-                ind[f"wetter_{name}_{c}"] = (s, LAG_SOFORT)
+                    s = (s - norm_vorjahre(s)).dropna()
+                ind[f"wetter_{name}_{c}"] = (s, [("tag", LAG_WETTER)])
         elif quelle == "energie" and name.startswith("preis"):
             d["t"] = pd.to_datetime(d.zeit_utc.str.replace("Z", ""))
             s = d.set_index("t").preis_eur_mwh.astype(float).resample("D").mean().dropna()
-            ind[f"strom_{name}"] = (s, LAG_SOFORT); ind[f"strom_{name}_d1"] = (s.diff(), LAG_SOFORT)
+            ind[f"strom_{name}"] = (s, [("tag", LAG_SOFORT)]); ind[f"strom_{name}_d1"] = (s.diff(), [("tag", LAG_SOFORT)])
         elif quelle == "energie" and name.startswith("erzeugung"):
             d["t"] = pd.to_datetime(d.zeit_utc.str.replace("Z", ""))
             d = d.set_index("t").apply(pd.to_numeric, errors="coerce")
             tag = d.resample("D").mean()
             for c in [c for c in tag.columns if any(w in c.lower() for w in ("wind", "solar", "load", "last"))]:
-                ind[f"strom_{name}_{c.lower().replace(' ', '_')[:20]}"] = (tag[c].dropna(), LAG_SOFORT)
+                ind[f"strom_{name}_{c.lower().replace(' ', '_')[:20]}"] = (tag[c].dropna(), [("tag", LAG_SOFORT)])
         elif quelle == "wiki":
             s = d.set_index(pd.to_datetime(d.datum)).aufrufe.astype(float)
-            ind[f"wiki_{name}_spike"] = (np.log1p(s) - np.log1p(s).rolling(28, min_periods=20).median(), LAG_FRED)
+            ind[f"wiki_{name}_spike"] = (np.log1p(s) - np.log1p(s).rolling(28, min_periods=20).median(), [("tag", LAG_FRED)])
 
 def lade_vertrag(basis, manifest_rel, praefix, kurz):
     n_ok = 0
     try:
         mn = json.load(open(lade(manifest_rel, basis)))
     except Exception as e:
-        log(f"{manifest_rel} nicht lesbar: {e}")
-        return 0
+        log(f"{manifest_rel} nicht lesbar: {e}"); return 0
     for k, v in mn.get("reihen", {}).items():
         if v.get("fehler") or not v.get("datei") or v.get("status", "aktiv") != "aktiv":
             continue
@@ -307,20 +324,18 @@ def lade_vertrag(basis, manifest_rel, praefix, kurz):
             x = x[~x.index.duplicated(keep="last")]
             if len(x) < 500 or x.index[0] > pd.Timestamp("2015-12-31") or x.index.to_series().diff().dt.days.median() > 3:
                 continue
-            lag = 1 + int(v.get("verfuegbar_nach_tagen", 1))
-            basen[f"{kurz}:{k}"] = (x, lag)
-            varianten(praefix + k.replace(":", "_"), x, lag, quelle=f"{kurz}:{k.split(':')[0]}")
+            r = regeln_fuer(f"{kurz}:{k}", 1 + int(v.get("verfuegbar_nach_tagen", 1)))
+            basen[f"{kurz}:{k}"] = (x, r)
+            varianten(praefix + k.replace(":", "_"), x, r, quelle=f"{kurz}:{k.split(':')[0]}")
             n_ok += 1
         except Exception as e:
             log(f"{praefix}{k}: {e}")
     return n_ok
 
 N_NEU = lade_vertrag(BASIS_N, "neu/manifest_neu.json", "neu_", "neu") if BASIS_N else 0
-log(f"Quellenscout-Zweig: {N_NEU} Reihen")
 N_SEC = lade_vertrag(BASIS, "sec/manifest_sec.json", "sec_", "sec")
-log(f"SEC-Reihen (main): {N_SEC}")
+log(f"Scout-Reihen {N_NEU}, SEC-Reihen {N_SEC}")
 
-# Paare (V3.4 E12)
 N_PAARE = 0
 if os.path.exists(PAARE):
     for ln in open(PAARE, encoding="utf-8"):
@@ -329,19 +344,16 @@ if os.path.exists(PAARE):
             continue
         name, a, b, art = [t.strip() for t in ln.split(";")[:4]]
         if a not in basen or b not in basen:
-            log(f"Paar {name}: {a if a not in basen else b} fehlt, übersprungen")
             continue
-        (xa, la), (xb, lb) = basen[a], basen[b]
+        (xa, ra), (xb, rb) = basen[a], basen[b]
         j = pd.concat([xa, xb], axis=1, join="inner").dropna()
         if art == "logratio":
             j = j[(j.iloc[:, 0] > 0) & (j.iloc[:, 1] > 0)]
             s = np.log(j.iloc[:, 0]) - np.log(j.iloc[:, 1])
         else:
             s = j.iloc[:, 0] - j.iloc[:, 1]
-        if len(s) < 500:
-            continue
-        varianten(f"paar_{name}", s, max(la, lb), quelle=f"paar:{name}"); N_PAARE += 1
-log(f"Paare: {N_PAARE}")
+        if len(s) >= 500:
+            varianten(f"paar_{name}", s, ra + rb, quelle=f"paar:{name}"); N_PAARE += 1   # strengste Regel beider Seiten
 
 try:
     btc_p = os.path.join(CACHE, "btc.csv")
@@ -349,24 +361,40 @@ try:
         urllib.request.urlretrieve("https://raw.githubusercontent.com/ff137/bitstamp-btcusd-minute-data/main/data/updates/btcusd_bitstamp_1min_latest.csv", btc_p)
     b = pd.read_csv(btc_p); b.index = pd.to_datetime(b.timestamp, unit="s")
     bd = b.close.resample("D").last().dropna()
-    ind["btc_r1"] = (100 * bd.pct_change(), LAG_SOFORT); ind["btc_r7"] = (100 * bd.pct_change(7), LAG_SOFORT)
+    ind["btc_r1"] = (100 * bd.pct_change(), [("tag", LAG_SOFORT)]); ind["btc_r7"] = (100 * bd.pct_change(7), [("tag", LAG_SOFORT)])
 except Exception as e:
     log("BTC übersprungen:", e)
 
-# ================================================================== Ereignisse und Auswertung
+# ================================================================== Ereignisse, Einstieg, Auswertung
 def ereignisse(x, art, ist_ereignis=False):
-    """Kalendertage mit Extrem, rein rückblickend: Perzentile/Streuung aus den 252 Vortagen.
-    Ereignisreihen (0/1): jeder Tag mit Wert 1 (Label «hoch»), unabhängig von der Häufigkeit."""
     x = x.dropna()
     if ist_ereignis:
         return x.index[(x == 1).values]
-    fenster = x.shift(1).rolling(252, min_periods=150)
-    if art == "hoch":   m = x > fenster.quantile(0.95)
-    elif art == "tief": m = x < fenster.quantile(0.05)
+    fenster_ = x.shift(1).rolling(252, min_periods=150)
+    if art == "hoch":   m = x > fenster_.quantile(0.95)
+    elif art == "tief": m = x < fenster_.quantile(0.05)
     else:
         dx = x.diff(); sd = dx.shift(1).rolling(252, min_periods=150).std()
         m = (dx > 3 * sd) if art == "sprung_auf" else (dx < -3 * sd)
     return x.index[m.fillna(False).values]
+
+def einstieg(kal, tage, regeln):
+    """Index des Einstiegstags je Ereignis nach allen Regeln (die späteste gilt). -1 = verworfen."""
+    tage = pd.DatetimeIndex(tage)
+    basis = kal.searchsorted(tage, side="right")
+    pos = np.zeros(len(tage), dtype=int)
+    for r in regeln:
+        if r[0] == "tag":
+            p = basis + (r[1] - 1)
+        elif r[0] == "h10":          # Fed H.10: ab 2009 wöchentlich am Montag publiziert, Einstieg danach
+            montag = tage + pd.to_timedelta(7 - tage.weekday, unit="D")
+            p = np.where(tage < pd.Timestamp("2009-01-01"), basis + 1, kal.searchsorted(montag, side="right"))
+        elif r[0] == "eia":          # EIA-Spotpreise: wöchentlich, Mittwoch der Folgewoche
+            mittwoch = tage + pd.to_timedelta(7 - tage.weekday + 2, unit="D")
+            p = kal.searchsorted(mittwoch, side="right")
+        pos = np.maximum(pos, p)
+    pos[basis < 1] = -1              # Ereignis vor Beginn des Kurskalenders: verworfen
+    return pos
 
 def entclustern(pos, abstand):
     out, letzte = [], -10**9
@@ -375,149 +403,164 @@ def entclustern(pos, abstand):
             out.append(p); letzte = p
     return np.array(out, dtype=int)
 
-BASIS_STAT = {}
-def basis_stat(fam, z, h):
-    k = (fam, z, h)
-    if k not in BASIS_STAT:
-        f = FAM[fam]; a = f["mr"][(z, h)][:f["ende"]]; a = a[~np.isnan(a)]
-        BASIS_STAT[k] = (a.mean(), a.std(), a)
-    return BASIS_STAT[k]
-
-def auswerten(fam, pos_roh, z, h):
-    f = FAM[fam]; kal = f["kal"]
+def auswerten(fam, pos_roh, z, h, lo, mitte):
+    f = FAM[fam]
     pos = entclustern(pos_roh, max(10, h))
-    pos = pos[pos + f["rand"](h) < f["ende"]]                 # Ausstieg noch in der Discovery
+    pos = pos[(pos >= lo) & (pos + f["rand"](h) < f["ende"])]
     werte = f["mr"][(z, h)][pos]; ok = ~np.isnan(werte); pos, werte = pos[ok], werte[ok]
     n = len(werte)
     if n < 10:
         return None
-    mu0, sd0, _ = basis_stat(fam, z, h)
-    mu = werte.mean(); t = (mu - mu0) / (sd0 / np.sqrt(n))
-    mitte = np.median(pos)
-    h1, h2 = werte[pos <= mitte], werte[pos > mitte]
-    th = lambda w: (w.mean() - mu0) / (sd0 / np.sqrt(len(w))) if len(w) > 2 else 0.0
-    # Zusatzmass (nur Bericht, kein Filter): t mit der grösseren von beiden Streuungen, schützt vor Ereignissen in unruhigen Zeiten
-    t_rob = (mu - mu0) / (max(sd0, werte.std(ddof=1)) / np.sqrt(n))
-    return dict(n=n, mu=mu, mu0=mu0, t=t, t_rob=t_rob, t1=th(h1), t2=th(h2), erste=str(kal[pos[0]].date()), letzte=str(kal[pos[-1]].date()))
+    ref = fenster(fam, z, h, lo, f["ende"])
+    if ref is None:
+        return None
+    mu0, sd0 = ref; mu = werte.mean()
+    sd = max(sd0, werte.std(ddof=1))
+    t = (mu - mu0) / (sd / np.sqrt(n))
+    t_klassisch = (mu - mu0) / (sd0 / np.sqrt(n))
+    def th(w, r):
+        if len(w) < 3 or r is None:
+            return 0.0
+        return (w.mean() - r[0]) / (max(r[1], w.std(ddof=1)) / np.sqrt(len(w)))
+    t1 = th(werte[pos < mitte], fenster(fam, z, h, lo, mitte))
+    t2 = th(werte[pos >= mitte], fenster(fam, z, h, mitte, f["ende"]))
+    return dict(n=n, mu=mu, mu0=mu0, sd0=sd0, t=t, t_klassisch=t_klassisch, t1=t1, t2=t2, lo=lo,
+                erste=str(f["kal"][pos[0]].date()), letzte=str(f["kal"][pos[-1]].date()), _pos=pos)
 
 def suchlauf(placebo=False, seed=0):
     rng = np.random.default_rng(seed)
     zeilen = []
-    for iname, (x, lag) in ind.items():
+    for iname, (x, regeln) in ind.items():
         x = x[x.index <= STICHTAG].dropna()
-        if x.empty:
+        if len(x) < 160:
             continue
+        start = x.index[0] if iname in EREIGNIS else x.index[min(150, len(x) - 1)]
         for art in (("hoch",) if iname in EREIGNIS else ("hoch", "tief", "sprung_auf", "sprung_ab")):
             tage = ereignisse(x, art, iname in EREIGNIS)
             if len(tage) < N_MIN:
                 continue
             for fam, f in FAM.items():
                 if fam == "L" and x.index[0] >= L_BEGINN_VOR:
-                    continue                                   # Langzeit nur für Reihen mit Beginn vor 1995
-                kal = f["kal"]
-                pos = kal.searchsorted(tage, side="right") + (lag - 1)
-                pos = pos[pos < len(kal)]
-                if len(pos) == 0:
                     continue
-                if placebo:
-                    lo, hi = kal.searchsorted(tage.min()), min(f["ende"], kal.searchsorted(tage.max()) + 1)
-                    pos = rng.integers(lo, max(lo + 1, hi), size=len(pos))
+                kal = f["kal"]; lo = int(kal.searchsorted(start)); ende = f["ende"]
+                if ende - lo <= 504:
+                    continue
+                pos = einstieg(kal, tage, regeln)
+                pos = pos[(pos >= lo) & (pos < ende)]
+                if len(pos) < 10:
+                    continue
+                if placebo:                   # Blockverschiebung innerhalb der Laufzeit: Häufung bleibt erhalten
+                    span = ende - lo
+                    off = int(rng.integers(252, span - 252))
+                    pos = lo + (pos - lo + off) % span
+                mitte = (lo + ende) // 2
                 for z in f["ziele"]:
                     for h in HORIZONTE:
-                        r = auswerten(fam, pos, z, h)
+                        r = auswerten(fam, pos, z, h, lo, mitte)
                         if r:
                             zeilen.append(dict(familie=fam, indikator=iname, art=art, ziel=z, h=h, **r))
     return pd.DataFrame(zeilen)
 
 def filtern(df, t_min):
     df = df.copy()
+    rich = np.sign(df.t)
     df["f_t"] = df.t.abs() >= t_min
-    df["f_kosten"] = (df.mu - df.mu0).abs() >= KOSTEN
+    df["f_kosten"] = rich * df.mu >= KOSTEN                     # F2 nach Verfassung: Mehrrendite gegenüber ACWI
     df["f_n"] = df.n >= N_MIN
-    df["f_stabil"] = (np.sign(df.t1) == np.sign(df.t)) & (np.sign(df.t2) == np.sign(df.t)) & (df.t1.abs() >= 1) & (df.t2.abs() >= 1)
-    df["f_rob"] = (df.t_rob.abs() >= T_ROB) & (np.sign(df.t_rob) == np.sign(df.t))
-    df["alle"] = df.f_t & df.f_kosten & df.f_n & df.f_stabil & df.f_rob
+    df["f_stabil"] = (np.sign(df.t1) == rich) & (np.sign(df.t2) == rich) & (df.t1.abs() >= T_HAELFTE) & (df.t2.abs() >= T_HAELFTE)
+    df["alle"] = df.f_t & df.f_kosten & df.f_n & df.f_stabil
     df["vor"] = (df.t.abs() >= T_VOR) & df.f_kosten & df.f_n & df.f_stabil
     return df
 
-SPALTEN = ["familie", "indikator", "art", "ziel", "h", "n", "mu", "mu0", "t", "t_rob", "t1", "t2"]
+def auswahl(df, t_min, rng):
+    """Vollständige Auswahl: Filter, F5 (Bootstrap), ETF-Bestätigung für L. Gleich für echte und Placebo-Läufe."""
+    df = filtern(df, t_min)
+    ueber = df[df.vor & (df.t > 0)].sort_values("t", ascending=False).copy()
+    pz, tb, tohne = [], [], []
+    for _, r in ueber.iterrows():
+        f = FAM[r.familie]; a = f["mr"][(r.ziel, int(r.h))][int(r.lo): f["ende"] - f["rand"](int(r.h))]
+        a = a[~np.isnan(a)]
+        sims = a[rng.integers(0, len(a), size=(N_F5, int(r.n)))].mean(axis=1)
+        pz.append(float(((sims >= r.mu).sum() + 1) / (N_F5 + 1)))
+        w = f["mr"][(r.ziel, int(r.h))][r._pos]; w = w[~np.isnan(w)]
+        w2 = np.delete(w, np.argmax(w))                         # ohne das beste Einzelereignis
+        tohne.append(float((w2.mean() - r.mu0) / (max(r.sd0, np.std(w2, ddof=1)) / np.sqrt(len(w2)))))
+        t_etf = np.nan
+        if r.familie == "L":
+            etf = FF_ZIELE[r.ziel[3:]]
+            m = df[(df.familie == "S") & (df.indikator == r.indikator) & (df.art == r.art) & (df.ziel == etf) & (df.h == r.h)]
+            t_etf = float(m.t.iloc[0]) if len(m) else np.nan
+        tb.append(t_etf)
+    ueber["placebo_p"] = pz; ueber["t_bestaetigung_etf"] = tb; ueber["t_ohne_bestes"] = tohne
+    kern = ueber.alle & (ueber.placebo_p < 0.01) if len(ueber) else ueber.alle
+    best = (ueber.familie == "S") | ((np.sign(ueber.t_bestaetigung_etf) == 1) & (ueber.t_bestaetigung_etf >= T_BEST))
+    return df, ueber, ueber[kern & best], ueber[kern & ~best]
+
+SPALTEN = ["familie", "indikator", "art", "ziel", "h", "n", "mu", "mu0", "t", "t_klassisch", "t1", "t2"]
 
 if __name__ == "__main__":
-    import time
     t0 = time.time()
-    log(f"Familien: {', '.join(FAM)} | Ziele S {len(ZIELE)}: {', '.join(ZIELE)}")
-    if "L" in FAM:
-        log(f"Ziele L: {', '.join(FAM['L']['ziele'])}")
-    log(f"Indikatoren {len(ind)} | Discovery bis {STICHTAG.date()} | Kalender S {KAL[0].date()}..{KAL[-1].date()}")
+    log(f"Methode {METHODE} | Familien {', '.join(FAM)} | Ziele S {len(ZIELE)} | Indikatoren {len(ind)} | Placebo {N_PLACEBO}")
     roh = suchlauf()
-    log(f"Echter Suchlauf: {len(roh)} Kandidaten in {(time.time() - t0) / 60:.1f} min")
     REG = register_laden()
-    schluessel = (roh.indikator + "|" + roh.art + "|" + roh.ziel + "|" + roh.h.astype(str)).tolist()
-    NEU = sorted(set(schluessel) - REG)
+    schluessel = (METHODE + "|" + roh.indikator + "|" + roh.art + "|" + roh.ziel + "|" + roh.h.astype(str)).tolist()
+    NEU = set(schluessel) - REG
     KUM = KUM_VORHER + len(NEU)
     T_MIN = huerde_kumulativ(KUM)
-    with open("hypothesen.txt.gz", "wb") as f:
-        f.write(gzip.compress("\n".join(sorted(REG | set(schluessel))).encode("utf-8"), mtime=0))
-    log(f"V3.3: {len(roh)} Kandidaten, davon {len(NEU)} neu; kumuliert {KUM} -> Hürde t >= {T_MIN:.2f}")
-    echt = filtern(roh, T_MIN)
-    echt.to_csv("suchlauf_echt.csv.gz", index=False)
-    plac = []
+    with open("hypothesen.txt.gz", "wb") as fh:
+        fh.write(gzip.compress("\n".join(sorted(REG | set(schluessel))).encode("utf-8"), mtime=0))
+    log(f"{len(roh)} Kandidaten, {len(NEU)} neu (Methode {METHODE}); kumuliert {KUM} -> Hürde t >= {T_MIN:.2f}")
+    rng = np.random.default_rng(20260925)
+    echt, ueber, bausteine, hinweise = auswahl(roh, T_MIN, rng)
+    echt["neu"] = [k in NEU for k in schluessel]
+    plac_bst, plac_alle, plac_vor = [], [], []
     for s in range(1, N_PLACEBO + 1):
-        plac.append(filtern(suchlauf(placebo=True, seed=s), T_MIN))
-        log(f"Placebo {s}/{N_PLACEBO}: alle Filter {int(plac[-1].alle.sum())}, Vorstufe {int(plac[-1].vor.sum())}")
+        p_df, p_ue, p_b, _ = auswahl(suchlauf(placebo=True, seed=s), T_MIN, np.random.default_rng(1000 + s))
+        plac_bst.append(int(len(p_b))); plac_alle.append(int((p_df.alle & (p_df.t > 0)).sum())); plac_vor.append(int((p_df.vor & (p_df.t > 0)).sum()))
+        if s % 10 == 0 or s == N_PLACEBO:
+            log(f"Placebo {s}/{N_PLACEBO}: Bausteine je Lauf bisher {plac_bst}")
+    n_b = len(bausteine)
+    p_lauf = (1 + sum(1 for x in plac_bst if x >= max(1, n_b))) / (N_PLACEBO + 1)
+    fund = bool(n_b >= 1 and p_lauf <= 0.05)
     zus = {
-        "kandidaten": int(len(echt)),
-        "kandidaten_neu": int(len(NEU)),
+        "methode": METHODE,
+        "kandidaten": int(len(echt)), "kandidaten_neu": int(len(NEU)),
         "kandidaten_bekannt": int(len(set(schluessel)) - len(NEU)),
-        "kandidaten_kumuliert": int(KUM),
-        "huerde_t": round(float(T_MIN), 2),
+        "kandidaten_kumuliert": int(KUM), "huerde_t": round(float(T_MIN), 2),
         "familien": {fam: int((echt.familie == fam).sum()) for fam in FAM},
         "echt_alle_filter_positiv": int((echt.alle & (echt.t > 0)).sum()),
-        "echt_alle_filter_negativ": int((echt.alle & (echt.t < 0)).sum()),
         "echt_vorstufe_positiv": int((echt.vor & (echt.t > 0)).sum()),
-        "placebo_alle_filter_je_lauf": [int(p.alle.sum()) for p in plac],
-        "placebo_vorstufe_je_lauf": [int(p.vor.sum()) for p in plac],
+        "placebo_laeufe": N_PLACEBO,
+        "placebo_bausteine_je_lauf": plac_bst,
+        "placebo_alle_filter_je_lauf": plac_alle,
+        "placebo_vorstufe_je_lauf": plac_vor,
+        "p_lauf": round(p_lauf, 4),
+        "fund": fund,
+        "echt_mehr_als_staerkster_placebo": bool(n_b > max(plac_bst or [0])),
+        "datenpruefung_verdachtstage": VERDACHT,
     }
-    # F5 je Überlebendem: 10'000 Zufallsziehungen gleicher Grösse aus derselben Reihe
-    ueber = echt[echt.vor & (echt.t > 0)].sort_values("t", ascending=False).copy()
-    pz, tb = [], []
-    for _, r in ueber.iterrows():
-        _, _, alle = basis_stat(r.familie, r.ziel, int(r.h))
-        sims = np.array([RNG.choice(alle, int(r.n), replace=False).mean() for _ in range(10000)])
-        pz.append(float((sims >= r.mu).mean()))
-        tb.append(np.nan)
-        if r.familie == "L":                           # Bestätigung auf dem zugeordneten ETF in S
-            etf = FF_ZIELE[r.ziel[3:]]
-            m = echt[(echt.familie == "S") & (echt.indikator == r.indikator) & (echt.art == r.art) & (echt.ziel == etf) & (echt.h == r.h)]
-            tb[-1] = float(m.t.iloc[0]) if len(m) else np.nan
-    ueber["placebo_p"] = pz
-    ueber["t_bestaetigung_etf"] = tb
-    ueber.to_csv("suchlauf_ueberlebende.csv", index=False)
-    kern = ueber.alle & (ueber.placebo_p < 0.01)
-    best = (ueber.familie == "S") | ((np.sign(ueber.t_bestaetigung_etf) == np.sign(ueber.t)) & (ueber.t_bestaetigung_etf.abs() >= 2))
-    bausteine = ueber[kern & best]
-    hinweise = ueber[kern & ~best]
-    zus["bausteine"] = bausteine[SPALTEN + ["placebo_p", "t_bestaetigung_etf"]].round(4).to_dict("records")
-    zus["langzeit_hinweise"] = hinweise[SPALTEN + ["placebo_p", "t_bestaetigung_etf"]].round(4).to_dict("records")
-    zus["echt_mehr_als_staerkster_placebo"] = bool(int(echt.alle.sum()) > max(zus["placebo_alle_filter_je_lauf"] or [0]))
-    pos = echt[(echt.t > 0) & (echt.n >= N_MIN)].sort_values("t", ascending=False).head(10)
-    zus["staerkste_positive"] = pos[SPALTEN].round(3).to_dict("records")
-    # Zählung je Quelle (Lernregel L2: Bereich mit >= 5000 Kandidaten und keinem über t 3.5 gilt als erschöpft)
+    cols = SPALTEN + ["placebo_p", "t_bestaetigung_etf", "t_ohne_bestes"]
+    zus["bausteine"] = bausteine[cols].round(4).to_dict("records")
+    zus["langzeit_hinweise"] = hinweise[cols].round(4).to_dict("records")
+    top = echt[(echt.t > 0) & (echt.n >= N_MIN)].sort_values("t", ascending=False)
+    zus["staerkste_positive"] = top.head(10)[SPALTEN].round(3).to_dict("records")
+    zus["staerkste_neue"] = top[top.neu].head(5)[SPALTEN].round(3).to_dict("records")
     echt["quelle"] = echt.indikator.map(quelle_von)
     jq = {}
     for q, g in echt.groupby("quelle"):
-        pos = g[(g.t > 0) & (g.n >= N_MIN)]
+        pos_ = g[(g.t > 0) & (g.n >= N_MIN)]
         jq[q] = {"kandidaten": int(len(g)), "vorstufe_positiv": int((g.vor & (g.t > 0)).sum()),
-                 "max_t": round(float(pos.t.max()), 2) if len(pos) else None,
-                 "max_t_rob": round(float(pos.t_rob.max()), 2) if len(pos) else None}
+                 "max_t": round(float(pos_.t.max()), 2) if len(pos_) else None}
     zus["je_quelle"] = dict(sorted(jq.items()))
     zus["indikatoren_n"] = len(ind)
     zus["indikatoren"] = sorted(ind)
     zus["ziele"] = {fam: f["ziele"] for fam, f in FAM.items()}
     zus["paare"] = N_PAARE
+    zus["code_sha256"] = hashlib.sha256(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:16]
     zus["dauer_min"] = round((time.time() - t0) / 60, 1)
     json.dump(zus, open("suchlauf_zusammenfassung.json", "w"), indent=1)
-    kurz = {k: v for k, v in zus.items() if k not in ("indikatoren",)}
-    log(json.dumps(kurz, indent=1))
-    pd.set_option("display.width", 220)
-    log(ueber[SPALTEN + ["placebo_p", "t_bestaetigung_etf", "erste", "letzte"]].head(40).to_string(index=False, float_format=lambda v: f"{v:.2f}"))
+    ue = ueber.copy()
+    ue["ereignisse"] = [";".join(str(FAM[r.familie]["kal"][p].date()) for p in r._pos) for _, r in ue.iterrows()]
+    ue.drop(columns=["_pos"]).to_csv("suchlauf_ueberlebende.csv", index=False)
+    echt.drop(columns=["_pos"]).to_csv("suchlauf_echt.csv.gz", index=False)
+    log(json.dumps({k: v for k, v in zus.items() if k not in ("indikatoren", "je_quelle")}, indent=1))
