@@ -1,11 +1,11 @@
 {
- "zeit_utc": "2026-09-25T12:27Z",
- "commit_main": "96d9657f58fcb7b9b0f33134700dcece523a5878",
+ "zeit_utc": "2026-09-25T12:54Z",
+ "commit_main": "d4da97b011548d0ede7c8c53f094225e9d5aebc1",
  "commit_energie": "f9892c8d7569922d5eb394475ecf4e68b49f6620",
  "commit_neu": "be76842295224b5e5c0b16e1f67edab7431afec0",
- "commit_lernen_vorher": "d2a310ef9f2b2ebf01480b6997e24cc57e8f2132",
- "code_hash": "883c4dc9b58f8e22",
- "sha_suchmaschine": "991892e83b448f83",
+ "commit_lernen_vorher": "d9ad008672aae01cfda8701e71310b6aa1fc7125",
+ "code_hash": "d878d2366fe88f48",
+ "sha_suchmaschine": "2cd96382f35fc6a5",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_register_vorher": "5925af1015f162e4",
  "sha_manifest_main": "b7edb0b529d43df8",
@@ -15,6 +15,6 @@
  "kandidaten_neu": 0,
  "huerde_t": 5.24,
  "fund": false,
- "p_lauf": 0.0099,
+ "p_lauf": 1.0,
  "bausteine": 0
 }

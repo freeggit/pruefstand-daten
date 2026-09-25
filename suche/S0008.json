@@ -1,0 +1,938 @@
+{
+ "nr": 8,
+ "sort": 8,
+ "zeit": "25.9.2026, 14:54 (Europe/Zurich)",
+ "verfassung": "V3.6",
+ "methode": "M2",
+ "entstehung": "GitHub Action «Prüfstand Suche» (V3.4 E9), Anlass: geänderter Code",
+ "herkunft": {
+  "commit_main": "d4da97b011548d0ede7c8c53f094225e9d5aebc1",
+  "commit_energie": "f9892c8d7569922d5eb394475ecf4e68b49f6620",
+  "commit_neu": "be76842295224b5e5c0b16e1f67edab7431afec0",
+  "commit_lernen_vorher": "d9ad008672aae01cfda8701e71310b6aa1fc7125",
+  "code_hash": "d878d2366fe88f48",
+  "sha_suchmaschine": "2cd96382f35fc6a5",
+  "sha_paare": "faf4e4d850ca9a00",
+  "sha_register_vorher": "5925af1015f162e4",
+  "sha_manifest_main": "b7edb0b529d43df8",
+  "sha_manifest_neu": "68112ce07d5cc686",
+  "placebo_laeufe": 100
+ },
+ "stichtag": "2020-12-31",
+ "horizonte_tage": [
+  1,
+  5,
+  20
+ ],
+ "kandidaten": 127444,
+ "kandidaten_neu": 0,
+ "kandidaten_bekannt": 127444,
+ "kandidaten_kumuliert": 303980,
+ "huerde_t": 5.24,
+ "familien": {
+  "S": 112308,
+  "L": 15136
+ },
+ "indikatoren_n": 421,
+ "ziele_n": 41,
+ "ziele": {
+  "S": [
+   "dba",
+   "eem",
+   "ewg",
+   "ewj",
+   "ewl",
+   "ewu",
+   "ewz",
+   "fxi",
+   "gld",
+   "ibb",
+   "ief",
+   "lqd",
+   "shy",
+   "smh",
+   "spy",
+   "tip",
+   "tlt",
+   "ung",
+   "uso",
+   "xlb",
+   "xlc",
+   "xle",
+   "xlf",
+   "xli",
+   "xlk",
+   "xlp",
+   "xlre",
+   "xlu",
+   "xlv",
+   "xly"
+  ],
+  "L": [
+   "ff_buseq",
+   "ff_chems",
+   "ff_durbl",
+   "ff_enrgy",
+   "ff_hlth",
+   "ff_manuf",
+   "ff_money",
+   "ff_nodur",
+   "ff_shops",
+   "ff_telcm",
+   "ff_utils"
+  ]
+ },
+ "indikatoren_quellen": "Bitcoin 2, FRED 60, Paare 40, Scout 265, Strom 15, Wetter 24, Wikipedia 15; Paare nach paare.txt: 8",
+ "ergebnis_alle_filter": 0,
+ "ergebnis_vorstufe_t35": 8,
+ "placebo_laeufe": 100,
+ "placebo_bausteine_je_lauf": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "p_lauf": 1.0,
+ "fund": false,
+ "datenpruefung_verdachtstage": {
+  "acwi": [
+   "2008-04-03",
+   "2008-04-04",
+   "2008-04-21",
+   "2008-07-18",
+   "2009-02-27"
+  ],
+  "ewj": [
+   "2004-07-26",
+   "2011-03-15",
+   "2024-08-05"
+  ],
+  "xlb": [
+   "2001-09-21",
+   "2008-01-22"
+  ],
+  "xlf": [
+   "2020-04-07"
+  ],
+  "xli": [
+   "2008-01-22",
+   "2008-10-14"
+  ],
+  "xlk": [
+   "1999-01-13",
+   "2000-10-18",
+   "2002-06-26",
+   "2008-01-22",
+   "2008-09-19"
+  ],
+  "xlp": [
+   "2008-01-22",
+   "2008-09-19",
+   "2008-10-14"
+  ],
+  "xlu": [
+   "1999-08-11",
+   "2008-10-14"
+  ],
+  "xlv": [
+   "2002-09-16",
+   "2008-10-24"
+  ],
+  "xly": [
+   "2008-09-19",
+   "2008-10-14",
+   "2008-11-07"
+  ],
+  "ewl": [
+   "2005-04-13",
+   "2006-12-27",
+   "2008-01-22",
+   "2008-10-10"
+  ],
+  "ewg": [
+   "2001-09-21",
+   "2002-07-25",
+   "2008-01-23",
+   "2008-12-24",
+   "2009-03-26",
+   "2009-05-07",
+   "2009-06-05"
+  ],
+  "uso": [
+   "2008-12-12",
+   "2022-02-24"
+  ],
+  "ung": [
+   "2008-09-09",
+   "2018-12-19",
+   "2019-01-16",
+   "2020-08-31",
+   "2021-02-02",
+   "2022-02-24",
+   "2022-06-16",
+   "2022-07-26",
+   "2022-08-01",
+   "2022-11-14",
+   "2022-11-28",
+   "2023-01-12",
+   "2023-01-26",
+   "2024-01-05"
+  ],
+  "dba": [
+   "2008-10-28"
+  ],
+  "bas.de": [
+   "2008-01-22",
+   "2025-04-07"
+  ],
+  "hlag.de": [
+   "2020-05-04",
+   "2021-03-29",
+   "2022-04-26",
+   "2024-01-05",
+   "2025-04-07"
+  ],
+  "knin.sw": [
+   "2001-10-03",
+   "2004-06-01",
+   "2008-07-18",
+   "2008-09-30",
+   "2020-03-16"
+  ],
+  "eem": [
+   "2015-08-25"
+  ],
+  "ewz": [
+   "2003-05-27",
+   "2006-05-19",
+   "2008-01-22",
+   "2008-01-23",
+   "2008-09-16",
+   "2008-10-14",
+   "2011-09-06",
+   "2020-03-20"
+  ],
+  "smh": [
+   "2000-08-03",
+   "2002-07-17",
+   "2003-04-07",
+   "2008-10-24",
+   "2011-10-04",
+   "2015-08-24"
+  ],
+  "ibb": [
+   "2008-09-19"
+  ],
+  "lqd": [
+   "2006-10-02",
+   "2020-03-16"
+  ],
+  "ewu": [
+   "1996-11-21",
+   "2001-09-21",
+   "2008-01-22",
+   "2008-01-23",
+   "2008-12-24"
+  ]
+ },
+ "placebo_suchlaeufe_alle_filter": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "placebo_suchlaeufe_vorstufe": [
+  2,
+  3,
+  2,
+  1,
+  1,
+  3,
+  1,
+  1,
+  1,
+  2,
+  2,
+  1,
+  1,
+  2,
+  1,
+  2,
+  0,
+  5,
+  2,
+  3,
+  0,
+  0,
+  1,
+  7,
+  1,
+  2,
+  3,
+  2,
+  2,
+  2,
+  4,
+  0,
+  2,
+  2,
+  1,
+  1,
+  0,
+  2,
+  1,
+  1,
+  0,
+  2,
+  3,
+  0,
+  5,
+  4,
+  2,
+  0,
+  2,
+  1,
+  1,
+  3,
+  5,
+  0,
+  0,
+  2,
+  3,
+  2,
+  4,
+  2,
+  2,
+  2,
+  1,
+  1,
+  2,
+  0,
+  0,
+  3,
+  2,
+  2,
+  2,
+  1,
+  1,
+  2,
+  1,
+  2,
+  2,
+  1,
+  2,
+  4,
+  0,
+  0,
+  2,
+  1,
+  2,
+  3,
+  2,
+  1,
+  4,
+  1,
+  0,
+  1,
+  3,
+  1,
+  2,
+  2,
+  2,
+  3,
+  2,
+  0
+ ],
+ "echt_mehr_als_staerkster_placebo": false,
+ "bausteine": [],
+ "langzeit_hinweise": [],
+ "staerkste_neue": "keine neuen Hypothesen",
+ "staerkste_positive": [
+  {
+   "familie": "S",
+   "indikator": "paar_zins_us_jp_d20",
+   "art": "hoch",
+   "ziel": "lqd",
+   "h": 5,
+   "n": 59,
+   "mu": 1.232,
+   "mu0": -0.063,
+   "t": 3.962,
+   "t_klassisch": 4.034,
+   "t1": 2.065,
+   "t2": 3.426
+  },
+  {
+   "familie": "S",
+   "indikator": "paar_vix_kurz_d20",
+   "art": "hoch",
+   "ziel": "eem",
+   "h": 1,
+   "n": 44,
+   "mu": 0.242,
+   "mu0": -0.017,
+   "t": 3.908,
+   "t_klassisch": 3.908,
+   "t1": 2.713,
+   "t2": 2.825
+  },
+  {
+   "familie": "S",
+   "indikator": "paar_kurz_us_uk_d20",
+   "art": "hoch",
+   "ziel": "gld",
+   "h": 20,
+   "n": 47,
+   "mu": 3.699,
+   "mu0": 0.181,
+   "t": 3.689,
+   "t_klassisch": 3.734,
+   "t1": 2.607,
+   "t2": 2.47
+  },
+  {
+   "familie": "S",
+   "indikator": "neu_kalender_ereignisse_opex_verfall_stand",
+   "art": "hoch",
+   "ziel": "ewj",
+   "h": 5,
+   "n": 77,
+   "mu": 0.721,
+   "mu0": 0.001,
+   "t": 3.649,
+   "t_klassisch": 3.649,
+   "t1": 2.324,
+   "t2": 3.121
+  },
+  {
+   "familie": "S",
+   "indikator": "neu_fred_implied_vol_oel_d20",
+   "art": "sprung_auf",
+   "ziel": "xlb",
+   "h": 5,
+   "n": 37,
+   "mu": 1.209,
+   "mu0": 0.031,
+   "t": 3.635,
+   "t_klassisch": 4.611,
+   "t1": 3.289,
+   "t2": 1.693
+  },
+  {
+   "familie": "S",
+   "indikator": "neu_treasury_tga_tga_d5",
+   "art": "sprung_auf",
+   "ziel": "xle",
+   "h": 5,
+   "n": 46,
+   "mu": 1.677,
+   "mu0": -0.074,
+   "t": 3.571,
+   "t_klassisch": 4.961,
+   "t1": 2.229,
+   "t2": 2.84
+  },
+  {
+   "familie": "S",
+   "indikator": "paar_zins_us_jp_d20",
+   "art": "hoch",
+   "ziel": "tip",
+   "h": 5,
+   "n": 55,
+   "mu": 1.148,
+   "mu0": -0.072,
+   "t": 3.553,
+   "t_klassisch": 3.553,
+   "t1": 2.26,
+   "t2": 2.861
+  },
+  {
+   "familie": "S",
+   "indikator": "neu_fred_implied_vol_gold_d20",
+   "art": "hoch",
+   "ziel": "spy",
+   "h": 5,
+   "n": 39,
+   "mu": 0.432,
+   "mu0": 0.064,
+   "t": 3.553,
+   "t_klassisch": 3.553,
+   "t1": 2.92,
+   "t2": 1.696
+  },
+  {
+   "familie": "S",
+   "indikator": "neu_fred_brent_brent_stand",
+   "art": "tief",
+   "ziel": "xlv",
+   "h": 5,
+   "n": 55,
+   "mu": 1.101,
+   "mu0": 0.027,
+   "t": 3.536,
+   "t_klassisch": 4.632,
+   "t1": 1.838,
+   "t2": 3.171
+  },
+  {
+   "familie": "S",
+   "indikator": "VIXCLS_d20",
+   "art": "hoch",
+   "ziel": "ibb",
+   "h": 20,
+   "n": 50,
+   "mu": 2.965,
+   "mu0": 0.234,
+   "t": 3.529,
+   "t_klassisch": 3.646,
+   "t1": 2.045,
+   "t2": 2.568
+  }
+ ],
+ "je_quelle": {
+  "fred:BAA10Y": {
+   "kandidaten": 2387,
+   "vorstufe_positiv": 0,
+   "max_t": 3.04
+  },
+  "fred:DCOILWTICO": {
+   "kandidaten": 2391,
+   "vorstufe_positiv": 0,
+   "max_t": 3.17
+  },
+  "fred:DEXSZUS": {
+   "kandidaten": 2375,
+   "vorstufe_positiv": 0,
+   "max_t": 3.15
+  },
+  "fred:DGS10": {
+   "kandidaten": 2391,
+   "vorstufe_positiv": 0,
+   "max_t": 2.64
+  },
+  "fred:DHHNGSP": {
+   "kandidaten": 1743,
+   "vorstufe_positiv": 0,
+   "max_t": 2.88
+  },
+  "fred:DTWEXBGS": {
+   "kandidaten": 1391,
+   "vorstufe_positiv": 0,
+   "max_t": 2.65
+  },
+  "fred:SP500": {
+   "kandidaten": 713,
+   "vorstufe_positiv": 0,
+   "max_t": 2.39
+  },
+  "fred:T10Y2Y": {
+   "kandidaten": 2391,
+   "vorstufe_positiv": 0,
+   "max_t": 2.99
+  },
+  "fred:T10YIE": {
+   "kandidaten": 1225,
+   "vorstufe_positiv": 0,
+   "max_t": 2.96
+  },
+  "fred:USEPUINDXD": {
+   "kandidaten": 2403,
+   "vorstufe_positiv": 0,
+   "max_t": 2.67
+  },
+  "fred:VIXCLS": {
+   "kandidaten": 2355,
+   "vorstufe_positiv": 1,
+   "max_t": 3.53
+  },
+  "neu:bitcoin_onchain": {
+   "kandidaten": 4967,
+   "vorstufe_positiv": 0,
+   "max_t": 3.28
+  },
+  "neu:boe_sonia": {
+   "kandidaten": 1735,
+   "vorstufe_positiv": 0,
+   "max_t": 2.85
+  },
+  "neu:boj_call_rate": {
+   "kandidaten": 1765,
+   "vorstufe_positiv": 0,
+   "max_t": 2.65
+  },
+  "neu:bundesbank_umlauf": {
+   "kandidaten": 1861,
+   "vorstufe_positiv": 0,
+   "max_t": 2.83
+  },
+  "neu:cboe_skew": {
+   "kandidaten": 2402,
+   "vorstufe_positiv": 0,
+   "max_t": 2.59
+  },
+  "neu:cboe_vix3m": {
+   "kandidaten": 1479,
+   "vorstufe_positiv": 0,
+   "max_t": 3.28
+  },
+  "neu:cboe_vix9d": {
+   "kandidaten": 1055,
+   "vorstufe_positiv": 0,
+   "max_t": 3.11
+  },
+  "neu:cboe_vvix": {
+   "kandidaten": 1318,
+   "vorstufe_positiv": 0,
+   "max_t": 3.35
+  },
+  "neu:ecb_fx": {
+   "kandidaten": 4433,
+   "vorstufe_positiv": 0,
+   "max_t": 3.08
+  },
+  "neu:fred_brent": {
+   "kandidaten": 2389,
+   "vorstufe_positiv": 1,
+   "max_t": 3.54
+  },
+  "neu:fred_dtb3": {
+   "kandidaten": 2409,
+   "vorstufe_positiv": 0,
+   "max_t": 3.31
+  },
+  "neu:fred_effr": {
+   "kandidaten": 2421,
+   "vorstufe_positiv": 0,
+   "max_t": 3.17
+  },
+  "neu:fred_equity_uncertainty": {
+   "kandidaten": 2435,
+   "vorstufe_positiv": 0,
+   "max_t": 2.83
+  },
+  "neu:fred_fx_lang": {
+   "kandidaten": 7146,
+   "vorstufe_positiv": 0,
+   "max_t": 3.12
+  },
+  "neu:fred_implied_vol": {
+   "kandidaten": 4105,
+   "vorstufe_positiv": 1,
+   "max_t": 3.64
+  },
+  "neu:fred_propane": {
+   "kandidaten": 2363,
+   "vorstufe_positiv": 0,
+   "max_t": 2.52
+  },
+  "neu:fred_usdjpy": {
+   "kandidaten": 2386,
+   "vorstufe_positiv": 0,
+   "max_t": 2.97
+  },
+  "neu:kalender_ereignisse": {
+   "kandidaten": 335,
+   "vorstufe_positiv": 1,
+   "max_t": 3.65
+  },
+  "neu:leitzins_aenderungstage": {
+   "kandidaten": 204,
+   "vorstufe_positiv": 0,
+   "max_t": 1.95
+  },
+  "neu:mof_jgb_zinsen": {
+   "kandidaten": 7209,
+   "vorstufe_positiv": 0,
+   "max_t": 3.02
+  },
+  "neu:nyfed_rrp": {
+   "kandidaten": 887,
+   "vorstufe_positiv": 0,
+   "max_t": 2.11
+  },
+  "neu:snb_saron": {
+   "kandidaten": 1744,
+   "vorstufe_positiv": 0,
+   "max_t": 3.25
+  },
+  "neu:treasury_auktionen": {
+   "kandidaten": 893,
+   "vorstufe_positiv": 0,
+   "max_t": 3.24
+  },
+  "neu:treasury_debt_penny": {
+   "kandidaten": 5139,
+   "vorstufe_positiv": 0,
+   "max_t": 3.42
+  },
+  "neu:treasury_tga": {
+   "kandidaten": 1673,
+   "vorstufe_positiv": 1,
+   "max_t": 3.57
+  },
+  "neu:treasury_yield_curve": {
+   "kandidaten": 1746,
+   "vorstufe_positiv": 0,
+   "max_t": 3.04
+  },
+  "neu:usgs_erdbeben": {
+   "kandidaten": 900,
+   "vorstufe_positiv": 0,
+   "max_t": 2.22
+  },
+  "neu:wikipedia_weitere": {
+   "kandidaten": 13476,
+   "vorstufe_positiv": 0,
+   "max_t": 3.11
+  },
+  "paar:kurz_ch_us": {
+   "kandidaten": 1759,
+   "vorstufe_positiv": 0,
+   "max_t": 2.73
+  },
+  "paar:kurz_us_uk": {
+   "kandidaten": 1752,
+   "vorstufe_positiv": 1,
+   "max_t": 3.69
+  },
+  "paar:oel_brent_wti": {
+   "kandidaten": 2392,
+   "vorstufe_positiv": 0,
+   "max_t": 2.66
+  },
+  "paar:oel_gas": {
+   "kandidaten": 1735,
+   "vorstufe_positiv": 0,
+   "max_t": 3.07
+  },
+  "paar:vix_kurz": {
+   "kandidaten": 892,
+   "vorstufe_positiv": 0,
+   "max_t": 3.91
+  },
+  "paar:vix_termin": {
+   "kandidaten": 1226,
+   "vorstufe_positiv": 0,
+   "max_t": 2.81
+  },
+  "paar:zins_us_de": {
+   "kandidaten": 983,
+   "vorstufe_positiv": 0,
+   "max_t": 2.67
+  },
+  "paar:zins_us_jp": {
+   "kandidaten": 2272,
+   "vorstufe_positiv": 2,
+   "max_t": 3.96
+  },
+  "strom": {
+   "kandidaten": 2957,
+   "vorstufe_positiv": 0,
+   "max_t": 2.11
+  },
+  "wetter": {
+   "kandidaten": 6141,
+   "vorstufe_positiv": 0,
+   "max_t": 3.27
+  },
+  "wikipedia": {
+   "kandidaten": 2695,
+   "vorstufe_positiv": 0,
+   "max_t": 2.94
+  }
+ },
+ "urteil": "Kein Baustein. Validierung ab 2021 nicht angerührt (S4).",
+ "dauer_min": 26.0
+}

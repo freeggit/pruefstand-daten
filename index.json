@@ -471,10 +471,16 @@
    "datei": "suche/S0007.json",
    "kandidaten": 127444,
    "in_db": false
+  },
+  {
+   "nr": 8,
+   "datei": "suche/S0008.json",
+   "kandidaten": 127444,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-09-25T11:46Z",
+ "letzter_suchlauf_utc": "2026-09-25T12:54Z",
  "pruefung_lernrunde_utc": "2026-09-25T09:40:00Z",
- "letzter_code_hash": "883c4dc9b58f8e22",
+ "letzter_code_hash": "d878d2366fe88f48",
  "methode": "M2"
 }
