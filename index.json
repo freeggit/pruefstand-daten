@@ -1,5 +1,5 @@
 {
- "kumuliert": 303980,
+ "kumuliert": 304206,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -12,11 +12,6 @@
   "BAA10Y_d5",
   "BAA10Y_stand",
   "BAA10Y_z252",
-  "BAMLH0A0HYM2_d1",
-  "BAMLH0A0HYM2_d20",
-  "BAMLH0A0HYM2_d5",
-  "BAMLH0A0HYM2_stand",
-  "BAMLH0A0HYM2_z252",
   "DCOILWTICO_d1",
   "DCOILWTICO_d20",
   "DCOILWTICO_d5",
@@ -67,8 +62,6 @@
   "VIXCLS_d5",
   "VIXCLS_stand",
   "VIXCLS_z252",
-  "btc_r1",
-  "btc_r7",
   "neu_bitcoin_onchain_gebuehren_d1",
   "neu_bitcoin_onchain_gebuehren_d20",
   "neu_bitcoin_onchain_gebuehren_d5",
@@ -259,6 +252,8 @@
   "neu_treasury_yield_curve_kurz_d5",
   "neu_treasury_yield_curve_kurz_stand",
   "neu_treasury_yield_curve_kurz_z252",
+  "neu_turn_of_month_effekt_turn_of_month_stand",
+  "neu_usa_wahltag_wahltag_stand",
   "neu_usgs_erdbeben_anzahl_m5_d1",
   "neu_usgs_erdbeben_anzahl_m5_d20",
   "neu_usgs_erdbeben_anzahl_m5_d5",
@@ -477,10 +472,16 @@
    "datei": "suche/S0008.json",
    "kandidaten": 127444,
    "in_db": false
+  },
+  {
+   "nr": 9,
+   "datei": "suche/S0009.json",
+   "kandidaten": 127660,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-09-25T12:54Z",
+ "letzter_suchlauf_utc": "2026-09-25T13:23Z",
  "pruefung_lernrunde_utc": "2026-09-25T09:40:00Z",
- "letzter_code_hash": "d878d2366fe88f48",
- "methode": "M2"
+ "letzter_code_hash": "104e70a24046e4b1",
+ "methode": "M3"
 }
