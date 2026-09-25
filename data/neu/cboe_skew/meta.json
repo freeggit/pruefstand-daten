@@ -2,6 +2,7 @@
   "skew": {
     "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
     "einheit": "Indexpunkte",
+    "publikation": "taeglich (Cboe veroeffentlicht Indexschlusswerte am selben Handelstagabend, siehe FRED-Metadaten OVXCLS-Analogfall)",
     "quelle_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",

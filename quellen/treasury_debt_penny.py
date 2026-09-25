@@ -84,6 +84,7 @@ def main():
             "beschreibung": BESCHREIBUNG[reihe],
             "quelle_url": BASE,
             "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
+            "publikation": "taeglich (Fiscal Data API 'Debt to the Penny', Aktualisierung am naechsten Geschaeftstag)",
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

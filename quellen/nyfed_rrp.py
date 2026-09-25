@@ -61,6 +61,7 @@ def main():
             "beschreibung": "NY Fed Overnight Reverse Repo Facility (ON RRP), taegliches Gesamtvolumen der akzeptierten Gebote (Treasury-Sicherheiten)",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich, Handelstage)",
+            "publikation": 'taeglich (NY Fed veroeffentlicht RRP-Volumen am selben Tag nach Handelsschluss)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         }

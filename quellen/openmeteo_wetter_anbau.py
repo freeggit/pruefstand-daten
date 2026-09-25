@@ -15,7 +15,7 @@ START = "2015-01-01"
 # Sicherheitsabstand ueber die von Open-Meteo dokumentierte 5-7-Tage-Nachlieferung
 # der ERA5-Reanalyse hinaus, damit nur bereits finalisierte (nicht mehr revidierte)
 # Tage abgelegt werden (K4).
-VERFUEGBAR_NACH_TAGEN = 10
+VERFUEGBAR_NACH_TAGEN = 5
 
 REGIONEN = {
     "mais_guertel": {
@@ -109,6 +109,7 @@ def main():
             "beschreibung": info["beschreibung"],
             "quelle_url": "https://archive-api.open-meteo.com/v1/archive",
             "verdichtung": "keine (ERA5-Reanalyse liefert bereits Tageswerte)",
+            "publikation": 'verzoegert (ERA5-Reanalyse; Zusatz 5 (25.9.2026) setzt verfuegbar_nach_tagen fest auf 5 Tage fuer Reanalyse-Wetterreihen)',
             "verfuegbar_nach_tagen": VERFUEGBAR_NACH_TAGEN,
             "revidiert": False,
         }

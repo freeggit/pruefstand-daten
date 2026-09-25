@@ -77,6 +77,7 @@ def main():
             "beschreibung": info["beschreibung"],
             "quelle_url": "https://www.bundesbank.de/en/statistics/money-and-capital-markets/interest-rates-and-yields/daily-yields-of-current-federal-securities-772220",
             "verdichtung": "keine (bereits taeglich, nur Bankarbeitstage; Tage ohne Wert (Feiertage) ausgelassen)",
+            "publikation": 'taeglich (Bundesbank Zeitreihen-Datenbank aktualisiert Umlaufsrenditen taeglich)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

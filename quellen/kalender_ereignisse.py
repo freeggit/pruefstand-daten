@@ -26,9 +26,15 @@ FOMC_MONTHS = {
     "May": 5, "June": 6, "July": 7, "August": 8,
     "September": 9, "October": 10, "November": 11, "December": 12,
 }
+# Gruppe 4 faengt eine optionale Klammerannotation ("(unscheduled)", "(cancelled)",
+# "(notation vote)") ein: Zusatz 5 (25.9.2026) verlangt nur planmaessige Sitzungen mit
+# im Voraus bekanntem Termin, also ohne "Conference Call" (Telefonkonferenz,
+# typischerweise ausserplanmaessige Notfallaktionen) und ohne als "unscheduled" oder
+# "cancelled" annotierte Eintraege.
 FOMC_HIST_PAT = re.compile(
-    r'([A-Za-z]+) (\d{1,2})(?:-(\d{1,2}))?\s*(?:\([^)]*\)\s*)?(Meeting|Conference Call)'
+    r'([A-Za-z]+) (\d{1,2})(?:-(\d{1,2}))?\s*(?:\(([^)]*)\)\s*)?(Meeting|Conference Call)'
 )
+FOMC_EXCLUDE_NOTE = re.compile(r"unscheduled|cancelled", re.I)
 FOMC_CAL_PAT = re.compile(
     r'fomc-meeting__month[^>]*><strong>([A-Za-z]+)</strong></div>\s*'
     r'<div class="fomc-meeting__date[^>]*>([^<]+)</div>', re.S
@@ -83,7 +89,11 @@ def fomc_historical_dates(year):
             return []
         raise
     out = []
-    for month_name, d1, d2, _ in FOMC_HIST_PAT.findall(html):
+    for month_name, d1, d2, note, mtype in FOMC_HIST_PAT.findall(html):
+        if mtype != "Meeting":
+            continue
+        if note and FOMC_EXCLUDE_NOTE.search(note):
+            continue
         month = FOMC_MONTHS.get(month_name)
         if not month:
             continue
@@ -159,6 +169,7 @@ def main():
             "beschreibung": "1 an US-Steuerterminen (15.1., 15.4., 15.6., 15.9., 15.12., feste Kalenderdaten ohne Wochenend-/Feiertagsverschiebung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
             "quelle_url": "https://www.irs.gov/filing/tax-day-when-are-taxes-due (feste, oeffentlich bekannte Kalendertermine)",
             "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+            "publikation": 'taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         },
@@ -167,14 +178,16 @@ def main():
             "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 1973-04-27 (Tag nach Beginn des boersengehandelten Optionshandels an der CBOE, 26.4.1973; erster erfasster Verfalltag damit Juni 1973, siehe Zusatz 4 25.9.2026 E11).",
             "quelle_url": "https://www.cboe.com/optionsexpirationcalendar/ (Marktkonvention: dritter Freitag der Quartalsmonate) und https://www.cboe.com/about/history/ (Handelsbeginn 26.4.1973)",
             "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+            "publikation": 'taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         },
         "fomc_sitzung": {
             "einheit": "Indikator (0/1)",
-            "beschreibung": "1 am Tag der FOMC-Zinsentscheidung (letzter Sitzungstag bzw. Tag der Erklaerung; alle regulaeren und ausserplanmaessigen Sitzungen/Telefonkonferenzen inklusive Notfallentscheide), sonst 0, fuer jeden Kalendertag ab 1936-01-01 (erstes Jahr mit von der Fed veroeffentlichten historischen Sitzungsunterlagen unter fomchistorical<JAHR>.htm) bis heute.",
+            "beschreibung": "1 am letzten Tag einer planmaessigen FOMC-Sitzung mit im Voraus oeffentlich bekanntem Termin, sonst 0, fuer jeden Kalendertag ab 1936-01-01 (erstes Jahr mit von der Fed veroeffentlichten historischen Sitzungsunterlagen unter fomchistorical<JAHR>.htm) bis heute. Zusatz 5 (25.9.2026): als 'Conference Call', 'unscheduled' oder 'cancelled' annotierte Telefonkonferenzen/Notfall-/Ad-hoc-Sitzungen sind ausgeschlossen, da deren Termin nicht im Voraus bekannt war.",
             "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm (1936-2020) und https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (ab 2021)",
             "verdichtung": "keine (aus amtlichen FOMC-Sitzungskalendern der Fed abgeleitet)",
+            "publikation": 'taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         },

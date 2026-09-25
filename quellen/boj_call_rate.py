@@ -76,6 +76,7 @@ def main():
             "beschreibung": "Bank of Japan, Uncollateralized Overnight Call Rate (Mutan-Satz), Tagesdurchschnitt, ueber die BOJ Time-Series Data Search API (DB FM01, Series STRDCLUCON).",
             "quelle_url": URL,
             "verdichtung": "keine (bereits Tageswert lt. Quelle)",
+            "publikation": 'taeglich (Bank of Japan veroeffentlicht Tagesgeldsatz am naechsten Geschaeftstag)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

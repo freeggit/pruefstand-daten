@@ -2,6 +2,7 @@
   "rrp": {
     "beschreibung": "NY Fed Overnight Reverse Repo Facility (ON RRP), taegliches Gesamtvolumen der akzeptierten Gebote (Treasury-Sicherheiten)",
     "einheit": "Milliarden USD",
+    "publikation": "taeglich (NY Fed veroeffentlicht RRP-Volumen am selben Tag nach Handelsschluss)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich, Handelstage)",

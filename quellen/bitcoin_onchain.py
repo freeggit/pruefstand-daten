@@ -59,6 +59,7 @@ def main():
             "beschreibung": beschreibung,
             "quelle_url": "https://api.blockchain.info/charts/%s" % chart,
             "verdichtung": "keine (bereits taeglich, UTC-Tagesgrenze der Quelle)",
+            "publikation": 'taeglich (Blockchain-Daten fortlaufend, mempool.space/blockchain.info aktualisieren ohne Wochenbatch)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

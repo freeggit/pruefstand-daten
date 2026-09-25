@@ -1,0 +1,11 @@
+{
+  "turn_of_month": {
+    "beschreibung": "1 am letzten NYSE-Handelstag eines Monats sowie an den ersten drei NYSE-Handelstagen des Folgemonats (Turn-of-the-Month-Effekt, Ariel 1987), sonst 0, fuer jeden Kalendertag ab 1971-01-01. Handelstage ueber einen deterministischen NYSE-Feiertagskalender (Wochenenden plus New Year, MLK-Day ab 1998, Washington's Birthday, Good Friday, Memorial Day, Juneteenth ab 2022, Independence Day, Labor Day, Thanksgiving, Christmas) berechnet. Ausserordentliche, nicht kalendarisch fixierte Boersenschliessungen (z.B. 11.-14.9.2001, 29.-30.10.2012, Trauertage) sind NICHT modelliert; an solchen Terminen kann die Handelstag-Zuordnung im Einzelfall um 1-2 Tage abweichen. Vor 1971 (Uniform Monday Holiday Act) folgten Memorial Day/Washington's Birthday festen statt Montags-Regeln, daher keine Ausweitung ohne weitere Belege.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Ereignisdatum aus oeffentlich bekanntem NYSE-Handelskalender im Voraus ableitbar, Reihe wird taeglich fortgeschrieben)",
+    "quelle_url": "kein externer Abruf (deterministische Kalenderberechnung; NYSE-Feiertagsregeln gemaess https://www.nyse.com/markets/hours-calendars)",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

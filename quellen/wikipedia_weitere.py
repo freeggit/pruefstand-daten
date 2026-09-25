@@ -109,6 +109,7 @@ def main():
             "beschreibung": "Wikipedia-Seitenaufrufe %s.org Artikel '%s', alle Zugriffsarten" % (project, article),
             "quelle_url": base % (urllib.parse.quote(article, safe=""), "..."),
             "verdichtung": "keine (bereits taeglich)",
+            "publikation": 'taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)',
             "verfuegbar_nach_tagen": 2,
             "revidiert": False,
         }

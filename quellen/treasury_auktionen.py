@@ -75,6 +75,7 @@ def main():
             "beschreibung": "Mittleres Bid-to-Cover-Verhaeltnis aller an diesem Tag abgeschlossenen US-Treasury-Auktionen (Bills, Notes, Bonds); Mass fuer die Nachfrage nach neu emittierten US-Staatsanleihen",
             "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
             "verdichtung": "Mittelwert ueber alle an diesem Kalendertag abgeschlossenen Auktionen (mehrere Wertpapiere/Tag moeglich)",
+            "publikation": 'taeglich (TreasuryDirect/Fiscal Data veroeffentlicht Bid-to-Cover unmittelbar nach Auktionsergebnis)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

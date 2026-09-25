@@ -63,6 +63,7 @@ def main():
             "beschreibung": "Cboe VIX9D Index (implizite 9-Tage-Volatilitaet des S&P 500), taeglicher Schlusswert",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich); Schlusswert (CLOSE-Spalte) aus taeglicher OHLC-Datei",
+            "publikation": 'taeglich (Cboe veroeffentlicht Indexschlusswerte am selben Handelstagabend)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         }

@@ -2,6 +2,7 @@
   "em": {
     "beschreibung": "CBOE Emerging Markets ETF Volatility Index (VXEEM), implizite Volatilitaet aus EEM-Optionen",
     "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "publikation": "taeglich (Cboe OVX/GVZ/VXEEM Schlusswerte, laut FRED-Metadaten taeglich ohne Wochenluecke gespiegelt, geprueft 25.9.2026)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXEEMCLS",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich, Handelstage)",
@@ -10,6 +11,7 @@
   "gold": {
     "beschreibung": "CBOE Gold ETF Volatility Index (GVZ), implizite Volatilitaet aus GLD-Optionen",
     "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "publikation": "taeglich (Cboe OVX/GVZ/VXEEM Schlusswerte, laut FRED-Metadaten taeglich ohne Wochenluecke gespiegelt, geprueft 25.9.2026)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GVZCLS",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich, Handelstage)",
@@ -18,6 +20,7 @@
   "oel": {
     "beschreibung": "CBOE Crude Oil ETF Volatility Index (OVX), implizite Volatilitaet aus USO-Optionen",
     "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "publikation": "taeglich (Cboe OVX/GVZ/VXEEM Schlusswerte, laut FRED-Metadaten taeglich ohne Wochenluecke gespiegelt, geprueft 25.9.2026)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=OVXCLS",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich, Handelstage)",

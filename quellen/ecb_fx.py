@@ -70,6 +70,7 @@ def main():
             "beschreibung": "EZB Referenzkurs %s/EUR, 14:15 MEZ" % currency,
             "quelle_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.%s.EUR.SP00.A" % currency,
             "verdichtung": "keine (bereits taeglich)",
+            "publikation": 'taeglich (EZB veroeffentlicht Referenzkurse an jedem TARGET-Handelstag gegen 16:00 CET am selben Tag)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         }

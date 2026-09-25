@@ -1,0 +1,11 @@
+{
+  "wahltag": {
+    "beschreibung": "1 am US-Wahltag (erster Dienstag nach erstem Montag im November, jedes gerade Jahr: Kongress- und/oder Praesidentschaftswahl), sonst 0, fuer jeden Kalendertag ab 1845-01-01 (US Code Titel 3 Sec. 1, Praesidentschaftswahltermin seit 1845 gesetzlich fixiert; Kongresswahlen seit 1875 einheitlich auf denselben Tag, US Code Titel 2 Sec. 7).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Ereignisdatum gesetzlich fixiert und lange im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
+    "quelle_url": "kein externer Abruf (deterministische Kalenderberechnung nach US Code Titel 2 Sec. 7 / Titel 3 Sec. 1)",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

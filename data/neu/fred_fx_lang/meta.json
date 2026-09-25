@@ -2,25 +2,28 @@
   "audusd": {
     "beschreibung": "USD/AUD-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXUSAL).",
     "einheit": "USD je AUD",
+    "publikation": "woechentlich (Fed H.10 Devisenkurse DEXUSUK/DEXCAUS/DEXUSAL, wie DEXJPUS im Wochentakt gebuendelt veroeffentlicht, geprueft 25.9.2026)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSAL",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",
-    "verfuegbar_nach_tagen": 1
+    "verfuegbar_nach_tagen": 8
   },
   "gbpusd": {
     "beschreibung": "USD/GBP-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXUSUK).",
     "einheit": "USD je GBP",
+    "publikation": "woechentlich (Fed H.10 Devisenkurse DEXUSUK/DEXCAUS/DEXUSAL, wie DEXJPUS im Wochentakt gebuendelt veroeffentlicht, geprueft 25.9.2026)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSUK",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",
-    "verfuegbar_nach_tagen": 1
+    "verfuegbar_nach_tagen": 8
   },
   "usdcad": {
     "beschreibung": "USD/CAD-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXCAUS).",
     "einheit": "CAD je USD",
+    "publikation": "woechentlich (Fed H.10 Devisenkurse DEXUSUK/DEXCAUS/DEXUSAL, wie DEXJPUS im Wochentakt gebuendelt veroeffentlicht, geprueft 25.9.2026)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXCAUS",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",
-    "verfuegbar_nach_tagen": 1
+    "verfuegbar_nach_tagen": 8
   }
 }

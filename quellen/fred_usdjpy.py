@@ -61,7 +61,8 @@ def main():
             "beschreibung": "USD/JPY-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXJPUS)",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich)",
-            "verfuegbar_nach_tagen": 1,
+            "publikation": 'woechentlich (Fed H.10 Devisenkurse, FRED-Release zeigt 7-Tage-Luecke zwischen Aktualisierungen, geprueft 25.9.2026 an DEXJPUS)',
+            "verfuegbar_nach_tagen": 8,
             "revidiert": False,
         }
     }

@@ -62,6 +62,7 @@ def main():
             "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich)",
+            "publikation": 'taeglich (Cboe veroeffentlicht Indexschlusswerte am selben Handelstagabend, siehe FRED-Metadaten OVXCLS-Analogfall)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         }

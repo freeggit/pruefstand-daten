@@ -2,9 +2,10 @@
   "brent": {
     "beschreibung": "Brent Crude Oil - Europe (DCOILBRENTEU), taeglicher Spotpreis; internationaler Rohoel-Referenzpreis unabhaengig vom bereits vorhandenen WTI (USO/DCOILWTICO)",
     "einheit": "USD je Barrel",
+    "publikation": "woechentlich (EIA-Spotpreis Brent, FRED-Release zeigt 7-Tage-Luecke zwischen Aktualisierungen trotz taeglicher Beobachtungsfrequenz, geprueft 25.9.2026 an DCOILBRENTEU)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich, Handelstage)",
-    "verfuegbar_nach_tagen": 1
+    "verfuegbar_nach_tagen": 8
   }
 }

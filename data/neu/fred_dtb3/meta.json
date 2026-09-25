@@ -2,6 +2,7 @@
   "dtb3": {
     "beschreibung": "3-Monats-US-Schatzwechsel, Sekundaermarkt-Diskontsatz (Federal Reserve H.15, Serie DTB3), taeglich an US-Bankarbeitstagen. Deckt im Unterschied zur CMT-Reihe (treasury_yield_curve:kurz, ab ca. 1990) auch die Zeit vor 1990 ab.",
     "einheit": "Prozent p.a. (Diskontbasis)",
+    "publikation": "taeglich (Fed H.15 Release, taeglich am naechsten Geschaeftstag)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",

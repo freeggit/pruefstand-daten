@@ -84,6 +84,7 @@ def main():
             "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
             "quelle_url": BASE,
             "verdichtung": "Summe der Ereignisse je UTC-Tag",
+            "publikation": 'taeglich (USGS Earthquake API liefert Ereignisse in Echtzeit/nahezu Echtzeit)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         }

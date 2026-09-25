@@ -1,7 +1,8 @@
 {
   "fomc_sitzung": {
-    "beschreibung": "1 am Tag der FOMC-Zinsentscheidung (letzter Sitzungstag bzw. Tag der Erklaerung; alle regulaeren und ausserplanmaessigen Sitzungen/Telefonkonferenzen inklusive Notfallentscheide), sonst 0, fuer jeden Kalendertag ab 1936-01-01 (erstes Jahr mit von der Fed veroeffentlichten historischen Sitzungsunterlagen unter fomchistorical<JAHR>.htm) bis heute.",
+    "beschreibung": "1 am letzten Tag einer planmaessigen FOMC-Sitzung mit im Voraus oeffentlich bekanntem Termin, sonst 0, fuer jeden Kalendertag ab 1936-01-01 (erstes Jahr mit von der Fed veroeffentlichten historischen Sitzungsunterlagen unter fomchistorical<JAHR>.htm) bis heute. Zusatz 5 (25.9.2026): als 'Conference Call', 'unscheduled' oder 'cancelled' annotierte Telefonkonferenzen/Notfall-/Ad-hoc-Sitzungen sind ausgeschlossen, da deren Termin nicht im Voraus bekannt war.",
     "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
     "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm (1936-2020) und https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (ab 2021)",
     "revidiert": false,
     "verdichtung": "keine (aus amtlichen FOMC-Sitzungskalendern der Fed abgeleitet)",
@@ -10,6 +11,7 @@
   "opex_verfall": {
     "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 1973-04-27 (Tag nach Beginn des boersengehandelten Optionshandels an der CBOE, 26.4.1973; erster erfasster Verfalltag damit Juni 1973, siehe Zusatz 4 25.9.2026 E11).",
     "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
     "quelle_url": "https://www.cboe.com/optionsexpirationcalendar/ (Marktkonvention: dritter Freitag der Quartalsmonate) und https://www.cboe.com/about/history/ (Handelsbeginn 26.4.1973)",
     "revidiert": false,
     "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
@@ -18,6 +20,7 @@
   "ustax": {
     "beschreibung": "1 an US-Steuerterminen (15.1., 15.4., 15.6., 15.9., 15.12., feste Kalenderdaten ohne Wochenend-/Feiertagsverschiebung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
     "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
     "quelle_url": "https://www.irs.gov/filing/tax-day-when-are-taxes-due (feste, oeffentlich bekannte Kalendertermine)",
     "revidiert": false,
     "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",

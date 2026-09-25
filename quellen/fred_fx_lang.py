@@ -68,7 +68,8 @@ def main():
             "beschreibung": beschreibung,
             "quelle_url": url,
             "verdichtung": "keine (bereits taeglich)",
-            "verfuegbar_nach_tagen": 1,
+            "publikation": 'woechentlich (Fed H.10 Devisenkurse DEXUSUK/DEXCAUS/DEXUSAL, wie DEXJPUS im Wochentakt gebuendelt veroeffentlicht, geprueft 25.9.2026)',
+            "verfuegbar_nach_tagen": 8,
             "revidiert": False,
         }
     os.makedirs(OUT_DIR, exist_ok=True)

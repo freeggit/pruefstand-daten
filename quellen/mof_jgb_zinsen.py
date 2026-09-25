@@ -90,6 +90,7 @@ def write_reihe(meta, reihe_id, series, status, einheit, beschreibung, verdichtu
         "beschreibung": beschreibung,
         "quelle_url": HIST_URL,
         "verdichtung": verdichtung,
+        "publikation": 'taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)',
         "verfuegbar_nach_tagen": 1,
         "revidiert": False,
         "status": status,

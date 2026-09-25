@@ -60,6 +60,7 @@ def main():
             "beschreibung": "Equity Market-related Economic Uncertainty Index (WLEMUINDXD, Baker/Bloom/Davis), taeglicher text-basierter Index aus Zeitungsartikeln mit Bezug auf Aktienmarkt-Unsicherheit; unterscheidet sich von der bereits vorhandenen allgemeinen Wirtschaftspolitik-Unsicherheit (USEPUINDXD)",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich, Kalendertage inkl. Wochenenden gemaess Quelle)",
+            "publikation": 'taeglich (World/Equity Market Uncertainty Daily Index, policyuncertainty.com aktualisiert fortlaufend an Handelstagen)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

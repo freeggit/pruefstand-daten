@@ -2,6 +2,7 @@
   "effr": {
     "beschreibung": "Effective Federal Funds Rate (DFF), volumengewichteter Median-Tagessatz der Fed-Funds-Transaktionen zwischen US-Banken (taeglich inkl. Wochenenden/Feiertage als Fortschreibung des letzten Handelstags durch die Fed)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Fed H.15/EFFR Release, taeglich am naechsten Geschaeftstag)",
     "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",

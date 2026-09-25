@@ -77,6 +77,7 @@ def main():
             "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
             "quelle_url": BASE,
             "verdichtung": "keine (bereits taeglich)",
+            "publikation": 'taeglich (Daily Treasury Statement, Veroeffentlichung am naechsten Geschaeftstag ca. 16 Uhr ET)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

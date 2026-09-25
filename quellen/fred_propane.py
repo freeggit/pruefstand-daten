@@ -61,7 +61,8 @@ def main():
             "beschreibung": "Propane spot price Mont Belvieu, TX (DPROPANEMBTX), taeglicher Spotpreis; petrochemisches Feedstock- und Heizenergie-Referenzpreis, unabhaengig von WTI/Brent/Henry Hub",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich, US-Handelstage)",
-            "verfuegbar_nach_tagen": 1,
+            "publikation": 'woechentlich (EIA-Spotpreis Propan Mont Belvieu, FRED-Release zeigt 7-Tage-Luecke, geprueft 25.9.2026 an DPROPANEMBTX)',
+            "verfuegbar_nach_tagen": 8,
             "revidiert": False,
         }
     }

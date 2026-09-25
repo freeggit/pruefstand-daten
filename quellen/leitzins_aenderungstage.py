@@ -48,12 +48,21 @@ def change_days(rows):
     return out
 
 
+# Zusatz 5 (25.9.2026): vor dem 4.2.1994 gab das FOMC Zielsatzaenderungen nicht
+# am Entscheidtag bekannt (erste zeitgleiche Bekanntgabe: Sitzung vom 4.2.1994);
+# vorherige Aenderungen wurden vom Markt erst mit Verzug aus Open-Market-Operationen
+# erschlossen. Ohne belegtes frueheres Bekanntgabedatum je Termin faellt die Reihe
+# vor diesem Datum weg (K4/Zusatz 5).
+FOMC_CUTOFF = "1994-02-04"
+
+
 def build_fomc():
     pre = parse(fetch(URL_DFEDTAR))
     post = parse(fetch(URL_DFEDTARU))
     combined = pre + post
     combined.sort()
-    return change_days(combined)
+    flags = change_days(combined)
+    return [(d, v) for d, v in flags if d >= FOMC_CUTOFF]
 
 
 def build_ezb():
@@ -86,9 +95,10 @@ def main():
     meta = {
         "fomc": {
             "einheit": "Indikator (0/1)",
-            "beschreibung": "1 am Tag, an dem sich das von der Fed gesetzte Leitzins-Zielband gegenueber dem Vortag aendert (abgeleitet aus den taeglichen FRED-Reihen DFEDTAR bis 2008-12-15, danach DFEDTARU), sonst 0. Erfasst nur tatsaechliche Zielsatzaenderungen, nicht jede FOMC-Sitzung mit Halte-Entscheid.",
+            "beschreibung": "1 am Tag, an dem sich das von der Fed gesetzte Leitzins-Zielband gegenueber dem Vortag aendert (abgeleitet aus den taeglichen FRED-Reihen DFEDTAR bis 2008-12-15, danach DFEDTARU), sonst 0. Erfasst nur tatsaechliche Zielsatzaenderungen, nicht jede FOMC-Sitzung mit Halte-Entscheid. Beginnt erst am 1994-02-04 (Zusatz 5): davor wurden Zielsatzaenderungen nicht am Entscheidtag bekanntgegeben.",
             "quelle_url": URL_DFEDTARU,
             "verdichtung": "keine (bereits taeglich, Aenderungsindikator aus taeglicher Zielsatzreihe abgeleitet)",
+            "publikation": 'taeglich (Entscheiddatum am Tag der Bekanntgabe oeffentlich, Reihe wird taeglich fortgeschrieben)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         },
@@ -97,6 +107,7 @@ def main():
             "beschreibung": "1 am Tag, an dem sich der EZB-Einlagensatz (ECBDFR) gegenueber dem Vortag aendert, sonst 0. Erfasst nur tatsaechliche Satzaenderungen, nicht jede EZB-Ratssitzung mit Halte-Entscheid.",
             "quelle_url": URL_ECBDFR,
             "verdichtung": "keine (bereits taeglich, Aenderungsindikator aus taeglicher Zinsreihe abgeleitet)",
+            "publikation": 'taeglich (Entscheiddatum am Tag der Bekanntgabe oeffentlich, Reihe wird taeglich fortgeschrieben)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         },

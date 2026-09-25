@@ -2,6 +2,7 @@
   "tga": {
     "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
     "einheit": "Millionen USD",
+    "publikation": "taeglich (Daily Treasury Statement, Veroeffentlichung am naechsten Geschaeftstag ca. 16 Uhr ET)",
     "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich)",

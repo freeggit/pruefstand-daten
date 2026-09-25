@@ -66,6 +66,7 @@ def main():
             "beschreibung": beschreibung,
             "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=%s" % fred_id,
             "verdichtung": "keine (bereits taeglich, Handelstage)",
+            "publikation": 'taeglich (Cboe OVX/GVZ/VXEEM Schlusswerte, laut FRED-Metadaten taeglich ohne Wochenluecke gespiegelt, geprueft 25.9.2026)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }

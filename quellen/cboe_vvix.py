@@ -63,6 +63,7 @@ def main():
             "beschreibung": "Cboe VVIX Index (Volatilitaet der Volatilitaet, aus VIX-Optionen), taeglicher Schlusswert",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich)",
+            "publikation": 'taeglich (Cboe veroeffentlicht Indexschlusswerte am selben Handelstagabend)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         }

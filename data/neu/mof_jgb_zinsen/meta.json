@@ -2,6 +2,7 @@
   "kurz": {
     "beschreibung": "Japanische Staatsanleihen (JGB), kurzes Ende der Zinskurve, Laufzeit 1 Jahr (keine kuerzere Laufzeit oeffentlich verfuegbar; Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "aktiv",
@@ -11,6 +12,7 @@
   "niveau": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Zinsniveau 10 Jahre, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "aktiv",
@@ -20,6 +22,7 @@
   "steilheit": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Zinskurve Steilheit 10J minus 2J (Ministry of Finance Japan)",
     "einheit": "Prozentpunkte",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "aktiv",
@@ -29,6 +32,7 @@
   "y1": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 1Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -38,6 +42,7 @@
   "y10": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 10Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -47,6 +52,7 @@
   "y15": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 15Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -56,6 +62,7 @@
   "y2": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 2Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -65,6 +72,7 @@
   "y20": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 20Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -74,6 +82,7 @@
   "y25": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 25Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -83,6 +92,7 @@
   "y3": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 3Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -92,6 +102,7 @@
   "y30": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 30Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -101,6 +112,7 @@
   "y4": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 4Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -110,6 +122,7 @@
   "y40": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 40Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -119,6 +132,7 @@
   "y5": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 5Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -128,6 +142,7 @@
   "y6": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 6Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -137,6 +152,7 @@
   "y7": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 7Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -146,6 +162,7 @@
   "y8": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 8Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",
@@ -155,6 +172,7 @@
   "y9": {
     "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 9Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
     "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
     "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
     "revidiert": false,
     "status": "ruhend",

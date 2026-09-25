@@ -106,6 +106,10 @@ def build_manifest(katalog, abruf_fehler):
                 "quelle_url": minfo.get("quelle_url"),
                 "verdichtung": minfo.get("verdichtung"),
                 "verfuegbar_nach_tagen": minfo.get("verfuegbar_nach_tagen"),
+                # Zusatz 5: Publikationsregel je Reihe (taeglich/woechentlich/verzoegert
+                # mit Beleg), damit die Suchmaschine den tatsaechlichen
+                # Veroeffentlichungstag statt des Beobachtungstags kennt.
+                "publikation": minfo.get("publikation"),
                 "revidiert": minfo.get("revidiert"),
                 # Zusatz 3: je-Reihe-Status aus meta.json uebernehmen (Standard "aktiv"
                 # fuer Quellen ohne eigenes Status-Feld). Die Suchmaschine liest nur "aktiv".

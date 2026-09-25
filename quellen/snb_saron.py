@@ -76,6 +76,7 @@ def main():
             "beschreibung": "SARON Uebernacht-Referenzzinssatz (Schlusskurs), SNB Datenportal Cube zirepo, Dimension H0",
             "quelle_url": "https://data.snb.ch/en/topics/ziredev/cube/zirepo",
             "verdichtung": "keine (bereits taeglich)",
+            "publikation": 'woechentlich (SNB-Datenportal SARON-Cube aktualisiert wochentlich nachlaufend statt taeglich, siehe Katalog-Grund; verfuegbar_nach_tagen 8 bestaetigt)',
             "verfuegbar_nach_tagen": 8,
             "revidiert": False,
         }

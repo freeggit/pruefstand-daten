@@ -2,6 +2,7 @@
   "bund10y": {
     "beschreibung": "Rendite der aktuellen zehnjaehrigen Bundesanleihe (Daily yield of current 10-year federal bond)",
     "einheit": "Prozent",
+    "publikation": "taeglich (Bundesbank Zeitreihen-Datenbank aktualisiert Umlaufsrenditen taeglich)",
     "quelle_url": "https://www.bundesbank.de/en/statistics/money-and-capital-markets/interest-rates-and-yields/daily-yields-of-current-federal-securities-772220",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich, nur Bankarbeitstage; Tage ohne Wert (Feiertage) ausgelassen)",
@@ -10,6 +11,7 @@
   "bund2y": {
     "beschreibung": "Rendite der aktuellen zweijaehrigen Bundesschatzanweisung (Daily yield of current two-year Federal Treasury notes)",
     "einheit": "Prozent",
+    "publikation": "taeglich (Bundesbank Zeitreihen-Datenbank aktualisiert Umlaufsrenditen taeglich)",
     "quelle_url": "https://www.bundesbank.de/en/statistics/money-and-capital-markets/interest-rates-and-yields/daily-yields-of-current-federal-securities-772220",
     "revidiert": false,
     "verdichtung": "keine (bereits taeglich, nur Bankarbeitstage; Tage ohne Wert (Feiertage) ausgelassen)",

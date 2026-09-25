@@ -61,6 +61,7 @@ def main():
             "beschreibung": "Effective Federal Funds Rate (DFF), volumengewichteter Median-Tagessatz der Fed-Funds-Transaktionen zwischen US-Banken (taeglich inkl. Wochenenden/Feiertage als Fortschreibung des letzten Handelstags durch die Fed)",
             "quelle_url": URL,
             "verdichtung": "keine (bereits taeglich)",
+            "publikation": 'taeglich (Fed H.15/EFFR Release, taeglich am naechsten Geschaeftstag)',
             "verfuegbar_nach_tagen": 1,
             "revidiert": False,
         }
