@@ -1,5 +1,5 @@
 {
- "kumuliert": 176536,
+ "kumuliert": 303980,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -465,8 +465,16 @@
    "datei": "suche/S0006.json",
    "kandidaten": 127632,
    "in_db": false
+  },
+  {
+   "nr": 7,
+   "datei": "suche/S0007.json",
+   "kandidaten": 127444,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-09-25T10:22Z",
- "pruefung_lernrunde_utc": "2026-09-25T09:40:00Z"
+ "letzter_suchlauf_utc": "2026-09-25T11:46Z",
+ "pruefung_lernrunde_utc": "2026-09-25T09:40:00Z",
+ "letzter_code_hash": "883c4dc9b58f8e22",
+ "methode": "M2"
 }
