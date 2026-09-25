@@ -1110,26 +1110,52 @@
   {
     "id": "us_arbeitsmarkt_termine",
     "name": "US-Arbeitsmarktbericht (Employment Situation) Veroeffentlichungstage der BLS",
-    "url": "https://www.bls.gov/schedule/news_release/empsit.htm",
-    "domain": "bls.gov",
+    "url": "https://alfred.stlouisfed.org/release/downloaddates?rid=50&ff=txt",
+    "domain": "alfred.stlouisfed.org",
     "bereich": "Kalender",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Der monatliche Erstfreitag-Arbeitsmarktbericht ist der markttbewegendste US-Makrotermin; ueberraschende Abweichungen loesen kurzfristig (1-20 Handelstage) Bewegungen in zinssensitiven Sektoren (XLF, TLT) und breiten Indizes gegenueber dem Weltindex aus.",
-    "grund": "Bereits in kalender_ereignisse als naechster Schritt vorgemerkt (Ergaenzung 2026-09-25, aus Zeitgruenden nicht umgesetzt). Terminkalender der BLS oeffentlich, Historie seit Jahrzehnten dokumentiert, deterministisch nach Veroeffentlichung nicht revidierbar.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Zusatz 4 Punkt 1 (Termine US-Arbeitsmarktbericht). bls.gov ist aus dieser Umgebung domainweit mit HTTP 403 gesperrt (bestaetigt 2026-09-25T06:13:45Z, Eintrag bls_veroeffentlichungstage, gleicher Block wie sec.gov/edgar). Alternative gefunden und genutzt: alfred.stlouisfed.org (andere Domain, kein API-Schluessel, kein Login) fuehrt unter /release/downloaddates?rid=50&ff=txt das offizielle Terminarchiv der tatsaechlichen Veroeffentlichungstage des BLS-Release 'Employment Situation' als einfache Textdatei, abrufbar mit urllib. K1 taeglich: jeder Kalendertag hat eine Zeile (Median-Abstand 1 Tag). K2 Historie: ALFRED fuehrt Termine ab 1955-05-06 (864 Termine bis 2026-09-04); als Reihenbeginn dennoch bewusst 1985-01-01 gewaehlt (siehe unten, Zusatz 5). K3 offen: kein Login/Schluessel, Textdownload ohne Einschraenkung erreichbar. K4 punktgenau: vergangene amtliche Veroeffentlichungstermine werden nicht revidiert (nur der gemeldete Zahlenwert, nicht das Publikationsdatum). K5 laufend: Skript berechnet bei jedem Lauf bis zum aktuellen Tag, naechster bekannter Termin wird am jeweiligen Tag automatisch zur Zeile. K6 neu: keine BLS-Terminreihe im bestehenden Spiegel. K7 Umfang: unter 1 KB komprimiert, Abruf < 1 Sekunde. Pruefung: 15243 Zeilen (1985-01-01 bis 2026-09-25), 508 Ereignistage (~12.2/Jahr, plausibel fuer einen monatlichen Bericht ueber 41.7 Jahre inkl. vereinzelter Zusatztermine bei Nachtragsrevisionen desselben Release), Anteil gleicher Folgewerte 0.9333 (bei binaerer 0/1-Indikatorreihe erwartungsgemaess, siehe Begruendung bei kalender_ereignisse), Min 0 / Max 1 plausibel. Zusatz 5 (Reihenbeginn 1985-01-01 statt ALFRED-Start 1955): OMB Statistical Policy Directive No. 3 (1985, https://www.bls.gov/bls/statistical-policy-directive-3.pdf) verpflichtet Bundesbehoerden seither belegt zu einem im Voraus veroeffentlichten Jahres-Terminkalender fuer Principal Federal Economic Indicators (Employment Situation eingeschlossen); fuer die Jahre davor ist eine vergleichbare, im Voraus bekannte Ankuendigungspraxis nicht mit Primaerquelle belegt, daher verfuegbar_nach_tagen=0 nur ab 1985 verwendet (keine Termine erfunden oder ohne Beleg als vorab bekannt behauptet).",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "reihen": [
+      {
+        "reihe": "arbeitsmarkt",
+        "zeilen": 15243,
+        "erste": "1985-01-01",
+        "letzte": "2026-09-25",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9333,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ],
+    "geprueft_utc": "2026-09-25T16:14:33Z"
   },
   {
     "id": "us_cpi_termine",
     "name": "US-Verbraucherpreisindex (CPI) Veroeffentlichungstage der BLS",
-    "url": "https://www.bls.gov/schedule/news_release/cpi.htm",
-    "domain": "bls.gov",
+    "url": "https://alfred.stlouisfed.org/release/downloaddates?rid=10&ff=txt",
+    "domain": "alfred.stlouisfed.org",
     "bereich": "Kalender",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "CPI-Veroeffentlichungstage sind ein zentraler, im Voraus bekannter Inflationstermin; ueberraschende Abweichungen bewegen kurzfristig Anleihen (TLT, TIP) und breite Indizes gegenueber dem Weltindex.",
-    "grund": "Ebenfalls in kalender_ereignisse als naechster Schritt vorgemerkt. Oeffentlicher Terminkalender, deterministisch, keine Revision der Terminliste selbst (nur der gemeldete Wert wird revidiert, nicht der Publikationstag).",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Zusatz 4 Punkt 1 (Termine Inflation/CPI). bls.gov ist aus dieser Umgebung domainweit mit HTTP 403 gesperrt (bestaetigt 2026-09-25T06:13:45Z, Eintrag bls_veroeffentlichungstage, gleicher Block wie sec.gov/edgar). Alternative gefunden und genutzt: alfred.stlouisfed.org (andere Domain, kein API-Schluessel, kein Login) fuehrt unter /release/downloaddates?rid=10&ff=txt das offizielle Terminarchiv der tatsaechlichen Veroeffentlichungstage des BLS-Release 'Consumer Price Index' als einfache Textdatei, abrufbar mit urllib. K1 taeglich: jeder Kalendertag hat eine Zeile (Median-Abstand 1 Tag). K2 Historie: ALFRED fuehrt Termine ab 1949-03-24 (950 Termine bis 2026-09-11); als Reihenbeginn dennoch bewusst 1985-01-01 gewaehlt (siehe unten, Zusatz 5). K3 offen: kein Login/Schluessel, Textdownload ohne Einschraenkung erreichbar. K4 punktgenau: vergangene amtliche Veroeffentlichungstermine werden nicht revidiert (nur der gemeldete Indexwert, nicht das Publikationsdatum). K5 laufend: Skript berechnet bei jedem Lauf bis zum aktuellen Tag, naechster bekannter Termin wird am jeweiligen Tag automatisch zur Zeile. K6 neu: keine CPI-Terminreihe im bestehenden Spiegel. K7 Umfang: unter 1 KB komprimiert, Abruf < 1 Sekunde. Pruefung: 15243 Zeilen (1985-01-01 bis 2026-09-25), 520 Ereignistage (~12.5/Jahr, plausibel fuer einen monatlichen Bericht ueber 41.7 Jahre inkl. vereinzelter Zusatztermine bei Nachtragsrevisionen desselben Release), Anteil gleicher Folgewerte 0.9318 (bei binaerer 0/1-Indikatorreihe erwartungsgemaess, siehe Begruendung bei kalender_ereignisse), Min 0 / Max 1 plausibel. Zusatz 5 (Reihenbeginn 1985-01-01 statt ALFRED-Start 1949): OMB Statistical Policy Directive No. 3 (1985, https://www.bls.gov/bls/statistical-policy-directive-3.pdf) verpflichtet Bundesbehoerden seither belegt zu einem im Voraus veroeffentlichten Jahres-Terminkalender fuer Principal Federal Economic Indicators (CPI eingeschlossen); fuer die Jahre davor ist eine vergleichbare, im Voraus bekannte Ankuendigungspraxis nicht mit Primaerquelle belegt, daher verfuegbar_nach_tagen=0 nur ab 1985 verwendet (keine Termine erfunden oder ohne Beleg als vorab bekannt behauptet).",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "reihen": [
+      {
+        "reihe": "cpi",
+        "zeilen": 15243,
+        "erste": "1985-01-01",
+        "letzte": "2026-09-25",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9318,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ],
+    "geprueft_utc": "2026-09-25T16:14:33Z"
   },
   {
     "id": "china_pboc_leitzins",

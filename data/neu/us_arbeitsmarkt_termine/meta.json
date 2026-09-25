@@ -1,0 +1,11 @@
+{
+  "arbeitsmarkt": {
+    "beschreibung": "1 am Veroeffentlichungstag des monatlichen US-Arbeitsmarktberichts (Employment Situation, BLS), sonst 0, fuer jeden Kalendertag ab 1985-01-01 bis heute. Termine aus dem ALFRED-Archiv der tatsaechlichen Veroeffentlichungstage dieses Release (rid=50).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Veroeffentlichungstermin laut OMB Statistical Policy Directive No. 3 (1985) im Voraus als Jahreskalender oeffentlich bekannt gegeben, https://www.bls.gov/bls/statistical-policy-directive-3.pdf)",
+    "quelle_url": "https://alfred.stlouisfed.org/release/downloaddates?rid=50&ff=txt (Terminarchiv, ALFRED/Federal Reserve Bank of St. Louis) und https://www.bls.gov/ces/ (Urheber-Release, aus dieser Umgebung mit HTTP 403 gesperrt, siehe Katalogeintrag bls_veroeffentlichungstage)",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Terminarchiv uebernommen)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
