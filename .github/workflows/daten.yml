@@ -14,7 +14,7 @@ concurrency:
 jobs:
   spiegel:
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -32,9 +32,9 @@ jobs:
         if: always()
         run: python fetch_sec.py
         env:
-          SEC_BUDGET_MIN: "15"
+          SEC_BUDGET_MIN: "40"
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # «Pruefstand Research <Kontaktadresse>», nur als Secret
-        timeout-minutes: 20
+        timeout-minutes: 45
         continue-on-error: true
       - name: Manifest sichern
         if: always()
