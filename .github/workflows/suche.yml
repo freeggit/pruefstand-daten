@@ -1,0 +1,62 @@
+name: Prüfstand Suche
+# V3.4 (E9): Suchlauf in der GitHub Action statt in der Routine. Ergebnis auf dem Zweig claude/lernen.
+on:
+  schedule:
+    - cron: "0 5 * * *"          # täglich 07:00 Sommerzeit, nach Datenspiegel (03:15 UTC) und Strom (02:30 UTC)
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", ".github/workflows/suche.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: suche
+  cancel-in-progress: false
+jobs:
+  suche:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - name: Pakete
+        run: pip install -q numpy pandas
+      - name: Zweige holen
+        run: |
+          for z in daten-energie daten-neu lernen; do
+            if git ls-remote --exit-code --heads origin claude/$z >/dev/null 2>&1; then
+              if [ "$z" = "lernen" ]; then git fetch -q origin claude/$z:refs/remotes/origin/claude/$z
+              else git fetch -q --depth 1 origin claude/$z:refs/remotes/origin/claude/$z; fi
+              git worktree add -q --detach _$z origin/claude/$z
+              echo "claude/$z: $(git -C _$z log -1 --format='%h %ci')"
+            else
+              echo "Zweig claude/$z fehlt"
+            fi
+          done
+          if [ ! -d _lernen ]; then
+            git worktree add -q --detach _lernen HEAD
+            cd _lernen && git checkout -q --orphan lernen-neu && git rm -rq --cached . && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          fi
+      - name: Suchlauf
+        run: python suche_lauf.py
+        env:
+          PS_PLACEBO: "20"
+        timeout-minutes: 200
+      - name: Einchecken auf claude/lernen
+        run: |
+          cd _lernen
+          git config user.name "pruefstand-bot"
+          git config user.email "pruefstand-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "keine Änderung"; exit 0; fi
+          git commit -q -m "Suchlauf $(date -u +%Y-%m-%dT%H:%MZ) (GitHub Action)"
+          for i in 1 2 3; do
+            if git ls-remote --exit-code --heads origin claude/lernen >/dev/null 2>&1; then
+              git fetch -q origin claude/lernen && git rebase -q origin/claude/lernen && git push -q origin HEAD:claude/lernen && exit 0
+            else
+              git push -q origin HEAD:claude/lernen && exit 0
+            fi
+            sleep 20
+          done
+          exit 1
