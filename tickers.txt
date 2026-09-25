@@ -26,3 +26,14 @@ tlt
 bas.de
 hlag.de
 knin.sw
+# Ziele V3.4 (E13, ab 25.9.2026): Schwellenländer, Länder, Halbleiter, Biotech, Anleihen nach Laufzeit und Bonität
+eem
+ewz
+fxi
+smh
+ibb
+tip
+lqd
+ief
+shy
+ewu

@@ -194,7 +194,8 @@ def fred():
 
 def french():
     base = "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/"
-    files = ["F-F_Research_Data_Factors_CSV.zip", "F-F_Research_Data_5_Factors_2x3_CSV.zip", "12_Industry_Portfolios_CSV.zip", "F-F_Momentum_Factor_CSV.zip"]
+    files = ["F-F_Research_Data_Factors_CSV.zip", "F-F_Research_Data_5_Factors_2x3_CSV.zip", "12_Industry_Portfolios_CSV.zip", "F-F_Momentum_Factor_CSV.zip",
+             "12_Industry_Portfolios_daily_CSV.zip", "F-F_Research_Data_Factors_daily_CSV.zip"]   # Tagesdaten für die Langzeit-Discovery (V3.4, E11)
     os.makedirs(f"{OUT}/french", exist_ok=True)
     for fn in files:
         key = f"french:{fn}"
