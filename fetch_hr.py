@@ -50,7 +50,8 @@ def get(url, tries=2, pause=3):
             if e.code == 404:
                 raise KeineDaten(url)
             last = e
-            warte = 20 * (i + 1) if e.code == 429 else pause
+            ra = (e.headers.get("Retry-After") or "").strip() if e.headers else ""
+            warte = (min(int(ra), 120) if ra.isdigit() else 20 * (i + 1)) if e.code == 429 else pause
             log(f"HTTP {e.code} ({i + 1}/{tries}), warte {warte}s | {url[:90]}")
             time.sleep(warte)
         except Exception as e:  # noqa
@@ -234,16 +235,21 @@ def wiki():
         try:
             url = (f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{proj}.wikipedia/all-access/user/"
                    f"{urllib.parse.quote(art, safe='')}/daily/20150701/{ende}")
-            items = json.loads(get(url)).get("items", [])
+            items = json.loads(get(url, tries=4)).get("items", [])   # Wikimedia bremst mit 429: bis 3 Wartezeiten
             rows = [[f"{i['timestamp'][:4]}-{i['timestamp'][4:6]}-{i['timestamp'][6:8]}", i["views"]] for i in items]
             if rows:
                 schreibe(pfad, ["datum", "aufrufe"], rows)
                 eintrag(key, datei=pfad, zeilen=len(rows), erste=rows[0][0], letzte=rows[-1][0], aufloesung="1d", quelle="wikimedia pageviews")
             else:
                 eintrag(key, fehler="keine Daten")
+        except Budget:
+            raise
         except Exception as e:
-            eintrag(key, fehler=str(e))
-        time.sleep(0.3)
+            if os.path.exists(pfad):            # alte Datei bleibt gültig (Historie), nur der heutige Abruf fehlt
+                eintrag(key, datei=pfad, abruf_fehler=str(e)[:200], veraltet=True)
+            else:
+                eintrag(key, fehler=str(e))
+        time.sleep(1.5)                          # Wikimedia: Abstand zwischen Artikeln
 
 def umstellen():
     """Einmalig: vorhandene .csv ohne neuen Abruf in .csv.gz umwandeln, damit nichts neu geladen wird."""

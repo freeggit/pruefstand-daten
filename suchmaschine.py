@@ -200,9 +200,22 @@ ind = {}        # name -> (Serie mit Kalendertag-Index, lag)
 EREIGNIS = set()  # Ereignisreihen (nur 0/1): nur Extremtyp «hoch» (= Ereignistag), die übrigen Typen wären Doppel
 basen = {}      # Basisreihe (für Paare) -> (Serie, lag)
 
-def varianten(n, x, lag, neu_varianten=True):
+QUELLE = {}      # Indikator -> Quelle (für die Zählung je Bereich, Lernregel L2)
+
+def quelle_von(name):
+    if name in QUELLE:
+        return QUELLE[name]
+    for p, q in (("wetter_", "wetter"), ("strom_", "strom"), ("wiki_", "wikipedia"), ("btc_", "bitcoin")):
+        if name.startswith(p):
+            return q
+    return "andere"
+
+def varianten(n, x, lag, neu_varianten=True, quelle=None):
     """Stand, 1/5-Tage-Änderung (wie bisher) und neu 20-Tage-Änderung und Abstand zum Jahresmittel (z252)."""
     x = x.dropna()
+    for suffix in ("_stand", "_d1", "_d5", "_d20", "_z252"):
+        if quelle:
+            QUELLE[n + suffix] = quelle
     if set(np.unique(x.values)) <= {0.0, 1.0}:       # Ereignisreihe (Kalender, Zinsentscheid): nur Stand
         ind[f"{n}_stand"] = (x, lag); EREIGNIS.add(f"{n}_stand"); return
     ind[f"{n}_stand"] = (x, lag); ind[f"{n}_d1"] = (x.diff(), lag); ind[f"{n}_d5"] = (x.diff(5), lag)
@@ -222,7 +235,7 @@ for s, v in man["reihen"].items():
         if len(x) < 500 or (x.index.to_series().diff().dt.days.median() > 3):
             continue
         basen[s] = (x, LAG_FRED)
-        varianten(s.split(":", 1)[1], x, LAG_FRED)
+        varianten(s.split(":", 1)[1], x, LAG_FRED, quelle=s)
 
 def hr_manifest():
     try:
@@ -296,7 +309,7 @@ def lade_vertrag(basis, manifest_rel, praefix, kurz):
                 continue
             lag = 1 + int(v.get("verfuegbar_nach_tagen", 1))
             basen[f"{kurz}:{k}"] = (x, lag)
-            varianten(praefix + k.replace(":", "_"), x, lag)
+            varianten(praefix + k.replace(":", "_"), x, lag, quelle=f"{kurz}:{k.split(':')[0]}")
             n_ok += 1
         except Exception as e:
             log(f"{praefix}{k}: {e}")
@@ -327,7 +340,7 @@ if os.path.exists(PAARE):
             s = j.iloc[:, 0] - j.iloc[:, 1]
         if len(s) < 500:
             continue
-        varianten(f"paar_{name}", s, max(la, lb)); N_PAARE += 1
+        varianten(f"paar_{name}", s, max(la, lb), quelle=f"paar:{name}"); N_PAARE += 1
 log(f"Paare: {N_PAARE}")
 
 try:
@@ -489,6 +502,15 @@ if __name__ == "__main__":
     zus["echt_mehr_als_staerkster_placebo"] = bool(int(echt.alle.sum()) > max(zus["placebo_alle_filter_je_lauf"] or [0]))
     pos = echt[(echt.t > 0) & (echt.n >= N_MIN)].sort_values("t", ascending=False).head(10)
     zus["staerkste_positive"] = pos[SPALTEN].round(3).to_dict("records")
+    # Zählung je Quelle (Lernregel L2: Bereich mit >= 5000 Kandidaten und keinem über t 3.5 gilt als erschöpft)
+    echt["quelle"] = echt.indikator.map(quelle_von)
+    jq = {}
+    for q, g in echt.groupby("quelle"):
+        pos = g[(g.t > 0) & (g.n >= N_MIN)]
+        jq[q] = {"kandidaten": int(len(g)), "vorstufe_positiv": int((g.vor & (g.t > 0)).sum()),
+                 "max_t": round(float(pos.t.max()), 2) if len(pos) else None,
+                 "max_t_rob": round(float(pos.t_rob.max()), 2) if len(pos) else None}
+    zus["je_quelle"] = dict(sorted(jq.items()))
     zus["indikatoren_n"] = len(ind)
     zus["indikatoren"] = sorted(ind)
     zus["ziele"] = {fam: f["ziele"] for fam, f in FAM.items()}

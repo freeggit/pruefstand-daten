@@ -103,6 +103,7 @@ S = {
     "langzeit_hinweise": zus["langzeit_hinweise"],
     "staerkste_neue": "; ".join(fmt(r) for r in zus["staerkste_positive"][:3]),
     "staerkste_positive": zus["staerkste_positive"],
+    "je_quelle": zus.get("je_quelle", {}),
     "urteil": urteil,
     "dauer_min": zus.get("dauer_min"),
 }
