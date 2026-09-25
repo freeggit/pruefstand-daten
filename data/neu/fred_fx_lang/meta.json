@@ -1,0 +1,26 @@
+{
+  "audusd": {
+    "beschreibung": "USD/AUD-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXUSAL).",
+    "einheit": "USD je AUD",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSAL",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "gbpusd": {
+    "beschreibung": "USD/GBP-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXUSUK).",
+    "einheit": "USD je GBP",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSUK",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "usdcad": {
+    "beschreibung": "USD/CAD-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXCAUS).",
+    "einheit": "CAD je USD",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXCAUS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

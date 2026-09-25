@@ -320,13 +320,13 @@
     "bereich": "Kalender",
     "status": "aktiv",
     "mechanismus": "US-Steuertermine (Kapitalzufluss/-abfluss beim Fiskus, moeglicher Effekt auf Liquiditaet/TGA) und der grosse Quartalsverfall (drei Freitag Maerz/Juni/September/Dezember, zugleich S&P-Quartalsneugewichtung) sind deterministische, im Voraus bekannte Kalendertage, an denen kurzfristig (1-20 Handelstage) erhoehte Umsaetze, Rebalancing-Fluesse oder Liquiditaetsverschiebungen auftreten koennen, die einzelne Sektoren/den Gesamtmarkt gegenueber dem Weltindex beeinflussen. Zweck gemaess Vorgabe (Zusatz 2): Replikation/Zerlegung des Beinahe-Treffers TGA -> XLE, um zu pruefen, ob dahinter ein Steuertermin- oder ein Verfalls-Effekt steht.",
-    "grund": "K1-K7 erfuellt, ohne jeden externen Datenabruf (rein deterministische Kalenderberechnung in Python-Standardbibliothek datetime): K1 taeglich (jeder Kalendertag hat eine Zeile, Median-Abstand 1 Tag). K2 Historie ab 2001-01-01 (9398 Werte je Reihe), weit vor 31.12.2015. K3 offen: kein Login/Schluessel, keine Webabhaengigkeit, Daten sind reine Kalenderarithmetik auf Basis oeffentlich bekannter, fester Regeln (IRS-Steuertermine 15.1./15.4./15.6./15.9./15.12. ohne Wochenend-/Feiertagsverschiebung gemaess Vorgabetext; dritter Freitag der Quartalsmonate als Marktkonvention fuer Quadruple Witching). K4 punktgenau: feste, historische Kalendertage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf automatisch bis zum aktuellen Tag, keine Zukunftszeilen. K6 neu: keine Kalender-/Ereignisreihe im bestehenden Spiegel. K7 Umfang: unter 25 KB komprimiert je Reihe, Berechnung <0.1 Sek. Pruefung: ustax 129 Ereignistage von 9398 Tagen (2001-2026, 2026 erst 4 von 5 Terminen erreicht), opex_verfall 103 Ereignistage von 9398 Tagen (2026 erst 3 von 4 Terminen erreicht); beide Werte 0/1 plausibel, keine Duplikate, Stichprobe (dritter Freitag September 2026 = 2026-09-18, von Hand geprueft) korrekt. Anteil gleicher Folgewerte liegt bei binaeren 0/1-Indikatorreihen naturgemaess weit ueber der 20%-Verdachtsschwelle (>98%, da die meisten Tage 0 sind); das ist bei dieser Reihenart kein Qualitaetsmangel, sondern erwartungsgemaess, da die Schwelle auf stetige Messreihen zielt. Ergaenzung 2026-09-25 (Zusatz 2, Ideenraum 1 Kalender-Ereignisse: 'Termine ... FOMC- und EZB-Zinsentscheide'): neue Reihe fomc_sitzung. Mechanismus: Tag der FOMC-Zinsentscheidung ist im Voraus bekannt (verfuegbar_nach_tagen 0) und kann kurzfristig (1-20 Handelstage) Zinssensitive Sektoren (v.a. XLF, XLRE, XLU) und Anleihen gegenueber dem Weltindex bewegen; ergaenzt ustax/opex_verfall um den dritten im Vorgabetext genannten Terminetyp. K1-K7 wie ustax/opex_verfall erfuellt: K1 taeglich (Median 1 Tag). K2 ab 2001-01-01 (9399 Werte). K3 offen: amtliche FOMC-Sitzungskalender der Fed (federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm fuer 2001-2020, fomccalendars.htm ab 2021), oeffentlich ohne Login/Schluessel, kein Umgehen von Sperren (beide Endpunkte antworten normal). K4 punktgenau: abgeschlossene Sitzungstermine der Vergangenheit werden nie revidiert. K5 laufend: bei jedem Lauf neu bis zum aktuellen Tag berechnet, keine Zukunftszeilen (kuenftige, im Kalender bereits gelistete Sitzungen wie Okt/Dez 2026 werden erst am jeweiligen Tag als Zeile geschrieben). K6 neu: keine FOMC-Termin-Reihe im bestehenden Spiegel oder in dieser Quelle. K7 Umfang: unter 200 KB, Abruf (21 historische Jahresseiten + 1 Kalenderseite) 5 Sekunden. Pruefung: 229 Ereignistage von 9399 Tagen (2001-01-03 bis 2026-09-16 letzter erreichter Termin), Stichprobe gegen bekannte Daten (2001-01-03 Notfall-Telefonkonferenz nach Rezessionssorgen, 2008-10-07/2020-03-02+03-15 Notfall-sitzungen Finanzkrise/Covid, 2019 April/Mai-Sitzung ueber Monatsgrenze als 2019-05-01 erfasst) von Hand bestaetigt; Anteil gleicher Folgewerte 0.9756, bei binaerer 0/1-Indikatorreihe erwartungsgemaess (siehe Begruendung oben bei ustax/opex_verfall).",
+    "grund": "K1-K7 erfuellt, ohne jeden externen Datenabruf (rein deterministische Kalenderberechnung in Python-Standardbibliothek datetime): K1 taeglich (jeder Kalendertag hat eine Zeile, Median-Abstand 1 Tag). K2 Historie ab 2001-01-01 (9398 Werte je Reihe), weit vor 31.12.2015. K3 offen: kein Login/Schluessel, keine Webabhaengigkeit, Daten sind reine Kalenderarithmetik auf Basis oeffentlich bekannter, fester Regeln (IRS-Steuertermine 15.1./15.4./15.6./15.9./15.12. ohne Wochenend-/Feiertagsverschiebung gemaess Vorgabetext; dritter Freitag der Quartalsmonate als Marktkonvention fuer Quadruple Witching). K4 punktgenau: feste, historische Kalendertage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf automatisch bis zum aktuellen Tag, keine Zukunftszeilen. K6 neu: keine Kalender-/Ereignisreihe im bestehenden Spiegel. K7 Umfang: unter 25 KB komprimiert je Reihe, Berechnung <0.1 Sek. Pruefung: ustax 129 Ereignistage von 9398 Tagen (2001-2026, 2026 erst 4 von 5 Terminen erreicht), opex_verfall 103 Ereignistage von 9398 Tagen (2026 erst 3 von 4 Terminen erreicht); beide Werte 0/1 plausibel, keine Duplikate, Stichprobe (dritter Freitag September 2026 = 2026-09-18, von Hand geprueft) korrekt. Anteil gleicher Folgewerte liegt bei binaeren 0/1-Indikatorreihen naturgemaess weit ueber der 20%-Verdachtsschwelle (>98%, da die meisten Tage 0 sind); das ist bei dieser Reihenart kein Qualitaetsmangel, sondern erwartungsgemaess, da die Schwelle auf stetige Messreihen zielt. Ergaenzung 2026-09-25 (Zusatz 2, Ideenraum 1 Kalender-Ereignisse: 'Termine ... FOMC- und EZB-Zinsentscheide'): neue Reihe fomc_sitzung. Mechanismus: Tag der FOMC-Zinsentscheidung ist im Voraus bekannt (verfuegbar_nach_tagen 0) und kann kurzfristig (1-20 Handelstage) Zinssensitive Sektoren (v.a. XLF, XLRE, XLU) und Anleihen gegenueber dem Weltindex bewegen; ergaenzt ustax/opex_verfall um den dritten im Vorgabetext genannten Terminetyp. K1-K7 wie ustax/opex_verfall erfuellt: K1 taeglich (Median 1 Tag). K2 ab 2001-01-01 (9399 Werte). K3 offen: amtliche FOMC-Sitzungskalender der Fed (federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm fuer 2001-2020, fomccalendars.htm ab 2021), oeffentlich ohne Login/Schluessel, kein Umgehen von Sperren (beide Endpunkte antworten normal). K4 punktgenau: abgeschlossene Sitzungstermine der Vergangenheit werden nie revidiert. K5 laufend: bei jedem Lauf neu bis zum aktuellen Tag berechnet, keine Zukunftszeilen (kuenftige, im Kalender bereits gelistete Sitzungen wie Okt/Dez 2026 werden erst am jeweiligen Tag als Zeile geschrieben). K6 neu: keine FOMC-Termin-Reihe im bestehenden Spiegel oder in dieser Quelle. K7 Umfang: unter 200 KB, Abruf (21 historische Jahresseiten + 1 Kalenderseite) 5 Sekunden. Pruefung: 229 Ereignistage von 9399 Tagen (2001-01-03 bis 2026-09-16 letzter erreichter Termin), Stichprobe gegen bekannte Daten (2001-01-03 Notfall-Telefonkonferenz nach Rezessionssorgen, 2008-10-07/2020-03-02+03-15 Notfall-sitzungen Finanzkrise/Covid, 2019 April/Mai-Sitzung ueber Monatsgrenze als 2019-05-01 erfasst) von Hand bestaetigt; Anteil gleicher Folgewerte 0.9756, bei binaerer 0/1-Indikatorreihe erwartungsgemaess (siehe Begruendung oben bei ustax/opex_verfall). Ergaenzung 2026-09-25T08:16:00Z (Zusatz 4, 25.9.2026, E11 Historie vor 1990, Prioritaet hoch, Punkt 1 'Kalender-Ereignisse rueckwaerts verlaengern'): opex_verfall und fomc_sitzung rueckwaerts verlaengert, so weit die jeweilige Regel/Quelle belegt ist, keine Tage erfunden. opex_verfall neu ab 1973-04-27 (Tag nach Handelsbeginn boersengehandelter Optionen an der CBOE 26.4.1973, https://www.cboe.com/about/history/; erster erfasster Verfalltag Juni 1973), 19510 Zeilen, 214 Ereignistage (~4/Jahr ueber 53.4 Jahre, plausibel). fomc_sitzung neu ab 1936-01-01 (erstes Jahr mit von der Fed unter fomchistorical<JAHR>.htm veroeffentlichten historischen Sitzungsunterlagen; getestet 1936-2020 stichprobenartig, durchgehend Treffer, gleiches Skript-Muster/Regex wie 2001-2020), 33141 Zeilen, 996 Entscheidtage (~11/Jahr im Schnitt, hoehere Sitzungsfrequenz in frueheren Jahrzehnten plausibel gegenueber heute 8 Sitzungen/Jahr). ustax bewusst bei 2001-01-01 belassen: die genauen US-Vierteljahres-Steuertermine (15.1./15.4./15.6./15.9.) vor der Reform von 1966/67 (Individual Estimated Tax Act) folgten einem anderen Muster; ohne verifizierte Primaerquelle fuer die genauen historischen Stichtage wird hier nichts geschaetzt (Verbot: Daten erfinden); Recherche fuer einen spaeteren Lauf vorgemerkt. Neue Kandidaten 'Termine US-Arbeitsmarktbericht und Inflation (CPI)' aus Zusatz 4 Punkt 1 in diesem Lauf aus Zeitgruenden nicht umgesetzt (BLS-Veroeffentlichungskalender bls_veroeffentlichungstage bereits am 2026-09-25T06:13:45Z wegen HTTP-Sperre abgelehnt; historische Terminliste braucht eigene Quelle/Recherche, vorgemerkt fuer naechsten Lauf).",
     "reihen": [
       {
         "reihe": "ustax",
-        "zeilen": 9398,
+        "zeilen": 9399,
         "erste": "2001-01-01",
-        "letzte": "2026-09-24",
+        "letzte": "2026-09-25",
         "median_abstand_tage": 1,
         "anteil_gleiche_folgewerte": 0.9863,
         "min": 0.0,
@@ -334,9 +334,9 @@
       },
       {
         "reihe": "opex_verfall",
-        "zeilen": 9398,
-        "erste": "2001-01-01",
-        "letzte": "2026-09-24",
+        "zeilen": 19510,
+        "erste": "1973-04-27",
+        "letzte": "2026-09-25",
         "median_abstand_tage": 1,
         "anteil_gleiche_folgewerte": 0.989,
         "min": 0.0,
@@ -344,8 +344,8 @@
       },
       {
         "reihe": "fomc_sitzung",
-        "zeilen": 9399,
-        "erste": "2001-01-01",
+        "zeilen": 33141,
+        "erste": "1936-01-01",
         "letzte": "2026-09-25",
         "median_abstand_tage": 1,
         "anteil_gleiche_folgewerte": 0.9756,
@@ -354,7 +354,7 @@
       }
     ],
     "aufgenommen_utc": "2026-09-24T04:20:00Z",
-    "geprueft_utc": "2026-09-25T02:21:08Z"
+    "geprueft_utc": "2026-09-25T08:16:00Z"
   },
   {
     "id": "wikipedia_weitere",
@@ -968,5 +968,73 @@
     "reihen": [],
     "aufgenommen_utc": "2026-09-25T06:13:45Z",
     "geprueft_utc": "2026-09-25T06:13:45Z"
+  },
+  {
+    "id": "fred_dtb3",
+    "name": "3-Monats-US-Schatzwechsel, Sekundaermarkt-Diskontsatz (FRED DTB3, taeglich)",
+    "url": "https://fred.stlouisfed.org/series/DTB3",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Zinsen",
+    "status": "aktiv",
+    "mechanismus": "Der kurzfristige risikofreie Zinssatz (3-Monats-T-Bill) reagiert unmittelbar auf Aenderungen der Fed-Politik und auf Funding-Stress; ein rascher Anstieg/Rueckgang kann kurzfristig (1-20 Handelstage) zinssensitive Sektoren (Finanzwerte XLF, Immobilien XLRE, Versorger XLU) gegenueber dem Weltindex bewegen, bevor sich die Wirkung vollstaendig in Kursen zeigt.",
+    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: explizit als Beispiel genannt (DTB3). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen). K2 Historie ab 1954-01-04 (18173 Werte), weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe der Federal Reserve Bank of St. Louis, kein Login/Schluessel, gleiches erprobtes Muster wie fred_effr/fred_usdjpy. K4 punktgenau: Sekundaermarkt-Diskontsaetze (H.15) werden nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-23, <10 Tage alt, Serie wird werktaeglich fortgeschrieben. K6 neu: DTB3 ist nicht im Spiegel (main hat DGS10/VIXCLS/etc., kein 3-Monats-Diskontsatz) und deckt gegenueber treasury_yield_curve:kurz (CMT-1-Monat, Start ca. 1990) zusaetzlich 1954-1990 ab, daher kein Ersatz sondern Ergaenzung; Zusatz-3-Redundanzgrenze (max. 3 Reihen je Quelle) nicht einschlaegig, da eigene Quelle mit einer Reihe. K7 Umfang: 18173 Zeilen, deutlich unter 1 MB komprimiert, Abruf unter 2 Sekunden. Pruefung: Zeilen 18173, erste 1954-01-04, letzte 2026-09-23, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1878 (unter der 20%-Verdachtsschwelle, erklaerbar durch laengere Phasen stabiler kurzfristiger Zinsen z.B. Nullzinsphasen), Min -0.05 (kurzzeitig negativer Diskontsatz 2015, dokumentiertes reales Ereignis) / Max 17.14 (Volcker-Ära 1981) plausibel.",
+    "reihen": [
+      {
+        "reihe": "dtb3",
+        "zeilen": 18173,
+        "erste": "1954-01-04",
+        "letzte": "2026-09-23",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.1878,
+        "min": -0.05,
+        "max": 17.14
+      }
+    ],
+    "aufgenommen_utc": "2026-09-25T08:14:00Z",
+    "geprueft_utc": "2026-09-25T08:14:00Z"
+  },
+  {
+    "id": "fred_fx_lang",
+    "name": "Wechselkurse USD/GBP, USD/CAD, USD/AUD (FRED H.10, taeglich, ab 1971)",
+    "url": "https://fred.stlouisfed.org/series/DEXUSUK",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Waehrung",
+    "status": "aktiv",
+    "mechanismus": "Wechselkursbewegungen gegenueber dem USD spiegeln relative Zins- und Risikoerwartungen fuer das jeweilige Land/den jeweiligen Rohstoffraum (GBP: UK-Zinspfad, CAD: Oelpreis-Sensitivitaet Kanadas, AUD: China-/Rohstoffnachfrage); rasche Bewegungen koennen kurzfristig (1-20 Handelstage) die jeweiligen Laender-/Rohstoffsektoren gegenueber dem Weltindex bewegen, bevor sich das vollstaendig in Kursen niederschlaegt.",
+    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: DEXUSUK/DEXCAUS/DEXUSAL explizit als Beispiele genannt, gleiches Muster wie fred_usdjpy (DEXJPUS, bereits aktiv). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen, je Reihe). K2 Historie ab 1971-01-04 (13964-13977 Werte je Reihe), weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe, kein Login/Schluessel. K4 punktgenau: taegliche H.10-Referenzkurse werden nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-18, <10 Tage alt, Serien werden werktaeglich fortgeschrieben. K6 neu: GBP/CAD/AUD-Wechselkurse sind weder im Spiegel (main) noch bei ecb_fx (dort nur EUR-Kreuzkurse CHF/JPY/CNY) noch bei fred_usdjpy (dort nur JPY) vorhanden; die drei Reihen messen klar verschiedene Laender/Waehrungsraeume (Ausnahme von der Zusatz-3-Redundanzgrenze). K7 Umfang: je Reihe unter 400 KB komprimiert, Abruf aller drei unter 5 Sekunden. Pruefung je Reihe: gbpusd 13971 Zeilen 1971-01-04..2026-09-18, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.0122, Min 1.052/Max 2.644 plausibel (GBP-Tiefststaende 1985/2022, Hoechststaende 1970er/1980); usdcad 13977 Zeilen, Anteil 0.0167, Min 0.9168/Max 1.6128 plausibel; audusd 13964 Zeilen, Anteil 0.0640, Min 0.4828/Max 1.4885 plausibel (AUD-Tief 2001, Hoch 2011 Rohstoffboom).",
+    "reihen": [
+      {
+        "reihe": "gbpusd",
+        "zeilen": 13971,
+        "erste": "1971-01-04",
+        "letzte": "2026-09-18",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0122,
+        "min": 1.052,
+        "max": 2.644
+      },
+      {
+        "reihe": "usdcad",
+        "zeilen": 13977,
+        "erste": "1971-01-04",
+        "letzte": "2026-09-18",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0167,
+        "min": 0.9168,
+        "max": 1.6128
+      },
+      {
+        "reihe": "audusd",
+        "zeilen": 13964,
+        "erste": "1971-01-04",
+        "letzte": "2026-09-18",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.064,
+        "min": 0.4828,
+        "max": 1.4885
+      }
+    ],
+    "aufgenommen_utc": "2026-09-25T08:14:00Z",
+    "geprueft_utc": "2026-09-25T08:14:00Z"
   }
 ]

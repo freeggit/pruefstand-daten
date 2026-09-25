@@ -12,6 +12,12 @@ ID = "kalender_ereignisse"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
 START = datetime.date(2001, 1, 1)
+# Zusatz 4 (25.9.2026), E11 Historie vor 1990: ustax bleibt vorerst bei 2001 (Regeländerungen
+# der US-Vierteljahres-Steuertermine vor 1967/1954 nicht abschliessend belegt, siehe grund in
+# katalog.json); opex_verfall und fomc_sitzung sind so weit zurueckverlaengert, wie die
+# jeweilige Quelle/der Marktmechanismus belegt ist (keine Tage erfunden).
+OPEX_START = datetime.date(1973, 4, 27)  # Tag nach Beginn des boersengehandelten Optionshandels (CBOE, 26.4.1973)
+FOMC_START = datetime.date(1936, 1, 1)  # erstes Jahr mit von der Fed veroeffentlichten historischen Sitzungsunterlagen
 TAX_MONTHS_DAYS = ((1, 15), (4, 15), (6, 15), (9, 15), (12, 15))
 QUARTER_MONTHS = (3, 6, 9, 12)
 FOMC_HISTORICAL_LAST_YEAR = 2020
@@ -54,10 +60,12 @@ def build_ustax(end):
 
 def build_opex(end):
     event_days = set()
-    for year in range(START.year, end.year + 1):
+    for year in range(OPEX_START.year, end.year + 1):
         for month in QUARTER_MONTHS:
-            event_days.add(third_friday(year, month))
-    return [(d, 1 if d in event_days else 0) for d in daterange(START, end)]
+            d = third_friday(year, month)
+            if d >= OPEX_START:
+                event_days.add(d)
+    return [(d, 1 if d in event_days else 0) for d in daterange(OPEX_START, end)]
 
 
 def http_get(url):
@@ -106,17 +114,17 @@ def fomc_calendar_dates():
 
 def fomc_decision_days(end):
     days = set()
-    for year in range(START.year, FOMC_HISTORICAL_LAST_YEAR + 1):
+    for year in range(FOMC_START.year, FOMC_HISTORICAL_LAST_YEAR + 1):
         days.update(fomc_historical_dates(year))
     days.update(fomc_calendar_dates())
-    days = {d for d in days if START <= d <= end}
+    days = {d for d in days if FOMC_START <= d <= end}
     if not days:
         raise SystemExit("keine FOMC-Termine gefunden")
     return days
 
 
 def build_fomc(end, decision_days):
-    return [(d, 1 if d in decision_days else 0) for d in daterange(START, end)]
+    return [(d, 1 if d in decision_days else 0) for d in daterange(FOMC_START, end)]
 
 
 def gzip_write(path, rows):
@@ -156,16 +164,16 @@ def main():
         },
         "opex_verfall": {
             "einheit": "Indikator (0/1)",
-            "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
-            "quelle_url": "https://www.cboe.com/optionsexpirationcalendar/ (Marktkonvention: dritter Freitag der Quartalsmonate)",
+            "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 1973-04-27 (Tag nach Beginn des boersengehandelten Optionshandels an der CBOE, 26.4.1973; erster erfasster Verfalltag damit Juni 1973, siehe Zusatz 4 25.9.2026 E11).",
+            "quelle_url": "https://www.cboe.com/optionsexpirationcalendar/ (Marktkonvention: dritter Freitag der Quartalsmonate) und https://www.cboe.com/about/history/ (Handelsbeginn 26.4.1973)",
             "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         },
         "fomc_sitzung": {
             "einheit": "Indikator (0/1)",
-            "beschreibung": "1 am Tag der FOMC-Zinsentscheidung (letzter Sitzungstag bzw. Tag der Erklaerung; alle regulaeren und ausserplanmaessigen Sitzungen/Telefonkonferenzen inklusive Notfallentscheide seit 2001), sonst 0, fuer jeden Kalendertag ab 2001-01-01 bis heute.",
-            "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm (2001-2020) und https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (ab 2021)",
+            "beschreibung": "1 am Tag der FOMC-Zinsentscheidung (letzter Sitzungstag bzw. Tag der Erklaerung; alle regulaeren und ausserplanmaessigen Sitzungen/Telefonkonferenzen inklusive Notfallentscheide), sonst 0, fuer jeden Kalendertag ab 1936-01-01 (erstes Jahr mit von der Fed veroeffentlichten historischen Sitzungsunterlagen unter fomchistorical<JAHR>.htm) bis heute.",
+            "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm (1936-2020) und https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (ab 2021)",
             "verdichtung": "keine (aus amtlichen FOMC-Sitzungskalendern der Fed abgeleitet)",
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
