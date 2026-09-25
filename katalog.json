@@ -1069,11 +1069,12 @@
     "url": "https://bipartisanpolicy.org/x-date/",
     "domain": "bipartisanpolicy.org",
     "bereich": "Staat",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Naeherung an die Zahlungsunfaehigkeits-Frist des Bundes (unabhaengige Quelle, misst denselben Fiskalstress-Mechanismus wie der Beinahe-Treffer treasury_tga->XLE, aber ueber Schuldenobergrenze-Episoden statt Kassenbestand) kann kurzfristig T-Bill-Renditen und risikosensitive Sektoren gegenueber dem Weltindex bewegen.",
-    "grund": "Regel L1: unabhaengige Replikation des Beinahe-Treffers treasury_tga (t 4.68 in S0005, weiter unter Huerde 5.12); Episodenliste seit 1995 (haeufige Krisen) und statutarische Obergrenze seit 1917 fuer Praetext moeglich, oeffentlich, kein Login.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Geprueft 2026-09-25T20:13:07Z: Bipartisan Policy Center veroeffentlicht keine strukturierte taegliche Datenreihe, sondern unregelmaessige Presseerklaerungen/Berichte mit X-Date-Schaetzintervallen, nur wenige Male pro Jahr und ausschliesslich waehrend aktiver Schuldenobergrenze-Krisenphasen (bipartisanpolicy.org/hub/debt-limit-analysis/, WebFetch der X-Date-Seite gibt HTTP 403). Kein CSV/API mit taeglichen Werten. K1 (taeglich, Median-Abstand <=3 Tage) verletzt: zwischen Episoden liegen Monate bis Jahre ohne Publikation. K5 (laufend, letzter Wert <=10 Tage) ausserhalb aktiver Krisen ebenfalls verletzt. Regel L1 (Replikation treasury_tga->XLE) damit ueber diese Quelle nicht umsetzbar; ggf. spaeter ueber die bereits vorhandene treasury_debt_penny/treasury_tga-Reihe selbst moeglich (Entscheid bei Reto/Suchlauf).",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-25T20:13:07Z"
   },
   {
     "id": "usa_wahltag",
@@ -1166,8 +1167,9 @@
     "status": "kandidat",
     "prioritaet": "normal",
     "mechanismus": "Chinesische Leitzinsaenderungen (LPR/MLF) koennen kurzfristig Emerging-Markets- und China-Engagement (FXI, EEM) sowie global Rohstoffe gegenueber dem Weltindex bewegen, analog zu den bereits vorhandenen Leitzins-Aenderungstagen FOMC/EZB.",
-    "grund": "Ergaenzt bestehende leitzins_aenderungstage (bisher nur FOMC/EZB) um eine dritte grosse Notenbank; PBoC veroeffentlicht Ankuendigungen oeffentlich, Terminliste seit LPR-Reform 2019 gut dokumentiert, fruehere Referenzzins-Aenderungen seit 1990er Jahren recherchierbar.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Ergaenzt bestehende leitzins_aenderungstage (bisher nur FOMC/EZB) um eine dritte grosse Notenbank; PBoC veroeffentlicht Ankuendigungen oeffentlich, Terminliste seit LPR-Reform 2019 gut dokumentiert, fruehere Referenzzins-Aenderungen seit 1990er Jahren recherchierbar. | Fortschritt 2026-09-25T20:13:07Z: Anders als bei FOMC/EZB (leitzins_aenderungstage, abgeleitet aus taeglichen FRED-Reihen DFEDTARU/ECBDFR) gibt es fuer die PBoC-Leitzinsen (LPR 1J/5J, MLF) keine oeffentliche taegliche FRED-Zeitreihe (FRED fuehrt fuer China nur monatliche Reihen wie INTDSRCNM193N). Offizielle chinamoney.org.cn/pbc.gov.cn-Quellen erfordern TLS mit 'legacy server connect' (funktioniert per urllib, siehe Skriptnotiz), das JSON-Endpoint chinamoney.com.cn/ags/ms/cm-u-bk-currency/LprHis liefert aber nur ein rollierendes ca. 12-Monats-Fenster unabhaengig von Datumsparametern -- keine vollstaendige Historie seit Reform 2019-08-20 auffindbar ohne Drittanbieter-Aggregatoren (K3-Bedenken). Naechster Schritt: pbc.gov.cn-Archivseiten (nicht chinamoney-Widget) nach einer vollstaendigen amtlichen Ankuendigungsliste seit 2019 durchsuchen, sonst K2/K3 als 'abgelehnt' vermerken. Noch nicht implementiert, um keine unvollstaendige/luckenhafte Reihe aufzunehmen (Zusatz 2: Qualitaet vor Menge).",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-25T20:13:07Z"
   },
   {
     "id": "fed_balance_sheet_h41",
@@ -1175,11 +1177,12 @@
     "url": "https://www.federalreserve.gov/releases/h41/",
     "domain": "federalreserve.gov",
     "bereich": "Staat",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Woechentliche Veraenderungen der Fed-Bilanz (Wertpapierbestand, Notkredite) zeigen Liquiditaetszufuhr oder -entzug an, die kurzfristig risikosensitive Sektoren gegenueber dem Weltindex bewegen kann; ergaenzt die bereits vorhandene TGA-Reihe um die Aktivseite der Fed-Bilanz.",
-    "grund": "Oeffentliche woechentliche Fed-Publikation ohne Login, Historie in konsistentem Format seit ca. 2002 (fruehere Jahrzehnte in anderer Formatierung z.T. verfuegbar, Zusatz-4-Pruefung noetig), unrevidierter Stichtagsausweis.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Geprueft 2026-09-25T20:13:07Z: federalreserve.gov/releases/h41/ bestaetigt woechentliche Publikation ('These data are released each Thursday'), keine Tageswerte. K1 (taeglich, Median-Abstand <=3 Tage) verletzt (Median 7 Tage). Zusaetzlich K6 verletzt: die FRED-Reihe WALCL (Fed-Gesamtbilanzsumme) ist direkt aus H.4.1 abgeleitet und bereits im Spiegel main vorhanden; eine eigene H.4.1-Quelle waere derselbe zugrunde liegende Datensatz. Kein Aufbau.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-25T20:13:07Z"
   },
   {
     "id": "panama_canal_transits",
