@@ -33,6 +33,7 @@ jobs:
         run: python fetch_sec.py
         env:
           SEC_BUDGET_MIN: "15"
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # «Pruefstand Research <Kontaktadresse>», nur als Secret
         timeout-minutes: 20
         continue-on-error: true
       - name: Manifest sichern
