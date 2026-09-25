@@ -1,0 +1,12 @@
+{
+ "status": "gesperrt",
+ "revision_monat": "2026-09",
+ "anzahl_403": 1,
+ "erster_403_utc": "2026-09-25T08:46:19Z",
+ "letzter_403_utc": "2026-09-25T08:46:19Z",
+ "letzte_antwort": "https://www.sec.gov/files/datastandardsinnovation/data/insider-transactions-data-sets/2006q1_form345.zip | Antwort SEC: SEC.gov | Request Rate Threshold Exceeded U.S. Securities and Exchange Commission Automated access to our sites must comply with SEC.gov's Privacy and Security Policy. Please visit www.sec.gov/developer for more developer resources and Fair Access guidelines. Please visit www.sec.gov/privacy for more information on Privacy Policy. Reference ID: 0.d4cf5868.1790325979.3113f6ae",
+ "retry_after": null,
+ "runner_ip": "20.112.122.55",
+ "kontakt_aus_secret": false,
+ "kontakt_kennung": "4efcd79db6"
+}

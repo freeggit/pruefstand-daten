@@ -1,6 +1,15 @@
 {
- "erzeugt_utc": "2026-09-25T07:15:17Z",
+ "erzeugt_utc": "2026-09-25T08:46:17Z",
  "reihen": {},
- "hinweise": [],
- "fehler": "HTTP 403 der SEC (https://www.sec.gov/files/datastandardsinnovation/data/insider-transactions-data-sets/2006q1_form345.zip | Antwort SEC: SEC.gov | Request Rate Threshold Exceeded html {height: 100%} body {height: 100%; margin:0; padding:0;} #header {background-color:#003968; color:#fff; padding:15px 20px 10px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px; bor); nicht umgangen, nächster Lauf erneut"
+ "hinweise": [
+  "GitHub-Secret SEC_USER_AGENT fehlt: es wird noch die noreply-Adresse gesendet"
+ ],
+ "fehler": "HTTP 403 der SEC seit 2026-09-25T08:46:19Z (1x, Status gesperrt): https://www.sec.gov/files/datastandardsinnovation/data/insider-transactions-data-sets/2006q1_form345.zip | Antwort SEC: SEC.gov | Request Rate Threshold Exceeded U.S. Securities and Exchange Commission Automated access to our sites must comply with SEC.gov's Privacy and Security Policy. Please visit www.sec.gov/developer for more developer resources and Fair Access guidelines. Please visit www.sec.gov/privacy for more information on Privacy Policy. Reference ID: 0.d4cf5868.1790325979.3113f6ae; nicht umgangen",
+ "zugang": {
+  "status": "gesperrt",
+  "erster_403_utc": "2026-09-25T08:46:19Z",
+  "anzahl_403": 1,
+  "runner_ip": "20.112.122.55",
+  "kontakt_aus_secret": false
+ }
 }
