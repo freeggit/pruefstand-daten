@@ -520,7 +520,8 @@ if __name__ == "__main__":
         if s % 10 == 0 or s == N_PLACEBO:
             log(f"Placebo {s}/{N_PLACEBO}: Bausteine je Lauf bisher {plac_bst}")
     n_b = len(bausteine)
-    p_lauf = (1 + sum(1 for x in plac_bst if x >= max(1, n_b))) / (N_PLACEBO + 1)
+    # p_lauf nur sinnvoll, wenn es echte Bausteine gibt; ohne Baustein 1.0 (kein Hinweis auf einen Fund)
+    p_lauf = (1 + sum(1 for x in plac_bst if x >= n_b)) / (N_PLACEBO + 1) if n_b >= 1 else 1.0
     fund = bool(n_b >= 1 and p_lauf <= 0.05)
     zus = {
         "methode": METHODE,
