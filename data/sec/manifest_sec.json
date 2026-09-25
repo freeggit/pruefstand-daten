@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-09-25T09:14:04Z",
+ "erzeugt_utc": "2026-09-25T10:16:18Z",
  "reihen": {
   "sec_insider:markt_kaeufer": {
    "datei": "data/sec/insider/markt_kaeufer.csv.gz",
@@ -627,9 +627,9 @@
   }
  },
  "hinweise": [
-  "SIC: 9684 Emittenten noch offen"
+  "SIC: 2594 Emittenten noch offen"
  ],
- "abdeckung_kaufwert_mit_sektor": 0.523,
+ "abdeckung_kaufwert_mit_sektor": 0.5455,
  "zugang": {
   "status": "ok",
   "erster_403_utc": null,
