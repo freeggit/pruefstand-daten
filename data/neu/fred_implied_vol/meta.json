@@ -1,0 +1,26 @@
+{
+  "em": {
+    "beschreibung": "CBOE Emerging Markets ETF Volatility Index (VXEEM), implizite Volatilitaet aus EEM-Optionen",
+    "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXEEMCLS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "gold": {
+    "beschreibung": "CBOE Gold ETF Volatility Index (GVZ), implizite Volatilitaet aus GLD-Optionen",
+    "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GVZCLS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "oel": {
+    "beschreibung": "CBOE Crude Oil ETF Volatility Index (OVX), implizite Volatilitaet aus USO-Optionen",
+    "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=OVXCLS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

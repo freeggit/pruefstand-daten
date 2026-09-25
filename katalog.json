@@ -873,5 +873,67 @@
     ],
     "aufgenommen_utc": "2026-09-25T02:25:00Z",
     "geprueft_utc": "2026-09-25T02:30:00Z"
+  },
+  {
+    "id": "fred_implied_vol",
+    "name": "CBOE Implizite-Volatilitaets-Indizes (Oel, Gold, Emerging Markets), taeglich ueber FRED",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=OVXCLS",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Stimmung",
+    "status": "aktiv",
+    "prioritaet": "",
+    "mechanismus": "Implizite Volatilitaet aus Optionen auf Rohstoff-/Regionen-ETFs (USO, GLD, EEM) preist die vom Markt erwartete kurzfristige Schwankungsbreite ein, bevor sie sich in tatsaechlichen Kursbewegungen zeigt; ein Anstieg signalisiert erhoehte Unsicherheit fuer Oel (XLE, USO), Gold oder Emerging Markets (relativ zum Weltindex) auf Sicht von 1-20 Handelstagen, aehnlich wie VIX fuer den Gesamtmarkt.",
+    "grund": "Neu aufgenommen (2026-09-25T04:13:06Z). K1 taeglich erfuellt: Median-Abstand 1 Tag je Reihe (Handelstage, CBOE-Berechnung aus taeglichen Optionspreisen). K2 Historie erfuellt: oel (OVXCLS) ab 2007-05-10 n=4875, gold (GVZCLS) ab 2008-06-03 n=4607, em (VXEEMCLS) ab 2011-03-16 n=3903 -- alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche fredgraph.csv-Ausgabe der FRED-API ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur (gleiches Muster wie bereits aktive fred_effr/fred_brent/fred_usdjpy). K4 punktgenau: taeglich administrativ von CBOE berechnete und publizierte Schlusswerte, keine nachtraegliche Revision bekannt (wie VIXCLS bereits im Spiegel). K5 laufend: letzter Wert 2026-09-22 (Handelstag, 2-3 Tage vor Abruf), taeglich fortgeschrieben. K6 neu: Gesamtmarkt-VIX (VIXCLS) ist bereits im Spiegel, diese drei Reihen messen implizite Volatilitaet anderer, im Spiegel nicht vorhandener zugrundeliegender Vermoegenswerte (Oel-ETF, Gold-ETF, EM-ETF); nicht redundant zu den bereits aktiven Cboe-Stimmungsreihen (SKEW, VVIX, VIX9D, VIX3M), die alle Varianten des S&P-500-VIX selbst sind. K7 Umfang: drei CSV-Abrufe unter 5 Sekunden gesamt, jede Datei weit unter 20 MB. Pruefzahlen: oel n=4875, 2007-05-10..2026-09-22, medianAbstand=1, gleicheFolge=0.008, min=14.5, max=325.15 (Plausibel: Maximum waehrend des negativen WTI-Preisereignisses April 2020); gold n=4607, 2008-06-03..2026-09-22, medianAbstand=1, gleicheFolge=0.006, min=8.88, max=64.53; em n=3903, 2011-03-16..2026-09-22, medianAbstand=1, gleicheFolge=0.004, min=13.11, max=92.46. Anteil gleicher Folgewerte je Reihe unter 1%, deutlich unter der 20%-Verdachtsschwelle. Zusatz 3 (Redundanzgrenze): drei Reihen je Quelle, an der Obergrenze, aber Ausnahme greift (klar verschiedene zugrundeliegende Vermoegenswerte: Oel, Gold, Emerging-Markets-Aktien), daher keine weitere Reduktion noetig.",
+    "reihen": [
+      "oel",
+      "gold",
+      "em"
+    ],
+    "aufgenommen_utc": "2026-09-25T04:13:06Z",
+    "geprueft_utc": "2026-09-25T04:13:06Z"
+  },
+  {
+    "id": "fred_equity_uncertainty",
+    "name": "Equity Market-related Economic Uncertainty Index (WLEMUINDXD), taeglich ueber FRED",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WLEMUINDXD",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Stimmung",
+    "status": "aktiv",
+    "prioritaet": "",
+    "mechanismus": "Text-basierter Baker/Bloom/Davis-Index aus Zeitungsartikeln, die gleichzeitig Wirtschaft, Unsicherheit UND den Aktienmarkt erwaehnen; ein kurzfristiger Anstieg zeigt zunehmende, marktspezifisch fokussierte Unsicherheit an (anders als die bereits vorhandene allgemeine Wirtschaftspolitik-Unsicherheit USEPUINDXD) und kann breite Risikopraemien-Verschiebungen gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen vorwegnehmen.",
+    "grund": "Neu aufgenommen (2026-09-25T04:13:06Z). K1 taeglich erfuellt: Median-Abstand 1 Tag (Kalendertage gemaess FRED-Serie, inkl. mancher Wochenendtage). K2 Historie erfuellt: n=15241, ab 1985-01-01, weit vor 31.12.2015 und weit ueber 500 Werte. K3 offen: oeffentliche fredgraph.csv-Ausgabe ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur. K4 punktgenau: administrativ berechneter Text-Index aus bereits publizierten Zeitungsartikeln, keine nachtraegliche Revision bekannt. K5 laufend: letzter Wert 2026-09-23 (1-2 Tage vor Abruf), taeglich fortgeschrieben. K6 neu: unterscheidet sich vom bereits im Spiegel vorhandenen USEPUINDXD (allgemeine Wirtschaftspolitik-Unsicherheit ueber alle Themenbereiche) durch den engeren, aktienmarktspezifischen Fokus der zugrundeliegenden Zeitungsartikel-Stichprobe. K7 Umfang: ein CSV-Abruf unter 2 Sekunden, Datei weit unter 20 MB. Pruefzahlen: n=15241, 1985-01-01..2026-09-23, medianAbstand=1, gleicheFolge=0.000 (kein einziger identischer Folgewert, deutlich unter der 20%-Verdachtsschwelle), min=4.8, max=3023.89 (Plausibel: Maximum in einer Marktstress-Phase, typisch fuer text-basierte Unsicherheitsindizes mit hoher Tagesvolatilitaet).",
+    "reihen": [
+      "index"
+    ],
+    "aufgenommen_utc": "2026-09-25T04:13:06Z",
+    "geprueft_utc": "2026-09-25T04:13:06Z"
+  },
+  {
+    "id": "fred_ig_spread",
+    "name": "ICE BofA US Corporate Index Option-Adjusted Spread (BAMLC0A0CM/BAMLC0A4CBBB), taeglich ueber FRED",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Zinsen",
+    "status": "abgelehnt",
+    "prioritaet": "",
+    "mechanismus": "Investment-Grade-Kreditspreads (Gegenstueck zum bereits im Spiegel vorhandenen High-Yield-Spread BAMLH0A0HYM2) zeigen Risikoappetit im sichereren Anleihesegment und koennten zinssensitive Sektoren (XLF, TLT) auf Sicht von 1-20 Handelstagen vorwegnehmen.",
+    "grund": "K2 verletzt: Test am 2026-09-25T04:13:27Z der oeffentlichen fredgraph.csv-Ausgabe fuer BAMLC0A0CM und BAMLC0A4CBBB liefert in dieser Infrastruktur nur die letzten rund 3 Jahre (erster Wert 2023-09-25, n=796), obwohl die Serien auf fred.stlouisfed.org historisch seit 1996-12-31 gefuehrt werden. Explizite cosd=1990-01-01-Parameter aendern nichts, ebenso beim bereits im Spiegel als Vergleichsserie getesteten BAMLH0A0HYM2 (dort identisches Muster: 796 Zeilen ab 2023-09-25) -- deutet auf eine serienspezifische Lizenzbeschraenkung der ICE-BofA-Indexfamilie (rollierendes Sichtfenster) in der fredgraph.csv-Ausgabe hin, nicht auf einen Abruffehler. Erster verfuegbarer Wert (2023-09-25) liegt weit nach dem K2-Stichtag 31.12.2015 -- abgelehnt. Kein Umgehungsversuch.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-25T04:13:21Z",
+    "geprueft_utc": "2026-09-25T04:13:21Z"
+  },
+  {
+    "id": "ethereum_onchain",
+    "name": "Ethereum On-Chain-Kennzahlen (Transaktionen, Gebuehren) als Gegenstueck zu bitcoin_onchain",
+    "url": "https://api.blockchair.com/ethereum/stats",
+    "domain": "api.blockchair.com",
+    "bereich": "Krypto",
+    "status": "abgelehnt",
+    "prioritaet": "",
+    "mechanismus": "Ethereum-Netzwerkaktivitaet (Transaktionszahl, Gebuehren) koennte als von Bitcoin unabhaengiges Risikoappetit-Signal fuer wachstumsnahe/spekulative Sektoren (XLK) auf Sicht von 1-20 Handelstagen dienen.",
+    "grund": "K3 verletzt: Test am 2026-09-25T04:13:27Z. Die bei bitcoin_onchain genutzte schluessellose Blockchain.info-Charts-API deckt ausschliesslich Bitcoin ab, keine Ethereum-Reihen. Blockchair (api.blockchair.com) liefert ohne Schluessel nur den jeweils aktuellen Momentaufnahme-Status (/ethereum/stats, ein einzelner Zeitpunkt), keine taegliche Historie; historische Tageszeitreihen sind laut Blockchair-Dokumentation nur ueber den kostenpflichtigen Pro-Zugang mit API-Schluessel verfuegbar. Keine weitere oeffentliche, schlussellose Quelle fuer eine vollstaendige taegliche Ethereum-Historie seit vor 2015-12-31 gefunden. Kein Umgehungsversuch (kein Schluessel).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-09-25T04:13:21Z",
+    "geprueft_utc": "2026-09-25T04:13:21Z"
   }
 ]
