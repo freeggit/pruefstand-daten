@@ -1,0 +1,10 @@
+{
+  "propan": {
+    "beschreibung": "Propane spot price Mont Belvieu, TX (DPROPANEMBTX), taeglicher Spotpreis; petrochemisches Feedstock- und Heizenergie-Referenzpreis, unabhaengig von WTI/Brent/Henry Hub",
+    "einheit": "USD je Gallone",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPROPANEMBTX",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, US-Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

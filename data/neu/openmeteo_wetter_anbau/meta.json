@@ -1,0 +1,26 @@
+{
+  "mais_guertel": {
+    "beschreibung": "Taegliche Niederschlagssumme US-Maisguertel (Iowa, nahe Des Moines), ERA5-Reanalyse via Open-Meteo",
+    "einheit": "mm/Tag",
+    "quelle_url": "https://archive-api.open-meteo.com/v1/archive",
+    "revidiert": false,
+    "verdichtung": "keine (ERA5-Reanalyse liefert bereits Tageswerte)",
+    "verfuegbar_nach_tagen": 10
+  },
+  "monsun_indien": {
+    "beschreibung": "Taegliche Niederschlagssumme zentralindisches Monsun-Agrargebiet (Nagpur, Maharashtra), ERA5-Reanalyse via Open-Meteo",
+    "einheit": "mm/Tag",
+    "quelle_url": "https://archive-api.open-meteo.com/v1/archive",
+    "revidiert": false,
+    "verdichtung": "keine (ERA5-Reanalyse liefert bereits Tageswerte)",
+    "verfuegbar_nach_tagen": 10
+  },
+  "soja_mato_grosso": {
+    "beschreibung": "Taegliche Niederschlagssumme brasilianisches Sojaanbaugebiet (Sorriso, Mato Grosso), ERA5-Reanalyse via Open-Meteo",
+    "einheit": "mm/Tag",
+    "quelle_url": "https://archive-api.open-meteo.com/v1/archive",
+    "revidiert": false,
+    "verdichtung": "keine (ERA5-Reanalyse liefert bereits Tageswerte)",
+    "verfuegbar_nach_tagen": 10
+  }
+}
