@@ -1,0 +1,11 @@
+# Differenzen zwischen zwei Reihen (V3.4, E12). Je Zeile: name;reihe_a;reihe_b;art;mechanismus
+# reihe = fred:<SERIE> oder neu:<quelle>:<reihe> (Scout-Zweig, nur status aktiv). art = diff (a - b) oder logratio (ln a - ln b).
+# Neue Paare nur mit Mechanismus und nur auf Vorschlag an Reto (keine Paare nach Sicht auf Ergebnisse).
+zins_us_jp;fred:DGS10;neu:mof_jgb_zinsen:niveau;diff;Zinsabstand USA-Japan treibt Yen-Carry und japanische Aktien (EWJ)
+zins_us_de;fred:DGS10;neu:bundesbank_umlauf:bund10y;diff;Zinsabstand USA-Deutschland wirkt über Wechselkurs auf deutsche Exporteure (EWG)
+kurz_us_uk;neu:fred_effr:effr;neu:boe_sonia:sonia;diff;Geldmarktabstand USA-UK wirkt über das Pfund auf britische Aktien (EWU)
+kurz_ch_us;neu:snb_saron:saron;neu:fred_effr:effr;diff;Geldmarktabstand Schweiz-USA wirkt über den Franken auf Schweizer Aktien (EWL)
+oel_brent_wti;neu:fred_brent:brent;fred:DCOILWTICO;logratio;Brent-WTI-Spanne zeigt Engpässe in US-Förderung und Transport (XLE, USO)
+oel_gas;fred:DCOILWTICO;fred:DHHNGSP;logratio;Öl-Gas-Verhältnis steuert Erträge von Förderern und Chemie (XLE, UNG, XLB)
+vix_termin;neu:cboe_vix3m:vix3m;fred:VIXCLS;diff;invertierte Volatilitätskurve zeigt akuten Stress, danach oft Erholung zyklischer Sektoren
+vix_kurz;neu:cboe_vix9d:vix9d;fred:VIXCLS;diff;kurzfristige Angst über dem Monatsmass zeigt Ereignisrisiko der nächsten Tage
