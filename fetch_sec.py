@@ -15,18 +15,31 @@ Ablauf je Lauf (in Etappen, Zeitbudget SEC_BUDGET_MIN):
     Status «aktiv» erst, wenn alle Quartale verarbeitet sind und mindestens 95% der Kaufwerte einem Sektor
     zugeordnet werden konnten; vorher «aufbau» (die Suchmaschine liest nur «aktiv»).
 Nichts schätzen, nichts auffüllen: Tage ohne Einreichungen fehlen; Tage mit Einreichungen, aber ohne Kauf, sind 0.
+
+Zugang (ab 25.9.2026): User-Agent mit echter Kontaktadresse aus dem GitHub-Secret SEC_USER_AGENT (nie im Code, nie in
+Dateien). Höchstens 1 Abruf pro Sekunde für Quartalsdateien, 4 pro Sekunde für SIC-Abfragen (SEC-Grenze: 10).
+Sperrstatus laufübergreifend in data/sec/zugang.json: bei 403 Zähler, Zeitpunkte, Antwort, Retry-After, öffentliche IP
+des Runners. Nach 7 Tagen Sperre Status ACCESS_BLOCKED: dann höchstens ein Testabruf pro Woche (oder sofort, wenn sich
+die Kontaktangabe geändert hat), bis Reto die Sperre mit webmaster@sec.gov geklärt hat. Herkunft je Quartal
+(URL, Grösse, SHA-256, Abrufzeit) in data/sec/herkunft.json; einmal im Monat werden die letzten 8 Quartale auf
+geänderte Dateigrösse geprüft und bei Änderung neu geholt (die SEC ergänzt publizierte Datensätze gelegentlich).
 """
+import hashlib
 import csv, gzip, io, json, os, re, sys, time, zipfile, zlib, urllib.request, urllib.error
 from datetime import datetime, timezone, date
 
-UA = {"User-Agent": "pruefstand-daten freeggit@users.noreply.github.com",   # Muster der SEC: Name + Kontakt
+KONTAKT = os.environ.get("SEC_USER_AGENT", "").strip()                       # z.B. «Pruefstand Research name@domain»
+UA = {"User-Agent": KONTAKT or "pruefstand-daten freeggit@users.noreply.github.com",   # Muster der SEC: Name + Kontakt
       "Accept-Encoding": "gzip, deflate"}                                   # wie in den Beispiel-Headern der SEC
+KONTAKT_KENNUNG = hashlib.sha256(UA["User-Agent"].encode()).hexdigest()[:10]   # nur Kennung, nie die Adresse selbst
 PFADE = ["structureddata", "datastandardsinnovation"]                        # die SEC nutzt seit 2026q2 auch den zweiten Pfad
 OUT = "data/sec"
 START = time.time()
 BUDGET_MIN = float(os.environ.get("SEC_BUDGET_MIN", "15"))
 ERSTES_QUARTAL = (2006, 1)
-PAUSE = 0.15                                  # <= 10 Abrufe pro Sekunde
+PAUSE = 1.0                                   # Quartalsdateien: höchstens 1 Abruf pro Sekunde
+PAUSE_SIC = 0.25                              # SIC-Abfragen: höchstens 4 pro Sekunde (SEC-Grenze 10)
+LETZTE = {}                                   # Kopfzeilen der letzten Antwort (Herkunft)
 man = {"erzeugt_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "reihen": {}, "hinweise": []}
 
 def log(msg):
@@ -36,14 +49,17 @@ def zeit_um():
     return (time.time() - START) / 60 > BUDGET_MIN
 
 class Gesperrt(Exception):
-    pass
+    def __init__(self, msg, retry_after=None):
+        super().__init__(msg); self.retry_after = retry_after
 
-def get(url, tries=2):
+def get(url, tries=2, pause=None):
     last = None
     for i in range(tries):
         try:
-            time.sleep(PAUSE)
+            time.sleep(PAUSE if pause is None else pause)
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+                LETZTE.clear(); LETZTE.update({"content_length": r.headers.get("Content-Length"), "etag": r.headers.get("ETag"),
+                                               "last_modified": r.headers.get("Last-Modified")})
                 daten, enc = r.read(), (r.headers.get("Content-Encoding") or "").lower()
                 if enc == "gzip":
                     daten = gzip.decompress(daten)
@@ -59,8 +75,12 @@ def get(url, tries=2):
                     txt = b[:3000].decode("utf-8", "replace")
                 except Exception:
                     txt = ""
-                txt = " ".join(re.sub(r"<[^>]+>", " ", txt).split())[:240]
-                raise Gesperrt(f"{url} | Antwort SEC: {txt}")
+                txt = re.sub(r"(?is)<(style|script)[^>]*>.*?</\1>", " ", txt)
+                txt = " ".join(re.sub(r"<[^>]+>", " ", txt).split())[:400]
+                ra = (e.headers.get("Retry-After") if e.headers else None)
+                if ra and ra.strip().isdigit() and int(ra) <= 600 and i == 0:
+                    log(f"403 mit Retry-After {ra} s: warte einmal"); time.sleep(int(ra) + 5); continue
+                raise Gesperrt(f"{url} | Antwort SEC: {txt}", ra)
             if e.code == 404:
                 raise
             last = e; time.sleep(5 * (i + 1))
@@ -155,7 +175,14 @@ def quartal_verarbeiten(y, q):
         if gesperrt is not None:
             raise gesperrt
         return "nicht publiziert"
-    zf = zipfile.ZipFile(io.BytesIO(raw))
+    try:
+        zf = zipfile.ZipFile(io.BytesIO(raw))
+        if zf.testzip() is not None:
+            raise zipfile.BadZipFile("Prüfsumme im ZIP falsch")
+    except zipfile.BadZipFile as e:
+        raise RuntimeError(f"{y}q{q}: keine gültige ZIP-Datei ({e}; {len(raw)} Bytes) – nicht als Erfolg gewertet")
+    HERKUNFT[f"{y}q{q}"] = {"url": url, "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(),
+                            "abruf_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), **LETZTE}
     sub = {}
     for r in tsv(zf, "SUBMISSION"):
         if (r.get("DOCUMENT_TYPE") or "").strip() != "4":
@@ -199,7 +226,7 @@ def sic_nachfuehren(ciks):
         if zeit_um():
             break
         try:
-            j = json.loads(get(f"https://data.sec.gov/submissions/CIK{int(c):010d}.json"))
+            j = json.loads(get(f"https://data.sec.gov/submissions/CIK{int(c):010d}.json", pause=PAUSE_SIC))
             cache[c] = str(j.get("sic") or "")
         except Gesperrt:
             json.dump(cache, open(pfad, "w")); raise
@@ -250,11 +277,99 @@ def reihen_schreiben(cache, fertig):
                 "status": status}
     return status, abdeckung
 
+# ---------------------------------------------------------------- Zugang, Herkunft, Revisionen
+def jetzt():
+    return datetime.now(timezone.utc)
+
+def lade_json(pfad, leer):
+    try:
+        return json.load(open(pfad, encoding="utf-8"))
+    except Exception:
+        return leer
+
+ZUG = lade_json(f"{OUT}/zugang.json", {"status": "ok"})
+HERKUNFT = lade_json(f"{OUT}/herkunft.json", {})
+
+def runner_ip():
+    try:
+        return urllib.request.urlopen("https://api.ipify.org", timeout=10).read().decode().strip()
+    except Exception:
+        return None
+
+def sperre_melden(e):
+    t = jetzt().strftime("%Y-%m-%dT%H:%M:%SZ")
+    ZUG["anzahl_403"] = int(ZUG.get("anzahl_403", 0)) + 1
+    ZUG.setdefault("erster_403_utc", t)
+    ZUG.update({"letzter_403_utc": t, "letzte_antwort": str(e)[:600], "retry_after": getattr(e, "retry_after", None),
+                "runner_ip": runner_ip(), "kontakt_aus_secret": bool(KONTAKT), "kontakt_kennung": KONTAKT_KENNUNG})
+    tage = (jetzt() - datetime.fromisoformat(ZUG["erster_403_utc"].replace("Z", "+00:00"))).days
+    ZUG["status"] = "ACCESS_BLOCKED" if tage >= 7 else "gesperrt"
+    if ZUG["status"] == "ACCESS_BLOCKED":
+        ZUG["naechster_schritt"] = ("Reto: Mail an webmaster@sec.gov mit Fehlermeldung, öffentlicher IP (runner_ip), URL, "
+                                    "Zeitpunkt und User-Agent. Bis dahin höchstens ein Testabruf pro Woche.")
+    man["fehler"] = f"HTTP 403 der SEC seit {ZUG['erster_403_utc']} ({ZUG['anzahl_403']}x, Status {ZUG['status']}): {e}; nicht umgangen"
+    log(man["fehler"])
+
+def zugang_ok():
+    if ZUG.get("status") != "ok":
+        ZUG["letzte_sperre"] = {k: ZUG.get(k) for k in ("erster_403_utc", "letzter_403_utc", "anzahl_403")}
+    for k in ("erster_403_utc", "letzter_403_utc", "anzahl_403", "letzte_antwort", "retry_after", "naechster_schritt"):
+        ZUG.pop(k, None)
+    ZUG.update({"status": "ok", "letzter_erfolg_utc": jetzt().strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "kontakt_aus_secret": bool(KONTAKT), "kontakt_kennung": KONTAKT_KENNUNG})
+
+def darf_versuchen():
+    """ACCESS_BLOCKED: nur ein Testabruf pro Woche, ausser die Kontaktangabe hat sich geändert."""
+    if ZUG.get("status") != "ACCESS_BLOCKED":
+        return True
+    if ZUG.get("kontakt_kennung") != KONTAKT_KENNUNG:
+        log("Kontaktangabe geändert: ein neuer Versuch trotz ACCESS_BLOCKED"); return True
+    letzter = datetime.fromisoformat(ZUG.get("letzter_test_utc", ZUG.get("letzter_403_utc", "2000-01-01T00:00:00Z")).replace("Z", "+00:00"))
+    if (jetzt() - letzter).days >= 7:
+        log("ACCESS_BLOCKED: wöchentlicher Testabruf"); return True
+    return False
+
+def revisionen_pruefen():
+    """Einmal im Monat: letzte 8 Quartale per HEAD auf geänderte Grösse prüfen; bei Änderung neu holen."""
+    monat = jetzt().strftime("%Y-%m")
+    if ZUG.get("revision_monat") == monat:
+        return
+    for key in sorted(HERKUNFT)[-8:]:
+        h = HERKUNFT[key]
+        try:
+            time.sleep(PAUSE)
+            with urllib.request.urlopen(urllib.request.Request(h["url"], headers=UA, method="HEAD"), timeout=60) as r:
+                cl = r.headers.get("Content-Length")
+        except urllib.error.HTTPError as e:
+            if e.code == 403:
+                raise Gesperrt(f"{h['url']} (HEAD) | 403")
+            continue
+        if cl and h.get("content_length") and cl != h["content_length"]:
+            log(f"{key}: Grösse geändert ({h['content_length']} -> {cl}), wird neu geholt")
+            man["hinweise"].append(f"{key} von der SEC revidiert, neu geholt")
+            try:
+                os.remove(f"{OUT}/zwischen/{key}.csv.gz")
+            except FileNotFoundError:
+                pass
+    ZUG["revision_monat"] = monat
+
 if __name__ == "__main__":
     os.makedirs(f"{OUT}/zwischen", exist_ok=True)
     fertig = True
+    if not KONTAKT:
+        man["hinweise"].append("GitHub-Secret SEC_USER_AGENT fehlt: es wird noch die noreply-Adresse gesendet")
+    versuch = darf_versuchen()
+    if not versuch:
+        fertig = False
+        man["fehler"] = (f"ACCESS_BLOCKED seit {ZUG.get('erster_403_utc')}: keine Abrufe bis zur Klärung mit webmaster@sec.gov "
+                         f"(nächster Testabruf 7 Tage nach dem letzten)")
+        log(man["fehler"])
+    elif ZUG.get("status") == "ACCESS_BLOCKED":
+        ZUG["letzter_test_utc"] = jetzt().strftime("%Y-%m-%dT%H:%M:%SZ")
     try:
-        for y, q in quartale():
+        if versuch:
+            revisionen_pruefen()
+        for y, q in (quartale() if versuch else []):
             if zeit_um():
                 fertig = False; man["hinweise"].append("Zeitbudget: weitere Quartale im nächsten Lauf"); break
             res = quartal_verarbeiten(y, q)
@@ -263,14 +378,17 @@ if __name__ == "__main__":
             if res == "nicht publiziert":
                 man["hinweise"].append(f"{y}q{q} noch nicht publiziert")
     except Gesperrt as e:
-        fertig = False; man["fehler"] = f"HTTP 403 der SEC ({e}); nicht umgangen, nächster Lauf erneut"; log(man["fehler"])
+        fertig = False; sperre_melden(e)
     except Exception as e:
         fertig = False; man["fehler"] = str(e)[:300]; log(f"Fehler Quartale: {e}")
     try:
         ciks = set()
         for f in os.listdir(f"{OUT}/zwischen"):
             ciks |= {r["cik"] for r in lies(f"{OUT}/zwischen/{f}")}
-        cache, offen = ({}, len(ciks)) if "fehler" in man and "403" in man["fehler"] else sic_nachfuehren(ciks)
+        gesperrt = (not versuch) or ZUG.get("status") != "ok" and "403" in man.get("fehler", "")
+        cache, offen = ({}, len(ciks)) if gesperrt else sic_nachfuehren(ciks)
+        if versuch and not gesperrt and (HERKUNFT or ciks):
+            zugang_ok()
         if offen:
             fertig = False; man["hinweise"].append(f"SIC: {offen} Emittenten noch offen")
         if not cache and os.path.exists(f"{OUT}/sic_cache.json"):
@@ -279,7 +397,10 @@ if __name__ == "__main__":
             status, abd = reihen_schreiben(cache, fertig)
             log(f"Status {status}, Abdeckung Kaufwert mit Sektor {abd:.1%}")
     except Gesperrt as e:
-        man["fehler"] = f"HTTP 403 der SEC ({e}); nicht umgangen, nächster Lauf erneut"; log(man["fehler"])
+        sperre_melden(e)
     except Exception as e:
         man["fehler"] = (man.get("fehler", "") + " | " + str(e)[:300]).strip(" |"); log(f"Fehler: {e}")
+    man["zugang"] = {k: ZUG.get(k) for k in ("status", "erster_403_utc", "anzahl_403", "runner_ip", "kontakt_aus_secret")}
+    json.dump(ZUG, open(f"{OUT}/zugang.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(HERKUNFT, open(f"{OUT}/herkunft.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1, sort_keys=True)
     json.dump(man, open(f"{OUT}/manifest_sec.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
