@@ -4,6 +4,8 @@ import gzip
 import io
 import json
 import os
+import time
+import urllib.error
 import urllib.request
 
 ID = "openmeteo_wetter_anbau"
@@ -48,8 +50,21 @@ def fetch(lat, lon, end_date):
         "&daily=precipitation_sum&timezone=UTC" % (lat, lon, START, end_date)
     )
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    # Retry mit Backoff bei 429 (Rate-Limit auf geteilter IP), kein Umgehen
+    # einer Sperre, nur Abwarten wie von der API erwartet.
+    verzoegerungen = (5, 15, 30)
+    letzter_fehler = None
+    for i, wartezeit in enumerate((0,) + verzoegerungen):
+        if wartezeit:
+            time.sleep(wartezeit)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            letzter_fehler = e
+            if e.code != 429:
+                raise
+    raise letzter_fehler
 
 
 def parse(payload):
@@ -81,7 +96,9 @@ def gzip_write(path, rows):
 def main():
     end_date = cutoff_date().isoformat()
     meta = {}
-    for reihe, info in REGIONEN.items():
+    for i, (reihe, info) in enumerate(REGIONEN.items()):
+        if i:
+            time.sleep(3)
         payload = fetch(info["lat"], info["lon"], end_date)
         rows = parse(payload)
         if not rows:

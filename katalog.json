@@ -20,7 +20,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T15:49:48Z"
+    "geprueft_utc": "2026-09-23T15:49:48Z",
+    "prioritaet": "normal"
   },
   {
     "id": "cboe_vvix",
@@ -33,7 +34,8 @@
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-23T22:10:19Z",
-    "mechanismus": "VVIX misst die implizite Volatilitaet von VIX-Optionen (Vol-of-Vol); ein Anstieg zeigt Stress in der Optionsmarktstruktur, der sich innert 1-20 Handelstagen auf breite Aktienindizes wie den Weltindex uebertragen kann, bevor er in Kursen sichtbar wird."
+    "mechanismus": "VVIX misst die implizite Volatilitaet von VIX-Optionen (Vol-of-Vol); ein Anstieg zeigt Stress in der Optionsmarktstruktur, der sich innert 1-20 Handelstagen auf breite Aktienindizes wie den Weltindex uebertragen kann, bevor er in Kursen sichtbar wird.",
+    "prioritaet": "normal"
   },
   {
     "id": "cboe_vix9d",
@@ -57,7 +59,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-24T00:06:00Z"
+    "geprueft_utc": "2026-09-24T00:06:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "cboe_vix3m",
@@ -81,7 +84,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-24T00:06:00Z"
+    "geprueft_utc": "2026-09-24T00:06:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "treasury_tga",
@@ -104,7 +108,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T15:49:48Z"
+    "geprueft_utc": "2026-09-23T15:49:48Z",
+    "prioritaet": "hoch"
   },
   {
     "id": "nyfed_rrp",
@@ -127,7 +132,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T20:47:00Z"
+    "geprueft_utc": "2026-09-23T20:47:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "ecb_fx",
@@ -170,7 +176,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T16:45:54Z"
+    "geprueft_utc": "2026-09-23T16:45:54Z",
+    "prioritaet": "normal"
   },
   {
     "id": "snb_saron",
@@ -193,7 +200,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T16:45:54Z"
+    "geprueft_utc": "2026-09-23T16:45:54Z",
+    "prioritaet": "normal"
   },
   {
     "id": "boe_sonia",
@@ -208,7 +216,8 @@
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-24T02:08:40Z",
-    "mechanismus": "SONIA ist der von der Bank of England administrierte GBP-Tagesgeldsatz und spiegelt in Echtzeit die Geldpolitik und Liquiditaetslage am britischen Geldmarkt; kurzfristige Spruenge (Leitzinsentscheide, Repo-Stress, Jahresend-Effekte) koennen auf breitere GBP-Finanzierungskosten und globale Risikostimmung wirken und sich auf Sicht von 1-20 Handelstagen im Finanzsektor (XLF) und bei Staatsanleihen (TLT) gegenueber dem Weltindex niederschlagen."
+    "mechanismus": "SONIA ist der von der Bank of England administrierte GBP-Tagesgeldsatz und spiegelt in Echtzeit die Geldpolitik und Liquiditaetslage am britischen Geldmarkt; kurzfristige Spruenge (Leitzinsentscheide, Repo-Stress, Jahresend-Effekte) koennen auf breitere GBP-Finanzierungskosten und globale Risikostimmung wirken und sich auf Sicht von 1-20 Handelstagen im Finanzsektor (XLF) und bei Staatsanleihen (TLT) gegenueber dem Weltindex niederschlagen.",
+    "prioritaet": "normal"
   },
   {
     "id": "bundesbank_umlauf",
@@ -224,7 +233,8 @@
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-24T20:25:00Z",
-    "mechanismus": "Taegliche Renditen der aktuellen deutschen Bundesanleihen (2 und 10 Jahre) zeigen Verschiebungen der EUR-Zinserwartungen und der Risikoaversion in der Eurozone an; kurzfristige Bewegungen (insb. der Kurvenneigung 10J-2J) koennen auf Sicht von 1-20 Handelstagen auf US-Anleihen (TLT) und europaeische Sektor-/Laenderpositionen (EWG) gegenueber dem Weltindex wirken, analog zum bereits vorhandenen US-Pendant T10Y2Y, aber fuer den Euroraum."
+    "mechanismus": "Taegliche Renditen der aktuellen deutschen Bundesanleihen (2 und 10 Jahre) zeigen Verschiebungen der EUR-Zinserwartungen und der Risikoaversion in der Eurozone an; kurzfristige Bewegungen (insb. der Kurvenneigung 10J-2J) koennen auf Sicht von 1-20 Handelstagen auf US-Anleihen (TLT) und europaeische Sektor-/Laenderpositionen (EWG) gegenueber dem Weltindex wirken, analog zum bereits vorhandenen US-Pendant T10Y2Y, aber fuer den Euroraum.",
+    "prioritaet": "hoch"
   },
   {
     "id": "usgs_mississippi",
@@ -237,7 +247,8 @@
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-23T22:10:19Z",
-    "mechanismus": "Pegelstaende/Abfluss grosser Fluesse beeinflussen kurzfristig Binnenschifffahrt- und Erntetransportkosten und damit Agrarrohstoffpreise (z.B. DBA) gegenueber dem Weltindex."
+    "mechanismus": "Pegelstaende/Abfluss grosser Fluesse beeinflussen kurzfristig Binnenschifffahrt- und Erntetransportkosten und damit Agrarrohstoffpreise (z.B. DBA) gegenueber dem Weltindex.",
+    "prioritaet": "tief"
   },
   {
     "id": "usgs_ohio",
@@ -250,7 +261,8 @@
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-23T22:10:19Z",
-    "mechanismus": "Abfluss des Ohio bei Metropolis (Anbindung an Mississippi-Schifffahrt) kann kurzfristig Kohle-, Stahl- und Agrartransportkosten beeinflussen."
+    "mechanismus": "Abfluss des Ohio bei Metropolis (Anbindung an Mississippi-Schifffahrt) kann kurzfristig Kohle-, Stahl- und Agrartransportkosten beeinflussen.",
+    "prioritaet": "tief"
   },
   {
     "id": "usgs_erdbeben",
@@ -273,7 +285,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T15:49:48Z"
+    "geprueft_utc": "2026-09-23T15:49:48Z",
+    "prioritaet": "normal"
   },
   {
     "id": "silso_sonnenflecken",
@@ -285,7 +298,8 @@
     "grund": "K5 verletzt: definitive Tagesreihe SN_d_tot_V2.0.csv hat rund 23 Tage Publikationsverzug (letzter Wert bei Pruefung 2026-08-31, Abruf 2026-09-23), damit ausserhalb 'hoechstens 10 Tage alt'. Die aktuelle Ersatzreihe EISN_current.csv (provisorische taegliche Schaetzung) deckt nur ein rollendes Fenster des laufenden Monats ab und erfuellt K2 (Historie ab 2015) nicht; eine Verkettung von definitiver und provisorischer Reihe wuerde zudem K4 verletzen, da der provisorische Teil nachtraeglich auf den definitiven Wert revidiert wird. Bei kuenftig kuerzerem SILSO-Publikationsverzug erneut pruefen.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T16:45:54Z"
+    "geprueft_utc": "2026-09-23T16:45:54Z",
+    "prioritaet": "tief"
   },
   {
     "id": "gfz_kp",
@@ -297,7 +311,8 @@
     "grund": "K4 verletzt: die GFZ-Webservice-API (kp.gfz.de/app/json) markiert jeden Wert mit einem Status 'pre' (praeliminaer) oder 'def' (definitiv). Werte werden erst nach Pruefung aller Bodenobservatorien von 'pre' auf 'def' gesetzt; Stichprobe am Lauftag zeigte noch am 2026-09-10 (13 Tage zurueck) durchgehend Status 'pre', 'def' fuer den Status-Filter im September 2026 komplett leer. D.h. entweder man nimmt nur status=def (dann ist K5 'laufend, hoechstens 10 Tage alt' verletzt, da 'def' erst mit mehrwoechiger Verzoegerung vorliegt) oder man nimmt 'pre'-Werte (dann werden diese Werte spaeter auf 'def' revidiert, K4 verletzt, analog zu revidierter Wirtschaftsstatistik). Bei kuenftig kuerzerer Definitiv-Verzoegerung oder Nachweis, dass 'pre' praktisch nie von 'def' abweicht, erneut pruefen.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-23T20:47:00Z"
+    "geprueft_utc": "2026-09-23T20:47:00Z",
+    "prioritaet": "tief"
   },
   {
     "id": "gdelt_ereignisse",
@@ -310,7 +325,8 @@
     "grund": "K7 verletzt: data.gdeltproject.org/events/index.html liefert seit 2013-04-01 nur Tagesdateien (kein Bereichs-Query, keine konsolidierte Zip fuer 2015-heute; die einzige Sammel-Datei GDELT.MASTERREDUCEDV2.1979-2013.zip (1.1 GB) deckt nur bis 2013). Fuer die ab 2015-12-31 verlangte Historie (K2) waeren ca. 4000 Einzeldateien zu je 3-8 MB (insgesamt >20 GB Rohdaten) herunterzuladen, um daraus die kleine Tagesreihe (Datum, Anzahl, Mittelton) zu berechnen. Das verletzt K7 (Abruf unter 3 Minuten) eklatant und ist mit der Vorgabe, dass jedes aktive Skript bei jedem Lauf die GANZE Historie neu holt, dauerhaft nicht innerhalb des 180s-Zeitbudgets von run_all.py vereinbar -- auch ein gestaffelter Aufbau (in Etappen je Jahr) wuerde das Problem nur beim Erstaufbau verschieben, nicht beim taeglichen Neuabruf loesen. Keine Historie abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-24T04:20:00Z"
+    "geprueft_utc": "2026-09-24T04:20:00Z",
+    "prioritaet": "tief"
   },
   {
     "id": "kalender_ereignisse",
@@ -354,7 +370,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-24T04:20:00Z",
-    "geprueft_utc": "2026-09-25T08:16:00Z"
+    "geprueft_utc": "2026-09-25T08:16:00Z",
+    "prioritaet": "hoch"
   },
   {
     "id": "wikipedia_weitere",
@@ -508,7 +525,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
-    "geprueft_utc": "2026-09-24T22:15:00Z"
+    "geprueft_utc": "2026-09-24T22:15:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "sec_insider_sektor",
@@ -517,7 +535,7 @@
     "domain": "www.sec.gov",
     "bereich": "Firmenereignisse",
     "status": "abgelehnt",
-    "prioritaet": "hoch",
+    "prioritaet": "tief",
     "mechanismus": "Offene Marktkaeufe von Firmeninsidern (Formular 4, Code 'P') buendeln privates Wissen ueber die kurzfristigen Aussichten eines Sektors; ein Anstieg der Kaeuferzahl/des Kaufwerts je SPDR-Sektor kann dem Sektor gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen einen Vorteil anzeigen, bevor sich das in Kursen niederschlaegt.",
     "grund": "SEC sperrt diese Umgebung (403); Beschaffung ueber GitHub Action auf main, siehe data/sec/manifest_sec.json. (Zusatz 3, 24.9.2026: nicht mehr selbst versuchen.) Vorherige Etappen 1-9 (23.-24.9.2026): SIC-Sektor-Mapping und quellen/sec_sic_sektor.json vorbereitet, aber jeder Abruf der EDGAR/SEC-Endpunkte aus dieser Umgebung lieferte HTTP 403.",
     "reihen": [],
@@ -531,7 +549,7 @@
     "domain": "www.policyuncertainty.com",
     "bereich": "Aufmerksamkeit",
     "status": "abgelehnt",
-    "prioritaet": "hoch",
+    "prioritaet": "tief",
     "mechanismus": "Ein taeglicher, aus Tweets abgeleiteter Unsicherheitsindex koennte kurzfristig auf erhoehte Risikopraemien breiter Marktindizes hindeuten, bevor sich Stimmung in Kursen niederschlaegt.",
     "grund": "Zusatz von Reto (23.9.2026), hohe Prioritaet. Etappe 1 (2026-09-23): K5-Pruefung siehe status unten. K5 verletzt: die Quellseite policyuncertainty.com/twitter_uncert.html vermerkt explizit 'Due to removal of Academic Research access to the Twitter/X API, we are unable to further update the index.' Die Reihe wird nicht mehr fortgeschrieben, letzter Wert absehbar aelter als 10 Tage. Historie (Dropbox-XLSX) daher nicht abgerufen/abgelegt.",
     "reihen": [],
@@ -553,7 +571,8 @@
       "gebuehren"
     ],
     "aufgenommen_utc": "2026-09-24T06:09:41Z",
-    "geprueft_utc": "2026-09-24T06:09:41Z"
+    "geprueft_utc": "2026-09-24T06:09:41Z",
+    "prioritaet": "normal"
   },
   {
     "id": "treasury_auktionen",
@@ -568,7 +587,8 @@
       "bid_to_cover"
     ],
     "aufgenommen_utc": "2026-09-24T06:09:41Z",
-    "geprueft_utc": "2026-09-24T06:09:41Z"
+    "geprueft_utc": "2026-09-24T06:09:41Z",
+    "prioritaet": "normal"
   },
   {
     "id": "treasury_debt_penny",
@@ -577,7 +597,7 @@
     "domain": "api.fiscaldata.treasury.gov",
     "bereich": "Staat",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Der taegliche Zuwachs der US-Bundesschuld (Emissionstempo, Verhaeltnis oeffentlich/intragovernmental) zeigt kurzfristigen Angebotsdruck bei US-Staatsanleihen an, der Anleiherenditen (TLT) und ueber den Dollar auch andere Sektoren gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen beeinflussen kann, insbesondere um Schuldenobergrenzen-Episoden.",
     "grund": "K1-K7 erfuellt: taeglich an US-Bankarbeitstagen (Median-Abstand 1 Tag), Historie 'gesamt' ab 1993-04-01 (8398 Werte), 'oeffentlich_gehalten'/'intragovernmental' ab 1997-09-30 (je 5440 Werte); oeffentliche REST-API ohne Login/Schluessel (v2/accounting/od/debt_to_penny); Werte sind taeglich veroeffentlichte Ist-Stände der Bundesschuld, keine nachtraeglich revidierte Statistik; letzter Wert 2026-09-22 (2 Kalendertage alt), laufend fortgeschrieben; alle drei Reihen neu (nicht im bestehenden Spiegel); Abruf < 2 s, unkomprimiert < 1.2 MB, komprimiert < 100 KB je Reihe. Anteil gleicher Folgewerte < 0.1%, Min/Max plausibel (Gesamtschuld 4.2 Bio. USD 1993 bis 40.2 Bio. USD 2026).",
     "reihen": [
@@ -595,7 +615,7 @@
     "domain": "archive-api.open-meteo.com",
     "bereich": "Rohstoffe",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Ungewoehnliche Niederschlagsdefizite oder -ueberschuesse in wichtigen Anbaugebieten (US-Maisguertel, brasilianisches Soja, zentralindischer Monsun) koennen kurzfristig (1-20 Handelstage) Ernteerwartungen und damit Agrarrohstoffpreise (DBA) gegenueber dem Weltindex bewegen, insbesondere bei akuten Duerre- oder Flutereignissen.",
     "grund": "Ergaenzung 2026-09-25T06:13:45Z (Zusatz 2, Ideenraum 3 'Wetter in Anbaugebieten ... ueber Open-Meteo'): fruehere Pruefung am 2026-09-23 war wegen eines Tageskontingent-Limits der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP nicht abschliessend (status faelschlich 'abgelehnt' belassen). Heute erneut getestet: archive-api.open-meteo.com/v1/archive liefert ohne Login/Schluessel ERA5-Reanalyse-Tageswerte (Niederschlagssumme) fuer drei Regionen. K1 taeglich (Median-Abstand 1 Tag, n=4276 je Reihe). K2 Historie ab 2015-01-01 (>500 Werte). K3 offen: keine Anmeldung, kein Schluessel, freier Tarif fuer nicht-kommerzielle Forschung. K4 punktgenau: laut Open-Meteo-Dokumentation ('Historical Weather API') bleiben aeltere ERA5-Werte nach der 5-7-taegigen Nachlieferung unveraendert; das Skript haelt zusaetzlich Sicherheitsabstand und schreibt nur Tage bis (heute - 10 Tage), also nie den unfertigen/vorlaeufigen Rand der Reanalyse. K5 laufend: bei jedem Lauf wird der Stichtag neu auf (heute - 10 Tage) berechnet, letzter abgelegter Wert 2026-09-15 (10 Tage vor Testdatum, an der erlaubten Obergrenze). K6 neu: keine Wetter-/Anbaugebiet-Reihe im bestehenden Spiegel (dort nur Wetter Zuerich/Basel/Frankfurt/Kaub/Houston/Chicago, keine Agrarregionen). K7 Umfang: je Reihe rund 80 KB unkomprimiert JSON-Antwort, komprimierte CSV weit unter 20 MB, Abruf aller drei Regionen unter 5 Sekunden. Pruefung: mais_guertel n=4276, Niederschlag 0.0-75.7 mm/Tag, Anteil gleicher Folgewerte 35.3%; soja_mato_grosso n=4276, 0.0-65.5 mm/Tag, 34.2%; monsun_indien n=4276, 0.0-225.5 mm/Tag (Monsun-Starkregenereignisse), 52.3%. Die hohen Anteile gleicher Folgewerte liegen an echten, physikalisch erwartbaren Trockentagen (Niederschlag exakt 0.0 mm an vielen aufeinanderfolgenden Tagen, v.a. Trockenzeit Indien/Mato Grosso) und sind kein Qualitaetsmangel, analog zu den binaeren 0/1-Indikatorreihen bei kalender_ereignisse. Werte plausibel (kein Platzhalter wie -999, keine negativen Niederschlaege, Maximalwerte passen zu bekannten Starkregenereignissen). Hinweis fuer kuenftige Laeufe: ein sofortiger Wiederholungsabruf direkt im Anschluss lieferte HTTP 429 (Tageskontingent/Rate-Limit der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP dieser Umgebung, analog zu wikipedia_weitere); run_all.py laesst bei Fehlschlag bestehende Dateien unveraendert stehen, ein erneuter Versuch im naechsten Lauf ist vorgesehen.",
     "reihen": [
@@ -619,7 +639,8 @@
       "call_rate"
     ],
     "aufgenommen_utc": "2026-09-24T09:15:00Z",
-    "geprueft_utc": "2026-09-24T09:15:00Z"
+    "geprueft_utc": "2026-09-24T09:15:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "donau_pegel",
@@ -628,7 +649,7 @@
     "domain": "www.pegelonline.wsv.de",
     "bereich": "Rohstoffe",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Niedrig- oder Hochwasser auf der Donau (Binnenschifffahrtsroute) verknappt kurzfristig Transportkapazitaet fuer Rohstoffe/Energie in Mitteleuropa und kann Logistikkosten sowie betroffene Sektoren (Energie, Grundstoffe) gegenueber dem Weltindex auf Sicht weniger Handelstage beeinflussen, analog zum bereits im bestehenden Spiegel vorhandenen Rheinpegel.",
     "grund": "Test am 2026-09-23: die oeffentliche REST-API www.pegelonline.wsv.de/webservices/rest-api/v2/ liefert Donau-Stationen (z.B. PASSAU DONAU 10091008) und Messwerte ohne Login/Schluessel, aber die measurements.json-Endpunkte liefern nur ein rollierendes Fenster von rund 30 Tagen -- keine Historie bis 31.12.2015 (K2 verletzt ueber diese API). Fuer eine lange Historie muesste eine andere oeffentliche Quelle gefunden werden (z.B. laenderspezifische Gewaesserkundliche Dienste mit Tages-Archivdownload, testweise gkd.bayern.de versucht, Pfad noch nicht gefunden/404). Weiterrecherchiert am 2026-09-24: oesterreichisches eHYD-Portal (ehyd.gv.at) fuehrt laut offizieller Beschreibung Archivdaten unter CC-BY 4.0 oeffentlich, der dokumentierte Downloadpfad https://ehyd.gv.at/eHYD/MessstellenExtraData/... erfordert jedoch eine bekannte HZB-Stationsnummer fuer eine Donau-Pegelstelle (z.B. Wien/Kienstock), die noch nicht ermittelt werden konnte; direkter Testabruf von ehyd.gv.at/eHYD/PegelAktuell lieferte HTTP 404 (vermutlich JS-basierte WebGIS-Anwendung, kein einfacher HTTP-Endpunkt ohne Sitzung). Noch nicht abgelehnt, da grundsaetzlich oeffentlich und lizenzrechtlich moeglich; naechster Lauf: HZB-Stationsnummer einer Donau-Messstelle (Wien, Kienstock oder Hainburg) recherchieren und MessstellenExtraData-Endpunkt direkt testen, sonst nach zwei weiteren erfolglosen Laeufen 'abgelehnt' mit Grund K2/K3 (kein einfacher oeffentlicher Archivdownload ohne Session auffindbar). Etappe 3 (2026-09-24T12:10:51Z): WSV-Pegelonline-REST-API direkt gegengeprueft -- Anfrage mit start=2015-01-01 und start=2010-01-01 an /stations/<uuid>/W/measurements.json (Station PASSAU ILZSTADT, DONAU) liefert in beiden Faellen identisch nur ein rollierendes Fenster von rund 31 Tagen (3028 Werte im 15-Minuten-Takt, aeltester Wert 2026-08-24), unabhaengig vom angefragten Startdatum -- die API ignoriert frueher liegende Startdaten und liefert keine Historie bis 2015 (K2 damit endgueltig ueber diesen Weg widerlegt, nicht nur vermutet). eHYD (Oesterreich) lieferte in Etappe 2 HTTP 404 ohne auffindbaren einfachen Archiv-Endpunkt ohne Sitzung/Stationsnummer. Nach zwei erfolglosen Rechercheetappen gemaess Vorgabe 'abgelehnt', Grund K2 (keine oeffentliche Tageshistorie bis 31.12.2015 ohne Session/Anmeldung auffindbar).",
     "reihen": [],
@@ -642,7 +663,7 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Geldmarkt",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Der Tagessatz der Fed-Funds-Transaktionen zwischen US-Banken spiegelt die aktuelle Geldmarktliquiditaet; kurzfristige Abweichungen vom FOMC-Zielband (z.B. Stress an Monatsenden/Quartalsenden) koennen zinssensitive Sektoren (XLF, TLT) gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen, bevor sich das in Kursen niederschlaegt.",
     "grund": "Neu aufgenommen (2026-09-24T12:10:51Z). Oeffentliche fredgraph.csv-Ausgabe der FRED-Reihe DFF, kein API-Schluessel noetig (bereits erprobtes Muster wie bei nyfed_rrp/RRPONTSYD). Pruefung: 26382 Zeilen, erster Wert 1954-07-01, letzter Wert 2026-09-22, Median-Abstand 1 Kalendertag (K1 erfuellt), Historie weit vor 2015 (K2 erfuellt), oeffentlich ohne Login/Schluessel (K3), Markttagessatz wird nicht nachtraeglich revidiert (K4), letzter Wert 2 Tage alt (K5), Reihe nicht im bestehenden Spiegel (K6 -- FRED-Liste des Spiegels enthaelt DFF nicht), unter 20 MB und Abruf in Sekunden (K7). Anteil gleicher Folgewerte 54.3% -- ungewoehnlich hoch, aber plausibel erklaerbar: die Reihe verharrt in laengeren Phasen unveraenderter FOMC-Zielbaender (z.B. Nullzins 2009-2015 und 2020-2022) tagelang auf demselben Wert, kein Datenfehler. Min 0.04, Max 22.36 (Anfang 1980er-Jahre) -- beides plausibel.",
     "reihen": [
@@ -658,7 +679,7 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Rohstoffe",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Brent ist der internationale Rohoel-Referenzpreis (Nordsee/Europa/Asien), unabhaengig vom bereits vorhandenen WTI (USO/DCOILWTICO, US-Binnenmarkt); Verschiebungen im Brent-WTI-Spread zeigen kurzfristig globale Angebots-/Logistikverschiebungen an, die den Energiesektor (XLE) und rohstoffnahe Laender gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen koennen.",
     "grund": "Neu aufgenommen (2026-09-24T12:10:51Z). Oeffentliche fredgraph.csv-Ausgabe der FRED-Reihe DCOILBRENTEU, kein API-Schluessel noetig. Pruefung: 9092 Zeilen, erster Wert 1987-05-20, letzter Wert 2026-09-22, Median-Abstand 1 Kalendertag (K1 erfuellt), Historie weit vor 2015 (K2 erfuellt), oeffentlich ohne Login/Schluessel (K3), taeglicher Spotpreis wird nicht nachtraeglich revidiert (K4), letzter Wert 2 Tage alt (K5), Reihe nicht im bestehenden Spiegel (K6 -- nur WTI/DCOILWTICO und USO vorhanden, kein Brent), unter 20 MB und Abruf in Sekunden (K7). Anteil gleicher Folgewerte 1.9% (unauffaellig). Min 9.10 USD (April 2020, negative/sehr niedrige Oelpreise plausibel), Max 143.95 USD (2008) -- beides plausibel.",
     "reihen": [
@@ -674,7 +695,7 @@
     "domain": "home.treasury.gov",
     "bereich": "Zinsen",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Form und Niveau der taeglichen US-Par-Zinsstrukturkurve (kurz vs. lang, Steilheit einzelner Segmente) spiegeln Wachstums-/Inflationserwartungen und Risikoappetit; Verschiebungen einzelner Laufzeiten koennen zinssensitive Sektoren (XLRE, XLU, XLF) und Anleihen (TLT) gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen, bevor sich das voll in Aktienkursen niederschlaegt.",
     "grund": "K1 taeglich erfuellt (US-Bankarbeitstage, Median-Abstand 1 Tag je Laufzeit, vereinzelt 3 Tage ueber Wochenenden/Feiertage). K2 Historie erfuellt: kuerzeste aufgenommene Laufzeit (1 Mo) ab 2001-07-31, alle anderen ab 1990-01-02 bzw. 20-Jahres-Laufzeit ab 1993-10-01; alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche CSV-Ausgabe von home.treasury.gov ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur, keine Nutzungsbeschraenkung ersichtlich. K4 punktgenau: taegliche Marktzinsen (Constant Maturity Treasury, aus Sekundaermarktquotierungen abgeleitet), keine nachtraegliche Revision publizierter Tageswerte bekannt (wie bei DGS10/FRED-Pendant). K5 laufend: letzter Wert 2026-09-23 (1 Tag alt bei Abruf), taeglich fortgeschrieben. K6 neu: 10-Jahres-Laufzeit bewusst AUSGESCHLOSSEN (Dublette zu FRED DGS10, bereits im Indikatorraum U2); die verbleibenden 10 Laufzeiten (1 Monat, 3/6 Monate, 1/2/3/5/7/20/30 Jahre) sind nicht im Spiegel enthalten (T10Y2Y ist ein Spread, BAA10Y ein Corporate-Spread, keine direkten Treasury-Par-Renditen). Zwei kurzlebige Laufzeiten (1.5 Month seit 2022, 2 Mo seit 2018, 4 Mo seit 2022) automatisch per K2-Filter (<500 Werte oder erster Wert nach 2015-12-31) im Skript verworfen, nicht als eigene Reihen geschrieben. K7 Umfang: Abruf aller 37 Jahresdateien (1990-2026) parallelisiert (ThreadPoolExecutor, 12 Worker, nur Python-Standardbibliothek) in 73 s, alle Dateien einzeln weit unter 20 MB komprimiert. Pruefzahlen je Reihe: m1: 2001-07-31..2026-09-23, n=6289, medianAbstand=1.0, gleicheFolge=0.2715, min=0.0, max=6.02; m3: 1990-01-02..2026-09-23, n=9185, medianAbstand=1.0, gleicheFolge=0.252, min=0.0, max=8.26; m6: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.2381, min=0.02, max=8.49; y1: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1942, min=0.04, max=8.64; y2: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1575, min=0.09, max=9.05; y3: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1023, min=0.1, max=9.11; y5: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.0875, min=0.19, max=9.1; y7: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.0799, min=0.36, max=9.12; y20: 1993-10-01..2026-09-23, n=8249, medianAbstand=1.0, gleicheFolge=0.0829, min=0.87, max=8.3; y30: 1990-01-02..2026-09-23, n=8194, medianAbstand=1, gleicheFolge=0.086, min=0.99, max=9.18. Anteil gleicher Folgewerte je Laufzeit unauffaellig (max. ~11% bei y20/y30 durch ruhige Marktphasen), keine Reihe ueber der 20%-Verdachtsschwelle. Min/Max je Laufzeit plausibel im historischen Zinsband (0.01%-8.3%, je nach Laufzeit). | Zusatz 3 (24.9.2026): auf 3 verdichtete Reihen umgestellt. Aktiv: kurz (1 Mo). Ruhend, Grund Redundanz Zusatz 3: alle 10 Original-Laufzeiten (m1,m3,m6,y1,y2,y3,y5,y7,y20,y30) sowie niveau (10J) und steilheit (10J-2J), da DGS10 und T10Y2Y bereits im Spiegel main liegen (K6).",
     "reihen": [
@@ -699,7 +720,7 @@
     "domain": "www.bankofcanada.ca",
     "bereich": "Geldmarkt",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Kanadischer Leitzins koennte ueber Zinsdifferenzen kurzfristig CAD-sensitive Rohstoffe/Sektoren gegenueber dem Weltindex bewegen.",
     "grund": "Formal erfuellt die Reihe K1-K3/K5-K7 (taeglich fortgeschrieben ab 2009-04-21, oeffentliche Valet-API ohne Login/Schluessel, letzter Wert 2026-09-23, Abruf <1s, weit unter 20 MB). Jedoch: es handelt sich um den administrativ gesetzten Leitzins-Zielwert (Target for the Overnight Rate), nicht um einen taeglich am Markt gebildeten Zins wie SARON/SONIA/Bundesbank-Umlaufsrendite. Praktisch geprueft: Anteil gleicher Folgewerte 99.3% (4533 Werte, nur an rund 32 Zinsentscheid-Tagen seit 2009 aendert sich der Wert) -- weit ueber der 20%-Verdachtsschwelle und deutlich hoeher als bei allen bisher aufgenommenen Geldmarktreihen (SARON 0.2%, SONIA 5.1%, Bundesbank 10.8-23.6%). Der Informationsgehalt auf Sicht von 1-20 Handelstagen ist damit an praktisch allen Tagen null; die wenigen Aenderungstage fallen zudem mit bereits erfassten geldpolitischen Terminen zusammen (vgl. kalender_ereignisse FOMC/EZB-Termine). Kein eigenstaendiger taeglicher Mechanismus gegenueber bereits vorhandenen Reihen. Status 'abgelehnt', Grund 'kein Mechanismus' (Zusatz 2 von Reto: Qualitaet vor Menge).",
     "reihen": [],
@@ -713,7 +734,7 @@
     "domain": "www.mof.go.jp",
     "bereich": "Zinsen",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Niveau und Form der taeglichen japanischen Staatsanleihen-Zinsstrukturkurve spiegeln geldpolitische Erwartungen der Bank of Japan (u.a. Yield-Curve-Control-Politik, Carry-Trade-Bedingungen) wider; kurzfristige Verschiebungen koennen japanische Vermoegenswerte (EWJ) und den Yen-Carry-Trade gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen, bevor sich das voll in Aktienkursen niederschlaegt.",
     "grund": "K1 taeglich erfuellt: japanische Bankarbeitstage, Median-Abstand 1 Tag je Laufzeit. K2 Historie erfuellt: kuerzeste Laufzeiten (1-9 Jahre) ab 1974-09-24, laengere Laufzeiten je nach Einfuehrung (10J ab 1986, 40J ab 2007), alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche CSV-Ausgabe des japanischen Finanzministeriums (mof.go.jp) ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur. Zwei Dateien kombiniert: Historisch (1974~, jgbcme_all.csv, bis Vormonatsende) und laufender Monat (jgbcme.csv), damit K5 (aktueller Rand) erfuellt ist. K4 punktgenau: administrativ veroeffentlichte taegliche Referenzrenditen (CMT-aehnlich wie bei US-Treasury-Kurve/FRED), keine nachtraegliche Revision publizierter Tageswerte bekannt. K5 laufend: letzter Wert 2026-09-18 (6 Tage alt bei Abruf, laufende Monatsdatei wird fortgeschrieben). K6 neu: japanische Staatsanleihenrenditen sind nicht im bestehenden Spiegel enthalten (EWJ ist ein Aktien-ETF, keine Zinsreihe; die vorhandenen Zinsreihen sind US/DE/CH/UK). K7 Umfang: zwei CSV-Dateien (Historisch ~1.2 MB, aktuell <2 KB), Abruf unter 5 Sekunden. Pruefzahlen je Laufzeit (Reihe: n, erste, letzte, medianAbstand, gleicheFolge, min, max): y1: n=12656, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1674, min=-0.371, max=11.237; y2: n=12943, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1563, min=-0.372, max=12.145; y3: n=13228, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1104, min=-0.374, max=11.701; y4: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1136, min=-0.382, max=10.562; y5: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1000, min=-0.389, max=10.656; y6: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0882, min=-0.405, max=10.639; y7: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0884, min=-0.423, max=10.858; y8: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0866, min=-0.393, max=10.94; y9: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0852, min=-0.35, max=10.67; y10: n=9943, 1986-07-05..2026-09-18, medianAbstand=1, gleicheFolge=0.0549, min=-0.297, max=8.105; y15: n=8602, 1991-08-30..2026-09-18, medianAbstand=1, gleicheFolge=0.0553, min=-0.15, max=6.546; y20: n=9830, 1986-12-01..2026-09-18, medianAbstand=1, gleicheFolge=0.0616, min=0.022, max=7.749; y25: n=5509, 2004-03-22..2026-09-18, medianAbstand=1, gleicheFolge=0.0659, min=0.036, max=4.143; y30: n=6627, 1999-09-02..2026-09-18, medianAbstand=1, gleicheFolge=0.0610, min=0.042, max=4.131; y40: n=4615, 2007-11-06..2026-09-18, medianAbstand=1, gleicheFolge=0.0724, min=0.067, max=4.145. Anteil gleicher Folgewerte je Laufzeit unauffaellig (max. ~16.7% bei y1, deutlich unter der 20%-Verdachtsschwelle). Min/Max je Laufzeit plausibel: negative Renditen bei kurzen/mittleren Laufzeiten waehrend der Nullzins-/Negativzinsphase der Bank of Japan (ca. 2016-2024), seither steigend auf aktuell rund 1.5-3%% (kurz/mittel) bzw. ueber 4%% (sehr lange Laufzeiten). | Zusatz 3 (24.9.2026): auf 3 verdichtete Reihen umgestellt. Aktiv: niveau (10J), steilheit (10J-2J), kurz (1J, keine kuerzere JGB-Laufzeit oeffentlich verfuegbar, Regel 'sonst 1 Jahr'). Ruhend, Grund Redundanz Zusatz 3: alle 15 Original-Laufzeiten (y1..y40).",
     "reihen": [
@@ -743,7 +764,7 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Geldmarkt",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Der taegliche besicherte US-Repo-Referenzsatz SOFR zeigt Stress/Knappheit im Repomarkt an und koennte kurzfristig Finanzwerte (XLF) und kurzfristige Zinspapiere gegenueber dem Weltindex bewegen.",
     "grund": "K2 verletzt: Test der oeffentlichen fredgraph.csv-Ausgabe (gleiches Muster wie fred_effr) zeigt ersten Wert erst 2018-04-03 (SOFR wurde erst 2018 eingefuehrt), also nach der Vorgabe 'spaetestens 31.12.2015'. Kein Abruf/keine Ablage der Historie. Aus dem gleichen Grund auch €STR (ECB, erst ab Oktober 2019) nicht weiterverfolgt.",
     "reihen": [],
@@ -757,7 +778,7 @@
     "domain": "rba.gov.au",
     "bereich": "Geldmarkt",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Als taeglicher Geldmarktsatz fuer Australien waere die Reihe ein Analogon zu SONIA/SARON/EFFR und koennte kurzfristig auf australische Zins-/Rohstofftitel wirken.",
     "grund": "K4/Plausibilitaet verletzt: Getestet am 2026-09-24. Die oeffentliche CSV (rba.gov.au/statistics/tables/csv/f1-data.csv, Tabelle F1, Serie FIRMMCRID) liefert taegliche Werte ab 2011-01-04 ohne Login/Schluessel (K1-K3, K5-K7 formal erfuellt), aber die Interbank Overnight Cash Rate folgt fast perfekt dem administrierten Cash Rate Target (RBA-Geldpolitik-Ziel) und aendert sich nur an geldpolitischen Entscheidtagen: 97.9% der Tagesfolgen sind identisch mit dem Vortageswert (Schwelle 20% deutlich ueberschritten), analog zur bereits abgelehnten Quelle boc_overnight. Das ist eine administrierte Zielgroesse, kein echter taeglich neu gebildeter Marktsatz -- abgelehnt.",
     "reihen": [],
@@ -771,7 +792,7 @@
     "domain": "power.larc.nasa.gov",
     "bereich": "Rohstoffe",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Niederschlags- und Temperaturanomalien in wichtigen Anbaugebieten (US-Maisguertel, Mato Grosso Soja, indischer Monsun) sagen kurzfristig Ernteaussichten voraus und koennten Agrarrohstoffe (DBA) sowie betroffene Laender-/Sektorindizes gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen -- als Ausweichkandidat zu openmeteo_wetter_anbau getestet (open-meteo derzeit durch Tageskontingent der geteilten Cloud-IP blockiert).",
     "grund": "Test am 2026-09-24T20:25:00Z: power.larc.nasa.gov liefert ohne Login/Schluessel taegliche T2M/PRECTOTCORR-Werte ab 1981 (K2 erfuellt), Publikationsverzug rund 3 Tage (K5 erfuellbar), kein Tageskontingent-Block festgestellt. Aber laut NASA-POWER-Dokumentation (power.larc.nasa.gov/docs/methodology/, bestaetigt per Websuche) basiert die Historie auf MERRA-2-Reanalyse bis auf wenige Monate vor der Gegenwart, der aktuelle Rand (bis auf wenige Tage) dagegen auf dem Near-Real-Time-Produkt GEOS-IT (vormals GEOS 5.12.4 FP-IT); dieser Near-Real-Time-Abschnitt wird nach einigen Monaten durch die dann verfuegbaren finalen MERRA-2-Werte ersetzt/revidiert. Damit genau derselbe Konflikt wie bei usgs_mississippi/usgs_ohio: der fuer K5 benoetigte aktuelle Rand ist strukturell revisionsfaellig -- K4 verletzt. Kein Abruf/keine Ablage der Historie; kein eigenes Skript geschrieben.",
     "reihen": [],
@@ -785,7 +806,7 @@
     "domain": "data-api.ecb.europa.eu",
     "bereich": "Geldmarkt",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Der Euro-Tagesgeldsatz (€STR) spiegelt kurzfristige Liquiditaets-/Stressbedingungen im Euroraum und koennte europaeische Sektor-/Landesindizes (z.B. EWG) gegenueber dem Weltindex kurzfristig bewegen.",
     "grund": "Test am 2026-09-24T20:25:00Z: data-api.ecb.europa.eu liefert taeglich, offen, ohne Revision publizierte Endwerte (OBS_STATUS 'A', CONF_STATUS 'F'), K5 erfuellt (Serie laeuft). Aber €STR wurde erst am 1.10.2019 eingefuehrt (erster Wert 2019-10-01), damit K2 verletzt (erster Wert spaetestens 31.12.2015 gefordert). Die laengere Vorgaengerreihe EONIA (seit 1999) wurde per 3.1.2022 eingestellt (durch €STR+8.5bp ersetzt) und verletzt damit K5 (nicht mehr fortgeschrieben). Keine Kombination beider Reihen moeglich, die gleichzeitig K2 und K5 erfuellt. Kein Abruf/keine Ablage der Historie; kein eigenes Skript geschrieben.",
     "reihen": [],
@@ -800,7 +821,7 @@
     "bereich": "Geldmarkt",
     "status": "abgelehnt",
     "mechanismus": "Ungewoehnlich hohe taegliche Inanspruchnahme der staendigen Repo-Fazilitaet (SRF) zeigt akuten Dollar-/Sicherheiten-Engpass im Interbankenmarkt an und koennte kurzfristig Finanzwerte (XLF) sowie kurzfristige Zinspapiere gegenueber dem Weltindex bewegen, bevor sich der Stress in anderen Marktdaten zeigt.",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "grund": "Test am 2026-09-24T22:05:00Z: die oeffentliche NY-Fed-Markets-API (markets.newyorkfed.org/api/rp/...) liefert ohne Login/Schluessel taegliche Ergebnisse der Repo-Operationen (u.a. SRF, 'operationMethod': 'Full Allotment', Satz aktuell 4.0%). Erreichbare Endpunkte: nur 'last/<N>.json' mit N<1000 (N=999 funktioniert, N=1000 liefert HTTP 400); ein datumsbereichsbasierter Endpunkt (mehrere getestete Varianten von 'search.json' mit startDate/endDate, 'propositions/search.json', 'before/.../N.json') liefert durchgehend HTTP 400 und wurde nicht gefunden -- Rueckabruf der vollen Historie ueber Pagination ist aus dieser API praktisch nicht moeglich. Unabhaengig davon: die Standing Repo Facility wurde erst am 2021-07-28 als staendige Einrichtung eingefuehrt (vorher nur sporadische, nicht taegliche Repo-Operationen der Fed in Krisen 2008 und 2019/2020, mit mehrjaehrigen Luecken dazwischen). Damit ist ein erster Wert spaetestens 31.12.2015 (K2) strukturell nicht erreichbar -- abgelehnt wegen K2, unabhaengig vom API-Zugriffsproblem. Kein Skript geschrieben, keine Daten abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-24T22:05:00Z",
@@ -814,7 +835,7 @@
     "bereich": "Firmenereignisse",
     "status": "abgelehnt",
     "mechanismus": "Ungewoehnlich viele Ad-hoc-Meldungen (8-K) oder neue Boersenprospekte (S-1) an einem Tag, aggregiert je Sektor ueber SIC-Codes, koennten auf gehaeufte wesentliche Unternehmensereignisse hindeuten und kurzfristig den betroffenen Sektor gegenueber dem Weltindex bewegen.",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "grund": "Test am 2026-09-24T22:05:00Z: GET https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/form.20260923.idx liefert HTTP 403 'Your Request Originates from an Undeclared Automated Tool' -- derselbe umgebungsweite Block von www.sec.gov wie bei sec_insider_sektor (dort ueber 9 Etappen bestaetigt), diesmal auf dem statischen Archives-Pfad statt der data.sec.gov-Submissions-API getestet. Bestaetigt: der Block betrifft die gesamte sec.gov-Domain aus dieser Umgebung, nicht nur einzelne Endpunkte. Abgelehnt wegen K3 (aus dieser Infrastruktur nicht abrufbar); kein Umgehungsversuch. Wie bei sec_insider_sektor: Beschaffung ueber GitHub Action auf main moeglich, hier nicht Aufgabe dieses Zweigs. Kein Skript geschrieben, keine Daten abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-24T22:05:00Z",
@@ -852,7 +873,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-25T00:10:00Z",
-    "geprueft_utc": "2026-09-25T00:10:00Z"
+    "geprueft_utc": "2026-09-25T00:10:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "fred_usdjpy",
@@ -876,7 +898,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-25T02:25:00Z",
-    "geprueft_utc": "2026-09-25T02:30:00Z"
+    "geprueft_utc": "2026-09-25T02:30:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "fred_implied_vol",
@@ -885,7 +908,7 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Stimmung",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Implizite Volatilitaet aus Optionen auf Rohstoff-/Regionen-ETFs (USO, GLD, EEM) preist die vom Markt erwartete kurzfristige Schwankungsbreite ein, bevor sie sich in tatsaechlichen Kursbewegungen zeigt; ein Anstieg signalisiert erhoehte Unsicherheit fuer Oel (XLE, USO), Gold oder Emerging Markets (relativ zum Weltindex) auf Sicht von 1-20 Handelstagen, aehnlich wie VIX fuer den Gesamtmarkt.",
     "grund": "Neu aufgenommen (2026-09-25T04:13:06Z). K1 taeglich erfuellt: Median-Abstand 1 Tag je Reihe (Handelstage, CBOE-Berechnung aus taeglichen Optionspreisen). K2 Historie erfuellt: oel (OVXCLS) ab 2007-05-10 n=4875, gold (GVZCLS) ab 2008-06-03 n=4607, em (VXEEMCLS) ab 2011-03-16 n=3903 -- alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche fredgraph.csv-Ausgabe der FRED-API ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur (gleiches Muster wie bereits aktive fred_effr/fred_brent/fred_usdjpy). K4 punktgenau: taeglich administrativ von CBOE berechnete und publizierte Schlusswerte, keine nachtraegliche Revision bekannt (wie VIXCLS bereits im Spiegel). K5 laufend: letzter Wert 2026-09-22 (Handelstag, 2-3 Tage vor Abruf), taeglich fortgeschrieben. K6 neu: Gesamtmarkt-VIX (VIXCLS) ist bereits im Spiegel, diese drei Reihen messen implizite Volatilitaet anderer, im Spiegel nicht vorhandener zugrundeliegender Vermoegenswerte (Oel-ETF, Gold-ETF, EM-ETF); nicht redundant zu den bereits aktiven Cboe-Stimmungsreihen (SKEW, VVIX, VIX9D, VIX3M), die alle Varianten des S&P-500-VIX selbst sind. K7 Umfang: drei CSV-Abrufe unter 5 Sekunden gesamt, jede Datei weit unter 20 MB. Pruefzahlen: oel n=4875, 2007-05-10..2026-09-22, medianAbstand=1, gleicheFolge=0.008, min=14.5, max=325.15 (Plausibel: Maximum waehrend des negativen WTI-Preisereignisses April 2020); gold n=4607, 2008-06-03..2026-09-22, medianAbstand=1, gleicheFolge=0.006, min=8.88, max=64.53; em n=3903, 2011-03-16..2026-09-22, medianAbstand=1, gleicheFolge=0.004, min=13.11, max=92.46. Anteil gleicher Folgewerte je Reihe unter 1%, deutlich unter der 20%-Verdachtsschwelle. Zusatz 3 (Redundanzgrenze): drei Reihen je Quelle, an der Obergrenze, aber Ausnahme greift (klar verschiedene zugrundeliegende Vermoegenswerte: Oel, Gold, Emerging-Markets-Aktien), daher keine weitere Reduktion noetig.",
     "reihen": [
@@ -903,7 +926,7 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Stimmung",
     "status": "aktiv",
-    "prioritaet": "",
+    "prioritaet": "normal",
     "mechanismus": "Text-basierter Baker/Bloom/Davis-Index aus Zeitungsartikeln, die gleichzeitig Wirtschaft, Unsicherheit UND den Aktienmarkt erwaehnen; ein kurzfristiger Anstieg zeigt zunehmende, marktspezifisch fokussierte Unsicherheit an (anders als die bereits vorhandene allgemeine Wirtschaftspolitik-Unsicherheit USEPUINDXD) und kann breite Risikopraemien-Verschiebungen gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen vorwegnehmen.",
     "grund": "Neu aufgenommen (2026-09-25T04:13:06Z). K1 taeglich erfuellt: Median-Abstand 1 Tag (Kalendertage gemaess FRED-Serie, inkl. mancher Wochenendtage). K2 Historie erfuellt: n=15241, ab 1985-01-01, weit vor 31.12.2015 und weit ueber 500 Werte. K3 offen: oeffentliche fredgraph.csv-Ausgabe ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur. K4 punktgenau: administrativ berechneter Text-Index aus bereits publizierten Zeitungsartikeln, keine nachtraegliche Revision bekannt. K5 laufend: letzter Wert 2026-09-23 (1-2 Tage vor Abruf), taeglich fortgeschrieben. K6 neu: unterscheidet sich vom bereits im Spiegel vorhandenen USEPUINDXD (allgemeine Wirtschaftspolitik-Unsicherheit ueber alle Themenbereiche) durch den engeren, aktienmarktspezifischen Fokus der zugrundeliegenden Zeitungsartikel-Stichprobe. K7 Umfang: ein CSV-Abruf unter 2 Sekunden, Datei weit unter 20 MB. Pruefzahlen: n=15241, 1985-01-01..2026-09-23, medianAbstand=1, gleicheFolge=0.000 (kein einziger identischer Folgewert, deutlich unter der 20%-Verdachtsschwelle), min=4.8, max=3023.89 (Plausibel: Maximum in einer Marktstress-Phase, typisch fuer text-basierte Unsicherheitsindizes mit hoher Tagesvolatilitaet).",
     "reihen": [
@@ -919,7 +942,7 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Zinsen",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Investment-Grade-Kreditspreads (Gegenstueck zum bereits im Spiegel vorhandenen High-Yield-Spread BAMLH0A0HYM2) zeigen Risikoappetit im sichereren Anleihesegment und koennten zinssensitive Sektoren (XLF, TLT) auf Sicht von 1-20 Handelstagen vorwegnehmen.",
     "grund": "K2 verletzt: Test am 2026-09-25T04:13:27Z der oeffentlichen fredgraph.csv-Ausgabe fuer BAMLC0A0CM und BAMLC0A4CBBB liefert in dieser Infrastruktur nur die letzten rund 3 Jahre (erster Wert 2023-09-25, n=796), obwohl die Serien auf fred.stlouisfed.org historisch seit 1996-12-31 gefuehrt werden. Explizite cosd=1990-01-01-Parameter aendern nichts, ebenso beim bereits im Spiegel als Vergleichsserie getesteten BAMLH0A0HYM2 (dort identisches Muster: 796 Zeilen ab 2023-09-25) -- deutet auf eine serienspezifische Lizenzbeschraenkung der ICE-BofA-Indexfamilie (rollierendes Sichtfenster) in der fredgraph.csv-Ausgabe hin, nicht auf einen Abruffehler. Erster verfuegbarer Wert (2023-09-25) liegt weit nach dem K2-Stichtag 31.12.2015 -- abgelehnt. Kein Umgehungsversuch.",
     "reihen": [],
@@ -933,7 +956,7 @@
     "domain": "api.blockchair.com",
     "bereich": "Krypto",
     "status": "abgelehnt",
-    "prioritaet": "",
+    "prioritaet": "tief",
     "mechanismus": "Ethereum-Netzwerkaktivitaet (Transaktionszahl, Gebuehren) koennte als von Bitcoin unabhaengiges Risikoappetit-Signal fuer wachstumsnahe/spekulative Sektoren (XLK) auf Sicht von 1-20 Handelstagen dienen.",
     "grund": "K3 verletzt: Test am 2026-09-25T04:13:27Z. Die bei bitcoin_onchain genutzte schluessellose Blockchain.info-Charts-API deckt ausschliesslich Bitcoin ab, keine Ethereum-Reihen. Blockchair (api.blockchair.com) liefert ohne Schluessel nur den jeweils aktuellen Momentaufnahme-Status (/ethereum/stats, ein einzelner Zeitpunkt), keine taegliche Historie; historische Tageszeitreihen sind laut Blockchair-Dokumentation nur ueber den kostenpflichtigen Pro-Zugang mit API-Schluessel verfuegbar. Keine weitere oeffentliche, schlussellose Quelle fuer eine vollstaendige taegliche Ethereum-Historie seit vor 2015-12-31 gefunden. Kein Umgehungsversuch (kein Schluessel).",
     "reihen": [],
@@ -967,7 +990,8 @@
     "grund": "Test am 2026-09-25T06:13:45Z: GET https://www.bls.gov/schedule/news_release/2026_sched.htm liefert HTTP 403 Forbidden aus dieser Umgebung -- derselbe umgebungsweite Automated-Tool-Block wie bei sec_insider_sektor/edgar_daily_index_meldungen (dort ueber mehrere Etappen bestaetigt), hier erstmals auf der bls.gov-Domain getestet. Abgelehnt wegen K3 (aus dieser Infrastruktur nicht abrufbar); kein Umgehungsversuch (kein Proxy-/Kennungswechsel). Kein Skript geschrieben, keine Daten abgelegt. Alternative FRED-Release-Kalender wurden nicht weiterverfolgt, da die oeffentliche FRED-API fuer Veroeffentlichungstermine (fred/releases/dates) einen API-Schluessel voraussetzt (K3).",
     "reihen": [],
     "aufgenommen_utc": "2026-09-25T06:13:45Z",
-    "geprueft_utc": "2026-09-25T06:13:45Z"
+    "geprueft_utc": "2026-09-25T06:13:45Z",
+    "prioritaet": "tief"
   },
   {
     "id": "fred_dtb3",
@@ -991,7 +1015,8 @@
       }
     ],
     "aufgenommen_utc": "2026-09-25T08:14:00Z",
-    "geprueft_utc": "2026-09-25T08:14:00Z"
+    "geprueft_utc": "2026-09-25T08:14:00Z",
+    "prioritaet": "normal"
   },
   {
     "id": "fred_fx_lang",
@@ -1035,6 +1060,187 @@
       }
     ],
     "aufgenommen_utc": "2026-09-25T08:14:00Z",
-    "geprueft_utc": "2026-09-25T08:14:00Z"
+    "geprueft_utc": "2026-09-25T08:14:00Z",
+    "prioritaet": "normal"
+  },
+  {
+    "id": "debt_ceiling_x_date",
+    "name": "US-Schuldenobergrenze: Episoden und Bipartisan Policy Center X-Date-Schaetzungen",
+    "url": "https://bipartisanpolicy.org/x-date/",
+    "domain": "bipartisanpolicy.org",
+    "bereich": "Staat",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Naeherung an die Zahlungsunfaehigkeits-Frist des Bundes (unabhaengige Quelle, misst denselben Fiskalstress-Mechanismus wie der Beinahe-Treffer treasury_tga->XLE, aber ueber Schuldenobergrenze-Episoden statt Kassenbestand) kann kurzfristig T-Bill-Renditen und risikosensitive Sektoren gegenueber dem Weltindex bewegen.",
+    "grund": "Regel L1: unabhaengige Replikation des Beinahe-Treffers treasury_tga (t 4.68 in S0005, weiter unter Huerde 5.12); Episodenliste seit 1995 (haeufige Krisen) und statutarische Obergrenze seit 1917 fuer Praetext moeglich, oeffentlich, kein Login.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "usa_wahltag",
+    "name": "US-Wahltag (Praesidentschafts- und Kongresswahlen), deterministischer Kalender",
+    "url": "kein externer Abruf (deterministische Kalenderberechnung: erster Dienstag nach erstem Montag im November)",
+    "domain": "kein externer Abruf",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Der 'Presidential Election Cycle'-Effekt (Yale Hirsch) ist in der Fachliteratur dokumentiert: Vorwahltage und Wahltag selbst zeigen erhoehte Volatilitaet und systematische Renditemuster im breiten Markt gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen.",
+    "grund": "Regel L3: bekannte, publizierte Anomalie (Vorwissen), daher im Bericht vermerken dass sie seit Publikation eher schwaecher ist. Rein deterministisch (US Code Titel 3, seit 1845 fest), Historie weit vor 1990 moeglich (Zusatz 4 Schwerpunkt), keine Revision.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "turn_of_month_effekt",
+    "name": "Monatswechsel-Kalendertage (letzter Handelstag plus erste 3 Handelstage des Monats)",
+    "url": "kein externer Abruf (deterministische Kalenderberechnung auf Basis Handelskalender)",
+    "domain": "kein externer Abruf",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Der 'Turn-of-the-Month'-Effekt (Ariel 1987) ist eine der am besten belegten Kalenderanomalien: um den Monatswechsel konzentrierte ueberdurchschnittliche Renditen, moeglich durch Lohnzahlungs- und Rebalancing-Fluesse, koennten breite Indizes gegenueber dem Weltindex auf 1-20 Handelstage-Sicht beeinflussen.",
+    "grund": "Regel L3: publizierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Rein kalenderbasiert, beliebig weit rueckrechenbar (Zusatz 4 Schwerpunkt Historie vor 1990, z.B. ab 1926 analog Fama-French-Beginn), keine Revision, kein Abruf noetig.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "us_arbeitsmarkt_termine",
+    "name": "US-Arbeitsmarktbericht (Employment Situation) Veroeffentlichungstage der BLS",
+    "url": "https://www.bls.gov/schedule/news_release/empsit.htm",
+    "domain": "bls.gov",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Der monatliche Erstfreitag-Arbeitsmarktbericht ist der markttbewegendste US-Makrotermin; ueberraschende Abweichungen loesen kurzfristig (1-20 Handelstage) Bewegungen in zinssensitiven Sektoren (XLF, TLT) und breiten Indizes gegenueber dem Weltindex aus.",
+    "grund": "Bereits in kalender_ereignisse als naechster Schritt vorgemerkt (Ergaenzung 2026-09-25, aus Zeitgruenden nicht umgesetzt). Terminkalender der BLS oeffentlich, Historie seit Jahrzehnten dokumentiert, deterministisch nach Veroeffentlichung nicht revidierbar.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "us_cpi_termine",
+    "name": "US-Verbraucherpreisindex (CPI) Veroeffentlichungstage der BLS",
+    "url": "https://www.bls.gov/schedule/news_release/cpi.htm",
+    "domain": "bls.gov",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "CPI-Veroeffentlichungstage sind ein zentraler, im Voraus bekannter Inflationstermin; ueberraschende Abweichungen bewegen kurzfristig Anleihen (TLT, TIP) und breite Indizes gegenueber dem Weltindex.",
+    "grund": "Ebenfalls in kalender_ereignisse als naechster Schritt vorgemerkt. Oeffentlicher Terminkalender, deterministisch, keine Revision der Terminliste selbst (nur der gemeldete Wert wird revidiert, nicht der Publikationstag).",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "china_pboc_leitzins",
+    "name": "PBoC Loan Prime Rate (LPR) und MLF-Zinsentscheide, Aenderungstage",
+    "url": "http://www.pbc.gov.cn/en/3688229/3688335/3883798/index.html",
+    "domain": "pbc.gov.cn",
+    "bereich": "Geldmarkt",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Chinesische Leitzinsaenderungen (LPR/MLF) koennen kurzfristig Emerging-Markets- und China-Engagement (FXI, EEM) sowie global Rohstoffe gegenueber dem Weltindex bewegen, analog zu den bereits vorhandenen Leitzins-Aenderungstagen FOMC/EZB.",
+    "grund": "Ergaenzt bestehende leitzins_aenderungstage (bisher nur FOMC/EZB) um eine dritte grosse Notenbank; PBoC veroeffentlicht Ankuendigungen oeffentlich, Terminliste seit LPR-Reform 2019 gut dokumentiert, fruehere Referenzzins-Aenderungen seit 1990er Jahren recherchierbar.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "fed_balance_sheet_h41",
+    "name": "Fed H.4.1 woechentlicher Ausweis (SOMA-Bestand, Diskontfenster-Kredite)",
+    "url": "https://www.federalreserve.gov/releases/h41/",
+    "domain": "federalreserve.gov",
+    "bereich": "Staat",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Woechentliche Veraenderungen der Fed-Bilanz (Wertpapierbestand, Notkredite) zeigen Liquiditaetszufuhr oder -entzug an, die kurzfristig risikosensitive Sektoren gegenueber dem Weltindex bewegen kann; ergaenzt die bereits vorhandene TGA-Reihe um die Aktivseite der Fed-Bilanz.",
+    "grund": "Oeffentliche woechentliche Fed-Publikation ohne Login, Historie in konsistentem Format seit ca. 2002 (fruehere Jahrzehnte in anderer Formatierung z.T. verfuegbar, Zusatz-4-Pruefung noetig), unrevidierter Stichtagsausweis.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "panama_canal_transits",
+    "name": "Panamakanal-Behoerde: taegliche Transitzahlen und Tiefgangsbeschraenkungen",
+    "url": "https://pancanal.com/en/",
+    "domain": "pancanal.com",
+    "bereich": "Logistik",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Engpaesse am Panamakanal (z.B. Duerre-bedingte Tiefgangsbeschraenkungen 2023/24) erhoehen Frachtkosten und Lieferzeiten; das kann kurzfristig Transport-, Energie- und Agrarsektoren (XLE, DBA) gegenueber dem Weltindex bewegen.",
+    "grund": "Neuer Bereich Logistik (bisher im Katalog nicht vertreten, siehe Schritt 5 Vorgabe fuer mindestens einen neuen Bereich je Runde). Oeffentliche Statusmeldungen der Kanalbehoerde, taeglich soweit publiziert; Struktur/Historie-Tiefe noch zu pruefen.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "suez_canal_traffic",
+    "name": "Suezkanal-Behoerde (SCA): taegliche Transitmeldungen und Umleitungsstatistiken",
+    "url": "https://www.suezcanal.gov.eg/English/Navigation/Pages/NavigationStatistics.aspx",
+    "domain": "suezcanal.gov.eg",
+    "bereich": "Logistik",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Stoerungen am Suezkanal (z.B. Rotmeer-Krise seit Ende 2023) zwingen Reedereien zu Umleitungen ueber das Kap der Guten Hoffnung, was Frachtkosten und Lieferzeiten erhoeht und kurzfristig Transport- und Energiesektoren gegenueber dem Weltindex bewegen kann.",
+    "grund": "Zweiter Kandidat fuer den neuen Bereich Logistik, unabhaengige Engpassquelle zu panama_canal_transits (unterschiedlicher Kanal, unterschiedlicher Mechanismus: Sicherheitslage vs. Wasserstand). Oeffentliche Statistikseite der Kanalbehoerde, Abrufbarkeit/Format noch zu pruefen.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "eia_diesel_preis",
+    "name": "EIA woechentlicher US-Dieselpreis (Retail-Durchschnitt)",
+    "url": "https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm",
+    "domain": "eia.gov",
+    "bereich": "Logistik",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Dieselpreisschuebe verteuern Land- und Seefracht unmittelbar und gelten als fruehes Signal fuer Logistikkosten-Stress, der sich kurzfristig auf Transport-, Einzelhandels- und Agrarsektoren gegenueber dem Weltindex auswirken kann.",
+    "grund": "Dritter Logistik-Kandidat, aber nur woechentlich (K1 'taeglich' vermutlich verletzt wie bei bereits abgelehnten woechentlichen/monatlichen Reihen), daher tiefe Prioritaet; oeffentliche EIA-Reihe seit 1994 ohne Login.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "stablecoin_supply",
+    "name": "On-Chain-Gesamtangebot grosser Stablecoins (USDT, USDC), taegliche Veraenderung",
+    "url": "https://www.coingecko.com/en/coins/tether/historical_data",
+    "domain": "coingecko.com",
+    "bereich": "Krypto",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Netto-Emission oder -Einzug von Stablecoins zeigt Zu- oder Abfluss von Liquiditaet aus dem Kryptomarkt an und gilt in der Literatur als Fruehindikator fuer Risikoappetit, der kurzfristig auch auf breitere Risikoanlagen gegenueber dem Weltindex wirken kann.",
+    "grund": "Ergaenzt bitcoin_onchain um ein zweites, unabhaengiges On-Chain-Signal (Geldmenge statt Netzwerkaktivitaet). Oeffentliche API-Zugaenge zu pruefen (CoinGecko/Etherscan ohne Schluessel im Free-Tier, Rate-Limits beachten).",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "bitcoin_exchange_netflow",
+    "name": "Bitcoin Netto-Zufluss zu Boersen-Wallets, taeglich",
+    "url": "https://www.blockchain.com/explorer/charts",
+    "domain": "blockchain.com",
+    "bereich": "Krypto",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Netto-Zufluesse von Bitcoin auf Boersen-Wallets gehen in der On-Chain-Analyse-Literatur haeufig anstehendem Verkaufsdruck voraus; als Kontrast zu den bereits vorhandenen Netzwerk-Aktivitaetsreihen (Hashrate, Gebuehren, Transaktionen) misst dies Anlegerverhalten direkt.",
+    "grund": "Frei zugaengliche Wallet-Cluster-Schaetzungen sind methodisch unsicher und oft nur ueber kostenpflichtige Anbieter (Glassnode/CryptoQuant) verfuegbar; tiefe Prioritaet bis eine kostenlose, dokumentierte Quelle ohne Login gefunden ist.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "sp500_index_aenderungen",
+    "name": "S&P 500 Indexaufnahmen und -entfernungen, Ankuendigungs- und Wirksamkeitstag",
+    "url": "https://www.spglobal.com/spdji/en/index-family/equity/us-equity/sp-500/#news-research",
+    "domain": "spglobal.com",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Der 'Index-Effekt' (Shleifer 1986, Harris/Gurel 1986) ist eine der am besten dokumentierten Kalenderanomalien: um Ankuendigungs- und Wirksamkeitstag von Indexaenderungen entstehen vorhersehbare, mechanische Kauf-/Verkaufsfluesse passiver Fonds, die kurzfristig Einzelwerte und darueber Sektor-ETFs gegenueber dem Weltindex bewegen koennen.",
+    "grund": "Regel L3: publizierte, in Grossteilen arbitrierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Ankuendigungen oeffentlich (Pressemitteilungen S&P Dow Jones Indices), aber als aggregierte taegliche Kalenderreihe (Anzahl Aenderungen je Tag) statt firmenspezifisch umsetzbar, was K7-Umfang und Firmenereignisse-aggregiert-Vorgabe entspricht.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "anzahl_gewinnwarnungen",
+    "name": "SEC EDGAR: taegliche Anzahl 8-K-Meldungen unter Item 2.02 (Ergebnisankuendigung/-warnung)",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=8-K",
+    "domain": "sec.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Eine ungewoehnlich hohe Tageszahl an 8-K-Ergebnismeldungen (insbesondere ausserhalb der regulaeren Berichtssaison, potenzielle Gewinnwarnungen) kann breiten Stress im Unternehmenssektor signalisieren, der sich kurzfristig auf den Gesamtmarkt gegenueber dem Weltindex auswirkt.",
+    "grund": "Aggregierte Firmenereignis-Idee (kein Einzeltitel-Bezug, vermeidet die bei edgar_daily_index_meldungen abgelehnte Einzelfirmen-Problematik), aber Item-2.02-Filterung aus dem EDGAR-Tagesindex rechenintensiv und Format historisch uneinheitlich, daher tiefe Prioritaet bis Machbarkeit (K7-Zeitbudget) geprueft ist.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+  },
+  {
+    "id": "google_trends_rezession",
+    "name": "Google Trends Suchinteresse 'recession' (taeglich, USA)",
+    "url": "https://trends.google.com/trends/explore?q=recession",
+    "domain": "trends.google.com",
+    "bereich": "Aufmerksamkeit",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Sprunghaftes Google-Suchinteresse zu Rezessions-/Krisenbegriffen ist in der Literatur (Da, Engelberg, Gao 2011 'In Search of Attention') als Fruehindikator fuer Anlegeraufmerksamkeit und kurzfristige Kursbewegungen dokumentiert; misst eine andere Population (aktive Sucher) als die bereits vorhandenen Wikipedia-Aufrufzahlen (Leser).",
+    "grund": "Regel L3: publizierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Google Trends liefert offiziell nur relative, auf 100 normierte Wochenindexwerte bei Mehrjahresfenstern (taegliche Aufloesung nur in kurzen Fenstern, K1 ev. verletzt) und keine offizielle Daten-API ohne Anmeldung -- Machbarkeit (K1/K3) im naechsten Lauf konkret pruefen.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z"
   }
 ]
