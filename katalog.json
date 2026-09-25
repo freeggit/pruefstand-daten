@@ -805,5 +805,39 @@
     "reihen": [],
     "aufgenommen_utc": "2026-09-24T22:05:00Z",
     "geprueft_utc": "2026-09-24T22:05:00Z"
+  },
+  {
+    "id": "leitzins_aenderungstage",
+    "name": "Leitzins-Aenderungstage Fed und EZB (aus taeglichen FRED-Zielsatzreihen abgeleitet)",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Kalender",
+    "status": "aktiv",
+    "mechanismus": "Der Tag, an dem sich das von der Fed bzw. der EZB gesetzte Leitzins-Zielband tatsaechlich aendert, ist typischerweise mit erhoehter kurzfristiger (1-20 Handelstage) Volatilitaet fuer zinssensitive Sektoren (Finanzwerte XLF, lang laufende Anleihen TLT) sowie fuer den USD/EUR-Wechselkurs gegenueber dem Weltindex verbunden; anders als reine Sitzungstermine erfasst die Reihe nur Tage mit tatsaechlicher Politikaenderung, also den staerksten Ueberraschungs-/Signaleffekt.",
+    "grund": "K1-K7 erfuellt. K1 taeglich: Zielsatzreihen sind taegliche FRED-Reihen (inkl. Wochenende/Feiertage als Fortschreibung), Median-Abstand 1 Tag. K2 Historie: fomc ab 1982-09-27 (DFEDTAR, ab 2008-12-16 DFEDTARU), ezb ab 1999-01-01 (ECBDFR), beide weit vor 31.12.2015, >10000 Werte. K3 offen: FRED-CSV-Download ohne Login/Schluessel. K4 punktgenau: historische Leitzinsentscheide werden nicht revidiert. K5 laufend: Skript leitet den Aenderungsindikator bei jedem Lauf frisch aus der taeglich fortgeschriebenen FRED-Quelle bis heute ab, keine Zukunftszeilen. K6 neu: FRED-Zinsreihen T10Y2Y/BAA10Y/DGS10/DCOILWTICO etc. sind im Spiegel, aber kein abgeleiteter Leitzins-Aenderungsindikator. K7 Umfang: <40 KB komprimiert je Reihe, Abruf (2 FRED-CSV-Anfragen fuer fomc, 1 fuer ezb) unter 5 Sekunden. Pruefung: fomc 185 Aenderungstage von 16069 Tagen (1982-2026), Stichprobe gegen bekannte Ereignisse (2008-12-16 Notfallsenkung auf 0-0.25%, 2015-12-17 erste Zinserhoehung nach der Finanzkrise, 2020-03-16 Notfallsenkung auf 0-0.25%) korrekt als Aenderungstag markiert; ezb 63 Aenderungstage von 10129 Tagen, Kadenz (unregelmaessig, mehrjaehrige ruhige Phasen 2016-2018 und 2021 sichtbar) plausibel. Anteil gleicher Folgewerte bei beiden Reihen >97%, wie bei binaeren 0/1-Indikatorreihen (vgl. kalender_ereignisse) erwartungsgemaess und kein Qualitaetsmangel.",
+    "reihen": [
+      {
+        "reihe": "fomc",
+        "zeilen": 16069,
+        "erste": "1982-09-27",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9772,
+        "min": 0.0,
+        "max": 1.0
+      },
+      {
+        "reihe": "ezb",
+        "zeilen": 10129,
+        "erste": "1999-01-01",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9878,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-25T00:10:00Z",
+    "geprueft_utc": "2026-09-25T00:10:00Z"
   }
 ]

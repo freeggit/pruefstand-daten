@@ -1,0 +1,18 @@
+{
+  "ezb": {
+    "beschreibung": "1 am Tag, an dem sich der EZB-Einlagensatz (ECBDFR) gegenueber dem Vortag aendert, sonst 0. Erfasst nur tatsaechliche Satzaenderungen, nicht jede EZB-Ratssitzung mit Halte-Entscheid.",
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=ECBDFR",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Aenderungsindikator aus taeglicher Zinsreihe abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "fomc": {
+    "beschreibung": "1 am Tag, an dem sich das von der Fed gesetzte Leitzins-Zielband gegenueber dem Vortag aendert (abgeleitet aus den taeglichen FRED-Reihen DFEDTAR bis 2008-12-15, danach DFEDTARU), sonst 0. Erfasst nur tatsaechliche Zielsatzaenderungen, nicht jede FOMC-Sitzung mit Halte-Entscheid.",
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Aenderungsindikator aus taeglicher Zielsatzreihe abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
