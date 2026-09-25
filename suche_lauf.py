@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prüfstand – Suchlauf in der GitHub Action (Verfassung V3.6, Methode M2).
+"""Prüfstand – Suchlauf in der GitHub Action (Verfassung V3.7, Methode M3).
 
 Liest den Stand auf dem Zweig claude/lernen (Arbeitskopie _lernen), rechnet die Suchmaschine auf den lokalen
 Kopien von main, claude/daten-energie und claude/daten-neu und legt das Ergebnis auf claude/lernen ab:
@@ -76,7 +76,7 @@ herkunft = {
     "sha_paare": sha(os.path.join(ROOT, "paare.txt")), "sha_register_vorher": sha(reg),
     "sha_manifest_main": sha(os.path.join(ROOT, "data", "manifest.json")),
     "sha_manifest_neu": sha(os.path.join(ROOT, "_daten-neu", "data", "neu", "manifest_neu.json")),
-    "placebo_laeufe": zus.get("placebo_laeufe"),
+    "placebo_laeufe": zus.get("placebo_laeufe"), "umgebung": zus.get("umgebung"),
 }
 jetzt = datetime.now(timezone.utc)
 json.dump({"zeit_utc": jetzt.strftime("%Y-%m-%dT%H:%MZ"), **herkunft, "kandidaten": zus["kandidaten"],
@@ -113,8 +113,8 @@ if zus["langzeit_hinweise"]:
 S = {
     "nr": nr, "sort": nr,
     "zeit": lokal.strftime("%-d.%-m.%Y, %H:%M (Europe/Zurich)"),
-    "verfassung": "V3.6",
-    "methode": zus.get("methode", "M2"),
+    "verfassung": "V3.7",
+    "methode": zus.get("methode", "M3"),
     "entstehung": "GitHub Action «Prüfstand Suche» (V3.4 E9)" + ("" if zus["kandidaten_neu"] else ", Anlass: geänderter Code"),
     "herkunft": herkunft,
     "stichtag": "2020-12-31",
@@ -128,13 +128,13 @@ S = {
     "indikatoren_quellen": ", ".join(f"{g} {n}" for g, n in sorted(gruppen.items())) + f"; Paare nach paare.txt: {zus['paare']}",
     "ergebnis_alle_filter": zus["echt_alle_filter_positiv"],
     "ergebnis_vorstufe_t35": zus["echt_vorstufe_positiv"],
-    "placebo_laeufe": zus.get("placebo_laeufe"),
+    "placebo_laeufe": zus.get("placebo_laeufe"), "placebo_art": zus.get("placebo_art"), "fehlalarmrate": zus.get("fehlalarmrate"), "kalibrierung": zus.get("kalibrierung"), "familie_l_ereignisse": zus.get("familie_l_ereignisse"), "umgebung": zus.get("umgebung"),
     "placebo_bausteine_je_lauf": zus.get("placebo_bausteine_je_lauf"),
     "p_lauf": zus.get("p_lauf"),
     "fund": fund,
     "datenpruefung_verdachtstage": zus.get("datenpruefung_verdachtstage"),
-    "placebo_suchlaeufe_alle_filter": zus["placebo_alle_filter_je_lauf"],
-    "placebo_suchlaeufe_vorstufe": zus["placebo_vorstufe_je_lauf"],
+    "placebo_suchlaeufe_alle_filter": zus.get("placebo_alle_filter_je_lauf"),
+    "placebo_suchlaeufe_vorstufe": zus.get("placebo_vorstufe_je_lauf"),
     "echt_mehr_als_staerkster_placebo": zus["echt_mehr_als_staerkster_placebo"],
     "bausteine": zus["bausteine"],
     "langzeit_hinweise": zus["langzeit_hinweise"],
@@ -150,13 +150,14 @@ shutil.copy(os.path.join(LAUF, "hypothesen.txt.gz"), os.path.join(LERNEN, "hypot
 ue = open(os.path.join(LAUF, "suchlauf_ueberlebende.csv"), encoding="utf-8").read().splitlines()
 open(os.path.join(LERNEN, "suche", f"{name}_ueberlebende.csv"), "w", encoding="utf-8").write("\n".join(ue[:201]) + "\n")
 open(os.path.join(LERNEN, "suche", f"{name}_log.txt"), "w", encoding="utf-8").write(log[-20000:])
+shutil.copy(os.path.join(LAUF, "suchlauf_echt.csv.gz"), os.path.join(LERNEN, "suche", f"{name}_alle.csv.gz"))   # vollständige Ergebnisse
 
 index["kumuliert"] = zus["kandidaten_kumuliert"]
 index["suchlaeufe"].append({"nr": nr, "datei": f"suche/{name}.json", "kandidaten": zus["kandidaten"], "in_db": False})
 index["reihen_letzter_suchlauf"] = zus["indikatoren"]
 index["letzter_suchlauf_utc"] = jetzt.strftime("%Y-%m-%dT%H:%MZ")
 index["letzter_code_hash"] = code_hash
-index["methode"] = zus.get("methode", "M2")
+index["methode"] = zus.get("methode", "M3")
 json.dump(index, open(ip, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{name}: {zus['kandidaten']} Kandidaten, {zus['kandidaten_neu']} neu, kumuliert {zus['kandidaten_kumuliert']}, "
       f"Hürde {zus['huerde_t']}, Urteil: {urteil}")
