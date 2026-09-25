@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", ".github/workflows/suche.yml"]
+    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "siegel_test.py", ".github/workflows/suche.yml"]
 permissions:
   contents: write
 concurrency:
@@ -38,10 +38,14 @@ jobs:
             git worktree add -q --detach _lernen HEAD
             cd _lernen && git checkout -q --orphan lernen-neu && git rm -rq --cached . && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           fi
+      - name: Siegeltest (nur bei Code-Änderung)
+        if: github.event_name == 'push'
+        run: python siegel_test.py
+        timeout-minutes: 30
       - name: Suchlauf
         run: python suche_lauf.py
         env:
-          PS_PLACEBO: "20"
+          PS_PLACEBO: "100"
         timeout-minutes: 200
       - name: Einchecken auf claude/lernen
         run: |
