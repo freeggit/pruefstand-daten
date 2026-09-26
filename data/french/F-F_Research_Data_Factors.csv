@@ -1,4 +1,4 @@
-This file was created using the 202607 CRSP database.
+This file was created using the 202608 CRSP database.
 The 1-month TBill rate data until 202405 are from Ibbotson Associates. Starting from 202406, the 1-month TBill rate is from ICE BofA US 1-Month Treasury Bill Index. 
 The annual TBill return is compounded from the monthly T-bill rates from January to December. 
 
@@ -1203,7 +1203,8 @@ The annual TBill return is compounded from the monthly T-bill rates from January
 202604,   9.95,   0.19,  -1.37,   0.29
 202605,   4.91,  -1.59,  -2.31,   0.31
 202606,  -1.07,   3.39,   3.58,   0.29
-202607,  -0.60,  -1.96,   2.11,   0.33
+202607,  -0.61,  -1.92,   2.11,   0.33
+202608,   2.56,   0.34,  -3.54,   0.29
 
  Annual Factors: January-December 
 ,Mkt-RF,SMB,HML,RF
