@@ -42,6 +42,17 @@ def enddate():
     return time.strftime("%Y%m%d", time.gmtime(time.time() - 2 * 86400))
 
 
+# run_all.py toetet das Skript nach 180s (main, nicht aenderbar). 14 Artikel
+# muessen darin Platz haben, auch wenn Wikimedia einzelne Abrufe drosselt;
+# darum ein hartes Zeitbudget statt langer Retry-Wartezeiten.
+DEADLINE_S = 150
+_START = time.time()
+
+
+def restzeit():
+    return DEADLINE_S - (time.time() - _START)
+
+
 def fetch(project, article):
     base = BASE_TMPL % (project, START)
     url = base % (urllib.parse.quote(article, safe=""), enddate())
@@ -50,12 +61,12 @@ def fetch(project, article):
     while True:
         attempts += 1
         try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urllib.request.urlopen(req, timeout=15) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
-            if e.code == 429 and attempts < 5:
-                wait = int(e.headers.get("Retry-After", "20"))
-                time.sleep(min(wait, 60))
+            if e.code == 429 and attempts < 2 and restzeit() > 20:
+                wait = int(e.headers.get("Retry-After", "8"))
+                time.sleep(max(0, min(wait, 8, restzeit() - 10)))
                 continue
             raise
 
@@ -91,11 +102,13 @@ def main():
     fetched_any = False
     failed = []
     for reihe, (project, article) in ARTICLES.items():
+        if restzeit() < 15:
+            failed.append((reihe, "zeitbudget"))
+            continue
         try:
             data = fetch(project, article)
         except urllib.error.HTTPError as e:
             failed.append((reihe, e.code))
-            time.sleep(2)
             continue
         rows = parse(data.get("items", []))
         if not rows:

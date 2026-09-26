@@ -381,7 +381,7 @@
     "bereich": "Aufmerksamkeit",
     "status": "aktiv",
     "mechanismus": "Sprunghaft erhoehte Wikipedia-Aufrufzahlen zu Themen wie Zinssatz, Konkurs, Duerre, Hurrikan, Streik, Pandemie, Oelpreis, Halbleiter oder Rezession zeigen einen Aufmerksamkeitsschock in der breiten Oeffentlichkeit an, der Vorlaeufer oder Begleiter von Kursbewegungen in betroffenen Sektoren/Rohstoffen (z.B. Zinssatz -> Anleihen/TLT, Duerre/Hurrikan -> Agrarrohstoffe DBA, Oelpreis -> Energie/XLE, Halbleiter -> Technologie/XLK, Rezession -> breiter Markt/defensive Sektoren) gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen sein kann. Ergaenzung (Zusatz 2, Punkt 6, 2026-09-24): dieselben Themen zusaetzlich auf en.wikipedia (zinssatz_en, rezession_en, oelpreis_en, halbleiter_en, pandemie_en) gemessen an globaler/US-Leserschaft misst eine andere Aufmerksamkeitspopulation als die deutschsprachigen Artikel (CH/DE-Leserschaft) -- kein Duplikat, sondern ein zweites, unabhaengiges Land/Sprachraum-Signal (Ausnahme von der 3-Reihen-Obergrenze je Quelle, Zusatz 3: 'verschiedene Laender/Sprachen messen klar Verschiedenes').",
-    "grund": "Fruehere Laeufe scheiterten an Rate-Limits (HTTP 429) der Wikimedia-API auf der geteilten Ausgangs-IP dieser Umgebung sowie an einem persistenten HTTP 404 fuer den Artikeltitel 'Zinssenkung' (vermutlich Redirect-Ziel ohne eigene Pageview-Zaehlung unter diesem exakten Lemma). Heute (2026-09-24) behoben: (1) Skript robuster gemacht (pro Artikel einzeln fehlertolerant, bestehende Dateien/meta.json bleiben bei Einzel-Fehlschlag erhalten statt Komplettabbruch, Retry-Backoff fuer 429 erhoeht); (2) 'zinssenkung' durch 'Zinssatz' ersetzt (existierender, eigenstaendiger Artikel, lieferte sofort Daten). Alle 6 Artikel erfolgreich abgerufen. K1-K7 erfuellt: taeglich (Median 1 Tag, einzelne Ausreisser-Luecken z.B. konkurs mit 4097 statt 4102 Werten -- Tage ohne gemeldete Aufrufe, kein Revisionsproblem), Historie ab 2015-07-01 (Beginn der Wikimedia-Pageviews-API, vor 31.12.2015), oeffentliche API ohne Login/Schluessel, Zaehlwerte werden nach Publikation nicht revidiert, letzter Wert 2026-09-22 (2 Tage alt wegen dokumentiertem Publikationsverzug, laufend fortschreibbar), neu gegenueber Spiegel (bestehende 15 Wikipedia-Artikel sind andere Themen), je Reihe wenige hundert KB, Abruf aller 6 Artikel unter 1 Minute. Anteil gleicher Folgewerte 0.6% bis 4.8% je Reihe (unauffaellig), Werte plausibel (z.B. pandemie Max 174367 an einem erwartbaren Pandemie-Ereignistag, hurrikan Max 33389 bei grossem Sturmereignis). Erweiterung (2026-09-24T16:14:00Z): drei zusaetzliche Artikel gemaess Zusatz 2 von Reto (24.9.2026, Ideenraum Punkt 6 'weitere Wikipedia-Artikel mit Sektorbezug, z.B. Oelpreis, Halbleiter, ... Rezession') aufgenommen: Oelpreis, Halbleiter, Rezession (de.wikipedia, gleiches Skript/Muster wie bestehende sechs Artikel). K1-K7 wie bei den Bestandsartikeln erfuellt: je 4102 Werte, 2015-07-01..2026-09-22, Median-Abstand 1 Tag, Anteil gleicher Folgewerte unauffaellig (deutlich unter 20%), Werte plausibel (z.B. oelpreis min=117 max=305, rezession min=60 max=8 zu Beginn der Reihe, halbleiter min=883 max=224). EN-Varianten (Oil price, Semiconductor, Recession) aus Zeitgruenden in diesem Lauf nicht umgesetzt, PROJECT ist im Skript aktuell fest auf de.wikipedia gesetzt; bei Bedarf in einem spaeteren Lauf als eigene Erweiterung (Mehrprojekt-Unterstuetzung noetig). Ergaenzung 2026-09-24T22:15:00Z: 5 englischsprachige Gegenstuecke hinzugefuegt (zinssatz_en=Interest rate, rezession_en=Recession, oelpreis_en=Price of oil, halbleiter_en=Semiconductor, pandemie_en=Pandemic), Skript auf projekt-parametrisierten Abruf (de.wikipedia/en.wikipedia) umgestellt. Alle 5 neuen Reihen lieferten sofort volle Historie ab 2015-07-01 (4102 Zeilen bis 2026-09-22), K1-K7 wie bei den bestehenden de.wikipedia-Reihen erfuellt. | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt).",
+    "grund": "Fruehere Laeufe scheiterten an Rate-Limits (HTTP 429) der Wikimedia-API auf der geteilten Ausgangs-IP dieser Umgebung sowie an einem persistenten HTTP 404 fuer den Artikeltitel 'Zinssenkung' (vermutlich Redirect-Ziel ohne eigene Pageview-Zaehlung unter diesem exakten Lemma). Heute (2026-09-24) behoben: (1) Skript robuster gemacht (pro Artikel einzeln fehlertolerant, bestehende Dateien/meta.json bleiben bei Einzel-Fehlschlag erhalten statt Komplettabbruch, Retry-Backoff fuer 429 erhoeht); (2) 'zinssenkung' durch 'Zinssatz' ersetzt (existierender, eigenstaendiger Artikel, lieferte sofort Daten). Alle 6 Artikel erfolgreich abgerufen. K1-K7 erfuellt: taeglich (Median 1 Tag, einzelne Ausreisser-Luecken z.B. konkurs mit 4097 statt 4102 Werten -- Tage ohne gemeldete Aufrufe, kein Revisionsproblem), Historie ab 2015-07-01 (Beginn der Wikimedia-Pageviews-API, vor 31.12.2015), oeffentliche API ohne Login/Schluessel, Zaehlwerte werden nach Publikation nicht revidiert, letzter Wert 2026-09-22 (2 Tage alt wegen dokumentiertem Publikationsverzug, laufend fortschreibbar), neu gegenueber Spiegel (bestehende 15 Wikipedia-Artikel sind andere Themen), je Reihe wenige hundert KB, Abruf aller 6 Artikel unter 1 Minute. Anteil gleicher Folgewerte 0.6% bis 4.8% je Reihe (unauffaellig), Werte plausibel (z.B. pandemie Max 174367 an einem erwartbaren Pandemie-Ereignistag, hurrikan Max 33389 bei grossem Sturmereignis). Erweiterung (2026-09-24T16:14:00Z): drei zusaetzliche Artikel gemaess Zusatz 2 von Reto (24.9.2026, Ideenraum Punkt 6 'weitere Wikipedia-Artikel mit Sektorbezug, z.B. Oelpreis, Halbleiter, ... Rezession') aufgenommen: Oelpreis, Halbleiter, Rezession (de.wikipedia, gleiches Skript/Muster wie bestehende sechs Artikel). K1-K7 wie bei den Bestandsartikeln erfuellt: je 4102 Werte, 2015-07-01..2026-09-22, Median-Abstand 1 Tag, Anteil gleicher Folgewerte unauffaellig (deutlich unter 20%), Werte plausibel (z.B. oelpreis min=117 max=305, rezession min=60 max=8 zu Beginn der Reihe, halbleiter min=883 max=224). EN-Varianten (Oil price, Semiconductor, Recession) aus Zeitgruenden in diesem Lauf nicht umgesetzt, PROJECT ist im Skript aktuell fest auf de.wikipedia gesetzt; bei Bedarf in einem spaeteren Lauf als eigene Erweiterung (Mehrprojekt-Unterstuetzung noetig). Ergaenzung 2026-09-24T22:15:00Z: 5 englischsprachige Gegenstuecke hinzugefuegt (zinssatz_en=Interest rate, rezession_en=Recession, oelpreis_en=Price of oil, halbleiter_en=Semiconductor, pandemie_en=Pandemic), Skript auf projekt-parametrisierten Abruf (de.wikipedia/en.wikipedia) umgestellt. Alle 5 neuen Reihen lieferten sofort volle Historie ab 2015-07-01 (4102 Zeilen bis 2026-09-22), K1-K7 wie bei den bestehenden de.wikipedia-Reihen erfuellt. | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | Regel L2 (25.9.-26.9.2026, S0009/S0010): Bereich erschoepft (>=5000 geprueft Kandidaten, kein Kandidat ueber t 3.5 in S0010); Prioritaet auf tief gesetzt, Reihe bleibt aktiv (nicht geloescht). (13476 Kandidaten, max t=3.11)",
     "reihen": [
       {
         "reihe": "zinssatz",
@@ -526,7 +526,7 @@
     ],
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-24T22:15:00Z",
-    "prioritaet": "normal"
+    "prioritaet": "tief"
   },
   {
     "id": "sec_insider_sektor",
@@ -597,9 +597,9 @@
     "domain": "api.fiscaldata.treasury.gov",
     "bereich": "Staat",
     "status": "aktiv",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Der taegliche Zuwachs der US-Bundesschuld (Emissionstempo, Verhaeltnis oeffentlich/intragovernmental) zeigt kurzfristigen Angebotsdruck bei US-Staatsanleihen an, der Anleiherenditen (TLT) und ueber den Dollar auch andere Sektoren gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen beeinflussen kann, insbesondere um Schuldenobergrenzen-Episoden.",
-    "grund": "K1-K7 erfuellt: taeglich an US-Bankarbeitstagen (Median-Abstand 1 Tag), Historie 'gesamt' ab 1993-04-01 (8398 Werte), 'oeffentlich_gehalten'/'intragovernmental' ab 1997-09-30 (je 5440 Werte); oeffentliche REST-API ohne Login/Schluessel (v2/accounting/od/debt_to_penny); Werte sind taeglich veroeffentlichte Ist-Stände der Bundesschuld, keine nachtraeglich revidierte Statistik; letzter Wert 2026-09-22 (2 Kalendertage alt), laufend fortgeschrieben; alle drei Reihen neu (nicht im bestehenden Spiegel); Abruf < 2 s, unkomprimiert < 1.2 MB, komprimiert < 100 KB je Reihe. Anteil gleicher Folgewerte < 0.1%, Min/Max plausibel (Gesamtschuld 4.2 Bio. USD 1993 bis 40.2 Bio. USD 2026). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt).",
+    "grund": "K1-K7 erfuellt: taeglich an US-Bankarbeitstagen (Median-Abstand 1 Tag), Historie 'gesamt' ab 1993-04-01 (8398 Werte), 'oeffentlich_gehalten'/'intragovernmental' ab 1997-09-30 (je 5440 Werte); oeffentliche REST-API ohne Login/Schluessel (v2/accounting/od/debt_to_penny); Werte sind taeglich veroeffentlichte Ist-Stände der Bundesschuld, keine nachtraeglich revidierte Statistik; letzter Wert 2026-09-22 (2 Kalendertage alt), laufend fortgeschrieben; alle drei Reihen neu (nicht im bestehenden Spiegel); Abruf < 2 s, unkomprimiert < 1.2 MB, komprimiert < 100 KB je Reihe. Anteil gleicher Folgewerte < 0.1%, Min/Max plausibel (Gesamtschuld 4.2 Bio. USD 1993 bis 40.2 Bio. USD 2026). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | Regel L2 (25.9.-26.9.2026, S0009/S0010): Bereich erschoepft (>=5000 geprueft Kandidaten, kein Kandidat ueber t 3.5 in S0010); Prioritaet auf tief gesetzt, Reihe bleibt aktiv (nicht geloescht). (5139 Kandidaten, max t=2.97)",
     "reihen": [
       "gesamt",
       "oeffentlich_gehalten",
@@ -615,9 +615,9 @@
     "domain": "archive-api.open-meteo.com",
     "bereich": "Rohstoffe",
     "status": "aktiv",
-    "prioritaet": "hoch",
+    "prioritaet": "tief",
     "mechanismus": "Ungewoehnliche Niederschlagsdefizite oder -ueberschuesse in wichtigen Anbaugebieten (US-Maisguertel, brasilianisches Soja, zentralindischer Monsun) koennen kurzfristig (1-20 Handelstage) Ernteerwartungen und damit Agrarrohstoffpreise (DBA) gegenueber dem Weltindex bewegen, insbesondere bei akuten Duerre- oder Flutereignissen.",
-    "grund": "Ergaenzung 2026-09-25T06:13:45Z (Zusatz 2, Ideenraum 3 'Wetter in Anbaugebieten ... ueber Open-Meteo'): fruehere Pruefung am 2026-09-23 war wegen eines Tageskontingent-Limits der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP nicht abschliessend (status faelschlich 'abgelehnt' belassen). Heute erneut getestet: archive-api.open-meteo.com/v1/archive liefert ohne Login/Schluessel ERA5-Reanalyse-Tageswerte (Niederschlagssumme) fuer drei Regionen. K1 taeglich (Median-Abstand 1 Tag, n=4276 je Reihe). K2 Historie ab 2015-01-01 (>500 Werte). K3 offen: keine Anmeldung, kein Schluessel, freier Tarif fuer nicht-kommerzielle Forschung. K4 punktgenau: laut Open-Meteo-Dokumentation ('Historical Weather API') bleiben aeltere ERA5-Werte nach der 5-7-taegigen Nachlieferung unveraendert; das Skript haelt zusaetzlich Sicherheitsabstand und schreibt nur Tage bis (heute - 10 Tage), also nie den unfertigen/vorlaeufigen Rand der Reanalyse. K5 laufend: bei jedem Lauf wird der Stichtag neu auf (heute - 10 Tage) berechnet, letzter abgelegter Wert 2026-09-15 (10 Tage vor Testdatum, an der erlaubten Obergrenze). K6 neu: keine Wetter-/Anbaugebiet-Reihe im bestehenden Spiegel (dort nur Wetter Zuerich/Basel/Frankfurt/Kaub/Houston/Chicago, keine Agrarregionen). K7 Umfang: je Reihe rund 80 KB unkomprimiert JSON-Antwort, komprimierte CSV weit unter 20 MB, Abruf aller drei Regionen unter 5 Sekunden. Pruefung: mais_guertel n=4276, Niederschlag 0.0-75.7 mm/Tag, Anteil gleicher Folgewerte 35.3%; soja_mato_grosso n=4276, 0.0-65.5 mm/Tag, 34.2%; monsun_indien n=4276, 0.0-225.5 mm/Tag (Monsun-Starkregenereignisse), 52.3%. Die hohen Anteile gleicher Folgewerte liegen an echten, physikalisch erwartbaren Trockentagen (Niederschlag exakt 0.0 mm an vielen aufeinanderfolgenden Tagen, v.a. Trockenzeit Indien/Mato Grosso) und sind kein Qualitaetsmangel, analog zu den binaeren 0/1-Indikatorreihen bei kalender_ereignisse. Werte plausibel (kein Platzhalter wie -999, keine negativen Niederschlaege, Maximalwerte passen zu bekannten Starkregenereignissen). Hinweis fuer kuenftige Laeufe: ein sofortiger Wiederholungsabruf direkt im Anschluss lieferte HTTP 429 (Tageskontingent/Rate-Limit der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP dieser Umgebung, analog zu wikipedia_weitere); run_all.py laesst bei Fehlschlag bestehende Dateien unveraendert stehen, ein erneuter Versuch im naechsten Lauf ist vorgesehen. | Zusatz 5 (25.9.2026): verfuegbar_nach_tagen von vorsichtigem Sicherheitsabstand 10 auf den von Reto festgelegten Wert 5 fuer ERA5-Reanalyse-Wetterreihen korrigiert; Feld publikation ('verzoegert') ergaenzt. | Zusatz 4 (25.9.2026, E11 Historie vor 1990), umgesetzt 2026-09-26T00:14:54Z: START im Abrufskript von 2015-01-01 auf 1940-01-01 zurueckverlaengert (fruehestes von der Open-Meteo Historical-Weather-API erlaubtes Archivdatum, per API-Fehlermeldung bestaetigt: 'Parameter start_date is out of allowed range from 1940-01-01'). Alle drei Regionen erfolgreich neu abgerufen, je Reihe jetzt 31676 Zeilen (1940-01-02 bis 2026-09-26 statt vorher ab 2015), Abruf weiterhin wenige Sekunden je Region (K7 deutlich erfuellt). Prioritaet auf 'hoch' gesetzt (Zusatz 4 E11: Tagesreihen mit Beginn vor 1990).",
+    "grund": "Ergaenzung 2026-09-25T06:13:45Z (Zusatz 2, Ideenraum 3 'Wetter in Anbaugebieten ... ueber Open-Meteo'): fruehere Pruefung am 2026-09-23 war wegen eines Tageskontingent-Limits der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP nicht abschliessend (status faelschlich 'abgelehnt' belassen). Heute erneut getestet: archive-api.open-meteo.com/v1/archive liefert ohne Login/Schluessel ERA5-Reanalyse-Tageswerte (Niederschlagssumme) fuer drei Regionen. K1 taeglich (Median-Abstand 1 Tag, n=4276 je Reihe). K2 Historie ab 2015-01-01 (>500 Werte). K3 offen: keine Anmeldung, kein Schluessel, freier Tarif fuer nicht-kommerzielle Forschung. K4 punktgenau: laut Open-Meteo-Dokumentation ('Historical Weather API') bleiben aeltere ERA5-Werte nach der 5-7-taegigen Nachlieferung unveraendert; das Skript haelt zusaetzlich Sicherheitsabstand und schreibt nur Tage bis (heute - 10 Tage), also nie den unfertigen/vorlaeufigen Rand der Reanalyse. K5 laufend: bei jedem Lauf wird der Stichtag neu auf (heute - 10 Tage) berechnet, letzter abgelegter Wert 2026-09-15 (10 Tage vor Testdatum, an der erlaubten Obergrenze). K6 neu: keine Wetter-/Anbaugebiet-Reihe im bestehenden Spiegel (dort nur Wetter Zuerich/Basel/Frankfurt/Kaub/Houston/Chicago, keine Agrarregionen). K7 Umfang: je Reihe rund 80 KB unkomprimiert JSON-Antwort, komprimierte CSV weit unter 20 MB, Abruf aller drei Regionen unter 5 Sekunden. Pruefung: mais_guertel n=4276, Niederschlag 0.0-75.7 mm/Tag, Anteil gleicher Folgewerte 35.3%; soja_mato_grosso n=4276, 0.0-65.5 mm/Tag, 34.2%; monsun_indien n=4276, 0.0-225.5 mm/Tag (Monsun-Starkregenereignisse), 52.3%. Die hohen Anteile gleicher Folgewerte liegen an echten, physikalisch erwartbaren Trockentagen (Niederschlag exakt 0.0 mm an vielen aufeinanderfolgenden Tagen, v.a. Trockenzeit Indien/Mato Grosso) und sind kein Qualitaetsmangel, analog zu den binaeren 0/1-Indikatorreihen bei kalender_ereignisse. Werte plausibel (kein Platzhalter wie -999, keine negativen Niederschlaege, Maximalwerte passen zu bekannten Starkregenereignissen). Hinweis fuer kuenftige Laeufe: ein sofortiger Wiederholungsabruf direkt im Anschluss lieferte HTTP 429 (Tageskontingent/Rate-Limit der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP dieser Umgebung, analog zu wikipedia_weitere); run_all.py laesst bei Fehlschlag bestehende Dateien unveraendert stehen, ein erneuter Versuch im naechsten Lauf ist vorgesehen. | Zusatz 5 (25.9.2026): verfuegbar_nach_tagen von vorsichtigem Sicherheitsabstand 10 auf den von Reto festgelegten Wert 5 fuer ERA5-Reanalyse-Wetterreihen korrigiert; Feld publikation ('verzoegert') ergaenzt. | Zusatz 4 (25.9.2026, E11 Historie vor 1990), umgesetzt 2026-09-26T00:14:54Z: START im Abrufskript von 2015-01-01 auf 1940-01-01 zurueckverlaengert (fruehestes von der Open-Meteo Historical-Weather-API erlaubtes Archivdatum, per API-Fehlermeldung bestaetigt: 'Parameter start_date is out of allowed range from 1940-01-01'). Alle drei Regionen erfolgreich neu abgerufen, je Reihe jetzt 31676 Zeilen (1940-01-02 bis 2026-09-26 statt vorher ab 2015), Abruf weiterhin wenige Sekunden je Region (K7 deutlich erfuellt). Prioritaet auf 'hoch' gesetzt (Zusatz 4 E11: Tagesreihen mit Beginn vor 1990). | Regel L2 (25.9.-26.9.2026, S0009/S0010): Bereich erschoepft (>=5000 geprueft Kandidaten, kein Kandidat ueber t 3.5 in S0010); Prioritaet auf tief gesetzt, Reihe bleibt aktiv (nicht geloescht). (6986 Kandidaten, max t=3.21)",
     "reihen": [
       "mais_guertel",
       "soja_mato_grosso",
@@ -734,9 +734,9 @@
     "domain": "www.mof.go.jp",
     "bereich": "Zinsen",
     "status": "aktiv",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Niveau und Form der taeglichen japanischen Staatsanleihen-Zinsstrukturkurve spiegeln geldpolitische Erwartungen der Bank of Japan (u.a. Yield-Curve-Control-Politik, Carry-Trade-Bedingungen) wider; kurzfristige Verschiebungen koennen japanische Vermoegenswerte (EWJ) und den Yen-Carry-Trade gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen, bevor sich das voll in Aktienkursen niederschlaegt.",
-    "grund": "K1 taeglich erfuellt: japanische Bankarbeitstage, Median-Abstand 1 Tag je Laufzeit. K2 Historie erfuellt: kuerzeste Laufzeiten (1-9 Jahre) ab 1974-09-24, laengere Laufzeiten je nach Einfuehrung (10J ab 1986, 40J ab 2007), alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche CSV-Ausgabe des japanischen Finanzministeriums (mof.go.jp) ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur. Zwei Dateien kombiniert: Historisch (1974~, jgbcme_all.csv, bis Vormonatsende) und laufender Monat (jgbcme.csv), damit K5 (aktueller Rand) erfuellt ist. K4 punktgenau: administrativ veroeffentlichte taegliche Referenzrenditen (CMT-aehnlich wie bei US-Treasury-Kurve/FRED), keine nachtraegliche Revision publizierter Tageswerte bekannt. K5 laufend: letzter Wert 2026-09-18 (6 Tage alt bei Abruf, laufende Monatsdatei wird fortgeschrieben). K6 neu: japanische Staatsanleihenrenditen sind nicht im bestehenden Spiegel enthalten (EWJ ist ein Aktien-ETF, keine Zinsreihe; die vorhandenen Zinsreihen sind US/DE/CH/UK). K7 Umfang: zwei CSV-Dateien (Historisch ~1.2 MB, aktuell <2 KB), Abruf unter 5 Sekunden. Pruefzahlen je Laufzeit (Reihe: n, erste, letzte, medianAbstand, gleicheFolge, min, max): y1: n=12656, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1674, min=-0.371, max=11.237; y2: n=12943, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1563, min=-0.372, max=12.145; y3: n=13228, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1104, min=-0.374, max=11.701; y4: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1136, min=-0.382, max=10.562; y5: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1000, min=-0.389, max=10.656; y6: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0882, min=-0.405, max=10.639; y7: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0884, min=-0.423, max=10.858; y8: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0866, min=-0.393, max=10.94; y9: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0852, min=-0.35, max=10.67; y10: n=9943, 1986-07-05..2026-09-18, medianAbstand=1, gleicheFolge=0.0549, min=-0.297, max=8.105; y15: n=8602, 1991-08-30..2026-09-18, medianAbstand=1, gleicheFolge=0.0553, min=-0.15, max=6.546; y20: n=9830, 1986-12-01..2026-09-18, medianAbstand=1, gleicheFolge=0.0616, min=0.022, max=7.749; y25: n=5509, 2004-03-22..2026-09-18, medianAbstand=1, gleicheFolge=0.0659, min=0.036, max=4.143; y30: n=6627, 1999-09-02..2026-09-18, medianAbstand=1, gleicheFolge=0.0610, min=0.042, max=4.131; y40: n=4615, 2007-11-06..2026-09-18, medianAbstand=1, gleicheFolge=0.0724, min=0.067, max=4.145. Anteil gleicher Folgewerte je Laufzeit unauffaellig (max. ~16.7% bei y1, deutlich unter der 20%-Verdachtsschwelle). Min/Max je Laufzeit plausibel: negative Renditen bei kurzen/mittleren Laufzeiten waehrend der Nullzins-/Negativzinsphase der Bank of Japan (ca. 2016-2024), seither steigend auf aktuell rund 1.5-3%% (kurz/mittel) bzw. ueber 4%% (sehr lange Laufzeiten). | Zusatz 3 (24.9.2026): auf 3 verdichtete Reihen umgestellt. Aktiv: niveau (10J), steilheit (10J-2J), kurz (1J, keine kuerzere JGB-Laufzeit oeffentlich verfuegbar, Regel 'sonst 1 Jahr'). Ruhend, Grund Redundanz Zusatz 3: alle 15 Original-Laufzeiten (y1..y40). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt).",
+    "grund": "K1 taeglich erfuellt: japanische Bankarbeitstage, Median-Abstand 1 Tag je Laufzeit. K2 Historie erfuellt: kuerzeste Laufzeiten (1-9 Jahre) ab 1974-09-24, laengere Laufzeiten je nach Einfuehrung (10J ab 1986, 40J ab 2007), alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche CSV-Ausgabe des japanischen Finanzministeriums (mof.go.jp) ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur. Zwei Dateien kombiniert: Historisch (1974~, jgbcme_all.csv, bis Vormonatsende) und laufender Monat (jgbcme.csv), damit K5 (aktueller Rand) erfuellt ist. K4 punktgenau: administrativ veroeffentlichte taegliche Referenzrenditen (CMT-aehnlich wie bei US-Treasury-Kurve/FRED), keine nachtraegliche Revision publizierter Tageswerte bekannt. K5 laufend: letzter Wert 2026-09-18 (6 Tage alt bei Abruf, laufende Monatsdatei wird fortgeschrieben). K6 neu: japanische Staatsanleihenrenditen sind nicht im bestehenden Spiegel enthalten (EWJ ist ein Aktien-ETF, keine Zinsreihe; die vorhandenen Zinsreihen sind US/DE/CH/UK). K7 Umfang: zwei CSV-Dateien (Historisch ~1.2 MB, aktuell <2 KB), Abruf unter 5 Sekunden. Pruefzahlen je Laufzeit (Reihe: n, erste, letzte, medianAbstand, gleicheFolge, min, max): y1: n=12656, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1674, min=-0.371, max=11.237; y2: n=12943, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1563, min=-0.372, max=12.145; y3: n=13228, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1104, min=-0.374, max=11.701; y4: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1136, min=-0.382, max=10.562; y5: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.1000, min=-0.389, max=10.656; y6: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0882, min=-0.405, max=10.639; y7: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0884, min=-0.423, max=10.858; y8: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0866, min=-0.393, max=10.94; y9: n=13304, 1974-09-24..2026-09-18, medianAbstand=1, gleicheFolge=0.0852, min=-0.35, max=10.67; y10: n=9943, 1986-07-05..2026-09-18, medianAbstand=1, gleicheFolge=0.0549, min=-0.297, max=8.105; y15: n=8602, 1991-08-30..2026-09-18, medianAbstand=1, gleicheFolge=0.0553, min=-0.15, max=6.546; y20: n=9830, 1986-12-01..2026-09-18, medianAbstand=1, gleicheFolge=0.0616, min=0.022, max=7.749; y25: n=5509, 2004-03-22..2026-09-18, medianAbstand=1, gleicheFolge=0.0659, min=0.036, max=4.143; y30: n=6627, 1999-09-02..2026-09-18, medianAbstand=1, gleicheFolge=0.0610, min=0.042, max=4.131; y40: n=4615, 2007-11-06..2026-09-18, medianAbstand=1, gleicheFolge=0.0724, min=0.067, max=4.145. Anteil gleicher Folgewerte je Laufzeit unauffaellig (max. ~16.7% bei y1, deutlich unter der 20%-Verdachtsschwelle). Min/Max je Laufzeit plausibel: negative Renditen bei kurzen/mittleren Laufzeiten waehrend der Nullzins-/Negativzinsphase der Bank of Japan (ca. 2016-2024), seither steigend auf aktuell rund 1.5-3%% (kurz/mittel) bzw. ueber 4%% (sehr lange Laufzeiten). | Zusatz 3 (24.9.2026): auf 3 verdichtete Reihen umgestellt. Aktiv: niveau (10J), steilheit (10J-2J), kurz (1J, keine kuerzere JGB-Laufzeit oeffentlich verfuegbar, Regel 'sonst 1 Jahr'). Ruhend, Grund Redundanz Zusatz 3: alle 15 Original-Laufzeiten (y1..y40). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | Regel L2 (25.9.-26.9.2026, S0009/S0010): Bereich erschoepft (>=5000 geprueft Kandidaten, kein Kandidat ueber t 3.5 in S0010); Prioritaet auf tief gesetzt, Reihe bleibt aktiv (nicht geloescht). (7209 Kandidaten, max t=3.02)",
     "reihen": [
       "y1",
       "y2",
@@ -1026,7 +1026,7 @@
     "bereich": "Waehrung",
     "status": "aktiv",
     "mechanismus": "Wechselkursbewegungen gegenueber dem USD spiegeln relative Zins- und Risikoerwartungen fuer das jeweilige Land/den jeweiligen Rohstoffraum (GBP: UK-Zinspfad, CAD: Oelpreis-Sensitivitaet Kanadas, AUD: China-/Rohstoffnachfrage); rasche Bewegungen koennen kurzfristig (1-20 Handelstage) die jeweiligen Laender-/Rohstoffsektoren gegenueber dem Weltindex bewegen, bevor sich das vollstaendig in Kursen niederschlaegt.",
-    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: DEXUSUK/DEXCAUS/DEXUSAL explizit als Beispiele genannt, gleiches Muster wie fred_usdjpy (DEXJPUS, bereits aktiv). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen, je Reihe). K2 Historie ab 1971-01-04 (13964-13977 Werte je Reihe), weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe, kein Login/Schluessel. K4 punktgenau: taegliche H.10-Referenzkurse werden nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-18, <10 Tage alt, Serien werden werktaeglich fortgeschrieben. K6 neu: GBP/CAD/AUD-Wechselkurse sind weder im Spiegel (main) noch bei ecb_fx (dort nur EUR-Kreuzkurse CHF/JPY/CNY) noch bei fred_usdjpy (dort nur JPY) vorhanden; die drei Reihen messen klar verschiedene Laender/Waehrungsraeume (Ausnahme von der Zusatz-3-Redundanzgrenze). K7 Umfang: je Reihe unter 400 KB komprimiert, Abruf aller drei unter 5 Sekunden. Pruefung je Reihe: gbpusd 13971 Zeilen 1971-01-04..2026-09-18, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.0122, Min 1.052/Max 2.644 plausibel (GBP-Tiefststaende 1985/2022, Hoechststaende 1970er/1980); usdcad 13977 Zeilen, Anteil 0.0167, Min 0.9168/Max 1.6128 plausibel; audusd 13964 Zeilen, Anteil 0.0640, Min 0.4828/Max 1.4885 plausibel (AUD-Tief 2001, Hoch 2011 Rohstoffboom). | Zusatz 5 (25.9.2026): Gleiches Fed-H.10-Muster wie DEXJPUS gilt fuer DEXUSUK/DEXCAUS/DEXUSAL; verfuegbar_nach_tagen von 1 auf 8 korrigiert, Feld publikation ergaenzt.",
+    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: DEXUSUK/DEXCAUS/DEXUSAL explizit als Beispiele genannt, gleiches Muster wie fred_usdjpy (DEXJPUS, bereits aktiv). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen, je Reihe). K2 Historie ab 1971-01-04 (13964-13977 Werte je Reihe), weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe, kein Login/Schluessel. K4 punktgenau: taegliche H.10-Referenzkurse werden nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-18, <10 Tage alt, Serien werden werktaeglich fortgeschrieben. K6 neu: GBP/CAD/AUD-Wechselkurse sind weder im Spiegel (main) noch bei ecb_fx (dort nur EUR-Kreuzkurse CHF/JPY/CNY) noch bei fred_usdjpy (dort nur JPY) vorhanden; die drei Reihen messen klar verschiedene Laender/Waehrungsraeume (Ausnahme von der Zusatz-3-Redundanzgrenze). K7 Umfang: je Reihe unter 400 KB komprimiert, Abruf aller drei unter 5 Sekunden. Pruefung je Reihe: gbpusd 13971 Zeilen 1971-01-04..2026-09-18, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.0122, Min 1.052/Max 2.644 plausibel (GBP-Tiefststaende 1985/2022, Hoechststaende 1970er/1980); usdcad 13977 Zeilen, Anteil 0.0167, Min 0.9168/Max 1.6128 plausibel; audusd 13964 Zeilen, Anteil 0.0640, Min 0.4828/Max 1.4885 plausibel (AUD-Tief 2001, Hoch 2011 Rohstoffboom). | Zusatz 5 (25.9.2026): Gleiches Fed-H.10-Muster wie DEXJPUS gilt fuer DEXUSUK/DEXCAUS/DEXUSAL; verfuegbar_nach_tagen von 1 auf 8 korrigiert, Feld publikation ergaenzt. | Regel L2 (25.9.-26.9.2026, S0009/S0010): Bereich erschoepft (>=5000 geprueft Kandidaten, kein Kandidat ueber t 3.5 in S0010); Prioritaet auf tief gesetzt, Reihe bleibt aktiv (nicht geloescht). (7146 Kandidaten, max t=2.89)",
     "reihen": [
       {
         "reihe": "gbpusd",
@@ -1061,7 +1061,7 @@
     ],
     "aufgenommen_utc": "2026-09-25T08:14:00Z",
     "geprueft_utc": "2026-09-25T08:14:00Z",
-    "prioritaet": "normal"
+    "prioritaet": "tief"
   },
   {
     "id": "debt_ceiling_x_date",
@@ -1333,5 +1333,173 @@
     ],
     "aufgenommen_utc": "2026-09-26T08:19:00Z",
     "geprueft_utc": "2026-09-26T08:19:00Z"
+  },
+  {
+    "id": "boe_bankrate_aenderungstage",
+    "name": "Bank of England Bank Rate, Aenderungstage seit 1975",
+    "url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+    "domain": "bankofengland.co.uk",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "BoE-Zinsentscheide sind ein eigenstaendiges geldpolitisches Ereignis wie FOMC/EZB (bereits in leitzins_aenderungstage); testet kurzfristige Reaktion GBP-naher Ziele (EWU, GBP-Paare) auf eine dritte grosse Notenbank mit sehr langer Reihe.",
+    "grund": "Oeffentliche Statistical-Interactive-Database ohne Login, taegliche Bank-Rate-Reihe seit 1975 dokumentiert (Aenderungstage weit vor 1990, Zusatz 4 Schwerpunkt).",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "us_boersenfeiertage_effekt",
+    "name": "US-Boersenfeiertage: Tag vor/nach NYSE-Schliessung seit 1928",
+    "url": "https://www.nyse.com/markets/hours-calendars",
+    "domain": "nyse.com",
+    "bereich": "Feiertage",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Der Vorfeiertags-Effekt (ueberdurchschnittliche Rendite am letzten Handelstag vor einer Boersenschliessung) ist in der Literatur seit Ariel (1990) dokumentiert; Test ob SPY/ACWI-Mehrrendite an NYSE-Feiertags-Vortagen/-Nachtagen kurzfristig sichtbar ist.",
+    "grund": "Neuer Bereich Feiertage (Vorgabe Schritt 5: mind. ein neuer Bereich je Runde). NYSE-Feiertagskalender oeffentlich, Historie seit 1928 rekonstruierbar, rein kalendarisch (kein Datenabruf-Risiko). Regel L3: bekannte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken falls getestet.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "china_pmi_veroeffentlichung",
+    "name": "China Einkaufsmanagerindex (Caixin/NBS), Veroeffentlichungstage",
+    "url": "https://www.caixinglobal.com/pmi/",
+    "domain": "caixinglobal.com",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "PMI-Ueberraschungen fuer China bewegen kurzfristig China-/EM-nahe Ziele (FXI, EEM) gegenueber dem Weltindex, analog zu us_arbeitsmarkt_termine/us_cpi_termine fuer die USA.",
+    "grund": "Veroeffentlichungskalender oeffentlich (erster Handelstag des Monats), keine Wertreihe noetig, nur Ereignistage wie bei bereits aktiven Kalenderreihen.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "usda_wasde_veroeffentlichung",
+    "name": "USDA WASDE-Bericht, Veroeffentlichungstage seit 1973",
+    "url": "https://www.usda.gov/oce/commodity/wasde/",
+    "domain": "usda.gov",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "WASDE-Ueberraschungen bewegen Agrarrohstoffpreise kurzfristig; ergaenzt die bestehenden Wetter-Anbau-Reihen (openmeteo_wetter_anbau) um den Nachfrage-/Schaetzungskanal statt nur Angebotswetter.",
+    "grund": "Amtlicher Veroeffentlichungskalender oeffentlich, monatliche Ereignistage seit 1973 (vor 1990, Zusatz 4), reines Ereignisdatum ohne Zugriffsrisiko.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "fed_discount_rate_aenderungstage",
+    "name": "Fed Discount Rate (Primary Credit Rate), Aenderungstage",
+    "url": "https://www.federalreserve.gov/releases/h15/",
+    "domain": "federalreserve.gov",
+    "bereich": "Geldmarkt",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Der Diskontsatz ist historisch das aelteste Fed-Leitzinsinstrument (Aenderungen seit 1914 amtlich dokumentiert) und unabhaengig vom Fed-Funds-Zielband; testet ob ein noch laengerer, eigener Aenderungstage-Kalender zusaetzliche vor-1990-Ereignisse fuer die Hypothesenpruefung liefert.",
+    "grund": "Amtliche Fed-Publikation, Aenderungstage weit vor 1990 (Zusatz 4 Schwerpunkt), Ereigniskalender statt Tagesreihe.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "japan_tankan_veroeffentlichung",
+    "name": "BoJ Tankan-Bericht, Veroeffentlichungstage seit 1957",
+    "url": "https://www.boj.or.jp/en/statistics/tk/index.htm",
+    "domain": "boj.or.jp",
+    "bereich": "Kalender",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Der quartalsweise Tankan-Bericht ist eine der aeltesten und meistbeachteten japanischen Konjunkturumfragen; Ueberraschungen bewegen JPY- und Japan-nahe Ziele (EWJ) kurzfristig. Sehr lange Ereignishistorie seit 1957 (deutlich vor 1990, Zusatz 4 Schwerpunkt).",
+    "grund": "Amtlicher BoJ-Veroeffentlichungskalender oeffentlich, reines Ereignisdatum vierteljaehrlich.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "opec_ministertreffen_tage",
+    "name": "OPEC-Ministertreffen, Sitzungstage seit 1960",
+    "url": "https://www.opec.org/opec_web/en/press_room/28.htm",
+    "domain": "opec.org",
+    "bereich": "Rohstoffe",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "OPEC-Foerdermengenentscheide bewegen oelnahe Ziele (XLE, USO, UNG) kurzfristig; ergaenzt die bestehenden Oel-Preisreihen (fred_brent, paar_oel_brent_wti) um den Ereigniskanal. Sitzungshistorie seit Gruendung 1960 (vor 1990, Zusatz 4).",
+    "grund": "OPEC veroeffentlicht eine oeffentliche Liste vergangener Ministertreffen ohne Login; reines Ereignisdatum.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "sp500_russell_rebalance_termine",
+    "name": "S&P500/Russell Index-Rebalancing, Umsetzungstage",
+    "url": "https://www.ftserussell.com/research-insights/russell-reconstitution",
+    "domain": "ftserussell.com",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Quartalsweise S&P500-Anpassungen (dritter Freitag Maerz/Juni/September/Dezember) und die jaehrliche Russell-Rekonstitution (Ende Juni) loesen konzentrierte Umschichtungs-Handelsvolumen aus; ergaenzt die bestehende Reihe sp500_index_aenderungen (Anzahl Aenderungen) um die planbaren, im Voraus bekannten Umsetzungstermine selbst.",
+    "grund": "Termine amtlich/oeffentlich im Voraus bekannt (S&P Dow Jones Indices bzw. FTSE Russell), reines Ereignisdatum seit 1988ff., kein Zugriffsrisiko.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "cboe_putcall_ratio",
+    "name": "CBOE Total Put/Call Ratio, taeglich",
+    "url": "https://www.cboe.com/us/options/market_statistics/daily/",
+    "domain": "cboe.com",
+    "bereich": "Stimmung",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Extreme Put/Call-Verhaeltnisse gelten in der Literatur als kurzfristiger Kontraindikator (Ueberreaktion); ergaenzt die bestehenden Stimmungsreihen (VIX-Familie, cboe_skew/vix3m/vix9d/vvix) um ein direktes Positionierungsmass statt implizite Volatilitaet.",
+    "grund": "Oeffentliche taegliche CBOE-Statistikseite ohne Login; Historientiefe (Beginn der taeglichen Reihe) noch zu pruefen.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "baker_hughes_rig_count_aenderung",
+    "name": "Baker Hughes Rig Count (Nordamerika), woechentliche Aenderungstage seit 1944",
+    "url": "https://rigcount.bakerhughes.com/",
+    "domain": "bakerhughes.com",
+    "bereich": "Rohstoffe",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Starke Wochenveraenderungen der aktiven Bohrlochzahl gelten als Angebotssignal fuer Oel/Gas (XLE, USO, UNG); sehr lange Historie seit 1944 (weit vor 1990).",
+    "grund": "Nur woechentliche Veroeffentlichung (Freitag), K1-Tagesabstand daher fraglich wie bei anderen abgelehnten Wochenreihen (z.B. eia_diesel_preis); als Ereignis-/Aenderungstag statt Dauerreihe zu pruefen, deshalb tiefe Prioritaet bis Machbarkeit (K1) geklaert ist.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "bitcoin_funding_rate_perp",
+    "name": "Bitcoin-Perpetual-Funding-Rate (Boersen-Durchschnitt), taeglich",
+    "url": "https://www.binance.com/en/futures/funding-history/perpetual/real-time-funding-rate",
+    "domain": "binance.com",
+    "bereich": "Krypto",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Die Funding Rate misst das Ungleichgewicht gehebelter Long/Short-Positionen bei Bitcoin-Perpetual-Futures; extreme Werte gehen in der On-Chain-/Derivate-Literatur oft kurzfristigen Korrekturen voraus. Ergaenzt bitcoin_onchain (Netzwerkaktivitaet) um ein Positionierungsmass.",
+    "grund": "Oeffentliche, schluessellose Markt-API (Binance Futures), aber erst seit Einfuehrung von Perpetuals (ca. 2019) verfuegbar -- kurze Historie, dennoch als aktives Marktsignal interessant.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "eu_boersenfeiertage_effekt",
+    "name": "Europaeische Boersenfeiertage: Tag vor/nach Xetra-Schliessung",
+    "url": "https://www.xetra.com/xetra-en/trading/trading-calendar-and-trading-hours",
+    "domain": "xetra.com",
+    "bereich": "Feiertage",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Analog zum US-Vorfeiertags-Effekt (us_boersenfeiertage_effekt), aber fuer europanahe Ziele (EWU, EWG); unabhaengiger Test des gleichen Mechanismus in einem anderen Marktkalender.",
+    "grund": "Zweiter Kandidat im neuen Bereich Feiertage, unabhaengige Boerse/Kalender gegenueber der US-Variante. Oeffentlicher Handelskalender ohne Login.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "dividendenerhoehungen_sp500_dichte",
+    "name": "Anzahl taeglicher Dividendenerhoehungs-Ankuendigungen im S&P 500",
+    "url": "https://www.nasdaq.com/market-activity/dividends",
+    "domain": "nasdaq.com",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Cluster von Dividendenerhoehungen gelten als aggregiertes Vertrauenssignal des Managements in kuenftige Ertragskraft; als taegliche Zaehlreihe (nicht Einzeltitel) analog zu sp500_index_aenderungen.",
+    "grund": "Oeffentliche Dividendenkalender-Seiten vorhanden, aber Aggregation ueber 500 Einzeltitel taeglich rechenintensiv und Format-Konsistenz ungeprueft (aehnliches K3/K7-Risiko wie bei anzahl_gewinnwarnungen); daher tiefe Prioritaet bis Machbarkeit geklaert.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "oil_healthcare_replikation_opec_basket",
+    "name": "OPEC-Referenzkorb-Oelpreis (unabhaengige Quelle zu DCOILWTICO), taeglich",
+    "url": "https://www.opec.org/opec_web/en/data_graphs/40.htm",
+    "domain": "opec.org",
+    "bereich": "Rohstoffe",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Regel L1 (Beinahe-Treffer): DCOILWTICO_d1 (tief) -> XLV, S0009/S0010 wiederholt mit t 3.5-4.07 unter der Huerde (5.24), aber unklarer oekonomischer Mechanismus (Oelpreisrueckgang -> Gesundheitssektor-Mehrrendite). Der OPEC-Referenzkorbpreis misst denselben Rohstoffmechanismus (globaler Rohoelpreis) unabhaengig von FRED/WTI-Notierung und Handelsplatz; pruefend, ob der Befund quellenunabhaengig repliziert oder nur ein Artefakt der WTI-Reihe ist.",
+    "grund": "Regel L1: fuehrt NICHT zu einer Variante auf denselben Daten (kein neuer Horizont/Ziel/Schwelle), sondern zu diesem Katalogeintrag fuer eine unabhaengige Quelle desselben Mechanismus (Replikation von DCOILWTICO_d1->XLV, t 4.066 h5 / 3.542 h1, S0010). Oekonomische Plausibilitaet der Ziel-Branche (Gesundheit) bleibt fraglich; bei Replikationsversuch mitpruefen.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z"
   }
 ]
