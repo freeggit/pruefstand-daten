@@ -1,0 +1,20 @@
+{
+  "aaa": {
+    "beschreibung": "Moody's Seasoned Aaa Corporate Bond Yield, taeglich",
+    "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Moody's/FRED taeglicher Schlusswert, gleichentags gespiegelt, geprueft 26.9.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DAAA",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Marktschlusswert, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "baa": {
+    "beschreibung": "Moody's Seasoned Baa Corporate Bond Yield, taeglich",
+    "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Moody's/FRED taeglicher Schlusswert, gleichentags gespiegelt, geprueft 26.9.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DBAA",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Marktschlusswert, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

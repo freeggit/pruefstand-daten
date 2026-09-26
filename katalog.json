@@ -1279,11 +1279,12 @@
     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=8-K",
     "domain": "sec.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Eine ungewoehnlich hohe Tageszahl an 8-K-Ergebnismeldungen (insbesondere ausserhalb der regulaeren Berichtssaison, potenzielle Gewinnwarnungen) kann breiten Stress im Unternehmenssektor signalisieren, der sich kurzfristig auf den Gesamtmarkt gegenueber dem Weltindex auswirkt.",
-    "grund": "Aggregierte Firmenereignis-Idee (kein Einzeltitel-Bezug, vermeidet die bei edgar_daily_index_meldungen abgelehnte Einzelfirmen-Problematik), aber Item-2.02-Filterung aus dem EDGAR-Tagesindex rechenintensiv und Format historisch uneinheitlich, daher tiefe Prioritaet bis Machbarkeit (K7-Zeitbudget) geprueft ist.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Aggregierte Firmenereignis-Idee (kein Einzeltitel-Bezug, vermeidet die bei edgar_daily_index_meldungen abgelehnte Einzelfirmen-Problematik), aber Item-2.02-Filterung aus dem EDGAR-Tagesindex rechenintensiv und Format historisch uneinheitlich, daher tiefe Prioritaet bis Machbarkeit (K7-Zeitbudget) geprueft ist. | Update 2026-09-26T08:19:00Z: Zugriffstest https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/ mit vorgeschriebenem User-Agent 'pruefstand-daten research freeggit@users.noreply.github.com' liefert HTTP 403 Forbidden. SEC sperrt diese Umgebung domainweit (identisch zu sec_insider_sektor und der bereits abgelehnten edgar_daily_index_meldungen); keine Umgehung versucht (kein Proxy-/Kennungswechsel). Status auf 'abgelehnt' gesetzt, Grund: SEC-Sperre (K3).",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-26T08:19:00Z"
   },
   {
     "id": "google_trends_rezession",
@@ -1297,5 +1298,40 @@
     "grund": "Regel L3: publizierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Google Trends liefert offiziell nur relative, auf 100 normierte Wochenindexwerte bei Mehrjahresfenstern (taegliche Aufloesung nur in kurzen Fenstern, K1 ev. verletzt) und keine offizielle Daten-API ohne Anmeldung -- Machbarkeit (K1/K3) im naechsten Lauf konkret pruefen. | Geprueft 2026-09-26T00:14:54Z: Google Trends liefert bei Mehrjahresfenstern (hier: Historie seit spaetestens 2015 gefordert) nur woechentlich aggregierte, auf 100 normierte Indexwerte; taegliche Aufloesung ist offiziell nur fuer Zeitfenster bis 90 Tage verfuegbar (dokumentiertes Google-Trends-Verhalten). Damit K1 (Median-Abstand hoechstens 3 Kalendertage) fuer die volle Historie verletzt. Zusaetzlich keine offizielle schluesselfreie Daten-API (nur inoffizielles Scraping via pytrends, ausserhalb der Nutzungsbedingungen, K3). Abgelehnt.",
     "aufgenommen_utc": "2026-09-25T09:40:00Z",
     "geprueft_utc": "2026-09-26T00:14:54Z"
+  },
+  {
+    "id": "fred_credit_spread",
+    "name": "Moody's Unternehmensanleihen-Renditen Aaa/Baa (FRED DAAA/DBAA, taeglich)",
+    "url": "https://fred.stlouisfed.org/series/DAAA",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Zinsen",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Die Rendite-Differenz zwischen erstklassigen (Aaa) und niedrigeren Investment-Grade-Unternehmensanleihen (Baa) misst die vom Markt taeglich neu eingepreiste Kreditrisikoprаemie; eine rasche Ausweitung signalisiert Stress bei Finanzwerten und zyklischen Sektoren (XLF, XLI, XLY) und kann kurzfristig (1-20 Handelstage) deren Verhalten gegenueber dem Weltindex vorwegnehmen, analog zum bereits vorhandenen High-Yield-Spread BAMLH0A0HYM2 in main, hier jedoch mit Historie bis 1983 bzw. 1986 statt erst 1996/1997.",
+    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: DAAA/DBAA explizit als Beispiel genannt (neben DGS2/DGS3MO/DTB3/DEXUSUK/DEXCAUS/DEXUSAL/Gold). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen). K2 Historie: aaa ab 1983-01-03 (10978 Werte), baa ab 1986-01-02 (10219 Werte), beide weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe der Federal Reserve Bank of St. Louis, kein Login/Schluessel, gleiches erprobtes Muster wie fred_dtb3/fred_effr. K4 punktgenau: taegliche Marktrenditen (H.15/Moody's), nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-24 fuer beide Reihen, <10 Tage alt, wird werktaeglich fortgeschrieben. K6 neu: DAAA/DBAA sind nicht im Spiegel (main hat nur den abgeleiteten Spread BAMLH0A0HYM2 fuer Hochzins-/Investment-Grade-Optionsspread, nicht die zugrundeliegenden Aaa/Baa-Niveaus); kein Ersatz sondern Ergaenzung mit laengerer Historie. Zusatz-3-Redundanzgrenze (max. 3 Reihen je Quelle): 2 Reihen (aaa, baa), beide messen klar Verschiedenes (unterschiedliche Bonitaetsstufen), keine Verdichtung noetig. K7 Umfang: je Reihe unter 40 KB komprimiert, Abruf beider Reihen unter 2 Sekunden. Pruefung: aaa Zeilen 10978, erste 1983-01-03, letzte 2026-09-24, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1088, Min 2.01/Max 13.76 (Volcker-Aera 1981-82 Hochphase, danach Rueckgang) plausibel; baa Zeilen 10219, erste 1986-01-02, letzte 2026-09-24, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1025, Min 3.11/Max 12.04 plausibel. Publikationsregel (Zusatz 5) direkt geprueft: taeglicher Marktschlusswert, keine Wochenbuendelung, verfuegbar_nach_tagen 1 wie bei anderen taeglichen FRED-Marktreihen (fred_dtb3, fred_effr).",
+    "reihen": [
+      {
+        "reihe": "aaa",
+        "zeilen": 10978,
+        "erste": "1983-01-03",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.1088,
+        "min": 2.01,
+        "max": 13.76
+      },
+      {
+        "reihe": "baa",
+        "zeilen": 10219,
+        "erste": "1986-01-02",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.1025,
+        "min": 3.11,
+        "max": 12.04
+      }
+    ],
+    "aufgenommen_utc": "2026-09-26T08:19:00Z",
+    "geprueft_utc": "2026-09-26T08:19:00Z"
   }
 ]
