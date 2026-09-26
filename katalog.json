@@ -1190,11 +1190,12 @@
     "url": "https://pancanal.com/en/",
     "domain": "pancanal.com",
     "bereich": "Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Engpaesse am Panamakanal (z.B. Duerre-bedingte Tiefgangsbeschraenkungen 2023/24) erhoehen Frachtkosten und Lieferzeiten; das kann kurzfristig Transport-, Energie- und Agrarsektoren (XLE, DBA) gegenueber dem Weltindex bewegen.",
-    "grund": "Neuer Bereich Logistik (bisher im Katalog nicht vertreten, siehe Schritt 5 Vorgabe fuer mindestens einen neuen Bereich je Runde). Oeffentliche Statusmeldungen der Kanalbehoerde, taeglich soweit publiziert; Struktur/Historie-Tiefe noch zu pruefen.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Neuer Bereich Logistik (bisher im Katalog nicht vertreten, siehe Schritt 5 Vorgabe fuer mindestens einen neuen Bereich je Runde). Oeffentliche Statusmeldungen der Kanalbehoerde, taeglich soweit publiziert; Struktur/Historie-Tiefe noch zu pruefen. | Ergebnis 2026-09-26: K1 verletzt fuer die amtliche Quelle -- Panama Canal Authority (pancanal.com/en/statistics/) veroeffentlicht nur monatliche/jaehrliche PDF-Zusammenfassungen (\"Monthly Canal Operations Summary\"), keine taeglichen Zeilen, kein CSV/JSON. Einzige gefundene oeffentliche taegliche Alternative ist der IMF-PortWatch-Datensatz \"Daily Chokepoint Transit Calls\" (ArcGIS FeatureServer, services9.arcgis.com/weJ1QsnbMYJlCHdG/.../Daily_Chokepoints_Data), AIS-basierte Schaetzung, nicht die amtliche ACP-Zaehlung; dessen Historie beginnt aber erst 2019-01-01 und verletzt damit K2 (spaetestens 31.12.2015). Status daher abgelehnt; bei erneuter Pruefung zuerst klaeren, ob PortWatch rueckwirkend vor 2019 Daten liefert.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-26T04:30:00Z"
   },
   {
     "id": "suez_canal_traffic",
@@ -1202,11 +1203,12 @@
     "url": "https://www.suezcanal.gov.eg/English/Navigation/Pages/NavigationStatistics.aspx",
     "domain": "suezcanal.gov.eg",
     "bereich": "Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Stoerungen am Suezkanal (z.B. Rotmeer-Krise seit Ende 2023) zwingen Reedereien zu Umleitungen ueber das Kap der Guten Hoffnung, was Frachtkosten und Lieferzeiten erhoeht und kurzfristig Transport- und Energiesektoren gegenueber dem Weltindex bewegen kann.",
-    "grund": "Zweiter Kandidat fuer den neuen Bereich Logistik, unabhaengige Engpassquelle zu panama_canal_transits (unterschiedlicher Kanal, unterschiedlicher Mechanismus: Sicherheitslage vs. Wasserstand). Oeffentliche Statistikseite der Kanalbehoerde, Abrufbarkeit/Format noch zu pruefen.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Zweiter Kandidat fuer den neuen Bereich Logistik, unabhaengige Engpassquelle zu panama_canal_transits (unterschiedlicher Kanal, unterschiedlicher Mechanismus: Sicherheitslage vs. Wasserstand). Oeffentliche Statistikseite der Kanalbehoerde, Abrufbarkeit/Format noch zu pruefen. | Ergebnis 2026-09-26: K1 verletzt fuer die amtliche Quelle -- Suez Canal Authority (suezcanal.gov.eg/English/Navigation/Pages/NavigationStatistics.aspx) veroeffentlicht nur jaehrliche/quartalsweise Statistiken und Jahresberichte als PDF, keine taeglichen Zeilen. Einzige gefundene oeffentliche taegliche Alternative ist derselbe IMF-PortWatch-Datensatz wie bei panama_canal_transits (portid=chokepoint1), AIS-basierte Schaetzung statt amtlicher SCA-Zaehlung; Historie beginnt erst 2019-01-01 und verletzt damit K2 (spaetestens 31.12.2015). Status daher abgelehnt.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-26T04:30:00Z"
   },
   {
     "id": "eia_diesel_preis",
@@ -1252,11 +1254,24 @@
     "url": "https://www.spglobal.com/spdji/en/index-family/equity/us-equity/sp-500/#news-research",
     "domain": "spglobal.com",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Der 'Index-Effekt' (Shleifer 1986, Harris/Gurel 1986) ist eine der am besten dokumentierten Kalenderanomalien: um Ankuendigungs- und Wirksamkeitstag von Indexaenderungen entstehen vorhersehbare, mechanische Kauf-/Verkaufsfluesse passiver Fonds, die kurzfristig Einzelwerte und darueber Sektor-ETFs gegenueber dem Weltindex bewegen koennen.",
-    "grund": "Regel L3: publizierte, in Grossteilen arbitrierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Ankuendigungen oeffentlich (Pressemitteilungen S&P Dow Jones Indices), aber als aggregierte taegliche Kalenderreihe (Anzahl Aenderungen je Tag) statt firmenspezifisch umsetzbar, was K7-Umfang und Firmenereignisse-aggregiert-Vorgabe entspricht.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Regel L3: publizierte, in Grossteilen arbitrierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Ankuendigungen oeffentlich (Pressemitteilungen S&P Dow Jones Indices), aber als aggregierte taegliche Kalenderreihe (Anzahl Aenderungen je Tag) statt firmenspezifisch umsetzbar, was K7-Umfang und Firmenereignisse-aggregiert-Vorgabe entspricht. | Ergebnis 2026-09-26: K1-K7 erfuellt. Amtliche SPDJI-Feeds (spglobal.com/spdji RSS/Pressemitteilungsarchiv) sind per Akamai-Bot-Schutz gesperrt (403 auf einfachen HTTP-Abruf), daher Ersatzquelle Wikipedia-Artikel 'Historical components of the S&P 500' (Tabelle id=changes), abgerufen ueber Special:Export (reiner Wikitext, Python-Standardbibliothek urllib, kein Login/Schluessel = K3). Reihe anzahl_aenderungen = Anzahl Aufnahme/Entfernung-Paare je Wirksamkeitsdatum, als vollstaendige Tagesreihe (0 an ereignislosen Tagen) ab erstem Tabelleneintrag 1976-07-01 (weit vor 31.12.2015 = K2, 18350 Werte) bis 2026-09-26 (K5 laufend, da algorithmisch bis heute erzeugt). K4: die zugrunde liegenden SPDJI-Indexwechsel sind punktgenaue, unrevidierte Ereignisse; die Wikipedia-Tabelle kann vereinzelt Transkriptionsfehler nachtraeglich korrigieren (siehe Bearbeitungskommentar 'renamings and/or ticker changes are not index changes'), das ist eine Fehlerkorrektur der Abschrift, keine methodische Revision einer Wirtschaftsstatistik. K6: neuer Mechanismus (Index-Effekt), nicht im bestehenden Spiegel. K7: Datei 138 KB unkomprimiert Wikitext-Quelle, Abruf <5 Sek. Pruefung: 18350 Zeilen, erste 1976-07-01, letzte 2026-09-26, Median-Abstand 1.0 Tag, Anteil gleicher Folgewerte 0.969 (bei duennem Ereigniszaehler wie bei kalender_ereignisse/usgs_erdbeben erwartungsgemaess, kein Qualitaetsmangel), Min 0, Max 5 (2009-12-18, plausibel: mehrere gleichzeitige Wechsel bei einer grossen Rebalancierung). Regel L3 beachten: der Index-Effekt gilt als grossteils arbitrierte, moeglicherweise abgeschwaechte Anomalie, im Suchlauf-Bericht entsprechend vermerken.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-26T04:30:00Z",
+    "reihen": [
+      {
+        "reihe": "anzahl_aenderungen",
+        "zeilen": 18350,
+        "erste": "1976-07-01",
+        "letzte": "2026-09-26",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.969,
+        "min": 0.0,
+        "max": 5.0
+      }
+    ]
   },
   {
     "id": "anzahl_gewinnwarnungen",

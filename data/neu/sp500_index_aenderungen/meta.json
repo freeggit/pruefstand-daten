@@ -1,0 +1,11 @@
+{
+  "anzahl_aenderungen": {
+    "beschreibung": "Anzahl der Aufnahme/Entfernung-Paare im S&P 500 je Wirksamkeitsdatum (Effective Date), gezaehlt aus der von Freiwilligen gepflegten Wikipedia-Tabelle 'Historical components of the S&P 500' (Tabelle id=changes), die die Pressemitteilungen von S&P Dow Jones Indices nachtraegt. Index-Effekt (Shleifer 1986, Harris/Gurel 1986): um Wirksamkeitstag entstehen mechanische Kauf-/Verkaufsfluesse passiver Fonds. Hinweis: die Tabelle ist community-gepflegt; vereinzelte rueckwirkende Korrekturen von Transkriptionsfehlern (z.B. Ticker-Umbenennungen faelschlich als Indexwechsel gezaehlt) sind moeglich, keine methodische Revision der zugrundeliegenden SPDJI-Ereignisse selbst.",
+    "einheit": "Anzahl Indexaenderungs-Paare",
+    "publikation": "verzoegert (community-gepflegte Wikipedia-Tabelle, keine feste Frist; Beleg: bei Abruf lag der juengste Tabelleneintrag rund 5 Kalendertage vor dem Abrufdatum, siehe Fortschrittsnotiz im Katalog)",
+    "quelle_url": "https://en.wikipedia.org/wiki/Historical_components_of_the_S%26P_500",
+    "revidiert": false,
+    "verdichtung": "Anzahl Tabellenzeilen (Aenderungs-Paare) je Kalendertag (Wirksamkeitsdatum), 0 an Tagen ohne Eintrag",
+    "verfuegbar_nach_tagen": 7
+  }
+}
