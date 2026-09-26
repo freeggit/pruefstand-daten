@@ -11,7 +11,7 @@ import urllib.request
 ID = "openmeteo_wetter_anbau"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
-START = "2015-01-01"
+START = "1940-01-01"  # Zusatz 4 (E11): fruehestes von Open-Meteo erlaubtes Archivdatum
 # Sicherheitsabstand ueber die von Open-Meteo dokumentierte 5-7-Tage-Nachlieferung
 # der ERA5-Reanalyse hinaus, damit nur bereits finalisierte (nicht mehr revidierte)
 # Tage abgelegt werden (K4).

@@ -615,16 +615,16 @@
     "domain": "archive-api.open-meteo.com",
     "bereich": "Rohstoffe",
     "status": "aktiv",
-    "prioritaet": "normal",
+    "prioritaet": "hoch",
     "mechanismus": "Ungewoehnliche Niederschlagsdefizite oder -ueberschuesse in wichtigen Anbaugebieten (US-Maisguertel, brasilianisches Soja, zentralindischer Monsun) koennen kurzfristig (1-20 Handelstage) Ernteerwartungen und damit Agrarrohstoffpreise (DBA) gegenueber dem Weltindex bewegen, insbesondere bei akuten Duerre- oder Flutereignissen.",
-    "grund": "Ergaenzung 2026-09-25T06:13:45Z (Zusatz 2, Ideenraum 3 'Wetter in Anbaugebieten ... ueber Open-Meteo'): fruehere Pruefung am 2026-09-23 war wegen eines Tageskontingent-Limits der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP nicht abschliessend (status faelschlich 'abgelehnt' belassen). Heute erneut getestet: archive-api.open-meteo.com/v1/archive liefert ohne Login/Schluessel ERA5-Reanalyse-Tageswerte (Niederschlagssumme) fuer drei Regionen. K1 taeglich (Median-Abstand 1 Tag, n=4276 je Reihe). K2 Historie ab 2015-01-01 (>500 Werte). K3 offen: keine Anmeldung, kein Schluessel, freier Tarif fuer nicht-kommerzielle Forschung. K4 punktgenau: laut Open-Meteo-Dokumentation ('Historical Weather API') bleiben aeltere ERA5-Werte nach der 5-7-taegigen Nachlieferung unveraendert; das Skript haelt zusaetzlich Sicherheitsabstand und schreibt nur Tage bis (heute - 10 Tage), also nie den unfertigen/vorlaeufigen Rand der Reanalyse. K5 laufend: bei jedem Lauf wird der Stichtag neu auf (heute - 10 Tage) berechnet, letzter abgelegter Wert 2026-09-15 (10 Tage vor Testdatum, an der erlaubten Obergrenze). K6 neu: keine Wetter-/Anbaugebiet-Reihe im bestehenden Spiegel (dort nur Wetter Zuerich/Basel/Frankfurt/Kaub/Houston/Chicago, keine Agrarregionen). K7 Umfang: je Reihe rund 80 KB unkomprimiert JSON-Antwort, komprimierte CSV weit unter 20 MB, Abruf aller drei Regionen unter 5 Sekunden. Pruefung: mais_guertel n=4276, Niederschlag 0.0-75.7 mm/Tag, Anteil gleicher Folgewerte 35.3%; soja_mato_grosso n=4276, 0.0-65.5 mm/Tag, 34.2%; monsun_indien n=4276, 0.0-225.5 mm/Tag (Monsun-Starkregenereignisse), 52.3%. Die hohen Anteile gleicher Folgewerte liegen an echten, physikalisch erwartbaren Trockentagen (Niederschlag exakt 0.0 mm an vielen aufeinanderfolgenden Tagen, v.a. Trockenzeit Indien/Mato Grosso) und sind kein Qualitaetsmangel, analog zu den binaeren 0/1-Indikatorreihen bei kalender_ereignisse. Werte plausibel (kein Platzhalter wie -999, keine negativen Niederschlaege, Maximalwerte passen zu bekannten Starkregenereignissen). Hinweis fuer kuenftige Laeufe: ein sofortiger Wiederholungsabruf direkt im Anschluss lieferte HTTP 429 (Tageskontingent/Rate-Limit der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP dieser Umgebung, analog zu wikipedia_weitere); run_all.py laesst bei Fehlschlag bestehende Dateien unveraendert stehen, ein erneuter Versuch im naechsten Lauf ist vorgesehen. | Zusatz 5 (25.9.2026): verfuegbar_nach_tagen von vorsichtigem Sicherheitsabstand 10 auf den von Reto festgelegten Wert 5 fuer ERA5-Reanalyse-Wetterreihen korrigiert; Feld publikation ('verzoegert') ergaenzt.",
+    "grund": "Ergaenzung 2026-09-25T06:13:45Z (Zusatz 2, Ideenraum 3 'Wetter in Anbaugebieten ... ueber Open-Meteo'): fruehere Pruefung am 2026-09-23 war wegen eines Tageskontingent-Limits der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP nicht abschliessend (status faelschlich 'abgelehnt' belassen). Heute erneut getestet: archive-api.open-meteo.com/v1/archive liefert ohne Login/Schluessel ERA5-Reanalyse-Tageswerte (Niederschlagssumme) fuer drei Regionen. K1 taeglich (Median-Abstand 1 Tag, n=4276 je Reihe). K2 Historie ab 2015-01-01 (>500 Werte). K3 offen: keine Anmeldung, kein Schluessel, freier Tarif fuer nicht-kommerzielle Forschung. K4 punktgenau: laut Open-Meteo-Dokumentation ('Historical Weather API') bleiben aeltere ERA5-Werte nach der 5-7-taegigen Nachlieferung unveraendert; das Skript haelt zusaetzlich Sicherheitsabstand und schreibt nur Tage bis (heute - 10 Tage), also nie den unfertigen/vorlaeufigen Rand der Reanalyse. K5 laufend: bei jedem Lauf wird der Stichtag neu auf (heute - 10 Tage) berechnet, letzter abgelegter Wert 2026-09-15 (10 Tage vor Testdatum, an der erlaubten Obergrenze). K6 neu: keine Wetter-/Anbaugebiet-Reihe im bestehenden Spiegel (dort nur Wetter Zuerich/Basel/Frankfurt/Kaub/Houston/Chicago, keine Agrarregionen). K7 Umfang: je Reihe rund 80 KB unkomprimiert JSON-Antwort, komprimierte CSV weit unter 20 MB, Abruf aller drei Regionen unter 5 Sekunden. Pruefung: mais_guertel n=4276, Niederschlag 0.0-75.7 mm/Tag, Anteil gleicher Folgewerte 35.3%; soja_mato_grosso n=4276, 0.0-65.5 mm/Tag, 34.2%; monsun_indien n=4276, 0.0-225.5 mm/Tag (Monsun-Starkregenereignisse), 52.3%. Die hohen Anteile gleicher Folgewerte liegen an echten, physikalisch erwartbaren Trockentagen (Niederschlag exakt 0.0 mm an vielen aufeinanderfolgenden Tagen, v.a. Trockenzeit Indien/Mato Grosso) und sind kein Qualitaetsmangel, analog zu den binaeren 0/1-Indikatorreihen bei kalender_ereignisse. Werte plausibel (kein Platzhalter wie -999, keine negativen Niederschlaege, Maximalwerte passen zu bekannten Starkregenereignissen). Hinweis fuer kuenftige Laeufe: ein sofortiger Wiederholungsabruf direkt im Anschluss lieferte HTTP 429 (Tageskontingent/Rate-Limit der kostenlosen Open-Meteo-API auf der geteilten Ausgangs-IP dieser Umgebung, analog zu wikipedia_weitere); run_all.py laesst bei Fehlschlag bestehende Dateien unveraendert stehen, ein erneuter Versuch im naechsten Lauf ist vorgesehen. | Zusatz 5 (25.9.2026): verfuegbar_nach_tagen von vorsichtigem Sicherheitsabstand 10 auf den von Reto festgelegten Wert 5 fuer ERA5-Reanalyse-Wetterreihen korrigiert; Feld publikation ('verzoegert') ergaenzt. | Zusatz 4 (25.9.2026, E11 Historie vor 1990), umgesetzt 2026-09-26T00:14:54Z: START im Abrufskript von 2015-01-01 auf 1940-01-01 zurueckverlaengert (fruehestes von der Open-Meteo Historical-Weather-API erlaubtes Archivdatum, per API-Fehlermeldung bestaetigt: 'Parameter start_date is out of allowed range from 1940-01-01'). Alle drei Regionen erfolgreich neu abgerufen, je Reihe jetzt 31676 Zeilen (1940-01-02 bis 2026-09-26 statt vorher ab 2015), Abruf weiterhin wenige Sekunden je Region (K7 deutlich erfuellt). Prioritaet auf 'hoch' gesetzt (Zusatz 4 E11: Tagesreihen mit Beginn vor 1990).",
     "reihen": [
       "mais_guertel",
       "soja_mato_grosso",
       "monsun_indien"
     ],
     "aufgenommen_utc": "2026-09-24T08:12:16Z",
-    "geprueft_utc": "2026-09-25T06:13:45Z"
+    "geprueft_utc": "2026-09-26T00:14:54Z"
   },
   {
     "id": "boj_call_rate",
@@ -1214,11 +1214,12 @@
     "url": "https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm",
     "domain": "eia.gov",
     "bereich": "Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Dieselpreisschuebe verteuern Land- und Seefracht unmittelbar und gelten als fruehes Signal fuer Logistikkosten-Stress, der sich kurzfristig auf Transport-, Einzelhandels- und Agrarsektoren gegenueber dem Weltindex auswirken kann.",
-    "grund": "Dritter Logistik-Kandidat, aber nur woechentlich (K1 'taeglich' vermutlich verletzt wie bei bereits abgelehnten woechentlichen/monatlichen Reihen), daher tiefe Prioritaet; oeffentliche EIA-Reihe seit 1994 ohne Login.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Dritter Logistik-Kandidat, aber nur woechentlich (K1 'taeglich' vermutlich verletzt wie bei bereits abgelehnten woechentlichen/monatlichen Reihen), daher tiefe Prioritaet; oeffentliche EIA-Reihe seit 1994 ohne Login. | Geprueft 2026-09-26T00:14:54Z: EIA API v2 (api.eia.gov) verlangt fuer jede Abfrage einen 'api_key'-Parameter (HTTP 401/403 ohne Schluessel), wie bereits fuer EIA generell im Auftrag vermerkt ('Bekannt abzulehnen: EIA ... Schluessel noetig'). K3 verletzt, kein Umgehungsversuch. Abgelehnt.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-26T00:14:54Z"
   },
   {
     "id": "stablecoin_supply",
@@ -1226,11 +1227,12 @@
     "url": "https://www.coingecko.com/en/coins/tether/historical_data",
     "domain": "coingecko.com",
     "bereich": "Krypto",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Netto-Emission oder -Einzug von Stablecoins zeigt Zu- oder Abfluss von Liquiditaet aus dem Kryptomarkt an und gilt in der Literatur als Fruehindikator fuer Risikoappetit, der kurzfristig auch auf breitere Risikoanlagen gegenueber dem Weltindex wirken kann.",
-    "grund": "Ergaenzt bitcoin_onchain um ein zweites, unabhaengiges On-Chain-Signal (Geldmenge statt Netzwerkaktivitaet). Oeffentliche API-Zugaenge zu pruefen (CoinGecko/Etherscan ohne Schluessel im Free-Tier, Rate-Limits beachten).",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Ergaenzt bitcoin_onchain um ein zweites, unabhaengiges On-Chain-Signal (Geldmenge statt Netzwerkaktivitaet). Oeffentliche API-Zugaenge zu pruefen (CoinGecko/Etherscan ohne Schluessel im Free-Tier, Rate-Limits beachten). | Geprueft 2026-09-26T00:14:54Z: CoinGecko Free-Tier begrenzt /market_chart seit Kurzem auf die letzten 365 Tage (HTTP 401, error_code 10012, 'Public API users are limited to querying historical data within the past 365 days') -- keine volle Historie ohne Bezahlplan (K3). Alternative DefiLlama stablecoins-API (stablecoins.llama.fi, frei, ohne Schluessel) liefert tatsaechlich taegliche Umlaufmengen, aber die groessten Stablecoins hatten erst ab November 2017 (Tether) bzw. 2018 (USDC) signifikantes Volumen -- kein Tageswert vor 31.12.2015 auffindbar (K2 verletzt: erster Wert muss spaetestens 2015-12-31 liegen). Abgelehnt.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-26T00:14:54Z"
   },
   {
     "id": "bitcoin_exchange_netflow",
@@ -1274,10 +1276,11 @@
     "url": "https://trends.google.com/trends/explore?q=recession",
     "domain": "trends.google.com",
     "bereich": "Aufmerksamkeit",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Sprunghaftes Google-Suchinteresse zu Rezessions-/Krisenbegriffen ist in der Literatur (Da, Engelberg, Gao 2011 'In Search of Attention') als Fruehindikator fuer Anlegeraufmerksamkeit und kurzfristige Kursbewegungen dokumentiert; misst eine andere Population (aktive Sucher) als die bereits vorhandenen Wikipedia-Aufrufzahlen (Leser).",
-    "grund": "Regel L3: publizierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Google Trends liefert offiziell nur relative, auf 100 normierte Wochenindexwerte bei Mehrjahresfenstern (taegliche Aufloesung nur in kurzen Fenstern, K1 ev. verletzt) und keine offizielle Daten-API ohne Anmeldung -- Machbarkeit (K1/K3) im naechsten Lauf konkret pruefen.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Regel L3: publizierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Google Trends liefert offiziell nur relative, auf 100 normierte Wochenindexwerte bei Mehrjahresfenstern (taegliche Aufloesung nur in kurzen Fenstern, K1 ev. verletzt) und keine offizielle Daten-API ohne Anmeldung -- Machbarkeit (K1/K3) im naechsten Lauf konkret pruefen. | Geprueft 2026-09-26T00:14:54Z: Google Trends liefert bei Mehrjahresfenstern (hier: Historie seit spaetestens 2015 gefordert) nur woechentlich aggregierte, auf 100 normierte Indexwerte; taegliche Aufloesung ist offiziell nur fuer Zeitfenster bis 90 Tage verfuegbar (dokumentiertes Google-Trends-Verhalten). Damit K1 (Median-Abstand hoechstens 3 Kalendertage) fuer die volle Historie verletzt. Zusaetzlich keine offizielle schluesselfreie Daten-API (nur inoffizielles Scraping via pytrends, ausserhalb der Nutzungsbedingungen, K3). Abgelehnt.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-09-26T00:14:54Z"
   }
 ]
