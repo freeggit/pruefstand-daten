@@ -1,0 +1,11 @@
+{
+  "aenderungstage": {
+    "beschreibung": "1 an dem Handelstag, an dem sich die von der Bank of England gesetzte Bank Rate (Serie IUDBEDR) gegenueber dem vorherigen veroeffentlichten Wert aendert, sonst 0. Reihe enthaelt nur Handelstage (keine Wochenenden/Feiertage), wie von der Quelle geliefert.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Entscheiddatum am Tag der Bekanntgabe oeffentlich in der IADB, Reihe wird fortgeschrieben)",
+    "quelle_url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich/handelstaeglich, Aenderungsindikator aus taeglicher Zinsreihe abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

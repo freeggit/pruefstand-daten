@@ -1340,11 +1340,15 @@
     "url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
     "domain": "bankofengland.co.uk",
     "bereich": "Kalender",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "BoE-Zinsentscheide sind ein eigenstaendiges geldpolitisches Ereignis wie FOMC/EZB (bereits in leitzins_aenderungstage); testet kurzfristige Reaktion GBP-naher Ziele (EWU, GBP-Paare) auf eine dritte grosse Notenbank mit sehr langer Reihe.",
-    "grund": "Oeffentliche Statistical-Interactive-Database ohne Login, taegliche Bank-Rate-Reihe seit 1975 dokumentiert (Aenderungstage weit vor 1990, Zusatz 4 Schwerpunkt).",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Oeffentliche Statistical-Interactive-Database ohne Login, taegliche Bank-Rate-Reihe seit 1975 dokumentiert (Aenderungstage weit vor 1990, Zusatz 4 Schwerpunkt). | Geprueft 2026-09-26T12:14:28Z: oeffentlicher CSV-Export der BoE Interactive Statistical Database (Serie IUDBEDR) ohne Login/Schluessel funktioniert; 13077 Zeilen, erste 1975-01-02, letzte 2026-09-24, Median-Abstand 1.0 Kalendertag(e), Anteil gleicher Folgewerte 96.4% (plausibel: Bank Rate aendert sich selten), Wertebereich 0.0-1.0% (plausibel). Alle Kriterien K1-K7 erfuellt. Aktiv als eigenstaendige dritte Notenbank neben FOMC/EZB (leitzins_aenderungstage).",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "reihen": [
+      "aenderungstage"
+    ],
+    "geprueft_utc": "2026-09-26T12:14:28Z"
   },
   {
     "id": "us_boersenfeiertage_effekt",
@@ -1388,11 +1392,12 @@
     "url": "https://www.federalreserve.gov/releases/h15/",
     "domain": "federalreserve.gov",
     "bereich": "Geldmarkt",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Der Diskontsatz ist historisch das aelteste Fed-Leitzinsinstrument (Aenderungen seit 1914 amtlich dokumentiert) und unabhaengig vom Fed-Funds-Zielband; testet ob ein noch laengerer, eigener Aenderungstage-Kalender zusaetzliche vor-1990-Ereignisse fuer die Hypothesenpruefung liefert.",
-    "grund": "Amtliche Fed-Publikation, Aenderungstage weit vor 1990 (Zusatz 4 Schwerpunkt), Ereigniskalender statt Tagesreihe.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Amtliche Fed-Publikation, Aenderungstage weit vor 1990 (Zusatz 4 Schwerpunkt), Ereigniskalender statt Tagesreihe. | Geprueft 2026-09-26T12:14:28Z: FRED fuehrt fuer den Fed-Diskontsatz vor 2003 (Primary Credit Rate, taeglich ab 2003-01-09) nur woechentliche H.15-Reihen (H0RIFSRDF02NWW, WDISCRT, ab 1955/1961) bzw. eine monatliche Reihe (INTDSRUSM193N, ab 1950); eine echte taegliche/aenderungsgenaue Reihe vor 1990 ist oeffentlich nicht auffindbar. Wochenwerte wuerden das exakte Aenderungsdatum um bis zu 6 Tage verfaelschen (Zusatz 5: keine Termine erfinden/ungenau datieren). Abgelehnt (K1/K4 fuer den vor-1990-Teil, der gerade den Mehrwert haette begruenden sollen).",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-26T12:14:28Z"
   },
   {
     "id": "japan_tankan_veroeffentlichung",
@@ -1412,11 +1417,12 @@
     "url": "https://www.opec.org/opec_web/en/press_room/28.htm",
     "domain": "opec.org",
     "bereich": "Rohstoffe",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "OPEC-Foerdermengenentscheide bewegen oelnahe Ziele (XLE, USO, UNG) kurzfristig; ergaenzt die bestehenden Oel-Preisreihen (fred_brent, paar_oel_brent_wti) um den Ereigniskanal. Sitzungshistorie seit Gruendung 1960 (vor 1990, Zusatz 4).",
-    "grund": "OPEC veroeffentlicht eine oeffentliche Liste vergangener Ministertreffen ohne Login; reines Ereignisdatum.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "OPEC veroeffentlicht eine oeffentliche Liste vergangener Ministertreffen ohne Login; reines Ereignisdatum. | Geprueft 2026-09-26T12:14:28Z: opec.org liefert HTTP 403 (Cloudflare-Bot-Schutz, 'Attention Required') fuer die Pressemitteilungs-/Konferenzliste; kein Umgehungsversuch (VERBOTEN). Keine alternative amtliche, maschinenlesbare Volltermin-Historie seit 1960 ohne Drittanbieter-Aggregator gefunden. Abgelehnt (K3).",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-26T12:14:28Z"
   },
   {
     "id": "sp500_russell_rebalance_termine",
