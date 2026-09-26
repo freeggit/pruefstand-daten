@@ -1396,8 +1396,9 @@
     "status": "kandidat",
     "prioritaet": "normal",
     "mechanismus": "WASDE-Ueberraschungen bewegen Agrarrohstoffpreise kurzfristig; ergaenzt die bestehenden Wetter-Anbau-Reihen (openmeteo_wetter_anbau) um den Nachfrage-/Schaetzungskanal statt nur Angebotswetter.",
-    "grund": "Amtlicher Veroeffentlichungskalender oeffentlich, monatliche Ereignistage seit 1973 (vor 1990, Zusatz 4), reines Ereignisdatum ohne Zugriffsrisiko.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Amtlicher Veroeffentlichungskalender oeffentlich, monatliche Ereignistage seit 1973 (vor 1990, Zusatz 4), reines Ereignisdatum ohne Zugriffsrisiko. | Rechercheergebnis 2026-09-26T20:14:08Z: WASDE erscheint monatlich zwischen dem 8. und 12. Kalendertag (usda.gov, cmegroup.com), aber ohne festen Wochentag/Monatstag -- das genaue Datum wird jedes Jahr im Voraus per eigenem Freigabekalender festgelegt, nicht per Formel berechenbar. Eine vollstaendige amtliche Terminliste seit 1973 wurde bisher nicht gefunden (USDA/OCE veroeffentlicht nur den Kalender fuer das laufende Jahr). Ohne belegte Terminliste keine Reihe angelegt (K4/Zusatz 5: keine Termine erfinden). Status bleibt Kandidat; naechster Schritt: usda.gov/oce-Archiv oder NASS-Pressemitteilungen nach frueheren Jahreskalendern durchsuchen.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-26T20:14:08Z"
   },
   {
     "id": "fed_discount_rate_aenderungstage",
@@ -1421,8 +1422,9 @@
     "status": "kandidat",
     "prioritaet": "hoch",
     "mechanismus": "Der quartalsweise Tankan-Bericht ist eine der aeltesten und meistbeachteten japanischen Konjunkturumfragen; Ueberraschungen bewegen JPY- und Japan-nahe Ziele (EWJ) kurzfristig. Sehr lange Ereignishistorie seit 1957 (deutlich vor 1990, Zusatz 4 Schwerpunkt).",
-    "grund": "Amtlicher BoJ-Veroeffentlichungskalender oeffentlich, reines Ereignisdatum vierteljaehrlich.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Amtlicher BoJ-Veroeffentlichungskalender oeffentlich, reines Ereignisdatum vierteljaehrlich. | Rechercheergebnis 2026-09-26T20:14:08Z: Die BoJ veroeffentlicht die Tankan-Termine des jeweils naechsten Jahres nur rollierend (jeweils Ende Juni/Dezember fuer die kommenden 12 Monate, boj.or.jp/en/statistics/tk/index.htm), stellt aber keine durchsuchbare vollstaendige Liste aller historischen Veroeffentlichungstermine seit 1957 oder auch nur seit 1990 bereit; anders als bei opex_verfall/fomc_sitzung gibt es keine deterministische Tag-Regel (kein fester Wochentag/Monatstag), aus der sich die Termine rueckwirkend berechnen liessen. Ohne primaerquellenfeste Terminliste keine Reihe angelegt (K4/Zusatz 5: keine Termine erfinden). Naechster Schritt: pruefen, ob boj.or.jp ein Archiv vergangener Pressemitteilungen mit Datumsangabe fuehrt, aus dem sich eine Teilhistorie (z.B. ab den 2000er Jahren) belegen liesse.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-26T20:14:08Z"
   },
   {
     "id": "opec_ministertreffen_tage",
@@ -1443,11 +1445,15 @@
     "url": "https://www.ftserussell.com/research-insights/russell-reconstitution",
     "domain": "ftserussell.com",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "Quartalsweise S&P500-Anpassungen (dritter Freitag Maerz/Juni/September/Dezember) und die jaehrliche Russell-Rekonstitution (Ende Juni) loesen konzentrierte Umschichtungs-Handelsvolumen aus; ergaenzt die bestehende Reihe sp500_index_aenderungen (Anzahl Aenderungen) um die planbaren, im Voraus bekannten Umsetzungstermine selbst.",
-    "grund": "Termine amtlich/oeffentlich im Voraus bekannt (S&P Dow Jones Indices bzw. FTSE Russell), reines Ereignisdatum seit 1988ff., kein Zugriffsrisiko.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Termine amtlich/oeffentlich im Voraus bekannt (S&P Dow Jones Indices bzw. FTSE Russell), reines Ereignisdatum seit 1988ff., kein Zugriffsrisiko. | Umgesetzt 2026-09-26T20:14:08Z: nur die Russell-Rekonstitutionsreihe (russell_reconstitution) aufgenommen, 1989-01-01 bis heute, 38 Ereignistage, Regel gegen bekannte Termine verifiziert (u.a. 2018-06-22, 2025-06-27, 2026-06-26 stimmen mit oeffentlich bestaetigten FTSE-Russell-Terminen ueberein). Die urspruenglich mitgedachte S&P-500-Quartalskomponente (dritter Freitag Maerz/Juni/September/Dezember) wurde NICHT abgelegt: identisch mit bereits aktivem kalender_ereignisse:opex_verfall (Zusatz 3, keine redundante Variante). Ab 2026 stellt FTSE Russell auf halbjaehrliche Rekonstitution um (zusaetzlicher Dezembertermin); dessen genaue Tagesregel ist noch nicht primaerquellenfest belegt und liegt nach dem heutigen Laufdatum in der Zukunft -- wird ergaenzt, sobald belegt (keine Termine erfinden).",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "reihen": [
+      "russell_reconstitution"
+    ],
+    "geprueft_utc": "2026-09-26T20:14:08Z"
   },
   {
     "id": "cboe_putcall_ratio",

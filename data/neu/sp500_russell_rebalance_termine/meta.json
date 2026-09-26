@@ -1,0 +1,11 @@
+{
+  "russell_reconstitution": {
+    "beschreibung": "1 am Umsetzungstag der jaehrlichen Russell-US-Index-Rekonstitution (nach Handelsschluss am letzten Freitag im Juni, verschoben auf den vorhergehenden Freitag falls dieser auf den 29. oder 30. Juni faellt), sonst 0, fuer jeden Kalendertag ab 1989-01-01 (Beginn der jaehrlichen Rekonstitution). Quelle: FTSE Russell 'Russell Reconstitution' / 'Four Decades of Russell US Indexes Reconstitution' (lseg.com/en/ftse-russell/russell-reconstitution).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Ereignisdatum lange im Voraus oeffentlich bekannt/regelbasiert, Reihe wird taeglich fortgeschrieben)",
+    "quelle_url": "kein externer Abruf (deterministische Kalenderberechnung nach dokumentierter FTSE-Russell-Regel)",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
