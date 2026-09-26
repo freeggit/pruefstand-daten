@@ -1351,16 +1351,29 @@
     "geprueft_utc": "2026-09-26T12:14:28Z"
   },
   {
-    "id": "us_boersenfeiertage_effekt",
-    "name": "US-Boersenfeiertage: Tag vor/nach NYSE-Schliessung seit 1928",
-    "url": "https://www.nyse.com/markets/hours-calendars",
-    "domain": "nyse.com",
+    "id": "us_boersenfeiertage",
+    "name": "US-Boersenfeiertage (NYSE): volle Handelsschliessungen seit 1953",
+    "url": "https://www.ltadvisors.net/Info/research/closings.pdf",
+    "domain": "kein externer Abruf (deterministische Kalenderberechnung aus dokumentierter Feiertagshistorie)",
     "bereich": "Feiertage",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "Der Vorfeiertags-Effekt (ueberdurchschnittliche Rendite am letzten Handelstag vor einer Boersenschliessung) ist in der Literatur seit Ariel (1990) dokumentiert; Test ob SPY/ACWI-Mehrrendite an NYSE-Feiertags-Vortagen/-Nachtagen kurzfristig sichtbar ist.",
-    "grund": "Neuer Bereich Feiertage (Vorgabe Schritt 5: mind. ein neuer Bereich je Runde). NYSE-Feiertagskalender oeffentlich, Historie seit 1928 rekonstruierbar, rein kalendarisch (kein Datenabruf-Risiko). Regel L3: bekannte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken falls getestet.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "K1-K7 erfuellt, deterministische Kalenderberechnung ohne externen Abruf. Quelle: offizielles NYSE-Dokument 'History of New York Stock Exchange Holidays' und 'New York Stock Exchange Special Closings, 1885-date' (revidiert bis Januar 2011, gespiegelt u.a. unter ltadvisors.net/Info/research/closings.pdf und s3.amazonaws.com/armstrongeconomics-wp/2013/07/NYSE-Closings.pdf; per PDF-Volltextextraktion gelesen). K1 taeglich (Median-Abstand 1 Tag). K2 Historie ab 1953-01-01 (26932 Werte), weit vor 31.12.2015. K3 offen: oeffentliches Dokument, keine Web-Abhaengigkeit im Skript selbst (reine Kalenderarithmetik). K4 punktgenau: abgeschlossene historische Schliessungstage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf bis zum aktuellen Tag. K6 neu: keine NYSE-Schliessungskalender-Reihe im bestehenden Spiegel oder in dieser Quelle. K7 Umfang: unter 200 KB komprimiert, Berechnung <1 Sek. Startdatum 1953-01-01 bewusst gewaehlt (nicht frueher, siehe Skript-Docstring): 1953 ist laut Quelle das letzte Jahr voller Schliessungen fuer Lincoln's Birthday (1896-1953), Columbus Day (1909-1953) und Armistice/Veterans Day (1934-1953); zugleich endete die unregelmaessige saisonale Samstagshandelsperiode zuletzt 31.5.-27.9.1952, danach ist Mo-Fr durchgehend die Handelswoche - vor 1953 waere eine Samstags-Handelstage-Rekonstruktion noetig, die nicht ausreichend belegt ist (Zusatz 4/5: nichts erfinden). Reihe deckt die 10 wiederkehrenden Feiertage (inkl. Aktivierungs-/Auslaufjahren je Regel, z.B. MLK Day erst ab 1998 ganztags, Washington's Birthday/Memorial Day fest bis 1970 dann 3. Montag Feb/letzter Montag Mai ab 1971 gemaess Uniform Monday Holiday Act, Election Day jedes Jahr bis 1968 dann nur noch 1972/1976/1980, Juneteenth erst ab 2022) sowie ~24 im Quelldokument einzeln als GANZTAGS geschlossen (\"Closed\"/\"Closed all day\" ohne Uhrzeitangabe, klar unterschieden von den zahlreichen dort ebenfalls gelisteten reinen Handelsverkuerzungen 'Closed at X pm', die NICHT gezaehlt werden) dokumentierten Sonderschliessungen ab (u.a. 1968er 'Paperwork Crisis'-Mittwoche, JFK-/Eisenhower-/Truman-/LBJ-/Nixon-Staatsbegraebnisse, NYC-Stromausfall 1977, Hurrikan Gloria 1985, 9/11 2001) sowie zwei allgemein bekannte, oeffentlich dokumentierte Schliessungen nach Dokumentenstand (Hurrikan Sandy 29./30.10.2012, Trauertag George H.W. Bush 5.12.2018). Pruefung: 689 Schliessungstage von 26932 Kalendertagen (1953-2026, ~9.3/Jahr, plausibel fuer ~9-10 Feiertage/Jahr im Schnitt); Stichproben von Hand bestaetigt (1953-02-12 Lincoln's Birthday, 1953-10-12 Columbus Day, 1953-11-11 Armistice Day, 1968-04-09 MLK-Trauertag, 2001-09-11, 2012-10-29 Sandy, 2018-12-05 Bush-Trauertag je =1; 2022-06-19 Juneteenth fiel auf einen Sonntag, korrekt auf Montag 2022-06-20 verschoben). Anteil gleicher Folgewerte 0.9496, bei binaerer 0/1-Kalenderreihe erwartungsgemaess (siehe Begruendung bei kalender_ereignisse), kein Qualitaetsmangel.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "reihen": [
+      {
+        "reihe": "geschlossen",
+        "zeilen": 26932,
+        "erste": "1953-01-01",
+        "letzte": "2026-09-26",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9496,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ],
+    "geprueft_utc": "2026-09-26T16:19:39Z"
   },
   {
     "id": "china_pmi_veroeffentlichung",
@@ -1473,16 +1486,29 @@
     "aufgenommen_utc": "2026-09-26T09:40:47Z"
   },
   {
-    "id": "eu_boersenfeiertage_effekt",
-    "name": "Europaeische Boersenfeiertage: Tag vor/nach Xetra-Schliessung",
-    "url": "https://www.xetra.com/xetra-en/trading/trading-calendar-and-trading-hours",
-    "domain": "xetra.com",
+    "id": "eu_boersenfeiertage",
+    "name": "Boersenfeiertage Xetra/Frankfurt: volle Handelsschliessungen seit Xetra-Start 1997",
+    "url": "https://www.cashmarket.deutsche-boerse.com/cash-en/trading/trading-calendar-and-trading-hours",
+    "domain": "kein externer Abruf (deterministische Kalenderberechnung aus dem amtlichen Deutsche-Boerse-Handelskalender)",
     "bereich": "Feiertage",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Analog zum US-Vorfeiertags-Effekt (us_boersenfeiertage_effekt), aber fuer europanahe Ziele (EWU, EWG); unabhaengiger Test des gleichen Mechanismus in einem anderen Marktkalender.",
-    "grund": "Zweiter Kandidat im neuen Bereich Feiertage, unabhaengige Boerse/Kalender gegenueber der US-Variante. Oeffentlicher Handelskalender ohne Login.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "K1-K7 erfuellt, deterministische Kalenderberechnung ohne externen Abruf. Quelle: Deutsche Boerse AG, 'Trading Calendar Xetra and Frankfurt' (cashmarket.deutsche-boerse.com): Xetra/FWB geschlossen an Neujahr, Karfreitag, Ostermontag, 1. Mai, Heiligabend, 1./2. Weihnachtsfeiertag, Silvester; explizit KEINE Boersenfeiertage sind Christi Himmelfahrt, Pfingstmontag und Tag der Deutschen Einheit (an diesen Tagen wird laut Quelle regulaer gehandelt - bewusst NICHT als Schliessung gezaehlt). K1 taeglich (Median-Abstand 1 Tag). K2 Historie ab 1997-11-28 (Xetra-Handelsstart, 10530 Werte); K2 verlangt Beginn spaetestens 31.12.2015 - erfuellt, auch wenn keine Vor-1990-Historie (siehe unten). K3 offen: oeffentliches Dokument, keine Web-Abhaengigkeit im Skript (reine Kalenderarithmetik). K4 punktgenau: abgeschlossene historische Feiertage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf bis zum aktuellen Tag. K6 neu: keine Xetra/FWB-Schliessungskalender-Reihe im bestehenden Spiegel oder in dieser Quelle (unabhaengiger Test des Vorfeiertags-Mechanismus in einem zweiten, unabhaengigen Marktkalender gegenueber us_boersenfeiertage). K7 Umfang: unter 100 KB komprimiert, Berechnung <1 Sek. Start 1997-11-28 (nicht frueher): der Vorgaenger-Parketthandel der Frankfurter Wertpapierboerse hatte moeglicherweise einen aehnlichen, aber nicht ebenso solide belegten Feiertagskalender; Rueckverlaengerung vor Xetra-Start als spaetere Etappe vorgemerkt, sobald eine ebenso verlaessliche Primaerquelle gefunden ist (Zusatz 2/4: nichts schaetzen). Anders als NYSE keine Wochenend-Nachholregel: faellt ein Feiertag auf ein Wochenende, entfaellt er ersatzlos (deutsche Praxis, keine Ersatztage). Pruefung: 184 Schliessungstage von 10530 Kalendertagen (1997-2026, ~6.4/Jahr, plausibel fuer 8 nominelle Feiertage/Jahr abzueglich gelegentlicher Wochenendkollisionen ohne Ersatztag); Stichproben von Hand bestaetigt (1998-04-10 Karfreitag, 1998-04-13 Ostermontag, 2026-04-03 Karfreitag, 2026-04-06 Ostermontag je =1). Anteil gleicher Folgewerte 0.9747, bei binaerer 0/1-Kalenderreihe erwartungsgemaess, kein Qualitaetsmangel.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "reihen": [
+      {
+        "reihe": "geschlossen",
+        "zeilen": 10530,
+        "erste": "1997-11-28",
+        "letzte": "2026-09-26",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9747,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ],
+    "geprueft_utc": "2026-09-26T16:19:39Z"
   },
   {
     "id": "dividendenerhoehungen_sp500_dichte",

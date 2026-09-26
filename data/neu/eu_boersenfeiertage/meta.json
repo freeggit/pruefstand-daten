@@ -1,0 +1,11 @@
+{
+  "geschlossen": {
+    "beschreibung": "1 an jedem Kalendertag (Mo-Fr), an dem Xetra/Frankfurter Wertpapierboerse wegen eines der acht Boersenfeiertage (Neujahr, Karfreitag, Ostermontag, 1. Mai, Heiligabend, 1./2. Weihnachtsfeiertag, Silvester) geschlossen war, sonst 0 (auch an Wochenenden 0). Christi Himmelfahrt, Pfingstmontag und Tag der Deutschen Einheit sind laut Quelle KEINE Boersenfeiertage und daher nicht enthalten. Keine Wochenend-Nachholregel: faellt ein Feiertag auf ein Wochenende, entfaellt er ersatzlos.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Feiertagsdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
+    "quelle_url": "https://www.cashmarket.deutsche-boerse.com/cash-en/trading/trading-calendar-and-trading-hours",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische, aus dem amtlichen Deutsche-Boerse-Handelskalender abgeleitete Kalenderreihe, kein externer taeglicher Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

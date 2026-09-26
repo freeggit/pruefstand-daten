@@ -1,0 +1,11 @@
+{
+  "geschlossen": {
+    "beschreibung": "1 an jedem Kalendertag, an dem die NYSE einen sonst reguleren Handelstag (Mo-Fr) wegen eines Feiertags oder einer Sonderschliessung GANZTAGS geschlossen war, sonst 0 (auch an Wochenenden 0). Deckt die 10 wiederkehrenden Feiertage (inkl. historischer, heute nicht mehr beobachteter wie Lincoln's Birthday/Columbus Day/Armistice Day, jeweils nur bis 1953, und Election Day bis 1968 bzw. 1972/1976/1980) sowie ~20 dokumentierte Sonderschliessungen (Staatstrauer, 9/11, Hurrikane, 1968er 'Paperwork Crisis'-Mittwoche) ab, NICHT jedoch reine Handelsverkuerzungen (z.B. 'Closed at 1:00 pm' am Tag vor Weihnachten/Thanksgiving seit den 1970ern), die laut Quelle keine volle Schliessung sind.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Schliessungstatsache am selben Tag oeffentlich bekannt; historische Feiertage im Voraus bekannt, Sonderschliessungen teils erst kurzfristig)",
+    "quelle_url": "https://www.ltadvisors.net/Info/research/closings.pdf und https://s3.amazonaws.com/armstrongeconomics-wp/2013/07/NYSE-Closings.pdf ('History of New York Stock Exchange Holidays' und 'New York Stock Exchange Special Closings, 1885-date', NYSE-Dokument, revidiert bis Januar 2011); ab Jan. 2011 durch dokumentierte, allgemein bekannte Feiertagsregeln (siehe Quellcode) und zwei oeffentlich bekannte Sonderschliessungen (Hurrikan Sandy 2012, Trauertag Bush 2018) fortgeschrieben.",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische, aus amtlicher/dokumentierter Feiertagshistorie abgeleitete Kalenderreihe, kein externer taeglicher Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
