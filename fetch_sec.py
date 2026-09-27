@@ -23,6 +23,22 @@ mit einer älteren Filterversion verdichtet wurden, werden in Etappen neu verarb
 zusätzlich je Emittent und Tag dieselbe Wertgrenze.
 Nichts schätzen, nichts auffüllen: Tage ohne Einreichungen fehlen; Tage mit Einreichungen, aber ohne Kauf, sind 0.
 
+SEC-Erweiterung (27.9.2026, von Reto freigegeben «SEC-Erweiterung wie vorgeschlagen»): Firmenereignisse aus dem
+EDGAR-Gesamtverzeichnis (full-index/<Jahr>/QTR<n>/master.gz, ab 2001), je Einreichungstag gezählt:
+  8-K  Ad-hoc-Meldungen (nur Erstmeldung, keine 8-K/A)            je Sektor und Gesamtmarkt
+  S-1  Börsenprospekte, dazu F-1 (nur Erstmeldung)                 Gesamtmarkt
+  13D  Beteiligungsmeldungen über 5% mit Einflussabsicht           je Sektor und Gesamtmarkt
+       (SC 13D bzw. ab 2025 SCHEDULE 13D, keine Änderungen /A)
+Zwischenstand je Quartal: data/sec/edgar/<JJJJqN>.csv.gz (datum,form,ciks). Das laufende Quartal wird bei jedem Lauf
+neu geholt. Sektor über den SIC-Code (gleicher Zwischenspeicher). Bei 13D nennt das Verzeichnis Zielfirma und Melder
+unter derselben Datei; als Zielfirma gilt die einzige beteiligte Firma mit Sektor, die kein Finanzinvestor ist
+(SIC 6211, 6282, 6722, 6726, 6799 oder ohne SIC). Nachgeschlagen werden nur Firmen, die selbst 8-K oder S-1/F-1
+einreichen (operative Firmen); Melder ohne eigene 8-K (Personen, Fonds) brauchen keinen SIC-Code. Ist die Zielfirma
+nicht eindeutig, zählt die Meldung nur im Gesamtmarkt.
+Datum = Einreichungsdatum (Filings nach 17:30 ET tragen schon das Datum des nächsten Geschäftstags), verfuegbar_nach_tagen 1.
+Status «aktiv», sobald alle Quartale ab 2001 verarbeitet und alle SIC-Codes nachgeschlagen sind; eigener Status,
+unabhängig von den Insiderreihen.
+
 Zugang (ab 25.9.2026): User-Agent mit echter Kontaktadresse aus dem GitHub-Secret SEC_USER_AGENT (nie im Code, nie in
 Dateien). Höchstens 1 Abruf pro Sekunde für Quartalsdateien, 4 pro Sekunde für SIC-Abfragen (SEC-Grenze: 10).
 Sperrstatus laufübergreifend in data/sec/zugang.json: bei 403 Zähler, Zeitpunkte, Antwort, Retry-After, öffentliche IP
@@ -50,6 +66,10 @@ FILTER_VERSION = 2                            # Bereinigung offensichtlicher Ein
 MAX_PREIS = 10_000.0                          # USD je Aktie; darüber gilt der Wert als Eingabefehler
 MAX_WERT = 2e9                                # USD je Transaktion (und je Emittent und Tag); darüber Eingabefehler
 MIN_ABDECKUNG = 0.85                          # Anteil bereinigter Kaufwerte mit Sektor, ab dem die Reihen aktiv werden
+EDGAR_START = (2001, 1)
+EDGAR_FORMEN = {"8-K": "8k", "S-1": "s1", "F-1": "s1", "SC 13D": "13d", "SCHEDULE 13D": "13d"}
+FINANZINVESTOR = {"6211", "6282", "6722", "6726", "6799"}
+SEKTOREN = ["xlb", "xlc", "xle", "xlf", "xli", "xlk", "xlp", "xlre", "xlu", "xlv", "xly"]
 LETZTE = {}                                   # Kopfzeilen der letzten Antwort (Herkunft)
 man = {"erzeugt_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "reihen": {}, "hinweise": []}
 
@@ -304,6 +324,94 @@ def reihen_schreiben(cache, fertig):
                 "status": status}
     return status, abdeckung
 
+# ---------------------------------------------------------------- 4. EDGAR-Firmenereignisse (8-K, S-1, 13D)
+def edgar_quartale():
+    heute = datetime.now(timezone.utc).date()
+    y, q = EDGAR_START
+    jetzt_q = (heute.year, (heute.month - 1) // 3 + 1)
+    while (y, q) <= jetzt_q:
+        yield y, q, (y, q) == jetzt_q
+        y, q = (y + 1, 1) if q == 4 else (y, q + 1)
+
+def edgar_quartal(y, q, laufend):
+    ziel = f"{OUT}/edgar/{y}q{q}.csv.gz"
+    if os.path.exists(ziel) and not laufend:
+        return "vorhanden"
+    url = f"https://www.sec.gov/Archives/edgar/full-index/{y}/QTR{q}/master.gz"
+    try:
+        raw = get(url)
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return "nicht publiziert"
+        raise
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
+    je_datei = {}
+    for zeile in raw.decode("latin-1").splitlines():
+        t = zeile.split("|")
+        if len(t) != 5 or not t[0].strip().isdigit():
+            continue
+        form = EDGAR_FORMEN.get(t[2].strip().upper())
+        d = datum(t[3])
+        if not form or not d:
+            continue
+        e = je_datei.setdefault(t[4].strip(), [d, form, set()])
+        e[2].add(t[0].strip().lstrip("0"))
+    rows = sorted([d, f, ";".join(sorted(c))] for d, f, c in je_datei.values())
+    schreibe(ziel, ["datum", "form", "ciks"], rows)
+    HERKUNFT[f"edgar_{y}q{q}"] = {"url": url, "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(),
+                                  "abruf_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                  "meldungen": len(rows)}
+    return f"{len(rows)} Meldungen (8-K, S-1/F-1, 13D)"
+
+def edgar_ciks():
+    """Operative Firmen = Melder von 8-K oder S-1/F-1 (nur für diese wird der SIC-Code nachgeschlagen)."""
+    ciks = set()
+    for f in sorted(os.listdir(f"{OUT}/edgar")):
+        for r in lies(f"{OUT}/edgar/{f}"):
+            if r["form"] in ("8k", "s1"):
+                ciks |= set(r["ciks"].split(";"))
+    return ciks - {""}
+
+def zielfirma(ciks, cache, operativ):
+    """Sektor einer Meldung: bei 8-K und S-1 der Melder, bei 13D die einzige operative Nicht-Finanzinvestor-Firma."""
+    kand = {sektor(cache.get(c, "")) for c in ciks if c in operativ and cache.get(c, "") not in FINANZINVESTOR}
+    kand.discard(None)
+    return kand.pop() if len(kand) == 1 else None
+
+def edgar_reihen(cache, fertig):
+    import collections
+    n = collections.Counter(); tage = set(); zugeordnet = collections.Counter(); gesamt = collections.Counter()
+    operativ = edgar_ciks()
+    for f in sorted(os.listdir(f"{OUT}/edgar")):
+        for r in lies(f"{OUT}/edgar/{f}"):
+            d, form = r["datum"], r["form"]; tage.add(d)
+            s = zielfirma(r["ciks"].split(";"), cache, operativ)
+            n[("markt", form, d)] += 1; gesamt[form] += 1
+            if s:
+                n[(s, form, d)] += 1; zugeordnet[form] += 1
+    status = "aktiv" if fertig else "aufbau"
+    tage = sorted(tage)
+    if not tage:
+        return "leer"
+    beschr = {"8k": "Ad-hoc-Meldungen 8-K (Erstmeldung)", "s1": "Börsenprospekte S-1 und F-1 (Erstmeldung)",
+              "13d": "Beteiligungsmeldungen Schedule 13D (Erstmeldung)"}
+    for key in ["markt"] + SEKTOREN:
+        for form in ("8k", "13d", "s1"):
+            if form == "s1" and key != "markt":
+                continue
+            rows = [[d, n.get((key, form, d), 0)] for d in tage]
+            datei = f"{OUT}/edgar_reihen/{key}_{form}.csv.gz"
+            schreibe(datei, ["datum", "wert"], rows)
+            man["reihen"][f"sec_edgar:{key}_{form}"] = {
+                "datei": datei, "erste": rows[0][0], "letzte": rows[-1][0], "zeilen": len(rows),
+                "einheit": "Anzahl Meldungen", "beschreibung": f"{beschr[form]} je Einreichungstag, {'Gesamtmarkt' if key == 'markt' else 'Sektor ' + key}",
+                "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/", "verdichtung": "Anzahl je Einreichungstag",
+                "verfuegbar_nach_tagen": 1, "revidiert": False, "status": status}
+    man["edgar"] = {"status": status, "anteil_mit_sektor": {f: round(zugeordnet[f] / gesamt[f], 4) for f in gesamt if gesamt[f]},
+                    "meldungen": dict(gesamt), "tage": len(tage)}
+    return status
+
 # ---------------------------------------------------------------- Zugang, Herkunft, Revisionen
 def jetzt():
     return datetime.now(timezone.utc)
@@ -361,7 +469,7 @@ def revisionen_pruefen():
     monat = jetzt().strftime("%Y-%m")
     if ZUG.get("revision_monat") == monat:
         return
-    for key in sorted(HERKUNFT)[-8:]:
+    for key in sorted(k for k in HERKUNFT if not k.startswith("edgar_"))[-8:]:
         h = HERKUNFT[key]
         try:
             time.sleep(PAUSE)
@@ -423,6 +531,33 @@ if __name__ == "__main__":
         if ciks:
             status, abd = reihen_schreiben(cache, fertig)
             log(f"Status {status}, Abdeckung Kaufwert mit Sektor {abd:.1%}")
+    except Gesperrt as e:
+        sperre_melden(e)
+    except Exception as e:
+        man["fehler"] = (man.get("fehler", "") + " | " + str(e)[:300]).strip(" |"); log(f"Fehler: {e}")
+    # EDGAR-Firmenereignisse: erst nach den Insiderreihen, mit dem restlichen Zeitbudget
+    try:
+        os.makedirs(f"{OUT}/edgar", exist_ok=True)
+        e_fertig = versuch and ZUG.get("status") == "ok"
+        for y, q, laufend in (edgar_quartale() if e_fertig else []):
+            if zeit_um():
+                e_fertig = False; man["hinweise"].append("EDGAR: weitere Quartale im nächsten Lauf"); break
+            res = edgar_quartal(y, q, laufend)
+            if res != "vorhanden":
+                log(f"EDGAR {y}q{q}: {res}")
+            if res == "nicht publiziert" and not laufend:
+                e_fertig = False; man["hinweise"].append(f"EDGAR {y}q{q}: Verzeichnis fehlt")
+        e_ciks = edgar_ciks()
+        if e_ciks:
+            if ZUG.get("status") == "ok" and not zeit_um():
+                cache, e_offen = sic_nachfuehren(e_ciks)
+            else:
+                cache = json.load(open(f"{OUT}/sic_cache.json")) if os.path.exists(f"{OUT}/sic_cache.json") else {}
+                e_offen = len([c for c in e_ciks if c not in cache])
+            if e_offen:
+                e_fertig = False; man["hinweise"].append(f"EDGAR-SIC: {e_offen} Firmen noch offen")
+            st = edgar_reihen(cache, e_fertig)
+            log(f"EDGAR Status {st}, {man['edgar']}")
     except Gesperrt as e:
         sperre_melden(e)
     except Exception as e:
