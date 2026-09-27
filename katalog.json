@@ -1592,11 +1592,12 @@
   "url": "https://www.federalreserve.gov/releases/h41/current/",
   "domain": "federalreserve.gov",
   "bereich": "Staat",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Regel L1 (Beinahe-Treffer): treasury_tga_tga_d5 sprung_auf -> XLE bleibt seit S0004 (t 4.39) durchgehend unter der Huerde, zuletzt S0011 t 3.549. Der TGA-Bestand wird bisher nur ueber die taegliche Kassenrechnung des Finanzministeriums (fiscaldata.treasury.gov) gemessen. Die woechentliche Fed-H.4.1-Bilanz weist denselben Bestand unter Passiva ('U.S. Treasury, General Account') separat und methodisch unabhaengig (Notenbank-Bilanzierung statt Kassenrechnung) aus.",
-  "grund": "Regel L1: fuehrt NICHT zu einer Variante auf denselben Daten, sondern zu diesem Katalogeintrag fuer eine unabhaengige Quelle desselben Mechanismus. Oeffentlich, woechentlich, ohne Login seit 2002 abrufbar (H.4.1-Archiv); geringere Frequenz (woechentlich statt taeglich) verkleinert n, ist aber ein echter Institutions-Wechsel und damit eine echte Replikationsquelle, nicht nur ein neuer Filter auf denselben Daten.",
-  "aufgenommen_utc": "2026-09-27T09:41:32Z"
+  "grund": "Geprueft 2026-09-27T12:14:28Z: Fed H.4.1 ('Factors Affecting Reserve Balances', datadownload.federalreserve.gov, Serie fuer 'U.S. Treasury, General Account') wird nur woechentlich veroeffentlicht (Stichtag Mittwoch, Release jeden Donnerstag) -- keine taeglichen Zwischenwerte im DDP-Export. K1 verletzt (Median-Abstand ca. 7 Kalendertage statt hoechstens 3). Kein Umgehungsversuch (kein Wechsel auf feinere inoffizielle Quelle). Der taegliche TGA-Bestand ist bereits ueber treasury_tga (Daily Treasury Statement, fiscaldata.treasury.gov) aktiv abgedeckt; eine institutionell unabhaengige Zweitquelle waere wuenschenswert (Regel L1), aber H.4.1 liefert dafuer keine ausreichende Frequenz. Status abgelehnt, K1.",
+  "aufgenommen_utc": "2026-09-27T09:41:32Z",
+  "geprueft_utc": "2026-09-27T12:14:28Z"
  },
  {
   "id": "noaa_oni_el_nino",
@@ -1604,11 +1605,12 @@
   "url": "https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php",
   "domain": "cpc.ncep.noaa.gov",
   "bereich": "Klimazyklen",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Der Oceanic Nino Index misst monatlich El-Nino/La-Nina-Anomalien im tropischen Pazifik; grosse Auspraegungen verschieben Erwartungen zu globalen Agrar- und Energienachfragemustern (Duerre/Ueberflutung in wichtigen Anbaugebieten, milde/strenge Winter) und koennen DBA, USO und UNG in den Tagen nach der monatlichen Aktualisierung gegenueber dem Weltindex kurzfristig bewegen.",
-  "grund": "Neuer Bereich (Klimazyklen), noch nicht im Katalog vertreten. Amtliche NOAA-Quelle, oeffentlich ohne Login, monatliche Tabelle seit 1950 (weit vor 1990). K3-Risiko gering (US-Bundesbehoerde); K1 (Frequenz nur monatlich) begrenzt die Kandidatenzahl, daher normale statt hohe Prioritaet.",
-  "aufgenommen_utc": "2026-09-27T09:41:32Z"
+  "grund": "Geprueft 2026-09-27T12:14:28Z: Oceanic Nino Index (NOAA CPC, origin.cpc.ncep.noaa.gov) wird nur als gleitendes 3-Monats-Mittel und monatlich veroeffentlicht (12 Werte/Jahr). K1 verletzt (Median-Abstand ca. 30 Kalendertage statt hoechstens 3); keine taeglichere Verdichtungsquelle amtlich verfuegbar (der Index selbst ist die monatliche Rohgroesse, keine feinere Grundlage zum Verdichten vorhanden). Status abgelehnt, K1.",
+  "aufgenommen_utc": "2026-09-27T09:41:32Z",
+  "geprueft_utc": "2026-09-27T12:14:28Z"
  },
  {
   "id": "brasilien_selic_entscheide",
@@ -1688,11 +1690,12 @@
   "url": "https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/monetary-policy-assessment",
   "domain": "snb.ch",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "SNB-Zinsentscheide (viermal jaehrlich) koennen EWL (Schweiz-ETF) und CHF-Kreuze kurzfristig um den Entscheidtermin bewegen, unabhaengig vom laufenden SARON-Stand; ergaenzt die bereits aktiven Entscheidtage-Reihen fuer FOMC/EZB/BoE um die SNB.",
-  "grund": "Amtliche SNB-Terminliste oeffentlich seit rund 2000, deterministische Ereignistage wie bei bestehenden leitzins_aenderungstage-Reihen; normale Prioritaet, da direktes Schweiz-ETF-Ziel (EWL) vorhanden und Mechanismus durch bestehende Reihen bereits belegt ist.",
-  "aufgenommen_utc": "2026-09-27T09:41:32Z"
+  "grund": "Geprueft 2026-09-27T12:14:28Z: data.snb.ch Cube snbgwdzid, Dimension LZ (SNB-Leitzins) liefert eine echte taegliche Reihe (Geschaeftstage) mit sauberen Stufenwechseln an den Entscheidtagen -- aber erst ab 2022-01-03 (Einfuehrung des SNB-Leitzins-Regimes). Vor 2022 fuehrte die SNB ein Zielband (UG1/OG1), das im Cube snboffzisa nur monatlich (Format JJJJ-MM) vorliegt, keine taegliche Grundlage zum Ableiten von Entscheidtagen vor 2022. K2 verletzt (erster taeglicher Wert 2022-01-03, verlangt spaetestens 31.12.2015). Alternative waere eine reine Kalenderliste der amtlichen SNB-Lagebeurteilungstermine (wie bei fomc_sitzung/kalender_ereignisse), aber ohne amtliche, maschinenlesbare Terminarchiv-Quelle seit 2000 im Rahmen dieses Laufs gefunden; bleibt Idee fuer einen spaeteren Lauf mit gezielter Terminarchiv-Recherche. Status abgelehnt, K2 (fuer den Cube-Ansatz).",
+  "aufgenommen_utc": "2026-09-27T09:41:32Z",
+  "geprueft_utc": "2026-09-27T12:14:28Z"
  },
  {
   "id": "taiwan_cbc_leitzins_entscheide",
