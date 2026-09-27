@@ -12,8 +12,15 @@ Ablauf je Lauf (in Etappen, Zeitbudget SEC_BUDGET_MIN):
  2. SIC-Code je Emittent nachschlagen (data.sec.gov/submissions), Zwischenspeicher data/sec/sic_cache.json.
  3. Je Sektor (SPDR-Sektor-ETF) und Gesamtmarkt Tagesreihen schreiben, Vertrag «datum,wert»:
     data/sec/insider/<sektor>_<groesse>.csv.gz, Manifest data/sec/manifest_sec.json.
-    Status «aktiv» erst, wenn alle Quartale verarbeitet sind und mindestens 95% der Kaufwerte einem Sektor
-    zugeordnet werden konnten; vorher «aufbau» (die Suchmaschine liest nur «aktiv»).
+    Status «aktiv» erst, wenn alle Quartale mit der geltenden Bereinigung verarbeitet sind, alle SIC-Codes
+    nachgeschlagen sind und mindestens 85% der (bereinigten) Kaufwerte einem Sektor zugeordnet werden konnten;
+    vorher «aufbau» (die Suchmaschine liest nur «aktiv»).
+Bereinigung (Filterversion 2, 27.9.2026, von Reto freigegeben «SEC-Korrektur wie vorgeschlagen»): Einzelne Formulare
+enthalten Eingabefehler (z.B. Preis und Stückzahl vertauscht, Werte bis 1e16 USD). Eine Transaktion mit Preis über
+MAX_PREIS USD je Aktie oder Wert über MAX_WERT USD zählt weiter als Kauf bzw. Verkauf (Anzahl Insider), ihr Wert aber
+nicht; Anzahl und Summe der ausgeschlossenen Werte stehen je Quartal in herkunft.json und im Manifest. Quartale, die
+mit einer älteren Filterversion verdichtet wurden, werden in Etappen neu verarbeitet (älteste zuerst); bis dahin gilt
+zusätzlich je Emittent und Tag dieselbe Wertgrenze.
 Nichts schätzen, nichts auffüllen: Tage ohne Einreichungen fehlen; Tage mit Einreichungen, aber ohne Kauf, sind 0.
 
 Zugang (ab 25.9.2026): User-Agent mit echter Kontaktadresse aus dem GitHub-Secret SEC_USER_AGENT (nie im Code, nie in
@@ -39,6 +46,10 @@ BUDGET_MIN = float(os.environ.get("SEC_BUDGET_MIN", "15"))
 ERSTES_QUARTAL = (2006, 1)
 PAUSE = 1.0                                   # Quartalsdateien: höchstens 1 Abruf pro Sekunde
 PAUSE_SIC = 0.25                              # SIC-Abfragen: höchstens 4 pro Sekunde (SEC-Grenze 10)
+FILTER_VERSION = 2                            # Bereinigung offensichtlicher Eingabefehler (siehe oben)
+MAX_PREIS = 10_000.0                          # USD je Aktie; darüber gilt der Wert als Eingabefehler
+MAX_WERT = 2e9                                # USD je Transaktion (und je Emittent und Tag); darüber Eingabefehler
+MIN_ABDECKUNG = 0.85                          # Anteil bereinigter Kaufwerte mit Sektor, ab dem die Reihen aktiv werden
 LETZTE = {}                                   # Kopfzeilen der letzten Antwort (Herkunft)
 man = {"erzeugt_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "reihen": {}, "hinweise": []}
 
@@ -158,7 +169,7 @@ def lies(path):
 # ---------------------------------------------------------------- 1. Quartale verdichten
 def quartal_verarbeiten(y, q):
     ziel = f"{OUT}/zwischen/{y}q{q}.csv.gz"
-    if os.path.exists(ziel):
+    if os.path.exists(ziel) and HERKUNFT.get(f"{y}q{q}", {}).get("filter") == FILTER_VERSION:
         return "vorhanden"
     raw, gesperrt, fehlt = None, None, 0
     for pfad in PFADE:
@@ -195,13 +206,17 @@ def quartal_verarbeiten(y, q):
     for r in tsv(zf, "REPORTINGOWNER"):
         eigner.setdefault(r["ACCESSION_NUMBER"], set()).add((r.get("RPTOWNERCIK") or "").strip())
     agg = {}   # (datum, cik) -> [kaeufer-set, kaufwert, verkaeufer-set, verkaufwert]
+    aus_n, aus_wert = 0, 0.0
     for r in tsv(zf, "NONDERIV_TRANS"):
         acc = r.get("ACCESSION_NUMBER")
         if acc not in sub:
             continue
         code = (r.get("TRANS_CODE") or "").strip().upper()
         ad = (r.get("TRANS_ACQUIRED_DISP_CD") or "").strip().upper()
-        wert = (zahl(r.get("TRANS_SHARES")) or 0) * (zahl(r.get("TRANS_PRICEPERSHARE")) or 0)
+        preis = zahl(r.get("TRANS_PRICEPERSHARE")) or 0
+        wert = (zahl(r.get("TRANS_SHARES")) or 0) * preis
+        if (code in ("P", "S")) and (abs(preis) > MAX_PREIS or abs(wert) > MAX_WERT):
+            aus_n += 1; aus_wert += abs(wert); wert = 0.0          # Insider zählt, der Wert nicht (Eingabefehler)
         a = agg.setdefault(sub[acc], [set(), 0.0, set(), 0.0])
         wer = {(acc, o) for o in eigner.get(acc, {"?"})}
         if code == "P" and ad == "A":
@@ -214,7 +229,8 @@ def quartal_verarbeiten(y, q):
     mit = {d for d, _ in agg}
     rows += [[d, "-", 0, 0, 0, 0] for d in tage if d not in mit]
     schreibe(ziel, ["datum", "cik", "kaeufer", "kaufwert", "verkaeufer", "verkaufwert"], sorted(rows))
-    return f"{len(sub)} Formular-4-Einreichungen, {len(agg)} Emittent-Tage"
+    HERKUNFT[f"{y}q{q}"].update({"filter": FILTER_VERSION, "ausgeschlossen_n": aus_n, "ausgeschlossen_wert_usd": round(aus_wert, 2)})
+    return f"{len(sub)} Formular-4-Einreichungen, {len(agg)} Emittent-Tage, {aus_n} Werte als Eingabefehler ausgeschlossen"
 
 # ---------------------------------------------------------------- 2. SIC nachschlagen
 def sic_nachfuehren(ciks):
@@ -251,15 +267,26 @@ def reihen_schreiben(cache, fertig):
             if r["cik"] == "-":
                 continue
             s = sektor(cache.get(r["cik"], ""))
-            kv = float(r["kaufwert"]); wert_total += kv
+            kv, vv = float(r["kaufwert"]), float(r["verkaufwert"])
+            kv = 0.0 if abs(kv) > MAX_WERT else kv                  # Übergang: Grenze auch je Emittent und Tag
+            vv = 0.0 if abs(vv) > MAX_WERT else vv
+            wert_total += kv
             for key in (["markt"] + ([s] if s else [])):
                 a = summe[(key, d)]
-                a[0] += int(r["kaeufer"]); a[1] += kv; a[2] += int(r["verkaeufer"]); a[3] += float(r["verkaufwert"])
+                a[0] += int(r["kaeufer"]); a[1] += kv; a[2] += int(r["verkaeufer"]); a[3] += vv
             if s:
                 wert_zugeordnet += kv
     abdeckung = wert_zugeordnet / wert_total if wert_total else 0.0
     man["abdeckung_kaufwert_mit_sektor"] = round(abdeckung, 4)
-    status = "aktiv" if (fertig and abdeckung >= 0.95) else "aufbau"
+    alle = [f"{y}q{q}" for y, q in quartale() if os.path.exists(f"{OUT}/zwischen/{y}q{q}.csv.gz")]
+    bereinigt = [k for k in alle if HERKUNFT.get(k, {}).get("filter") == FILTER_VERSION]
+    man["bereinigung"] = {"filter_version": FILTER_VERSION, "max_preis_usd": MAX_PREIS, "max_wert_usd": MAX_WERT,
+                          "quartale_bereinigt": len(bereinigt), "quartale_gesamt": len(alle),
+                          "ausgeschlossen_n": sum(HERKUNFT[k].get("ausgeschlossen_n", 0) for k in bereinigt),
+                          "ausgeschlossen_wert_usd": round(sum(HERKUNFT[k].get("ausgeschlossen_wert_usd", 0) for k in bereinigt), 2),
+                          "min_abdeckung": MIN_ABDECKUNG}
+    fertig = fertig and len(bereinigt) == len(alle)
+    status = "aktiv" if (fertig and abdeckung >= MIN_ABDECKUNG) else "aufbau"
     tage = sorted(tage)
     for key in ["markt", "xlb", "xlc", "xle", "xlf", "xli", "xlk", "xlp", "xlre", "xlu", "xlv", "xly"]:
         for i, groesse in enumerate(["kaeufer", "kaufwert_usd", "verkaeufer", "verkaufwert_usd"]):
