@@ -1,0 +1,11 @@
+{
+  "zulassungen": {
+    "beschreibung": "Taegliche Anzahl neu zugelassener Wirkstoffe und Biologika in den USA (FDA-Erstzulassungen, ORIG-Submissions mit Status AP, nur NDA/BLA, keine Generika-ANDA), Datum = FDA-Entscheiddatum (submission_status_date)",
+    "einheit": "Anzahl Zulassungen",
+    "publikation": "taeglich, mit kurzer Verzoegerung durch den Aktualisierungszyklus von openFDA drugsfda (siehe Feld meta.last_updated der API-Antwort, beobachtet ca. 3-10 Tage)",
+    "quelle_url": "https://api.fda.gov/drug/drugsfda.json",
+    "revidiert": false,
+    "verdichtung": "Summe der Erstzulassungen je Kalendertag (submission_status_date)",
+    "verfuegbar_nach_tagen": 10
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "arzneimittel": {
+    "beschreibung": "Taegliche Anzahl von FDA-Arzneimittelrueckrufen (recall_initiation_date), Gesundheitssektor",
+    "einheit": "Anzahl Rueckrufe",
+    "publikation": "woechentlich (FDA Enforcement Reports werden wochenweise veroeffentlicht; recall_initiation_date ist das taegliche Ereignisdatum, siehe https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts)",
+    "quelle_url": "https://api.fda.gov/drug/enforcement.json",
+    "revidiert": false,
+    "verdichtung": "Summe der Rueckrufmeldungen je Kalendertag (recall_initiation_date)",
+    "verfuegbar_nach_tagen": 8
+  },
+  "lebensmittel": {
+    "beschreibung": "Taegliche Anzahl von FDA-Lebensmittelrueckrufen (recall_initiation_date), Basiskonsumsektor",
+    "einheit": "Anzahl Rueckrufe",
+    "publikation": "woechentlich (FDA Enforcement Reports werden wochenweise veroeffentlicht; recall_initiation_date ist das taegliche Ereignisdatum, siehe https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts)",
+    "quelle_url": "https://api.fda.gov/food/enforcement.json",
+    "revidiert": false,
+    "verdichtung": "Summe der Rueckrufmeldungen je Kalendertag (recall_initiation_date)",
+    "verfuegbar_nach_tagen": 8
+  },
+  "medizinprodukte": {
+    "beschreibung": "Taegliche Anzahl von FDA-Medizinprodukterueckrufen (recall_initiation_date), Gesundheitssektor",
+    "einheit": "Anzahl Rueckrufe",
+    "publikation": "woechentlich (FDA Enforcement Reports werden wochenweise veroeffentlicht; recall_initiation_date ist das taegliche Ereignisdatum, siehe https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts)",
+    "quelle_url": "https://api.fda.gov/device/enforcement.json",
+    "revidiert": false,
+    "verdichtung": "Summe der Rueckrufmeldungen je Kalendertag (recall_initiation_date)",
+    "verfuegbar_nach_tagen": 8
+  }
+}
