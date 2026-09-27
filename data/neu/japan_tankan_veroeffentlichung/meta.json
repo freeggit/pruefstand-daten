@@ -1,0 +1,11 @@
+{
+  "tankan_veroeffentlichung": {
+    "beschreibung": "1 am Veroeffentlichungstag des vierteljaehrlichen BoJ-Tankan-Berichts (Kurzbericht zur Wirtschaftslage, seit 1957 erhoben), sonst 0, fuer jeden Kalendertag ab 2004-04-01 bis heute. Termine stammen aus den amtlichen Archivseiten (Spalte 'Date', tatsaechliches Publikationsdatum, nicht der im Dateinamen kodierte Erhebungsmonat). Der Archivordner '2001' enthaelt trotz seiner Bezeichnung 'from 2001 to 2005' nur Eintraege ab 2004-04-01; eine durchsuchbare Terminliste fuer 2001-2003 oder frueher (Bericht existiert seit 1957) wurde nicht gefunden, daher keine laengere Historie belegt (Zusatz 5, keine Termine erfinden).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Veroeffentlichungsdatum wird von der BoJ im Voraus rollierend bekanntgegeben, Reihe wird taeglich fortgeschrieben)",
+    "quelle_url": "https://www.boj.or.jp/en/statistics/tk/gaiyo/index.htm",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe aus amtlichem Veroeffentlichungsarchiv)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

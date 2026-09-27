@@ -1416,15 +1416,27 @@
   {
     "id": "japan_tankan_veroeffentlichung",
     "name": "BoJ Tankan-Bericht, Veroeffentlichungstage seit 1957",
-    "url": "https://www.boj.or.jp/en/statistics/tk/index.htm",
+    "url": "https://www.boj.or.jp/en/statistics/tk/gaiyo/index.htm",
     "domain": "boj.or.jp",
     "bereich": "Kalender",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "Der quartalsweise Tankan-Bericht ist eine der aeltesten und meistbeachteten japanischen Konjunkturumfragen; Ueberraschungen bewegen JPY- und Japan-nahe Ziele (EWJ) kurzfristig. Sehr lange Ereignishistorie seit 1957 (deutlich vor 1990, Zusatz 4 Schwerpunkt).",
-    "grund": "Amtlicher BoJ-Veroeffentlichungskalender oeffentlich, reines Ereignisdatum vierteljaehrlich. | Rechercheergebnis 2026-09-26T20:14:08Z: Die BoJ veroeffentlicht die Tankan-Termine des jeweils naechsten Jahres nur rollierend (jeweils Ende Juni/Dezember fuer die kommenden 12 Monate, boj.or.jp/en/statistics/tk/index.htm), stellt aber keine durchsuchbare vollstaendige Liste aller historischen Veroeffentlichungstermine seit 1957 oder auch nur seit 1990 bereit; anders als bei opex_verfall/fomc_sitzung gibt es keine deterministische Tag-Regel (kein fester Wochentag/Monatstag), aus der sich die Termine rueckwirkend berechnen liessen. Ohne primaerquellenfeste Terminliste keine Reihe angelegt (K4/Zusatz 5: keine Termine erfinden). Naechster Schritt: pruefen, ob boj.or.jp ein Archiv vergangener Pressemitteilungen mit Datumsangabe fuehrt, aus dem sich eine Teilhistorie (z.B. ab den 2000er Jahren) belegen liesse.",
+    "grund": "Amtlicher BoJ-Veroeffentlichungskalender oeffentlich, reines Ereignisdatum vierteljaehrlich. | Rechercheergebnis 2026-09-26T20:14:08Z: Die BoJ veroeffentlicht die Tankan-Termine des jeweils naechsten Jahres nur rollierend (jeweils Ende Juni/Dezember fuer die kommenden 12 Monate, boj.or.jp/en/statistics/tk/index.htm), stellt aber keine durchsuchbare vollstaendige Liste aller historischen Veroeffentlichungstermine seit 1957 oder auch nur seit 1990 bereit; anders als bei opex_verfall/fomc_sitzung gibt es keine deterministische Tag-Regel (kein fester Wochentag/Monatstag), aus der sich die Termine rueckwirkend berechnen liessen. Ohne primaerquellenfeste Terminliste keine Reihe angelegt (K4/Zusatz 5: keine Termine erfinden). Naechster Schritt: pruefen, ob boj.or.jp ein Archiv vergangener Pressemitteilungen mit Datumsangabe fuehrt, aus dem sich eine Teilhistorie (z.B. ab den 2000er Jahren) belegen liesse. | Umsetzung 2026-09-27T04:15:56Z: K1-K7 gepruft und erfuellt. K1 taeglich (jede Kalendertagzeile, Median-Abstand 1 Tag). K2 Historie ab 2004-04-01 (8215 Werte), vor 31.12.2015. K3 offen: amtliche BoJ-Archivseiten (boj.or.jp/en/statistics/tk/gaiyo/<jahr>/index.htm fuer 2001,2006,2011,2016,2021,2026), kein Login/Schluessel, keine Sperre (HTTP 200). K4 punktgenau: abgeschlossene, amtlich archivierte Veroeffentlichungstage werden nie revidiert. K5 laufend: Skript berechnet bei jedem Lauf bis zum aktuellen Tag; naechste erwartete Veroeffentlichung Oktober 2026 (noch nicht im Archiv gelistet, keine Zukunftszeile erfunden). K6 neu: keine BoJ-Tankan-Terminreihe im bestehenden Spiegel. K7 Umfang: unter 5 KB komprimiert, Abruf von 6 Archivseiten unter 5 Sekunden. Datumsspalte 'Date' der Archivtabellen verwendet (tatsaechliches Publikationsdatum), nicht der im Dateinamen kodierte Erhebungsmonat (z.B. tka2606.pdf = Juni-2026-Umfrage, veroeffentlicht 2026-07-01). Pruefung: 90 Veroeffentlichungstage von 8215 Tagen (2004-04-01 bis 2026-09-27), 4 pro Jahr wie erwartet (vierteljaehrliche Erhebung), Anteil gleicher Folgewerte 0.9782 (bei binaerer 0/1-Ereignisreihe erwartungsgemaess hoch, siehe kalender_ereignisse-Begruendung). Archivordner '2001' enthaelt trotz Bezeichnung 'from 2001 to 2005' nur Eintraege ab 2004-04-01 (vermutlich Site-Umstrukturierung); keine durchsuchbare Terminliste fuer 2001-2003 oder die Zeit vor 2001 (Bericht existiert seit 1957) gefunden, daher keine laengere Historie belegt (Zusatz 5: keine Termine erfinden).",
     "aufgenommen_utc": "2026-09-26T09:40:47Z",
-    "geprueft_utc": "2026-09-26T20:14:08Z"
+    "geprueft_utc": "2026-09-27T04:15:56Z",
+    "reihen": [
+      {
+        "reihe": "tankan_veroeffentlichung",
+        "zeilen": 8215,
+        "erste": "2004-04-01",
+        "letzte": "2026-09-27",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9782,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ]
   },
   {
     "id": "opec_ministertreffen_tage",
@@ -1486,11 +1498,12 @@
     "url": "https://www.binance.com/en/futures/funding-history/perpetual/real-time-funding-rate",
     "domain": "binance.com",
     "bereich": "Krypto",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Die Funding Rate misst das Ungleichgewicht gehebelter Long/Short-Positionen bei Bitcoin-Perpetual-Futures; extreme Werte gehen in der On-Chain-/Derivate-Literatur oft kurzfristigen Korrekturen voraus. Ergaenzt bitcoin_onchain (Netzwerkaktivitaet) um ein Positionierungsmass.",
-    "grund": "Oeffentliche, schluessellose Markt-API (Binance Futures), aber erst seit Einfuehrung von Perpetuals (ca. 2019) verfuegbar -- kurze Historie, dennoch als aktives Marktsignal interessant.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Oeffentliche, schluessellose Markt-API (Binance Futures), aber erst seit Einfuehrung von Perpetuals (ca. 2019) verfuegbar -- kurze Historie, dennoch als aktives Marktsignal interessant. | Geprueft 2026-09-27T04:15:56Z: Binance-Futures-API (fapi.binance.com/fapi/v1/fundingRate) antwortet aus dieser Umgebung mit HTTP 451 ('Service unavailable from a restricted location'). Kein Umgehungsversuch (keine Proxies, kein Kennungswechsel); Status fehler, naechster Lauf erneut versuchen (evtl. andere IP-Zuordnung).",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-27T04:15:56Z"
   },
   {
     "id": "eu_boersenfeiertage",
@@ -1535,11 +1548,12 @@
     "url": "https://www.opec.org/opec_web/en/data_graphs/40.htm",
     "domain": "opec.org",
     "bereich": "Rohstoffe",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Regel L1 (Beinahe-Treffer): DCOILWTICO_d1 (tief) -> XLV, S0009/S0010 wiederholt mit t 3.5-4.07 unter der Huerde (5.24), aber unklarer oekonomischer Mechanismus (Oelpreisrueckgang -> Gesundheitssektor-Mehrrendite). Der OPEC-Referenzkorbpreis misst denselben Rohstoffmechanismus (globaler Rohoelpreis) unabhaengig von FRED/WTI-Notierung und Handelsplatz; pruefend, ob der Befund quellenunabhaengig repliziert oder nur ein Artefakt der WTI-Reihe ist.",
-    "grund": "Regel L1: fuehrt NICHT zu einer Variante auf denselben Daten (kein neuer Horizont/Ziel/Schwelle), sondern zu diesem Katalogeintrag fuer eine unabhaengige Quelle desselben Mechanismus (Replikation von DCOILWTICO_d1->XLV, t 4.066 h5 / 3.542 h1, S0010). Oekonomische Plausibilitaet der Ziel-Branche (Gesundheit) bleibt fraglich; bei Replikationsversuch mitpruefen.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Regel L1: fuehrt NICHT zu einer Variante auf denselben Daten (kein neuer Horizont/Ziel/Schwelle), sondern zu diesem Katalogeintrag fuer eine unabhaengige Quelle desselben Mechanismus (Replikation von DCOILWTICO_d1->XLV, t 4.066 h5 / 3.542 h1, S0010). Oekonomische Plausibilitaet der Ziel-Branche (Gesundheit) bleibt fraglich; bei Replikationsversuch mitpruefen. | Geprueft 2026-09-27T04:15:56Z: opec.org/opec_web/en/data_graphs/40.htm antwortet mit HTTP 403 (dieselbe Cloudflare-Sperre wie bereits bei opec_ministertreffen_tage dokumentiert). K3 verletzt (keine oeffentlich abrufbare Quelle ohne Sperrenumgehung); kein Umgehungsversuch (Proxy/Spiegel verboten).",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-27T04:15:56Z"
   },
   {
     "id": "fred_treasury_lang",
