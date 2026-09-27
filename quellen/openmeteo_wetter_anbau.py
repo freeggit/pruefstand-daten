@@ -50,8 +50,9 @@ def fetch(lat, lon, end_date):
         "&daily=precipitation_sum&timezone=UTC" % (lat, lon, START, end_date)
     )
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    # Retry mit Backoff bei 429 (Rate-Limit auf geteilter IP), kein Umgehen
-    # einer Sperre, nur Abwarten wie von der API erwartet.
+    # Retry mit Backoff bei 429 (Rate-Limit auf geteilter IP) und bei
+    # vorübergehenden Netzwerk-/TLS-Zeitüberschreitungen (URLError/Timeout);
+    # kein Umgehen einer Sperre, nur Abwarten wie von der API erwartet.
     verzoegerungen = (5, 15, 30)
     letzter_fehler = None
     for i, wartezeit in enumerate((0,) + verzoegerungen):
@@ -64,6 +65,8 @@ def fetch(lat, lon, end_date):
             letzter_fehler = e
             if e.code != 429:
                 raise
+        except urllib.error.URLError as e:
+            letzter_fehler = e
     raise letzter_fehler
 
 
