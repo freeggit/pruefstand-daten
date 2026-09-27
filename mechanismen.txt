@@ -1,0 +1,17 @@
+# Mechanismus-Indizes (V3.9, E20, Methode M4). Vorab festgelegt am 27.9.2026, vor jeder Auswertung der Indizes.
+# Je Zeile: name;komponenten;mechanismus
+# komponente = +reihe oder -reihe (Vorzeichen so, dass ein hoher Index «mehr» des Mechanismus bedeutet).
+# reihe = fred:<SERIE>, neu:<quelle>:<reihe> (Scout, nur status aktiv) oder sec:<quelle>:<reihe> (SEC, nur status aktiv).
+# Index = Mittel der gleitenden 252-Tage-z-Werte der Komponenten (nur Vergangenheit), wenn mindestens die Hälfte
+# der Komponenten (mindestens 2) einen Wert hat. Verfügbarkeit: strengste Frist der Komponenten.
+# Fehlt eine Komponente im Spiegel, wird sie übersprungen. Änderungen nur auf Entscheid von Reto, nie nach Sicht auf Ergebnisse.
+liquiditaet_knapp;-fred:WALCL,+neu:treasury_tga:tga,+neu:nyfed_rrp:rrp;Liquiditätsentzug durch Fed-Bilanz, Staatskasse und Reverse-Repo belastet Risiko-Anlagen
+kreditstress;+fred:BAA10Y,+fred:BAMLH0A0HYM2,+neu:fred_credit_spread:baa;steigende Kreditaufschläge treffen Finanzwerte und Zykliker, stützen Staatsanleihen
+volatilitaet;+fred:VIXCLS,+neu:cboe_vvix:vvix,+neu:fred_implied_vol:oel,+neu:fred_implied_vol:gold,+neu:fred_implied_vol:em;breite Angst führt zu Umschichtung in defensive Sektoren und danach oft zu Erholung
+unsicherheit;+fred:USEPUINDXD,+neu:fred_equity_uncertainty:index,+neu:cboe_skew:skew;Politik- und Marktunsicherheit verschiebt Nachfrage zu sicheren Häfen
+energiepreise;+fred:DCOILWTICO,+neu:fred_brent:brent,+fred:DHHNGSP,+neu:fred_propane:propan;Energiepreisschub hebt Förderer, belastet Energieverbraucher (Transport, Chemie, Konsum)
+dollar_stark;+fred:DTWEXBGS,+fred:DEXSZUS,+neu:fred_usdjpy:usdjpy,-neu:fred_fx_lang:gbpusd,-neu:fred_fx_lang:audusd,+neu:fred_fx_lang:usdcad;starker Dollar belastet Schwellenländer, Rohstoffe und US-Exporteure
+zinsanstieg;+fred:DGS10,+neu:fred_treasury_lang:dgs2,+neu:bundesbank_umlauf:bund10y,+neu:mof_jgb_zinsen:niveau,+fred:T10YIE;weltweit steigende Renditen belasten lange Anleihen, Immobilien und Versorger, stützen Banken
+geldmarkt_straff;+neu:fred_effr:effr,+neu:fred_dtb3:dtb3,+neu:fred_treasury_lang:dgs3mo,+neu:treasury_yield_curve:kurz;straffere Geldpolitik am kurzen Ende verteuert Finanzierung und bremst zinssensitive Sektoren
+krisenaufmerksamkeit;+neu:wikipedia_weitere:rezession,+neu:wikipedia_weitere:rezession_en,+neu:wikipedia_weitere:konkurs,+neu:wikipedia_weitere:pandemie,+neu:wikipedia_weitere:pandemie_en;öffentliche Krisenaufmerksamkeit geht Umschichtungen von Privatanlegern voraus
+insider_stimmung;+sec:sec_insider:markt_kaeufer,-sec:sec_insider:markt_verkaeufer,+sec:sec_insider:markt_kaufwert_usd;breite Insiderkäufe zeigen Unterbewertung aus Sicht der Unternehmen

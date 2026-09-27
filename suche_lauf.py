@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Prüfstand – Suchlauf in der GitHub Action (Verfassung V3.7, Methode M3).
+"""Prüfstand – Suchlauf in der GitHub Action (Verfassung V3.9, Methode M4).
 
 Liest den Stand auf dem Zweig claude/lernen (Arbeitskopie _lernen), rechnet die Suchmaschine auf den lokalen
 Kopien von main, claude/daten-energie und claude/daten-neu und legt das Ergebnis auf claude/lernen ab:
   suche/S####.json (Format wie bisher, plus Felder V3.4), suche/S####_ueberlebende.csv, suche/S####_log.txt,
   hypothesen.txt.gz (Register V3.3), index.json (kumuliert, suchlaeufe, reihen_letzter_suchlauf).
-Ein S####-Eintrag entsteht bei neuen Hypothesen ODER geändertem Code (Suchmaschine, paare.txt). Jeder Lauf schreibt
+Ein S####-Eintrag entsteht bei neuen Hypothesen ODER geändertem Code (Suchmaschine, paare.txt, mechanismen.txt). Jeder Lauf schreibt
 zusätzlich suche/letzter_lauf.json mit Commit-IDs aller Zweige und Prüfsummen (Nachvollziehbarkeit, V3.6).
 Die Routine «Prüfstand Lernrunde» rechnet nicht mehr selbst; sie liest diese Dateien und schreibt den Lernbericht.
 """
@@ -36,8 +36,8 @@ if not os.path.exists(reg):
     reg = os.path.join(ROOT, "hypothesen_start.txt.gz")
 
 env = dict(os.environ, PS_CACHE=os.path.join(LAUF, "cache"), PS_KUM_VORHER=str(int(index["kumuliert"])),
-           PS_REGISTER=reg, PS_PAARE=os.path.join(ROOT, "paare.txt"))
-env.setdefault("PS_PLACEBO", "100")
+           PS_REGISTER=reg, PS_PAARE=os.path.join(ROOT, "paare.txt"), PS_MECHANISMEN=os.path.join(ROOT, "mechanismen.txt"))
+env.setdefault("PS_PLACEBO", "200")
 args = [sys.executable, os.path.join(ROOT, "suchmaschine.py"), basis(None)]
 for pfad, var in (("_daten-energie", "PS_BASIS_ENERGIE"), ("_daten-neu", "PS_BASIS_NEU")):
     if os.path.isdir(os.path.join(ROOT, pfad, "data")):
@@ -68,12 +68,12 @@ def sha(pfad):
     except Exception:
         return None
 
-code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py")).encode()).hexdigest()[:16]
+code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt")).encode()).hexdigest()[:16]
 herkunft = {
     "commit_main": commit(ROOT), "commit_energie": commit(os.path.join(ROOT, "_daten-energie")),
     "commit_neu": commit(os.path.join(ROOT, "_daten-neu")), "commit_lernen_vorher": commit(LERNEN),
     "code_hash": code_hash, "sha_suchmaschine": sha(os.path.join(ROOT, "suchmaschine.py")),
-    "sha_paare": sha(os.path.join(ROOT, "paare.txt")), "sha_register_vorher": sha(reg),
+    "sha_paare": sha(os.path.join(ROOT, "paare.txt")), "sha_mechanismen": sha(os.path.join(ROOT, "mechanismen.txt")), "sha_register_vorher": sha(reg),
     "sha_manifest_main": sha(os.path.join(ROOT, "data", "manifest.json")),
     "sha_manifest_neu": sha(os.path.join(ROOT, "_daten-neu", "data", "neu", "manifest_neu.json")),
     "placebo_laeufe": zus.get("placebo_laeufe"), "umgebung": zus.get("umgebung"),
@@ -99,11 +99,14 @@ gruppen = {}
 for i in zus["indikatoren"]:
     g = ("Scout" if i.startswith("neu_") else "SEC" if i.startswith("sec_") else "Paare" if i.startswith("paar_")
          else "Wetter" if i.startswith("wetter_") else "Strom" if i.startswith("strom_") else "Wikipedia" if i.startswith("wiki_")
-         else "Bitcoin" if i.startswith("btc_") else "FRED")
+         else "Bitcoin" if i.startswith("btc_") else "Indizes" if i.startswith("idx_") else "FRED")
     gruppen[g] = gruppen.get(g, 0) + 1
 fund = bool(zus.get("fund"))
 urteil = ("FUND – Fixierung durch Reto nötig. Siegel nicht geöffnet." if fund else
           "Kein Baustein. Validierung ab 2021 nicht angerührt (S4).")
+if zus["bausteine"]:
+    urteil += " Bausteine: " + "; ".join(f"Route {b.get('route', 'A')}: {b['indikator']} {b['art']} -> {b['ziel']} {b['h']} Tage"
+                                       for b in zus["bausteine"]) + "."
 if zus["bausteine"] and not fund:
     urteil += (f" {len(zus['bausteine'])} Baustein-Kandidat(en), aber p_lauf {zus.get('p_lauf')} > 0.05 "
                "(Placebo-Läufe erreichen ebenso viele): Zufall nicht ausgeschlossen, kein Fund.")
@@ -113,14 +116,20 @@ if zus["langzeit_hinweise"]:
 S = {
     "nr": nr, "sort": nr,
     "zeit": lokal.strftime("%-d.%-m.%Y, %H:%M (Europe/Zurich)"),
-    "verfassung": "V3.7",
-    "methode": zus.get("methode", "M3"),
+    "verfassung": "V3.9",
+    "methode": zus.get("methode", "M4"),
     "entstehung": "GitHub Action «Prüfstand Suche» (V3.4 E9)" + ("" if zus["kandidaten_neu"] else ", Anlass: geänderter Code"),
     "herkunft": herkunft,
     "stichtag": "2020-12-31",
     "horizonte_tage": [1, 5, 20],
     "kandidaten": zus["kandidaten"], "kandidaten_neu": zus["kandidaten_neu"], "kandidaten_bekannt": zus["kandidaten_bekannt"],
     "kandidaten_kumuliert": zus["kandidaten_kumuliert"], "huerde_t": zus["huerde_t"],
+    "huerde_art": zus.get("huerde_art"), "huerde_bonferroni_bericht": zus.get("huerde_bonferroni_bericht"),
+    "huerde_c_t2": zus.get("huerde_c_t2"), "route_c_auswahl_k": zus.get("route_c_auswahl_k"),
+    "route_c_stufe1": zus.get("route_c_stufe1"),
+    "kosten_pp_je_wechsel": zus.get("kosten_pp_je_wechsel"), "kosten_teile": zus.get("kosten_teile"),
+    "indizes": zus.get("indizes"), "staerkste_indizes": zus.get("staerkste_indizes"),
+    "echt_bestes_t": zus.get("echt_bestes_t"), "placebo_bestes_t_je_lauf": zus.get("placebo_bestes_t_je_lauf"),
     "familien": zus["familien"],
     "indikatoren_n": zus["indikatoren_n"],
     "ziele_n": sum(len(v) for v in zus["ziele"].values()),
@@ -157,7 +166,7 @@ index["suchlaeufe"].append({"nr": nr, "datei": f"suche/{name}.json", "kandidaten
 index["reihen_letzter_suchlauf"] = zus["indikatoren"]
 index["letzter_suchlauf_utc"] = jetzt.strftime("%Y-%m-%dT%H:%MZ")
 index["letzter_code_hash"] = code_hash
-index["methode"] = zus.get("methode", "M3")
+index["methode"] = zus.get("methode", "M4")
 json.dump(index, open(ip, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{name}: {zus['kandidaten']} Kandidaten, {zus['kandidaten_neu']} neu, kumuliert {zus['kandidaten_kumuliert']}, "
       f"Hürde {zus['huerde_t']}, Urteil: {urteil}")

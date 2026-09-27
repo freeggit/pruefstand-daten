@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Siegeltest (V3.7): Die Suche darf nichts sehen, was nach dem Stichtag liegt (31.12.2020; Ken French 31.12.2000).
+"""Siegeltest (V3.7, ab V3.9 mit Hälften-Kennzahlen und Mechanismus-Indizes): Die Suche darf nichts sehen, was nach dem Stichtag liegt (31.12.2020; Ken French 31.12.2000).
 Drei Läufe ohne Placebo auf denselben Zweigen (main, Strom, Scout):
   A  Originaldaten
   B  alle Werte nach dem Stichtag zufällig verfälscht und teilweise als fehlend gesetzt (Kurse, FRED, Scout, Strom,
      Wetter, Wikipedia, SEC, Ken French)
   C  alle Zeilen nach dem Stichtag gelöscht
-Die Ergebnisse (n, mu, mu0, t, t1, t2) müssen in A, B und C identisch sein, inklusive fehlender Werte.
+Die Ergebnisse (n, mu, mu0, t, t1, t2, n1, n2, mu1, mu2) müssen in A, B und C identisch sein, inklusive fehlender Werte.
 Aufruf: python3 siegel_test.py (erwartet data/, optional _daten-energie/data und _daten-neu/data neben dem Skript)."""
 import glob, gzip, io, os, shutil, subprocess, sys
 import numpy as np, pandas as pd
@@ -86,7 +86,8 @@ def variante(name, modus, wege):
 def lauf(name, ziel):
     d = f"{W}/{name}/lauf"; os.makedirs(d)
     env = dict(os.environ, PS_CACHE=f"{d}/c", PS_PLACEBO="0", PS_KALIBRIERUNG="0", PS_REGISTER="/dev/null",
-               PS_PAARE=os.path.join(ROOT, "paare.txt"))
+               PS_PAARE=os.path.join(ROOT, "paare.txt"),
+               PS_MECHANISMEN=os.path.join(ROOT, "mechanismen.txt"))
     for k, var in (("_daten-energie", "PS_BASIS_ENERGIE"), ("_daten-neu", "PS_BASIS_NEU")):
         if k in ziel:
             env[var] = "file://" + ziel[k]
@@ -101,7 +102,7 @@ def vergleich(a, b, name):
     m = a.merge(b, on=k, suffixes=("", "_v"), how="outer", indicator=True)
     nur = int((m["_merge"] != "both").sum())
     abw = {}
-    for c in ["n", "mu", "mu0", "t", "t1", "t2"]:
+    for c in ["n", "mu", "mu0", "t", "t1", "t2", "n1", "n2", "mu1", "mu2"]:
         x, y = m[c].astype(float), m[c + "_v"].astype(float)
         gleich = (np.isclose(x, y, rtol=0, atol=1e-9)) | (x.isna() & y.isna())
         abw[c] = int((~gleich).sum())

@@ -1,8 +1,22 @@
 #!/usr/bin/env python3
-"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.7, Methode M3).
+"""Prüfstand – Suchmaschine (Suchraum, Verfassung V3.9, Methode M4).
 Aufruf: python3 suchmaschine.py <basis main/data> [<basis claude/daten-energie/data>] [<basis claude/daten-neu/data>]
-Umgebung: PS_CACHE, PS_KUM_VORHER, PS_REGISTER, PS_PLACEBO (Standard 20), PS_LANGZEIT, PS_PAARE,
+Umgebung: PS_CACHE, PS_KUM_VORHER, PS_REGISTER, PS_PLACEBO (Standard 20), PS_LANGZEIT, PS_PAARE, PS_MECHANISMEN,
           PS_BASIS_ENERGIE, PS_BASIS_NEU, PS_KALIBRIERUNG (1 = Trefferchance mit eingepflanztem Effekt messen, Standard 1).
+
+Methode M4 (V3.9, 27.9.2026, von Reto freigegeben «a bis d umsetzen»), baut auf M3 auf:
+- A Hürde aus den Placebos: T_A = 97.5%-Quantil des besten Placebo-t je Lauf (unter denselben Vorfiltern wie ein
+  Baustein: Mehrrendite >= Kosten, n >= 30, Hälften gleichgerichtet), mindestens T_BODEN 4.0. Berücksichtigt die
+  Verwandtschaft der Tests. Die Bonferroni-Hürde auf die kumulierte Zahl wird nur noch berichtet.
+- B Mechanismus-Indizes nach mechanismen.txt (vorab festgelegt), zusätzlich zu den Einzelreihen.
+- C Zweistufig (nur Familie S): Auswahl der besten K_C = 50 Kandidaten nur mit Daten der ersten Hälfte (t1, Mehrrendite
+  der ersten Hälfte >= Kosten, n1 >= 15), Bestätigung in der zweiten Hälfte: t2 >= T_C (Bonferroni 2.5% auf 50,
+  einseitig), Mehrrendite der zweiten Hälfte >= Kosten, n2 >= 15, F5 und Verdachtstage wie bei A.
+- Fehlalarm: A und C je 2.5%, zusammen höchstens 5%; gemessen in jedem Lauf mit denselben Placebos (Vereinigung A|C).
+- D Kosten 0.88 pp je Wechsel (4 Aufträge: ACWI verkaufen, Ziel kaufen, Ziel verkaufen, ACWI kaufen; je Auftrag
+  Umsatzabgabe 0.15% für ausländische Wertpapiere, Courtage s.W. 0.05% bei einer günstigen Schweizer Bank, halber
+  Spread s.W. 0.02%; Handel im USD-Konto, kein Devisenwechsel je Wechsel).
+- Register: Schlüssel «M4|…»; M4 ist eine inhaltliche Änderung, alle Hypothesen zählen neu (nur Bericht).
 
 Methode M3 (V3.7, 25.9.2026, zweite externe Gegenprüfung):
 - Siegel durch Bau: jede Reihe (Kurse, Indikatoren) wird beim Laden am STICHTAG abgeschnitten, Ken French am
@@ -30,12 +44,16 @@ Methode M3 (V3.7, 25.9.2026, zweite externe Gegenprüfung):
 import gzip, hashlib, io, json, os, sys, time, urllib.request
 import numpy as np, pandas as pd
 
-METHODE, METHODE_VORHER = "M3", "M2"
+METHODE = "M4"
 STICHTAG = pd.Timestamp("2020-12-31")
 L_ENDE = pd.Timestamp("2000-12-31")
 HORIZONTE = [1, 5, 20]
 T_BASIS, T_VOR, T_HAELFTE, T_BEST = 4.5, 3.5, 1.0, 2.0
-KOSTEN = 0.60
+KOSTEN_TEILE = {"umsatzabgabe_je_auftrag_pct": 0.15, "courtage_je_auftrag_pct": 0.05, "halber_spread_je_auftrag_pct": 0.02,
+                "auftraege_je_wechsel": 4}
+KOSTEN = round(KOSTEN_TEILE["auftraege_je_wechsel"] * (KOSTEN_TEILE["umsatzabgabe_je_auftrag_pct"]
+               + KOSTEN_TEILE["courtage_je_auftrag_pct"] + KOSTEN_TEILE["halber_spread_je_auftrag_pct"]), 2)   # 0.88 pp
+T_BODEN, ALPHA_A, ALPHA_C, K_C, N_HAELFTE = 4.0, 0.025, 0.025, 50, 15
 N_MIN = 30
 LAG_FRED, LAG_SOFORT, LAG_WETTER = 2, 1, 6
 L_BEGINN_VOR = pd.Timestamp("1995-01-01")
@@ -45,6 +63,7 @@ N_F5 = 10000
 KALIBRIERUNG = os.environ.get("PS_KALIBRIERUNG", "1") == "1"
 LANGZEIT = os.environ.get("PS_LANGZEIT", "1") == "1"
 PAARE = os.environ.get("PS_PAARE", os.path.join(os.path.dirname(os.path.abspath(__file__)), "paare.txt"))
+MECHANISMEN = os.environ.get("PS_MECHANISMEN", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mechanismen.txt"))
 FF_ZIELE = {"nodur": "xlp", "durbl": "xly", "manuf": "xli", "enrgy": "xle", "chems": "xlb", "buseq": "xlk",
             "telcm": "xlc", "utils": "xlu", "shops": "xly", "hlth": "xlv", "money": "xlf"}
 H10 = {"fred:DEXSZUS", "fred:DTWEXBGS", "fred:DEXJPUS", "fred:DEXUSEU", "fred:DEXUSUK", "fred:DEXCAUS", "fred:DEXUSAL"}
@@ -359,6 +378,29 @@ if os.path.exists(PAARE):
         if len(s) >= 500:
             varianten(f"paar_{name}", s, ra + rb, quelle=f"paar:{name}"); N_PAARE += 1
 
+N_INDIZES, INDIZES = 0, {}
+if os.path.exists(MECHANISMEN):
+    for ln in open(MECHANISMEN, encoding="utf-8"):
+        ln = ln.split("#", 1)[0].strip()
+        if not ln:
+            continue
+        name, komp = [t.strip() for t in ln.split(";")[:2]]
+        zs, regeln, genutzt = [], [], []
+        for k in [k.strip() for k in komp.split(",") if k.strip()]:
+            vz, key = (-1.0 if k[0] == "-" else 1.0), k.lstrip("+-")
+            if key not in basen:
+                continue
+            x, r = basen[key]
+            m = x.rolling(252, min_periods=150)
+            zs.append((vz * (x - m.mean()) / m.std()).rename(key)); regeln += r; genutzt.append(k)
+        if len(zs) < 2:
+            continue
+        j = pd.concat(zs, axis=1, sort=True)
+        mind = max(2, int(np.ceil(len(zs) / 2)))
+        s = j.mean(axis=1).where(j.notna().sum(axis=1) >= mind).dropna()
+        if len(s) >= 500:
+            varianten(f"idx_{name}", s, regeln, quelle=f"index:{name}"); N_INDIZES += 1; INDIZES[name] = genutzt
+
 BTC_SHA = None
 try:
     btc_p = os.path.join(CACHE, "btc.csv")
@@ -453,9 +495,13 @@ def auswerten(f, P, mr, e, z, h):
             return 0.0
         return (w.mean() - r[0]) / (max(r[1], w.std(ddof=1)) / np.sqrt(len(w)))
     erst = pos + f["rand"](h) < e["mitte"]; zweit = pos >= e["mitte"]
+    r2 = fenster(P, f, z, h, e["mitte"], e["hi"])
     t1 = th(werte[erst], fenster(P, f, z, h, e["lo"], e["mitte"]))
-    t2 = th(werte[zweit], fenster(P, f, z, h, e["mitte"], e["hi"]))
+    t2 = th(werte[zweit], r2)
+    w1, w2 = werte[erst], werte[zweit]
     return dict(n=n, mu=mu, mu0=mu0, sd0=sd0, t=t, t_klassisch=(mu - mu0) / (sd0 / np.sqrt(n)), t1=t1, t2=t2,
+                n1=int(len(w1)), n2=int(len(w2)), mu1=float(w1.mean()) if len(w1) else np.nan,
+                mu2=float(w2.mean()) if len(w2) else np.nan, _r2=r2, _mitte=e["mitte"],
                 lo=e["lo"], hi=e["hi"], _pos=pos)
 
 def suchlauf(tab, mrs):
@@ -524,8 +570,67 @@ def auswahl(df, t_min, mrs, rng):
     best = (ueber.familie == "S") | (ueber.t_bestaetigung_etf >= T_BEST)
     return df, ueber, ueber[kern & best], ueber[kern & ~best]
 
+def vorfilter_a(df):
+    """Vorfilter eines Bausteins ohne die t-Hürde (für das Placebo-Maximum der Hürde A)."""
+    rich = np.sign(df.t)
+    stabil = (np.sign(df.t1) == rich) & (np.sign(df.t2) == rich) & (df.t1.abs() >= T_HAELFTE) & (df.t2.abs() >= T_HAELFTE)
+    return (df.t > 0) & (df.mu >= KOSTEN) & (df.n >= N_MIN) & stabil
+
+def max_t_a(df):
+    v = df[vorfilter_a(df)]
+    return float(v.t.max()) if len(v) else 0.0
+
+def huerde_c():
+    from statistics import NormalDist
+    return NormalDist().inv_cdf(1 - ALPHA_C / K_C)
+
+T_C = huerde_c()
+
+def stufe1(df):
+    """Auswahl nur mit Daten der ersten Hälfte (und Ereigniszahlen): die besten K_C nach t1."""
+    e = df[(df.familie == "S") & (df.t1 > 0) & (df.n1 >= N_HAELFTE) & (df.mu1 >= KOSTEN)]
+    return e.sort_values("t1", ascending=False).head(K_C)
+
+def route_c(df, mrs, rng):
+    """Bestätigung der Stufe-1-Auswahl in der zweiten Hälfte, mit F5 und Verdachtstagen."""
+    s1 = stufe1(df)
+    ok = s1[(s1.t2 >= T_C) & (s1.n2 >= N_HAELFTE) & (s1.mu2 >= KOSTEN)].copy()
+    rows = []
+    for _, r in ok.iterrows():
+        mr, _ = mrs["S"]; a = mr[(r.ziel, int(r.h))]; pos = r._pos
+        p5 = f5_rotation(a, pos, r.mu, rng)
+        zweit = pos >= r._mitte
+        v = np.array([p in VERDACHT_POS.get(r.ziel, set()) for p in pos]) & zweit
+        wv = a[pos[zweit & ~v]]
+        m2, sd2 = r._r2 if r._r2 is not None else (np.nan, np.nan)
+        t2v = float((wv.mean() - m2) / (max(sd2, np.std(wv, ddof=1)) / np.sqrt(len(wv)))) if len(wv) > 2 else np.nan
+        if p5 < 0.01 and (v.sum() == 0 or t2v >= T_C):
+            d = r.to_dict(); d.update(placebo_p=p5, n_verdacht=int(v.sum()), t_ohne_verdacht=t2v, route="C"); rows.append(d)
+    return pd.DataFrame(rows), s1
+
+def vereinigung(a, c):
+    """Bausteine aus A und C, jeder Kandidat einmal (A hat Vorrang in der Anzeige)."""
+    a = a.assign(route="A") if len(a) else a
+    if not len(c):
+        return a
+    if not len(a):
+        return c
+    k = ["familie", "indikator", "art", "ziel", "h"]
+    c2 = c[~c.set_index(k).index.isin(a.set_index(k).index)]
+    return pd.concat([a, c2], ignore_index=True)
+
+def sichern(df):
+    """Placebo: was die Auswahl mit einer Hürde ab T_BODEN noch braucht (Kandidaten und ETF-Bestätigungen)."""
+    v = df[vorfilter_a(df) & (df.t >= T_BODEN)]
+    if "L" in set(v.familie):
+        l = v[v.familie == "L"]
+        s = df[(df.familie == "S") & df.indikator.isin(set(l.indikator)) & (df.t >= T_BEST)]
+        v = pd.concat([v, s])
+    return v
+
 SPALTEN = ["familie", "indikator", "art", "ziel", "h", "n", "mu", "mu_netto", "mu0", "t", "t_klassisch", "t1", "t2"]
 ZUSATZ = ["placebo_p", "t_bestaetigung_etf", "t_ohne_bestes", "n_verdacht", "t_ohne_verdacht"]
+ZUSATZ_C = ["n1", "n2", "mu1", "mu2", "placebo_p", "n_verdacht", "t_ohne_verdacht", "route"]
 
 if __name__ == "__main__":
     t0 = time.time()
@@ -536,34 +641,59 @@ if __name__ == "__main__":
     REG = register_laden()
     kern = (roh.indikator + "|" + roh.art + "|" + roh.ziel + "|" + roh.h.astype(str))
     schluessel = (METHODE + "|" + kern).tolist()
-    vorher = (METHODE_VORHER + "|" + kern).tolist()
-    NEU = {k for k, kv in zip(schluessel, vorher) if k not in REG and kv not in REG}
+    NEU = {k for k in schluessel if k not in REG}
     KUM = KUM_VORHER + len(NEU)
-    T_MIN = huerde_kumulativ(KUM)
+    T_BONF = huerde_kumulativ(KUM)                     # nur noch Bericht (M4: Hürde A aus den Placebos)
     with open("hypothesen.txt.gz", "wb") as fh:
         fh.write(gzip.compress("\n".join(sorted(REG | set(schluessel))).encode("utf-8"), mtime=0))
-    log(f"{len(roh)} Kandidaten, {len(NEU)} neu; kumuliert {KUM} -> Hürde t >= {T_MIN:.2f}")
-    rng = np.random.default_rng(20260925)
-    echt, ueber, bausteine, hinweise = auswahl(roh, T_MIN, echte, rng)
-    echt["neu"] = [k in NEU for k in schluessel]
-    plac_bst, plac_vor = [], []
+    log(f"{len(roh)} Kandidaten, {len(NEU)} neu; kumuliert {KUM} (Bonferroni t {T_BONF:.2f}, nur Bericht); Hürde C t2 >= {T_C:.2f}")
+    # Placebos: bestes t (Hürde A), Route C vollständig, Kandidaten für die spätere Route-A-Auswahl sichern
+    plac_max, plac_c, plac_sicher, plac_vor = [], [], [], []
     for s in range(1, N_PLACEBO + 1):
         prng = np.random.default_rng(1000 + s)
         mrs = {fam: rotiert(fam, prng)[:2] for fam in FAM}
-        _, p_ue, p_b, _ = auswahl(suchlauf(tab, mrs), T_MIN, mrs, prng)
-        plac_bst.append(int(len(p_b))); plac_vor.append(int(len(p_ue)))
+        d = suchlauf(tab, mrs)
+        plac_max.append(max_t_a(d))
+        c_p, _ = route_c(d, mrs, prng)
+        plac_c.append(c_p)
+        plac_sicher.append(sichern(d))
+        plac_vor.append(int(((d.t >= T_VOR) & vorfilter_a(d)).sum()))
         if s % 10 == 0 or s == N_PLACEBO:
-            log(f"Placebo {s}/{N_PLACEBO}: Bausteine {sum(plac_bst)}, Läufe mit Baustein {sum(1 for x in plac_bst if x)}")
+            log(f"Placebo {s}/{N_PLACEBO}: bestes t Median {np.median(plac_max):.2f}, Maximum {max(plac_max):.2f}, Route C {sum(len(x) for x in plac_c)}")
+    T_A = max(T_BODEN, float(np.quantile(plac_max, 1 - ALPHA_A))) if N_PLACEBO >= 40 else max(T_BODEN, T_BONF)
+    T_MIN = T_A
+    log(f"Hürde A (Placebo-Quantil {1 - ALPHA_A:.1%}, Boden {T_BODEN}): t >= {T_A:.2f}")
+    rng = np.random.default_rng(20260925)
+    echt, ueber, bst_a, hinweise = auswahl(roh, T_A, echte, rng)
+    bst_c, s1_echt = route_c(roh, echte, rng)
+    bausteine = vereinigung(bst_a, bst_c)
+    echt["neu"] = [k in NEU for k in schluessel]
+    plac_bst = []
+    for s in range(1, N_PLACEBO + 1):                  # Route A auf den gesicherten Placebo-Kandidaten mit der Hürde T_A
+        prng = np.random.default_rng(1000 + s)
+        mrs = {fam: rotiert(fam, prng)[:2] for fam in FAM}
+        v = plac_sicher[s - 1]
+        _, _, p_a, _ = auswahl(v, T_A, mrs, np.random.default_rng(5000 + s)) if len(v) else (None, None, v, None)
+        plac_bst.append(int(len(vereinigung(p_a, plac_c[s - 1]))))
     n_b = len(bausteine)
     p_lauf = (1 + sum(1 for x in plac_bst if x >= n_b)) / (N_PLACEBO + 1) if n_b >= 1 else 1.0
     zus = {
         "methode": METHODE,
         "kandidaten": int(len(echt)), "kandidaten_neu": int(len(NEU)),
         "kandidaten_bekannt": int(len(set(schluessel)) - len(NEU)),
-        "kandidaten_kumuliert": int(KUM), "huerde_t": round(float(T_MIN), 2),
+        "kandidaten_kumuliert": int(KUM), "huerde_t": round(float(T_A), 2),
+        "huerde_art": (f"A: {1 - ALPHA_A:.1%}-Quantil des besten Placebo-t je Lauf, mindestens {T_BODEN}" if N_PLACEBO >= 40
+                       else f"Ersatz: Bonferroni, weil weniger als 40 Placebo-Läufe ({N_PLACEBO})"),
+        "huerde_bonferroni_bericht": round(float(T_BONF), 2),
+        "huerde_c_t2": round(float(T_C), 2), "route_c_auswahl_k": K_C,
+        "route_c_stufe1": s1_echt[["indikator", "art", "ziel", "h", "n1", "mu1", "t1", "n2", "mu2", "t2"]].round(3).head(10).to_dict("records"),
+        "kosten_pp_je_wechsel": KOSTEN, "kosten_teile": KOSTEN_TEILE,
+        "indizes": INDIZES,
+        "placebo_bestes_t_je_lauf": [round(x, 3) for x in plac_max],
         "familien": {fam: int((echt.familie == fam).sum()) for fam in FAM},
         "echt_alle_filter_positiv": int((echt.alle & (echt.t > 0)).sum()),
-        "echt_vorstufe_positiv": int((echt.vor & (echt.t > 0)).sum()),
+        "echt_vorstufe_positiv": int(((echt.t >= T_VOR) & vorfilter_a(echt)).sum()),
+        "echt_bestes_t": round(max_t_a(echt), 3),
         "placebo_laeufe": N_PLACEBO, "placebo_art": "Rotation der Renditen (gemeinsam, Vielfache von 5 Handelstagen)",
         "placebo_bausteine_je_lauf": plac_bst, "placebo_vorstufe_je_lauf": plac_vor,
         "fehlalarmrate": round(sum(1 for x in plac_bst if x) / max(N_PLACEBO, 1), 4),
@@ -571,22 +701,26 @@ if __name__ == "__main__":
         "echt_mehr_als_staerkster_placebo": bool(n_b > max(plac_bst or [0])),
         "datenpruefung_verdachtstage": {t: sorted(str(d.date()) for d in v) for t, v in VERDACHT.items() if v},
     }
-    zus["bausteine"] = bausteine[SPALTEN + ZUSATZ].round(4).to_dict("records")
+    spalten_b = [c for c in SPALTEN + ZUSATZ + ["n1", "n2", "mu1", "mu2", "route"] if c in bausteine.columns] if n_b else []
+    bausteine = bausteine.assign(mu_netto=bausteine.mu - KOSTEN) if n_b else bausteine
+    zus["bausteine"] = bausteine[spalten_b].round(4).to_dict("records") if n_b else []
     zus["langzeit_hinweise"] = hinweise[SPALTEN + ZUSATZ].round(4).to_dict("records")
     top = echt[(echt.t > 0) & (echt.n >= N_MIN)].sort_values("t", ascending=False)
     top = top.assign(mu_netto=top.mu - KOSTEN)
     zus["staerkste_positive"] = top.head(10)[SPALTEN].round(3).to_dict("records")
     zus["staerkste_neue"] = top[top.neu].head(5)[SPALTEN].round(3).to_dict("records")
+    zus["staerkste_indizes"] = top[top.indikator.str.startswith("idx_")].head(5)[SPALTEN].round(3).to_dict("records")
     zus["familie_l_ereignisse"] = {"median_n": float(echt[echt.familie == "L"].n.median()) if "L" in FAM else None,
                                    "kandidaten_n_ab_30": int(((echt.familie == "L") & (echt.n >= N_MIN)).sum())}
-    # Kalibrierung: bekannter Effekt in 40 zufällige echte S-Kandidaten mit n >= 40 eingepflanzt
+    # Kalibrierung: bekannter Effekt in 40 zufällige echte S-Kandidaten mit n >= 40 eingepflanzt; gefunden über A oder C
     if KALIBRIERUNG:
         krng = np.random.default_rng(777)
         pool = echt[(echt.familie == "S") & (echt.n >= 40)]
         auswahl_k = pool.iloc[krng.choice(len(pool), size=min(40, len(pool)), replace=False)] if len(pool) else pool
+        grenze_t1 = float(s1_echt.t1.min()) if len(s1_echt) >= K_C else 0.0
         kal_erg = {}
         for faktor in (1.0, 2.0):
-            treffer = 0
+            treffer = treffer_a = treffer_c = 0
             for _, r in auswahl_k.iterrows():
                 mr = dict(echte["S"][0]); a = mr[(r.ziel, int(r.h))].copy()
                 a[r._pos] += faktor * EFFEKT[int(r.h)]
@@ -596,10 +730,16 @@ if __name__ == "__main__":
                 rr = auswerten(FAM["S"], P, mr, e, r.ziel, int(r.h))
                 if rr:
                     d1 = pd.DataFrame([dict(familie="S", indikator=r.indikator, art=r.art, ziel=r.ziel, h=int(r.h), **rr)])
-                    _, _, b, _ = auswahl(d1, T_MIN, {"S": (mr, P)}, krng)
-                    treffer += int(len(b) > 0)
+                    _, _, b, _ = auswahl(d1, T_A, {"S": (mr, P)}, krng)
+                    ca = len(b) > 0
+                    cc = False
+                    if rr["t1"] >= grenze_t1:
+                        bc, _ = route_c(d1, {"S": (mr, P)}, krng)
+                        cc = len(bc) > 0
+                    treffer += int(ca or cc); treffer_a += int(ca); treffer_c += int(cc)
             kal_erg[f"effekt_x{faktor:g}"] = {"eingepflanzt_pp": {str(h): round(faktor * v, 2) for h, v in EFFEKT.items()},
                                              "tests": int(len(auswahl_k)), "gefunden": treffer,
+                                             "gefunden_a": treffer_a, "gefunden_c": treffer_c,
                                              "trefferchance": round(treffer / max(len(auswahl_k), 1), 3)}
         zus["kalibrierung"] = kal_erg
     echt["quelle"] = echt.indikator.map(quelle_von)
@@ -613,12 +753,13 @@ if __name__ == "__main__":
     zus["indikatoren"] = sorted(ind)
     zus["ziele"] = {fam: f["ziele"] for fam, f in FAM.items()}
     zus["paare"] = N_PAARE
+    zus["indizes_n"] = N_INDIZES
     zus["umgebung"] = {"numpy": np.__version__, "pandas": pd.__version__, "python": sys.version.split()[0], "btc_sha": BTC_SHA}
     zus["code_sha256"] = hashlib.sha256(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:16]
     zus["dauer_min"] = round((time.time() - t0) / 60, 1)
     json.dump(zus, open("suchlauf_zusammenfassung.json", "w"), indent=1)
     ue = ueber.copy()
     ue["ereignisse"] = [";".join(str(FAM[r.familie]["kal"][p].date()) for p in r._pos) for _, r in ue.iterrows()]
-    ue.drop(columns=["_pos"]).to_csv("suchlauf_ueberlebende.csv", index=False)
-    echt.drop(columns=["_pos"]).round(4).to_csv("suchlauf_echt.csv.gz", index=False)
+    ue.drop(columns=[c for c in ("_pos", "_r2", "_mitte") if c in ue]).to_csv("suchlauf_ueberlebende.csv", index=False)
+    echt.drop(columns=[c for c in ("_pos", "_r2", "_mitte") if c in echt]).round(4).to_csv("suchlauf_echt.csv.gz", index=False)
     log(json.dumps({k: v for k, v in zus.items() if k not in ("indikatoren", "je_quelle")}, indent=1))
