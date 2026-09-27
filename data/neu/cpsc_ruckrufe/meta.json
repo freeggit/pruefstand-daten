@@ -1,0 +1,11 @@
+{
+  "ruckrufe": {
+    "beschreibung": "Taegliche Anzahl von Produktrueckrufen der US-Verbraucherschutzbehoerde CPSC (Consumer Product Safety Commission, SaferProducts.gov RestWebService), Datum = RecallDate (Tag der oeffentlichen Bekanntgabe), 0 an Tagen ohne Ruckruf. Umfasst alle Produktkategorien (u.a. Spielzeug, Haushaltsgeraete, Sportartikel, Kinderausstattung) -- Mechanismus zyklischer/nichtzyklischer Konsum (XLY, XLP) und Produkthaftungsrisiko.",
+    "einheit": "Anzahl Ruckrufe",
+    "publikation": "taeglich: CPSC veroeffentlicht Ruckrufe am Tag der Bekanntgabe auf cpsc.gov/Recalls, das RecallDate der API entspricht diesem Tag (beobachtet: juengste Eintraege im Abruf lagen wenige Tage zurueck)",
+    "quelle_url": "https://www.saferproducts.gov/RestWebServices/Recall",
+    "revidiert": false,
+    "verdichtung": "Anzahl Ruckrufe je Kalendertag (RecallDate)",
+    "verfuegbar_nach_tagen": 2
+  }
+}

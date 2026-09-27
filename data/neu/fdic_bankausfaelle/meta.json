@@ -1,0 +1,11 @@
+{
+  "anzahl": {
+    "beschreibung": "Taegliche Anzahl von US-Bankausfaellen (FDIC BankFind Suite, Failures and Assistance Transactions), Datum = FAILDATE (amtliches Schliessungs-/Uebernahmedatum der FDIC), 0 an Tagen ohne Ausfall",
+    "einheit": "Anzahl Bankausfaelle",
+    "publikation": "verzoegert: die FDIC veroeffentlicht am Schliessungstag eine Pressemitteilung, der API-Datenbestand (api.fdic.gov/banks/failures) wird aber nur in unregelmaessigen Abstaenden aktualisiert (der Index-Zeitstempel der Antwort lag zuletzt mehrere Wochen zurueck); konservativ mit Verzoegerung angesetzt",
+    "quelle_url": "https://banks.data.fdic.gov/bankfind-suite/failures",
+    "revidiert": false,
+    "verdichtung": "Anzahl Faelle je Kalendertag (FAILDATE)",
+    "verfuegbar_nach_tagen": 30
+  }
+}

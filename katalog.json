@@ -1814,5 +1814,55 @@
     "aufgenommen_utc": "2026-09-27T16:20:22Z",
     "geprueft_utc": "2026-09-27T16:20:22Z",
     "prioritaet": "hoch"
+  },
+  {
+    "id": "fdic_bankausfaelle",
+    "name": "FDIC-Bankausfaelle, Tageszahl",
+    "url": "https://api.fdic.gov/banks/failures",
+    "domain": "api.fdic.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "mechanismus": "Eine Bankschliessung durch die Einlagensicherung ist ein sichtbares Zeichen fuer Finanzstress im Bankensektor und kann kurzfristig (1 bis 20 Handelstage) Vertrauen, Refinanzierungskosten und Kursentwicklung des Finanzsektors (XLF) gegenueber dem Weltindex beeinflussen, insbesondere bei Haeufung mehrerer Ausfaelle in kurzer Zeit (z.B. 1988/89, 2008/09, 2023).",
+    "grund": "Zusatz 6 (27.9.2026), Prioritaet 3 (Bankschliessungen). K1 taeglich: nullgefuellte Tagesreihe (FAILDATE, taegliches Ereignisdatum), Median-Abstand 1 Tag. K2 Historie: erster Wert 1934-04-19, 33765 Zeilen -- deutlich vor 1990 (Zusatz 4 E11), deckt insbesondere die Spar- und Kreditkrise Ende der 1980er (Max 60 Ausfaelle an einem Tag, 1988-04-20, plausibel: RTC-Sammelschliessungen) und die Finanzkrise 2008/09 ab. K3 offen: oeffentliche FDIC-BankFind-API (api.fdic.gov/banks/failures) ohne Login/Schluessel, Obergrenze limit<=10000, gesamter Bestand (4117 Faelle) in einem Abruf. K4 punktgenau: FAILDATE (amtliches Schliessungsdatum) wird nach Erfassung nicht rueckwirkend geaendert, nur neue Faelle kommen hinzu. K5 laufend: Zero-Fill bis zum heutigen Tag (letzter Einzelfall 2026-07-17, danach echte Nulltage); Publikationslage konservativ mit Verzoegerung angesetzt (verfuegbar_nach_tagen=30), da der API-Index-Zeitstempel mehrere Wochen hinter dem juengsten Fall zurueckliegt (Zusatz 5, Beleg im meta.json). K6 neu: kein Bankausfall-Feed im Spiegel. K7 Umfang: 76 KB komprimiert, Abruf ca. 1 Sek. Plausibilitaet: Anteil gleicher Folgewerte 0.905 (94% Nulltage, erwartungsgemaess bei seltenem Ereignis, wie bei fda_ruckrufe/fda_zulassungen/kalender_ereignisse), keine Anomalie.",
+    "reihen": [
+      {
+        "reihe": "anzahl",
+        "zeilen": 33765,
+        "erste": "1934-04-19",
+        "letzte": "2026-09-27",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.905,
+        "min": 0.0,
+        "max": 60.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-27T20:16:45Z",
+    "geprueft_utc": "2026-09-27T20:16:45Z",
+    "prioritaet": "hoch"
+  },
+  {
+    "id": "cpsc_ruckrufe",
+    "name": "CPSC-Produktrueckrufe (Tageszahl)",
+    "url": "https://www.saferproducts.gov/RestWebServices/Recall",
+    "domain": "www.saferproducts.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "mechanismus": "Produktrueckrufe der US-Verbraucherschutzbehoerde CPSC kennzeichnen Sicherheits- oder Qualitaetsprobleme betroffener Hersteller/Haendler und koennen kurzfristig (1 bis 20 Handelstage) Vertrauen, Umsatz und Haftungsrisiko im zyklischen und nichtzyklischen Konsumsektor (XLY, XLP) gegenueber dem Weltindex belasten, insbesondere bei Haeufung mehrerer Ruckrufe in kurzer Zeit.",
+    "grund": "Zusatz 6 (27.9.2026), Prioritaet 2 (Rueckrufe, Ergaenzung zu fda_ruckrufe um CPSC-Produktkategorien). K1 taeglich: nullgefuellte Tagesreihe (RecallDate, taegliches Bekanntgabedatum), Median-Abstand 1 Tag. K2 Historie: erster Wert 1973-06-08 (Gruendungsjahr der CPSC), 19470 Zeilen -- deutlich vor 1990 (Zusatz 4 E11). K3 offen: oeffentliche SaferProducts.gov-RestWebService-API ohne Login/Schluessel, Abruf in 54 Jahresabfragen (1973-2026), Gesamtsumme 10027 Faelle, ca. 31 Sek. K4 punktgenau: RecallDate (Datum der oeffentlichen Bekanntgabe) wird nach Veroeffentlichung nicht rueckwirkend geaendert, nur neue Ruckrufe kommen hinzu. K5 laufend: Zero-Fill bis zum heutigen Tag, juengster Einzelfall 2026-09-24 (3 Tage vor diesem Lauf) -- taegliche Publikation (cpsc.gov/Recalls), verfuegbar_nach_tagen=2. K6 neu: kein CPSC-Rueckruf-Feed im Spiegel (ergaenzt fda_ruckrufe um andere Produktkategorien, keine Redundanz). K7 Umfang: 48 KB komprimiert, Abruf ca. 31 Sek. Plausibilitaet: Anteil gleicher Folgewerte 0.664 (77% Nulltage, erwartungsgemaess bei seltenem Tagesereignis wie bei fda_ruckrufe), Max 27 an einem Tag plausibel (Sammelruckrufe), keine Anomalie.",
+    "reihen": [
+      {
+        "reihe": "ruckrufe",
+        "zeilen": 19470,
+        "erste": "1973-06-08",
+        "letzte": "2026-09-27",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.664,
+        "min": 0.0,
+        "max": 27.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-27T20:16:45Z",
+    "geprueft_utc": "2026-09-27T20:16:45Z",
+    "prioritaet": "hoch"
   }
 ]
