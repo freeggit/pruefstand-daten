@@ -1384,21 +1384,34 @@
     "status": "kandidat",
     "prioritaet": "normal",
     "mechanismus": "PMI-Ueberraschungen fuer China bewegen kurzfristig China-/EM-nahe Ziele (FXI, EEM) gegenueber dem Weltindex, analog zu us_arbeitsmarkt_termine/us_cpi_termine fuer die USA.",
-    "grund": "Veroeffentlichungskalender oeffentlich (erster Handelstag des Monats), keine Wertreihe noetig, nur Ereignistage wie bei bereits aktiven Kalenderreihen.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Veroeffentlichungskalender oeffentlich (erster Handelstag des Monats), keine Wertreihe noetig, nur Ereignistage wie bei bereits aktiven Kalenderreihen. | Rechercheergebnis 2026-09-27T08:14:53Z: ALFRED (alfred.stlouisfed.org/releases) fuehrt kein China-PMI-Release (nur US-Bundesbehoerden). www.stats.gov.cn (NBS China, amtliche Quelle) ist aus dieser Umgebung erreichbar (HTTP 200), aber die Pressemitteilungs-Uebersichtsseite listet die Meldungen ohne direkt erkennbare PMI-Titel/Daten in der HTML-Startseite (vermutlich weitere Navigationsebene oder JS-Nachladung); eine vollstaendige amtliche Terminliste wurde in diesem Lauf noch nicht gefunden. Bekannt: NBS-Manufacturing-PMI erscheint regelmaessig am letzten Kalendertag des Erhebungsmonats (Verschiebung um Neujahrsfest/Feiertage), aber ohne belegte Terminliste je Einzeltermin keine Reihe angelegt (Zusatz 5: keine Termine erfinden). Status bleibt Kandidat; naechster Schritt: NBS-Pressemitteilungsarchiv tiefer navigieren (z.B. /english/PressRelease/ Unterseiten nach Jahr) oder alternative amtliche Terminuebersicht suchen.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-27T08:14:53Z"
   },
   {
     "id": "usda_wasde_veroeffentlichung",
     "name": "USDA WASDE-Bericht, Veroeffentlichungstage seit 1973",
-    "url": "https://www.usda.gov/oce/commodity/wasde/",
-    "domain": "usda.gov",
+    "url": "https://esmis.nal.usda.gov/publication/world-agricultural-supply-and-demand-estimates",
+    "domain": "esmis.nal.usda.gov",
     "bereich": "Kalender",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "WASDE-Ueberraschungen bewegen Agrarrohstoffpreise kurzfristig; ergaenzt die bestehenden Wetter-Anbau-Reihen (openmeteo_wetter_anbau) um den Nachfrage-/Schaetzungskanal statt nur Angebotswetter.",
-    "grund": "Amtlicher Veroeffentlichungskalender oeffentlich, monatliche Ereignistage seit 1973 (vor 1990, Zusatz 4), reines Ereignisdatum ohne Zugriffsrisiko. | Rechercheergebnis 2026-09-26T20:14:08Z: WASDE erscheint monatlich zwischen dem 8. und 12. Kalendertag (usda.gov, cmegroup.com), aber ohne festen Wochentag/Monatstag -- das genaue Datum wird jedes Jahr im Voraus per eigenem Freigabekalender festgelegt, nicht per Formel berechenbar. Eine vollstaendige amtliche Terminliste seit 1973 wurde bisher nicht gefunden (USDA/OCE veroeffentlicht nur den Kalender fuer das laufende Jahr). Ohne belegte Terminliste keine Reihe angelegt (K4/Zusatz 5: keine Termine erfinden). Status bleibt Kandidat; naechster Schritt: usda.gov/oce-Archiv oder NASS-Pressemitteilungen nach frueheren Jahreskalendern durchsuchen.",
+    "grund": "Amtlicher Veroeffentlichungskalender oeffentlich, monatliche Ereignistage seit 1973 (vor 1990, Zusatz 4), reines Ereignisdatum ohne Zugriffsrisiko. usda.gov selbst domainweit mit HTTP 403 gesperrt (wie zuvor festgestellt). Alternative gefunden und genutzt: esmis.nal.usda.gov (National Agricultural Library, Nachfolgeportal des fruehereren usda.library.cornell.edu-Archivs, andere Domain, kein Login, kein Schluessel) fuehrt unter /publication/world-agricultural-supply-and-demand-estimates das amtliche Archiv aller tatsaechlich erschienenen WASDE-Berichte mit Datum, paginiert (10 je Seite, 71 Seiten bis 1973 zurueck; Terminfeld ueber HTML-Klasse view-release-date-table-column abgegrenzt von einer gleichnamigen 'Latest Release'-Seitenleiste). K1 taeglich: jeder Kalendertag hat eine Zeile (Median-Abstand 1 Tag). K2 Historie: erster Bericht 1973-09-17, 19369 Zeilen. K3 offen: kein Login/Schluessel. K4 punktgenau: vergangene Veroeffentlichungstermine werden nicht revidiert. K5 laufend: Skript berechnet bei jedem Lauf bis zum aktuellen Tag. K6 neu: keine WASDE-Terminreihe im bestehenden Spiegel. K7 Umfang: unter 5 KB komprimiert, Abruf ca. 42 s (71 Seitenabrufe, 0.1 s Pause). Pruefung: 19369 Zeilen (1973-09-17 bis 2026-09-27), 700 Ereignistage (~13.2/Jahr, plausibel fuer einen monatlichen Bericht ueber 53 Jahre inkl. vereinzelter Sonderberichte), Anteil gleicher Folgewerte 0.929 (bei binaerer 0/1-Indikatorreihe erwartungsgemaess, wie bei kalender_ereignisse/us_cpi_termine), Min 0 / Max 1 plausibel. Termine im Voraus bekannt: USDA/OCE veroeffentlicht jedes Jahr einen eigenen Freigabekalender (z.B. cmegroup.com-Uebersicht 2026); das ESMIS-Archiv zeichnet die tatsaechlichen Erscheinungstage dieser im Voraus bekannten Termine auf, verfuegbar_nach_tagen=0 (Zusatz 5).",
     "aufgenommen_utc": "2026-09-26T09:40:47Z",
-    "geprueft_utc": "2026-09-26T20:14:08Z"
+    "geprueft_utc": "2026-09-27T08:13:49Z",
+    "reihen": [
+      {
+        "reihe": "wasde",
+        "zeilen": 19369,
+        "erste": "1973-09-17",
+        "letzte": "2026-09-27",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.929,
+        "min": 0.0,
+        "max": 1.0
+      }
+    ]
   },
   {
     "id": "fed_discount_rate_aenderungstage",
@@ -1486,11 +1499,12 @@
     "url": "https://rigcount.bakerhughes.com/",
     "domain": "bakerhughes.com",
     "bereich": "Rohstoffe",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Starke Wochenveraenderungen der aktiven Bohrlochzahl gelten als Angebotssignal fuer Oel/Gas (XLE, USO, UNG); sehr lange Historie seit 1944 (weit vor 1990).",
-    "grund": "Nur woechentliche Veroeffentlichung (Freitag), K1-Tagesabstand daher fraglich wie bei anderen abgelehnten Wochenreihen (z.B. eia_diesel_preis); als Ereignis-/Aenderungstag statt Dauerreihe zu pruefen, deshalb tiefe Prioritaet bis Machbarkeit (K1) geklaert ist.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Nur woechentliche Veroeffentlichung (Freitag), K1-Tagesabstand daher fraglich wie bei anderen abgelehnten Wochenreihen (z.B. eia_diesel_preis); als Ereignis-/Aenderungstag statt Dauerreihe zu pruefen, deshalb tiefe Prioritaet bis Machbarkeit (K1) geklaert ist. | Entscheid 2026-09-27T08:14:07Z: Baker-Hughes-Rig-Count erscheint strikt woechentlich (jeden Freitag, feste Periodizitaet), nicht wie ein Kalenderereignis mit im Voraus unregelmaessigem Termin (WASDE, CPI). Ein taegliches 'Aenderungstag'-Signal waere vom tatsaechlichen Wochenwert abhaengig, nicht rein terminlich, und der Datenpunkt selbst faellt nur einmal pro Woche an (7 Tage Abstand). Damit K1 (Median-Abstand hoechstens 3 Kalendertage bzw. verdichtbar) verletzt, wie bei eia_diesel_preis. Abgelehnt.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-27T08:14:07Z"
   },
   {
     "id": "bitcoin_funding_rate_perp",

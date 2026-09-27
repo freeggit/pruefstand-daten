@@ -1,0 +1,11 @@
+{
+  "wasde": {
+    "beschreibung": "1 am Veroeffentlichungstag des monatlichen USDA-WASDE-Berichts (World Agricultural Supply and Demand Estimates), sonst 0, fuer jeden Kalendertag ab 1973-09-17 bis heute. Termine aus der amtlichen ESMIS-Archivliste (National Agricultural Library) der tatsaechlich erschienenen Berichte.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Freigabekalender von USDA/OCE im Voraus je Jahr veroeffentlicht, z.B. https://www.cmegroup.com/articles/2026/understanding-major-usda-reports-in-2026.html; ESMIS-Archiv zeichnet die tatsaechlichen Erscheinungstage dieser im Voraus bekannten Termine auf)",
+    "quelle_url": "https://esmis.nal.usda.gov/publication/world-agricultural-supply-and-demand-estimates (amtliches Archiv, National Agricultural Library) und https://www.usda.gov/oce/commodity/wasde/ (Urheber-Release, aus dieser Umgebung mit HTTP 403 gesperrt)",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Archiv uebernommen)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
