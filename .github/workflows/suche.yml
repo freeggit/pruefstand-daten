@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "siegel_test.py", ".github/workflows/suche.yml"]
+    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", ".github/workflows/suche.yml"]
 permissions:
   contents: write
 concurrency:
@@ -45,7 +45,7 @@ jobs:
       - name: Suchlauf
         run: python suche_lauf.py
         env:
-          PS_PLACEBO: "100"
+          PS_PLACEBO: "200"
         timeout-minutes: 200
       - name: Einchecken auf claude/lernen
         run: |
