@@ -1461,11 +1461,12 @@
     "url": "https://www.cboe.com/us/options/market_statistics/daily/",
     "domain": "cboe.com",
     "bereich": "Stimmung",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Extreme Put/Call-Verhaeltnisse gelten in der Literatur als kurzfristiger Kontraindikator (Ueberreaktion); ergaenzt die bestehenden Stimmungsreihen (VIX-Familie, cboe_skew/vix3m/vix9d/vvix) um ein direktes Positionierungsmass statt implizite Volatilitaet.",
-    "grund": "Oeffentliche taegliche CBOE-Statistikseite ohne Login; Historientiefe (Beginn der taeglichen Reihe) noch zu pruefen.",
-    "aufgenommen_utc": "2026-09-26T09:40:47Z"
+    "grund": "Oeffentliche taegliche CBOE-Statistikseite ohne Login; Historientiefe (Beginn der taeglichen Reihe) noch zu pruefen. | Pruefung 2026-09-27: cdn.cboe.com/resources/options/volume_and_call_put_ratios/equitypc.csv (einzige noch erreichbare tagesgenaue CBOE-CSV-Reihe zu Put/Call, Total-Ratio-Archiv 1995-2003 ist nicht fortschreibend) endet am 2019-10-04 und wird seither nicht mehr aktualisiert -- bestaetigt die bekannte Ablehnung 'Cboe Put/Call-Archiv (nicht fortgeschrieben)'. K5 (laufend) verletzt.",
+    "aufgenommen_utc": "2026-09-26T09:40:47Z",
+    "geprueft_utc": "2026-09-27T00:14:53Z"
   },
   {
     "id": "baker_hughes_rig_count_aenderung",
@@ -1539,5 +1540,22 @@
     "mechanismus": "Regel L1 (Beinahe-Treffer): DCOILWTICO_d1 (tief) -> XLV, S0009/S0010 wiederholt mit t 3.5-4.07 unter der Huerde (5.24), aber unklarer oekonomischer Mechanismus (Oelpreisrueckgang -> Gesundheitssektor-Mehrrendite). Der OPEC-Referenzkorbpreis misst denselben Rohstoffmechanismus (globaler Rohoelpreis) unabhaengig von FRED/WTI-Notierung und Handelsplatz; pruefend, ob der Befund quellenunabhaengig repliziert oder nur ein Artefakt der WTI-Reihe ist.",
     "grund": "Regel L1: fuehrt NICHT zu einer Variante auf denselben Daten (kein neuer Horizont/Ziel/Schwelle), sondern zu diesem Katalogeintrag fuer eine unabhaengige Quelle desselben Mechanismus (Replikation von DCOILWTICO_d1->XLV, t 4.066 h5 / 3.542 h1, S0010). Oekonomische Plausibilitaet der Ziel-Branche (Gesundheit) bleibt fraglich; bei Replikationsversuch mitpruefen.",
     "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  },
+  {
+    "id": "fred_treasury_lang",
+    "name": "FRED US-Treasury-Konstantlaufzeitrenditen mit langer Historie (DGS2, DGS3MO)",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Zinsen",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Kurzfristige Bewegungen am kurzen und mittleren Ende der US-Zinskurve (2 Jahre, 3 Monate) verschieben Finanzierungskosten und Diskontsatz und wirken dadurch kurzfristig auf Finanzwerte, Anleihen und zinssensitive Sektoren (XLF, XLRE, TLT) gegenueber dem Weltindex; Zusatz 4 nennt DGS2/DGS3MO explizit als fehlende lange FRED-Tagesreihen.",
+    "grund": "K1 taeglich (Handelstage, Fed H.15), K2 Historie DGS2 ab 1976-06-01 (12576 Werte), DGS3MO ab 1981-09-01 (11266 Werte) -- beide deutlich vor 1990 (Zusatz 4 Prioritaet hoch), K3 offen (fredgraph.csv, kein Schluessel/Login), K4 punktgenau (Marktzins, nicht revidiert), K5 laufend (letzter Wert 2026-09-24), K6 neu (main-Spiegel enthaelt nur DGS10/T10Y2Y/BAA10Y, nicht DGS2/DGS3MO selbst; ergaenzt zugleich treasury_yield_curve, deren home.treasury.gov-CMT-Reihe erst ab ca. 1990 beginnt und deren y2/m3-Reihen bereits wegen Zusatz 3 ruhend sind), K7 Umfang (2 Reihen, je < 1 MB, Abruf < 5 s). Reihen aktiv: dgs2, dgs3mo (beide neu, keine Redundanzreduktion noetig, da nur 2 Reihen je Quelle).",
+    "reihen": [
+      "dgs2",
+      "dgs3mo"
+    ],
+    "aufgenommen_utc": "2026-09-27T00:14:53Z",
+    "geprueft_utc": "2026-09-27T00:14:53Z"
   }
 ]

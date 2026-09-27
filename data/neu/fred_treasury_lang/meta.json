@@ -1,0 +1,20 @@
+{
+  "dgs2": {
+    "beschreibung": "US-Treasury Konstantlaufzeitrendite, 2 Jahre (CMT, taeglicher Schlusswert, Fed H.15)",
+    "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Fed H.15 Release, taeglicher Schlusswert, gleichentags/naechster Geschaeftstag gespiegelt, geprueft 27.9.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Marktschlusswert, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "dgs3mo": {
+    "beschreibung": "US-Treasury Konstantlaufzeitrendite, 3 Monate (CMT, taeglicher Schlusswert, Fed H.15)",
+    "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Fed H.15 Release, taeglicher Schlusswert, gleichentags/naechster Geschaeftstag gespiegelt, geprueft 27.9.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglicher Marktschlusswert, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
