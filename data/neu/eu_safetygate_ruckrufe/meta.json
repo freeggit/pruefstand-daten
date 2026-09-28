@@ -1,0 +1,11 @@
+{
+  "meldungen": {
+    "beschreibung": "Taegliche Anzahl gefaehrlicher Nicht-Lebensmittel-Produkte, die im EU-Schnellwarnsystem Safety Gate (vormals RAPEX) gemeldet wurden. Safety Gate veroeffentlicht wochentlich (freitags) einen Sammelbericht mit allen Meldungen der Woche; die Anzahl Meldungen je Bericht wird auf den Publikationstag (Freitag) gebucht, alle uebrigen Wochentage sind echte Nullwerte (keine Schaetzung, an diesen Tagen erscheint kein Bericht). Ab 2015-12-31 (K2); die volle Historie beginnt 2005, wurde aber wegen K7 (3 Minuten je Abruf) nicht vollstaendig geholt. Mechanismus wie CPSC-Ruckrufe (cpsc_ruckrufe), aber unabhaengige EU-Behoerde/-Jurisdiktion: Sicherheits-/Qualitaetsprobleme betroffener Hersteller/Haendler koennen kurzfristig (1 bis 20 Handelstage) Vertrauen und Umsatz im Konsumsektor (XLY, XLP) gegenueber dem Weltindex belasten. Jeder Wochenbericht traegt ein Feld report_addendum fuer nachtraegliche Ergaenzungen zur selben Woche; in Stichproben (u.a. der aelteste und der juengste Bericht) war es leer, eine kuenftige Revision ist aber nicht ausgeschlossen.",
+    "einheit": "Anzahl Meldungen",
+    "publikation": "woechentlich: Safety Gate veroeffentlicht jeden Freitag einen Sammelbericht (Feld publicationDate der weeklyReport-Liste); einzelne Meldungen tragen kein eigenes Tagesdatum innerhalb der Woche",
+    "quelle_url": "https://ec.europa.eu/safety-gate-alerts/api/download/weeklyReport/list/xml/en",
+    "revidiert": false,
+    "verdichtung": "Summe der Meldungen (Anzahl <order>-Eintraege) je Wochenbericht, gebucht auf publicationDate (Freitag); uebrige Wochentage = 0",
+    "verfuegbar_nach_tagen": 0
+  }
+}

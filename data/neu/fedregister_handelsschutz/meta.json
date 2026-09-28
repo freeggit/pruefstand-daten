@@ -1,0 +1,11 @@
+{
+  "verfuegungen": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Anordnungen, vorlaeufige/endgueltige Feststellungen, Untersuchungs-eroeffnungen) der US-Handelsschutzbehoerden (International Trade Administration, International Trade Commission) mit Volltextsuche 'antidumping OR countervailing', 0 an Tagen ohne Veroeffentlichung.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=international-trade-administration&conditions%5Bagencies%5D%5B%5D=international-trade-commission&conditions%5Bterm%5D=antidumping+OR+countervailing",
+    "revidiert": false,
+    "verdichtung": "Anzahl Treffer je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

@@ -1996,11 +1996,24 @@
   "url": "https://ec.europa.eu/safety-gate-alerts/screen/api/rest/notification/list",
   "domain": "ec.europa.eu",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "hoch",
   "mechanismus": "Das EU-Schnellwarnsystem für gefährliche Verbraucherprodukte (frühere RAPEX, seit 2024 Safety Gate) misst denselben Mechanismus wie CPSC-Rückrufe (Sicherheits-/Qualitätsprobleme betroffener Hersteller belasten kurzfristig Vertrauen und Umsatz im Konsumsektor XLY/XLP gegenüber dem Weltindex), aber für den EU-Markt und unabhängig von der US-Behörde CPSC erhoben.",
-  "grund": "Regel L1 (Beinahe-Treffer): neu_cpsc_ruckrufe_ruckrufe_stand (sprung_auf -> ff_durbl, 1 Tag) erreichte in S0013 t 3.71, über der Hürde 3.5, aber unter der Suchhürde 4.23 -- kein Fund, aber Pflicht zu einem Katalog-Eintrag für eine unabhängige Quelle, die denselben Rückruf-Mechanismus misst. EU Safety Gate ist eine andere Behörde/Jurisdiktion als CPSC (kein Doppel), öffentlich ohne Login, wöchentliche Meldungslisten seit 2005 abrufbar. Nächster Schritt: K1-K7-Prüfung durch den Scout. | Rueckmeldung 2026-09-28T12:45:00Z: Die Angular-Anwendung (ec.europa.eu/safety-gate-alerts) hat kein Standard-REST-Verzeichnis; das im Katalog vermerkte url-Feld (screen/api/rest/notification/list) existiert nicht mehr (404). Aus dem Frontend-JS-Bundle (main-*.js, chunk-AR65AS64.js, chunk-LT65EEDW.js) rekonstruiert: Suchendpunkt ist POST public/api/search (Klartext im Code: this.baseUrl='public/api/'; this.http.post(this.baseUrl+'search', ...)); daneben public/api/notification/allId/ (nur POST/OPTIONS laut Allow-Header), public/api/getSearchCriteria?token=... und ein Export public/api/download/search/xml/. Direkte Aufrufe mit plausiblen JSON-Bodies (publicationDateFrom/To, sortBy, page, size) liefern uneinheitlich HTTP 405 (Allow-Header wechselt zwischen GET und POST je nach Pfadvariante) bzw. eine Dynatrace-RUM-Platzhalterseite statt Nutzdaten -- Hinweis auf botschutzbedingte Anfrage-Filterung, nicht auf einen einfachen Tippfehler in der URL. Kein Umgehungsversuch unternommen (kein Browser-Fingerprint-Nachbau, keine Session-Cookies erschlichen -- waere Sperrenumgehung). Status bleibt Kandidat (hoch), kein HTTP 403/429 beobachtet, daher nicht 'fehler'. Naechster Schritt: chunk-SODJ6Q7P.js (von chunk-LT65EEDW.js importiert) nach der exakten Serialisierung der Suchkriterien (SEARCH_KEY_VALUE_SEPARATOR '|:|' etc.) durchsuchen, oder pruefen, ob der GET-Export public/api/download/search/xml mit Token aus getSearchCriteria ohne Formularinteraktion erreichbar ist.",
-  "aufgenommen_utc": "2026-09-28T09:50:00Z"
+  "grund": "Zusatz 6 (27.9.2026), Firmenereignisse/Ruckrufe, Regel L1 Beinahe-Treffer-Folgeeintrag. Dokumentierter Export gefunden (data.europa.eu Datensatz 'rapex-rapid-alert-system-non-food', Distribution 'Weekly Reports - XML format'): https://ec.europa.eu/safety-gate-alerts/api/download/weeklyReport/list/xml/en liefert die Liste aller Wochenberichte 2005-heute mit Detail-URLs; die zuvor im Katalog vermerkten 403/405-Befunde betrafen einen anderen, undokumentierten Endpunkt (public/api/search) und wurden nicht weiterverfolgt (Sperrenumgehung verboten) -- der offizielle Datensatz-Export war die korrekte, nicht gesperrte Route. K1 taeglich: Datei enthaelt einen Wert je Kalendertag (Zero-Fill), median_abstand_tage=1.0 wie bei cpsc_ruckrufe/fda_ruckrufe; echte Meldefrequenz ist woechentlich (Freitag), siehe Feld publikation. K2 Historie: erster Wert 2016-01-08 (>=31.12.2015 gefordert), 3915 Zeilen, 550 Wochenberichte. Volle Historie ab 2005 (weitere ca. 567 Wochenberichte) wuerde K7 (3 Minuten) verletzen, da jeder Wochenbericht einen eigenen ~120-190 KB grossen Detailabruf braucht; deshalb bewusst auf 2015-12-31 begrenzt (deckt K2 knapp). K3 offen: oeffentlicher Datensatz-Export der Europaeischen Kommission ohne Login/Schluessel, data.europa.eu-Lizenzhinweis erlaubt Weiterverwendung. K4 punktgenau: Datum = publicationDate des Wochenberichts (Bekanntgabetag), report_addendum-Feld fuer Nachtraege in Stichproben (aeltester + juengster Bericht) leer; revidiert=False, moegliche kuenftige Nachtraege im meta.json vermerkt. K5 laufend: letzter Wert 2026-09-25 (3 Tage vor Lauf), Berichte erscheinen weiterhin woechentlich. K6 neu: keine EU-Ruckrufreihe im Spiegel, unabhaengig von CPSC (K6-Regel L1). K7 Umfang: 9.5 KB komprimiert, Abruf 83-85 Sek (550 Detailabrufe mit ThreadPoolExecutor, 10 parallele Anfragen, sequentiell waeren es >20 Minuten gewesen). Plausibilitaet: Min 0, Max 209 (Sammelbericht mit vielen Einzelmeldungen), Anteil gleicher Folgewerte 0.719 (vergleichbar mit fda_ruckrufe 0.776 und cpsc_ruckrufe 0.664, durch die vielen Nulltage zwischen den woechentlichen Berichten erklaerbar), keine Anomalie.",
+  "aufgenommen_utc": "2026-09-28T09:50:00Z",
+  "reihen": [
+   {
+    "reihe": "meldungen",
+    "zeilen": 3914,
+    "erste": "2016-01-08",
+    "letzte": "2026-09-25",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.719,
+    "min": 0.0,
+    "max": 209.0
+   }
+  ],
+  "geprueft_utc": "2026-09-28T16:22:50Z"
  },
  {
   "id": "usitc_handelsschutz_verfuegungen",
@@ -2008,11 +2021,12 @@
   "url": "https://www.usitc.gov/trade_remedy/documents_search",
   "domain": "usitc.gov",
   "bereich": "Handelspolitik",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Neue Antidumping- oder Ausgleichszoll-Verfügungen der USITC/des US-Handelsministeriums verändern kurzfristig (1 bis 20 Handelstage) die Kostenlage importexponierter Sektoren (z.B. XLB, XLI) gegenüber dem Weltindex, analog zur Ereignisstudien-Literatur zu Handelspolitik-Ankündigungen (z.B. Sektionen-301/232-Zölle 2018/19).",
-  "grund": "Neuer Bereich «Handelspolitik», bisher im Katalog nicht vertreten (Vorschlag Punkt 5 im Ablauf). Öffentliche Verfügungsdatenbank ohne Login; Historie reicht laut USITC-Dokumentation bis in die 1980er Jahre zurück (Trade Act 1979) -- deckt damit auch die von Zusatz 4 gewünschte Historie vor 1990 ab. Nächster Schritt: K1-K7-Prüfung, insbesondere ob Volltext-Verfügungsdaten strukturiert (nicht nur als PDF) abrufbar sind.",
-  "aufgenommen_utc": "2026-09-28T09:50:00Z"
+  "grund": "Neuer Bereich «Handelspolitik», bisher im Katalog nicht vertreten (Vorschlag Punkt 5 im Ablauf). Öffentliche Verfügungsdatenbank ohne Login; Historie reicht laut USITC-Dokumentation bis in die 1980er Jahre zurück (Trade Act 1979) -- deckt damit auch die von Zusatz 4 gewünschte Historie vor 1990 ab. Nächster Schritt: K1-K7-Prüfung, insbesondere ob Volltext-Verfügungsdaten strukturiert (nicht nur als PDF) abrufbar sind. | Rueckmeldung 2026-09-28: usitc.gov/trade_remedy/documents_search und usitc.gov/investigations/title7 liefern beide HTTP 404, die Website wurde offenbar umstrukturiert; kein Ersatz-Endpunkt in zumutbarer Zeit gefunden. Mechanismus stattdessen ueber die bereits bewaehrte Federal-Register-API abgedeckt: neue Quelle fedregister_handelsschutz (International Trade Administration/Commission, Volltextsuche antidumping/countervailing) ersetzt diesen Kandidaten und deckt Historie ab 1994 ab (Zusatz 4).",
+  "aufgenommen_utc": "2026-09-28T09:50:00Z",
+  "geprueft_utc": "2026-09-28T16:25:02Z"
  },
  {
   "id": "cfpb_verbraucherbeschwerden",
@@ -2026,5 +2040,30 @@
   "grund": "Firmenereignisse bleiben laut Zusatz 8 erste Priorität. Öffentliche API ohne Login/Schlüssel, Historie seit 2011, tägliche Einreichungsdaten strukturiert abrufbar (date_received-Feld). Kein Doppel zu bestehenden Firmenereignis-Einträgen (fdic_bankausfaelle misst Bankschliessungen, nicht laufende Beschwerden). Nächster Schritt: K1-K7-Prüfung, insbesondere Publikationsverzögerung (date_received vs. tatsächliche Veröffentlichung in der API). | Pruefung 2026-09-28T12:45:00Z: API-Basis bestaetigt erreichbar unter https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=.. (kein Login/Schluessel, JSON, Feld date_received, Historie ab 2011-12-01, taeglich >500 Faelle moeglich, taeglicher Bulk-Export complaints.csv.zip ca. 350 MB unter files.consumerfinance.gov ebenfalls oeffentlich und schnell -- K1/K2/K3/K5/K7 waeren erfuellbar). Abgelehnt wegen K4 (punktgenau, keine Revision): die CFPB veroeffentlicht eine Beschwerde erst, nachdem die betroffene Firma geantwortet hat oder 15 Tage vergangen sind: bei strittigen oder an andere Behoerden weitergeleiteten Faellen kann die Veroeffentlichung deutlich spaeter erfolgen. Der Zaehlwert fuer einen bereits gemeldeten Tag (date_received) kann daher bei einem spaeteren Neuabruf der Gesamtdatei rueckwirkend steigen, wenn verzoegert veroeffentlichte Beschwerden mit aelterem date_received hinzukommen -- das ist eine Revision im Sinne von K4, kein reiner Publikationsverzug wie bei taeglich fixierten Zaehlreihen (z.B. cpsc_ruckrufe, fda_ruckrufe). Ohne mehrwoechige Parallelabrufe zur empirischen Pruefung der Stabilitaet nicht aufnehmbar; Historie wird nicht abgelegt.",
   "aufgenommen_utc": "2026-09-28T09:50:00Z",
   "geprueft_utc": "2026-09-28T12:45:00Z"
+ },
+ {
+  "id": "fedregister_handelsschutz",
+  "name": "Federal Register: taegliche Anzahl Antidumping-/Ausgleichszoll-Dokumente (ITA/ITC)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Handelspolitik",
+  "status": "aktiv",
+  "prioritaet": "normal",
+  "mechanismus": "Neue Anordnungen, vorlaeufige/endgueltige Feststellungen und Untersuchungs-eroeffnungen zu Antidumping- und Ausgleichszollmassnahmen des US-Handels-ministeriums (International Trade Administration) und der USITC im Federal Register veraendern kurzfristig (1 bis 20 Handelstage) die Kostenlage importexponierter Sektoren (v.a. Grundstoffe XLB, Industrie XLI) gegenueber dem Weltindex, analog zur Ereignisstudien-Literatur zu Handelspolitik-Ankuendigungen (z.B. Sektionen-301/232-Zoelle 2018/19).",
+  "grund": "Ersetzt den gescheiterten Kandidaten usitc_handelsschutz_verfuegungen (usitc.gov liefert 404). Nutzt dieselbe bereits im Katalog bewaehrte Federal-Register-API wie fedregister_aufsicht, hier mit Agentur-Filter international-trade-administration/international-trade-commission und Volltextsuche 'antidumping OR countervailing' statt Gesamt-Dokumentzahl je Agentur -- damit keine Redundanz-Variante von fedregister_aufsicht (dessen 3 Reihen sec/ftc/antitrust sind unter Zusatz 3 bereits am Limit von 3 aktiven Reihen je Quelle), sondern eine eigene Quelle mit eigenem Mechanismus (Handelspolitik statt Finanz-/Wettbewerbsaufsicht). K1 taeglich: median_abstand_tage=1.0 (Zero-Fill), echte Publikation taeglich an US-Bankarbeitstagen. K2 Historie: erster Wert 1994-01-01 (Beginn der strukturierten Federal-Register-API, deckt Zusatz-4-Schwerpunkt Historie vor 1995 weitgehend ab), 11959 Zeilen. K3 offen: oeffentliche federalregister.gov-API ohne Login/Schluessel, Nutzungsbedingungen erlauben Abruf. K4 punktgenau: Publikationsdatum im Federal Register wird nicht rueckwirkend geaendert. K5 laufend: letzter Wert 2026-09-28 (Tag des Laufs selbst), Federal Register erscheint jeden US-Bankarbeitstag weiter. K6 neu: kein Handelspolitik-Feed im Spiegel. K7 Umfang: Abruf ca. 16 Sek (33 Jahresabfragen, je maximal 1-2 Seiten a 1000 Datensaetze), Datei deutlich unter 20 MB. Plausibilitaet: Min 0, Max 28 (Tage mit vielen laenderspezifischen Einzelfeststellungen im selben Verfahren, plausibel), Anteil gleicher Folgewerte 0.380, keine Anomalie.",
+  "reihen": [
+   {
+    "reihe": "verfuegungen",
+    "zeilen": 11959,
+    "erste": "1994-01-01",
+    "letzte": "2026-09-28",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.38,
+    "min": 0.0,
+    "max": 28.0
+   }
+  ],
+  "aufgenommen_utc": "2026-09-28T16:25:02Z",
+  "geprueft_utc": "2026-09-28T16:25:02Z"
  }
 ]
