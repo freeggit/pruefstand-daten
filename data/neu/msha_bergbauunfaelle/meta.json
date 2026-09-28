@@ -1,0 +1,20 @@
+{
+  "fatal": {
+    "beschreibung": "Taegliche Anzahl toedlicher MSHA-Bergbauunfaelle (DEGREE_INJURY enthaelt 'FATAL'), Teilmenge von gesamt; Datum = ACCIDENT_DT",
+    "einheit": "Anzahl toedliche Unfaelle",
+    "publikation": "verzoegert: Betreiber muessen Unfaelle nach 30 CFR 50.20 innerhalb von 10 Arbeitstagen melden (toedliche/schwere Unfaelle sofort telefonisch), der oeffentliche Datensatz wird von der MSHA regelmaessig aktualisiert (juengster Wert im Abruf lag 6 Tage zurueck); verfuegbar_nach_tagen konservativ auf 10 gesetzt, um die maximale Meldefrist abzudecken",
+    "quelle_url": "https://www.msha.gov/data-and-reports/data-sources-and-calculators/data-resources/mdsrg/accident-injuries-and-illnesses-data-set",
+    "revidiert": "einzelne Unfaelle koennen mit Verzug bis zur gesetzlichen Meldefrist nachgetragen werden; bereits erfasste Datensaetze (Unfalldatum, Schweregrad) werden im Zuge der Untersuchung selten nachtraeglich korrigiert, Aenderungen an sehr alten Tagen sind nicht zu erwarten",
+    "verdichtung": "Anzahl toedliche Unfaelle je Kalendertag (ACCIDENT_DT)",
+    "verfuegbar_nach_tagen": 10
+  },
+  "gesamt": {
+    "beschreibung": "Taegliche Anzahl bei der US-Bergbauaufsicht MSHA gemeldeter Unfaelle/Verletzungen in US-Bergwerken und -Aufbereitungsanlagen (Form 7000-1, Accident Injuries Data Set), Datum = ACCIDENT_DT (Unfalltag), 0 an Tagen ohne Meldung",
+    "einheit": "Anzahl Unfaelle",
+    "publikation": "verzoegert: Betreiber muessen Unfaelle nach 30 CFR 50.20 innerhalb von 10 Arbeitstagen melden (toedliche/schwere Unfaelle sofort telefonisch), der oeffentliche Datensatz wird von der MSHA regelmaessig aktualisiert (juengster Wert im Abruf lag 6 Tage zurueck); verfuegbar_nach_tagen konservativ auf 10 gesetzt, um die maximale Meldefrist abzudecken",
+    "quelle_url": "https://www.msha.gov/data-and-reports/data-sources-and-calculators/data-resources/mdsrg/accident-injuries-and-illnesses-data-set",
+    "revidiert": "einzelne Unfaelle koennen mit Verzug bis zur gesetzlichen Meldefrist nachgetragen werden; bereits erfasste Datensaetze (Unfalldatum, Schweregrad) werden im Zuge der Untersuchung selten nachtraeglich korrigiert, Aenderungen an sehr alten Tagen sind nicht zu erwarten",
+    "verdichtung": "Anzahl Unfaelle je Kalendertag (ACCIDENT_DT)",
+    "verfuegbar_nach_tagen": 10
+  }
+}

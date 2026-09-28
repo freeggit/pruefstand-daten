@@ -1919,5 +1919,75 @@
     "grund": "Zusatz 6 (27.9.2026), Prioritaet Firmenereignisse: NHTSA-Rueckrufe (kein Bulk-Flatfile ohne Fahrzeugparameter erreichbar, nur Einzelabfrage je Marke/Modell -- nicht praktikabel), OSHA-Schwerverletzungsberichte (osha.gov 403, Bot-Schutz wie sec.gov) und Nasdaq-Ergebniskalender (nur Tagesabfragen, ~4000 Einzelabrufe fuer Historie seit 2015 noetig, sprengt K7/180s) als Kandidaten geprueft und verworfen. Federal-Register-API (federalregister.gov, oeffentlich, ohne Schluessel, per_page/Jahres-Paginierung) liefert strukturierte Publikationsdaten ab 1994 -- passt zugleich zu Zusatz 4 (Historie vor 1995). Geprueft 2026-09-28T04:26:45Z: Abruf aller drei Reihen 51s (K7 OK, weit unter 3 Min, Dateien 28-35 KB je Reihe, weit unter 20 MB). K1: jeder Kalendertag 1994-01-01 bis heute befuellt (0 an Tagen ohne Veroeffentlichung, wie usgs_erdbeben/ntsb_luftfahrtunfaelle), Median-Abstand 1 Tag. K2: erster Wert 1994-01-01, >11900 Zeilen je Reihe. K3: oeffentliche REST-API, kein Login, kein Schluessel; federalregister.gov Nutzungsbedingungen erlauben programmatischen Zugriff (offizielle 'Developer'-API). K4: Federal-Register-Publikationsdatum ist nach Druck endgueltig, keine rueckwirkende Korrektur des Zaehltags (Korrekturen erscheinen als neues Dokument mit eigenem Datum). K5: letzter Wert sec 2026-09-28, ftc 2026-09-24, antitrust 2026-09-18 (Grenzfall genau 10 Tage, naechster Lauf pruefen). K6: neue Quelle, nicht im Spiegel. K7: OK (siehe oben). Kennzahlen: sec min 0 max 78 Anteil gleicher Folgewerte 21.4% Anteil Null 33.7%; ftc min 0 max 19 Anteil gleich 65.7% Anteil Null 79.4%; antitrust min 0 max 41 Anteil gleich 75.8% Anteil Null 86.2% -- hohe Gleichanteile sind fuer duenn besetzte Ereigniszaehlreihen (wie fda_ruckrufe/cpsc_ruckrufe) erwartungsgemaess, keine Verdachtsanomalie (viele Tage mit 0 Publikationen, v.a. Wochenenden/Feiertage). Zusatz 3: 3 Reihen (SEC/FTC/Antitrust) sind klar verschiedene Behoerden/Zaehlungen, keine Varianten derselben Groesse -- alle 3 aktiv, kein Redundanzabbau noetig.",
     "aufgenommen_utc": "2026-09-28T04:26:45Z",
     "geprueft_utc": "2026-09-28T04:26:45Z"
+  },
+  {
+    "id": "nhtsa_ruckrufe",
+    "name": "NHTSA-Fahrzeugrueckrufe, Tageszahl und betroffene Einheiten",
+    "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+    "domain": "static.nhtsa.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "mechanismus": "Sicherheitsrueckrufe von Fahrzeugen und Fahrzeugausruestung sind oeffentliche Qualitaets-/Kostensignale grosser Autohersteller und Zulieferer; eine Haeufung grosser Kampagnen (z.B. Takata-Airbags, Zuendschloss-Rueckrufe) kann kurzfristig (1 bis 20 Handelstage) Nachrichtenlage, Garantiekosten-Erwartungen und Kursentwicklung des Automobil-/Industriesektors (naeherungsweise XLY/XLI) gegenueber dem Weltindex beeinflussen.",
+    "grund": "Zusatz 6 (27.9.2026), Prioritaet 5 (weitere Firmenereignisse mit Mechanismus). K1 taeglich: nullgefuellte Tagesreihe (Datum=RCDATE, Eingang des Part-573-Defektberichts bei der NHTSA), Median-Abstand 1 Tag. K2 Historie: erster Wert 1966-01-19, 22168 Zeilen -- weit vor 1990 (Zusatz 4 E11). K3 offen: oeffentliche Flat-File-Downloads der NHTSA Office of Defects Investigation (static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_PRE_2010.zip und FLAT_RCL_POST_2010.zip) ohne Login/Schluessel, TAB-getrennte Rohdaten seit 1966. K4 punktgenau: RCDATE (Berichtseingang) wird nach Erfassung nicht rueckwirkend geaendert; POTAFF (potenziell betroffene Einheiten) je Kampagne konstant. K5 laufend: letzter Kampagnen-Tag 2026-09-23 (5 Tage alt), Zero-Fill bis heute; Publikationslage gemessen: RCDATE gegen DATEA (Datensatz-Erstellung) auf rd. 15000 Kampagnen (POST_2010) verglichen, Median 1 Tag, 84% <=3 Tage -- verfuegbar_nach_tagen=3 (Zusatz 5, Beleg im meta.json). K6 neu: kein Rueckruf-Feed im Spiegel; ergaenzt bestehende Firmenereignis-Reihen (fda_ruckrufe/cpsc_ruckrufe decken Arzneien/Lebensmittel/Konsumgueter ab, nicht Fahrzeuge). K7 Umfang: 60 KB + 84 KB komprimiert, Abruf (2 ZIP-Downloads ~15+7 MB, Parsing von rd. 330000 Rohzeilen) unter 10 Sek. Plausibilitaet: anzahl Anteil gleicher Folgewerte 0.391 (Nulltage an Wochenenden/Feiertagen, wie bei fda_ruckrufe/fdic_bankausfaelle), Max 42 Kampagnen an einem Tag plausibel (Sammelmeldetage); einheiten_betroffen Max 33.8 Mio (Takata-Airbag-Grossrueckruf 2014-2016 dokumentiert), keine Anomalie. Je Kampagne (CAMPNO) einmal gezaehlt, da eine Kampagne tausende Modellzeilen mit identischem RCDATE/POTAFF haben kann (z.B. 21V058000 mit 18662 Zeilen).",
+    "reihen": [
+      {
+        "reihe": "anzahl",
+        "zeilen": 22168,
+        "erste": "1966-01-19",
+        "letzte": "2026-09-28",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.391,
+        "min": 0.0,
+        "max": 42.0
+      },
+      {
+        "reihe": "einheiten_betroffen",
+        "zeilen": 22168,
+        "erste": "1966-01-19",
+        "letzte": "2026-09-28",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.333,
+        "min": 0.0,
+        "max": 33809701.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-28T08:18:40Z",
+    "geprueft_utc": "2026-09-28T08:18:40Z",
+    "prioritaet": "hoch"
+  },
+  {
+    "id": "msha_bergbauunfaelle",
+    "name": "MSHA-Bergbauunfaelle, Tageszahl gesamt und toedlich",
+    "url": "https://arlweb.msha.gov/opengovernmentdata/DataSets/Accidents.zip",
+    "domain": "arlweb.msha.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "mechanismus": "Unfaelle und insbesondere toedliche Unfaelle in US-Bergwerken fuehren haeufig zu behoerdlichen Stilllegungen, verschaerften Inspektionen und Produktionsausfaellen bei Bergbau-/Grundstoffunternehmen; eine Haeufung kann kurzfristig (1 bis 20 Handelstage) Angebot und Kursentwicklung des Grundstoffsektors (naeherungsweise XLB) gegenueber dem Weltindex beeinflussen (z.B. Upper Big Branch 2010, danach verschaerfte MSHA-Aufsicht und Stilllegungen bei Massey Energy).",
+    "grund": "Zusatz 6 (27.9.2026), Prioritaet 5 (weitere Firmenereignisse mit Mechanismus). K1 taeglich: nullgefuellte Tagesreihe (Datum=ACCIDENT_DT), Median-Abstand 1 Tag. K2 Historie: erster Wert 2000-01-01, 9762 Zeilen -- erfuellt (Beginn nach 1995, daher keine Prioritaet 'hoch' nach Zusatz 4, aber Zusatz 6 stellt Firmenereignisse klar vor Historientiefe). K3 offen: oeffentlicher Flat-File-Download der MSHA (arlweb.msha.gov/opengovernmentdata/DataSets/Accidents.zip, Open Government Initiative) ohne Login/Schluessel. K4 punktgenau: Unfalldatum/Schweregrad nach Meldefrist praktisch stabil, siehe meta.json 'revidiert'. K5 laufend: letzter Eintrag 2026-09-22 (6 Tage alt), Zero-Fill bis heute; verfuegbar_nach_tagen=10 nach 30 CFR 50.20 Meldefrist (Beleg in meta.json/publikation). K6 neu: kein Bergbau-Unfallfeed im Spiegel; ergaenzt ntsb_luftfahrtunfaelle (Luftfahrt) und fdic_bankausfaelle (Finanzsektor) um Grundstoffsektor. K7 Umfang: 32 KB + 24 KB komprimiert, Abruf (1 ZIP-Download 52 MB, Parsing von 275067 Rohzeilen) unter 5 Sek. Plausibilitaet: gesamt Anteil gleicher Folgewerte 0.035 (fast immer Werktage mit Unfaellen, plausibel bei taeglichem Bergbaubetrieb), Max 96/Tag; fatal Anteil gleicher Folgewerte 0.805 (ueberwiegend Nulltage, seltenes Ereignis, wie bei ntsb_luftfahrtunfaelle/fdic_bankausfaelle), Max 29 an einem Tag stimmt mit dem dokumentierten Grubenunglueck Upper Big Branch Mine (2010-04-05, 29 Tote) ueberein -- Plausibilitaetscheck bestanden.",
+    "reihen": [
+      {
+        "reihe": "gesamt",
+        "zeilen": 9762,
+        "erste": "2000-01-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.035,
+        "min": 0.0,
+        "max": 96.0
+      },
+      {
+        "reihe": "fatal",
+        "zeilen": 9762,
+        "erste": "2000-01-01",
+        "letzte": "2026-09-22",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.805,
+        "min": 0.0,
+        "max": 29.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-28T08:20:25Z",
+    "geprueft_utc": "2026-09-28T08:20:25Z",
+    "prioritaet": "normal"
   }
 ]

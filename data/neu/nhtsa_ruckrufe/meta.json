@@ -1,0 +1,20 @@
+{
+  "anzahl": {
+    "beschreibung": "Taegliche Anzahl neuer NHTSA-Fahrzeug-/Ausruestungsrueckrufkampagnen (Office of Defects Investigation, Flat File RCL), je Kampagnennummer (CAMPNO) einmal gezaehlt, Datum = RCDATE (Eingang des Part-573-Defekt-/Non-Compliance-Berichts bei der NHTSA), 0 an Tagen ohne neue Kampagne. Mechanismus: gehaeufte Sicherheitsrueckrufe grosser Autohersteller koennen kurzfristig auf Qualitaets-/Kostenprobleme im Automobilsektor hindeuten (naeherungsweise XLY/XLI).",
+    "einheit": "Anzahl Rueckrufkampagnen",
+    "publikation": "taeglich: RCDATE (Eingang des Part-573-Defektberichts bei der NHTSA) gegen DATEA (Erstellungsdatum des oeffentlichen Datensatzes) auf einer Stichprobe von rd. 15000 Kampagnen (POST_2010) verglichen: Median 1 Tag, 84% innerhalb 3 Tagen; verfuegbar_nach_tagen konservativ auf 3 gesetzt",
+    "quelle_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+    "revidiert": false,
+    "verdichtung": "Anzahl Kampagnen je Kalendertag (RCDATE), CAMPNO-dedupliziert",
+    "verfuegbar_nach_tagen": 3
+  },
+  "einheiten_betroffen": {
+    "beschreibung": "Tagessumme der von NHTSA-Rueckrufkampagnen potenziell betroffenen Einheiten (Feld POTAFF), je Kampagnennummer einmal gezaehlt, Datum = RCDATE. 0 an Tagen ohne neue Kampagne.",
+    "einheit": "Anzahl potenziell betroffener Einheiten",
+    "publikation": "taeglich: RCDATE (Eingang des Part-573-Defektberichts bei der NHTSA) gegen DATEA (Erstellungsdatum des oeffentlichen Datensatzes) auf einer Stichprobe von rd. 15000 Kampagnen (POST_2010) verglichen: Median 1 Tag, 84% innerhalb 3 Tagen; verfuegbar_nach_tagen konservativ auf 3 gesetzt",
+    "quelle_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+    "revidiert": false,
+    "verdichtung": "Summe POTAFF je Kalendertag (RCDATE), CAMPNO-dedupliziert",
+    "verfuegbar_nach_tagen": 3
+  }
+}
