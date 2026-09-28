@@ -1,0 +1,29 @@
+{
+  "antitrust": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Regeln, Vorschlaege, Bekanntmachungen) der Antitrust Division (US-Justizministerium), 0 an Tagen ohne Veroeffentlichung.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=antitrust-division",
+    "revidiert": false,
+    "verdichtung": "Anzahl Dokumente je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "ftc": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Regeln, Vorschlaege, Bekanntmachungen) der Federal Trade Commission, 0 an Tagen ohne Veroeffentlichung.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=federal-trade-commission",
+    "revidiert": false,
+    "verdichtung": "Anzahl Dokumente je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "sec": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Regeln, Vorschlaege, Bekanntmachungen) der Securities and Exchange Commission, 0 an Tagen ohne Veroeffentlichung.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=securities-and-exchange-commission",
+    "revidiert": false,
+    "verdichtung": "Anzahl Dokumente je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

@@ -1167,9 +1167,9 @@
     "status": "kandidat",
     "prioritaet": "normal",
     "mechanismus": "Chinesische Leitzinsaenderungen (LPR/MLF) koennen kurzfristig Emerging-Markets- und China-Engagement (FXI, EEM) sowie global Rohstoffe gegenueber dem Weltindex bewegen, analog zu den bereits vorhandenen Leitzins-Aenderungstagen FOMC/EZB.",
-    "grund": "Ergaenzt bestehende leitzins_aenderungstage (bisher nur FOMC/EZB) um eine dritte grosse Notenbank; PBoC veroeffentlicht Ankuendigungen oeffentlich, Terminliste seit LPR-Reform 2019 gut dokumentiert, fruehere Referenzzins-Aenderungen seit 1990er Jahren recherchierbar. | Fortschritt 2026-09-25T20:13:07Z: Anders als bei FOMC/EZB (leitzins_aenderungstage, abgeleitet aus taeglichen FRED-Reihen DFEDTARU/ECBDFR) gibt es fuer die PBoC-Leitzinsen (LPR 1J/5J, MLF) keine oeffentliche taegliche FRED-Zeitreihe (FRED fuehrt fuer China nur monatliche Reihen wie INTDSRCNM193N). Offizielle chinamoney.org.cn/pbc.gov.cn-Quellen erfordern TLS mit 'legacy server connect' (funktioniert per urllib, siehe Skriptnotiz), das JSON-Endpoint chinamoney.com.cn/ags/ms/cm-u-bk-currency/LprHis liefert aber nur ein rollierendes ca. 12-Monats-Fenster unabhaengig von Datumsparametern -- keine vollstaendige Historie seit Reform 2019-08-20 auffindbar ohne Drittanbieter-Aggregatoren (K3-Bedenken). Naechster Schritt: pbc.gov.cn-Archivseiten (nicht chinamoney-Widget) nach einer vollstaendigen amtlichen Ankuendigungsliste seit 2019 durchsuchen, sonst K2/K3 als 'abgelehnt' vermerken. Noch nicht implementiert, um keine unvollstaendige/luckenhafte Reihe aufzunehmen (Zusatz 2: Qualitaet vor Menge).",
+    "grund": "Ergaenzt bestehende leitzins_aenderungstage (bisher nur FOMC/EZB) um eine dritte grosse Notenbank; PBoC veroeffentlicht Ankuendigungen oeffentlich, Terminliste seit LPR-Reform 2019 gut dokumentiert, fruehere Referenzzins-Aenderungen seit 1990er Jahren recherchierbar. | Fortschritt 2026-09-25T20:13:07Z: Anders als bei FOMC/EZB (leitzins_aenderungstage, abgeleitet aus taeglichen FRED-Reihen DFEDTARU/ECBDFR) gibt es fuer die PBoC-Leitzinsen (LPR 1J/5J, MLF) keine oeffentliche taegliche FRED-Zeitreihe (FRED fuehrt fuer China nur monatliche Reihen wie INTDSRCNM193N). Offizielle chinamoney.org.cn/pbc.gov.cn-Quellen erfordern TLS mit 'legacy server connect' (funktioniert per urllib, siehe Skriptnotiz), das JSON-Endpoint chinamoney.com.cn/ags/ms/cm-u-bk-currency/LprHis liefert aber nur ein rollierendes ca. 12-Monats-Fenster unabhaengig von Datumsparametern -- keine vollstaendige Historie seit Reform 2019-08-20 auffindbar ohne Drittanbieter-Aggregatoren (K3-Bedenken). Naechster Schritt: pbc.gov.cn-Archivseiten (nicht chinamoney-Widget) nach einer vollstaendigen amtlichen Ankuendigungsliste seit 2019 durchsuchen, sonst K2/K3 als 'abgelehnt' vermerken. Noch nicht implementiert, um keine unvollstaendige/luckenhafte Reihe aufzunehmen (Zusatz 2: Qualitaet vor Menge). | Kurzpruefung 2026-09-28T04:21:52Z: pbc.gov.cn/en/.../index.html liefert HTTP 302 (Weiterleitung, Seite umstrukturiert), chinamoney LprHis-Endpoint weiterhin nur rollierendes Fenster. Keine vollstaendige amtliche Terminliste seit 2019 in dieser Kurzpruefung gefunden; Status bleibt Kandidat, naechster Lauf: Weiterleitungsziel von pbc.gov.cn folgen und Archivstruktur pruefen.",
     "aufgenommen_utc": "2026-09-25T09:40:00Z",
-    "geprueft_utc": "2026-09-25T20:13:07Z"
+    "geprueft_utc": "2026-09-28T04:21:52Z"
   },
   {
     "id": "fed_balance_sheet_h41",
@@ -1515,9 +1515,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Die Funding Rate misst das Ungleichgewicht gehebelter Long/Short-Positionen bei Bitcoin-Perpetual-Futures; extreme Werte gehen in der On-Chain-/Derivate-Literatur oft kurzfristigen Korrekturen voraus. Ergaenzt bitcoin_onchain (Netzwerkaktivitaet) um ein Positionierungsmass.",
-    "grund": "Oeffentliche, schluessellose Markt-API (Binance Futures), aber erst seit Einfuehrung von Perpetuals (ca. 2019) verfuegbar -- kurze Historie, dennoch als aktives Marktsignal interessant. | Geprueft 2026-09-27T04:15:56Z: Binance-Futures-API (fapi.binance.com/fapi/v1/fundingRate) antwortet aus dieser Umgebung mit HTTP 451 ('Service unavailable from a restricted location'). Kein Umgehungsversuch (keine Proxies, kein Kennungswechsel); Status fehler, naechster Lauf erneut versuchen (evtl. andere IP-Zuordnung).",
+    "grund": "Oeffentliche, schluessellose Markt-API (Binance Futures), aber erst seit Einfuehrung von Perpetuals (ca. 2019) verfuegbar -- kurze Historie, dennoch als aktives Marktsignal interessant. | Geprueft 2026-09-27T04:15:56Z: Binance-Futures-API (fapi.binance.com/fapi/v1/fundingRate) antwortet aus dieser Umgebung mit HTTP 451 ('Service unavailable from a restricted location'). Kein Umgehungsversuch (keine Proxies, kein Kennungswechsel); Status fehler, naechster Lauf erneut versuchen (evtl. andere IP-Zuordnung). | Erneut geprueft 2026-09-28T04:21:52Z: fapi.binance.com weiterhin HTTP 451 (geoblockiert). Kein Umgehungsversuch. Status bleibt fehler.",
     "aufgenommen_utc": "2026-09-26T09:40:47Z",
-    "geprueft_utc": "2026-09-27T04:15:56Z"
+    "geprueft_utc": "2026-09-28T04:21:52Z"
   },
   {
     "id": "eu_boersenfeiertage",
@@ -1654,11 +1654,12 @@
     "url": "https://efts.sec.gov/LATEST/search-index?q=%22stock+repurchase+program%22&forms=8-K",
     "domain": "efts.sec.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Die taegliche Anzahl neu angekuendigter Aktienrueckkaufprogramme (8-K, aggregiert ueber alle Melder, nicht Einzeltitel) ist ein Signal fuer Managementvertrauen und Liquiditaetsruecknahme; Verdichtungstage koennten SPY/XLY kurzfristig gegenueber dem Weltindex stuetzen, analog zu sp500_index_aenderungen als aggregierter Firmenereignis-Zaehlreihe.",
-    "grund": "Oeffentliche EDGAR-Volltextsuche ohne Login, aber Historie erst ab 2001 (EDGAR-Volltextsuche) und Text-Mining-Aufwand (Formulierungsvarianten, Doppelzaehlung) ungeprueft (K3/K7-Risiko); tiefe Prioritaet bis Machbarkeit geklaert. Vermeidet Einzeltitel-Ereignisse (Zusatz: Firmenereignisse aggregiert, nicht einzeln).",
-    "aufgenommen_utc": "2026-09-27T09:41:32Z"
+    "grund": "Oeffentliche EDGAR-Volltextsuche ohne Login, aber Historie erst ab 2001 (EDGAR-Volltextsuche) und Text-Mining-Aufwand (Formulierungsvarianten, Doppelzaehlung) ungeprueft (K3/K7-Risiko); tiefe Prioritaet bis Machbarkeit geklaert. Vermeidet Einzeltitel-Ereignisse (Zusatz: Firmenereignisse aggregiert, nicht einzeln). | Geprueft 2026-09-28T04:21:52Z: sec.gov/efts.sec.gov antwortet aus dieser Umgebung mit HTTP 403 (bestaetigt, wie bei sec_insider_sektor). Zusatz 6 (27.9.2026): EDGAR-Quellen (8-K, S-1, 13D) hier nicht mehr selbst versuchen, Beschaffung laeuft ueber GitHub Action auf main.",
+    "aufgenommen_utc": "2026-09-27T09:41:32Z",
+    "geprueft_utc": "2026-09-28T04:21:52Z"
   },
   {
     "id": "sp500_gewinnueberraschungen_dichte",
@@ -1666,11 +1667,12 @@
     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany",
     "domain": "sec.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Tage mit ungewoehnlich hoher Dichte von 8-K-Item-2.02-Ergebnismeldungen (Earnings-Season-Cluster) koennen kurzfristiges Sektor-Momentum begleiten (z.B. XLK bei Technologie-lastigen Clustertagen), als aggregierte Zaehlreihe ohne Einzeltitel-Fokus.",
-    "grund": "Oeffentlich ohne Login, aber Item-2.02-Filterung und Sektorzuordnung aus SIC-Codes aufwendig und Publikationsbias (nur Ueberraschungsrichtung, nicht -groesse messbar ohne Konsensdaten) bekannt; tiefe Prioritaet bis Machbarkeit und Mehrwert gegenueber bestehendem sp500_index_aenderungen geklaert.",
-    "aufgenommen_utc": "2026-09-27T09:41:32Z"
+    "grund": "Oeffentlich ohne Login, aber Item-2.02-Filterung und Sektorzuordnung aus SIC-Codes aufwendig und Publikationsbias (nur Ueberraschungsrichtung, nicht -groesse messbar ohne Konsensdaten) bekannt; tiefe Prioritaet bis Machbarkeit und Mehrwert gegenueber bestehendem sp500_index_aenderungen geklaert. | Geprueft 2026-09-28T04:21:52Z: sec.gov/efts.sec.gov antwortet aus dieser Umgebung mit HTTP 403 (bestaetigt, wie bei sec_insider_sektor). Zusatz 6 (27.9.2026): EDGAR-Quellen (8-K, S-1, 13D) hier nicht mehr selbst versuchen, Beschaffung laeuft ueber GitHub Action auf main.",
+    "aufgenommen_utc": "2026-09-27T09:41:32Z",
+    "geprueft_utc": "2026-09-28T04:21:52Z"
   },
   {
     "id": "china_golden_week_feiertage",
@@ -1899,5 +1901,23 @@
     "aufgenommen_utc": "2026-09-28T00:29:00Z",
     "geprueft_utc": "2026-09-28T00:29:00Z",
     "prioritaet": "hoch"
+  },
+  {
+    "id": "fedregister_aufsicht",
+    "name": "Federal Register: taegliche Dokumentzahl SEC / FTC / Antitrust Division",
+    "url": "https://www.federalregister.gov/api/v1/documents.json",
+    "domain": "federalregister.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Tage mit ungewoehnlich hoher Zahl an Regeln/Vorschlaegen/Bekanntmachungen der SEC, FTC oder Antitrust Division im Federal Register sind ein Signal fuer regulatorische Aktivitaet, die kurzfristig regulatorisch exponierte Sektoren (SEC/FTC: XLF; Antitrust: M&A-lastige Sektoren wie XLK/XLC) gegenueber dem Weltindex bewegen kann, analog zu Ereignisstudien zu SEC-Durchsetzungsankuendigungen in der Fachliteratur. Publikationsdatum = tatsaechlicher Tag der oeffentlichen Verfuegbarkeit (verfuegbar_nach_tagen 0).",
+    "reihen": [
+      "sec",
+      "ftc",
+      "antitrust"
+    ],
+    "grund": "Zusatz 6 (27.9.2026), Prioritaet Firmenereignisse: NHTSA-Rueckrufe (kein Bulk-Flatfile ohne Fahrzeugparameter erreichbar, nur Einzelabfrage je Marke/Modell -- nicht praktikabel), OSHA-Schwerverletzungsberichte (osha.gov 403, Bot-Schutz wie sec.gov) und Nasdaq-Ergebniskalender (nur Tagesabfragen, ~4000 Einzelabrufe fuer Historie seit 2015 noetig, sprengt K7/180s) als Kandidaten geprueft und verworfen. Federal-Register-API (federalregister.gov, oeffentlich, ohne Schluessel, per_page/Jahres-Paginierung) liefert strukturierte Publikationsdaten ab 1994 -- passt zugleich zu Zusatz 4 (Historie vor 1995). Geprueft 2026-09-28T04:26:45Z: Abruf aller drei Reihen 51s (K7 OK, weit unter 3 Min, Dateien 28-35 KB je Reihe, weit unter 20 MB). K1: jeder Kalendertag 1994-01-01 bis heute befuellt (0 an Tagen ohne Veroeffentlichung, wie usgs_erdbeben/ntsb_luftfahrtunfaelle), Median-Abstand 1 Tag. K2: erster Wert 1994-01-01, >11900 Zeilen je Reihe. K3: oeffentliche REST-API, kein Login, kein Schluessel; federalregister.gov Nutzungsbedingungen erlauben programmatischen Zugriff (offizielle 'Developer'-API). K4: Federal-Register-Publikationsdatum ist nach Druck endgueltig, keine rueckwirkende Korrektur des Zaehltags (Korrekturen erscheinen als neues Dokument mit eigenem Datum). K5: letzter Wert sec 2026-09-28, ftc 2026-09-24, antitrust 2026-09-18 (Grenzfall genau 10 Tage, naechster Lauf pruefen). K6: neue Quelle, nicht im Spiegel. K7: OK (siehe oben). Kennzahlen: sec min 0 max 78 Anteil gleicher Folgewerte 21.4% Anteil Null 33.7%; ftc min 0 max 19 Anteil gleich 65.7% Anteil Null 79.4%; antitrust min 0 max 41 Anteil gleich 75.8% Anteil Null 86.2% -- hohe Gleichanteile sind fuer duenn besetzte Ereigniszaehlreihen (wie fda_ruckrufe/cpsc_ruckrufe) erwartungsgemaess, keine Verdachtsanomalie (viele Tage mit 0 Publikationen, v.a. Wochenenden/Feiertage). Zusatz 3: 3 Reihen (SEC/FTC/Antitrust) sind klar verschiedene Behoerden/Zaehlungen, keine Varianten derselben Groesse -- alle 3 aktiv, kein Redundanzabbau noetig.",
+    "aufgenommen_utc": "2026-09-28T04:26:45Z",
+    "geprueft_utc": "2026-09-28T04:26:45Z"
   }
 ]
