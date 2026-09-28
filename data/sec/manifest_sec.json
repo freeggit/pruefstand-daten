@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-09-27T15:16:40Z",
+ "erzeugt_utc": "2026-09-28T03:28:10Z",
  "reihen": {
   "sec_insider:markt_kaeufer": {
    "datei": "data/sec/insider/markt_kaeufer.csv.gz",
@@ -952,7 +952,7 @@
   }
  },
  "hinweise": [
-  "EDGAR-SIC: 23434 Firmen noch offen"
+  "EDGAR-SIC: 17984 Firmen noch offen"
  ],
  "abdeckung_kaufwert_mit_sektor": 0.9092,
  "bereinigung": {
@@ -968,9 +968,9 @@
  "edgar": {
   "status": "aufbau",
   "anteil_mit_sektor": {
-   "13d": 0.4244,
-   "8k": 0.8346,
-   "s1": 0.5547
+   "13d": 0.4289,
+   "8k": 0.8661,
+   "s1": 0.5711
   },
   "meldungen": {
    "13d": 91873,
