@@ -1864,5 +1864,40 @@
     "aufgenommen_utc": "2026-09-27T20:16:45Z",
     "geprueft_utc": "2026-09-27T20:16:45Z",
     "prioritaet": "hoch"
+  },
+  {
+    "id": "ntsb_luftfahrtunfaelle",
+    "name": "NTSB CAROL: taegliche Anzahl untersuchter Luftfahrt-Unfaelle/-Vorfaelle (USA)",
+    "url": "https://data.ntsb.gov/carol-main-public/api/Query/Main",
+    "domain": "data.ntsb.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "mechanismus": "Ein von der NTSB aufgenommener Luftfahrtunfall (v.a. bei toedlichem Ausgang oder kommerzieller Beteiligung) loest kurzfristig Sicherheits-, Versicherungs- und Regulierungsfolgen fuer Fluggesellschaften und Zulieferer aus; die Tageszahl (gesamt und die Teilmenge fatal) kann daher auf 1 bis 20 Handelstage die relative Staerke von Industrials/Transport (XLI) gegenueber dem Weltindex vorzeichnen (Zusatz 6, Punkt 5: 'Flugzeug- und Industrieunfaelle').",
+    "grund": "Zusatz 6 (27.9.2026), Punkt 5 (weitere Firmenereignisse mit Mechanismus: Flugzeug-/Industrieunfaelle). K1 taeglich: nullgefuellte Tagesreihe, Median-Abstand 1 Tag. K2 Historie: erster Wert 2005-01-01, 7937 Zeilen (Vollhistorie ab 1962 in CAROL verfuegbar, ca. 180000 Faelle; aus K7-Zeitgruenden auf 2005ff begrenzt, deutlich vor der 2015-Grenze). K3 offen: oeffentliche NTSB-CAROL-API (data.ntsb.gov/carol-main-public) ohne Login/Schluessel, amtliche Bundesbehoerde, Abruf von Fallmetadaten ueblich (vgl. NTSB-eigene Query-Builder-Oberflaeche). K4 punktgenau: Datum = EventDate (Tag des Unfalls/Vorfalls, nicht Berichtsdatum); einzelne Faelle koennen im Zuge der Untersuchung nachtraeglich klassifiziert (z.B. HighestInjuryLevel) oder selten nacherfasst werden, siehe meta.json Feld 'revidiert' -- Aenderungen an alten Tagen unwahrscheinlich, dennoch vermerkt. K5 laufend: letzter Wert 2026-09-24 (4 Tage vor Lauf, CAROL erfasst neue Faelle erfahrungsgemaess innert weniger Tage). K6 neu: kein Firmen-/Industrieunfall-Feed im Spiegel. K7 Umfang: 2 Dateien je ca. 20 KB komprimiert, Abruf ca. 44 Sek (Abruf strikt je Kalenderjahr mit Paginierung a 2000 Datensaetzen; der CAROL-Dienst liefert bei mehrjaehrigen Zeitfenstern mit hohem ResultSetOffset deterministisch HTTP 500 'system limit', bei reiner Jahresabgrenzung trat dies nicht auf). Plausibilitaet: gesamt Min 0/Max 20, Mittel 4.7/Tag, Anteil gleicher Folgewerte 13.5% (unauffaellig); fatal Min 0/Max 7, Mittel 1.0/Tag, Anteil gleicher Folgewerte 33.6% -- ueber der 20%-Schwelle, aber durch die niedrige Ereignisrate (viele 0/1-Tage) erklaerbar, wie bei anderen sehr sparsen Zaehlreihen im Spiegel (z.B. fdic_bankausfaelle); keine Anomalie festgestellt.",
+    "reihen": [
+      {
+        "reihe": "gesamt",
+        "zeilen": 7937,
+        "erste": "2005-01-01",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.135,
+        "min": 0.0,
+        "max": 20.0
+      },
+      {
+        "reihe": "fatal",
+        "zeilen": 7937,
+        "erste": "2005-01-01",
+        "letzte": "2026-09-24",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.336,
+        "min": 0.0,
+        "max": 7.0
+      }
+    ],
+    "aufgenommen_utc": "2026-09-28T00:29:00Z",
+    "geprueft_utc": "2026-09-28T00:29:00Z",
+    "prioritaet": "hoch"
   }
 ]

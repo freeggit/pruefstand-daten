@@ -1,0 +1,20 @@
+{
+  "fatal": {
+    "beschreibung": "Taegliche Anzahl von der NTSB untersuchten Luftfahrt-Unfaellen mit mindestens einem Todesopfer (HighestInjuryLevel=Fatal), Teilmenge von gesamt; Datum = EventDate",
+    "einheit": "Anzahl Faelle",
+    "publikation": "verzoegert: Stichprobe am Laufdatum zeigte Faelle mit EventDate bis zu 4 Tage vor dem Abruf bereits in der CAROL-Datenbank (z.B. Ereignis vom 24.09. am 28.09. abrufbar); verfuegbar_nach_tagen konservativ auf 7 gesetzt, um Nachmelde-/Bearbeitungsverzug abzudecken",
+    "quelle_url": "https://data.ntsb.gov/carol-main-public/query-builder/",
+    "revidiert": "in seltenen Faellen werden Faelle nachtraeglich in CAROL erfasst oder Klassifikationen (z.B. Mode, Injury Level) im Zuge der Untersuchung korrigiert; Aenderungen an sehr alten Tagen sind aber nicht zu erwarten",
+    "verdichtung": "Anzahl toedliche Faelle je Kalendertag (EventDate), 0 an Tagen ohne Fall",
+    "verfuegbar_nach_tagen": 7
+  },
+  "gesamt": {
+    "beschreibung": "Taegliche Anzahl von der NTSB untersuchten Luftfahrt-Unfaellen und -Vorfaellen in den USA (CAROL-Datenbank, Mode=Aviation, EventType Accident+Incident), Datum = EventDate (Tag des Ereignisses); Historie ab 2005-01-01 (Vollhistorie ab 1962 verfuegbar, aus Zeitgruenden auf 2005ff begrenzt, siehe Kommentar START_DATE im Skript; K2 dennoch klar erfuellt)",
+    "einheit": "Anzahl Faelle",
+    "publikation": "verzoegert: Stichprobe am Laufdatum zeigte Faelle mit EventDate bis zu 4 Tage vor dem Abruf bereits in der CAROL-Datenbank (z.B. Ereignis vom 24.09. am 28.09. abrufbar); verfuegbar_nach_tagen konservativ auf 7 gesetzt, um Nachmelde-/Bearbeitungsverzug abzudecken",
+    "quelle_url": "https://data.ntsb.gov/carol-main-public/query-builder/",
+    "revidiert": "in seltenen Faellen werden Faelle nachtraeglich in CAROL erfasst oder Klassifikationen (z.B. Mode, Injury Level) im Zuge der Untersuchung korrigiert; Aenderungen an sehr alten Tagen sind aber nicht zu erwarten",
+    "verdichtung": "Anzahl Faelle je Kalendertag (EventDate), 0 an Tagen ohne Fall",
+    "verfuegbar_nach_tagen": 7
+  }
+}
