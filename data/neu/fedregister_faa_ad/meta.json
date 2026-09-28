@@ -1,0 +1,11 @@
+{
+  "anweisungen": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter FAA-Rule-Dokumente 'Airworthiness Directives' (Volltextsuche, Agentur federal-aviation-administration, Dokumenttyp Rule), 0 an Tagen ohne Veroeffentlichung. Hinweis: Abdeckung des FR waechst ueber die Jahre (Struktur, nicht nur Ereignishaeufigkeit).",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=federal-aviation-administration&conditions%5Bterm%5D=airworthiness+directives&conditions%5Btype%5D%5B%5D=RULE",
+    "revidiert": false,
+    "verdichtung": "Anzahl Treffer je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

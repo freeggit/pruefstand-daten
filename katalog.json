@@ -2065,5 +2065,44 @@
   ],
   "aufgenommen_utc": "2026-09-28T16:25:02Z",
   "geprueft_utc": "2026-09-28T16:25:02Z"
+ },
+ {
+  "id": "fedregister_faa_ad",
+  "name": "Federal Register: taegliche Anzahl FAA-Lufttuechtigkeitsanweisungen",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Verbindliche FAA-Anweisungen zu Flugzeugtypen, Triebwerken und Bauteilen belasten Hersteller und Betreiber (Luft- und Raumfahrt, Industrie XLI) mit Nachruest- und Ausfallkosten; Notfall-Anweisungen (Grounding) koennen kurzfristig (1 bis 20 Handelstage) einzelne Titel und den Sektor gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (Flugzeug-/Industrieunfaelle, regulatorische Reaktion, Ergaenzung zu ntsb_luftfahrtunfaelle). K1 taeglich (Zero-Fill, Median 1 Tag). K2 ab 1998-01-01 (vor 1998 Federal-Register-Abdeckung lueckenhaft: 1995 130, 1996 123, 1997 338 Dokumente gegenueber 300-700 je Jahr ab 1998, darum abgeschnitten, Strukturbruch vermieden), 10498 Zeilen. K3 offen, ohne Schluessel. K4 Publikationsdatum wird nicht revidiert. K5 letzter Wert 2026-09-28. K6 neu. K7 Abruf ca. 12 s. verfuegbar_nach_tagen 0 (Publikation im FR am gedruckten Datum). Plausibilitaet: Min 0, Max 22, Anteil gleicher Folgewerte 0.440. Hinweis: Jahressummen schwanken 262-729, leichter Abwaertstrend. Gleichzeitig abgelehnt: fsis_ruckrufe (www.fsis.usda.gov/fsis/api/recall 403 Access Denied, nicht umgangen).",
+  "reihen": [
+   {
+    "reihe": "anweisungen",
+    "zeilen": 10498,
+    "erste": "1998-01-01",
+    "letzte": "2026-09-28",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.44,
+    "min": 0.0,
+    "max": 22.0
+   }
+  ],
+  "aufgenommen_utc": "2026-09-28T20:15:44Z",
+  "geprueft_utc": "2026-09-28T20:15:44Z"
+ },
+ {
+  "id": "fsis_ruckrufe",
+  "name": "USDA FSIS Rueckrufe (Fleisch/Geflügel)",
+  "url": "https://www.fsis.usda.gov/fsis/api/recall/v/1",
+  "domain": "fsis.usda.gov",
+  "bereich": "Firmenereignisse",
+  "status": "fehler",
+  "prioritaet": "normal",
+  "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
+  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-09-28T20:15:44Z",
+  "geprueft_utc": "2026-09-28T20:15:44Z"
  }
 ]
