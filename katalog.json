@@ -2232,5 +2232,44 @@
   ],
   "aufgenommen_utc": "2026-09-29T04:17:48Z",
   "geprueft_utc": "2026-09-29T04:17:48Z"
+ },
+ {
+  "id": "fedregister_fcc_regeln",
+  "name": "Federal Register: FCC Rules/Proposed Rules (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "FCC-Regeln zu Spektrum, Netzneutralitaet, Fusionen und Medienbesitz veraendern Erloese und Kosten von Telekom- und Medienunternehmen (XLC) und koennen den Sektor kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Ereignisse, XLC). K1 taeglich (Nullfuellung). K2 ab 1994-01-01 (Beginn FR-API-Historie; Vorlauf vor 1995 fuer Langzeit), 11956 Zeilen. K3 offen. K4 Publikationsdatum nicht revidiert. K5 letzter Wert 2026-09-25. K6 neu. K7 Abruf 21 s. Publikation taeglich, FR-Datum, verfuegbar_nach_tagen 0. Min 0, Max 30, gleiche Folgewerte 0.49.",
+  "reihen": [
+   {
+    "reihe": "anzahl",
+    "zeilen": 11956,
+    "erste": "1994-01-01",
+    "letzte": "2026-09-25",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.49,
+    "min": 0.0,
+    "max": 30.0
+   }
+  ],
+  "aufgenommen_utc": "2026-09-29T08:20:00Z",
+  "geprueft_utc": "2026-09-29T08:20:00Z"
+ },
+ {
+  "id": "fedregister_ferc_regeln",
+  "name": "Federal Register: FERC Rules/Proposed Rules",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "abgelehnt",
+  "prioritaet": "hoch",
+  "mechanismus": "FERC-Regeln zu Strom-, Gas- und Pipelinetarifen veraendern Erloese von Versorgern und Energieunternehmen (XLU, XLE).",
+  "grund": "Geprueft 2026-09-29: K5 verletzt, letzter Wert 2026-07-23 (68 Tage alt; FERC-Rules im FR selten), nur 1316 Ereignisse seit 1994, 85% gleiche Folgewerte, zu duenn. Historie nicht abgelegt.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-09-29T08:20:00Z",
+  "geprueft_utc": "2026-09-29T08:20:00Z"
  }
 ]
