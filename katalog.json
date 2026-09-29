@@ -2100,9 +2100,87 @@
   "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen.",
+  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen.",
   "reihen": [],
   "aufgenommen_utc": "2026-09-28T20:15:44Z",
-  "geprueft_utc": "2026-09-28T20:15:44Z"
+  "geprueft_utc": "2026-09-29T00:17:07Z"
+ },
+ {
+  "id": "fedregister_ftc_fusionen",
+  "name": "Federal Register: FTC Consent-Agreement-Bekanntmachungen",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=federal-trade-commission&conditions[term]=consent+agreement&conditions[type][]=NOTICE",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "FTC-Auflagen bei Fusionen und Verbraucherschutzfaellen signalisieren Freigabe oder Belastung einzelner Unternehmen (XLV, XLE, XLP, XLY) und koennen kurzfristig den Sektor gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (Kartellentscheide). K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11953 Zeilen, letzter Wert 2026-09-22 (7 Tage), 880 Ereignistage (1492 Dokumente), Max 18/Tag (gebuendelte Veroeffentlichung). Anteil gleicher Folgewerte 86% nur wegen Nullfuellung an Tagen ohne Ereignis (Zaehlreihe, kein Fehler). Publikation: taeglich, Datum = FR-Veroeffentlichungsdatum, verfuegbar_nach_tagen 0. Volltextsuche 'consent agreement' (nicht Phrase) im Agenturfilter FTC; Indexierung kann sich nachtraeglich minimal aendern, keine Rueckdatierung. Bei Fehler bleiben alte Dateien.",
+  "reihen": [
+   {
+    "reihe": "consent_agreements",
+    "zeilen": 11953,
+    "erste": "1994-01-01",
+    "letzte": "2026-09-22",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.862,
+    "min": 0.0,
+    "max": 18.0
+   }
+  ],
+  "aufgenommen_utc": "2026-09-29T00:17:07Z",
+  "geprueft_utc": "2026-09-29T00:17:07Z"
+ },
+ {
+  "id": "fedregister_doj_vergleiche",
+  "name": "Federal Register: DOJ Consent-Decree-Bekanntmachungen",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=justice-department&conditions[term]=%22consent+decree%22&conditions[type][]=NOTICE",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Vergleiche des Justizministeriums (Clean Air/Water Act, CERCLA, Kartell-Final-Judgments) bringen Rueckstellungen und Auflagen fuer Industrie, Energie und Werkstoffe (XLI, XLE, XLB) und wirken kurzfristig auf den Sektor gegenueber dem Weltindex.",
+  "grund": "Zusatz 6 Prioritaet 5 (Kartellentscheide/Werkschliessungen). K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11956 Zeilen, letzter Wert 2026-09-25 (4 Tage), 2822 Ereignistage, Max 13/Tag. Anteil gleicher Folgewerte 62.5% wegen Nullfuellung (Zaehlreihe). Publikation: taeglich, Datum = FR-Veroeffentlichungsdatum, verfuegbar_nach_tagen 0. Phrase 'consent decree', Agentur justice-department, Typ Notice.",
+  "reihen": [
+   {
+    "reihe": "consent_decrees",
+    "zeilen": 11956,
+    "erste": "1994-01-01",
+    "letzte": "2026-09-25",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.625,
+    "min": 0.0,
+    "max": 13.0
+   }
+  ],
+  "aufgenommen_utc": "2026-09-29T00:17:07Z",
+  "geprueft_utc": "2026-09-29T00:17:07Z"
+ },
+ {
+  "id": "openfda_510k_zulassungen",
+  "name": "openFDA 510(k) Entscheide je Tag",
+  "url": "https://api.fda.gov/device/510k.json",
+  "domain": "api.fda.gov",
+  "bereich": "Firmenereignisse",
+  "status": "abgelehnt",
+  "prioritaet": "normal",
+  "mechanismus": "Medizinprodukte-Freigaben (Medtech, XLV) je Tag.",
+  "grund": "K5 verletzt: Test 2026-09-29T00:17:07Z, letzter decision_date 2026-09-13 (16 Tage alt, openFDA last_updated 2026-09-14); zudem nachtraegliche Ergaenzungen (K4 fraglich). Naechster Test nicht noetig.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-09-29T00:17:07Z",
+  "geprueft_utc": "2026-09-29T00:17:07Z"
+ },
+ {
+  "id": "openfda_pma_zulassungen",
+  "name": "openFDA PMA Entscheide je Tag",
+  "url": "https://api.fda.gov/device/pma.json",
+  "domain": "api.fda.gov",
+  "bereich": "Firmenereignisse",
+  "status": "abgelehnt",
+  "prioritaet": "normal",
+  "mechanismus": "Medizinprodukte-Freigaben (Medtech, XLV) je Tag.",
+  "grund": "K5 verletzt: Test 2026-09-29T00:17:07Z, letzter decision_date 2026-09-13 (16 Tage alt, openFDA last_updated 2026-09-14); zudem nachtraegliche Ergaenzungen (K4 fraglich). Naechster Test nicht noetig.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-09-29T00:17:07Z",
+  "geprueft_utc": "2026-09-29T00:17:07Z"
  }
 ]

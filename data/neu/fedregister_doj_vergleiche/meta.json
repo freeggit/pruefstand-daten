@@ -1,0 +1,11 @@
+{
+  "consent_decrees": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter DOJ-Notices mit Volltext-Treffer \"consent decree\" (Agentur justice-department, Dokumenttyp Notice; v.a. Notice of Lodging), 0 an Tagen ohne Veroeffentlichung. Datum = Veroeffentlichungsdatum im FR.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=justice-department&conditions%5Bterm%5D=%22consent+decree%22&conditions%5Btype%5D%5B%5D=NOTICE",
+    "revidiert": false,
+    "verdichtung": "Anzahl Treffer je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
