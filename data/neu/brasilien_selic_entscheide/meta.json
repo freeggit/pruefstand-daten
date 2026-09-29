@@ -1,0 +1,21 @@
+{
+  "aenderungstage": {
+    "beschreibung": "1 am ersten Tag, an dem ein geaenderter Selic-Zielsatz (BCB SGS 432) gilt, sonst 0. Kalendertaeglich. Copom gibt den Entscheid am Abend des Vortags (Sitzungstag) bekannt.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Copom-Entscheid am Vorabend des Wirksamkeitstags oeffentlich; Quelle: BCB Copom-Kommunikation)",
+    "quelle_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432",
+    "revidiert": false,
+    "verdichtung": "keine (Aenderungsindikator aus Tagesreihe abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "ziel": {
+    "beschreibung": "Selic-Zielsatz (Meta Selic), BCB SGS 432, Wirksamkeitsdatum",
+    "einheit": "% p.a.",
+    "publikation": "taeglich (Zielsatz mit Copom-Entscheid am Vortag bekannt)",
+    "quelle_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "keine",
+    "verfuegbar_nach_tagen": 0
+  }
+}

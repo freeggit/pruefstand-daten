@@ -1550,11 +1550,12 @@
   "url": "https://www.nasdaq.com/market-activity/dividends",
   "domain": "nasdaq.com",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Cluster von Dividendenerhoehungen gelten als aggregiertes Vertrauenssignal des Managements in kuenftige Ertragskraft; als taegliche Zaehlreihe (nicht Einzeltitel) analog zu sp500_index_aenderungen.",
-  "grund": "Oeffentliche Dividendenkalender-Seiten vorhanden, aber Aggregation ueber 500 Einzeltitel taeglich rechenintensiv und Format-Konsistenz ungeprueft (aehnliches K3/K7-Risiko wie bei anzahl_gewinnwarnungen); daher tiefe Prioritaet bis Machbarkeit geklaert.",
-  "aufgenommen_utc": "2026-09-26T09:40:47Z"
+  "grund": "Oeffentliche Dividendenkalender-Seiten vorhanden, aber Aggregation ueber 500 Einzeltitel taeglich rechenintensiv und Format-Konsistenz ungeprueft (aehnliches K3/K7-Risiko wie bei anzahl_gewinnwarnungen); daher tiefe Prioritaet bis Machbarkeit geklaert. | Geprueft 2026-09-29T16:16:55Z: api.nasdaq.com aus dieser Umgebung nicht erreichbar (HTTP 000), zudem Tagesabfrage je Kalendertag (>3000 Anfragen); K7/K3 nicht erfuellbar.",
+  "aufgenommen_utc": "2026-09-26T09:40:47Z",
+  "geprueft_utc": "2026-09-29T16:16:55Z"
  },
  {
   "id": "oil_healthcare_replikation_opec_basket",
@@ -1618,11 +1619,16 @@
   "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json",
   "domain": "api.bcb.gov.br",
   "bereich": "Geldmarkt",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Ueberraschende Selic-Entscheide der brasilianischen Zentralbank veraendern Carry-Trade-Attraktivitaet und Kapitalfluesse nach Brasilien; koennen EWZ innert wenigen Handelstagen um den Entscheidtermin gegenueber dem Weltindex bewegen, analog zu den bereits aktiven Leitzins-Aenderungstagen (FOMC/EZB).",
-  "grund": "Oeffentliche, schluessellose REST-API der brasilianischen Zentralbank (SGS-Serie 432, taeglicher Selic-Satz seit 1996), Entscheidtage aus Satzaenderungen ableitbar; ergaenzt bestehende leitzins_aenderungstage um eine grosse EM-Notenbank mit direktem ETF-Ziel (EWZ).",
-  "aufgenommen_utc": "2026-09-27T09:41:32Z"
+  "grund": "K1-K7 erfuellt. BCB SGS 432 (Selic-Zielsatz), oeffentlich ohne Login/Schluessel, kalendertaeglich, 10071 Zeilen, erste 1999-03-05, letzte 2026-09-29, Median-Abstand 1 Tag, gleiche Folgewerte 96.8% (Stufenreihe, erwartet), Min 2.0 Max 45.0 % (plausibel), 161 Aenderungstage. Nicht revidiert. Aktiv: aenderungstage (0/1); ruhend: ziel (Niveau, Redundanz, Zusatz 3). Datum = Wirksamkeitstag, Copom-Entscheid am Vorabend bekannt (verfuegbar 0). Historie vor 1999 nicht verfuegbar (Meta Selic erst seit Maerz 1999).",
+  "aufgenommen_utc": "2026-09-29T16:16:55Z",
+  "reihen": [
+   "aenderungstage",
+   "ziel"
+  ],
+  "geprueft_utc": "2026-09-29T16:16:55Z"
  },
  {
   "id": "indien_rbi_repo_entscheide",
