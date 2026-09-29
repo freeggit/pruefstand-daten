@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import datetime
 import gzip
+import http.client
 import io
 import json
 import os
@@ -15,16 +16,29 @@ UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefsta
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
 
 
-def fetch_bytes(url, tries=4):
+def fetch_bytes(url, tries=6):
+    # Grosser Download (ca. 52 MB): bei Abbruch (IncompleteRead) ab der bisherigen
+    # Byte-Position per Range-Anfrage weiterladen, statt von vorn zu beginnen.
+    buf = bytearray()
     for i in range(tries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                return resp.read()
-        except urllib.error.HTTPError:
-            if i == tries - 1:
-                raise
-            time.sleep(2 * (i + 1))
+            hdr = {"User-Agent": UA}
+            if buf:
+                hdr["Range"] = "bytes=%d-" % len(buf)
+            req = urllib.request.Request(url, headers=hdr)
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                if buf and resp.status != 206:
+                    buf = bytearray()
+                while True:
+                    try:
+                        chunk = resp.read(1 << 20)
+                    except http.client.IncompleteRead as e:
+                        buf.extend(e.partial)
+                        raise
+                    if not chunk:
+                        break
+                    buf.extend(chunk)
+            return bytes(buf)
         except Exception:
             if i == tries - 1:
                 raise

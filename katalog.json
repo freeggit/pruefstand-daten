@@ -1780,7 +1780,7 @@
   "bereich": "Firmenereignisse",
   "status": "aktiv",
   "mechanismus": "Rueckrufe kennzeichnen operative oder regulatorische Probleme betroffener Firmen und koennen kurzfristig Vertrauen, Umsatz oder Haftungsrisiko im betroffenen Sektor belasten; die Tageszahl der FDA-Rueckrufe je Kategorie (Arzneimittel/Medizinprodukte: Gesundheitssektor XLV, Lebensmittel: Basiskonsum XLP) kann daher auf 1 bis 20 Handelstage die relative Entwicklung des jeweiligen Sektors gegenueber dem Weltindex beeinflussen.",
-  "grund": "Zusatz 6 (27.9.2026), Prioritaet 2 (FDA-Rueckrufe). Drei Reihen nach FDA-Zustaendigkeitskategorie (Ausnahme zu Zusatz 3, da klar verschiedene Produktkategorien/Sektoren, keine Varianten derselben Groesse). K1 taeglich: nullgefuellte Tagesreihen, Median-Abstand je 1 Tag (recall_initiation_date, taegliches Ereignisdatum). K2 Historie: arzneimittel ab 2006-02-24 (7510 Zeilen), lebensmittel ab 2008-02-22 (6782 Zeilen, davor nur ein einzelner offensichtlich fehlerhafter Datumseintrag Jahr 0212 verworfen), medizinprodukte ab 2005-07-01 (7748 Zeilen, ein Eintrag Jahr 1930 als Dateneingabefehler verworfen, MIN_YEAR=2000). K3 offen: oeffentliche openFDA-Enforcement-API ohne Login/Schluessel. K4 punktgenau: recall_initiation_date wird nach Meldung nicht rueckwirkend geaendert (nur neue Rueckrufe kommen hinzu); Datum = Initiierungsdatum des Rueckrufs, oeffentlich ueber woechentliche FDA Enforcement Reports. K5 laufend: Zero-Fill bis meta.last_updated der API (2026-09-16, 11 Tage vor diesem Lauf) -- FDA Enforcement Reports werden wochenweise/mit Verzoegerung aktualisiert (Zusatz 5: verfuegbar_nach_tagen=8 fuer wochentlich publizierte Tageswerte), der Abstand schwankt je nach API-Aktualisierungszyklus zwischen ca. 7 und 14 Tagen und wird bei jedem 4-Stunden-Lauf nachgezogen; keine Schaetzung, nur bestaetigte Nulltage bis zum gemeldeten Datenstand. K6 neu: kein Rueckruf-Feed im Spiegel. K7 Umfang: je Reihe unter 100 KB komprimiert, Gesamtabruf ca. 3 Sek (3 count-Aggregationsabfragen). Plausibilitaet: Max 539/415/236 an Einzeltagen durch grosse Sammelrueckrufe (z.B. produktuebergreifende Chargen) plausibel, keine Anomalie.",
+  "grund": "Zusatz 6 (27.9.2026), Prioritaet 2 (FDA-Rueckrufe). Drei Reihen nach FDA-Zustaendigkeitskategorie (Ausnahme zu Zusatz 3, da klar verschiedene Produktkategorien/Sektoren, keine Varianten derselben Groesse). K1 taeglich: nullgefuellte Tagesreihen, Median-Abstand je 1 Tag (recall_initiation_date, taegliches Ereignisdatum). K2 Historie: arzneimittel ab 2006-02-24 (7510 Zeilen), lebensmittel ab 2008-02-22 (6782 Zeilen, davor nur ein einzelner offensichtlich fehlerhafter Datumseintrag Jahr 0212 verworfen), medizinprodukte ab 2005-07-01 (7748 Zeilen, ein Eintrag Jahr 1930 als Dateneingabefehler verworfen, MIN_YEAR=2000). K3 offen: oeffentliche openFDA-Enforcement-API ohne Login/Schluessel. K4 punktgenau: recall_initiation_date wird nach Meldung nicht rueckwirkend geaendert (nur neue Rueckrufe kommen hinzu); Datum = Initiierungsdatum des Rueckrufs, oeffentlich ueber woechentliche FDA Enforcement Reports. K5 laufend: Zero-Fill bis meta.last_updated der API (2026-09-16, 11 Tage vor diesem Lauf) -- FDA Enforcement Reports werden wochenweise/mit Verzoegerung aktualisiert (Zusatz 5: verfuegbar_nach_tagen=8 fuer wochentlich publizierte Tageswerte), der Abstand schwankt je nach API-Aktualisierungszyklus zwischen ca. 7 und 14 Tagen und wird bei jedem 4-Stunden-Lauf nachgezogen; keine Schaetzung, nur bestaetigte Nulltage bis zum gemeldeten Datenstand. K6 neu: kein Rueckruf-Feed im Spiegel. K7 Umfang: je Reihe unter 100 KB komprimiert, Gesamtabruf ca. 3 Sek (3 count-Aggregationsabfragen). Plausibilitaet: Max 539/415/236 an Einzeltagen durch grosse Sammelrueckrufe (z.B. produktuebergreifende Chargen) plausibel, keine Anomalie. | Lernrunde 2026-09-29 (Regel L2): 5057 geprüfte Kandidaten in S0014, bestes t 2.56 (unter 3.5); Priorität tief, nicht gelöscht.",
   "reihen": [
    {
     "reihe": "arzneimittel",
@@ -1814,8 +1814,8 @@
    }
   ],
   "aufgenommen_utc": "2026-09-27T16:20:22Z",
-  "geprueft_utc": "2026-09-27T16:20:22Z",
-  "prioritaet": "hoch"
+  "geprueft_utc": "2026-09-29T09:50:00Z",
+  "prioritaet": "tief"
  },
  {
   "id": "fdic_bankausfaelle",
@@ -1909,16 +1909,16 @@
   "domain": "federalregister.gov",
   "bereich": "Firmenereignisse",
   "status": "aktiv",
-  "prioritaet": "hoch",
+  "prioritaet": "tief",
   "mechanismus": "Tage mit ungewoehnlich hoher Zahl an Regeln/Vorschlaegen/Bekanntmachungen der SEC, FTC oder Antitrust Division im Federal Register sind ein Signal fuer regulatorische Aktivitaet, die kurzfristig regulatorisch exponierte Sektoren (SEC/FTC: XLF; Antitrust: M&A-lastige Sektoren wie XLK/XLC) gegenueber dem Weltindex bewegen kann, analog zu Ereignisstudien zu SEC-Durchsetzungsankuendigungen in der Fachliteratur. Publikationsdatum = tatsaechlicher Tag der oeffentlichen Verfuegbarkeit (verfuegbar_nach_tagen 0).",
   "reihen": [
    "sec",
    "ftc",
    "antitrust"
   ],
-  "grund": "Zusatz 6 (27.9.2026), Prioritaet Firmenereignisse: NHTSA-Rueckrufe (kein Bulk-Flatfile ohne Fahrzeugparameter erreichbar, nur Einzelabfrage je Marke/Modell -- nicht praktikabel), OSHA-Schwerverletzungsberichte (osha.gov 403, Bot-Schutz wie sec.gov) und Nasdaq-Ergebniskalender (nur Tagesabfragen, ~4000 Einzelabrufe fuer Historie seit 2015 noetig, sprengt K7/180s) als Kandidaten geprueft und verworfen. Federal-Register-API (federalregister.gov, oeffentlich, ohne Schluessel, per_page/Jahres-Paginierung) liefert strukturierte Publikationsdaten ab 1994 -- passt zugleich zu Zusatz 4 (Historie vor 1995). Geprueft 2026-09-28T04:26:45Z: Abruf aller drei Reihen 51s (K7 OK, weit unter 3 Min, Dateien 28-35 KB je Reihe, weit unter 20 MB). K1: jeder Kalendertag 1994-01-01 bis heute befuellt (0 an Tagen ohne Veroeffentlichung, wie usgs_erdbeben/ntsb_luftfahrtunfaelle), Median-Abstand 1 Tag. K2: erster Wert 1994-01-01, >11900 Zeilen je Reihe. K3: oeffentliche REST-API, kein Login, kein Schluessel; federalregister.gov Nutzungsbedingungen erlauben programmatischen Zugriff (offizielle 'Developer'-API). K4: Federal-Register-Publikationsdatum ist nach Druck endgueltig, keine rueckwirkende Korrektur des Zaehltags (Korrekturen erscheinen als neues Dokument mit eigenem Datum). K5: letzter Wert sec 2026-09-28, ftc 2026-09-24, antitrust 2026-09-18 (Grenzfall genau 10 Tage, naechster Lauf pruefen). K6: neue Quelle, nicht im Spiegel. K7: OK (siehe oben). Kennzahlen: sec min 0 max 78 Anteil gleicher Folgewerte 21.4% Anteil Null 33.7%; ftc min 0 max 19 Anteil gleich 65.7% Anteil Null 79.4%; antitrust min 0 max 41 Anteil gleich 75.8% Anteil Null 86.2% -- hohe Gleichanteile sind fuer duenn besetzte Ereigniszaehlreihen (wie fda_ruckrufe/cpsc_ruckrufe) erwartungsgemaess, keine Verdachtsanomalie (viele Tage mit 0 Publikationen, v.a. Wochenenden/Feiertage). Zusatz 3: 3 Reihen (SEC/FTC/Antitrust) sind klar verschiedene Behoerden/Zaehlungen, keine Varianten derselben Groesse -- alle 3 aktiv, kein Redundanzabbau noetig.",
+  "grund": "Zusatz 6 (27.9.2026), Prioritaet Firmenereignisse: NHTSA-Rueckrufe (kein Bulk-Flatfile ohne Fahrzeugparameter erreichbar, nur Einzelabfrage je Marke/Modell -- nicht praktikabel), OSHA-Schwerverletzungsberichte (osha.gov 403, Bot-Schutz wie sec.gov) und Nasdaq-Ergebniskalender (nur Tagesabfragen, ~4000 Einzelabrufe fuer Historie seit 2015 noetig, sprengt K7/180s) als Kandidaten geprueft und verworfen. Federal-Register-API (federalregister.gov, oeffentlich, ohne Schluessel, per_page/Jahres-Paginierung) liefert strukturierte Publikationsdaten ab 1994 -- passt zugleich zu Zusatz 4 (Historie vor 1995). Geprueft 2026-09-28T04:26:45Z: Abruf aller drei Reihen 51s (K7 OK, weit unter 3 Min, Dateien 28-35 KB je Reihe, weit unter 20 MB). K1: jeder Kalendertag 1994-01-01 bis heute befuellt (0 an Tagen ohne Veroeffentlichung, wie usgs_erdbeben/ntsb_luftfahrtunfaelle), Median-Abstand 1 Tag. K2: erster Wert 1994-01-01, >11900 Zeilen je Reihe. K3: oeffentliche REST-API, kein Login, kein Schluessel; federalregister.gov Nutzungsbedingungen erlauben programmatischen Zugriff (offizielle 'Developer'-API). K4: Federal-Register-Publikationsdatum ist nach Druck endgueltig, keine rueckwirkende Korrektur des Zaehltags (Korrekturen erscheinen als neues Dokument mit eigenem Datum). K5: letzter Wert sec 2026-09-28, ftc 2026-09-24, antitrust 2026-09-18 (Grenzfall genau 10 Tage, naechster Lauf pruefen). K6: neue Quelle, nicht im Spiegel. K7: OK (siehe oben). Kennzahlen: sec min 0 max 78 Anteil gleicher Folgewerte 21.4% Anteil Null 33.7%; ftc min 0 max 19 Anteil gleich 65.7% Anteil Null 79.4%; antitrust min 0 max 41 Anteil gleich 75.8% Anteil Null 86.2% -- hohe Gleichanteile sind fuer duenn besetzte Ereigniszaehlreihen (wie fda_ruckrufe/cpsc_ruckrufe) erwartungsgemaess, keine Verdachtsanomalie (viele Tage mit 0 Publikationen, v.a. Wochenenden/Feiertage). Zusatz 3: 3 Reihen (SEC/FTC/Antitrust) sind klar verschiedene Behoerden/Zaehlungen, keine Varianten derselben Groesse -- alle 3 aktiv, kein Redundanzabbau noetig. | Lernrunde 2026-09-29 (Regel L2): 6274 geprüfte Kandidaten in S0014, bestes t 3.32 (unter 3.5); Priorität tief, nicht gelöscht.",
   "aufgenommen_utc": "2026-09-28T04:26:45Z",
-  "geprueft_utc": "2026-09-28T04:26:45Z"
+  "geprueft_utc": "2026-09-29T09:50:00Z"
  },
  {
   "id": "nhtsa_ruckrufe",
@@ -2271,5 +2271,57 @@
   "reihen": [],
   "aufgenommen_utc": "2026-09-29T08:20:00Z",
   "geprueft_utc": "2026-09-29T08:20:00Z"
+ },
+ {
+  "id": "fedregister_epa_regeln",
+  "name": "Federal Register: EPA Rules/Proposed Rules (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=environmental-protection-agency&conditions[type][]=RULE",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue EPA-Regeln zu Emissionen, Kraftwerken und Chemikalien veraendern Kosten von Versorgern, Energie- und Chemiewerten und koennen diese Sektoren (XLU, XLE, XLB) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Erste Prioritaet Firmenereignisse (Zusatz 8); gleiche API und Methode wie fedregister_fcc_regeln (K1-K7 dort bestanden), taeglich, Historie ab 1994. Noch nicht in Suchlauf vertretener Regulator.",
+  "aufgenommen_utc": "2026-09-29T09:50:00Z",
+  "geprueft_utc": "2026-09-29T09:50:00Z"
+ },
+ {
+  "id": "cftc_cot_wochenpositionierung",
+  "name": "CFTC Commitments of Traders: Netto-Positionierung Spekulanten (Oel, Gold, Kupfer, Weizen)",
+  "url": "https://www.cftc.gov/files/dea/history/deacot2020.zip",
+  "domain": "cftc.gov",
+  "bereich": "Positionierung",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Extreme Netto-Positionierung spekulativer Haendler in Rohstoff-Futures (Extremwerte im 3-Jahres-Fenster) wird kurzfristig oft gegenlaeufig aufgeloest und bewegt USO, GLD, DBA gegenueber dem Weltindex (Positionierungsdruck, Fachliteratur zu Hedging Pressure).",
+  "grund": "Neuer Bereich Positionierung (fehlte). Oeffentlich ohne Login, woechentlich (Stichtag Dienstag, Publikation Freitag; Frist verfuegbar_nach_tagen 3 einhalten), Jahres-Zips ab 1986 (Legacy Futures Only). Fuer Historie vor 1990 nutzbar. Bekannt: publizierte Positionierungs-Effekte werden nach Veroeffentlichung oft schwaecher.",
+  "aufgenommen_utc": "2026-09-29T09:50:00Z",
+  "geprueft_utc": "2026-09-29T09:50:00Z"
+ },
+ {
+  "id": "finra_shortvolume_dichte",
+  "name": "FINRA Regulation SHO: taegliches Leerverkaufsvolumen je Aktie, aggregiert je Sektor",
+  "url": "https://cdn.finra.org/equity/regsho/daily/CNMSshvol20200102.txt",
+  "domain": "finra.org",
+  "bereich": "Positionierung",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein hoher Anteil Leerverkaufsvolumen am Tagesumsatz sagt in der Literatur (Diether, Lee, Werner 2009; Boehmer, Jones, Zhang 2008) kurzfristig unterdurchschnittliche Renditen voraus; auf Sektorebene aggregiert wirkt das als Stimmungs- und Positionierungsindikator gegenueber dem Weltindex.",
+  "grund": "Oeffentliche Tagesdateien ohne Login ab 2009 (vor Stichtag 2020-12-31 ca. 12 Jahre). Publikation am Folgetag 18:00 Uhr Ostkueste, Frist 1 Tag. Sektorzuordnung ueber SEC-Sektorliste, wie sec_insider_sektor. Publikationseffekt beachten (Anomalien schwaecher nach Veroeffentlichung).",
+  "aufgenommen_utc": "2026-09-29T09:50:00Z",
+  "geprueft_utc": "2026-09-29T09:50:00Z"
+ },
+ {
+  "id": "fedregister_nrc_kernenergie",
+  "name": "Federal Register: NRC Nuklearaufsicht Regeln und Bekanntmachungen (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=nuclear-regulatory-commission",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "NRC-Lizenzentscheide und Regeln betreffen Betreiber und Zulieferer der Kernenergie (Versorger, Uran) und koennen XLU kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Firmenereignis-Bereich (Zusatz 8), gleiche API wie oben, K1-K7 sind neu zu pruefen; erwartet duenn (Median oft 0 pro Tag), Ablehnung nach K1/K5 moeglich.",
+  "aufgenommen_utc": "2026-09-29T09:50:00Z",
+  "geprueft_utc": "2026-09-29T09:50:00Z"
  }
 ]
