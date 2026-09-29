@@ -2182,5 +2182,55 @@
   "reihen": [],
   "aufgenommen_utc": "2026-09-29T00:17:07Z",
   "geprueft_utc": "2026-09-29T00:17:07Z"
+ },
+ {
+  "id": "fedregister_ofac_sanktionen",
+  "name": "Federal Register: OFAC-Sanktionsbekanntmachungen (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder geaenderte US-Sanktionen treffen Energie-, Finanz- und Rohstoffunternehmen der betroffenen Laender und koennen kurzfristig XLE, XLF und Rohstoffe gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (Regulatorische Ereignisse). K1 taeglich (Nullfuellung, Median 1 Tag). K2 ab 2010-01-01 (davor im FR sehr lueckenhaft: 3-35 Dokumente/Jahr, Strukturbruch vermieden), 6110 Zeilen, 1240 Ereignistage. K3 offen ohne Schluessel. K4 Publikationsdatum nicht revidiert (Indexierung kann minimal nachtraeglich aendern). K5 letzter Wert 2026-09-23 (6 Tage). K6 neu. K7 Abruf 5 s. Publikation: taeglich, FR-Veroeffentlichungsdatum, verfuegbar_nach_tagen 0. Hinweis: OFAC-Aktionen erscheinen oft zuerst auf treasury.gov, FR-Bekanntmachung folgt spaeter; Datum = FR-Datum, nicht Erstbekanntgabe. Jahressummen steigen 58 (2010) bis 183 (2024). Min 0, Max 7, Anteil gleicher Folgewerte 0.673 (Nullfuellung).",
+  "reihen": [
+   {
+    "reihe": "anzahl",
+    "zeilen": 6110,
+    "erste": "2010-01-01",
+    "letzte": "2026-09-23",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.673,
+    "min": 0.0,
+    "max": 7.0
+   }
+  ],
+  "aufgenommen_utc": "2026-09-29T04:17:48Z",
+  "geprueft_utc": "2026-09-29T04:17:48Z"
+ },
+ {
+  "id": "fedregister_phmsa_pipeline",
+  "name": "Federal Register: PHMSA-Pipeline-Dokumente (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Pipeline-Sicherheitsregeln, Unfall- und Sonderbewilligungs-Bekanntmachungen der PHMSA veraendern Betriebs- und Nachruestkosten von Pipeline- und Energieunternehmen (XLE, XLU) und koennen kurzfristig den Sektor gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (Industrieunfaelle, regulatorische Reaktion). K1 taeglich (Nullfuellung, Median 1 Tag). K2 ab 2005-01-01 (PHMSA im FR erst seit 2005), 7941 Zeilen, 1306 Ereignistage. K3 offen. K4 Publikationsdatum nicht revidiert. K5 letzter Wert 2026-09-28. K6 neu. K7 Abruf 6 s. Publikation: taeglich, FR-Datum, verfuegbar_nach_tagen 0. Min 0, Max 45 (gebuendelte Veroeffentlichung), Anteil gleicher Folgewerte 0.72 (Nullfuellung). Schwaechster Mechanismus der Serie: Stichwort 'pipeline' erfasst auch Routine-Notices.",
+  "reihen": [
+   {
+    "reihe": "anzahl",
+    "zeilen": 7941,
+    "erste": "2005-01-01",
+    "letzte": "2026-09-28",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.72,
+    "min": 0.0,
+    "max": 45.0
+   }
+  ],
+  "aufgenommen_utc": "2026-09-29T04:17:48Z",
+  "geprueft_utc": "2026-09-29T04:17:48Z"
  }
 ]
