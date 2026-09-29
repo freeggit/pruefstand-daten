@@ -2300,12 +2300,12 @@
   "url": "https://www.cftc.gov/files/dea/history/deacot2020.zip",
   "domain": "cftc.gov",
   "bereich": "Positionierung",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Extreme Netto-Positionierung spekulativer Haendler in Rohstoff-Futures (Extremwerte im 3-Jahres-Fenster) wird kurzfristig oft gegenlaeufig aufgeloest und bewegt USO, GLD, DBA gegenueber dem Weltindex (Positionierungsdruck, Fachliteratur zu Hedging Pressure).",
-  "grund": "Neuer Bereich Positionierung (fehlte). Oeffentlich ohne Login, woechentlich (Stichtag Dienstag, Publikation Freitag; Frist verfuegbar_nach_tagen 3 einhalten), Jahres-Zips ab 1986 (Legacy Futures Only). Fuer Historie vor 1990 nutzbar. Bekannt: publizierte Positionierungs-Effekte werden nach Veroeffentlichung oft schwaecher.",
+  "grund": "Neuer Bereich Positionierung (fehlte). Oeffentlich ohne Login, woechentlich (Stichtag Dienstag, Publikation Freitag; Frist verfuegbar_nach_tagen 3 einhalten), Jahres-Zips ab 1986 (Legacy Futures Only). Fuer Historie vor 1990 nutzbar. Bekannt: publizierte Positionierungs-Effekte werden nach Veroeffentlichung oft schwaecher. Geprueft 2026-09-29T20:18:57Z: woechentliche Frequenz, Median-Abstand 7 Tage, K1 (max. 3 Tage) verfehlt; nicht auffuellen.",
   "aufgenommen_utc": "2026-09-29T09:50:00Z",
-  "geprueft_utc": "2026-09-29T09:50:00Z"
+  "geprueft_utc": "2026-09-29T20:18:57Z"
  },
  {
   "id": "finra_shortvolume_dichte",
@@ -2313,12 +2313,12 @@
   "url": "https://cdn.finra.org/equity/regsho/daily/CNMSshvol20200102.txt",
   "domain": "finra.org",
   "bereich": "Positionierung",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ein hoher Anteil Leerverkaufsvolumen am Tagesumsatz sagt in der Literatur (Diether, Lee, Werner 2009; Boehmer, Jones, Zhang 2008) kurzfristig unterdurchschnittliche Renditen voraus; auf Sektorebene aggregiert wirkt das als Stimmungs- und Positionierungsindikator gegenueber dem Weltindex.",
-  "grund": "Oeffentliche Tagesdateien ohne Login ab 2009 (vor Stichtag 2020-12-31 ca. 12 Jahre). Publikation am Folgetag 18:00 Uhr Ostkueste, Frist 1 Tag. Sektorzuordnung ueber SEC-Sektorliste, wie sec_insider_sektor. Publikationseffekt beachten (Anomalien schwaecher nach Veroeffentlichung).",
+  "grund": "Oeffentliche Tagesdateien ohne Login ab 2009 (vor Stichtag 2020-12-31 ca. 12 Jahre). Publikation am Folgetag 18:00 Uhr Ostkueste, Frist 1 Tag. Sektorzuordnung ueber SEC-Sektorliste, wie sec_insider_sektor. Publikationseffekt beachten (Anomalien schwaecher nach Veroeffentlichung). Geprueft 2026-09-29T20:18:57Z: Tagesdateien CNMSshvol beginnen erst 2018-08 (Test 2018-07-02 und frueher HTTP 403/nicht vorhanden), K2 verfehlt (Beginn spaetestens 2015-12-31 verlangt).",
   "aufgenommen_utc": "2026-09-29T09:50:00Z",
-  "geprueft_utc": "2026-09-29T09:50:00Z"
+  "geprueft_utc": "2026-09-29T20:18:57Z"
  },
  {
   "id": "fedregister_nrc_kernenergie",
@@ -2332,6 +2332,38 @@
   "grund": "K1-K7 erfuellt: Zaehlreihe (Rule, Proposed Rule, Notice) seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29, Median-Abstand 1 Tag, gleiche Folgewerte 31% (Nullfuellung Wochenende), Min 0 Max 17, Summe 21623; Abruf 34 s. Publikation taeglich, verfuegbar_nach_tagen 0.",
   "aufgenommen_utc": "2026-09-29T09:50:00Z",
   "geprueft_utc": "2026-09-29T12:40:00Z",
+  "reihen": [
+   "anzahl"
+  ]
+ },
+ {
+  "id": "fedregister_cms_medicare",
+  "name": "Federal Register: CMS Medicare/Medicaid Regeln und Bekanntmachungen (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=centers-for-medicare-medicaid-services",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "CMS-Verguetungs- und Medicaid-Regeln bewegen Krankenversicherer, Kliniken und Pharma und damit XLV kurzfristig gegenueber dem Weltindex.",
+  "grund": "K1-K7 erfuellt: Zaehlreihe (Rule, Proposed Rule, Notice) seit 2001-01-01, 9403 Zeilen, letzter Wert 2026-09-29, Median-Abstand 1 Tag, gleiche Folgewerte 52% (Nullfuellung an Tagen ohne Ereignis), Min 0 Max 14, Summe 6086. Beginn 2001 gesetzt, da Vorgaenger HCFA (andere Agentur-ID) vor 2001 nicht abgedeckt waere (sonst falsche Nullen). Publikation taeglich, verfuegbar_nach_tagen 0 (gedrucktes Publikationsdatum).",
+  "aufgenommen_utc": "2026-09-29T20:18:57Z",
+  "geprueft_utc": "2026-09-29T20:18:57Z",
+  "reihen": [
+   "anzahl"
+  ]
+ },
+ {
+  "id": "fedregister_doe_energie",
+  "name": "Federal Register: DOE Energieministerium Regeln und Bekanntmachungen (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=energy-department",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "DOE-Entscheide zu LNG-Exportgenehmigungen, Effizienzstandards und Strategischer Reserve betreffen Energie (XLE) und Versorger (XLU) kurzfristig gegenueber dem Weltindex.",
+  "grund": "K1-K7 erfuellt: Zaehlreihe (Rule, Proposed Rule, Notice) seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29, Median-Abstand 1 Tag, gleiche Folgewerte 23% (Nullfuellung an Tagen ohne Ereignis), Min 0 Max 75, Summe 83527. Beginn 1994. Publikation taeglich, verfuegbar_nach_tagen 0 (gedrucktes Publikationsdatum).",
+  "aufgenommen_utc": "2026-09-29T20:18:57Z",
+  "geprueft_utc": "2026-09-29T20:18:57Z",
   "reihen": [
    "anzahl"
   ]
