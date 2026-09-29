@@ -2278,12 +2278,15 @@
   "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=environmental-protection-agency&conditions[type][]=RULE",
   "domain": "federalregister.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "hoch",
   "mechanismus": "Neue EPA-Regeln zu Emissionen, Kraftwerken und Chemikalien veraendern Kosten von Versorgern, Energie- und Chemiewerten und koennen diese Sektoren (XLU, XLE, XLB) kurzfristig gegenueber dem Weltindex bewegen.",
-  "grund": "Erste Prioritaet Firmenereignisse (Zusatz 8); gleiche API und Methode wie fedregister_fcc_regeln (K1-K7 dort bestanden), taeglich, Historie ab 1994. Noch nicht in Suchlauf vertretener Regulator.",
+  "grund": "K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 28% (strukturell: Nullfuellung Wochenende, wie fcc), Min 0 Max 28, Summe 29954 Dokumente; Abruf 35 s. Publikation taeglich (Federal Register), verfuegbar_nach_tagen 0, nicht revidiert. Abruf ohne Login/Schluessel.",
   "aufgenommen_utc": "2026-09-29T09:50:00Z",
-  "geprueft_utc": "2026-09-29T09:50:00Z"
+  "geprueft_utc": "2026-09-29T12:40:00Z",
+  "reihen": [
+   "anzahl"
+  ]
  },
  {
   "id": "cftc_cot_wochenpositionierung",
@@ -2317,11 +2320,14 @@
   "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=nuclear-regulatory-commission",
   "domain": "federalregister.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "NRC-Lizenzentscheide und Regeln betreffen Betreiber und Zulieferer der Kernenergie (Versorger, Uran) und koennen XLU kurzfristig gegenueber dem Weltindex bewegen.",
-  "grund": "Firmenereignis-Bereich (Zusatz 8), gleiche API wie oben, K1-K7 sind neu zu pruefen; erwartet duenn (Median oft 0 pro Tag), Ablehnung nach K1/K5 moeglich.",
+  "grund": "K1-K7 erfuellt: Zaehlreihe (Rule, Proposed Rule, Notice) seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29, Median-Abstand 1 Tag, gleiche Folgewerte 31% (Nullfuellung Wochenende), Min 0 Max 17, Summe 21623; Abruf 34 s. Publikation taeglich, verfuegbar_nach_tagen 0.",
   "aufgenommen_utc": "2026-09-29T09:50:00Z",
-  "geprueft_utc": "2026-09-29T09:50:00Z"
+  "geprueft_utc": "2026-09-29T12:40:00Z",
+  "reihen": [
+   "anzahl"
+  ]
  }
 ]
