@@ -2399,5 +2399,37 @@
   ],
   "aufgenommen_utc": "2026-09-30T00:17:08Z",
   "geprueft_utc": "2026-09-30T00:17:08Z"
+ },
+ {
+  "id": "fedregister_fda_regeln",
+  "name": "Federal Register: FDA Rules und Proposed Rules",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder vorgeschlagene FDA-Regeln (Zulassungswege, Kennzeichnung, Sicherheitsanforderungen) veraendern Kosten und Marktzugang fuer Pharma, Medizintechnik und Lebensmittel und koennen Gesundheit (XLV) und Basiskonsum (XLP) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Firmenereignisse), gleiche FR-API wie fedregister_epa_regeln, Agentur food-and-drug-administration; Typen Rule/Proposed Rule. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11956 Zeilen, letzter Wert 2026-09-25, Median-Abstand 1 Tag (Nullfuellung), Anteil gleicher Folgewerte 61% (Nullfuellung), Min 0 Max 15, 3059 Ereignistage. Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert. Abruf unter 20 s.",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T04:16:35Z",
+  "geprueft_utc": "2026-09-30T04:16:35Z"
+ },
+ {
+  "id": "fedregister_usda_regeln",
+  "name": "Federal Register: USDA Rules und Proposed Rules",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder vorgeschlagene USDA-Regeln (Agrarprogramme, Lebensmittelsicherheit, Handels- und Pflanzenschutzauflagen) veraendern Kosten und Absatz von Agrar- und Lebensmittelfirmen und koennen Basiskonsum (XLP) und Agrarrohstoffe (DBA) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Firmenereignisse), gleiche FR-API wie fedregister_epa_regeln, Agentur agriculture-department; Typen Rule/Proposed Rule. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29, Median-Abstand 1 Tag (Nullfuellung), Anteil gleicher Folgewerte 45%, Min 0 Max 12, 4916 Ereignistage. Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert. Abruf unter 20 s.",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T04:16:35Z",
+  "geprueft_utc": "2026-09-30T04:16:35Z"
  }
 ]
