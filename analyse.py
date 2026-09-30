@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prüfstand – Analyse (V3.9.1, 29.9.2026, von Reto freigegeben «Stufe 1 und 4»): Diagnostik, keine Auswahl.
+"""Prüfstand – Analyse (V3.10, 30.9.2026; Stufe 1 und 4 freigegeben 29.9., «Analyse 50/50» freigegeben 30.9.): Diagnostik, keine Auswahl.
 
 Stufe 1, Tiefenanalyse je Kandidat (die K_TOP besten positiven Kandidaten der Familie S eines Suchlaufs):
   Renditeverlauf um das Ereignis (Vorlauf −5 bis −1, Nachlauf 0 bis 20 Handelstage, Mehrrendite gegenüber ACWI),
@@ -25,8 +25,8 @@ def log(*a):
     print(*a, file=sys.stderr, flush=True)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-K_TOP = int(os.environ.get("PS_ANALYSE_K", "20"))
-N_PLAC_SIM = int(os.environ.get("PS_ANALYSE_PLACEBO", "10"))
+K_TOP = int(os.environ.get("PS_ANALYSE_K", "50"))
+N_PLAC_SIM = int(os.environ.get("PS_ANALYSE_PLACEBO", "50"))
 KMAX, VORLAUF = 20, 5
 BLOECKE = [(2001, 2005), (2006, 2010), (2011, 2015), (2016, 2020)]
 
