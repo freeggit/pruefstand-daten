@@ -2603,5 +2603,37 @@
   ],
   "aufgenommen_utc": "2026-09-30T16:16:39Z",
   "geprueft_utc": "2026-09-30T16:16:39Z"
+ },
+ {
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "hoch",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T20:16:16Z",
+  "geprueft_utc": "2026-09-30T20:16:16Z",
+  "id": "fedregister_osha_arbeitsschutz",
+  "name": "Federal Register: OSHA Arbeitsschutzregeln (Rules und Proposed Rules)",
+  "status": "abgelehnt",
+  "mechanismus": "Neue oder vorgeschlagene OSHA-Arbeitsschutzregeln veraendern Compliance-Kosten in Industrie, Bau und Materialien (XLI, XLB) und koennen diese Sektoren kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "K5 verletzt: Test 2026-09-30T20:16:16Z, letzter Wert 2026-08-31 (30 Tage alt), nur 700 Dokumente seit 1994 (95% Nulltage), Reihe zu duenn. Dateien verworfen."
+ },
+ {
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "hoch",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T20:16:16Z",
+  "geprueft_utc": "2026-09-30T20:16:16Z",
+  "id": "fedregister_fws_artenschutz",
+  "name": "Federal Register: Fish and Wildlife Service Artenschutzregeln (Rules und Proposed Rules)",
+  "status": "aktiv",
+  "mechanismus": "Artenschutzregeln (Listungen, kritische Habitate) der Fisch- und Wildtierbehoerde beschraenken Energie-, Bergbau- und Landnutzungsprojekte und koennen Energie und Rohstoffe (XLE, XLB, XLU) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_irs_steuerregeln. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11956 Zeilen, letzter Wert 2026-09-25 (5 Tage), Median-Abstand 1, gleiche Folgewerte 75% (Nullfuellung), Min 0 Max 7, 3013 Ereignistage. Publikation taeglich (gedrucktes Publikationsdatum), verfuegbar_nach_tagen 0, nicht revidiert."
  }
 ]
