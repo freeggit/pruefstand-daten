@@ -1698,10 +1698,10 @@
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR2/master.gz"
  },
  "edgar_2026q3": {
-  "abruf_utc": "2026-09-29T03:27:50Z",
-  "bytes": 26687203,
-  "meldungen": 15685,
-  "sha256": "780e8985930d552471f32e4be7d7ed9d5f52c98ac5e52324012c8b0d25b51b62",
+  "abruf_utc": "2026-09-30T03:29:02Z",
+  "bytes": 27207878,
+  "meldungen": 15926,
+  "sha256": "f6f9b71d9bc456bbe0c01e3767701edb7083b71d6300111280d3aa2b536ceec7",
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR3/master.gz"
  }
 }
