@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", ".github/workflows/suche.yml"]
+    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", ".github/workflows/suche.yml"]
 permissions:
   contents: write
 concurrency:
@@ -47,6 +47,13 @@ jobs:
         env:
           PS_PLACEBO: "200"
         timeout-minutes: 200
+      - name: Analyse (Stufe 1 und 4, V3.9.1)
+        run: python analyse.py
+        env:
+          PS_CACHE: /tmp/lauf/cache
+          PS_LAUF: /tmp/lauf
+        timeout-minutes: 40
+        continue-on-error: true
       - name: Einchecken auf claude/lernen
         run: |
           cd _lernen
