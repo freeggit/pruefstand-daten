@@ -61,19 +61,5 @@ jobs:
         timeout-minutes: 30
         continue-on-error: true
       - name: Einchecken auf claude/lernen
-        run: |
-          cd _lernen
-          git config user.name "pruefstand-bot"
-          git config user.email "pruefstand-bot@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then echo "keine Änderung"; exit 0; fi
-          git commit -q -m "Suchlauf $(date -u +%Y-%m-%dT%H:%MZ) (GitHub Action)"
-          for i in 1 2 3; do
-            if git ls-remote --exit-code --heads origin claude/lernen >/dev/null 2>&1; then
-              git fetch -q origin claude/lernen && git rebase -q origin/claude/lernen && git push -q origin HEAD:claude/lernen && exit 0
-            else
-              git push -q origin HEAD:claude/lernen && exit 0
-            fi
-            sleep 20
-          done
-          exit 1
+        # einchecken.py: holt claude/lernen mit explizitem Ziel und mischt index.json dreiweg (30.9.2026, Lauf #18)
+        run: python einchecken.py "Suchlauf"
