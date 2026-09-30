@@ -2431,5 +2431,65 @@
   ],
   "aufgenommen_utc": "2026-09-30T04:16:35Z",
   "geprueft_utc": "2026-09-30T04:16:35Z"
+ },
+ {
+  "id": "fedregister_sec_regeln",
+  "name": "Federal Register: SEC Rules und Proposed Rules",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder vorgeschlagene SEC-Regeln (Marktstruktur, Offenlegung, Kapitalanforderungen) veraendern Kosten und Handelsbedingungen fuer Banken, Broker und Boersen und koennen Finanzwerte (XLF) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_fda_regeln (nicht sec.gov). K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11952 Zeilen, letzter Wert 2026-09-21 (9 Tage), Median-Abstand 1, gleiche Folgewerte 79% (Nullfuellung), Min 0 Max 8, 1455 Ereignistage. Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert.",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T08:16:18Z",
+  "geprueft_utc": "2026-09-30T08:16:18Z"
+ },
+ {
+  "id": "fedregister_nhtsa_regeln",
+  "name": "Federal Register: NHTSA Rules und Proposed Rules",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder vorgeschlagene NHTSA-Regeln (Sicherheitsstandards, Verbrauchsnormen, Assistenzsysteme) veraendern Entwicklungs- und Stueckkosten der Autohersteller und Zulieferer und koennen zyklischen Konsum (XLY) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API. K1-K7 erfuellt: seit 1994-01-01, 11954 Zeilen, letzter Wert 2026-09-23, Median-Abstand 1, gleiche Folgewerte 81% (Nullfuellung), Min 0 Max 16, 1362 Ereignistage. Regeln, nicht Rueckrufe (nhtsa_ruckrufe). Publikation taeglich, verfuegbar_nach_tagen 0.",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T08:16:18Z",
+  "geprueft_utc": "2026-09-30T08:16:18Z"
+ },
+ {
+  "id": "fedregister_fra_bahn",
+  "name": "Federal Register: FRA Rules und Proposed Rules",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "abgelehnt",
+  "prioritaet": "hoch",
+  "mechanismus": "Bahnsicherheitsregeln der FRA verteuern Frachtbahnen (XLI).",
+  "grund": "K5 verletzt: letzter Wert 2026-09-01 (29 Tage alt bei Test 2026-09-30). Dateien verworfen.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-09-30T08:16:18Z",
+  "geprueft_utc": "2026-09-30T08:16:18Z"
+ },
+ {
+  "id": "fedregister_stb_regeln",
+  "name": "Federal Register: Surface Transportation Board Regeln",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "abgelehnt",
+  "prioritaet": "hoch",
+  "mechanismus": "Bahnregulierung (XLI).",
+  "grund": "K5 verletzt: letzter Rule/Proposed Rule 2026-08-18, Reihe sehr duenn (Test 2026-09-30).",
+  "reihen": [],
+  "aufgenommen_utc": "2026-09-30T08:16:18Z",
+  "geprueft_utc": "2026-09-30T08:16:18Z"
  }
 ]
