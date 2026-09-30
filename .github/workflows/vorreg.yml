@@ -1,21 +1,20 @@
-name: Prüfstand Suche
-# V3.4 (E9): Suchlauf in der GitHub Action statt in der Routine. Ergebnis auf dem Zweig claude/lernen.
+name: Prüfstand Vorregistrierung
+# V3.10 (E23): bewertet neu registrierte Chargen vorregistrierung/<datum>.json (Familie V), ohne Suchlauf.
 on:
-  schedule:
-    - cron: "0 5 * * *"          # täglich 07:00 Sommerzeit, nach Datenspiegel (03:15 UTC) und Strom (02:30 UTC)
-  workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", "vorreg.py", ".github/workflows/suche.yml"]
+    paths: ["vorregistrierung/**", "vorreg.py", ".github/workflows/vorreg.yml"]
+  workflow_dispatch: {}
 permissions:
   contents: write
 concurrency:
   group: suche
   cancel-in-progress: false
 jobs:
-  suche:
+
+  vorreg:
     runs-on: ubuntu-24.04
-    timeout-minutes: 240
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -38,28 +37,11 @@ jobs:
             git worktree add -q --detach _lernen HEAD
             cd _lernen && git checkout -q --orphan lernen-neu && git rm -rq --cached . && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           fi
-      - name: Siegeltest (nur bei Code-Änderung)
-        if: github.event_name == 'push'
-        run: python siegel_test.py
-        timeout-minutes: 30
-      - name: Suchlauf
-        run: python suche_lauf.py
-        env:
-          PS_PLACEBO: "200"
-        timeout-minutes: 200
-      - name: Analyse (Stufe 1 und 4, 50 Profile, 50 Placebo-Simulationen; V3.10)
-        run: python analyse.py
-        env:
-          PS_CACHE: /tmp/lauf/cache
-          PS_LAUF: /tmp/lauf
-        timeout-minutes: 60
-        continue-on-error: true
-      - name: Vorregistrierte Hypothesen (Familie V, V3.10 E23; nur wartende Chargen)
+      - name: Vorregistrierte Hypothesen bewerten
         run: python vorreg.py
         env:
-          PS_CACHE: /tmp/lauf/cache
-        timeout-minutes: 30
-        continue-on-error: true
+          PS_CACHE: /tmp/vorreg-cache
+        timeout-minutes: 40
       - name: Einchecken auf claude/lernen
         run: |
           cd _lernen
@@ -67,7 +49,7 @@ jobs:
           git config user.email "pruefstand-bot@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then echo "keine Änderung"; exit 0; fi
-          git commit -q -m "Suchlauf $(date -u +%Y-%m-%dT%H:%MZ) (GitHub Action)"
+          git commit -q -m "Vorregistrierung $(date -u +%Y-%m-%dT%H:%MZ) (GitHub Action)"
           for i in 1 2 3; do
             if git ls-remote --exit-code --heads origin claude/lernen >/dev/null 2>&1; then
               git fetch -q origin claude/lernen && git rebase -q origin/claude/lernen && git push -q origin HEAD:claude/lernen && exit 0
