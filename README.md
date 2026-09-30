@@ -27,3 +27,5 @@ Ticker in `tickers.txt`, FRED-Serien in `fred_series.txt` – je eine Zeile, erg
 ## Grundsatz
 Das Skript repariert nichts. Kommt eine Reihe nicht sauber an (HTML statt CSV, falscher Kopf, zu wenige Zeilen),
 bleibt die alte Datei stehen und `manifest.json` nennt den Fehler. Der Prüfstand liest das Manifest zuerst.
+
+Upload-Routine geprüft am 30.9.2026 (Testeintrag, ohne Wirkung).
