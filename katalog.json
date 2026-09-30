@@ -2571,5 +2571,37 @@
   "mechanismus": "Ueberraschend hohe Exportverkaeufe von Agrarrohstoffen stuetzen kurzfristig Agrarpreise und Agrarwerte (DBA, XLB) gegenueber dem Weltindex.",
   "grund": "Oeffentlich ohne Login, woechentlich (Donnerstag), Historie ab 1990er Jahren; Publikationsfrist beachten; erste Pruefung ob maschinenlesbare Historie ohne Schluessel verfuegbar.",
   "status": "kandidat"
+ },
+ {
+  "id": "fedregister_bis_exportkontrolle",
+  "name": "Federal Register: BIS Exportkontrolle Rules und Proposed Rules",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder geaenderte US-Exportkontrollen (Entity List, Chip- und Technologiebeschraenkungen) treffen Halbleiter- und Technologiefirmen direkt im Absatz und koennen Technologiewerte (XLK) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_sec_regeln. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11955 Zeilen, letzter Wert 2026-09-24 (6 Tage), Median-Abstand 1, gleiche Folgewerte 89% (Nullfuellung, Ereignisreihe), Min 0 Max 5, 746 Ereignistage. Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert.",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T16:16:39Z",
+  "geprueft_utc": "2026-09-30T16:16:39Z"
+ },
+ {
+  "id": "fedregister_irs_steuerregeln",
+  "name": "Federal Register: IRS Steuerregeln (Rules und Proposed Rules)",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder vorgeschlagene Steuerregeln des IRS (Abzuege, Steuergutschriften, Unternehmensbesteuerung) veraendern die Nachsteuerertraege einzelner Branchen, etwa Energie (Gutschriften) und Finanzen, und koennen Sektoren kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_sec_regeln. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11961 Zeilen, letzter Wert 2026-09-30 (0 Tage), Median-Abstand 1, gleiche Folgewerte 65% (Nullfuellung), Min 0 Max 10, 2603 Ereignistage. Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert.",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T16:16:39Z",
+  "geprueft_utc": "2026-09-30T16:16:39Z"
  }
 ]
