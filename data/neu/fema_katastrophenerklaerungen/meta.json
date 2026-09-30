@@ -1,0 +1,20 @@
+{
+  "anzahl": {
+    "beschreibung": "Neue FEMA-Katastrophenerklaerungen (Major Disaster, Emergency, Fire Management) je Erklaerungstag, ab 1953-05-02.",
+    "einheit": "Anzahl Erklaerungen",
+    "publikation": "taeglich (OpenFEMA-Datensatz wird taeglich aktualisiert; Erklaerungen werden am Erklaerungstag oeffentlich bekanntgegeben, Datensatz-Eintrag spaetestens am Folgetag). Nachtraegliche Aenderungen einzelner Zeilen moeglich.",
+    "quelle_url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries",
+    "revidiert": false,
+    "verdichtung": "Anzahl verschiedener disasterNumber je declarationDate; 0 an Tagen ohne Erklaerung",
+    "verfuegbar_nach_tagen": 1
+  },
+  "anzahl_stuerme": {
+    "beschreibung": "Davon Erklaerungen mit incidentType Hurricane, Tropical Storm, Typhoon, Coastal Storm, Severe Storm, Tornado oder Flood.",
+    "einheit": "Anzahl Erklaerungen",
+    "publikation": "taeglich (OpenFEMA-Datensatz wird taeglich aktualisiert; Erklaerungen werden am Erklaerungstag oeffentlich bekanntgegeben, Datensatz-Eintrag spaetestens am Folgetag). Nachtraegliche Aenderungen einzelner Zeilen moeglich.",
+    "quelle_url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries",
+    "revidiert": false,
+    "verdichtung": "Anzahl verschiedener disasterNumber je declarationDate; 0 an Tagen ohne Erklaerung",
+    "verfuegbar_nach_tagen": 1
+  }
+}

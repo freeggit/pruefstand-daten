@@ -2507,8 +2507,9 @@
   "bereich": "Firmenereignisse",
   "prioritaet": "hoch",
   "mechanismus": "Haeufungen von SEC-Handelsaussetzungen zeigen Betrugs- und Manipulationswellen bei Kleinwerten und erhoehen die Risikoscheu, was defensive Sektoren (XLP, XLU) kurzfristig gegenueber dem Weltindex stuetzen kann.",
-  "grund": "Firmenereignis aggregiert, oeffentlich ohne Login, Tagesdatum, Historie ab 1995; Schwerpunkt Firmenereignisse. Publikationstag gleich Ereignistag pruefen.",
-  "status": "kandidat"
+  "grund": "Test 2026-09-30T12:28Z: sec.gov liefert HTTP 403 ('Request Rate Threshold Exceeded') von dieser Umgebung; Zusatz 6: EDGAR/SEC-Quellen nicht selbst versuchen, SEC-Beschaffung nur ueber GitHub Action auf main. Nicht umgangen.",
+  "status": "fehler",
+  "geprueft_utc": "2026-09-30T12:28Z"
  },
  {
   "id": "fema_katastrophenerklaerungen",
@@ -2518,8 +2519,13 @@
   "bereich": "Natur",
   "prioritaet": "normal",
   "mechanismus": "Grosse Katastrophenerklaerungen (Hurrikane, Ueberschwemmungen) belasten Versicherer und Bauwirtschaft und erhoehen Nachfrage nach Baustoffen; XLF, XLI und XLB reagieren kurzfristig gegenueber dem Weltindex.",
-  "grund": "Oeffentliche API ohne Schluessel, Historie ab 1953 (deckt vor 1990), Erklaerungstag als Ereignis. Zusatz Historie vor 1990.",
-  "status": "kandidat"
+  "grund": "K1-K7 erfuellt (Zusatz 4 Historie vor 1990, Bereich Natur/Ereignisse). OpenFEMA DisasterDeclarationsSummaries (offen, ohne Schluessel), Tageszaehlreihe (Nullfuellung) 1953-05-02 bis 2026-09-25, 26810 Zeilen, Median-Abstand 1 Tag. anzahl: Summe 5267, Max 108/Tag, Anteil gleicher Folgewerte 78% (duenne Zaehlreihe, erwartet); anzahl_stuerme: Summe 2840, Max 12, 86% gleiche. Datum = Erklaerungstag, verfuegbar_nach_tagen 1, publikation taeglich. Kleine nachtraegliche Zeilenkorrekturen im Datensatz moeglich (revidiert=false, Zaehlung nach disasterNumber stabil). Belegquelle: fema.gov/about/openfema. 2 Reihen mit klar verschiedenem Umfang (alle vs. Sturm/Flut), Zusatz 3 eingehalten. Ereignistage 0/1-Auswertung durch Suchmaschine.",
+  "status": "aktiv",
+  "geprueft_utc": "2026-09-30T12:28Z",
+  "reihen": [
+   "anzahl",
+   "anzahl_stuerme"
+  ]
  },
  {
   "id": "nrc_ereignismeldungen",
@@ -2529,8 +2535,9 @@
   "bereich": "Firmenereignisse",
   "prioritaet": "normal",
   "mechanismus": "Meldepflichtige Ereignisse in Kernkraftwerken (Abschaltungen, Stoerfaelle) verengen kurzfristig das Stromangebot und belasten Betreiber; XLU und Uran-nahe Werte reagieren gegenueber dem Weltindex.",
-  "grund": "Oeffentliche Jahresseiten ohne Login ab 1999, Meldedatum je Ereignis, Firmenereignis aggregiert.",
-  "status": "kandidat"
+  "grund": "Test 2026-09-30T12:28Z: Jahresseiten unter nrc.gov/documents-reports/.../event-notification-reports/JJJJ nur als Liste von Tagesberichten (ca. 286/Jahr); Ereigniszahl je Tag braucht ~7700 HTML-Abrufe zu je 100 KB (K7 Abruf unter 3 Minuten verletzt) und Mischung aus Reaktor-/Materialmeldungen ohne klaren Sektorbezug; reine Berichtstage waeren keine Information. Kein Mechanismus mit tragbarem Aufwand.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-09-30T12:28Z"
  },
  {
   "id": "eia_rohoellager_woechentlich",
