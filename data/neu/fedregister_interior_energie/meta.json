@@ -1,0 +1,11 @@
+{
+  "anzahl": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Rule, Proposed Rule, Notice) von BOEM/BOEMRE/BSEE/OSMRE, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=safety-and-environmental-enforcement-bureau",
+    "revidiert": false,
+    "verdichtung": "Anzahl Treffer je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

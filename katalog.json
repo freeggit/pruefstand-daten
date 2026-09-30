@@ -2367,5 +2367,37 @@
   "reihen": [
    "anzahl"
   ]
+ },
+ {
+  "id": "fedregister_interior_energie",
+  "name": "Federal Register: Offshore-/Bergbau-Aufsicht Innenministerium (BOEM/BSEE/OSMRE)",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Rules, Proposed Rules und Notices zu Offshore-Pachtverkaeufen, Foerderplaenen und Bergbau-Auflagen treiben Angebot und Kosten von Energie- und Grundstoffwerten (XLE, XLB) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Firmenereignisse), gleiche FR-API wie fedregister_epa_regeln, Agenturen BOEM, BOEMRE, BSEE, OSMRE; Typen Rule/Proposed Rule/Notice. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11953 Zeilen, letzter Wert 2026-09-22 (8 Tage, Quelle sparsam, K5 knapp), Median-Abstand 1 Tag (Nullfuellung), Anteil gleicher Folgewerte 70% (Nullfuellung), Min 0 Max 11, 2092 Ereignistage, Summe 3239. Abruf 22 s. Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert. Vorschlag Paar: XLE vs. Weltindex. Vor 1995: Historie ab 1994 (Beginn FR-API).",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T00:17:08Z",
+  "geprueft_utc": "2026-09-30T00:17:08Z"
+ },
+ {
+  "id": "fedregister_bankaufsicht",
+  "name": "Federal Register: Bankenaufsicht (OCC, Fed, FDIC) Rules und Proposed Rules",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Neue oder vorgeschlagene Bankenregeln (Kapital, Liquiditaet, Stresstests) von OCC, Fed und FDIC veraendern Eigenkapitalkosten und Ertragslage der Banken und koennen den Finanzsektor (XLF) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Firmenereignisse), gleiche FR-API wie fedregister_epa_regeln, Agenturen OCC, Federal Reserve System, FDIC; Typen Rule/Proposed Rule. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29, Median-Abstand 1 Tag (Nullfuellung), Anteil gleicher Folgewerte 76% (Nullfuellung), Min 0 Max 7, 1733 Ereignistage, Summe 2365. Abruf 15 s. Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert. Ergaenzt fdic_bankausfaelle (Extremfaelle) und fedregister_aufsicht (SEC/FTC).",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-09-30T00:17:08Z",
+  "geprueft_utc": "2026-09-30T00:17:08Z"
  }
 ]
