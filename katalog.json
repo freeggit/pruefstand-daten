@@ -526,7 +526,8 @@
   ],
   "aufgenommen_utc": "2026-09-23T15:44:36Z",
   "geprueft_utc": "2026-09-24T22:15:00Z",
-  "prioritaet": "tief"
+  "prioritaet": "tief",
+  "prioritaet_grund": "Regel L2 (30.9.2026): Bereich mit mindestens 5000 geprueften Kandidaten (S0015) und keinem ueber t 3.5; nicht geloescht."
  },
  {
   "id": "sec_insider_sektor",
@@ -540,7 +541,8 @@
   "grund": "SEC sperrt diese Umgebung (403); Beschaffung ueber GitHub Action auf main, siehe data/sec/manifest_sec.json. (Zusatz 3, 24.9.2026: nicht mehr selbst versuchen.) Vorherige Etappen 1-9 (23.-24.9.2026): SIC-Sektor-Mapping und quellen/sec_sic_sektor.json vorbereitet, aber jeder Abruf der EDGAR/SEC-Endpunkte aus dieser Umgebung lieferte HTTP 403.",
   "reihen": [],
   "aufgenommen_utc": "2026-09-23T22:10:19Z",
-  "geprueft_utc": "2026-09-24T16:14:00Z"
+  "geprueft_utc": "2026-09-24T16:14:00Z",
+  "prioritaet_grund": "Regel L2 (30.9.2026): Bereich mit mindestens 5000 geprueften Kandidaten (S0015) und keinem ueber t 3.5; nicht geloescht."
  },
  {
   "id": "twitter_unsicherheit",
@@ -606,7 +608,8 @@
    "intragovernmental"
   ],
   "aufgenommen_utc": "2026-09-24T08:11:45Z",
-  "geprueft_utc": "2026-09-24T08:11:45Z"
+  "geprueft_utc": "2026-09-24T08:11:45Z",
+  "prioritaet_grund": "Regel L2 (30.9.2026): Bereich mit mindestens 5000 geprueften Kandidaten (S0015) und keinem ueber t 3.5; nicht geloescht."
  },
  {
   "id": "openmeteo_wetter_anbau",
@@ -624,7 +627,8 @@
    "monsun_indien"
   ],
   "aufgenommen_utc": "2026-09-24T08:12:16Z",
-  "geprueft_utc": "2026-09-26T00:14:54Z"
+  "geprueft_utc": "2026-09-26T00:14:54Z",
+  "prioritaet_grund": "Regel L2 (30.9.2026): Bereich mit mindestens 5000 geprueften Kandidaten (S0015) und keinem ueber t 3.5; nicht geloescht."
  },
  {
   "id": "boj_call_rate",
@@ -755,7 +759,8 @@
    "y40"
   ],
   "aufgenommen_utc": "2026-09-24T16:14:00Z",
-  "geprueft_utc": "2026-09-24T16:14:00Z"
+  "geprueft_utc": "2026-09-24T16:14:00Z",
+  "prioritaet_grund": "Regel L2 (30.9.2026): Bereich mit mindestens 5000 geprueften Kandidaten (S0015) und keinem ueber t 3.5; nicht geloescht."
  },
  {
   "id": "fred_sofr",
@@ -797,7 +802,8 @@
   "grund": "Test am 2026-09-24T20:25:00Z: power.larc.nasa.gov liefert ohne Login/Schluessel taegliche T2M/PRECTOTCORR-Werte ab 1981 (K2 erfuellt), Publikationsverzug rund 3 Tage (K5 erfuellbar), kein Tageskontingent-Block festgestellt. Aber laut NASA-POWER-Dokumentation (power.larc.nasa.gov/docs/methodology/, bestaetigt per Websuche) basiert die Historie auf MERRA-2-Reanalyse bis auf wenige Monate vor der Gegenwart, der aktuelle Rand (bis auf wenige Tage) dagegen auf dem Near-Real-Time-Produkt GEOS-IT (vormals GEOS 5.12.4 FP-IT); dieser Near-Real-Time-Abschnitt wird nach einigen Monaten durch die dann verfuegbaren finalen MERRA-2-Werte ersetzt/revidiert. Damit genau derselbe Konflikt wie bei usgs_mississippi/usgs_ohio: der fuer K5 benoetigte aktuelle Rand ist strukturell revisionsfaellig -- K4 verletzt. Kein Abruf/keine Ablage der Historie; kein eigenes Skript geschrieben.",
   "reihen": [],
   "aufgenommen_utc": "2026-09-24T20:25:00Z",
-  "geprueft_utc": "2026-09-24T20:25:00Z"
+  "geprueft_utc": "2026-09-24T20:25:00Z",
+  "prioritaet_grund": "Regel L2 (30.9.2026): Bereich mit mindestens 5000 geprueften Kandidaten (S0015) und keinem ueber t 3.5; nicht geloescht."
  },
  {
   "id": "ecb_estr",
@@ -1061,7 +1067,8 @@
   ],
   "aufgenommen_utc": "2026-09-25T08:14:00Z",
   "geprueft_utc": "2026-09-25T08:14:00Z",
-  "prioritaet": "tief"
+  "prioritaet": "tief",
+  "prioritaet_grund": "Regel L2 (30.9.2026): Bereich mit mindestens 5000 geprueften Kandidaten (S0015) und keinem ueber t 3.5; nicht geloescht."
  },
  {
   "id": "debt_ceiling_x_date",
@@ -2491,5 +2498,71 @@
   "reihen": [],
   "aufgenommen_utc": "2026-09-30T08:16:18Z",
   "geprueft_utc": "2026-09-30T08:16:18Z"
+ },
+ {
+  "id": "sec_handelsaussetzungen",
+  "name": "SEC Trading Suspensions (Handelsaussetzungen je Aktie), Tageszaehlreihe",
+  "url": "https://www.sec.gov/litigation/suspensions/suspensions2019.htm (Jahresseiten ab 1995; Muster suspensionsJJJJ.htm)",
+  "domain": "sec.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "hoch",
+  "mechanismus": "Haeufungen von SEC-Handelsaussetzungen zeigen Betrugs- und Manipulationswellen bei Kleinwerten und erhoehen die Risikoscheu, was defensive Sektoren (XLP, XLU) kurzfristig gegenueber dem Weltindex stuetzen kann.",
+  "grund": "Firmenereignis aggregiert, oeffentlich ohne Login, Tagesdatum, Historie ab 1995; Schwerpunkt Firmenereignisse. Publikationstag gleich Ereignistag pruefen.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fema_katastrophenerklaerungen",
+  "name": "FEMA Disaster Declarations (Katastrophenerklaerungen), Tageszaehlreihe",
+  "url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$select=declarationDate,incidentType&$top=1000",
+  "domain": "fema.gov",
+  "bereich": "Natur",
+  "prioritaet": "normal",
+  "mechanismus": "Grosse Katastrophenerklaerungen (Hurrikane, Ueberschwemmungen) belasten Versicherer und Bauwirtschaft und erhoehen Nachfrage nach Baustoffen; XLF, XLI und XLB reagieren kurzfristig gegenueber dem Weltindex.",
+  "grund": "Oeffentliche API ohne Schluessel, Historie ab 1953 (deckt vor 1990), Erklaerungstag als Ereignis. Zusatz Historie vor 1990.",
+  "status": "kandidat"
+ },
+ {
+  "id": "nrc_ereignismeldungen",
+  "name": "NRC Event Notification Reports (Kernkraftwerk-Ereignismeldungen), Tageszaehlreihe",
+  "url": "https://www.nrc.gov/reading-rm/doc-collections/event-status/event/2019/",
+  "domain": "nrc.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "normal",
+  "mechanismus": "Meldepflichtige Ereignisse in Kernkraftwerken (Abschaltungen, Stoerfaelle) verengen kurzfristig das Stromangebot und belasten Betreiber; XLU und Uran-nahe Werte reagieren gegenueber dem Weltindex.",
+  "grund": "Oeffentliche Jahresseiten ohne Login ab 1999, Meldedatum je Ereignis, Firmenereignis aggregiert.",
+  "status": "kandidat"
+ },
+ {
+  "id": "eia_rohoellager_woechentlich",
+  "name": "EIA Wochenbericht: US-Rohoelbestaende (WCESTUS1), woechentliche Aenderung",
+  "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCESTUS1&f=W",
+  "domain": "eia.gov",
+  "bereich": "Rohstoffe",
+  "prioritaet": "normal",
+  "mechanismus": "Ueberraschende Lageraufbauten oder -abbaus bei US-Rohoel (Halova, Kurov, Kucher 2014) bewegen den Oelpreis kurzfristig und damit XLE und USO gegenueber dem Weltindex.",
+  "grund": "Oeffentlich ohne Login, ab 1982, woechentlich; Publikationsfrist Mittwoch (Verfassung: EIA wochentlich mit echter Frist) beachten.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fdic_problembanken_quartal",
+  "name": "FDIC Quarterly Banking Profile: Zahl der Problembanken je Quartal",
+  "url": "https://banks.data.fdic.gov/api/financial?filters=REPDTE%3A20200630&fields=REPDTE",
+  "domain": "fdic.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "normal",
+  "mechanismus": "Steigende Zahl von Problembanken geht Kreditverknappung und Bankenstress voraus und belastet XLF kurzfristig gegenueber dem Weltindex.",
+  "grund": "Oeffentliche API ohne Schluessel, quartalsweise ab 1984 (vor 1990), Publikationsfrist ca. 8 Wochen nach Quartalsende zwingend beachten; ergaenzt fdic_bankausfaelle.",
+  "status": "kandidat"
+ },
+ {
+  "id": "usda_export_sales_woechentlich",
+  "name": "USDA Export Sales Report: woechentliche Netto-Verkaeufe (Mais, Weizen, Soja)",
+  "url": "https://apps.fas.usda.gov/export-sales/esrd1.html",
+  "domain": "usda.gov",
+  "bereich": "Rohstoffe",
+  "prioritaet": "normal",
+  "mechanismus": "Ueberraschend hohe Exportverkaeufe von Agrarrohstoffen stuetzen kurzfristig Agrarpreise und Agrarwerte (DBA, XLB) gegenueber dem Weltindex.",
+  "grund": "Oeffentlich ohne Login, woechentlich (Donnerstag), Historie ab 1990er Jahren; Publikationsfrist beachten; erste Pruefung ob maschinenlesbare Historie ohne Schluessel verfuegbar.",
+  "status": "kandidat"
  }
 ]
