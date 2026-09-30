@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: suche
+  group: vorreg
   cancel-in-progress: false
 jobs:
 
