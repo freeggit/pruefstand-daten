@@ -2856,5 +2856,33 @@
   ],
   "aufgenommen_utc": "2026-10-01T16:18:18Z",
   "geprueft_utc": "2026-10-01T16:18:18Z"
+ },
+ {
+  "id": "fedregister_cfpb_regeln",
+  "name": "Federal Register: CFPB Rules/Proposed Rules",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "abgelehnt",
+  "prioritaet": "normal",
+  "mechanismus": "CFPB-Regeln zu Kredit-, Hypotheken- und Zahlungsverkehr treffen Banken und Kreditgeber (XLF).",
+  "grund": "K5 verletzt: Probeabruf 2026-10-01T20:16:15Z, letzter Rule 2026-06-25, letzter Proposed Rule 2026-07-09 (>80 Tage alt, Behoerde 2025/26 weitgehend stillgelegt).",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-01T20:16:15Z",
+  "geprueft_utc": "2026-10-01T20:16:15Z"
+ },
+ {
+  "id": "fedregister_fmc_uspto_regeln",
+  "name": "Federal Register: FMC (Seeschifffahrt) und USPTO (Patente) Rules",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "abgelehnt",
+  "prioritaet": "normal",
+  "mechanismus": "FMC-Regeln betreffen Reedereien/Logistik (XLI), USPTO-Regeln Patentpolitik (XLK/XLV).",
+  "grund": "K5 verletzt: Probeabruf 2026-10-01T20:16:15Z, FMC letzter Wert 2026-09-01 (30 Tage), USPTO 2026-08-26 (36 Tage); beide duenn.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-01T20:16:15Z",
+  "geprueft_utc": "2026-10-01T20:16:15Z"
  }
 ]
