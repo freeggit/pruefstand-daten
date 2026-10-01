@@ -333,6 +333,25 @@ if mh:
             s = bis(d.set_index(pd.to_datetime(d.datum)).aufrufe.astype(float))
             ind[f"wiki_{name}_spike"] = (np.log1p(s) - np.log1p(s).rolling(28, min_periods=20).median(), [("tag", LAG_FRED)])
 
+# Belegte Korrekturen fehlerhafter Scout-Kalenderreihen (Freigabe Reto 1.10.2026); Rohdaten bleiben unverändert.
+KORREKTUREN, N_KORR = {}, 0
+_kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "korrekturen_neu.json")
+if os.path.exists(_kp):
+    KORREKTUREN = json.load(open(_kp, encoding="utf-8")).get("korrekturen", {})
+
+def korrigieren(schluessel, x):
+    global N_KORR
+    k = KORREKTUREN.get(schluessel)
+    if not k:
+        return x
+    x = x.copy()
+    for wert, liste in ((0.0, k.get("setze_0", [])), (1.0, k.get("setze_1", []))):
+        for d in liste:
+            t = pd.Timestamp(d)
+            if t in x.index and x.loc[t] != wert:
+                x.loc[t] = wert; N_KORR += 1
+    return x
+
 def lade_vertrag(basis, manifest_rel, praefix_, kurz):
     n_ok = 0
     try:
@@ -345,7 +364,7 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
         try:
             d = pd.read_csv(lade(v["datei"].replace("data/", "", 1), basis))
             x = pd.Series(pd.to_numeric(d.wert, errors="coerce").values, index=pd.to_datetime(d.datum)).dropna().sort_index()
-            x = bis(x[~x.index.duplicated(keep="last")])
+            x = korrigieren(f"{kurz}:{k}", bis(x[~x.index.duplicated(keep="last")]))
             if len(x) < 500 or x.index[0] > pd.Timestamp("2015-12-31") or x.index.to_series().diff().dt.days.median() > 3:
                 continue
             r = regeln_fuer(f"{kurz}:{k}", 1 + int(v.get("verfuegbar_nach_tagen", 1)))
@@ -358,6 +377,7 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
 
 N_NEU = lade_vertrag(BASIS_N, "neu/manifest_neu.json", "neu_", "neu") if BASIS_N else 0
 N_SEC = lade_vertrag(BASIS, "sec/manifest_sec.json", "sec_", "sec")
+log(f"Korrekturen Scout-Kalender: {N_KORR} Werte geändert (korrekturen_neu.json)")
 
 N_PAARE = 0
 if os.path.exists(PAARE):
