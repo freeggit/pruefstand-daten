@@ -1730,11 +1730,12 @@
   "url": "https://www.federalreserve.gov/releases/h41/current/",
   "domain": "federalreserve.gov",
   "bereich": "Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Starke Anstiege der Nutzung von Fed-Dollar-Liquiditaetsswaplinien mit anderen Notenbanken signalisieren globalen Dollar-Liquiditaetsstress; koennten defensive Ziele (XLU, TLT, IEF) staerken und EM (EEM) kurzfristig belasten, analog zur 2008/2020-Krisenliteratur zu Dollar-Funding-Stress.",
-  "grund": "Oeffentliche woechentliche Fed-Bilanzposition ohne Login, Historie seit 2007ff; normale Prioritaet, Mechanismus in der Krisenliteratur (Dollar-Funding-Stress) gut belegt, aber Ereignis meist selten/extrem (duennes n) und daher kein Vorrang vor bestehenden Geldmarktreihen.",
-  "aufgenommen_utc": "2026-09-27T09:41:32Z"
+  "grund": "K1: woechentlicher Bestand (H.4.1), Median-Abstand 7 Tage > 3; Tageswerte nicht frei verfuegbar.",
+  "aufgenommen_utc": "2026-09-27T09:41:32Z",
+  "geprueft_utc": "2026-10-01T00:20:00Z"
  },
  {
   "id": "ifo_geschaeftsklima_veroeffentlichung",
@@ -2547,8 +2548,9 @@
   "bereich": "Rohstoffe",
   "prioritaet": "normal",
   "mechanismus": "Ueberraschende Lageraufbauten oder -abbaus bei US-Rohoel (Halova, Kurov, Kucher 2014) bewegen den Oelpreis kurzfristig und damit XLE und USO gegenueber dem Weltindex.",
-  "grund": "Oeffentlich ohne Login, ab 1982, woechentlich; Publikationsfrist Mittwoch (Verfassung: EIA wochentlich mit echter Frist) beachten.",
-  "status": "kandidat"
+  "grund": "K1: woechentliche Frequenz, Median-Abstand 7 Tage > 3.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-01T00:20:00Z"
  },
  {
   "id": "fdic_problembanken_quartal",
@@ -2558,8 +2560,9 @@
   "bereich": "Firmenereignisse",
   "prioritaet": "normal",
   "mechanismus": "Steigende Zahl von Problembanken geht Kreditverknappung und Bankenstress voraus und belastet XLF kurzfristig gegenueber dem Weltindex.",
-  "grund": "Oeffentliche API ohne Schluessel, quartalsweise ab 1984 (vor 1990), Publikationsfrist ca. 8 Wochen nach Quartalsende zwingend beachten; ergaenzt fdic_bankausfaelle.",
-  "status": "kandidat"
+  "grund": "K1: quartalsweise, Median-Abstand ca. 91 Tage > 3; ausserdem Publikationsfrist ca. 8 Wochen.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-01T00:20:00Z"
  },
  {
   "id": "usda_export_sales_woechentlich",
@@ -2569,8 +2572,9 @@
   "bereich": "Rohstoffe",
   "prioritaet": "normal",
   "mechanismus": "Ueberraschend hohe Exportverkaeufe von Agrarrohstoffen stuetzen kurzfristig Agrarpreise und Agrarwerte (DBA, XLB) gegenueber dem Weltindex.",
-  "grund": "Oeffentlich ohne Login, woechentlich (Donnerstag), Historie ab 1990er Jahren; Publikationsfrist beachten; erste Pruefung ob maschinenlesbare Historie ohne Schluessel verfuegbar.",
-  "status": "kandidat"
+  "grund": "K1: woechentliche Frequenz, Median-Abstand 7 Tage > 3.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-01T00:20:00Z"
  },
  {
   "id": "fedregister_bis_exportkontrolle",
@@ -2635,5 +2639,19 @@
   "status": "aktiv",
   "mechanismus": "Artenschutzregeln (Listungen, kritische Habitate) der Fisch- und Wildtierbehoerde beschraenken Energie-, Bergbau- und Landnutzungsprojekte und koennen Energie und Rohstoffe (XLE, XLB, XLU) kurzfristig gegenueber dem Weltindex bewegen.",
   "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_irs_steuerregeln. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11956 Zeilen, letzter Wert 2026-09-25 (5 Tage), Median-Abstand 1, gleiche Folgewerte 75% (Nullfuellung), Min 0 Max 7, 3013 Ereignistage. Publikation taeglich (gedrucktes Publikationsdatum), verfuegbar_nach_tagen 0, nicht revidiert."
+ },
+ {
+  "id": "fedregister_fmcsa_lkw",
+  "name": "Federal Register: FMCSA Lkw-Regeln (Rules und Proposed Rules)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=federal-motor-carrier-safety-administration",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "normal",
+  "mechanismus": "Lkw-Regeln (Lenkzeiten, Sicherheitsauflagen) veraendern Frachtkosten und Kapazitaet und koennen Industrie und Basiskonsum (XLI, XLP) kurzfristig gegenueber dem Weltindex bewegen.",
+  "status": "abgelehnt",
+  "grund": "K5: Probeabruf 2026-10-01: ab 1994-01-01, 11932 Zeilen, letzter Ereignistag 2026-09-01 (30 Tage alt, >10); nur 559 Ereignistage, 91.5% gleiche Folgewerte (>20%). Reihe zu duenn, Daten nicht abgelegt.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-01T00:20:00Z",
+  "geprueft_utc": "2026-10-01T00:20:00Z"
  }
 ]
