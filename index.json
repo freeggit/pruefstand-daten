@@ -1120,11 +1120,17 @@
    "datei": "suche/S0018.json",
    "kandidaten": 327120,
    "in_db": false
+  },
+  {
+   "nr": 19,
+   "datei": "suche/S0019.json",
+   "kandidaten": 327120,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-01T18:28Z",
+ "letzter_suchlauf_utc": "2026-10-01T20:43Z",
  "pruefung_lernrunde_utc": "2026-10-01T09:40:00Z",
- "letzter_code_hash": "eed3c353f1f2d2c8",
+ "letzter_code_hash": "7ee16bbd67fbf4b9",
  "methode": "M4",
  "vorreg": [
   {
