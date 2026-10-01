@@ -2653,5 +2653,37 @@
   "reihen": [],
   "aufgenommen_utc": "2026-10-01T00:20:00Z",
   "geprueft_utc": "2026-10-01T00:20:00Z"
+ },
+ {
+  "id": "fedregister_ams_agrarmarkt",
+  "name": "Federal Register: Agricultural Marketing Service Marktordnungen (Rules und Proposed Rules)",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "hoch",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-10-01T04:30:00Z",
+  "geprueft_utc": "2026-10-01T04:30:00Z",
+  "status": "aktiv",
+  "mechanismus": "Marktordnungen und Qualitaetsnormen des Agrarvermarktungsdienstes setzen Preis- und Angebotsrahmen fuer Agrarrohstoffe und Basiskonsum (XLP, DBA) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_fws_artenschutz. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29 (2 Tage), Median-Abstand 1, gleiche Folgewerte 68% (Nullfuellung), Min 0 Max 10, 2398 Ereignistage. Publikation taeglich (gedrucktes Publikationsdatum), verfuegbar_nach_tagen 0, nicht revidiert. Abruf 17 s."
+ },
+ {
+  "id": "fedregister_uscg_schifffahrt",
+  "name": "Federal Register: Coast Guard Schifffahrtsregeln (Rules und Proposed Rules)",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "hoch",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-10-01T04:30:00Z",
+  "geprueft_utc": "2026-10-01T04:30:00Z",
+  "status": "aktiv",
+  "mechanismus": "Sicherheitszonen, Hafen- und Wasserstrassensperren der Kuestenwache behindern Schiffs- und Energielogistik (Houston, Mississippi) und koennen Industrie und Energie (XLI, XLE) kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_fws_artenschutz. K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11960 Zeilen, letzter Wert 2026-09-29 (2 Tage), Median-Abstand 1, gleiche Folgewerte 40%, Min 0 Max 22, 5312 Ereignistage. Viele lokale Sicherheitszonen/Brueckenregeln (Rauschen moeglich). Publikation taeglich, verfuegbar_nach_tagen 0, nicht revidiert. Abruf 20 s."
  }
 ]
