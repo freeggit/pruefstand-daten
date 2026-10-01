@@ -1,0 +1,178 @@
+{
+ "charge": "2026-10-01",
+ "registriert_utc": "2026-10-01T09:29:12Z",
+ "verfassung": "V3.10",
+ "autor": "Forschungsteam (Zusatzcharge SEC, von Reto am 1.10.2026 freigegeben: «A bis C wie vorgeschlagen, C als einmalige Zusatzcharge»)",
+ "freigabe": "Reto, 1.10.2026: «A bis C wie vorgeschlagen, C als einmalige Zusatzcharge» (einmalige Ausnahme zu E23, zusätzlich zur Klausur vom 4.10.2026)",
+ "blind": "Hypothesen ohne Sicht auf Suchergebnisse, Renditen oder EDGAR-Zählreihen geschrieben; nur Literatur und Mechanismus.",
+ "hypothesen": [
+  {
+   "id": "V-2026-10-01-01",
+   "indikator": "sec_sec_edgar_markt_s1_z252",
+   "art": "hoch",
+   "ziel": "xlu",
+   "h": 20,
+   "erwartung": "positiv",
+   "mechanismus": "Ein Schub an S-1/F-1-Registrierungen zeigt ein offenes Emissionsfenster: Firmen emittieren Eigenkapital, wenn Aktien teuer und die Anlegerstimmung hoch ist (Market Timing). Nach Phasen hoher Stimmung fallen die Folgerenditen des Aktienmarkts, und anleihenähnliche Titel (Versorger) schneiden relativ besser ab als der breite Markt. Wechsel in XLU fängt diesen Stimmungsumschwung relativ zu ACWI ab.",
+   "literatur": "Baker & Wurgler 2000 (Eigenkapitalanteil an Neuemissionen sagt tiefe Marktrenditen voraus, US 1928–1997); Lowry 2003 (IPO-Volumen folgt Stimmung, sagt tiefere Folgerenditen voraus); Pástor & Veronesi 2005 (IPO-Volumen negativ zur Marktrendite im Folgequartal, t = −2.23); Baker & Wurgler 2007 (Stimmungsindex mit IPO-Anzahl; bei Stimmung > 1 SD über Mittel Marktrendite −0.34 pp pro Monat; Versorger mit leicht negativem Stimmungsbeta).",
+   "effekt_erwartet_pp": "s.W. 0.4–1.0 pp je Wechsel (20 Tage). Dokumentiert sind rund −0.3 bis −0.6 pp Marktrendite pro Monat nach hoher Stimmung; XLU-Vorteil gegenüber ACWI addiert s.W. 0.2–0.4 pp aus negativem Stimmungsbeta. Grenzfall zur Hürde 0.88 pp; die Wette ist, dass 95%-Spitzen der Tagesreihe stärkere Effekte tragen als die Monatsmittel der Literatur.",
+   "risiko": "S-1-Tageszählung ist dünn (s.W. 4–5 Meldungen pro Tag) und kalendergetrieben (Häufung vor den 135-Tage-Fristen der Abschlüsse Mitte Feb/Mai/Aug/Nov), viele «hoch»-Tage sind daher Kalender statt Welle. S-1 umfasst auch Wiederverkaufs-Registrierungen und SPACs (Spätjahr 2020 SPAC-Flut bei steigendem Markt). Literatur arbeitet auf Quartals-/Jahreshorizont; 20 Tage fangen nur einen Bruchteil."
+  },
+  {
+   "id": "V-2026-10-01-02",
+   "indikator": "sec_sec_edgar_xlv_13d_z252",
+   "art": "hoch",
+   "ziel": "ibb",
+   "h": 20,
+   "erwartung": "positiv",
+   "mechanismus": "Eine Häufung von Schedule-13D-Erstmeldungen im Gesundheitssektor zeigt Blockkäufe mit Einflussabsicht (Spezialfonds, Aktivisten, Käufer mit Unterstützungsvereinbarungen vor Übernahmen). Im Biotech-Segment sind die Übernahmeprämien gross und die Zielfirmen Mid-Caps, die in IBB spürbar gewichtet sind; steigende Übernahme- und Aktivismuswahrscheinlichkeit hebt auch die Bewertung der noch nicht betroffenen Branchenkollegen. IBB sollte daher ACWI in den Folgewochen schlagen.",
+   "literatur": "Brav, Jiang, Partnoy & Thomas 2008 (Zielfirmen rund +7% Überrendite im Fenster [−20,+20], keine Umkehr); Klein & Zur 2009 (+7.2% in [−30,+30]); Bebchuk, Brav & Jiang 2015 (keine langfristige Umkehr); Song & Walkling 2000 (positive Überrendite für Konkurrenten von Übernahmezielen, Akquisitionswahrscheinlichkeits-Hypothese); Gantchev, Gredil & Jotikasthira 2019 (Aktivismusdrohung verbessert Branchenkollegen, aber über 1–2 Jahre).",
+   "effekt_erwartet_pp": "s.W. 0.3–1.0 pp je Wechsel. Zielfirmen-Effekt ist gross, liegt aber grösstenteils vor dem Meldetag und wird im ETF stark verdünnt; Branchen-Spillover ist in der Literatur langsam (Jahre) oder klein (Konkurrenten bei Ankündigung). Unter der Hürde wahrscheinlich; aufgenommen als einziger Sektortest der 13D-Reihe, weil Biotech die höchste Übernahmedichte und Zielgewichtung im ETF-Universum hat.",
+   "risiko": "Sektorreihe ist sehr dünn (13D nur zu 47% sektorisiert, Gesundheit s.W. rund 1 Meldung pro Tag): «hoch» bedeutet oft nur 3–4 Meldungen an einem Tag, also viel Poisson-Rauschen. Viele 13D betreffen Microcaps und Mantelfirmen ohne Bezug zu IBB. Aslan & Kumar 2016 finden für Konkurrenten bei Aktivismus sogar negative Ankündigungsrenditen (Produktmarktdruck)."
+  },
+  {
+   "id": "V-2026-10-01-03",
+   "indikator": "sec_sec_insider_markt_kaeufer_z252",
+   "art": "hoch",
+   "ziel": "smh",
+   "h": 20,
+   "erwartung": "positiv",
+   "mechanismus": "Ungewöhnlich viele Insider-Käufer im Gesamtmarkt treten typischerweise nach starken Kursrückgängen auf; Insider handeln konträr und erkennen Übertreibungen und kommende Gewinnverbesserungen. Folgt darauf eine Markterholung, gewinnt ein Ziel mit hohem Marktbeta (Halbleiter, Beta s.W. 1.4–1.6 gegenüber ACWI) überproportional.",
+   "literatur": "Seyhun 1988 (aggregierte Netto-Insiderkäufe sagen Marktrenditen der Folgemonate voraus, 1975–1981); Seyhun 1990 (Insider kauften nach dem Crash 1987 massiv, Markt erholte sich); Seyhun 1992 (aggregierte Insideraktivität erklärt bis 60% der Varianz der Jahresrenditen); Lakonishok & Lee 2001 (Spanne von rund 11% p.a. Marktrendite zwischen oberem und unterem NPR-Dezil, 12 Monate; bei Large Caps schwach); Kang, Kim & Wang 2018 (Clusterkäufe +3.8% Überrendite in 21 Tagen, Firmenebene); Brochet 2019 (1 SD mehr Netto-Insiderkäufe → +0.9% Marktrendite im Folgequartal).",
+   "effekt_erwartet_pp": "s.W. 0.5–2.0 pp je Wechsel. Durchschnittlich dokumentiert sind nur s.W. 0.4–0.9 pp Marktvorsprung pro Monat im oberen Dezil; über das Beta von SMH ergibt das 0.2–0.5 pp Mehrrendite. Hürde wird nur erreicht, wenn die 95%-Spitzen vor allem Kapitulationsphasen (2002, 2008/09, 2011, 2015/16, 2018, 2020) erfassen, in denen die Erholung gross ist.",
+   "risiko": "Insiderkäufe häufen sich saisonal in den Handelsfenstern nach der Berichtssaison; viele «hoch»-Tage sind daher Kalender statt Kapitulation. Insider kaufen oft zu früh (Okt. 2008 vor weiterem Einbruch). SMH hat grosse eigene Branchenzyklen (hohe Streuung, schwache t-Werte). Insiderreihen liegen bereits im Suchraum: Kontaminationsrisiko, falls diese Kombination schon in einer Bestenliste stand."
+  },
+  {
+   "id": "V-2026-10-01-04",
+   "indikator": "sec_sec_insider_xle_kaeufer_z252",
+   "art": "hoch",
+   "ziel": "xle",
+   "h": 20,
+   "erwartung": "positiv",
+   "mechanismus": "Insider von Energiefirmen kennen Kostenkurven, Absicherungen und Bilanzlage am besten; eine Häufung ihrer Käufe tritt nach Ölpreiseinbrüchen auf, wenn der Markt Konkurs- und Ertragsrisiken überzeichnet. Die sektorweite, gleichgerichtete Kaufwelle (Clusterkäufe über viele Firmen) zeigt eine Unterbewertung des ganzen Sektors, die sich in den Folgewochen teilweise auflöst.",
+   "literatur": "Lakonishok & Lee 2001 (Käufe informativ, Verkäufe kaum); Alldredge & Blank 2019 (Clusterkäufe +2.1% vs. +1.2% Einzelkäufe im Folgemonat); Kang, Kim & Wang 2018 (Clusterkäufe +3.8% in 21 Tagen); Seyhun 1992 (aggregierte Insideraktivität spiegelt gesamtwirtschaftliche und branchenweite Information); Jiang & Zaman 2010 (aggregierte Insideraktivität sagt Cashflow-Überraschungen voraus; nicht im Volltext geprüft).",
+   "effekt_erwartet_pp": "s.W. 0.5–1.5 pp je Wechsel. Firmenebene 2–4% in 21 Tagen, im ETF verdünnt, weil XLE von XOM/CVX dominiert ist und Insiderkäufe vor allem in mittelgrossen E&P-Firmen stattfinden. Grenzfall.",
+   "risiko": "Dünne Sektorreihe (s.W. wenige Käufer pro Tag), Saisonmuster der Handelsfenster. Ölpreis kann nach Insiderkaufwelle weiter fallen (2014/15 mehrere Stufen). Kontaminationsrisiko wie bei -03."
+  },
+  {
+   "id": "V-2026-10-01-05",
+   "indikator": "sec_sec_insider_xlf_kaeufer_z252",
+   "art": "hoch",
+   "ziel": "xlf",
+   "h": 20,
+   "erwartung": "positiv",
+   "mechanismus": "Bankinsider haben Einblick in Kreditqualität, Rückstellungsbedarf und Refinanzierung; eine sektorweite Häufung ihrer Käufe nach Kursstürzen der Finanzwerte signalisiert, dass die eingepreisten Kreditverluste übertrieben sind. Die Information diffundiert langsam, weil Bankbilanzen schwer bewertbar sind (opak), was den Informationsvorsprung der Insider vergrössert.",
+   "literatur": "Seyhun 1988, 1992 (aggregierte Insiderkäufe sagen Folgerenditen voraus); Lakonishok & Lee 2001; Brochet 2019 (Prognosegehalt von Insiderstimmung grösser bei intransparenter Informationslage); Kang, Kim & Wang 2018 (Clusterkäufe +3.8% in 21 Tagen).",
+   "effekt_erwartet_pp": "s.W. 0.4–1.5 pp je Wechsel. Opazität der Banken spricht für grösseren Effekt als im Marktdurchschnitt; ETF-Verdünnung durch Grossbanken spricht dagegen. Grenzfall.",
+   "risiko": "Herbst 2008: Bankinsider kauften gegen den Absturz und lagen kurzfristig falsch; einzelne Krisenepisoden dominieren den Mittelwert. Viele Käufe in Kleinbanken ausserhalb von XLF. Kontaminationsrisiko wie bei -03."
+  }
+ ],
+ "verworfen": [
+  {
+   "idee": "8-K-Häufungen (Markt oder Sektor, z252/d20 hoch) als Berichtssaison-Signal: Ankündigungsprämie nach Savor & Wilson 2016 bzw. Frazzini & Lamont 2007",
+   "grund": "8-K-Tageszahlen sind seit 2004 (Item 2.02) überwiegend Ertragsmeldungen; «hoch» trifft fast nur Spitzentage der Berichtssaison. Die Ankündigungsprämie liegt auf Titelebene bei wenigen Zehntelprozent pro Ankündigungsfenster, fällt vor bzw. am Ankündigungstag an (Einstieg erst am Folgetag) und betrifft alle Sektoren fast gleichzeitig; Sektor-ETF gegenüber ACWI s.W. < 0.3 pp. Klar unter 0.88 pp."
+  },
+  {
+   "idee": "8-K-Nachrichtensturm (Markt d5/z252 sprung_auf) als Krisensignal → TLT/SHY oder als Unteraufmerksamkeits-Signal (Hirshleifer, Lim & Teoh 2009)",
+   "grund": "Keine Literatur mit gerichtetem Markteffekt aus der Meldungsanzahl; Ablenkungseffekt betrifft die Reaktion auf einzelne Ertragsmeldungen, nicht das Vorzeichen der Sektorrendite. Krisenmeldungen ausserhalb der Saison erreichen die von Saisonspitzen gesetzte 95%-Schwelle kaum. Lerman & Livnat 2010 finden Drift nur bei seltenen Items (Konkurs, Wertberichtigung, Delisting), die in der Gesamtzählung untergehen."
+  },
+  {
+   "idee": "Sektor-8-K-Spitzen bei früh bzw. spät berichtenden Sektoren (XLF früh, XLRE/XLU spät) → Sektor-ETF",
+   "grund": "Im Wesentlichen Kalendereffekt, der von den Kalenderreihen besser abgebildet wird; dokumentierte Prämie s.W. 0.1–0.3 pp, klar unter Hürde."
+  },
+  {
+   "idee": "Markt-13D-Welle (sec_sec_edgar_markt_13d_z252 hoch) → riskantes Ziel (konträres «Smart Money») oder → defensives Ziel (Übermut, Fusionswelle)",
+   "grund": "Vorzeichen unklar: Aktivisten-13D (konträr, Zielfirmen mit tiefem Tobin's q) sind s.W. unter 10% der Erstmeldungen; die Masse sind Kontrollwechsel in Microcaps, Mantelfirmen, Reverse Mergers, De-SPAC-Sponsoren und übernahmebezogene Meldungen, die prozyklisch in heissen Märkten steigen. Keine Literatur, die die aggregierte 13D-Zahl mit Marktrenditen verbindet; der Stimmungsmechanismus ist mit -01 (S-1) besser abgedeckt."
+  },
+  {
+   "idee": "Sektor-13D-Spillover allgemein (XLK, XLE, XLF, XLI 13D hoch → gleicher Sektor-ETF)",
+   "grund": "Zielfirmen sind Small/Mid-Caps mit verschwindendem Gewicht in den Sektor-ETF; Überrendite fällt überwiegend vor dem Meldetag an (2.6% schon >10 Tage vorher, Brav et al.); Branchen-Spillover nach Gantchev et al. 2019 über 1–2 Jahre (4–6% über 3 Jahre), also s.W. < 0.2 pp pro 20 Tage. Aslan & Kumar 2016: Konkurrenten kurzfristig eher negativ. Nur Biotech (-02) als Ausnahme getestet."
+  },
+  {
+   "idee": "S-1-Dürre (sec_sec_edgar_markt_s1_z252 tief) → spekulatives Ziel (IBB, SMH) nach Baker & Wurgler (tiefe Stimmung → spekulative Titel +0.8 bis +1.2% pro Monat)",
+   "grund": "Mechanismus gut, aber die Tagesreihe (s.W. 4–5 Meldungen pro Tag) hat viele Null-Tage; das 5%-Quantil fällt auf den Null-Wert, «tief» feuert dann zufällig oder gar nicht. Ereignis technisch schlecht definiert."
+  },
+  {
+   "idee": "Aggregierte Insider-Verkäufer tief (sec_sec_insider_markt_verkaeufer_z252 tief) → Risiko-Ziel",
+   "grund": "Lakonishok & Lee 2001: Verkäufe kaum informativ; Ereignis überlappt stark mit -03 (Kapitulationsphasen), also fast derselbe Test."
+  },
+  {
+   "idee": "Insider-Kaufwert USD (kaufwert_usd hoch) statt Anzahl Käufer",
+   "grund": "Dollarsummen werden von Einzelkäufen grosser Blockhalter (>10%-Eigner zählen als Insider) dominiert; Literatur (Lakonishok & Lee) arbeitet mit Anzahlen. Anzahl Käufer ist robuster."
+  }
+ ],
+ "quellen": [
+  {
+   "zitat": "Brav, Jiang, Partnoy & Thomas (2008): Hedge Fund Activism, Corporate Governance, and Firm Performance. Journal of Finance 63(4).",
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2008.01373.x"
+  },
+  {
+   "zitat": "Brav, Jiang & Kim (2010): Hedge Fund Activism: A Review (u. a. 6% in 20 Tagen nach Meldung, 2.6% Vorlauf, Klein & Zur 2009: 7.2% in [−30,+30], Rückgang der Ankündigungsrendite von ~14% 2001 auf <4% 2006/07).",
+   "url": "https://business.columbia.edu/sites/default/files-efs/pubfiles/4126/Hedge%20Fund%20Activism%20A%20Review.pdf"
+  },
+  {
+   "zitat": "Bebchuk, Brav & Jiang (2015): The Long-Term Effects of Hedge Fund Activism. Columbia Law Review (NBER w21227).",
+   "url": "https://www.nber.org/system/files/working_papers/w21227/w21227.pdf"
+  },
+  {
+   "zitat": "Gantchev, Gredil & Jotikasthira (2019): Governance under the Gun: Spillover Effects of Hedge Fund Activism. Review of Finance 23(6).",
+   "url": "https://www.ecgi.global/sites/default/files/working_papers/documents/finalgantchevgrediljotikasthira.pdf"
+  },
+  {
+   "zitat": "Aslan & Kumar (2016): The Product Market Effects of Hedge Fund Activism. Journal of Financial Economics.",
+   "url": "https://corpgov.law.harvard.edu/2015/11/17/the-product-market-effects-of-hedge-fund-activism"
+  },
+  {
+   "zitat": "Song & Walkling (2000): Abnormal Returns to Rivals of Acquisition Targets: A Test of the Acquisition Probability Hypothesis. Journal of Financial Economics 55.",
+   "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=917815"
+  },
+  {
+   "zitat": "Lerman & Livnat (2010): The New Form 8-K Disclosures. Review of Accounting Studies 15.",
+   "url": "https://pages.stern.nyu.edu/~jlivnat/f8k%20current.pdf"
+  },
+  {
+   "zitat": "Savor & Wilson (2016): Earnings Announcements and Systematic Risk. Journal of Finance 71(1).",
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12361"
+  },
+  {
+   "zitat": "Hirshleifer, Lim & Teoh (2009): Driven to Distraction: Extraneous Events and Underreaction to Earnings News. Journal of Finance 64(5).",
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2009.01501.x"
+  },
+  {
+   "zitat": "Baker & Wurgler (2000): The Equity Share in New Issues and Aggregate Stock Returns. Journal of Finance 55(5).",
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/0022-1082.00285"
+  },
+  {
+   "zitat": "Baker & Wurgler (2007): Investor Sentiment in the Stock Market. Journal of Economic Perspectives (NBER w13189).",
+   "url": "https://www.nber.org/system/files/working_papers/w13189/w13189.pdf"
+  },
+  {
+   "zitat": "Lowry (2003): Why Does IPO Volume Fluctuate So Much? Journal of Financial Economics 67.",
+   "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304405X02002301"
+  },
+  {
+   "zitat": "Pástor & Veronesi (2005): Rational IPO Waves. Journal of Finance 60(4) (Arbeitspapier NBER w9858).",
+   "url": "https://www.nber.org/system/files/working_papers/w9858/w9858.pdf"
+  },
+  {
+   "zitat": "Lakonishok & Lee (2001): Are Insider Trades Informative? Review of Financial Studies 14.",
+   "url": "https://www.lsvasset.com/pdf/research-papers/Insider-Trades-Informative.pdf"
+  },
+  {
+   "zitat": "Seyhun (1990): Overreaction or Fundamentals: Some Lessons from Insiders' Response to the Market Crash of 1987. Journal of Finance 45.",
+   "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1990.tb03719.x"
+  },
+  {
+   "zitat": "Übersicht Seyhun 1988/1992, Alldredge & Blank 2019, Kang, Kim & Wang 2018 (2iQ Research, Sekundärquelle).",
+   "url": "https://www.2iqresearch.com/blog/profiting-from-insider-transactions-a-review-of-the-academic-research"
+  },
+  {
+   "zitat": "Brochet (2019): Aggregate Insider Trading and Market Returns: The Role of Transparency (Arbeitspapier «Insider Sentiment and Market Returns»).",
+   "url": "https://tuck.dartmouth.edu/uploads/content/insider_sentiment_stock_returns.pdf"
+  },
+  {
+   "zitat": "Jiang & Zaman (2010): Aggregate Insider Trading: Contrarian Beliefs or Superior Information? Journal of Banking & Finance (nur Titel/Abstract bekannt, Volltext nicht geprüft).",
+   "url": "https://www.researchgate.net/publication/257211825_Aggregate_insider_trading_Contrarian_beliefs_or_superior_information"
+  }
+ ]
+}
