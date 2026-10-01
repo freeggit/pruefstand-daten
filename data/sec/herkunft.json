@@ -1703,5 +1703,12 @@
   "meldungen": 15926,
   "sha256": "f6f9b71d9bc456bbe0c01e3767701edb7083b71d6300111280d3aa2b536ceec7",
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR3/master.gz"
+ },
+ "edgar_2026q4": {
+  "abruf_utc": "2026-10-01T03:30:09Z",
+  "bytes": 380,
+  "meldungen": 0,
+  "sha256": "86aa3ddb74eef1bc9726c0a75f628666b200eb4cc459069a7668cb25ad92d203",
+  "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR4/master.gz"
  }
 }
