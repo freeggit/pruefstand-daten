@@ -1,6 +1,6 @@
 {
  "titel": "Korrekturen Scout-Kalenderreihen (beim Laden in suchmaschine.py angewendet)",
- "stand": "2026-10-01 (Ergänzung Datenaudit)",
+ "stand": "2026-10-01 (Klasse-A-Korrekturen aus dem Datenaudit)",
  "freigabe": "Reto, 1.10.2026: «gerne scout korrektur freigeben»",
  "grundsatz": "Nur mit Primärquelle belegte Korrekturen. Die Rohdaten auf claude/daten-neu bleiben unverändert; die Korrektur gilt beim Laden für Suche, Familie V und Analyse.",
  "markierungslogik": {
@@ -247,7 +247,42 @@
    "grund": "Die Erzeuger berechnen die Reihen bei jedem Lauf neu. Ohne Codekorrektur (FOMC: Monatskuerzel 'Jan/Feb' etc. auf zweiten Monat abbilden, 'notation vote' und 2003-09-15 ausschliessen; NYSE: Samstags-Neujahr nicht verschieben, 2025-01-09 ergaenzen; CPI/Arbeitsmarkt: BLS-Releaseliste statt ALFRED-Vintages oder Ausschlussliste) werden diese Korrekturen beim naechsten Lauf ueberschrieben."
   }
  ],
- "verfuegbarkeit": {},
- "ausschluss": {},
+ "verfuegbarkeit": {
+  "fred:USEPUINDXD": {
+   "tage": 31,
+   "beleg": "policyuncertainty.com: tägliche Neuberechnung der letzten 30 Tage; Erstwerte im Median 7.8% revidiert (meta/datenaudit_2026-10-01). Frist 31 Tage = erst der bereinigte Wert gilt als verfügbar.",
+   "freigabe": "Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)"
+  },
+  "neu:fred_equity_uncertainty:index": {
+   "tage": 31,
+   "beleg": "wie EPU: Neuberechnung 30 Tage, Erstwerte im Median 10.4% revidiert (meta/datenaudit_2026-10-01).",
+   "freigabe": "Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)"
+  },
+  "neu:msha_bergbauunfaelle:gesamt": {
+   "tage": 15,
+   "beleg": "30 CFR 50.20: Meldung innert 10 Arbeitstagen, bis 14 Kalendertage.",
+   "freigabe": "Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)"
+  },
+  "neu:msha_bergbauunfaelle:fatal": {
+   "tage": 15,
+   "beleg": "30 CFR 50.20: Meldung innert 10 Arbeitstagen, bis 14 Kalendertage.",
+   "freigabe": "Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)"
+  },
+  "neu:ntsb_luftfahrtunfaelle:gesamt": {
+   "tage": 15,
+   "beleg": "NTSB: Vorbericht «typically within two weeks after the accident».",
+   "freigabe": "Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)"
+  },
+  "neu:ntsb_luftfahrtunfaelle:fatal": {
+   "tage": 15,
+   "beleg": "NTSB: Vorbericht «typically within two weeks after the accident».",
+   "freigabe": "Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)"
+  }
+ },
+ "ausschluss": {
+  "neu:fda_ruckrufe:arzneimittel": "Datum = Rückrufbeginn; öffentlich im Enforcement Report im Median 78 Tage später (mindestens 29); rückwirkende Ergänzungen. Gesperrt. Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)",
+  "neu:fda_ruckrufe:lebensmittel": "wie arzneimittel. Gesperrt. Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)",
+  "neu:fda_ruckrufe:medizinprodukte": "wie arzneimittel. Gesperrt. Reto, 1.10.2026: «ok, gerne a korrektur freigeben» (Datenaudit Klasse A)"
+ },
  "hinweis_verfuegbarkeit": "verfuegbarkeit: {schluessel: {tage, beleg}} ersetzt verfuegbar_nach_tagen (Scout) bzw. die FRED-Frist; ausschluss: {schluessel: grund} nimmt die Reihe aus dem Suchraum. Beides nur auf Entscheid von Reto."
 }
