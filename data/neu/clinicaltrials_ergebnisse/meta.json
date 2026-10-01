@@ -1,0 +1,20 @@
+{
+  "ergebnisse_industrie": {
+    "beschreibung": "Studien mit Industrie-Sponsor (leadSponsor.class INDUSTRY), alle Phasen, deren Ergebnisse an diesem Tag erstmals auf ClinicalTrials.gov veroeffentlicht wurden",
+    "einheit": "Anzahl Studien",
+    "publikation": "taeglich: ClinicalTrials.gov stellt Ergebnisse am Tag ResultsFirstPostDate oeffentlich (Feld resultsFirstPostDateStruct der API v2); Abruf am Folgetag",
+    "quelle_url": "https://clinicaltrials.gov/data-api/api",
+    "revidiert": false,
+    "verdichtung": "Summe je Kalendertag (ResultsFirstPostDate), Nullen an Tagen ohne Veroeffentlichung",
+    "verfuegbar_nach_tagen": 1
+  },
+  "ergebnisse_phase3": {
+    "beschreibung": "Studien mit Phase 3 (inkl. Phase 2/3), deren Ergebnisse an diesem Tag erstmals auf ClinicalTrials.gov veroeffentlicht wurden (ResultsFirstPostDate); alle Sponsoren",
+    "einheit": "Anzahl Studien",
+    "publikation": "taeglich: ClinicalTrials.gov stellt Ergebnisse am Tag ResultsFirstPostDate oeffentlich (Feld resultsFirstPostDateStruct der API v2); Abruf am Folgetag",
+    "quelle_url": "https://clinicaltrials.gov/data-api/api",
+    "revidiert": false,
+    "verdichtung": "Summe je Kalendertag (ResultsFirstPostDate), Nullen an Tagen ohne Veroeffentlichung",
+    "verfuegbar_nach_tagen": 1
+  }
+}
