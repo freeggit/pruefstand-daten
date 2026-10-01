@@ -2709,10 +2709,11 @@
   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Grossvolumige Rückkauf-Ankündigungen signalisieren Management-Überzeugung und stützen kurzfristig Sektoren mit hohem Rückkaufanteil (XLK, XLF) gegenüber dem Weltindex (Ikenberry/Lakonishok/Vermaelen 1995; Effekt in jüngerer Literatur schwächer).",
-  "grund": "Lernrunde 2026-10-01: neuer Kandidat mit Mechanismus; nur öffentliche Quelle ohne Login. Zusatz 8: erste Priorität Firmenereignisse."
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung, Beschaffung nur ueber GitHub Action auf main (Zusatz 6).",
+  "geprueft_utc": "2026-10-01T12:27:49Z"
  },
  {
   "id": "fda_rueckrufe_arzneimittel_enforcement",
@@ -2720,10 +2721,11 @@
   "url": "https://api.fda.gov/drug/enforcement.json",
   "domain": "api.fda.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Häufung von Arzneimittelrückrufen belastet kurzfristig den Gesundheitssektor (XLV, IBB) über Haftungs- und Reputationskosten gegenüber dem Weltindex.",
-  "grund": "Lernrunde 2026-10-01: neuer Kandidat mit Mechanismus; nur öffentliche Quelle ohne Login. Zusatz 8: erste Priorität Firmenereignisse."
+  "grund": "K6 verletzt: Duplikat, fda_ruckrufe deckt drug/enforcement.json bereits als eigene Kategorie-Reihe ab.",
+  "geprueft_utc": "2026-10-01T12:27:49Z"
  },
  {
   "id": "fdic_bankschliessungen_historie",
@@ -2731,10 +2733,11 @@
   "url": "https://api.fdic.gov/banks/failures",
   "domain": "api.fdic.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Bankschliessungen erhöhen die Ansteckungsangst im Bankensektor (XLF) und stützen Staatsanleihen (TLT/IEF) kurzfristig (Flucht in Sicherheit); lange Historie vor 1990.",
-  "grund": "Lernrunde 2026-10-01: neuer Kandidat mit Mechanismus; nur öffentliche Quelle ohne Login. Zusatz 8: erste Priorität Firmenereignisse."
+  "grund": "K6 verletzt: Duplikat von fdic_bankausfaelle, das dieselbe FDIC-API (api.fdic.gov/banks/failures) bereits ab 1934-04-19 als Tageszaehlung fuehrt.",
+  "geprueft_utc": "2026-10-01T12:27:49Z"
  },
  {
   "id": "treasury_auktionen_ergebnisse",
@@ -2742,10 +2745,11 @@
   "url": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?format=json",
   "domain": "www.treasurydirect.gov",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Schwache Nachfrage (tiefes Bid-to-Cover) treibt die Rendite am Auktionstag nach oben und belastet langlaufende Anleihen (TLT) kurzfristig; Replikation des TGA-Beinahe-Treffers mit unabhängiger Quelle.",
-  "grund": "Lernrunde 2026-10-01: neuer Kandidat mit Mechanismus; nur öffentliche Quelle ohne Login."
+  "grund": "K6 verletzt: treasury_auktionen fuehrt Bid-to-Cover aus der Fiscal-Data-Auktionsquelle bereits; keine unabhaengige neue Groesse. Kein Aufwand fuer Dublette.",
+  "geprueft_utc": "2026-10-01T12:27:49Z"
  },
  {
   "id": "noaa_hurrikan_landfall_hurdat2",
@@ -2753,10 +2757,11 @@
   "url": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2023-051124.txt",
   "domain": "www.nhc.noaa.gov",
   "bereich": "Rohstoffe und Logistik",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Landfall im Golf von Mexiko unterbricht Förderung und Raffinerien und hebt Öl- und Gaspreise kurzfristig (XLE, UNG, USO) gegenüber dem Weltindex; lange Historie vor 1990.",
-  "grund": "Lernrunde 2026-10-01: neuer Kandidat mit Mechanismus; nur öffentliche Quelle ohne Login."
+  "grund": "K5 verletzt: HURDAT2-Datei endet 2023 (Best-Track erst Monate spaeter freigegeben, nachtraeglich revidiert, K4 ebenso); keine laufende Tagesreihe.",
+  "geprueft_utc": "2026-10-01T12:27:49Z"
  },
  {
   "id": "bls_veroeffentlichungskalender_arbeitsmarkt",
@@ -2764,9 +2769,42 @@
   "url": "https://www.bls.gov/schedule/news_release/empsit.htm",
   "domain": "www.bls.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Am Tag des Arbeitsmarktberichts steigt die Unsicherheit über die Zinserwartung; Anleihen und Zinssensitive (TLT, XLRE) reagieren kurzfristig (Lucca/Moench-Vorlauf-Literatur zu FOMC-Terminen).",
-  "grund": "Lernrunde 2026-10-01: neuer Kandidat mit Mechanismus; nur öffentliche Quelle ohne Login."
+  "grund": "K6 verletzt: us_arbeitsmarkt_termine deckt den Arbeitsmarktbericht-Kalender bereits ab; bls.gov aus dieser Umgebung gesperrt.",
+  "geprueft_utc": "2026-10-01T12:27:49Z"
+ },
+ {
+  "id": "fedregister_cbp_zoll",
+  "name": "Federal Register: US Customs and Border Protection Zoll- und Einfuhrverfuegungen (Rules, Proposed Rules, Notices)",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "hoch",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-10-01T12:27:49Z",
+  "geprueft_utc": "2026-10-01T12:27:49Z",
+  "status": "aktiv",
+  "mechanismus": "Zoll- und Einfuhrverfuegungen der CBP veraendern Handelskosten zyklischer Konsum- und Industriewerte (XLY, XLI) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_ams_agrarmarkt (Agentur u-s-customs-and-border-protection). K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11962 Zeilen, letzter Wert 2026-10-01, Median-Abstand 1, gleiche Folgewerte (Nullfuellung) 73%, Min 0 Max 22, 1937 Ereignistage. Publikation taeglich (gedrucktes Publikationsdatum), verfuegbar_nach_tagen 0, nicht revidiert. Abruf unter 31 s."
+ },
+ {
+  "id": "fedregister_hud_wohnen",
+  "name": "Federal Register: HUD Wohnungsbau (Rules, Proposed Rules, Notices)",
+  "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "prioritaet": "hoch",
+  "reihen": [
+   "anzahl"
+  ],
+  "aufgenommen_utc": "2026-10-01T12:27:49Z",
+  "geprueft_utc": "2026-10-01T12:27:49Z",
+  "status": "aktiv",
+  "mechanismus": "Regeln und Bekanntmachungen des HUD (FHA-Hypotheken, Foerderprogramme) setzen Rahmen fuer Wohnimmobilien und Immobilienfinanzierung (XLRE, XLF) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_ams_agrarmarkt (Agentur housing-and-urban-development-department). K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11962 Zeilen, letzter Wert 2026-10-01, Median-Abstand 1, gleiche Folgewerte (Nullfuellung) 41%, Min 0 Max 19, 4940 Ereignistage. Publikation taeglich (gedrucktes Publikationsdatum), verfuegbar_nach_tagen 0, nicht revidiert. Abruf unter 31 s."
  }
 ]
