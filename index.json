@@ -1078,5 +1078,14 @@
  "letzter_suchlauf_utc": "2026-10-01T07:29Z",
  "pruefung_lernrunde_utc": "2026-10-01T09:40:00Z",
  "letzter_code_hash": "f438db9afc42b20a",
- "methode": "M4"
+ "methode": "M4",
+ "vorreg": [
+  {
+   "charge": "2026-10-01",
+   "datei": "vorreg/2026-10-01.json",
+   "v_bausteine": 0,
+   "fund": false,
+   "in_db": false
+  }
+ ]
 }
