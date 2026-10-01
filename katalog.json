@@ -2806,5 +2806,55 @@
   "status": "aktiv",
   "mechanismus": "Regeln und Bekanntmachungen des HUD (FHA-Hypotheken, Foerderprogramme) setzen Rahmen fuer Wohnimmobilien und Immobilienfinanzierung (XLRE, XLF) kurzfristig gegenueber dem Weltindex.",
   "grund": "Zusatz 6 Prioritaet 5, FR-API wie fedregister_ams_agrarmarkt (Agentur housing-and-urban-development-department). K1-K7 erfuellt: Zaehlreihe seit 1994-01-01, 11962 Zeilen, letzter Wert 2026-10-01, Median-Abstand 1, gleiche Folgewerte (Nullfuellung) 41%, Min 0 Max 19, 4940 Ereignistage. Publikation taeglich (gedrucktes Publikationsdatum), verfuegbar_nach_tagen 0, nicht revidiert. Abruf unter 31 s."
+ },
+ {
+  "id": "fedregister_cftc_regeln",
+  "name": "Federal Register: CFTC Rules/Proposed Rules (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "CFTC-Regeln zu Derivaten, Clearing, Swaps und Krypto-Futures aendern Regulierungskosten und Geschaeftsmoeglichkeiten von Boersen, Banken und Brokern (XLF) und koennen den Sektor kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Ereignisse, XLF). K1 taeglich (Nullfuellung). K2 ab 1994-01-01, 11952 Zeilen. K3 offen. K4 Publikationsdatum nicht revidiert. K5 letzter Wert 2026-09-21; Dokumente nur an Publikationstagen, daher letzter Wert ist letzter Abruftag. K6 neu. K7 Abruf ca. 17 s. Publikation taeglich, FR-Datum, verfuegbar_nach_tagen 0. Min 0, Max 6, gleiche Folgewerte 0.88 (duenne Ereignisreihe, bei dichtem Nullanteil erwartet). Alternativen geprueft und verworfen (zu duenn <10/Jahr): APHIS, TTB, FSIS, STB.",
+  "reihen": [
+   {
+    "reihe": "anzahl",
+    "zeilen": 11952,
+    "erste": "1994-01-01",
+    "letzte": "2026-09-21",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.88,
+    "min": 0.0,
+    "max": 6.0
+   }
+  ],
+  "aufgenommen_utc": "2026-10-01T16:18:18Z",
+  "geprueft_utc": "2026-10-01T16:18:18Z"
+ },
+ {
+  "id": "fedregister_dea_regeln",
+  "name": "Federal Register: DEA Rules/Proposed Rules (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "DEA-Regeln zur Einstufung und Kontingentierung von Wirkstoffen (Opioide, Cannabis, Stimulanzien) treffen Umsatz und Regulierungsrisiko von Pharma- und Biotechfirmen (XLV) und koennen den Sektor kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Ereignisse, XLV). K1 taeglich (Nullfuellung). K2 ab 1994-01-01, 11962 Zeilen. K3 offen. K4 Publikationsdatum nicht revidiert. K5 letzter Wert 2026-10-01; Dokumente nur an Publikationstagen, daher letzter Wert ist letzter Abruftag. K6 neu. K7 Abruf ca. 17 s. Publikation taeglich, FR-Datum, verfuegbar_nach_tagen 0. Min 0, Max 5, gleiche Folgewerte 0.91 (duenne Ereignisreihe, bei dichtem Nullanteil erwartet). Alternativen geprueft und verworfen (zu duenn <10/Jahr): APHIS, TTB, FSIS, STB.",
+  "reihen": [
+   {
+    "reihe": "anzahl",
+    "zeilen": 11962,
+    "erste": "1994-01-01",
+    "letzte": "2026-10-01",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.91,
+    "min": 0.0,
+    "max": 5.0
+   }
+  ],
+  "aufgenommen_utc": "2026-10-01T16:18:18Z",
+  "geprueft_utc": "2026-10-01T16:18:18Z"
  }
 ]
