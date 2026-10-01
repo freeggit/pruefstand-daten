@@ -1,0 +1,161 @@
+{
+ "titel": "Korrekturen Scout-Kalenderreihen (beim Laden in suchmaschine.py angewendet)",
+ "stand": "2026-10-01",
+ "freigabe": "Reto, 1.10.2026: «gerne scout korrektur freigeben»",
+ "grundsatz": "Nur mit Primärquelle belegte Korrekturen. Die Rohdaten auf claude/daten-neu bleiben unverändert; die Korrektur gilt beim Laden für Suche, Familie V und Analyse.",
+ "markierungslogik": {
+  "fomc": "Quellcode quellen/kalender_ereignisse.py: 1 nur am LETZTEN Tag einer Sitzung (bei 'X-Y' wird Y genommen) = Entscheid-/Statement-Tag; erster Tag einer zweitaegigen Sitzung = 0. Nur Eintraege vom Typ 'Meeting' ohne Annotation 'unscheduled'/'cancelled'; 'Conference Call' ausgeschlossen. Quellen: fomchistorical<JAHR>.htm bis 2020, fomccalendars.htm ab 2021. Fehlerursachen: (a) Monatsuebergreifende Sitzungen werden von der Fed als 'Jan/Feb 31-1', 'Jul/Aug 31-1', 'Oct/Nov 31-1', 'Apr/May 30-1' geschrieben; der Regex greift 'Feb 31-1' bzw. 'Aug 31-1' (Kurzform nicht in FOMC_MONTHS) -> verworfen. 'April/May 30-1' funktioniert zufaellig, weil 'May' ausgeschrieben ist. (b) fomccalendars.htm: '22 (notation vote)' im August 2025 wird nicht ausgeschlossen. (c) 2003: separater Eintrag 'September 15 Meeting' (Kommunikations-Klausur ohne geldpolitischen Entscheid) wird mitgenommen.",
+  "nyse": "Quellcode quellen/us_boersenfeiertage.py: 1 = NYSE ganztaegig geschlossen (Mo-Fr), regelbasiert + Liste SPECIAL_CLOSURES; Verkuerzungen zaehlen nicht. Fehlerursache: observed_fixed() verschiebt einen Samstags-Neujahrstag auf den Freitag 31.12.; laut NYSE-Regel gilt die Ausnahme 'unless unusual business conditions exist, such as the ending of a monthly or yearly accounting period' -> 31.12. bleibt offen. Carter-Trauertag 2025 fehlt in SPECIAL_CLOSURES.",
+  "cpi": "Quellcode quellen/us_cpi_termine.py: alle Daten aus ALFRED downloaddates rid=10 ab 1985. ALFRED fuehrt jedes Vintage-Datum des Release, also auch die jaehrliche Saisonfaktor-Revision (Februar, einige Tage vor dem Januar-CPI). Soll: nur der regulaere monatliche CPI-News-Release (BLS-Archiv).",
+  "arbeitsmarkt": "Quellcode quellen/us_arbeitsmarkt_termine.py: alle Daten aus ALFRED downloaddates rid=50 ab 1985. Zusatzdaten sind FRED/ALFRED-Vintages ohne eigenen Employment-Situation-Release (Korrektur-Ersatzrelease 2002, Datennachtraege, CES Preliminary Benchmark 2024). Soll: nur der regulaere monatliche Employment-Situation-Release (BLS-Archiv)."
+ },
+ "korrekturen": {
+  "neu:kalender_ereignisse:fomc_sitzung": {
+   "setze_1": [
+    "2017-02-01",
+    "2017-11-01",
+    "2018-08-01",
+    "2023-02-01",
+    "2023-11-01",
+    "2024-05-01"
+   ],
+   "setze_0": [
+    "2003-09-15",
+    "2025-08-22"
+   ],
+   "belege": {
+    "2017-02-01": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm 'Jan/Feb 31-1 Meeting - 2017' (Statement 1.2.2017)",
+    "2017-11-01": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm 'Oct/Nov 31-1 Meeting - 2017'",
+    "2018-08-01": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm 'Jul/Aug 31-1 Meeting - 2018'",
+    "2023-02-01": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm 2023: 'Jan/Feb 31-1'",
+    "2023-11-01": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm 2023: 'Oct/Nov 31-1'",
+    "2024-05-01": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm 2024: 'Apr/May 30-1'",
+    "2003-09-15": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm listet 'September 15 Meeting' und 'September 16 Meeting'. Protokoll https://www.federalreserve.gov/fomc/minutes/20030812.htm: am 15.9. 'the Committee met to review its practices regarding the communication of its policy decisions' – kein geldpolitischer Entscheid. Planmaessige Sitzung mit Entscheid: 16.9.2003 (https://www.federalreserve.gov/fomc/minutes/20030916.htm, Statement 16.9.).",
+    "2025-08-22": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm 2025: 'August 22 (notation vote)' – Notationsabstimmung (Statement on Longer-Run Goals), keine Sitzung."
+   }
+  },
+  "neu:us_boersenfeiertage:geschlossen": {
+   "setze_1": [
+    "2025-01-09"
+   ],
+   "setze_0": [
+    "1993-12-31",
+    "1999-12-31",
+    "2004-12-31",
+    "2010-12-31",
+    "2021-12-31"
+   ],
+   "belege": {
+    "2025-01-09": "NYSE-Mitteilung 30.12.2024: https://www.businesswire.com/news/home/20241230579727/en/ ('The New York Stock Exchange Will Close Markets on January 9 to Honor ... Jimmy Carter'); SPY ohne Kurs am 9.1.2025.",
+    "2004-12-31": "NYSE Rule 7.2 (z.B. https://www.sec.gov/files/rules/sro/nysearca/2016/34-79363-ex5.pdf): 'When a holiday observed by the Exchange falls on a Saturday, the Exchange will not be open for business on the preceding Friday unless unusual business conditions exist, such as the ending of a monthly or yearly accounting period.' Gleiche Regel im Quelldokument des Erzeugers (https://s3.amazonaws.com/armstrongeconomics-wp/2013/07/NYSE-Closings.pdf). 1.1.2005 = Samstag; SPY am 31.12.2004 gehandelt.",
+    "2010-12-31": "Wie 2004-12-31; 1.1.2011 = Samstag; SPY am 31.12.2010 gehandelt.",
+    "2021-12-31": "Wie 2004-12-31; 1.1.2022 = Samstag; SPY am 31.12.2021 gehandelt. Vgl. https://www.nyse.com/markets/hours-calendars (analog 2028: 'Because the holiday falls on Saturday, January 1, 2028, no New Year's Day holiday is observed.')",
+    "1993-12-31": "Neujahr am Samstag: NYSE am Freitag offen (NYSE Rule 7.2); SPY hat an diesem Tag Kurse (data/kurse/spy_d.csv)",
+    "1999-12-31": "Neujahr am Samstag: NYSE am Freitag offen (NYSE Rule 7.2); SPY hat an diesem Tag Kurse (data/kurse/spy_d.csv)"
+   }
+  },
+  "neu:us_cpi_termine:cpi": {
+   "setze_1": [],
+   "setze_0": [
+    "2005-02-18",
+    "2006-02-17",
+    "2007-02-16",
+    "2008-02-15",
+    "2009-02-18",
+    "2010-02-17",
+    "2011-02-15",
+    "2012-02-15",
+    "2013-02-19",
+    "2014-02-18",
+    "2015-02-20",
+    "2017-02-13",
+    "2019-02-11",
+    "2020-02-11",
+    "2021-02-08",
+    "2022-02-08",
+    "2023-02-10",
+    "2024-02-09"
+   ],
+   "belege": {
+    "2005-02-18": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2005 Consumer Price Index' unter cpi_02232005 (=2005-02-23). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2006-02-17": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2006 Consumer Price Index' unter cpi_02222006 (=2006-02-22). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2007-02-16": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2007 Consumer Price Index' unter cpi_02212007 (=2007-02-21). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2008-02-15": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2008 Consumer Price Index' unter cpi_02202008 (=2008-02-20). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2009-02-18": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2009 Consumer Price Index' unter cpi_02202009 (=2009-02-20). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2010-02-17": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2010 Consumer Price Index' unter cpi_02192010 (=2010-02-19). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2011-02-15": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2011 Consumer Price Index' unter cpi_02172011 (=2011-02-17). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2012-02-15": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2012 Consumer Price Index' unter cpi_02172012 (=2012-02-17). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2013-02-19": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2013 Consumer Price Index' unter cpi_02212013 (=2013-02-21). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. Beleg Saisonfaktoren: https://www.bls.gov/cpi/tables/seasonal-adjustment/revised-seasonally-adjusted-indexes-2012.txt ('released February 19, 2013')",
+    "2014-02-18": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2014 Consumer Price Index' unter cpi_02202014 (=2014-02-20). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. Beleg Saisonfaktoren: https://www.bls.gov/cpi/tables/seasonal-adjustment/revised-seasonally-adjusted-indexes-2013.txt ('released February 18, 2014')",
+    "2015-02-20": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2015 Consumer Price Index' unter cpi_02262015 (=2015-02-26). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2017-02-13": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2017 Consumer Price Index' unter cpi_02152017 (=2017-02-15). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2019-02-11": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2019 Consumer Price Index' unter cpi_02132019 (=2019-02-13). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2020-02-11": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2020 Consumer Price Index' unter cpi_02132020 (=2020-02-13). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2021-02-08": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2021 Consumer Price Index' unter cpi_02102021 (=2021-02-10). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2022-02-08": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2022 Consumer Price Index' unter cpi_02102022 (=2022-02-10). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. Beleg Saisonfaktoren: https://www.bls.gov/cpi/notices/2022/seasonal-adjustment.htm ('made available on Tuesday, February 8, 2022')",
+    "2023-02-10": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2023 Consumer Price Index' unter cpi_02142023 (=2023-02-14). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. (Saisonfaktor-Termin fuer dieses Jahr nicht einzeln belegt; Entfernung stuetzt sich auf den BLS-Releasetermin.)",
+    "2024-02-09": "Kein CPI-Release: BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm fuehrt 'January 2024 Consumer Price Index' unter cpi_02132024 (=2024-02-13). Zusatzdatum = ALFRED-Vintage der jaehrlichen Neuberechnung der Saisonfaktoren (5 Jahre rueckwirkend), einige Tage vor dem Januar-CPI. Beleg Saisonfaktoren: https://www.bls.gov/cpi/notices/2024/seasonal-adjustment.htm ('made available on Friday, February 9, 2024'); https://www.bls.gov/news.release/archives/cpi_02092024.htm = 404"
+   }
+  },
+  "neu:us_arbeitsmarkt_termine:arbeitsmarkt": {
+   "setze_1": [],
+   "setze_0": [
+    "2002-12-09",
+    "2003-10-10",
+    "2006-05-08",
+    "2012-12-12",
+    "2013-05-06",
+    "2020-05-11",
+    "2024-01-10",
+    "2024-08-21"
+   ],
+   "belege": {
+    "2002-12-09": "Ersatz-Release (Korrektur, unplanmaessig): https://www.bls.gov/news.release/history/empsit_12062002.txt: 'For release: Immediate Monday, December 9, 2002 (Replaces USDL 02-669, issued December 6, 2002)'. Regulaerer Termin 2002-12-06.",
+    "2003-10-10": "Kein Employment-Situation-Release: https://www.bls.gov/news.release/history/empsit_10102003.txt = 404; regulaer https://www.bls.gov/news.release/history/empsit_10032003.txt (Friday, October 3, 2003). Zusatzdatum = ALFRED/FRED-Vintage (PAYEMS-Vintage 2003-10-10, Datennachtrag/Korrektur).",
+    "2006-05-08": "Kein Release: https://www.bls.gov/news.release/archives/empsit_05082006.pdf = 404; regulaer empsit_05052006.pdf (Friday, May 5, 2006). Zusatzdatum = ALFRED-Vintage.",
+    "2012-12-12": "Kein Release: https://www.bls.gov/news.release/archives/empsit_12122012.pdf = 404; regulaer empsit_12072012.pdf (Friday, December 7, 2012). Zusatzdatum = ALFRED-Vintage.",
+    "2013-05-06": "Kein Release: https://www.bls.gov/news.release/archives/empsit_05062013.pdf = 404; regulaer empsit_05032013.pdf (Friday, May 3, 2013). Zusatzdatum = ALFRED-Vintage.",
+    "2020-05-11": "Kein Release: https://www.bls.gov/news.release/archives/empsit_05112020.htm = 404; regulaer empsit_05082020.htm (Friday, May 8, 2020). Zusatzdatum = ALFRED/FRED-Vintage (PAYEMS-Vintage 2020-05-11).",
+    "2024-01-10": "Kein Release: https://www.bls.gov/news.release/archives/empsit_01102024.htm = 404; regulaer empsit_01052024.htm (Friday, January 5, 2024). Zusatzdatum = ALFRED/FRED-Vintage (PAYEMS-Vintage 2024-01-10).",
+    "2024-08-21": "CES Preliminary Benchmark (10:00 ET), kein Employment-Situation-Release: https://www.bls.gov/ces/notices/2024/2024-preliminary-benchmark-revision-release-date.htm; regulaer https://www.bls.gov/news.release/archives/empsit_08022024.htm (Friday, August 2, 2024)."
+   }
+  }
+ },
+ "unsicher": [
+  {
+   "reihe": "neu:kalender_ereignisse:fomc_sitzung",
+   "datum": "2020-03-18",
+   "grund": "Planmaessige Sitzung 17.-18.3.2020 war vorab bekannt, wurde aber abgesagt ('March 17-18 (cancelled) Meeting', https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm); Entscheid fiel am Sonntag 15.3. ('March 15 (unscheduled) Meeting'). Reihe hat im Maerz 2020 keine 1 – konsistent mit der Logik, aber fuer eine Studie zum 'vorab bekannten Termin' ggf. 2020-03-18 als Termin ohne Sitzung kennzeichnen. Keine Korrektur."
+  },
+  {
+   "reihe": "neu:us_cpi_termine:cpi",
+   "datum": "2025-10-15/2025-11-13",
+   "grund": "Shutdown Herbst 2025: September-CPI von 15.10. auf 24.10.2025 verschoben (Reihe: 2025-10-24), Oktober-CPI entfallen, November-CPI am 18.12.2025. Reihe bildet tatsaechliche Termine ab; die vorab geplanten Termine fanden nicht statt. Keine Korrektur; Hinweis fuer Ereignisstudien (Termin nicht lange vorab bekannt)."
+  },
+  {
+   "reihe": "neu:us_arbeitsmarkt_termine:arbeitsmarkt",
+   "datum": "2025-10-03/2025-11-07",
+   "grund": "Shutdown 2025: September-Bericht erst 2025-11-20, Oktober/November kombiniert 2025-12-16 (beide im BLS-Archiv). Oktober 2025 ohne Release ist korrekt. Ebenso 2013-10-22 (Shutdown) und 2026-02-11 (Mittwoch, verschoben). Keine Korrektur."
+  },
+  {
+   "reihe": "neu:us_cpi_termine:cpi / neu:us_arbeitsmarkt_termine:arbeitsmarkt",
+   "datum": "2001-2013 (Einzeltermine)",
+   "grund": "Vollabgleich aller Einzeltermine gegen das BLS-Archiv war nur fuer Arbeitsmarkt 2014-2026 belastbar moeglich (stimmt). Fuer 2001-2013 und CPI insgesamt sind nur die Mehrfachmonate, die Januar-CPI-Termine 2005-2024 und Stichproben geprueft. Muster (Freitag bzw. Wochentag Mitte Monat, keine Luecken ausser Shutdown 2025) unauffaellig."
+  },
+  {
+   "reihe": "neu:us_arbeitsmarkt_termine:arbeitsmarkt",
+   "datum": "2003-10-10, 2006-05-08, 2012-12-12, 2013-05-06, 2020-05-11, 2024-01-10",
+   "grund": "Entfernung belegt (kein BLS-Release, Archiv-URL 404, regulaerer Termin belegt). Der Inhalt der ALFRED-Vintage (welche Korrektur/welcher Nachtrag) ist nicht einzeln belegt."
+  },
+  {
+   "reihe": "neu:us_boersenfeiertage:geschlossen",
+   "datum": "1965-12-31, 1971-12-31, 1976-12-31, 1982-12-31, 1993-12-31, 1999-12-31",
+   "grund": "Ausserhalb Pruefzeitraum: gleicher Regelfehler (Samstags-Neujahr -> Freitag markiert). 1993-12-31 und 1999-12-31: SPY gehandelt, also sicher falsch. Fruehere Faelle nicht einzeln belegt."
+  },
+  {
+   "reihe": "alle",
+   "datum": "-",
+   "grund": "Die Erzeuger berechnen die Reihen bei jedem Lauf neu. Ohne Codekorrektur (FOMC: Monatskuerzel 'Jan/Feb' etc. auf zweiten Monat abbilden, 'notation vote' und 2003-09-15 ausschliessen; NYSE: Samstags-Neujahr nicht verschieben, 2025-01-09 ergaenzen; CPI/Arbeitsmarkt: BLS-Releaseliste statt ALFRED-Vintages oder Ausschlussliste) werden diese Korrekturen beim naechsten Lauf ueberschrieben."
+  }
+ ]
+}
