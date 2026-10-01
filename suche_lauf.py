@@ -68,7 +68,7 @@ def sha(pfad):
     except Exception:
         return None
 
-code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt")).encode()).hexdigest()[:16]
+code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json")).encode()).hexdigest()[:16]
 herkunft = {
     "commit_main": commit(ROOT), "commit_energie": commit(os.path.join(ROOT, "_daten-energie")),
     "commit_neu": commit(os.path.join(ROOT, "_daten-neu")), "commit_lernen_vorher": commit(LERNEN),
