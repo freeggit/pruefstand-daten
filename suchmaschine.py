@@ -254,17 +254,40 @@ def varianten(n, x, regeln, quelle=None):
     for suffix, s in (("_stand", x), ("_d1", x.diff()), ("_d5", x.diff(5)), ("_d20", x.diff(20)), ("_z252", (x - m.mean()) / m.std())):
         ind[n + suffix] = (s, regeln)
 
+# Belegte Korrekturen fehlerhafter Scout-Kalenderreihen (Freigabe Reto 1.10.2026); Rohdaten bleiben unverändert.
+KORREKTUREN, N_KORR = {}, 0
+VERFUEGBAR, AUSSCHLUSS = {}, set()   # Datenaudit: Publikationsfrist je Reihe (Tage) und gesperrte Reihen, nur auf Entscheid von Reto
+_kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "korrekturen_neu.json")
+if os.path.exists(_kp):
+    _kj = json.load(open(_kp, encoding="utf-8"))
+    KORREKTUREN = _kj.get("korrekturen", {})
+    VERFUEGBAR = {k: int(v["tage"]) for k, v in _kj.get("verfuegbarkeit", {}).items()}
+    AUSSCHLUSS = set(_kj.get("ausschluss", {}))
+
+def korrigieren(schluessel, x):
+    global N_KORR
+    k = KORREKTUREN.get(schluessel)
+    if not k:
+        return x
+    x = x.copy()
+    for wert, liste in ((0.0, k.get("setze_0", [])), (1.0, k.get("setze_1", []))):
+        for d in liste:
+            t = pd.Timestamp(d)
+            if t in x.index and x.loc[t] != wert:
+                x.loc[t] = wert; N_KORR += 1
+    return x
+
 def fred(serie):
     f = pd.read_csv(lade(f"fred/{serie}.csv"), na_values=["."])
     f.columns = ["d", "v"]; f.d = pd.to_datetime(f.d)
     return bis(f.dropna().set_index("d").v.astype(float))
 
 for s, v in man["reihen"].items():
-    if s.startswith("fred:") and "fehler" not in v:
+    if s.startswith("fred:") and "fehler" not in v and s not in AUSSCHLUSS:
         x = fred(s.split(":", 1)[1])
         if len(x) < 500 or (x.index.to_series().diff().dt.days.median() > 3):
             continue
-        r = regeln_fuer(s, LAG_FRED)
+        r = regeln_fuer(s, 1 + VERFUEGBAR[s] if s in VERFUEGBAR else LAG_FRED)
         basen[s] = (x, r)
         varianten(s.split(":", 1)[1], x, r, quelle=s)
 
@@ -333,25 +356,6 @@ if mh:
             s = bis(d.set_index(pd.to_datetime(d.datum)).aufrufe.astype(float))
             ind[f"wiki_{name}_spike"] = (np.log1p(s) - np.log1p(s).rolling(28, min_periods=20).median(), [("tag", LAG_FRED)])
 
-# Belegte Korrekturen fehlerhafter Scout-Kalenderreihen (Freigabe Reto 1.10.2026); Rohdaten bleiben unverändert.
-KORREKTUREN, N_KORR = {}, 0
-_kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "korrekturen_neu.json")
-if os.path.exists(_kp):
-    KORREKTUREN = json.load(open(_kp, encoding="utf-8")).get("korrekturen", {})
-
-def korrigieren(schluessel, x):
-    global N_KORR
-    k = KORREKTUREN.get(schluessel)
-    if not k:
-        return x
-    x = x.copy()
-    for wert, liste in ((0.0, k.get("setze_0", [])), (1.0, k.get("setze_1", []))):
-        for d in liste:
-            t = pd.Timestamp(d)
-            if t in x.index and x.loc[t] != wert:
-                x.loc[t] = wert; N_KORR += 1
-    return x
-
 def lade_vertrag(basis, manifest_rel, praefix_, kurz):
     n_ok = 0
     try:
@@ -359,7 +363,7 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
     except Exception as e:
         log(f"{manifest_rel} nicht lesbar: {e}"); return 0
     for k, v in mn.get("reihen", {}).items():
-        if v.get("fehler") or not v.get("datei") or v.get("status", "aktiv") != "aktiv":
+        if v.get("fehler") or not v.get("datei") or v.get("status", "aktiv") != "aktiv" or f"{kurz}:{k}" in AUSSCHLUSS:
             continue
         try:
             d = pd.read_csv(lade(v["datei"].replace("data/", "", 1), basis))
@@ -367,7 +371,7 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
             x = korrigieren(f"{kurz}:{k}", bis(x[~x.index.duplicated(keep="last")]))
             if len(x) < 500 or x.index[0] > pd.Timestamp("2015-12-31") or x.index.to_series().diff().dt.days.median() > 3:
                 continue
-            r = regeln_fuer(f"{kurz}:{k}", 1 + int(v.get("verfuegbar_nach_tagen", 1)))
+            r = regeln_fuer(f"{kurz}:{k}", 1 + int(VERFUEGBAR.get(f"{kurz}:{k}", v.get("verfuegbar_nach_tagen", 1))))
             basen[f"{kurz}:{k}"] = (x, r)
             varianten(praefix_ + k.replace(":", "_"), x, r, quelle=f"{kurz}:{k.split(':')[0]}")
             n_ok += 1
@@ -377,7 +381,7 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
 
 N_NEU = lade_vertrag(BASIS_N, "neu/manifest_neu.json", "neu_", "neu") if BASIS_N else 0
 N_SEC = lade_vertrag(BASIS, "sec/manifest_sec.json", "sec_", "sec")
-log(f"Korrekturen Scout-Kalender: {N_KORR} Werte geändert (korrekturen_neu.json)")
+log(f"Korrekturen Scout-Kalender: {N_KORR} Werte geändert; Fristen angepasst: {len(VERFUEGBAR)}; gesperrt: {len(AUSSCHLUSS)} (korrekturen_neu.json)")
 
 N_PAARE = 0
 if os.path.exists(PAARE):
