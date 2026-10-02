@@ -4,18 +4,22 @@
   "bestand_anzahl": 32030,
   "bestand_geladen_utc": "2026-10-02T09:40:45Z",
   "fassungen_geaendert": 0,
-  "laeufe": 2,
-  "letzter_abruf_n": 32030,
+  "laeufe": 3,
+  "letzter_abruf_n": 229,
   "letzter_fehler": null,
   "letzter_lauf_geaendert": 0,
-  "letzter_lauf_neu": 32030,
-  "letzter_lauf_utc": "2026-10-02T09:40:45Z",
+  "letzter_lauf_neu": 0,
+  "letzter_lauf_utc": "2026-10-02T10:42:23Z",
   "letzter_zeitraum": [
-   "20000101",
+   "20260818",
    "20261003"
   ],
   "meldungen": 32030,
-  "quelle_totalcount": 32030
+  "namensregel_nachgezogen": {
+   "utc": "2026-10-02T10:42:23Z",
+   "zeilen": 27591
+  },
+  "quelle_totalcount": 229
  },
  "hinweis": "Nur Archiv, nicht im Suchraum. erstmals_gesehen_utc ist der Beleg der Verfügbarkeit; nachgeladen=true heisst: Publikationszeitpunkt unbekannt (Bestand des ersten Laufs).",
  "mt": {
@@ -23,17 +27,17 @@
   "bestand_anzahl": 6732,
   "bestand_geladen_utc": "2026-10-02T08:41:16Z",
   "fassungen_geaendert": 0,
-  "laeufe": 2,
-  "letzter_abruf_n": 319,
+  "laeufe": 3,
+  "letzter_abruf_n": 320,
   "letzter_fehler": null,
   "letzter_lauf_geaendert": 0,
-  "letzter_lauf_neu": 0,
-  "letzter_lauf_utc": "2026-10-02T09:40:45Z",
+  "letzter_lauf_neu": 1,
+  "letzter_lauf_utc": "2026-10-02T10:42:23Z",
   "letzter_zeitraum": [
    "20260818",
    "20261003"
   ],
-  "meldungen": 6732,
-  "quelle_totalcount": 319
+  "meldungen": 6733,
+  "quelle_totalcount": 320
  }
 }
