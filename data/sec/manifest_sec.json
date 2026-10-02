@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-10-01T03:29:45Z",
+ "erzeugt_utc": "2026-10-02T03:28:53Z",
  "reihen": {
   "sec_insider:markt_kaeufer": {
    "datei": "data/sec/insider/markt_kaeufer.csv.gz",
@@ -628,332 +628,331 @@
   "sec_edgar:markt_8k": {
    "datei": "data/sec/edgar_reihen/markt_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Gesamtmarkt",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:markt_13d": {
    "datei": "data/sec/edgar_reihen/markt_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Gesamtmarkt",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:markt_s1": {
    "datei": "data/sec/edgar_reihen/markt_s1.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Börsenprospekte S-1 und F-1 (Erstmeldung) je Einreichungstag, Gesamtmarkt",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlb_8k": {
    "datei": "data/sec/edgar_reihen/xlb_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlb",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlb_13d": {
    "datei": "data/sec/edgar_reihen/xlb_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlb",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlc_8k": {
    "datei": "data/sec/edgar_reihen/xlc_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlc",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlc_13d": {
    "datei": "data/sec/edgar_reihen/xlc_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlc",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xle_8k": {
    "datei": "data/sec/edgar_reihen/xle_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xle",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xle_13d": {
    "datei": "data/sec/edgar_reihen/xle_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xle",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlf_8k": {
    "datei": "data/sec/edgar_reihen/xlf_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlf",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlf_13d": {
    "datei": "data/sec/edgar_reihen/xlf_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlf",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xli_8k": {
    "datei": "data/sec/edgar_reihen/xli_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xli",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xli_13d": {
    "datei": "data/sec/edgar_reihen/xli_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xli",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlk_8k": {
    "datei": "data/sec/edgar_reihen/xlk_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlk",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlk_13d": {
    "datei": "data/sec/edgar_reihen/xlk_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlk",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlp_8k": {
    "datei": "data/sec/edgar_reihen/xlp_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlp",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlp_13d": {
    "datei": "data/sec/edgar_reihen/xlp_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlp",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlre_8k": {
    "datei": "data/sec/edgar_reihen/xlre_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlre",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlre_13d": {
    "datei": "data/sec/edgar_reihen/xlre_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlre",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlu_8k": {
    "datei": "data/sec/edgar_reihen/xlu_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlu",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlu_13d": {
    "datei": "data/sec/edgar_reihen/xlu_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlu",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlv_8k": {
    "datei": "data/sec/edgar_reihen/xlv_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlv",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xlv_13d": {
    "datei": "data/sec/edgar_reihen/xlv_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlv",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xly_8k": {
    "datei": "data/sec/edgar_reihen/xly_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xly",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   },
   "sec_edgar:xly_13d": {
    "datei": "data/sec/edgar_reihen/xly_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-09-29",
-   "zeilen": 6450,
+   "letzte": "2026-10-01",
+   "zeilen": 6451,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xly",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
    "verdichtung": "Anzahl je Einreichungstag",
    "verfuegbar_nach_tagen": 1,
    "revidiert": false,
-   "status": "aufbau"
+   "status": "aktiv"
   }
  },
  "hinweise": [
-  "2026q3 noch nicht publiziert",
-  "EDGAR-SIC: 1075 Firmen noch offen"
+  "2026q3 noch nicht publiziert"
  ],
  "abdeckung_kaufwert_mit_sektor": 0.9092,
  "bereinigung": {
@@ -967,18 +966,18 @@
   "min_abdeckung": 0.85
  },
  "edgar": {
-  "status": "aufbau",
+  "status": "aktiv",
   "anteil_mit_sektor": {
-   "13d": 0.4667,
-   "8k": 0.9419,
-   "s1": 0.7778
+   "13d": 0.4745,
+   "8k": 0.9543,
+   "s1": 0.7829
   },
   "meldungen": {
-   "13d": 91883,
-   "8k": 1954457,
-   "s1": 28902
+   "13d": 91891,
+   "8k": 1954716,
+   "s1": 28908
   },
-  "tage": 6450
+  "tage": 6451
  },
  "zugang": {
   "status": "ok",
