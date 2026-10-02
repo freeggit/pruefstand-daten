@@ -1,21 +1,30 @@
 {
  "charge": "2026-10-01",
  "verfassung": "V3.10",
+ "methodenstand": "V3.10.1",
  "familie": "V",
- "bewertet_utc": "2026-10-01T21:09Z",
+ "bewertet_utc": "2026-10-02T07:37Z",
+ "erstbewertung_utc": "2026-10-01T21:09Z",
  "registriert_utc": "2026-10-01T09:29:12Z",
+ "gesehen_grenze_utc": "2026-10-01T09:29:12Z",
+ "gesehen_grenze_art": "registriert_utc",
  "autor": "Forschungsteam (Zusatzcharge SEC, von Reto am 1.10.2026 freigegeben: «A bis C wie vorgeschlagen, C als einmalige Zusatzcharge»)",
  "kosten_pp_je_wechsel": 0.88,
+ "code_hash": "51238816c5879d84",
+ "familie_n": 5,
+ "holm": "über alle registrierten Hypothesen der Charge; nicht bewertete mit p = 1",
+ "charge_vollstaendig": true,
  "anzahl": {
-  "bewertet": 3,
+  "bewertet": 5,
   "kontaminiert": 0,
-  "wartet": 2,
+  "wartet": 0,
   "verfallen": 0,
   "ungueltig": 0
  },
  "v_bausteine": 0,
  "fehlalarm_charge": 0.005,
  "rotationen": 200,
+ "fehlalarm_art": "Diagnose (Rotationsmodell nicht validiert), kein Teil der Entscheidregel",
  "fund": false,
  "urteil": "Kein V-Baustein. Validierung ab 2021 nicht angerührt (S4).",
  "hypothesen": [
@@ -24,14 +33,46 @@
    "schluessel": "sec_sec_edgar_markt_s1_z252|hoch|xlu|20",
    "mechanismus": "Ein Schub an S-1/F-1-Registrierungen zeigt ein offenes Emissionsfenster: Firmen emittieren Eigenkapital, wenn Aktien teuer und die Anlegerstimmung hoch ist (Market Timing). Nach Phasen hoher Stimmung fallen die Folgerenditen des Aktienmarkts, und anleihenähnliche Titel (Versorger) schneiden relativ besser ab als der breite Markt. Wechsel in XLU fängt diesen Stimmungsumschwung relativ zu ACWI ab.",
    "literatur": "Baker & Wurgler 2000 (Eigenkapitalanteil an Neuemissionen sagt tiefe Marktrenditen voraus, US 1928–1997); Lowry 2003 (IPO-Volumen folgt Stimmung, sagt tiefere Folgerenditen voraus); Pástor & Veronesi 2005 (IPO-Volumen negativ zur Marktrendite im Folgequartal, t = −2.23); Baker & Wurgler 2007 (Stimmungsindex mit IPO-Anzahl; bei Stimmung > 1 SD über Mittel Marktrendite −0.34 pp pro Monat; Versorger mit leicht negativem Stimmungsbeta).",
-   "status": "wartet"
+   "status": "bewertet",
+   "n": 123,
+   "mu": -0.1536,
+   "mu0": 0.057,
+   "t": -0.543,
+   "t1": -0.4208,
+   "t2": -0.2403,
+   "p_f5": 0.7429,
+   "n_verdacht": 0,
+   "t_ohne_verdacht": -0.543,
+   "mu_netto": -1.0336,
+   "bewertet_utc": "2026-10-02T07:37:39Z",
+   "code_hash": "51238816c5879d84",
+   "daten_hash": "d9d1a71ac49f5b2a",
+   "methodenstand": "V3.10.1",
+   "p_holm": 1.0,
+   "v_baustein": false
   },
   {
    "id": "V-2026-10-01-02",
    "schluessel": "sec_sec_edgar_xlv_13d_z252|hoch|ibb|20",
    "mechanismus": "Eine Häufung von Schedule-13D-Erstmeldungen im Gesundheitssektor zeigt Blockkäufe mit Einflussabsicht (Spezialfonds, Aktivisten, Käufer mit Unterstützungsvereinbarungen vor Übernahmen). Im Biotech-Segment sind die Übernahmeprämien gross und die Zielfirmen Mid-Caps, die in IBB spürbar gewichtet sind; steigende Übernahme- und Aktivismuswahrscheinlichkeit hebt auch die Bewertung der noch nicht betroffenen Branchenkollegen. IBB sollte daher ACWI in den Folgewochen schlagen.",
    "literatur": "Brav, Jiang, Partnoy & Thomas 2008 (Zielfirmen rund +7% Überrendite im Fenster [−20,+20], keine Umkehr); Klein & Zur 2009 (+7.2% in [−30,+30]); Bebchuk, Brav & Jiang 2015 (keine langfristige Umkehr); Song & Walkling 2000 (positive Überrendite für Konkurrenten von Übernahmezielen, Akquisitionswahrscheinlichkeits-Hypothese); Gantchev, Gredil & Jotikasthira 2019 (Aktivismusdrohung verbessert Branchenkollegen, aber über 1–2 Jahre).",
-   "status": "wartet"
+   "status": "bewertet",
+   "n": 117,
+   "mu": -0.1893,
+   "mu0": 0.2772,
+   "t": -0.942,
+   "t1": -1.4692,
+   "t2": 0.1335,
+   "p_f5": 0.8753,
+   "n_verdacht": 0,
+   "t_ohne_verdacht": -0.942,
+   "mu_netto": -1.0693,
+   "bewertet_utc": "2026-10-02T07:37:39Z",
+   "code_hash": "51238816c5879d84",
+   "daten_hash": "ab78d702835e8bf6",
+   "methodenstand": "V3.10.1",
+   "p_holm": 1.0,
+   "v_baustein": false
   },
   {
    "id": "V-2026-10-01-03",
@@ -49,8 +90,10 @@
    "n_verdacht": 0,
    "t_ohne_verdacht": -0.5084,
    "mu_netto": -0.3659,
-   "p_holm": 0.8905,
-   "v_baustein": false
+   "p_holm": 1.0,
+   "v_baustein": false,
+   "bewertet_utc": "2026-10-01T21:09Z",
+   "methodenstand": "V3.10"
   },
   {
    "id": "V-2026-10-01-04",
@@ -68,8 +111,10 @@
    "n_verdacht": 0,
    "t_ohne_verdacht": 0.516,
    "mu_netto": -0.8785,
-   "p_holm": 0.8905,
-   "v_baustein": false
+   "p_holm": 1.0,
+   "v_baustein": false,
+   "bewertet_utc": "2026-10-01T21:09Z",
+   "methodenstand": "V3.10"
   },
   {
    "id": "V-2026-10-01-05",
@@ -87,8 +132,10 @@
    "n_verdacht": 0,
    "t_ohne_verdacht": 0.5233,
    "mu_netto": -0.7077,
-   "p_holm": 0.7205,
-   "v_baustein": false
+   "p_holm": 1.0,
+   "v_baustein": false,
+   "bewertet_utc": "2026-10-01T21:09Z",
+   "methodenstand": "V3.10"
   }
  ]
 }

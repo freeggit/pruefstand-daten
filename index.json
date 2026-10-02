@@ -1138,6 +1138,7 @@
    "datei": "vorreg/2026-10-01.json",
    "v_bausteine": 0,
    "fund": false,
+   "vollstaendig": true,
    "in_db": false
   }
  ]
