@@ -235,6 +235,8 @@ def quelle_von(name):
     return "andere"
 
 def regeln_fuer(basis_key, lag):
+    if basis_key in VERFUEGBAR_KAL:      # verfügbar am Ende des Tages Datum + N Kalendertage, Einstieg am Handelstag danach
+        return [("kal", VERFUEGBAR_KAL[basis_key])]
     if basis_key in H10 or any(basis_key.startswith(f"neu:{s}:") for s in H10_SCOUT):
         return [("h10",)]
     if basis_key in EIA or any(basis_key.startswith(f"neu:{s}:") for s in EIA_SCOUT):
@@ -256,12 +258,14 @@ def varianten(n, x, regeln, quelle=None):
 
 # Belegte Korrekturen fehlerhafter Scout-Kalenderreihen (Freigabe Reto 1.10.2026); Rohdaten bleiben unverändert.
 KORREKTUREN, N_KORR = {}, 0
-VERFUEGBAR, AUSSCHLUSS = {}, set()   # Datenaudit: Publikationsfrist je Reihe (Tage) und gesperrte Reihen, nur auf Entscheid von Reto
+VERFUEGBAR, VERFUEGBAR_KAL, AUSSCHLUSS = {}, {}, set()   # Datenaudit: Publikationsfrist je Reihe (Tage) und gesperrte Reihen, nur auf Entscheid von Reto
 _kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "korrekturen_neu.json")
 if os.path.exists(_kp):
     _kj = json.load(open(_kp, encoding="utf-8"))
     KORREKTUREN = _kj.get("korrekturen", {})
-    VERFUEGBAR = {k: int(v["tage"]) for k, v in _kj.get("verfuegbarkeit", {}).items()}
+    # Einheit je Eintrag: «kalendertage» (Standard, V3.10.1) oder «handelstage»
+    VERFUEGBAR = {k: int(v["tage"]) for k, v in _kj.get("verfuegbarkeit", {}).items() if v.get("einheit") == "handelstage"}
+    VERFUEGBAR_KAL = {k: int(v["tage"]) for k, v in _kj.get("verfuegbarkeit", {}).items() if v.get("einheit") != "handelstage"}
     AUSSCHLUSS = set(_kj.get("ausschluss", {}))
 
 def korrigieren(schluessel, x):
@@ -381,7 +385,7 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
 
 N_NEU = lade_vertrag(BASIS_N, "neu/manifest_neu.json", "neu_", "neu") if BASIS_N else 0
 N_SEC = lade_vertrag(BASIS, "sec/manifest_sec.json", "sec_", "sec")
-log(f"Korrekturen Scout-Kalender: {N_KORR} Werte geändert; Fristen angepasst: {len(VERFUEGBAR)}; gesperrt: {len(AUSSCHLUSS)} (korrekturen_neu.json)")
+log(f"Korrekturen Scout-Kalender: {N_KORR} Werte geändert; Fristen angepasst: {len(VERFUEGBAR) + len(VERFUEGBAR_KAL)}; gesperrt: {len(AUSSCHLUSS)} (korrekturen_neu.json)")
 
 N_PAARE = 0
 if os.path.exists(PAARE):
@@ -458,6 +462,8 @@ def einstieg(kal, tage, regeln):
     for r in regeln:
         if r[0] == "tag":
             p = basis + (r[1] - 1)
+        elif r[0] == "kal":
+            p = kal.searchsorted(tage + pd.to_timedelta(int(r[1]), unit="D"), side="right")
         elif r[0] == "h10":          # Montag nach der Beobachtungswoche, +2 Handelstage Puffer (Feiertage)
             montag = tage + pd.to_timedelta(7 - tage.weekday, unit="D")
             p = np.where(tage < pd.Timestamp("2009-01-01"), basis + 1, kal.searchsorted(montag, side="right") + 2)
@@ -558,10 +564,23 @@ def filtern(df, t_min):
     return df
 
 def f5_rotation(a, pos, mu, rng):
-    n = len(a)
-    offs = rng.integers(252 // 5, (n - 252) // 5, size=N_F5) * 5
-    sims = np.nanmean(a[(pos[None, :] - offs[:, None]) % n], axis=1)
-    return float((np.sum(sims >= mu) + 1) / (N_F5 + 1))
+    """Rotationstest im gültigen Datenbereich des Ziels (V3.10.1, 2.10.2026, Astra-Befund 3): verschoben wird nur
+    innerhalb der Spanne mit Kursen. Rotationen, in denen weniger als 80% der Ereignisse einen Wert haben, sind kein
+    Vergleichsfall und zählen weder im Zähler noch im Nenner. Zu wenige Vergleichsfälle: p = 1 (nicht prüfbar)."""
+    ok = np.flatnonzero(~np.isnan(a))
+    if len(ok) < 504 or len(pos) == 0:
+        return 1.0
+    g0 = int(ok[0]); m = int(ok[-1]) + 1 - g0
+    hi = (m - 252) // 5
+    if hi <= 252 // 5:
+        return 1.0
+    offs = rng.integers(252 // 5, hi, size=N_F5) * 5
+    w = a[g0 + (pos[None, :] - g0 - offs[:, None]) % m]
+    gueltig = (~np.isnan(w)).sum(axis=1) >= max(3, int(np.ceil(0.8 * len(pos))))
+    if int(gueltig.sum()) < 200:
+        return 1.0
+    sims = np.nanmean(w[gueltig], axis=1)
+    return float((np.sum(sims >= mu) + 1) / (int(gueltig.sum()) + 1))
 
 def auswahl(df, t_min, mrs, rng):
     df = filtern(df, t_min)
