@@ -12,6 +12,16 @@ Warum ein eigenes Skript (30.9.2026, Lauf #18 verloren):
   eigene Wert, wo er von der Basis abweicht, und der Stand auf GitHub, wo nicht.
 - Andere Dateien mit Konflikt: der eigene Stand gilt (jede Datei hat genau einen Schreiber), mit Meldung.
 Nichts wird gelöscht oder stillschweigend verworfen; scheitert alles, endet das Skript mit Fehler 1.
+
+Korrekturen 2.10.2026 (Astra-Befund 19, Reto: «Paket 1 wie vorgeschlagen»):
+- Listenschlüssel: der erste NICHT leere Wert aus nr, charge, datei, datum (vorher galt «datei: null» der Läufe 1–4
+  als gemeinsamer Schlüssel; Einträge konnten sich gegenseitig ersetzen).
+- Einträge mit gleichem Schlüssel werden feldweise dreiweg gemischt. Ändern beide Seiten dasselbe Feld verschieden,
+  bleibt der schon veröffentlichte Wert und der eigene wird in index["konflikte"] festgehalten (nichts geht verloren).
+  Bei Feldern der obersten Ebene (Zustand des letzten Laufs) gilt wie bisher der eigene Wert; der ersetzte wird festgehalten.
+- Andere Dateien mit Konflikt: der eigene Stand gilt weiterhin, der Stand von GitHub wird daneben als
+  <pfad>.konflikt_<zeit> gesichert statt verworfen.
+- Tests: python test_einchecken.py
 """
 import json, os, subprocess, sys, time
 
@@ -29,30 +39,56 @@ def git(*a, ok=False, text=True):
     return r
 
 
+KONFLIKTE = []
+
+
 def schluessel(e):
     if isinstance(e, dict):
-        for k in ("datei", "charge", "nr", "datum"):
-            if k in e:
-                return (k, json.dumps(e[k]))
-    return ("wert", json.dumps(e, sort_keys=True))
+        for k in ("nr", "charge", "datei", "datum"):
+            if e.get(k) is not None:
+                return (k, json.dumps(e[k], sort_keys=True))
+    return ("wert", json.dumps(e, sort_keys=True, ensure_ascii=False))
 
 
-def liste_mischen(basis, theirs, mine):
-    b = {schluessel(e): e for e in (basis or [])}
-    m = {schluessel(e): e for e in (mine or [])}
+def eintrag_mischen(b, t, m, wo):
+    """Feldweise dreiweg: b Basis (oder None), t Stand auf GitHub, m eigener Stand."""
+    if not (isinstance(t, dict) and isinstance(m, dict)):
+        return m
+    b = b if isinstance(b, dict) else {}
+    out = dict(t)
+    for k, v in m.items():
+        if k in t and t[k] == v:
+            continue
+        if k in b and b[k] == v:
+            continue                    # nicht von mir geändert: Stand auf GitHub gilt
+        if k in t and (k not in b or t[k] != b[k]):
+            # beide Seiten haben das Feld verschieden gesetzt: der veröffentlichte Wert bleibt, meiner wird festgehalten
+            KONFLIKTE.append({"wo": wo, "feld": k, "github_bleibt": t[k], "eigen_verworfen": v})
+            continue
+        out[k] = v
+    return out                          # Felder werden nie entfernt
+
+
+def liste_mischen(basis, theirs, mine, wo="liste"):
+    b, m = {}, {}
+    for e in basis or []:
+        b.setdefault(schluessel(e), e)
+    for e in mine or []:
+        m[schluessel(e)] = e
     out, gesehen = [], set()
     for e in theirs or []:
-        k = schluessel(e); gesehen.add(k)
-        if k in m and m[k] != b.get(k):
-            out.append(m[k])            # von mir geändert oder neu
-        elif k in b and k not in m:
-            out.append(e)               # von mir nicht gelöscht: bleibt (nie still verwerfen)
+        k = schluessel(e)
+        if k in gesehen:
+            out.append(e); continue     # doppelter Schlüssel auf GitHub: nichts verwerfen
+        gesehen.add(k)
+        if k in m and m[k] != e:
+            out.append(eintrag_mischen(b.get(k), e, m[k], f"{wo}[{k[0]}={k[1]}]"))
         else:
-            out.append(e)
+            out.append(e)               # gleich, oder bei mir nicht vorhanden: bleibt (nie still verwerfen)
     for e in mine or []:
         k = schluessel(e)
         if k not in gesehen:
-            out.append(e)               # nur bei mir neu
+            gesehen.add(k); out.append(e)   # nur bei mir neu
     return out
 
 
@@ -65,11 +101,17 @@ def json_mischen(basis, theirs, mine):
         if k in basis and basis[k] == v:
             continue                    # nicht von mir geändert: Stand auf GitHub gilt
         t = theirs.get(k)
-        if isinstance(v, list) and isinstance(t, list) and all(isinstance(e, dict) for e in v + t) and any(
-                any(s in e for s in ("datei", "charge")) for e in v + t):
-            out[k] = liste_mischen(basis.get(k), t, v)
+        if isinstance(v, list) and isinstance(t, list) and all(isinstance(e, dict) for e in v + t):
+            out[k] = liste_mischen(basis.get(k), t, v, k)
         else:
+            if k in theirs and t != v and t != basis.get(k):
+                KONFLIKTE.append({"wo": "index", "feld": k, "github_ersetzt": t, "eigen_gilt": v})
             out[k] = v
+    if KONFLIKTE:
+        zeit = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        alt = out.get("konflikte") if isinstance(out.get("konflikte"), list) else []
+        out["konflikte"] = (alt + [dict(x, zeit=zeit, lauf=PRAEFIX) for x in KONFLIKTE])[-200:]
+        del KONFLIKTE[:]
     return out
 
 
@@ -91,8 +133,18 @@ def konflikte_loesen():
                 json.dump(gem, f, ensure_ascii=False, indent=1)
             print(f"Konflikt in {p}: dreiweg gemischt")
         else:
-            git("checkout", "--theirs", "--", p)
-            print(f"Konflikt in {p}: eigener Stand übernommen (einziger Schreiber)")
+            t = git("show", f":2:{p}", ok=True, text=False)
+            if t.returncode == 0:       # Stand von GitHub daneben sichern statt verwerfen
+                sich = f"{p}.konflikt_{time.strftime('%Y%m%dT%H%M%SZ', time.gmtime())}"
+                with open(os.path.join(LERNEN, sich), "wb") as f:
+                    f.write(t.stdout)
+                git("add", "--", sich)
+                print(f"Konflikt in {p}: Stand von GitHub gesichert als {sich}")
+            if git("checkout", "--theirs", "--", p, ok=True).returncode == 0:
+                print(f"Konflikt in {p}: eigener Stand übernommen (einziger Schreiber)")
+            else:                       # bei mir nicht vorhanden: Stand von GitHub bleibt, nichts wird gelöscht
+                git("checkout", "--ours", "--", p)
+                print(f"Konflikt in {p}: Stand von GitHub behalten")
         git("add", "--", p)
     return True
 
