@@ -5,7 +5,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["fetch.py", "fetch_hr.py", "fetch_sec.py", "tickers.txt", "fred_series.txt", ".github/workflows/daten.yml"]
+    paths: ["fetch.py", "fetch_hr.py", "fetch_sec.py", "fetch_six.py", "tickers.txt", "fred_series.txt", ".github/workflows/daten.yml"]
 permissions:
   contents: write
 concurrency:
@@ -35,6 +35,11 @@ jobs:
           SEC_BUDGET_MIN: "40"
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # «Pruefstand Research <Kontaktadresse>», nur als Secret
         timeout-minutes: 45
+        continue-on-error: true
+      - name: SIX Pflichtmeldungen (nur Archiv; Reto 2.10.2026 «Archiv wie vorgeschlagen»)
+        if: always()
+        run: python fetch_six.py
+        timeout-minutes: 15
         continue-on-error: true
       - name: Manifest sichern
         if: always()
