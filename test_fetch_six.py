@@ -67,4 +67,17 @@ with tempfile.TemporaryDirectory() as out:
 with tempfile.TemporaryDirectory() as out:                                 # erster Lauf scheitert: Bestand nicht als geladen markiert
     st = f.lauf(out, quelle(mt, bt, fehler_bei="mt"), pause=0, zeit=datetime(2026, 10, 3, tzinfo=timezone.utc))
     assert "bestand_geladen_utc" not in st["mt"]; print("ok  gescheiterter Erstlauf zählt nicht als Bestand")
+with tempfile.TemporaryDirectory() as out:                                 # Namensregel nachziehen: issuerName im Altbestand
+    alt = {"id": "ZA-9", "datum": "20200102", "erstmals_gesehen_utc": "2026-10-02T09:40:45Z", "nachgeladen": True, "fassung": 1, "inhalt_sha": "x",
+           "meldung": {"publication": {"notificationId": "ZA-9", "publicationDate": 20200102, "notificationSubmitter": "Muster AG"},
+                       "beneficialNames_n": 1, "beneficialNames_kennung": ["abc"], "positionsRights": [{"issuerName": "M. Hans Muster", "positionSize": "5"}]}}
+    f.schreibe_jahr(os.path.join(out, "bt", "2020.jsonl.gz"), [alt])
+    quelle_bt = [{"publication": {"notificationId": "ZA-9", "publicationDate": 20200102, "notificationSubmitter": "Muster AG"},
+                  "beneficialNames": ["Hans Muster"], "positionsRights": [{"issuerName": "M. Hans Muster", "positionSize": "5"}]}]
+    assert f.bereinigen("bt", out) == 1 and f.bereinigen("bt", out) == 0
+    z = zeilen(out, "bt", 2020)[0]; txt = json.dumps(z, ensure_ascii=False)
+    assert "Hans Muster" not in txt and z["meldung"]["beneficialNames_n"] == 1 and z["meldung"]["beneficialNames_kennung"] == ["abc"]
+    assert z["erstmals_gesehen_utc"] == "2026-10-02T09:40:45Z" and z["fassung"] == 1 and z["meldung"]["positionsRights"][0]["issuerName_n"] == 1
+    neu, ge = f.archivieren("bt", [dict(quelle_bt[0], beneficialNames=[])], "2026-10-03T03:20:00Z", False, out)
+    print("ok  Namensregel nachgezogen: Aussteller ersetzt, Zeitstempel und Fassung unverändert, zweimal anwenden ändert nichts")
 print("alle Tests bestanden")
