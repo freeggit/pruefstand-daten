@@ -2946,5 +2946,93 @@
   "status": "abgelehnt",
   "mechanismus": "FinCEN-Auflagen veraendern Compliance-Kosten der Banken (XLF).",
   "grund": "K5: nur 319 Dokumente seit 1997, letzter Wert 2026-09-04 (28 Tage alt); zu duenn besetzt."
+ },
+ {
+  "id": "fred_arbeitslosenerstantraege_woechentlich",
+  "name": "US-Erstanträge Arbeitslosenhilfe (ICSA), wöchentlich, ab 1967",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Staat",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Ein Sprung der Erstanträge signalisiert schwächere Arbeitsnachfrage; zyklische Sektoren (XLY, XLI) und Zinsen reagieren in Tagen bis Wochen gegenüber dem Weltindex (Boyd/Hu/Jagannathan 2005 zur Zeitabhängigkeit von Arbeitsmarktnachrichten).",
+  "grund": "Historie vor 1990 (Zusatz 4/6 Scout, zweite Priorität); öffentlich ohne Login; Donnerstags-Publikationsfrist nach M2 beachten. Herkunft: Lernrunde 2.10.2026."
+ },
+ {
+  "id": "fred_nfci_finanzbedingungen_woechentlich",
+  "name": "Chicago Fed National Financial Conditions Index (NFCI), wöchentlich, ab 1971",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Zinsen",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Straffere Finanzierungsbedingungen drücken Kreditvergabe und Bewertungen; Banken (XLF) und Hochzins-Anleihen reagieren verzögert gegenüber dem Weltindex.",
+  "grund": "Lange Historie vor 1990; öffentlich; mögliche Überschneidung mit idx_geldmarkt_straff, daher Priorität normal. Herkunft: Lernrunde 2.10.2026."
+ },
+ {
+  "id": "eia_erdgasspeicher_woechentlich",
+  "name": "EIA wöchentlicher Erdgasspeicher (Lagerveränderung), ab 1994",
+  "url": "https://ir.eia.gov/ngs/ngs.html",
+  "domain": "ir.eia.gov",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Eine unerwartet kleine Lagerzunahme verknappt Erdgas kurzfristig; Energieproduzenten (XLE, Erdgas-Ziele) reagieren in den Folgetagen (Linn/Zhu 2004 zu Erdgas-Lagermeldungen).",
+  "grund": "Öffentliche Tabelle ohne Login, donnerstags publiziert (Frist M2 wie EIA wöchentlich). Ergänzt eia_rohoellager_woechentlich nach L1 ohne Doppel. Herkunft: Lernrunde 2.10.2026."
+ },
+ {
+  "id": "quartalsende_pensionsrebalancing",
+  "name": "Kalender Quartalsende-Rebalancing (letzte 5 Handelstage je Quartal), deterministisch",
+  "url": "https://www.nyse.com/markets/hours-calendars",
+  "domain": "www.nyse.com",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Pensionsfonds gleichen nach starken Quartalsrenditen Aktien- und Anleihenanteile aus; das erzeugt vorhersehbaren Verkaufs- oder Kaufdruck auf Aktien gegenüber Anleihen (Harvey et al. 2022).",
+  "grund": "Kalender ohne Ergebnisabhängigkeit, Mechanismus vor der Auswertung festgelegt; unabhängig von turn_of_month_effekt (Quartal statt Monat, Vorquartalsrendite als Zustand). Herkunft: Lernrunde 2.10.2026."
+ },
+ {
+  "id": "optionsverfall_opex_kalender",
+  "name": "Kalender Optionsverfall (dritter Freitag, Dreifach-Hexensabbat), deterministisch",
+  "url": "https://www.nyse.com/markets/hours-calendars",
+  "domain": "www.nyse.com",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Händler-Absicherung und Pinning rund um den Verfall verschieben Kurse kurzfristig; Indexnahe Sektoren reagieren anders als der Weltindex (Ni/Pearson/Poteshman 2005; Stivers/Sun 2013).",
+  "grund": "Deterministisch aus Wochentagsregel, keine Quelle mit Login; neu (kein Eintrag zu OPEX). Herkunft: Lernrunde 2.10.2026."
+ },
+ {
+  "id": "fomc_protokolle_veroeffentlichungstage",
+  "name": "FOMC-Protokolle, Veröffentlichungstage (3 Wochen nach Sitzung), ab 1993",
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm",
+  "domain": "www.federalreserve.gov",
+  "bereich": "Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Das Protokoll verrät den Zinspfad nachträglich und bewegt Zinserwartungen; Anleihen (TLT, IEF) und Banken (XLF) reagieren kurzfristig gegenüber dem Weltindex.",
+  "grund": "Termine amtlich und öffentlich; verschieden von leitzins_aenderungstage (Sitzung statt Protokoll). Herkunft: Lernrunde 2.10.2026."
+ },
+ {
+  "id": "fed_h8_bankkredite_woechentlich",
+  "name": "Fed H.8 Kredite und Einlagen der US-Banken, wöchentlich, ab 1973",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TOTLL",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Staat und Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Beschleunigtes oder gebremstes Kreditwachstum zeigt die Risikobereitschaft der Banken; Banken (XLF) und zyklische Sektoren reagieren verzögert gegenüber dem Weltindex.",
+  "grund": "Lange Historie vor 1990, öffentlich; Publikationsfrist freitags nach M2 beachten. Herkunft: Lernrunde 2.10.2026."
+ },
+ {
+  "id": "cdc_influenza_aktivitaet_woechentlich",
+  "name": "CDC FluView: Anteil grippeähnlicher Erkrankungen (ILINet), wöchentlich, ab 1997",
+  "url": "https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html",
+  "domain": "gis.cdc.gov",
+  "bereich": "Gesundheit",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Starke Grippewellen erhöhen die Nachfrage nach Gesundheitsleistungen und dämpfen Konsum und Reisen; Gesundheit (XLV) und Konsum (XLY) reagieren gegenüber dem Weltindex (Neuer Bereich Gesundheit).",
+  "grund": "Neuer Bereich, der noch fehlt; öffentlich ohne Login; Wochenmeldung mit Verzögerung nach M2 festlegen. Herkunft: Lernrunde 2.10.2026."
  }
 ]
