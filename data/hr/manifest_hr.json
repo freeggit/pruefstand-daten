@@ -4,8 +4,8 @@
    "dateien": [
     "data/hr/pegel/kaub_2026.csv.gz"
    ],
-   "zeilen": 3812,
-   "letzte": "2026-10-02T09:30:00+02:00",
+   "zeilen": 3815,
+   "letzte": "2026-10-02T10:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -15,8 +15,8 @@
    "dateien": [
     "data/hr/pegel/maxau_2026.csv.gz"
    ],
-   "zeilen": 3814,
-   "letzte": "2026-10-02T09:30:00+02:00",
+   "zeilen": 3817,
+   "letzte": "2026-10-02T10:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -26,8 +26,8 @@
    "dateien": [
     "data/hr/pegel/koeln_2026.csv.gz"
    ],
-   "zeilen": 3811,
-   "letzte": "2026-10-02T09:30:00+02:00",
+   "zeilen": 3814,
+   "letzte": "2026-10-02T10:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -37,8 +37,8 @@
    "dateien": [
     "data/hr/pegel/duisburg-ruhrort_2026.csv.gz"
    ],
-   "zeilen": 3815,
-   "letzte": "2026-10-02T09:30:00+02:00",
+   "zeilen": 3818,
+   "letzte": "2026-10-02T10:15:00+02:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -167,7 +167,9 @@
    "zeilen": 234384,
    "erste": "2000-01-01T00:00:00Z",
    "letzte": "2026-09-26T23:00:00Z",
-   "fehler": "2026: <urlopen error _ssl.c:993: The handshake operation timed out>"
+   "aufloesung": "1h",
+   "quelle": "open-meteo ERA5",
+   "einheiten": "°C, mm, km/h, %"
   },
   "wetter:houston": {
    "dateien": [
@@ -436,6 +438,6 @@
   "wiki",
   "wetter"
  ],
- "inventur_utc": "2026-10-02T07:41:52Z",
- "erzeugt_utc": "2026-10-02T07:38:05Z"
+ "inventur_utc": "2026-10-02T08:30:14Z",
+ "erzeugt_utc": "2026-10-02T08:27:32Z"
 }
