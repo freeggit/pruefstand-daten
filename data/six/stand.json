@@ -1,0 +1,37 @@
+{
+ "bt": {
+  "fassungen_geaendert": 0,
+  "fehler_seit_utc": "2026-10-02T08:41:16Z",
+  "laeufe": 1,
+  "letzter_abruf_n": 100,
+  "letzter_fehler": "Seite 1 wiederholt bekannte Meldungen (Blättern wirkt nicht)",
+  "letzter_lauf_geaendert": 0,
+  "letzter_lauf_neu": 0,
+  "letzter_lauf_utc": "2026-10-02T08:41:16Z",
+  "letzter_zeitraum": [
+   "20000101",
+   "20261003"
+  ],
+  "meldungen": 0,
+  "quelle_totalcount": 32030
+ },
+ "hinweis": "Nur Archiv, nicht im Suchraum. erstmals_gesehen_utc ist der Beleg der Verfügbarkeit; nachgeladen=true heisst: Publikationszeitpunkt unbekannt (Bestand des ersten Laufs).",
+ "mt": {
+  "bestand_aeltestes_datum": "20231002",
+  "bestand_anzahl": 6732,
+  "bestand_geladen_utc": "2026-10-02T08:41:16Z",
+  "fassungen_geaendert": 0,
+  "laeufe": 1,
+  "letzter_abruf_n": 6732,
+  "letzter_fehler": null,
+  "letzter_lauf_geaendert": 0,
+  "letzter_lauf_neu": 6732,
+  "letzter_lauf_utc": "2026-10-02T08:41:16Z",
+  "letzter_zeitraum": [
+   "20000101",
+   "20261003"
+  ],
+  "meldungen": 6732,
+  "quelle_totalcount": 6732
+ }
+}
