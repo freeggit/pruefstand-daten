@@ -10,6 +10,8 @@ Quellen (öffentlich, ohne Anmeldung; dieselben Abfragen wie die Suchmasken auf 
   mt  Management-Transaktionen     https://www.ser-ag.com/sheldon/management_transactions/v1/overview.json
   bt  Offenlegung von Beteiligungen https://www.ser-ag.com/sheldon/significant_shareholders/v1/overview.json
 Antwort: {status, totalCount, itemList}; neueste zuerst; Seiten über pageSize/pageNumber.
+Bei Beteiligungen liegen Kennung und Daten unter «publication» (Korrektur 2.10.2026 nach dem ersten Lauf: die Kennung
+wurde auf oberster Ebene gesucht, deshalb wurde nichts gespeichert und das Blättern fälschlich als defekt gemeldet).
 
 Ablage (nur anhängen, nie überschreiben):
   data/six/<art>/<JJJJ>.jsonl.gz   eine Zeile je Fassung einer Meldung, Jahr nach Transaktions- bzw. Publikationsdatum:
@@ -25,7 +27,7 @@ Verschwindet eine Meldung bei der Quelle, bleibt sie im Archiv.
 
 Personendaten: Management-Transaktionen nennen keine Personen (nur Emittent und Funktion). Beteiligungsmeldungen
 nennen Aktionäre und Vertreter, darunter natürliche Personen. Das Repo ist öffentlich: die Namensfelder (NAMEN_BT)
-werden deshalb NICHT gespeichert, sondern durch Anzahl und einen gekürzten SHA-256 ersetzt (gleicher Name = gleiche
+samt Adressen und Freitext-Kommentaren werden deshalb NICHT gespeichert, sondern durch Anzahl und einen gekürzten SHA-256 ersetzt (gleicher Name = gleiche
 Kennung; so bleiben Meldungen desselben Aktionärs verknüpfbar). Die Namen stehen weiterhin bei der Quelle.
 
 Zugang: höchstens 1 Abruf pro Sekunde, User-Agent mit Repo-Angabe. Bei 403/429: Befund in stand.json, kein Umweg,
@@ -42,8 +44,9 @@ ARTEN = {
     "mt": {"pfad": "management_transactions/v1/overview.json", "datum": "transactionDate"},
     "bt": {"pfad": "significant_shareholders/v1/overview.json", "datum": "publicationDate"},
 }
-NAMEN_BT = ("beneficialNames", "groupRepresentative", "beneficialAssocNames", "directHolderNames", "contactPerson",
-            "groupMembers", "holderNames")
+NAMEN_BT = ("beneficialNames", "beneficialAddrs", "shareholderNames", "shareholderAddrs", "groupRepresentative",
+            "contactPerson", "beneficialAssocComment", "relationComment", "submitterComment", "triggerComment",
+            "furtherConditions")
 SEITE, MAX_SEITEN, PAUSE_S = 100, 400, 1.0
 RUECKBLICK_TAGE = 45            # jeder Lauf holt die letzten 45 Tage neu (späte Meldungen, Korrekturen)
 ANFANG = "20000101"
@@ -65,7 +68,9 @@ def kennung(wert):
 
 def ist_namensfeld(k):
     kl = k.lower()
-    return k in NAMEN_BT or ("name" in kl and k != "notificationSubmitter") or "representative" in kl or "person" in kl
+    if k in ("notificationSubmitter", "issuerName"):      # Emittent, keine Person
+        return False
+    return k in NAMEN_BT or any(t in kl for t in ("name", "addr", "representative", "person", "comment"))
 
 
 def ohne_namen(art, m, tief=0):
@@ -86,6 +91,12 @@ def ohne_namen(art, m, tief=0):
         else:
             out[k] = ohne_namen(art, v, tief + 1) if isinstance(v, (dict, list)) else v
     return out
+
+
+def kopf(m):
+    """Kennung und Felder der Meldung; bei Beteiligungen liegen sie unter «publication»."""
+    p = m.get("publication") if isinstance(m.get("publication"), dict) else {}
+    return lambda feld: m.get(feld) if m.get(feld) not in (None, "") else p.get(feld)
 
 
 def lies_jahr(pfad):
@@ -125,11 +136,11 @@ def abrufen(art, von, bis, hole_fn=hole, pause=PAUSE_S):
             break
         total = d.get("totalCount", total)
         teil = d.get("itemList") or []
-        frisch = [m for m in teil if m.get("notificationId") not in gesehen]
+        frisch = [m for m in teil if kopf(m)("notificationId") not in gesehen]
         if teil and not frisch:
             fehler = f"Seite {seite} wiederholt bekannte Meldungen (Blättern wirkt nicht)"
             break
-        gesehen.update(m.get("notificationId") for m in frisch)
+        gesehen.update(kopf(m)("notificationId") for m in frisch)
         alle.extend(frisch)
         if not teil or (total is not None and len(alle) >= int(total)) or (total is None and len(teil) < SEITE):
             break
@@ -145,7 +156,7 @@ def archivieren(art, meldungen, zeit, erster_lauf, out=OUT):
     je_jahr = {}
     for m in meldungen:
         m = ohne_namen(art, m)
-        mid, datum = str(m.get("notificationId") or ""), str(m.get(cfg["datum"]) or "")
+        mid, datum = str(kopf(m)("notificationId") or ""), str(kopf(m)(cfg["datum"]) or "")
         if not mid or len(datum) < 4:
             continue
         je_jahr.setdefault(datum[:4], []).append((mid, datum, m))
@@ -192,7 +203,7 @@ def lauf(out=OUT, hole_fn=hole, pause=PAUSE_S, zeit=None):
             neu, geaendert = archivieren(art, meldungen, stempel, erster, out)
         if erster and fehler is None:
             s["bestand_geladen_utc"] = stempel
-            daten = [str(m.get(ARTEN[art]["datum"])) for m in meldungen if m.get(ARTEN[art]["datum"])]
+            daten = [str(kopf(m)(ARTEN[art]["datum"])) for m in meldungen if kopf(m)(ARTEN[art]["datum"])]
             s["bestand_aeltestes_datum"] = min(daten) if daten else None
             s["bestand_anzahl"] = len(meldungen)
         s.update({"laeufe": s["laeufe"] + 1, "letzter_lauf_utc": stempel, "letzter_zeitraum": [von, bis],
