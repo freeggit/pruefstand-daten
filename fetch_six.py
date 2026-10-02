@@ -29,6 +29,8 @@ Personendaten: Management-Transaktionen nennen keine Personen (nur Emittent und 
 nennen Aktionäre und Vertreter, darunter natürliche Personen. Das Repo ist öffentlich: die Namensfelder (NAMEN_BT)
 samt Adressen und Freitext-Kommentaren werden deshalb NICHT gespeichert, sondern durch Anzahl und einen gekürzten SHA-256 ersetzt (gleicher Name = gleiche
 Kennung; so bleiben Meldungen desselben Aktionärs verknüpfbar). Die Namen stehen weiterhin bei der Quelle.
+Das gilt auch für «issuerName» (Aussteller von Derivaten; vereinzelt Privatpersonen): seit 2.10.2026 ersetzt, schon
+archivierte Zeilen werden beim nächsten Lauf nachgezogen (bereinigen).
 
 Zugang: höchstens 1 Abruf pro Sekunde, User-Agent mit Repo-Angabe. Bei 403/429: Befund in stand.json, kein Umweg,
 kein weiterer Versuch in diesem Lauf. Der Lauf endet immer mit Code 0 (Archiv darf den Datenspiegel nicht stoppen).
@@ -68,7 +70,7 @@ def kennung(wert):
 
 def ist_namensfeld(k):
     kl = k.lower()
-    if k in ("notificationSubmitter", "issuerName"):      # Emittent, keine Person
+    if k == "notificationSubmitter" or k.endswith(("_n", "_kennung")):   # Emittent; schon ersetzte Felder
         return False
     return k in NAMEN_BT or any(t in kl for t in ("name", "addr", "representative", "person", "comment"))
 
@@ -186,6 +188,25 @@ def archivieren(art, meldungen, zeit, erster_lauf, out=OUT):
     return neu, geaendert
 
 
+def bereinigen(art, out=OUT):
+    """Wendet die geltende Namensregel auf schon archivierte Zeilen an (einmalig wirksam, danach ohne Änderung).
+    Anlass 2.10.2026: «issuerName» (Aussteller von Derivaten) enthielt in wenigen Meldungen Namen von Privatpersonen
+    und stand im Klartext. Zeitstempel, Fassung und Reihenfolge bleiben; nur das Feld und inhalt_sha ändern sich."""
+    geaendert = 0
+    d = os.path.join(out, art)
+    for name in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if not name.endswith(".jsonl.gz"):
+            continue
+        pfad = os.path.join(d, name); zeilen = lies_jahr(pfad); n = 0
+        for z in zeilen:
+            neu = ohne_namen(art, z["meldung"])
+            if neu != z["meldung"]:
+                z["meldung"] = neu; z["inhalt_sha"] = kennung(neu); n += 1
+        if n:
+            schreibe_jahr(pfad, zeilen); geaendert += n
+    return geaendert
+
+
 def lauf(out=OUT, hole_fn=hole, pause=PAUSE_S, zeit=None):
     zeit = zeit or jetzt_utc()
     stempel = zeit.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -196,6 +217,10 @@ def lauf(out=OUT, hole_fn=hole, pause=PAUSE_S, zeit=None):
         s = stand.setdefault(art, {"laeufe": 0, "meldungen": 0, "fassungen_geaendert": 0})
         erster = not s.get("bestand_geladen_utc")
         von = ANFANG if erster else (zeit - timedelta(days=RUECKBLICK_TAGE)).strftime("%Y%m%d")
+        if art == "bt":
+            n_ber = bereinigen(art, out)
+            if n_ber:
+                s["namensregel_nachgezogen"] = {"zeilen": n_ber, "utc": stempel}
         meldungen, total, fehler = abrufen(art, von, bis, hole_fn, pause)
         neu = geaendert = 0
         if meldungen:
