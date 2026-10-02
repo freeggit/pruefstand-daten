@@ -308,6 +308,11 @@ def reihen_schreiben(cache, fertig):
     fertig = fertig and len(bereinigt) == len(alle)
     status = "aktiv" if (fertig and abdeckung >= MIN_ABDECKUNG) else "aufbau"
     tage = sorted(tage)
+    # ausdrückliche Tabelle (2.10.2026): vorher waren «kaeufer» und «verkaufwert_usd» im Text vertauscht (nur Beschreibung, Werte unverändert)
+    BESCHREIBUNG_INSIDER = {"kaeufer": "Anzahl Insider mit offenen Marktkäufen (Code P)",
+                            "kaufwert_usd": "Wert der offenen Marktkäufe (Code P) in USD",
+                            "verkaeufer": "Anzahl Insider mit offenen Marktverkäufen (Code S)",
+                            "verkaufwert_usd": "Wert der offenen Marktverkäufe (Code S) in USD"}
     for key in ["markt", "xlb", "xlc", "xle", "xlf", "xli", "xlk", "xlp", "xlre", "xlu", "xlv", "xly"]:
         for i, groesse in enumerate(["kaeufer", "kaufwert_usd", "verkaeufer", "verkaufwert_usd"]):
             rows = [[d, summe[(key, d)][i] if (key, d) in summe else 0] for d in tage]
@@ -318,7 +323,7 @@ def reihen_schreiben(cache, fertig):
             man["reihen"][f"sec_insider:{key}_{groesse}"] = {
                 "datei": datei, "erste": rows[0][0], "letzte": rows[-1][0], "zeilen": len(rows),
                 "einheit": "Anzahl Insider" if "kaeufer" in groesse or groesse == "verkaeufer" else "USD",
-                "beschreibung": f"Formular 4, offene Markt{'käufe' if 'kauf' in groesse else 'verkäufe'} je Einreichungstag, Sektor {key}",
+                "beschreibung": f"Formular 4, {BESCHREIBUNG_INSIDER[groesse]} je Einreichungstag, Sektor {key}",
                 "quelle_url": "https://www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets",
                 "verdichtung": "Summe je Einreichungstag", "verfuegbar_nach_tagen": 1, "revidiert": False,
                 "status": status}
