@@ -50,6 +50,22 @@ def fetch_release_dates():
     return dates
 
 
+# Korrektur 2.10.2026 (Datenaudit): ALFRED fuehrt jedes Vintage-Datum des Release, also auch
+# Ersatz-Releases, Datennachtraege und den CES Preliminary Benchmark. Der Employment-Situation-
+# Bericht erscheint einmal je Monat: stehen in einem Monat mehrere Termine, gilt nur der erste
+# (belegt mit dem BLS-Archiv fuer 2002-12, 2003-10, 2006-05, 2012-12, 2013-05, 2020-05, 2024-01, 2024-08).
+
+
+def nur_releases(dates):
+    je_monat = {}
+    for d in sorted(dates):
+        je_monat.setdefault((d.year, d.month), []).append(d)
+    entfernt = set()
+    for tage in je_monat.values():
+        entfernt.update(tage[1:])
+    return dates - entfernt, sorted(entfernt)
+
+
 def gzip_write(path, rows):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     buf = io.BytesIO()
@@ -66,7 +82,7 @@ def gzip_write(path, rows):
 def main():
     end = datetime.datetime.now(datetime.timezone.utc).date()
     all_dates = fetch_release_dates()
-    event_days = {d for d in all_dates if d >= START}
+    event_days, entfernt = nur_releases({d for d in all_dates if d >= START})
     if not event_days:
         raise SystemExit("keine Veroeffentlichungstermine ab %s" % START.isoformat())
     rows = [(d, 1 if d in event_days else 0) for d in daterange(START, end)]
@@ -81,6 +97,8 @@ def main():
             "publikation": "taeglich (Veroeffentlichungstermin laut OMB Statistical Policy Directive No. 3 (1985) im Voraus als Jahreskalender oeffentlich bekannt gegeben, https://www.bls.gov/bls/statistical-policy-directive-3.pdf)",
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
+            "entfernte_vintages": [d.isoformat() for d in entfernt],
+            "entfernte_vintages_grund": "ALFRED-Vintages ohne eigenen Employment-Situation-Release (nur der erste Termin je Monat gilt); Datenaudit 1.10.2026",
         },
     }
     with open(os.path.join(OUT_DIR, "meta.json"), "w", encoding="utf-8") as f:

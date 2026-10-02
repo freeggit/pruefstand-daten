@@ -116,6 +116,7 @@ SPECIAL_CLOSURES = {
     datetime.date(2012, 10, 29): "Hurrikan Sandy (oeffentlich dokumentiert, ausserhalb Dokumentenstand Jan. 2011)",
     datetime.date(2012, 10, 30): "Hurrikan Sandy (oeffentlich dokumentiert, ausserhalb Dokumentenstand Jan. 2011)",
     datetime.date(2018, 12, 5): "Nationaler Trauertag fuer frueheren Praesidenten George H.W. Bush (oeffentlich dokumentiert)",
+    datetime.date(2025, 1, 9): "Nationaler Trauertag fuer frueheren Praesidenten Jimmy Carter (NYSE-Mitteilung 30.12.2024, https://www.businesswire.com/news/home/20241230579727/en/)",
 }
 
 
@@ -123,10 +124,16 @@ def build_closure_days(end):
     closed = set()
 
     for year in range(START.year, end.year + 1):
-        # Neujahr
-        d = observed_fixed(datetime.date(year, 1, 1))
-        if d:
-            closed.add(d)
+        # Neujahr. Korrektur 2.10.2026 (Datenaudit): faellt Neujahr auf einen Samstag, bleibt die
+        # NYSE am Freitag 31.12. offen (NYSE Rule 7.2: "... unless unusual business conditions exist,
+        # such as the ending of a monthly or yearly accounting period"). Belegt mit Handelstagen von
+        # SPY fuer 1993, 1999, 2004, 2010, 2021; fuer fruehere Jahre (1965, 1971, 1976, 1982) nicht
+        # einzeln belegt, dort bleibt die bisherige Regel.
+        neujahr = datetime.date(year, 1, 1)
+        if not (neujahr.weekday() == 5 and year >= 1994):
+            d = observed_fixed(neujahr)
+            if d:
+                closed.add(d)
         # Martin Luther King Jr. Day: ganztags erst ab 1998, 3. Montag Januar
         if year >= 1998:
             closed.add(nth_weekday(year, 1, 0, 3))

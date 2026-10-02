@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import datetime
 import gzip
 import io
 import json
@@ -56,12 +57,60 @@ def change_days(rows):
 FOMC_CUTOFF = "1994-02-04"
 
 
+# Korrektur 2.10.2026 (Datenaudit): DFEDTARU wechselt meist erst am Tag der WIRKSAMKEIT (Tag nach
+# der Bekanntgabe, z.B. Statement 15.3.2017, "effective March 16, 2017"). Die Reihe soll den Tag der
+# Bekanntgabe markieren. Regel: ist der Wechseltag selbst kein FOMC-Entscheidtag, der Kalendertag
+# davor aber schon (Reihe kalender_ereignisse/fomc_sitzung), gilt der Entscheidtag. Ausserplanmaessige
+# Entscheide einzeln belegt (https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm).
+AUSSERPLANMAESSIG = {"2020-03-04": "2020-03-03", "2020-03-16": "2020-03-15"}
+FOMC_SITZUNG = os.path.join(os.path.dirname(__file__), "..", "data", "neu", "kalender_ereignisse", "fomc_sitzung.csv.gz")
+
+
+def entscheidtage():
+    tage = set()
+    with gzip.open(FOMC_SITZUNG, "rt", encoding="utf-8") as f:
+        next(f)
+        for line in f:
+            d, _, v = line.strip().partition(",")
+            if v and float(v) == 1:
+                tage.add(d)
+    if not tage:
+        raise SystemExit("keine FOMC-Entscheidtage in %s" % FOMC_SITZUNG)
+    return tage
+
+
+def auf_bekanntgabe(flags, sitzung):
+    verschoben, nicht_zugeordnet = {}, []
+    for d, v in flags:
+        if not v or d < "2008-12-17":
+            continue
+        if d in AUSSERPLANMAESSIG:
+            verschoben[d] = AUSSERPLANMAESSIG[d]
+        elif d not in sitzung:
+            vortag = (datetime.date.fromisoformat(d) - datetime.timedelta(days=1)).isoformat()
+            if vortag in sitzung:
+                verschoben[d] = vortag
+            else:
+                nicht_zugeordnet.append(d)
+    ziel = set(verschoben.values())
+    out = [(d, 0 if d in verschoben else (1 if d in ziel else v)) for d, v in flags]
+    fehlend = ziel - {d for d, _ in flags}
+    if fehlend:
+        raise SystemExit("Entscheidtag fehlt in der Tagesreihe: %s" % sorted(fehlend))
+    return out, verschoben, nicht_zugeordnet
+
+
+VERSCHOBEN, NICHT_ZUGEORDNET = {}, []
+
+
 def build_fomc():
     pre = parse(fetch(URL_DFEDTAR))
     post = parse(fetch(URL_DFEDTARU))
     combined = pre + post
     combined.sort()
     flags = change_days(combined)
+    flags, verschoben, offen = auf_bekanntgabe(flags, entscheidtage())
+    VERSCHOBEN.update(verschoben); NICHT_ZUGEORDNET.extend(offen)
     return [(d, v) for d, v in flags if d >= FOMC_CUTOFF]
 
 
@@ -101,6 +150,9 @@ def main():
             "publikation": 'taeglich (Entscheiddatum am Tag der Bekanntgabe oeffentlich, Reihe wird taeglich fortgeschrieben)',
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
+            "auf_bekanntgabetag_verschoben": VERSCHOBEN,
+            "nicht_zugeordnet": NICHT_ZUGEORDNET,
+            "hinweis_bekanntgabe": "Ab 17.12.2008 (DFEDTARU) wird ein Wechsel am Tag der Wirksamkeit auf den FOMC-Entscheidtag davor gelegt; Datenaudit 1.10.2026",
         },
         "ezb": {
             "einheit": "Indikator (0/1)",

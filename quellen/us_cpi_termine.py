@@ -51,6 +51,25 @@ def fetch_release_dates():
     return dates
 
 
+# Korrektur 2.10.2026 (Datenaudit): ALFRED fuehrt jedes Vintage-Datum des Release, nicht nur den
+# monatlichen CPI-News-Release. (a) Jaehrliche Neuberechnung der Saisonfaktoren im Februar, wenige
+# Tage VOR dem Januar-CPI (2005-2024 belegt mit dem BLS-Archiv https://www.bls.gov/bls/news-release/cpi.htm):
+# stehen im Februar zwei Termine hoechstens 10 Tage auseinander, gilt nur der spaetere.
+# (b) Einzeln belegte Zusatz-Vintages ohne CPI-Release.
+KEIN_RELEASE = {datetime.date(2000, 2, 29), datetime.date(2000, 9, 28)}
+
+
+def nur_releases(dates):
+    entfernt = set(d for d in dates if d in KEIN_RELEASE)
+    je_monat = {}
+    for d in sorted(dates - entfernt):
+        je_monat.setdefault((d.year, d.month), []).append(d)
+    for (jahr, monat), tage in je_monat.items():
+        if monat == 2 and len(tage) == 2 and (tage[1] - tage[0]).days <= 10:
+            entfernt.add(tage[0])
+    return dates - entfernt, sorted(entfernt)
+
+
 def gzip_write(path, rows):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     buf = io.BytesIO()
@@ -67,7 +86,7 @@ def gzip_write(path, rows):
 def main():
     end = datetime.datetime.now(datetime.timezone.utc).date()
     all_dates = fetch_release_dates()
-    event_days = {d for d in all_dates if d >= START}
+    event_days, entfernt = nur_releases({d for d in all_dates if d >= START})
     if not event_days:
         raise SystemExit("keine Veroeffentlichungstermine ab %s" % START.isoformat())
     rows = [(d, 1 if d in event_days else 0) for d in daterange(START, end)]
@@ -82,6 +101,8 @@ def main():
             "publikation": "taeglich (Veroeffentlichungstermin laut OMB Statistical Policy Directive No. 3 (1985) im Voraus als Jahreskalender oeffentlich bekannt gegeben, https://www.bls.gov/bls/statistical-policy-directive-3.pdf)",
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
+            "entfernte_vintages": [d.isoformat() for d in entfernt],
+            "entfernte_vintages_grund": "ALFRED-Vintages ohne CPI-News-Release (Saisonfaktor-Revision im Februar, belegte Einzelfaelle); Datenaudit 1.10.2026",
         },
     }
     with open(os.path.join(OUT_DIR, "meta.json"), "w", encoding="utf-8") as f:

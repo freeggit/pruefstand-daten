@@ -67,8 +67,19 @@ def observed(d):
     return d
 
 
+# Korrektur 2.10.2026 (Datenaudit): ganztaegige Sonderschliessungen der NYSE (gleiche Liste wie
+# quellen/us_boersenfeiertage.py, ab 1971). Ohne sie lag das Fenster am 2.1.2007 und 5.12.2018 falsch.
+SONDERSCHLIESSUNGEN = {
+    datetime.date(1972, 12, 28), datetime.date(1973, 1, 25), datetime.date(1977, 7, 14),
+    datetime.date(1985, 9, 27), datetime.date(1994, 4, 27), datetime.date(2001, 9, 11),
+    datetime.date(2001, 9, 12), datetime.date(2001, 9, 13), datetime.date(2001, 9, 14),
+    datetime.date(2004, 6, 11), datetime.date(2007, 1, 2), datetime.date(2012, 10, 29),
+    datetime.date(2012, 10, 30), datetime.date(2018, 12, 5), datetime.date(2025, 1, 9),
+}
+
+
 def nyse_holidays(year):
-    hol = set()
+    hol = {d for d in SONDERSCHLIESSUNGEN if d.year == year}
     hol.add(observed(datetime.date(year, 1, 1)))
     if year >= 1998:
         hol.add(nth_weekday(year, 1, 0, 3))  # Martin Luther King Jr. Day

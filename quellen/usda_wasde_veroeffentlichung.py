@@ -30,6 +30,10 @@ ROW_PAT = re.compile(
     r'<time datetime="(\d{4}-\d{2}-\d{2})T'
 )
 MAX_PAGES = 90
+# Korrektur 2.10.2026 (Datenaudit): Neuauflage eines schon erschienenen Berichts, kein eigener Termin.
+# https://usda.gov/oce/commodity-markets/wasde/historical-revisions: "On December 14 2018, the December
+# WASDE report ... was reposted to correct the forecast exports"; regulaerer Bericht am 11.12.2018.
+KEIN_TERMIN = {datetime.date(2018, 12, 14)}
 
 
 def daterange(start, end):
@@ -82,7 +86,7 @@ def gzip_write(path, rows):
 
 def main():
     end = datetime.datetime.now(datetime.timezone.utc).date()
-    all_dates = fetch_all_dates()
+    all_dates = fetch_all_dates() - KEIN_TERMIN
     start = min(all_dates)
     rows = [(d, 1 if d in all_dates else 0) for d in daterange(start, end)]
     gzip_write(os.path.join(OUT_DIR, "wasde.csv.gz"), rows)

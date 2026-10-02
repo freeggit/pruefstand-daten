@@ -25,6 +25,18 @@ FOMC_MONTHS = {
     "January": 1, "February": 2, "March": 3, "April": 4,
     "May": 5, "June": 6, "July": 7, "August": 8,
     "September": 9, "October": 10, "November": 11, "December": 12,
+    # Korrektur 2.10.2026 (Datenaudit): die Fed schreibt monatsuebergreifende Sitzungen als
+    # "Jan/Feb 31-1", "Jul/Aug 31-1", "Oct/Nov 31-1", "Apr/May 30-1"; die Kurzformen fehlten,
+    # die Sitzung fiel weg (2017-02-01, 2017-11-01, 2018-08-01, 2023-02-01, 2023-11-01, 2024-05-01).
+    "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "Jun": 6, "Jul": 7, "Aug": 8,
+    "Sep": 9, "Sept": 9, "Oct": 10, "Nov": 11, "Dec": 12,
+}
+# Eintraege, die die Fed als "Meeting" fuehrt, die aber keine planmaessige Sitzung mit
+# geldpolitischem Entscheid waren (Beleg je Datum).
+FOMC_KEIN_ENTSCHEID = {
+    # https://www.federalreserve.gov/fomc/minutes/20030812.htm: am 15.9.2003 "the Committee met to
+    # review its practices regarding the communication of its policy decisions"; Entscheid am 16.9.
+    datetime.date(2003, 9, 15),
 }
 # Gruppe 4 faengt eine optionale Klammerannotation ("(unscheduled)", "(cancelled)",
 # "(notation vote)") ein: Zusatz 5 (25.9.2026) verlangt nur planmaessige Sitzungen mit
@@ -34,9 +46,9 @@ FOMC_MONTHS = {
 FOMC_HIST_PAT = re.compile(
     r'([A-Za-z]+) (\d{1,2})(?:-(\d{1,2}))?\s*(?:\(([^)]*)\)\s*)?(Meeting|Conference Call)'
 )
-FOMC_EXCLUDE_NOTE = re.compile(r"unscheduled|cancelled", re.I)
+FOMC_EXCLUDE_NOTE = re.compile(r"unscheduled|cancelled|canceled|notation vote", re.I)
 FOMC_CAL_PAT = re.compile(
-    r'fomc-meeting__month[^>]*><strong>([A-Za-z]+)</strong></div>\s*'
+    r'fomc-meeting__month[^>]*><strong>([A-Za-z/]+)</strong></div>\s*'
     r'<div class="fomc-meeting__date[^>]*>([^<]+)</div>', re.S
 )
 FOMC_CAL_YEAR_PAT = re.compile(r'<h4><a id="\d+">(\d{4}) FOMC Meetings</a></h4>')
@@ -56,11 +68,26 @@ def daterange(start, end):
         d += one
 
 
+def easter_sunday(year):
+    a = year % 19; b = year // 100; c = year % 100
+    d = b // 4; e = b % 4; f = (b + 8) // 25; g = (b - f + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    i = c // 4; k = c % 4
+    l = (32 + 2 * e + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * l) // 451
+    return datetime.date(year, (h + l - 7 * m + 114) // 31, ((h + l - 7 * m + 114) % 31) + 1)
+
+
 def build_ustax(end):
     event_days = set()
     for year in range(START.year, end.year + 1):
         for month, day in TAX_MONTHS_DAYS:
             event_days.add(datetime.date(year, month, day))
+    # Korrektur 2.10.2026 (Datenaudit): IRS Notice 2020-23 verschob alle Faelligkeiten vom
+    # 1.4. bis 15.7.2020 auf den 15.7.2020.
+    event_days -= {datetime.date(2020, 4, 15), datetime.date(2020, 6, 15)}
+    event_days.add(datetime.date(2020, 7, 15))
+    event_days = {d for d in event_days if d <= end}
     return [(d, 1 if d in event_days else 0) for d in daterange(START, end)]
 
 
@@ -69,6 +96,10 @@ def build_opex(end):
     for year in range(OPEX_START.year, end.year + 1):
         for month in QUARTER_MONTHS:
             d = third_friday(year, month)
+            # Korrektur 2.10.2026 (Datenaudit): faellt der dritte Freitag auf Karfreitag (Boerse
+            # geschlossen, z.B. 21.3.2008), ist der Verfall am Handelstag davor.
+            if d == easter_sunday(year) - datetime.timedelta(days=2):
+                d -= datetime.timedelta(days=1)
             if d >= OPEX_START:
                 event_days.add(d)
     return [(d, 1 if d in event_days else 0) for d in daterange(OPEX_START, end)]
@@ -110,14 +141,17 @@ def fomc_calendar_dates():
         year = int(pieces[i])
         block = pieces[i + 1]
         for month_name, daytext in FOMC_CAL_PAT.findall(block):
-            month = FOMC_MONTHS.get(month_name)
-            if not month:
-                continue
+            if FOMC_EXCLUDE_NOTE.search(daytext):
+                continue  # z.B. "22 (notation vote)" im August 2025: keine Sitzung
             m = re.match(r"(\d{1,2})(?:-(\d{1,2}))?", daytext.strip())
             if not m:
                 continue
             d1, d2 = m.group(1), m.group(2)
             day = int(d2) if d2 else int(d1)
+            # "Jan/Feb" mit "31-1": der letzte Sitzungstag liegt im zweiten Monat
+            month = FOMC_MONTHS.get(month_name.split("/")[-1])
+            if not month:
+                continue
             out.append(datetime.date(year, month, day))
     return out
 
@@ -127,7 +161,7 @@ def fomc_decision_days(end):
     for year in range(FOMC_START.year, FOMC_HISTORICAL_LAST_YEAR + 1):
         days.update(fomc_historical_dates(year))
     days.update(fomc_calendar_dates())
-    days = {d for d in days if FOMC_START <= d <= end}
+    days = {d for d in days if FOMC_START <= d <= end and d not in FOMC_KEIN_ENTSCHEID}
     if not days:
         raise SystemExit("keine FOMC-Termine gefunden")
     return days
