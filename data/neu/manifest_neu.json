@@ -1,8 +1,8 @@
 {
-  "erzeugt_utc": "2026-10-01T20:28:07Z",
+  "erzeugt_utc": "2026-10-02T00:49:11Z",
   "reihen": {
     "bitcoin_onchain:gebuehren": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Summe der Transaktionsgebuehren im Bitcoin-Netzwerk pro Tag, in BTC",
       "datei": "data/neu/bitcoin_onchain/gebuehren.csv.gz",
       "einheit": "BTC",
@@ -18,7 +18,7 @@
       "zeilen": 6463
     },
     "bitcoin_onchain:hashrate": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Geschaetzte Bitcoin-Netzwerk-Hashrate (Terahashes pro Sekunde), aus Blockzeit und Difficulty berechnet",
       "datei": "data/neu/bitcoin_onchain/hashrate.csv.gz",
       "einheit": "TH/s",
@@ -34,7 +34,7 @@
       "zeilen": 6477
     },
     "bitcoin_onchain:transaktionen": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Bestaetigte Bitcoin-Transaktionen pro Tag",
       "datei": "data/neu/bitcoin_onchain/transaktionen.csv.gz",
       "einheit": "Anzahl",
@@ -50,7 +50,7 @@
       "zeilen": 6463
     },
     "boe_bankrate_aenderungstage:aenderungstage": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 an dem Handelstag, an dem sich die von der Bank of England gesetzte Bank Rate (Serie IUDBEDR) gegenueber dem vorherigen veroeffentlichten Wert aendert, sonst 0. Reihe enthaelt nur Handelstage (keine Wochenenden/Feiertage), wie von der Quelle geliefert.",
       "datei": "data/neu/boe_bankrate_aenderungstage/aenderungstage.csv.gz",
       "einheit": "Indikator (0/1)",
@@ -66,7 +66,7 @@
       "zeilen": 13081
     },
     "boe_sonia:sonia": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "SONIA (Sterling Overnight Index Average), von der Bank of England administrierter GBP-Tagesgeldsatz, IADB-Serie IUDSOIA",
       "datei": "data/neu/boe_sonia/sonia.csv.gz",
       "einheit": "Prozent",
@@ -82,57 +82,57 @@
       "zeilen": 7515
     },
     "boj_call_rate:call_rate": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Bank of Japan, Uncollateralized Overnight Call Rate (Mutan-Satz), Tagesdurchschnitt, ueber die BOJ Time-Series Data Search API (DB FM01, Series STRDCLUCON).",
       "datei": "data/neu/boj_call_rate/call_rate.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1998-01-05",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Bank of Japan veroeffentlicht Tagesgeldsatz am naechsten Geschaeftstag)",
       "quelle_url": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=csv&lang=en&db=FM01&code=STRDCLUCON",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits Tageswert lt. Quelle)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 7043
+      "zeilen": 7044
     },
     "brasilien_selic_entscheide:aenderungstage": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am ersten Tag, an dem ein geaenderter Selic-Zielsatz (BCB SGS 432) gilt, sonst 0. Kalendertaeglich. Copom gibt den Entscheid am Abend des Vortags (Sitzungstag) bekannt.",
       "datei": "data/neu/brasilien_selic_entscheide/aenderungstage.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1999-03-05",
       "fehler": "fehler: TimeoutError: The read operation timed out",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Copom-Entscheid am Vorabend des Wirksamkeitstags oeffentlich; Quelle: BCB Copom-Kommunikation)",
       "quelle_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (Aenderungsindikator aus Tagesreihe abgeleitet)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 10073
+      "zeilen": 10074
     },
     "brasilien_selic_entscheide:ziel": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Selic-Zielsatz (Meta Selic), BCB SGS 432, Wirksamkeitsdatum",
       "datei": "data/neu/brasilien_selic_entscheide/ziel.csv.gz",
       "einheit": "% p.a.",
       "erste": "1999-03-05",
       "fehler": "fehler: TimeoutError: The read operation timed out",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Zielsatz mit Copom-Entscheid am Vortag bekannt)",
       "quelle_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 10073
+      "zeilen": 10074
     },
     "bundesbank_umlauf:bund10y": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Rendite der aktuellen zehnjaehrigen Bundesanleihe (Daily yield of current 10-year federal bond)",
       "datei": "data/neu/bundesbank_umlauf/bund10y.csv.gz",
       "einheit": "Prozent",
@@ -148,7 +148,7 @@
       "zeilen": 6350
     },
     "bundesbank_umlauf:bund2y": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Rendite der aktuellen zweijaehrigen Bundesschatzanweisung (Daily yield of current two-year Federal Treasury notes)",
       "datei": "data/neu/bundesbank_umlauf/bund2y.csv.gz",
       "einheit": "Prozent",
@@ -164,7 +164,7 @@
       "zeilen": 3233
     },
     "cboe_skew:skew": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Cboe SKEW Index, taeglicher Schlusswert",
       "datei": "data/neu/cboe_skew/skew.csv.gz",
       "einheit": "Indexpunkte",
@@ -180,55 +180,55 @@
       "zeilen": 9238
     },
     "cboe_vix3m:vix3m": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Cboe VIX3M Index (implizite 3-Monats-Volatilitaet des S&P 500), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vix3m/vix3m.csv.gz",
       "einheit": "Indexpunkte",
       "erste": "2009-09-18",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Cboe veroeffentlicht Indexschlusswerte am selben Handelstagabend)",
       "quelle_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX3M_History.csv",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich); Schlusswert (CLOSE-Spalte) aus taeglicher OHLC-Datei",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 4284
+      "zeilen": 4285
     },
     "cboe_vix9d:vix9d": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Cboe VIX9D Index (implizite 9-Tage-Volatilitaet des S&P 500), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vix9d/vix9d.csv.gz",
       "einheit": "Indexpunkte",
       "erste": "2011-01-04",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Cboe veroeffentlicht Indexschlusswerte am selben Handelstagabend)",
       "quelle_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX9D_History.csv",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich); Schlusswert (CLOSE-Spalte) aus taeglicher OHLC-Datei",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 3958
+      "zeilen": 3959
     },
     "cboe_vvix:vvix": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Cboe VVIX Index (Volatilitaet der Volatilitaet, aus VIX-Optionen), taeglicher Schlusswert",
       "datei": "data/neu/cboe_vvix/vvix.csv.gz",
       "einheit": "Indexpunkte",
       "erste": "2006-03-06",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Cboe veroeffentlicht Indexschlusswerte am selben Handelstagabend)",
       "quelle_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 5115
+      "zeilen": 5116
     },
     "clinicaltrials_ergebnisse:ergebnisse_industrie": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Studien mit Industrie-Sponsor (leadSponsor.class INDUSTRY), alle Phasen, deren Ergebnisse an diesem Tag erstmals auf ClinicalTrials.gov veroeffentlicht wurden",
       "datei": "data/neu/clinicaltrials_ergebnisse/ergebnisse_industrie.csv.gz",
       "einheit": "Anzahl Studien",
@@ -244,7 +244,7 @@
       "zeilen": 6580
     },
     "clinicaltrials_ergebnisse:ergebnisse_phase3": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Studien mit Phase 3 (inkl. Phase 2/3), deren Ergebnisse an diesem Tag erstmals auf ClinicalTrials.gov veroeffentlicht wurden (ResultsFirstPostDate); alle Sponsoren",
       "datei": "data/neu/clinicaltrials_ergebnisse/ergebnisse_phase3.csv.gz",
       "einheit": "Anzahl Studien",
@@ -260,23 +260,23 @@
       "zeilen": 6580
     },
     "cpsc_ruckrufe:ruckrufe": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl von Produktrueckrufen der US-Verbraucherschutzbehoerde CPSC (Consumer Product Safety Commission, SaferProducts.gov RestWebService), Datum = RecallDate (Tag der oeffentlichen Bekanntgabe), 0 an Tagen ohne Ruckruf. Umfasst alle Produktkategorien (u.a. Spielzeug, Haushaltsgeraete, Sportartikel, Kinderausstattung) -- Mechanismus zyklischer/nichtzyklischer Konsum (XLY, XLP) und Produkthaftungsrisiko.",
       "datei": "data/neu/cpsc_ruckrufe/ruckrufe.csv.gz",
       "einheit": "Anzahl Ruckrufe",
       "erste": "1973-06-08",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich: CPSC veroeffentlicht Ruckrufe am Tag der Bekanntgabe auf cpsc.gov/Recalls, das RecallDate der API entspricht diesem Tag (beobachtet: juengste Eintraege im Abruf lagen wenige Tage zurueck)",
       "quelle_url": "https://www.saferproducts.gov/RestWebServices/Recall",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "Anzahl Ruckrufe je Kalendertag (RecallDate)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 19474
+      "zeilen": 19475
     },
     "ecb_fx:eurchf": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "EZB Referenzkurs CHF/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurchf.csv.gz",
       "einheit": "CHF je EUR",
@@ -292,7 +292,7 @@
       "zeilen": 7105
     },
     "ecb_fx:eurcny": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "EZB Referenzkurs CNY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurcny.csv.gz",
       "einheit": "CNY je EUR",
@@ -308,7 +308,7 @@
       "zeilen": 6838
     },
     "ecb_fx:eurjpy": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "EZB Referenzkurs JPY/EUR, 14:15 MEZ",
       "datei": "data/neu/ecb_fx/eurjpy.csv.gz",
       "einheit": "JPY je EUR",
@@ -324,39 +324,39 @@
       "zeilen": 7105
     },
     "eu_boersenfeiertage:geschlossen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 an jedem Kalendertag (Mo-Fr), an dem Xetra/Frankfurter Wertpapierboerse wegen eines der acht Boersenfeiertage (Neujahr, Karfreitag, Ostermontag, 1. Mai, Heiligabend, 1./2. Weihnachtsfeiertag, Silvester) geschlossen war, sonst 0 (auch an Wochenenden 0). Christi Himmelfahrt, Pfingstmontag und Tag der Deutschen Einheit sind laut Quelle KEINE Boersenfeiertage und daher nicht enthalten. Keine Wochenend-Nachholregel: faellt ein Feiertag auf ein Wochenende, entfaellt er ersatzlos.",
       "datei": "data/neu/eu_boersenfeiertage/geschlossen.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1997-11-28",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Feiertagsdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "https://www.cashmarket.deutsche-boerse.com/cash-en/trading/trading-calendar-and-trading-hours",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische, aus dem amtlichen Deutsche-Boerse-Handelskalender abgeleitete Kalenderreihe, kein externer taeglicher Datenabruf)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 10535
+      "zeilen": 10536
     },
     "eu_safetygate_ruckrufe:meldungen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl gefaehrlicher Nicht-Lebensmittel-Produkte, die im EU-Schnellwarnsystem Safety Gate (vormals RAPEX) gemeldet wurden. Safety Gate veroeffentlicht wochentlich (freitags) einen Sammelbericht mit allen Meldungen der Woche; die Anzahl Meldungen je Bericht wird auf den Publikationstag (Freitag) gebucht, alle uebrigen Wochentage sind echte Nullwerte (keine Schaetzung, an diesen Tagen erscheint kein Bericht). Ab 2015-12-31 (K2); die volle Historie beginnt 2005, wurde aber wegen K7 (3 Minuten je Abruf) nicht vollstaendig geholt. Mechanismus wie CPSC-Ruckrufe (cpsc_ruckrufe), aber unabhaengige EU-Behoerde/-Jurisdiktion: Sicherheits-/Qualitaetsprobleme betroffener Hersteller/Haendler koennen kurzfristig (1 bis 20 Handelstage) Vertrauen und Umsatz im Konsumsektor (XLY, XLP) gegenueber dem Weltindex belasten. Jeder Wochenbericht traegt ein Feld report_addendum fuer nachtraegliche Ergaenzungen zur selben Woche; in Stichproben (u.a. der aelteste und der juengste Bericht) war es leer, eine kuenftige Revision ist aber nicht ausgeschlossen.",
       "datei": "data/neu/eu_safetygate_ruckrufe/meldungen.csv.gz",
       "einheit": "Anzahl Meldungen",
       "erste": "2016-01-08",
-      "letzte": "2026-09-25",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1.0,
       "publikation": "woechentlich: Safety Gate veroeffentlicht jeden Freitag einen Sammelbericht (Feld publicationDate der weeklyReport-Liste); einzelne Meldungen tragen kein eigenes Tagesdatum innerhalb der Woche",
       "quelle_url": "https://ec.europa.eu/safety-gate-alerts/api/download/weeklyReport/list/xml/en",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "Summe der Meldungen (Anzahl <order>-Eintraege) je Wochenbericht, gebucht auf publicationDate (Freitag); uebrige Wochentage = 0",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 3914
+      "zeilen": 3921
     },
     "fda_ruckrufe:arzneimittel": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl von FDA-Arzneimittelrueckrufen (recall_initiation_date), Gesundheitssektor",
       "datei": "data/neu/fda_ruckrufe/arzneimittel.csv.gz",
       "einheit": "Anzahl Rueckrufe",
@@ -372,7 +372,7 @@
       "zeilen": 7517
     },
     "fda_ruckrufe:lebensmittel": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl von FDA-Lebensmittelrueckrufen (recall_initiation_date), Basiskonsumsektor",
       "datei": "data/neu/fda_ruckrufe/lebensmittel.csv.gz",
       "einheit": "Anzahl Rueckrufe",
@@ -388,7 +388,7 @@
       "zeilen": 6789
     },
     "fda_ruckrufe:medizinprodukte": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl von FDA-Medizinprodukterueckrufen (recall_initiation_date), Gesundheitssektor",
       "datei": "data/neu/fda_ruckrufe/medizinprodukte.csv.gz",
       "einheit": "Anzahl Rueckrufe",
@@ -404,7 +404,7 @@
       "zeilen": 7755
     },
     "fda_zulassungen:zulassungen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl neu zugelassener Wirkstoffe und Biologika in den USA (FDA-Erstzulassungen, ORIG-Submissions mit Status AP, nur NDA/BLA, keine Generika-ANDA), Datum = FDA-Entscheiddatum (submission_status_date)",
       "datei": "data/neu/fda_zulassungen/zulassungen.csv.gz",
       "einheit": "Anzahl Zulassungen",
@@ -420,23 +420,23 @@
       "zeilen": 32010
     },
     "fdic_bankausfaelle:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl von US-Bankausfaellen (FDIC BankFind Suite, Failures and Assistance Transactions), Datum = FAILDATE (amtliches Schliessungs-/Uebernahmedatum der FDIC), 0 an Tagen ohne Ausfall",
       "datei": "data/neu/fdic_bankausfaelle/anzahl.csv.gz",
       "einheit": "Anzahl Bankausfaelle",
       "erste": "1934-04-19",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "verzoegert: die FDIC veroeffentlicht am Schliessungstag eine Pressemitteilung, der API-Datenbestand (api.fdic.gov/banks/failures) wird aber nur in unregelmaessigen Abstaenden aktualisiert (der Index-Zeitstempel der Antwort lag zuletzt mehrere Wochen zurueck); konservativ mit Verzoegerung angesetzt",
       "quelle_url": "https://banks.data.fdic.gov/bankfind-suite/failures",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "Anzahl Faelle je Kalendertag (FAILDATE)",
       "verfuegbar_nach_tagen": 30,
-      "zeilen": 33769
+      "zeilen": 33770
     },
     "fedregister_ams_agrarmarkt:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von agricultural-marketing-service, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_ams_agrarmarkt/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -452,7 +452,7 @@
       "zeilen": 11960
     },
     "fedregister_aufsicht:antitrust": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Regeln, Vorschlaege, Bekanntmachungen) der Antitrust Division (US-Justizministerium), 0 an Tagen ohne Veroeffentlichung.",
       "datei": "data/neu/fedregister_aufsicht/antitrust.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -468,7 +468,7 @@
       "zeilen": 11949
     },
     "fedregister_aufsicht:ftc": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Regeln, Vorschlaege, Bekanntmachungen) der Federal Trade Commission, 0 an Tagen ohne Veroeffentlichung.",
       "datei": "data/neu/fedregister_aufsicht/ftc.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -484,7 +484,7 @@
       "zeilen": 11962
     },
     "fedregister_aufsicht:sec": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Regeln, Vorschlaege, Bekanntmachungen) der Securities and Exchange Commission, 0 an Tagen ohne Veroeffentlichung.",
       "datei": "data/neu/fedregister_aufsicht/sec.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -500,7 +500,7 @@
       "zeilen": 11962
     },
     "fedregister_bankaufsicht:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Rules und Proposed Rules von OCC, Federal Reserve System und FDIC, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_bankaufsicht/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -516,7 +516,7 @@
       "zeilen": 11961
     },
     "fedregister_bis_exportkontrolle:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von industry-and-security-bureau, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_bis_exportkontrolle/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -532,7 +532,7 @@
       "zeilen": 11955
     },
     "fedregister_cbp_zoll:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE,NOTICE) von u-s-customs-and-border-protection, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_cbp_zoll/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -548,7 +548,7 @@
       "zeilen": 11962
     },
     "fedregister_cftc_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter CFTC-Dokumente der Typen Rule und Proposed Rule, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_cftc_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -564,7 +564,7 @@
       "zeilen": 11952
     },
     "fedregister_cms_medicare:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter CMS-Dokumente der Typen Rule, Proposed Rule und Notice, 0 an Tagen ohne Veroeffentlichung. Beginn 2001 (Vorgaenger HCFA vor 2001 nicht enthalten).",
       "datei": "data/neu/fedregister_cms_medicare/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -580,7 +580,7 @@
       "zeilen": 9405
     },
     "fedregister_dea_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter DEA-Dokumente der Typen Rule und Proposed Rule, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_dea_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -595,8 +595,24 @@
       "verfuegbar_nach_tagen": 0,
       "zeilen": 11962
     },
+    "fedregister_dod_verteidigung:anzahl": {
+      "abruf_utc": "2026-10-02T00:49:11Z",
+      "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE,NOTICE) von defense-department, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
+      "datei": "data/neu/fedregister_dod_verteidigung/anzahl.csv.gz",
+      "einheit": "Anzahl Dokumente",
+      "erste": "1994-01-01",
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
+      "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+      "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=defense-department",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "Anzahl Treffer je Kalendertag (Publikationsdatum)",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 11962
+    },
     "fedregister_doe_energie:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter DOE-Dokumente der Typen Rule, Proposed Rule und Notice, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_doe_energie/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -612,7 +628,7 @@
       "zeilen": 11962
     },
     "fedregister_doj_vergleiche:consent_decrees": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter DOJ-Notices mit Volltext-Treffer \"consent decree\" (Agentur justice-department, Dokumenttyp Notice; v.a. Notice of Lodging), 0 an Tagen ohne Veroeffentlichung. Datum = Veroeffentlichungsdatum im FR.",
       "datei": "data/neu/fedregister_doj_vergleiche/consent_decrees.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -627,8 +643,24 @@
       "verfuegbar_nach_tagen": 0,
       "zeilen": 11962
     },
+    "fedregister_dot_verkehr:anzahl": {
+      "abruf_utc": "2026-10-02T00:49:11Z",
+      "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE,NOTICE) von transportation-department, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
+      "datei": "data/neu/fedregister_dot_verkehr/anzahl.csv.gz",
+      "einheit": "Anzahl Dokumente",
+      "erste": "1994-01-01",
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
+      "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag; Dokument gilt an seinem gedruckten Publikationsdatum als oeffentlich)",
+      "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=transportation-department",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "Anzahl Treffer je Kalendertag (Publikationsdatum)",
+      "verfuegbar_nach_tagen": 0,
+      "zeilen": 11962
+    },
     "fedregister_epa_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter EPA-Dokumente der Typen Rule und Proposed Rule, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_epa_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -644,7 +676,7 @@
       "zeilen": 11962
     },
     "fedregister_faa_ad:anweisungen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter FAA-Rule-Dokumente 'Airworthiness Directives' (Volltextsuche, Agentur federal-aviation-administration, Dokumenttyp Rule), 0 an Tagen ohne Veroeffentlichung. Hinweis: Abdeckung des FR waechst ueber die Jahre (Struktur, nicht nur Ereignishaeufigkeit).",
       "datei": "data/neu/fedregister_faa_ad/anweisungen.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -660,7 +692,7 @@
       "zeilen": 10501
     },
     "fedregister_fcc_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter FCC-Dokumente der Typen Rule und Proposed Rule, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_fcc_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -676,7 +708,7 @@
       "zeilen": 11962
     },
     "fedregister_fda_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von food-and-drug-administration, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_fda_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -692,7 +724,7 @@
       "zeilen": 11961
     },
     "fedregister_ftc_fusionen:consent_agreements": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter FTC-Notices mit Volltext-Treffer \"consent agreement\" (Agentur federal-trade-commission, Dokumenttyp Notice), 0 an Tagen ohne Veroeffentlichung. Datum = Veroeffentlichungsdatum im FR.",
       "datei": "data/neu/fedregister_ftc_fusionen/consent_agreements.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -708,7 +740,7 @@
       "zeilen": 11953
     },
     "fedregister_fws_artenschutz:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von fish-and-wildlife-service, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_fws_artenschutz/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -724,7 +756,7 @@
       "zeilen": 11962
     },
     "fedregister_handelsschutz:verfuegungen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Anordnungen, vorlaeufige/endgueltige Feststellungen, Untersuchungs-eroeffnungen) der US-Handelsschutzbehoerden (International Trade Administration, International Trade Commission) mit Volltextsuche 'antidumping OR countervailing', 0 an Tagen ohne Veroeffentlichung.",
       "datei": "data/neu/fedregister_handelsschutz/verfuegungen.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -740,7 +772,7 @@
       "zeilen": 11962
     },
     "fedregister_hud_wohnen:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE,NOTICE) von housing-and-urban-development-department, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_hud_wohnen/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -756,7 +788,7 @@
       "zeilen": 11962
     },
     "fedregister_interior_energie:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (Rule, Proposed Rule, Notice) von BOEM/BOEMRE/BSEE/OSMRE, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_interior_energie/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -772,7 +804,7 @@
       "zeilen": 11953
     },
     "fedregister_irs_steuerregeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von internal-revenue-service, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_irs_steuerregeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -788,7 +820,7 @@
       "zeilen": 11961
     },
     "fedregister_nhtsa_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von national-highway-traffic-safety-administration, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_nhtsa_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -804,7 +836,7 @@
       "zeilen": 11961
     },
     "fedregister_nrc_kernenergie:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter NRC-Dokumente der Typen Rule, Proposed Rule und Notice, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_nrc_kernenergie/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -820,7 +852,7 @@
       "zeilen": 11962
     },
     "fedregister_ofac_sanktionen:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter OFAC-Dokumente (Rules und Notices, Volltextsuche designated OR blocked OR sanctions, Agentur foreign-assets-control-office), 0 an Tagen ohne Veroeffentlichung. Beginn 2010, davor sehr lueckenhaft.",
       "datei": "data/neu/fedregister_ofac_sanktionen/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -836,7 +868,7 @@
       "zeilen": 6117
     },
     "fedregister_phmsa_pipeline:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter PHMSA-Dokumente mit Stichwort pipeline (Rules und Notices, Agentur pipeline-and-hazardous-materials-safety-administration), 0 an Tagen ohne Veroeffentlichung. Beginn 2005 (PHMSA im FR erst seit 2005).",
       "datei": "data/neu/fedregister_phmsa_pipeline/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -852,7 +884,7 @@
       "zeilen": 7941
     },
     "fedregister_sec_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von securities-and-exchange-commission, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_sec_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -868,7 +900,7 @@
       "zeilen": 11952
     },
     "fedregister_uscg_schifffahrt:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von coast-guard, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_uscg_schifffahrt/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -884,7 +916,7 @@
       "zeilen": 11962
     },
     "fedregister_usda_regeln:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente (RULE,PRORULE) von agriculture-department, 0 an Tagen ohne Veroeffentlichung. Beginn 1994.",
       "datei": "data/neu/fedregister_usda_regeln/anzahl.csv.gz",
       "einheit": "Anzahl Dokumente",
@@ -900,7 +932,7 @@
       "zeilen": 11962
     },
     "fema_katastrophenerklaerungen:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Neue FEMA-Katastrophenerklaerungen (Major Disaster, Emergency, Fire Management) je Erklaerungstag, ab 1953-05-02.",
       "datei": "data/neu/fema_katastrophenerklaerungen/anzahl.csv.gz",
       "einheit": "Anzahl Erklaerungen",
@@ -916,7 +948,7 @@
       "zeilen": 26810
     },
     "fema_katastrophenerklaerungen:anzahl_stuerme": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Davon Erklaerungen mit incidentType Hurricane, Tropical Storm, Typhoon, Coastal Storm, Severe Storm, Tornado oder Flood.",
       "datei": "data/neu/fema_katastrophenerklaerungen/anzahl_stuerme.csv.gz",
       "einheit": "Anzahl Erklaerungen",
@@ -932,7 +964,7 @@
       "zeilen": 26810
     },
     "fred_brent:brent": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Brent Crude Oil - Europe (DCOILBRENTEU), taeglicher Spotpreis; internationaler Rohoel-Referenzpreis unabhaengig vom bereits vorhandenen WTI (USO/DCOILWTICO)",
       "datei": "data/neu/fred_brent/brent.csv.gz",
       "einheit": "USD je Barrel",
@@ -948,7 +980,7 @@
       "zeilen": 9097
     },
     "fred_credit_spread:aaa": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Moody's Seasoned Aaa Corporate Bond Yield, taeglich",
       "datei": "data/neu/fred_credit_spread/aaa.csv.gz",
       "einheit": "Prozent p.a.",
@@ -964,7 +996,7 @@
       "zeilen": 10982
     },
     "fred_credit_spread:baa": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Moody's Seasoned Baa Corporate Bond Yield, taeglich",
       "datei": "data/neu/fred_credit_spread/baa.csv.gz",
       "einheit": "Prozent p.a.",
@@ -980,39 +1012,39 @@
       "zeilen": 10223
     },
     "fred_dtb3:dtb3": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "3-Monats-US-Schatzwechsel, Sekundaermarkt-Diskontsatz (Federal Reserve H.15, Serie DTB3), taeglich an US-Bankarbeitstagen. Deckt im Unterschied zur CMT-Reihe (treasury_yield_curve:kurz, ab ca. 1990) auch die Zeit vor 1990 ab.",
       "datei": "data/neu/fred_dtb3/dtb3.csv.gz",
       "einheit": "Prozent p.a. (Diskontbasis)",
       "erste": "1954-01-04",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Fed H.15 Release, taeglich am naechsten Geschaeftstag)",
       "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 18177
+      "zeilen": 18178
     },
     "fred_effr:effr": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Effective Federal Funds Rate (DFF), volumengewichteter Median-Tagessatz der Fed-Funds-Transaktionen zwischen US-Banken (taeglich inkl. Wochenenden/Feiertage als Fortschreibung des letzten Handelstags durch die Fed)",
       "datei": "data/neu/fred_effr/effr.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1954-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Fed H.15/EFFR Release, taeglich am naechsten Geschaeftstag)",
       "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 26389
+      "zeilen": 26390
     },
     "fred_equity_uncertainty:index": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Equity Market-related Economic Uncertainty Index (WLEMUINDXD, Baker/Bloom/Davis), taeglicher text-basierter Index aus Zeitungsartikeln mit Bezug auf Aktienmarkt-Unsicherheit; unterscheidet sich von der bereits vorhandenen allgemeinen Wirtschaftspolitik-Unsicherheit (USEPUINDXD)",
       "datei": "data/neu/fred_equity_uncertainty/index.csv.gz",
       "einheit": "Index",
@@ -1028,7 +1060,7 @@
       "zeilen": 15248
     },
     "fred_fx_lang:audusd": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "USD/AUD-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXUSAL).",
       "datei": "data/neu/fred_fx_lang/audusd.csv.gz",
       "einheit": "USD je AUD",
@@ -1044,7 +1076,7 @@
       "zeilen": 13969
     },
     "fred_fx_lang:gbpusd": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "USD/GBP-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXUSUK).",
       "datei": "data/neu/fred_fx_lang/gbpusd.csv.gz",
       "einheit": "USD je GBP",
@@ -1060,7 +1092,7 @@
       "zeilen": 13976
     },
     "fred_fx_lang:usdcad": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "USD/CAD-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXCAUS).",
       "datei": "data/neu/fred_fx_lang/usdcad.csv.gz",
       "einheit": "CAD je USD",
@@ -1076,7 +1108,7 @@
       "zeilen": 13982
     },
     "fred_implied_vol:em": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "CBOE Emerging Markets ETF Volatility Index (VXEEM), implizite Volatilitaet aus EEM-Optionen",
       "datei": "data/neu/fred_implied_vol/em.csv.gz",
       "einheit": "Index (annualisierte implizite Volatilitaet in %)",
@@ -1092,7 +1124,7 @@
       "zeilen": 3909
     },
     "fred_implied_vol:gold": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "CBOE Gold ETF Volatility Index (GVZ), implizite Volatilitaet aus GLD-Optionen",
       "datei": "data/neu/fred_implied_vol/gold.csv.gz",
       "einheit": "Index (annualisierte implizite Volatilitaet in %)",
@@ -1108,7 +1140,7 @@
       "zeilen": 4613
     },
     "fred_implied_vol:oel": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "CBOE Crude Oil ETF Volatility Index (OVX), implizite Volatilitaet aus USO-Optionen",
       "datei": "data/neu/fred_implied_vol/oel.csv.gz",
       "einheit": "Index (annualisierte implizite Volatilitaet in %)",
@@ -1124,7 +1156,7 @@
       "zeilen": 4881
     },
     "fred_propane:propan": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Propane spot price Mont Belvieu, TX (DPROPANEMBTX), taeglicher Spotpreis; petrochemisches Feedstock- und Heizenergie-Referenzpreis, unabhaengig von WTI/Brent/Henry Hub",
       "datei": "data/neu/fred_propane/propan.csv.gz",
       "einheit": "USD je Gallone",
@@ -1140,39 +1172,39 @@
       "zeilen": 8121
     },
     "fred_treasury_lang:dgs2": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "US-Treasury Konstantlaufzeitrendite, 2 Jahre (CMT, taeglicher Schlusswert, Fed H.15)",
       "datei": "data/neu/fred_treasury_lang/dgs2.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1976-06-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Fed H.15 Release, taeglicher Schlusswert, gleichentags/naechster Geschaeftstag gespiegelt, geprueft 27.9.2026)",
       "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglicher Marktschlusswert, Handelstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 12579
+      "zeilen": 12580
     },
     "fred_treasury_lang:dgs3mo": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "US-Treasury Konstantlaufzeitrendite, 3 Monate (CMT, taeglicher Schlusswert, Fed H.15)",
       "datei": "data/neu/fred_treasury_lang/dgs3mo.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1981-09-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Fed H.15 Release, taeglicher Schlusswert, gleichentags/naechster Geschaeftstag gespiegelt, geprueft 27.9.2026)",
       "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglicher Marktschlusswert, Handelstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 11269
+      "zeilen": 11270
     },
     "fred_usdjpy:usdjpy": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "USD/JPY-Wechselkurs (Federal Reserve H.10, Noon Buying Rate/Referenzkurs), taeglich an US-Bankarbeitstagen (Serie DEXJPUS)",
       "datei": "data/neu/fred_usdjpy/usdjpy.csv.gz",
       "einheit": "JPY je USD",
@@ -1188,71 +1220,71 @@
       "zeilen": 13970
     },
     "japan_tankan_veroeffentlichung:tankan_veroeffentlichung": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am Veroeffentlichungstag des vierteljaehrlichen BoJ-Tankan-Berichts (Kurzbericht zur Wirtschaftslage, seit 1957 erhoben), sonst 0, fuer jeden Kalendertag ab 2004-04-01 bis heute. Termine stammen aus den amtlichen Archivseiten (Spalte 'Date', tatsaechliches Publikationsdatum, nicht der im Dateinamen kodierte Erhebungsmonat). Der Archivordner '2001' enthaelt trotz seiner Bezeichnung 'from 2001 to 2005' nur Eintraege ab 2004-04-01; eine durchsuchbare Terminliste fuer 2001-2003 oder frueher (Bericht existiert seit 1957) wurde nicht gefunden, daher keine laengere Historie belegt (Zusatz 5, keine Termine erfinden).",
       "datei": "data/neu/japan_tankan_veroeffentlichung/tankan_veroeffentlichung.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "2004-04-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Veroeffentlichungsdatum wird von der BoJ im Voraus rollierend bekanntgegeben, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "https://www.boj.or.jp/en/statistics/tk/gaiyo/index.htm",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische Kalenderreihe aus amtlichem Veroeffentlichungsarchiv)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 8219
+      "zeilen": 8220
     },
     "kalender_ereignisse:fomc_sitzung": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "1 am letzten Tag einer planmaessigen FOMC-Sitzung mit im Voraus oeffentlich bekanntem Termin, sonst 0, fuer jeden Kalendertag ab 1936-01-01 (erstes Jahr mit von der Fed veroeffentlichten historischen Sitzungsunterlagen unter fomchistorical<JAHR>.htm) bis heute. Zusatz 5 (25.9.2026): als 'Conference Call', 'unscheduled' oder 'cancelled' annotierte Telefonkonferenzen/Notfall-/Ad-hoc-Sitzungen sind ausgeschlossen, da deren Termin nicht im Voraus bekannt war.",
       "datei": "data/neu/kalender_ereignisse/fomc_sitzung.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1936-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical<JAHR>.htm (1936-2020) und https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (ab 2021)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (aus amtlichen FOMC-Sitzungskalendern der Fed abgeleitet)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 33147
+      "zeilen": 33148
     },
     "kalender_ereignisse:opex_verfall": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "1 am dritten Freitag der Quartalsmonate Maerz/Juni/September/Dezember (grosser Verfall / Quadruple Witching, zugleich seit ca. 2005 Stichtag der S&P-Quartalsneugewichtung), sonst 0, fuer jeden Kalendertag ab 1973-04-27 (Tag nach Beginn des boersengehandelten Optionshandels an der CBOE, 26.4.1973; erster erfasster Verfalltag damit Juni 1973, siehe Zusatz 4 25.9.2026 E11).",
       "datei": "data/neu/kalender_ereignisse/opex_verfall.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1973-04-27",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "https://www.cboe.com/optionsexpirationcalendar/ (Marktkonvention: dritter Freitag der Quartalsmonate) und https://www.cboe.com/about/history/ (Handelsbeginn 26.4.1973)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 19516
+      "zeilen": 19517
     },
     "kalender_ereignisse:ustax": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "1 an US-Steuerterminen (15.1., 15.4., 15.6., 15.9., 15.12., feste Kalenderdaten ohne Wochenend-/Feiertagsverschiebung), sonst 0, fuer jeden Kalendertag ab 2001-01-01.",
       "datei": "data/neu/kalender_ereignisse/ustax.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "2001-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ereignisdatum im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "https://www.irs.gov/filing/tax-day-when-are-taxes-due (feste, oeffentlich bekannte Kalendertermine)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 9405
+      "zeilen": 9406
     },
     "leitzins_aenderungstage:ezb": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am Tag, an dem sich der EZB-Einlagensatz (ECBDFR) gegenueber dem Vortag aendert, sonst 0. Erfasst nur tatsaechliche Satzaenderungen, nicht jede EZB-Ratssitzung mit Halte-Entscheid.",
       "datei": "data/neu/leitzins_aenderungstage/ezb.csv.gz",
       "einheit": "Indikator (0/1)",
@@ -1268,7 +1300,7 @@
       "zeilen": 10136
     },
     "leitzins_aenderungstage:fomc": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am Tag, an dem sich das von der Fed gesetzte Leitzins-Zielband gegenueber dem Vortag aendert (abgeleitet aus den taeglichen FRED-Reihen DFEDTAR bis 2008-12-15, danach DFEDTARU), sonst 0. Erfasst nur tatsaechliche Zielsatzaenderungen, nicht jede FOMC-Sitzung mit Halte-Entscheid. Beginnt erst am 1994-02-04 (Zusatz 5): davor wurden Zielsatzaenderungen nicht am Entscheidtag bekanntgegeben.",
       "datei": "data/neu/leitzins_aenderungstage/fomc.csv.gz",
       "einheit": "Indikator (0/1)",
@@ -1284,12 +1316,28 @@
       "zeilen": 11928
     },
     "mof_jgb_zinsen:kurz": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), kurzes Ende der Zinskurve, Laufzeit 1 Jahr (keine kuerzere Laufzeit oeffentlich verfuegbar; Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/kurz.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
+      "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
+      "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+      "revidiert": false,
+      "status": "aktiv",
+      "verdichtung": "keine (bereits taeglicher Einzelwert)",
+      "verfuegbar_nach_tagen": 1,
+      "zeilen": 12662
+    },
+    "mof_jgb_zinsen:niveau": {
+      "abruf_utc": "2026-10-02T00:49:10Z",
+      "beschreibung": "Japanische Staatsanleihen (JGB), Zinsniveau 10 Jahre, taeglicher Referenzsatz (Ministry of Finance Japan)",
+      "datei": "data/neu/mof_jgb_zinsen/niveau.csv.gz",
+      "einheit": "Prozent p.a.",
+      "erste": "1986-07-05",
+      "letzte": "2026-10-01",
       "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
@@ -1297,191 +1345,159 @@
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 12661
-    },
-    "mof_jgb_zinsen:niveau": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
-      "beschreibung": "Japanische Staatsanleihen (JGB), Zinsniveau 10 Jahre, taeglicher Referenzsatz (Ministry of Finance Japan)",
-      "datei": "data/neu/mof_jgb_zinsen/niveau.csv.gz",
-      "einheit": "Prozent p.a.",
-      "erste": "1986-07-05",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
-      "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
-      "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
-      "revidiert": false,
-      "status": "aktiv",
-      "verdichtung": "keine (bereits taeglicher Einzelwert)",
-      "verfuegbar_nach_tagen": 1,
-      "zeilen": 9948
+      "zeilen": 9949
     },
     "mof_jgb_zinsen:steilheit": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Zinskurve Steilheit 10J minus 2J (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/steilheit.csv.gz",
       "einheit": "Prozentpunkte",
       "erste": "1986-07-05",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (Differenz zweier taeglicher Einzelwerte)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 9948
+      "zeilen": 9949
     },
     "mof_jgb_zinsen:y1": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 1Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y1.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 12661
+      "zeilen": 12662
     },
     "mof_jgb_zinsen:y10": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 10Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y10.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1986-07-05",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 9948
+      "zeilen": 9949
     },
     "mof_jgb_zinsen:y15": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 15Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y15.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1991-08-30",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 8607
+      "zeilen": 8608
     },
     "mof_jgb_zinsen:y2": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 2Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y2.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 12948
+      "zeilen": 12949
     },
     "mof_jgb_zinsen:y20": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 20Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y20.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1986-12-01",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 9835
+      "zeilen": 9836
     },
     "mof_jgb_zinsen:y25": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 25Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y25.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "2004-03-22",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 5514
+      "zeilen": 5515
     },
     "mof_jgb_zinsen:y3": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 3Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y3.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 13233
+      "zeilen": 13234
     },
     "mof_jgb_zinsen:y30": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 30Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y30.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1999-09-02",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 6632
+      "zeilen": 6633
     },
     "mof_jgb_zinsen:y4": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 4Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y4.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
-      "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
-      "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
-      "revidiert": false,
-      "status": "ruhend",
-      "verdichtung": "keine (bereits taeglicher Einzelwert)",
-      "verfuegbar_nach_tagen": 1,
-      "zeilen": 13309
-    },
-    "mof_jgb_zinsen:y40": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
-      "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 40Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
-      "datei": "data/neu/mof_jgb_zinsen/y40.csv.gz",
-      "einheit": "Prozent p.a.",
-      "erste": "2007-11-06",
-      "letzte": "2026-09-30",
+      "letzte": "2026-10-01",
       "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
@@ -1489,90 +1505,106 @@
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 4620
+      "zeilen": 13310
+    },
+    "mof_jgb_zinsen:y40": {
+      "abruf_utc": "2026-10-02T00:49:11Z",
+      "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 40Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
+      "datei": "data/neu/mof_jgb_zinsen/y40.csv.gz",
+      "einheit": "Prozent p.a.",
+      "erste": "2007-11-06",
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1.0,
+      "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
+      "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
+      "revidiert": false,
+      "status": "ruhend",
+      "verdichtung": "keine (bereits taeglicher Einzelwert)",
+      "verfuegbar_nach_tagen": 1,
+      "zeilen": 4621
     },
     "mof_jgb_zinsen:y5": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 5Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y5.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 13309
+      "zeilen": 13310
     },
     "mof_jgb_zinsen:y6": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 6Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y6.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 13309
+      "zeilen": 13310
     },
     "mof_jgb_zinsen:y7": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 7Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y7.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 13309
+      "zeilen": 13310
     },
     "mof_jgb_zinsen:y8": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 8Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y8.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 13309
+      "zeilen": 13310
     },
     "mof_jgb_zinsen:y9": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Japanische Staatsanleihen (JGB), Par-Zinsstrukturkurve Laufzeit 9Y, taeglicher Referenzsatz (Ministry of Finance Japan)",
       "datei": "data/neu/mof_jgb_zinsen/y9.csv.gz",
       "einheit": "Prozent p.a.",
       "erste": "1974-09-24",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ministry of Finance Japan veroeffentlicht Referenzsaetze am selben Geschaeftstag)",
       "quelle_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv",
       "revidiert": false,
       "status": "ruhend",
       "verdichtung": "keine (bereits taeglicher Einzelwert)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 13309
+      "zeilen": 13310
     },
     "msha_bergbauunfaelle:fatal": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl toedlicher MSHA-Bergbauunfaelle (DEGREE_INJURY enthaelt 'FATAL'), Teilmenge von gesamt; Datum = ACCIDENT_DT",
       "datei": "data/neu/msha_bergbauunfaelle/fatal.csv.gz",
       "einheit": "Anzahl toedliche Unfaelle",
@@ -1588,7 +1620,7 @@
       "zeilen": 9762
     },
     "msha_bergbauunfaelle:gesamt": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl bei der US-Bergbauaufsicht MSHA gemeldeter Unfaelle/Verletzungen in US-Bergwerken und -Aufbereitungsanlagen (Form 7000-1, Accident Injuries Data Set), Datum = ACCIDENT_DT (Unfalltag), 0 an Tagen ohne Meldung",
       "datei": "data/neu/msha_bergbauunfaelle/gesamt.csv.gz",
       "einheit": "Anzahl Unfaelle",
@@ -1604,39 +1636,39 @@
       "zeilen": 9762
     },
     "nhtsa_ruckrufe:anzahl": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl neuer NHTSA-Fahrzeug-/Ausruestungsrueckrufkampagnen (Office of Defects Investigation, Flat File RCL), je Kampagnennummer (CAMPNO) einmal gezaehlt, Datum = RCDATE (Eingang des Part-573-Defekt-/Non-Compliance-Berichts bei der NHTSA), 0 an Tagen ohne neue Kampagne. Mechanismus: gehaeufte Sicherheitsrueckrufe grosser Autohersteller koennen kurzfristig auf Qualitaets-/Kostenprobleme im Automobilsektor hindeuten (naeherungsweise XLY/XLI).",
       "datei": "data/neu/nhtsa_ruckrufe/anzahl.csv.gz",
       "einheit": "Anzahl Rueckrufkampagnen",
       "erste": "1966-01-19",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich: RCDATE (Eingang des Part-573-Defektberichts bei der NHTSA) gegen DATEA (Erstellungsdatum des oeffentlichen Datensatzes) auf einer Stichprobe von rd. 15000 Kampagnen (POST_2010) verglichen: Median 1 Tag, 84% innerhalb 3 Tagen; verfuegbar_nach_tagen konservativ auf 3 gesetzt",
       "quelle_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "Anzahl Kampagnen je Kalendertag (RCDATE), CAMPNO-dedupliziert",
       "verfuegbar_nach_tagen": 3,
-      "zeilen": 22171
+      "zeilen": 22172
     },
     "nhtsa_ruckrufe:einheiten_betroffen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Tagessumme der von NHTSA-Rueckrufkampagnen potenziell betroffenen Einheiten (Feld POTAFF), je Kampagnennummer einmal gezaehlt, Datum = RCDATE. 0 an Tagen ohne neue Kampagne.",
       "datei": "data/neu/nhtsa_ruckrufe/einheiten_betroffen.csv.gz",
       "einheit": "Anzahl potenziell betroffener Einheiten",
       "erste": "1966-01-19",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich: RCDATE (Eingang des Part-573-Defektberichts bei der NHTSA) gegen DATEA (Erstellungsdatum des oeffentlichen Datensatzes) auf einer Stichprobe von rd. 15000 Kampagnen (POST_2010) verglichen: Median 1 Tag, 84% innerhalb 3 Tagen; verfuegbar_nach_tagen konservativ auf 3 gesetzt",
       "quelle_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "Summe POTAFF je Kalendertag (RCDATE), CAMPNO-dedupliziert",
       "verfuegbar_nach_tagen": 3,
-      "zeilen": 22171
+      "zeilen": 22172
     },
     "ntsb_luftfahrtunfaelle:fatal": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl von der NTSB untersuchten Luftfahrt-Unfaellen mit mindestens einem Todesopfer (HighestInjuryLevel=Fatal), Teilmenge von gesamt; Datum = EventDate",
       "datei": "data/neu/ntsb_luftfahrtunfaelle/fatal.csv.gz",
       "einheit": "Anzahl Faelle",
@@ -1652,7 +1684,7 @@
       "zeilen": 7943
     },
     "ntsb_luftfahrtunfaelle:gesamt": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Taegliche Anzahl von der NTSB untersuchten Luftfahrt-Unfaellen und -Vorfaellen in den USA (CAROL-Datenbank, Mode=Aviation, EventType Accident+Incident), Datum = EventDate (Tag des Ereignisses); Historie ab 2005-01-01 (Vollhistorie ab 1962 verfuegbar, aus Zeitgruenden auf 2005ff begrenzt, siehe Kommentar START_DATE im Skript; K2 dennoch klar erfuellt)",
       "datei": "data/neu/ntsb_luftfahrtunfaelle/gesamt.csv.gz",
       "einheit": "Anzahl Faelle",
@@ -1668,7 +1700,7 @@
       "zeilen": 7943
     },
     "nyfed_rrp:rrp": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "NY Fed Overnight Reverse Repo Facility (ON RRP), taegliches Gesamtvolumen der akzeptierten Gebote (Treasury-Sicherheiten)",
       "datei": "data/neu/nyfed_rrp/rrp.csv.gz",
       "einheit": "Milliarden USD",
@@ -1684,58 +1716,55 @@
       "zeilen": 3338
     },
     "openmeteo_wetter_anbau:mais_guertel": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Taegliche Niederschlagssumme US-Maisguertel (Iowa, nahe Des Moines), ERA5-Reanalyse via Open-Meteo",
       "datei": "data/neu/openmeteo_wetter_anbau/mais_guertel.csv.gz",
       "einheit": "mm/Tag",
       "erste": "1940-01-02",
-      "fehler": "fehler: Zeitlimit (180s) ueberschritten",
-      "letzte": "2026-09-26",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-27",
+      "median_abstand_tage": 1.0,
       "publikation": "verzoegert (ERA5-Reanalyse; Zusatz 5 (25.9.2026) setzt verfuegbar_nach_tagen fest auf 5 Tage fuer Reanalyse-Wetterreihen)",
       "quelle_url": "https://archive-api.open-meteo.com/v1/archive",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (ERA5-Reanalyse liefert bereits Tageswerte)",
       "verfuegbar_nach_tagen": 5,
-      "zeilen": 31680
+      "zeilen": 31681
     },
     "openmeteo_wetter_anbau:monsun_indien": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Taegliche Niederschlagssumme zentralindisches Monsun-Agrargebiet (Nagpur, Maharashtra), ERA5-Reanalyse via Open-Meteo",
       "datei": "data/neu/openmeteo_wetter_anbau/monsun_indien.csv.gz",
       "einheit": "mm/Tag",
       "erste": "1940-01-02",
-      "fehler": "fehler: Zeitlimit (180s) ueberschritten",
-      "letzte": "2026-09-26",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-27",
+      "median_abstand_tage": 1.0,
       "publikation": "verzoegert (ERA5-Reanalyse; Zusatz 5 (25.9.2026) setzt verfuegbar_nach_tagen fest auf 5 Tage fuer Reanalyse-Wetterreihen)",
       "quelle_url": "https://archive-api.open-meteo.com/v1/archive",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (ERA5-Reanalyse liefert bereits Tageswerte)",
       "verfuegbar_nach_tagen": 5,
-      "zeilen": 31680
+      "zeilen": 31681
     },
     "openmeteo_wetter_anbau:soja_mato_grosso": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Taegliche Niederschlagssumme brasilianisches Sojaanbaugebiet (Sorriso, Mato Grosso), ERA5-Reanalyse via Open-Meteo",
       "datei": "data/neu/openmeteo_wetter_anbau/soja_mato_grosso.csv.gz",
       "einheit": "mm/Tag",
       "erste": "1940-01-02",
-      "fehler": "fehler: Zeitlimit (180s) ueberschritten",
-      "letzte": "2026-09-26",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-27",
+      "median_abstand_tage": 1.0,
       "publikation": "verzoegert (ERA5-Reanalyse; Zusatz 5 (25.9.2026) setzt verfuegbar_nach_tagen fest auf 5 Tage fuer Reanalyse-Wetterreihen)",
       "quelle_url": "https://archive-api.open-meteo.com/v1/archive",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (ERA5-Reanalyse liefert bereits Tageswerte)",
       "verfuegbar_nach_tagen": 5,
-      "zeilen": 31680
+      "zeilen": 31681
     },
     "snb_saron:saron": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "SARON Uebernacht-Referenzzinssatz (Schlusskurs), SNB Datenportal Cube zirepo, Dimension H0",
       "datei": "data/neu/snb_saron/saron.csv.gz",
       "einheit": "Prozent",
@@ -1751,39 +1780,39 @@
       "zeilen": 6863
     },
     "sp500_index_aenderungen:anzahl_aenderungen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "Anzahl der Aufnahme/Entfernung-Paare im S&P 500 je Wirksamkeitsdatum (Effective Date), gezaehlt aus der von Freiwilligen gepflegten Wikipedia-Tabelle 'Historical components of the S&P 500' (Tabelle id=changes), die die Pressemitteilungen von S&P Dow Jones Indices nachtraegt. Index-Effekt (Shleifer 1986, Harris/Gurel 1986): um Wirksamkeitstag entstehen mechanische Kauf-/Verkaufsfluesse passiver Fonds. Hinweis: die Tabelle ist community-gepflegt; vereinzelte rueckwirkende Korrekturen von Transkriptionsfehlern (z.B. Ticker-Umbenennungen faelschlich als Indexwechsel gezaehlt) sind moeglich, keine methodische Revision der zugrundeliegenden SPDJI-Ereignisse selbst.",
       "datei": "data/neu/sp500_index_aenderungen/anzahl_aenderungen.csv.gz",
       "einheit": "Anzahl Indexaenderungs-Paare",
       "erste": "1976-07-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "verzoegert (community-gepflegte Wikipedia-Tabelle, keine feste Frist; Beleg: bei Abruf lag der juengste Tabelleneintrag rund 5 Kalendertage vor dem Abrufdatum, siehe Fortschrittsnotiz im Katalog)",
       "quelle_url": "https://en.wikipedia.org/wiki/Historical_components_of_the_S%26P_500",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "Anzahl Tabellenzeilen (Aenderungs-Paare) je Kalendertag (Wirksamkeitsdatum), 0 an Tagen ohne Eintrag",
       "verfuegbar_nach_tagen": 7,
-      "zeilen": 18355
+      "zeilen": 18356
     },
     "sp500_russell_rebalance_termine:russell_reconstitution": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am Umsetzungstag der jaehrlichen Russell-US-Index-Rekonstitution (nach Handelsschluss am letzten Freitag im Juni, verschoben auf den vorhergehenden Freitag falls dieser auf den 29. oder 30. Juni faellt), sonst 0, fuer jeden Kalendertag ab 1989-01-01 (Beginn der jaehrlichen Rekonstitution). Quelle: FTSE Russell 'Russell Reconstitution' / 'Four Decades of Russell US Indexes Reconstitution' (lseg.com/en/ftse-russell/russell-reconstitution).",
       "datei": "data/neu/sp500_russell_rebalance_termine/russell_reconstitution.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1989-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Ereignisdatum lange im Voraus oeffentlich bekannt/regelbasiert, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "kein externer Abruf (deterministische Kalenderberechnung nach dokumentierter FTSE-Russell-Regel)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 13788
+      "zeilen": 13789
     },
     "treasury_auktionen:bid_to_cover": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Mittleres Bid-to-Cover-Verhaeltnis aller an diesem Tag abgeschlossenen US-Treasury-Auktionen (Bills, Notes, Bonds); Mass fuer die Nachfrage nach neu emittierten US-Staatsanleihen",
       "datei": "data/neu/treasury_auktionen/bid_to_cover.csv.gz",
       "einheit": "Verhaeltnis (Gebote/Zuteilung)",
@@ -1799,55 +1828,55 @@
       "zeilen": 4254
     },
     "treasury_debt_penny:gesamt": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Gesamte ausstehende Bundesschuld der USA (Debt to the Penny, Total Public Debt Outstanding)",
       "datei": "data/neu/treasury_debt_penny/gesamt.csv.gz",
       "einheit": "USD",
       "erste": "1993-04-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Fiscal Data API 'Debt to the Penny', Aktualisierung am naechsten Geschaeftstag)",
       "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 8403
+      "zeilen": 8404
     },
     "treasury_debt_penny:intragovernmental": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Bundesschuld, regierungsinterner Anteil (Intragovernmental Holdings)",
       "datei": "data/neu/treasury_debt_penny/intragovernmental.csv.gz",
       "einheit": "USD",
       "erste": "1997-09-30",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Fiscal Data API 'Debt to the Penny', Aktualisierung am naechsten Geschaeftstag)",
       "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 5445
+      "zeilen": 5446
     },
     "treasury_debt_penny:oeffentlich_gehalten": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Bundesschuld, vom Publikum gehaltener Anteil (Debt Held by the Public)",
       "datei": "data/neu/treasury_debt_penny/oeffentlich_gehalten.csv.gz",
       "einheit": "USD",
       "erste": "1997-09-30",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Fiscal Data API 'Debt to the Penny', Aktualisierung am naechsten Geschaeftstag)",
       "quelle_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich, Bankarbeitstage)",
       "verfuegbar_nach_tagen": 1,
-      "zeilen": 5445
+      "zeilen": 5446
     },
     "treasury_tga:tga": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US Treasury General Account, taeglicher Kassenbestand (Daily Treasury Statement, Table I)",
       "datei": "data/neu/treasury_tga/tga.csv.gz",
       "einheit": "Millionen USD",
@@ -1863,7 +1892,7 @@
       "zeilen": 5274
     },
     "treasury_yield_curve:kurz": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury kurzes Ende der Zinskurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/kurz.csv.gz",
       "einheit": "Prozent p.a.",
@@ -1879,7 +1908,7 @@
       "zeilen": 6295
     },
     "treasury_yield_curve:m1": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 1 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/m1.csv.gz",
       "einheit": "Prozent p.a.",
@@ -1895,7 +1924,7 @@
       "zeilen": 6295
     },
     "treasury_yield_curve:m3": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 3 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/m3.csv.gz",
       "einheit": "Prozent p.a.",
@@ -1911,7 +1940,7 @@
       "zeilen": 9191
     },
     "treasury_yield_curve:m6": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 6 Mo (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/m6.csv.gz",
       "einheit": "Prozent p.a.",
@@ -1927,7 +1956,7 @@
       "zeilen": 9194
     },
     "treasury_yield_curve:niveau": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Zinsniveau, 10 Jahre (Dublette FRED DGS10 in main, hier ruhend)",
       "datei": "data/neu/treasury_yield_curve/niveau.csv.gz",
       "einheit": "Prozent p.a.",
@@ -1943,7 +1972,7 @@
       "zeilen": 9194
     },
     "treasury_yield_curve:steilheit": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Zinskurve Steilheit, 10J minus 2J (Dublette FRED T10Y2Y in main, hier ruhend)",
       "datei": "data/neu/treasury_yield_curve/steilheit.csv.gz",
       "einheit": "Prozentpunkte",
@@ -1959,7 +1988,7 @@
       "zeilen": 9194
     },
     "treasury_yield_curve:y1": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 1 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y1.csv.gz",
       "einheit": "Prozent p.a.",
@@ -1975,7 +2004,7 @@
       "zeilen": 9194
     },
     "treasury_yield_curve:y2": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 2 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y2.csv.gz",
       "einheit": "Prozent p.a.",
@@ -1991,7 +2020,7 @@
       "zeilen": 9194
     },
     "treasury_yield_curve:y20": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 20 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y20.csv.gz",
       "einheit": "Prozent p.a.",
@@ -2007,7 +2036,7 @@
       "zeilen": 8255
     },
     "treasury_yield_curve:y3": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 3 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y3.csv.gz",
       "einheit": "Prozent p.a.",
@@ -2023,7 +2052,7 @@
       "zeilen": 9194
     },
     "treasury_yield_curve:y30": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 30 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y30.csv.gz",
       "einheit": "Prozent p.a.",
@@ -2039,7 +2068,7 @@
       "zeilen": 8200
     },
     "treasury_yield_curve:y5": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 5 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y5.csv.gz",
       "einheit": "Prozent p.a.",
@@ -2055,7 +2084,7 @@
       "zeilen": 9194
     },
     "treasury_yield_curve:y7": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "US-Treasury Par-Zinsstrukturkurve, Laufzeit 7 Yr (CMT, taeglicher Schlusswert)",
       "datei": "data/neu/treasury_yield_curve/y7.csv.gz",
       "einheit": "Prozent p.a.",
@@ -2071,199 +2100,199 @@
       "zeilen": 9194
     },
     "turn_of_month_effekt:turn_of_month": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am letzten NYSE-Handelstag eines Monats sowie an den ersten drei NYSE-Handelstagen des Folgemonats (Turn-of-the-Month-Effekt, Ariel 1987), sonst 0, fuer jeden Kalendertag ab 1971-01-01. Handelstage ueber einen deterministischen NYSE-Feiertagskalender (Wochenenden plus New Year, MLK-Day ab 1998, Washington's Birthday, Good Friday, Memorial Day, Juneteenth ab 2022, Independence Day, Labor Day, Thanksgiving, Christmas) berechnet. Ausserordentliche, nicht kalendarisch fixierte Boersenschliessungen (z.B. 11.-14.9.2001, 29.-30.10.2012, Trauertage) sind NICHT modelliert; an solchen Terminen kann die Handelstag-Zuordnung im Einzelfall um 1-2 Tage abweichen. Vor 1971 (Uniform Monday Holiday Act) folgten Memorial Day/Washington's Birthday festen statt Montags-Regeln, daher keine Ausweitung ohne weitere Belege.",
       "datei": "data/neu/turn_of_month_effekt/turn_of_month.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1971-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ereignisdatum aus oeffentlich bekanntem NYSE-Handelskalender im Voraus ableitbar, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "kein externer Abruf (deterministische Kalenderberechnung; NYSE-Feiertagsregeln gemaess https://www.nyse.com/markets/hours-calendars)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 20363
+      "zeilen": 20364
     },
     "us_arbeitsmarkt_termine:arbeitsmarkt": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am Veroeffentlichungstag des monatlichen US-Arbeitsmarktberichts (Employment Situation, BLS), sonst 0, fuer jeden Kalendertag ab 1985-01-01 bis heute. Termine aus dem ALFRED-Archiv der tatsaechlichen Veroeffentlichungstage dieses Release (rid=50).",
       "datei": "data/neu/us_arbeitsmarkt_termine/arbeitsmarkt.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1985-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Veroeffentlichungstermin laut OMB Statistical Policy Directive No. 3 (1985) im Voraus als Jahreskalender oeffentlich bekannt gegeben, https://www.bls.gov/bls/statistical-policy-directive-3.pdf)",
       "quelle_url": "https://alfred.stlouisfed.org/release/downloaddates?rid=50&ff=txt (Terminarchiv, ALFRED/Federal Reserve Bank of St. Louis) und https://www.bls.gov/ces/ (Urheber-Release, aus dieser Umgebung mit HTTP 403 gesperrt, siehe Katalogeintrag bls_veroeffentlichungstage)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Terminarchiv uebernommen)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 15249
+      "zeilen": 15250
     },
     "us_boersenfeiertage:geschlossen": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 an jedem Kalendertag, an dem die NYSE einen sonst reguleren Handelstag (Mo-Fr) wegen eines Feiertags oder einer Sonderschliessung GANZTAGS geschlossen war, sonst 0 (auch an Wochenenden 0). Deckt die 10 wiederkehrenden Feiertage (inkl. historischer, heute nicht mehr beobachteter wie Lincoln's Birthday/Columbus Day/Armistice Day, jeweils nur bis 1953, und Election Day bis 1968 bzw. 1972/1976/1980) sowie ~20 dokumentierte Sonderschliessungen (Staatstrauer, 9/11, Hurrikane, 1968er 'Paperwork Crisis'-Mittwoche) ab, NICHT jedoch reine Handelsverkuerzungen (z.B. 'Closed at 1:00 pm' am Tag vor Weihnachten/Thanksgiving seit den 1970ern), die laut Quelle keine volle Schliessung sind.",
       "datei": "data/neu/us_boersenfeiertage/geschlossen.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1953-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Schliessungstatsache am selben Tag oeffentlich bekannt; historische Feiertage im Voraus bekannt, Sonderschliessungen teils erst kurzfristig)",
       "quelle_url": "https://www.ltadvisors.net/Info/research/closings.pdf und https://s3.amazonaws.com/armstrongeconomics-wp/2013/07/NYSE-Closings.pdf ('History of New York Stock Exchange Holidays' und 'New York Stock Exchange Special Closings, 1885-date', NYSE-Dokument, revidiert bis Januar 2011); ab Jan. 2011 durch dokumentierte, allgemein bekannte Feiertagsregeln (siehe Quellcode) und zwei oeffentlich bekannte Sonderschliessungen (Hurrikan Sandy 2012, Trauertag Bush 2018) fortgeschrieben.",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische, aus amtlicher/dokumentierter Feiertagshistorie abgeleitete Kalenderreihe, kein externer taeglicher Datenabruf)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 26937
+      "zeilen": 26938
     },
     "us_cpi_termine:cpi": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am Veroeffentlichungstag des monatlichen US-Verbraucherpreisindex (CPI, BLS), sonst 0, fuer jeden Kalendertag ab 1985-01-01 bis heute. Termine aus dem ALFRED-Archiv der tatsaechlichen Veroeffentlichungstage dieses Release (rid=10).",
       "datei": "data/neu/us_cpi_termine/cpi.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1985-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Veroeffentlichungstermin laut OMB Statistical Policy Directive No. 3 (1985) im Voraus als Jahreskalender oeffentlich bekannt gegeben, https://www.bls.gov/bls/statistical-policy-directive-3.pdf)",
       "quelle_url": "https://alfred.stlouisfed.org/release/downloaddates?rid=10&ff=txt (Terminarchiv, ALFRED/Federal Reserve Bank of St. Louis) und https://www.bls.gov/cpi/ (Urheber-Release, aus dieser Umgebung mit HTTP 403 gesperrt, siehe Katalogeintrag bls_veroeffentlichungstage)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Terminarchiv uebernommen)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 15249
+      "zeilen": 15250
     },
     "usa_wahltag:wahltag": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am US-Wahltag (erster Dienstag nach erstem Montag im November, jedes gerade Jahr: Kongress- und/oder Praesidentschaftswahl), sonst 0, fuer jeden Kalendertag ab 1845-01-01 (US Code Titel 3 Sec. 1, Praesidentschaftswahltermin seit 1845 gesetzlich fixiert; Kongresswahlen seit 1875 einheitlich auf denselben Tag, US Code Titel 2 Sec. 7).",
       "datei": "data/neu/usa_wahltag/wahltag.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1845-01-01",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Ereignisdatum gesetzlich fixiert und lange im Voraus oeffentlich bekannt, Reihe wird taeglich fortgeschrieben)",
       "quelle_url": "kein externer Abruf (deterministische Kalenderberechnung nach US Code Titel 2 Sec. 7 / Titel 3 Sec. 1)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 66383
+      "zeilen": 66384
     },
     "usda_wasde_veroeffentlichung:wasde": {
-      "abruf_utc": "2026-10-01T20:28:07Z",
+      "abruf_utc": "2026-10-02T00:49:11Z",
       "beschreibung": "1 am Veroeffentlichungstag des monatlichen USDA-WASDE-Berichts (World Agricultural Supply and Demand Estimates), sonst 0, fuer jeden Kalendertag ab 1973-09-17 bis heute. Termine aus der amtlichen ESMIS-Archivliste (National Agricultural Library) der tatsaechlich erschienenen Berichte.",
       "datei": "data/neu/usda_wasde_veroeffentlichung/wasde.csv.gz",
       "einheit": "Indikator (0/1)",
       "erste": "1973-09-17",
-      "letzte": "2026-10-01",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-02",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Freigabekalender von USDA/OCE im Voraus je Jahr veroeffentlicht, z.B. https://www.cmegroup.com/articles/2026/understanding-major-usda-reports-in-2026.html; ESMIS-Archiv zeichnet die tatsaechlichen Erscheinungstage dieser im Voraus bekannten Termine auf)",
       "quelle_url": "https://esmis.nal.usda.gov/publication/world-agricultural-supply-and-demand-estimates (amtliches Archiv, National Agricultural Library) und https://www.usda.gov/oce/commodity/wasde/ (Urheber-Release, aus dieser Umgebung mit HTTP 403 gesperrt)",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Archiv uebernommen)",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 19373
+      "zeilen": 19374
     },
     "usgs_erdbeben:anzahl_m5": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Weltweite Anzahl Erdbeben ab Magnitude 5.0 pro UTC-Kalendertag (USGS Erdbebenkatalog)",
       "datei": "data/neu/usgs_erdbeben/anzahl_m5.csv.gz",
       "einheit": "Anzahl Ereignisse",
       "erste": "2015-01-01",
-      "letzte": "2026-09-30",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-10-01",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (USGS Earthquake API liefert Ereignisse in Echtzeit/nahezu Echtzeit)",
       "quelle_url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "Summe der Ereignisse je UTC-Tag",
       "verfuegbar_nach_tagen": 0,
-      "zeilen": 4291
+      "zeilen": 4292
     },
     "wikipedia_weitere:duerre": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Dürre', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/duerre.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/D%C3%BCrre/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:halbleiter": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Halbleiter', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/halbleiter.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Halbleiter/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:halbleiter_en": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Semiconductor', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/halbleiter_en.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Semiconductor/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:hurrikan": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Hurrikan', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/hurrikan.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Hurrikan/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:konkurs": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Konkurs', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/konkurs.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1.0,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Konkurs/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4104
+      "zeilen": 4105
     },
     "wikipedia_weitere:oelpreis": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Ölpreis', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/oelpreis.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -2279,39 +2308,39 @@
       "zeilen": 4109
     },
     "wikipedia_weitere:oelpreis_en": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Price of oil', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/oelpreis_en.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Price%20of%20oil/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:pandemie": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Pandemie', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/pandemie.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Pandemie/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:pandemie_en": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Pandemic', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/pandemie_en.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -2327,39 +2356,39 @@
       "zeilen": 4109
     },
     "wikipedia_weitere:rezession": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Rezession', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/rezession.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Rezession/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:rezession_en": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Recession', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/rezession_en.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Recession/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:streik": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Streik', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/streik.csv.gz",
       "einheit": "Aufrufe pro Tag",
@@ -2375,36 +2404,36 @@
       "zeilen": 4109
     },
     "wikipedia_weitere:zinssatz": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe de.wikipedia.org Artikel 'Zinssatz', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/zinssatz.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Zinssatz/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     },
     "wikipedia_weitere:zinssatz_en": {
-      "abruf_utc": "2026-10-01T20:28:06Z",
+      "abruf_utc": "2026-10-02T00:49:10Z",
       "beschreibung": "Wikipedia-Seitenaufrufe en.wikipedia.org Artikel 'Interest rate', alle Zugriffsarten",
       "datei": "data/neu/wikipedia_weitere/zinssatz_en.csv.gz",
       "einheit": "Aufrufe pro Tag",
       "erste": "2015-07-01",
-      "letzte": "2026-09-29",
-      "median_abstand_tage": 1.0,
+      "letzte": "2026-09-30",
+      "median_abstand_tage": 1,
       "publikation": "taeglich (Wikimedia Pageviews API veroeffentlicht Tageszaehlungen mit rund 1-2 Tagen Verzug, kein Wochenbatch)",
       "quelle_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Interest%20rate/daily/2015070100/...00",
       "revidiert": false,
       "status": "aktiv",
       "verdichtung": "keine (bereits taeglich)",
       "verfuegbar_nach_tagen": 2,
-      "zeilen": 4109
+      "zeilen": 4110
     }
   }
 }
