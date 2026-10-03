@@ -1,0 +1,11 @@
+{
+  "quartalsende": {
+    "beschreibung": "1 an den letzten drei NYSE-Handelstagen von Maerz, Juni, September, Dezember (Quartalsende-Rebalancing von Pensionsfonds), sonst 0, jeder Kalendertag ab 1971-01-01. Handelstage ueber deterministischen NYSE-Feiertagskalender (siehe turn_of_month_effekt); Sonderschliessungen ab 1971 enthalten.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Quartalsende und NYSE-Handelstage sind im Voraus bekannt; Belegquelle NYSE-Kalender)",
+    "quelle_url": "kein externer Abruf (deterministische Kalenderberechnung; NYSE-Regeln https://www.nyse.com/markets/hours-calendars)",
+    "revidiert": false,
+    "verdichtung": "keine (Kalenderreihe)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

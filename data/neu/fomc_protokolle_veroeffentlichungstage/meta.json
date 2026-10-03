@@ -1,0 +1,11 @@
+{
+  "protokolle": {
+    "beschreibung": "1 am Tag der Veroeffentlichung der FOMC-Sitzungsprotokolle (Minutes, i.d.R. 3 Wochen nach der Sitzung, 14 Uhr Washingtoner Zeit), sonst 0, ab 2008-01-01. Termine stehen im Fed-Kalender im Voraus.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Veroeffentlichungstermin der Protokolle ist im Fed-Kalender vorab bekannt; Quelle: federalreserve.gov/monetarypolicy/fomccalendars.htm)",
+    "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "revidiert": false,
+    "verdichtung": "keine (Ereignisreihe)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
