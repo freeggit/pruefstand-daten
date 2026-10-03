@@ -2997,10 +2997,11 @@
   "url": "https://www.nyse.com/markets/hours-calendars",
   "domain": "www.nyse.com",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Händler-Absicherung und Pinning rund um den Verfall verschieben Kurse kurzfristig; Indexnahe Sektoren reagieren anders als der Weltindex (Ni/Pearson/Poteshman 2005; Stivers/Sun 2013).",
-  "grund": "Deterministisch aus Wochentagsregel, keine Quelle mit Login; neu (kein Eintrag zu OPEX). Herkunft: Lernrunde 2.10.2026."
+  "grund": "Doppelt: opex_verfall ist bereits Reihe der aktiven Quelle kalender_ereignisse (K6). Deterministisch aus Wochentagsregel, keine Quelle mit Login; neu (kein Eintrag zu OPEX). Herkunft: Lernrunde 2.10.2026.",
+  "geprueft_utc": "2026-10-03T08:32Z"
  },
  {
   "id": "fomc_protokolle_veroeffentlichungstage",
