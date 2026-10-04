@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", "vorreg.py", "integritaet.py", "einchecken.py", ".github/workflows/suche.yml"]
+    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", "vorreg.py", "integritaet.py", "einchecken.py", "lauf_status.py", "verfassung.txt", ".github/workflows/suche.yml"]
 permissions:
   contents: write
 concurrency:
@@ -39,19 +39,23 @@ jobs:
             cd _lernen && git checkout -q --orphan lernen-neu && git rm -rq --cached . && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           fi
       - name: Tests Einchecken und Integrität (nur bei Code-Änderung; V3.11, E28)
+        id: tests
         if: github.event_name == 'push'
-        run: python test_einchecken.py && python test_integritaet.py
+        run: python test_einchecken.py && python test_integritaet.py && python test_lauf_status.py
         timeout-minutes: 5
       - name: Siegeltest (nur bei Code-Änderung)
+        id: siegeltest
         if: github.event_name == 'push'
         run: python siegel_test.py
         timeout-minutes: 30
       - name: Suchlauf
+        id: suche
         run: python suche_lauf.py
         env:
           PS_PLACEBO: "200"
         timeout-minutes: 200
       - name: Analyse (Stufe 1 und 4, 50 Profile, 50 Placebo-Simulationen; V3.10)
+        id: analyse
         run: python analyse.py
         env:
           PS_CACHE: /tmp/lauf/cache
@@ -59,11 +63,22 @@ jobs:
         timeout-minutes: 60
         continue-on-error: true
       - name: Vorregistrierte Hypothesen (Familie V, E23; nur wartende Chargen; ab V3.11 Kandidaten der Stufe D)
+        id: familie_v
         run: python vorreg.py
         env:
           PS_CACHE: /tmp/lauf/cache
         timeout-minutes: 30
         continue-on-error: true
+      - name: Status je Stufe (V3.11, E29; auch nach einem Fehler)
+        if: always()
+        run: python lauf_status.py
+        env:
+          STUFE_TESTS: ${{ steps.tests.outcome }}
+          STUFE_SIEGELTEST: ${{ steps.siegeltest.outcome }}
+          STUFE_SUCHE: ${{ steps.suche.outcome }}
+          STUFE_ANALYSE: ${{ steps.analyse.outcome }}
+          STUFE_FAMILIE_V: ${{ steps.familie_v.outcome }}
       - name: Einchecken auf claude/lernen
+        if: always()
         # einchecken.py: holt claude/lernen mit explizitem Ziel und mischt index.json dreiweg (30.9.2026, Lauf #18)
         run: python einchecken.py "Suchlauf"
