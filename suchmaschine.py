@@ -243,7 +243,64 @@ def regeln_fuer(basis_key, lag):
         return [("eia",)]
     return [("tag", lag)]
 
-def varianten(n, x, regeln, quelle=None):
+# ---- V3.11 (E29, 4.10.2026; Astra-Gutachten 4, N08; D3 «fehlt ein Wert, fehlt das Ereignis»): Änderungen und rollende
+# Fenster nur über vollständige erwartete Abstände. Sollkalender je Reihe: «K» (Kalendertage), wenn mehr als 5% der Werte
+# auf ein Wochenende fallen, sonst «B» (Werktage Montag bis Freitag). Eine Änderung über k Beobachtungen gilt nur, wenn
+# zwischen den beiden Beobachtungen höchstens k + Toleranz Solltage liegen. Bei «B» deckt die Toleranz einzelne
+# Feiertage (1 Tag bei k = 1, 2 bei k = 5, 3 bei k = 20): ein einzelner fehlender Werktag ist ohne Feiertagskalender
+# der Quelle nicht von einem Feiertag zu unterscheiden und gilt als solcher. Bei «K» ist die Toleranz null. Ein Fenster
+# aus w Beobachtungen gilt nur, wenn es höchstens 10% plus 3 Solltage länger ist als w. Festgelegt vor jeder Rechnung mit dieser Regel; sie wird nie nach Ergebnissen angepasst.
+LUECKE_TOL = {1: 1, 5: 2, 20: 3}
+LUECKEN, AUSGESCHLOSSEN, INDIZES_SOLL_IST = {}, [], {}
+# Datenmangel (V3.11, E27/E29; Reto am 4.10.2026: «gerne variante 2 gem empfehlung» – Ursache zuerst geklärt: die Leerwerte
+# der EIA-Spotpreise stehen so in der Quelle, der Abruf ist richtig). Eine Grundreihe hat einen Datenmangel, wenn ihr in der
+# Discovery mehr als 7% der Solltage fehlen oder eine Lücke von 10 oder mehr Solltagen besteht. Üblich sind rund 4%
+# (US-Feiertage) bis 6% (Japan). Festgelegt aus der Verteilung der Lücken aller Grundreihen, ohne Blick auf Renditen.
+# Reihen mit Datenmangel und alles, was aus ihnen gebildet wird (Paare, Indizes), bleiben im Suchraum, sind gekennzeichnet
+# und können kein Finalist werden.
+MANGEL_ANTEIL, MANGEL_LUECKE = 0.07, 10
+HERKUNFT = {}
+
+def datenmangel_pruefen():
+    out = {}
+    for k, (x, _) in basen.items():
+        x = x[x.index >= KAL[0]]
+        if len(x) < 100 or set(np.unique(x.values)) <= {0.0, 1.0}:
+            continue
+        t = x.index.values.astype("datetime64[D]")
+        soll = int((t[-1] - t[0]).astype(int)) + 1 if kalenderart(x.index) == "K" else int(np.busday_count(t[0], t[-1])) + 1
+        fehlt = 1 - len(x) / max(soll, 1); luecke = int(np.nanmax(solltage(x.index, 1)[1:])) - 1
+        if fehlt > MANGEL_ANTEIL or luecke >= MANGEL_LUECKE:
+            out[k] = {"fehlende_solltage_anteil": round(float(fehlt), 4), "groesste_luecke_solltage": luecke, "kalender": kalenderart(x.index)}
+    return out
+
+def aus(schluessel, grund):
+    AUSGESCHLOSSEN.append({"reihe": schluessel, "grund": grund})
+
+def kalenderart(idx):
+    return "K" if len(idx) and float((idx.weekday >= 5).mean()) > 0.05 else "B"
+
+def solltage(idx, k):
+    """Solltage zwischen Beobachtung i-k und i (NaN für die ersten k), nach dem Sollkalender der Reihe."""
+    tage = idx.values.astype("datetime64[D]"); out = np.full(len(tage), np.nan)
+    if len(tage) > k:
+        a, b = tage[:-k], tage[k:]
+        out[k:] = (b - a).astype(int) if kalenderart(idx) == "K" else np.busday_count(a, b)
+    return out
+
+def diff_lueckenlos(x, k=1):
+    d = x.diff(k)
+    tol = 0 if kalenderart(x.index) == "K" else LUECKE_TOL.get(k, max(1, int(np.ceil(0.15 * k))))
+    return d.where(~(solltage(x.index, k) > k + tol))
+
+def fenster_ok(idx, w=252):
+    """True, wo das Fenster der letzten bis zu w Beobachtungen keine grössere Lücke überspannt."""
+    n = len(idx); tage = idx.values.astype("datetime64[D]"); i = np.arange(n); start = np.maximum(0, i - (w - 1))
+    span = (tage - tage[start]).astype(int) if kalenderart(idx) == "K" else np.busday_count(tage[start], tage)
+    return span <= np.ceil(1.1 * (i - start)) + 3
+
+def varianten(n, x, regeln, quelle=None, grund=()):
+    HERKUNFT[n] = tuple(grund)
     x = bis(x).dropna()
     for suffix in ("_stand", "_d1", "_d5", "_d20", "_z252"):
         if quelle:
@@ -253,7 +310,13 @@ def varianten(n, x, regeln, quelle=None):
     if set(np.unique(x.values)) <= {0.0, 1.0}:
         ind[f"{n}_stand"] = (x, regeln); EREIGNIS.add(f"{n}_stand"); return
     m = x.rolling(252, min_periods=150)
-    for suffix, s in (("_stand", x), ("_d1", x.diff()), ("_d5", x.diff(5)), ("_d20", x.diff(20)), ("_z252", (x - m.mean()) / m.std())):
+    z = ((x - m.mean()) / m.std()).where(fenster_ok(x.index))
+    teile = (("_stand", x), ("_d1", diff_lueckenlos(x, 1)), ("_d5", diff_lueckenlos(x, 5)), ("_d20", diff_lueckenlos(x, 20)), ("_z252", z))
+    roh = {"_d1": x.diff(), "_d5": x.diff(5), "_d20": x.diff(20), "_z252": (x - m.mean()) / m.std()}
+    gesperrt = {suf[1:]: int(roh[suf].notna().sum() - s.notna().sum()) for suf, s in teile if suf in roh}
+    if any(gesperrt.values()):
+        LUECKEN[n] = dict(gesperrt, kalender=kalenderart(x.index))
+    for suffix, s in teile:
         ind[n + suffix] = (s, regeln)
 
 # Belegte Korrekturen fehlerhafter Scout-Kalenderreihen (Freigabe Reto 1.10.2026); Rohdaten bleiben unverändert.
@@ -287,13 +350,16 @@ def fred(serie):
     return bis(f.dropna().set_index("d").v.astype(float))
 
 for s, v in man["reihen"].items():
+    if s.startswith("fred:") and ("fehler" in v or s in AUSSCHLUSS):
+        aus(s, "Feld fehler im Manifest" if "fehler" in v else "gesperrt (korrekturen_neu.json)")
     if s.startswith("fred:") and "fehler" not in v and s not in AUSSCHLUSS:
         x = fred(s.split(":", 1)[1])
         if len(x) < 500 or (x.index.to_series().diff().dt.days.median() > 3):
+            aus(s, "weniger als 500 Werte bis zum Stichtag" if len(x) < 500 else "nicht täglich (Abstand über 3 Tage)")
             continue
         r = regeln_fuer(s, 1 + VERFUEGBAR[s] if s in VERFUEGBAR else LAG_FRED)
         basen[s] = (x, r)
-        varianten(s.split(":", 1)[1], x, r, quelle=s)
+        varianten(s.split(":", 1)[1], x, r, quelle=s, grund=(s,))
 
 def norm_vorjahre(s):
     """Tagesnorm nach Monat und Tag (29.2. = 28.2.), ±7 Tage geglättet, nur aus Vorjahren, mindestens 3 Vorjahre."""
@@ -310,7 +376,8 @@ def norm_vorjahre(s):
 def hr_manifest():
     try:
         mh = json.load(open(lade("hr/manifest_hr.json")))
-    except Exception:
+    except Exception as e:
+        log(f"hr/manifest_hr.json nicht lesbar: {e}"); aus("hr:(Manifest)", f"Manifest nicht lesbar: {str(e)[:80]}")
         mh = {"reihen": {}}
     for v in mh["reihen"].values():
         v["_basis"] = BASIS
@@ -321,17 +388,17 @@ def hr_manifest():
                 if v.get("dateien"):
                     v["_basis"] = BASIS_E; mh["reihen"][k] = v
         except Exception as e:
-            log(f"Strom-Zweig nicht lesbar: {e}")
+            log(f"Strom-Zweig nicht lesbar: {e}"); aus("energie:(Manifest)", f"Manifest nicht lesbar: {str(e)[:80]}")
     return mh if mh["reihen"] else None
 
 mh = hr_manifest()
 if mh:
     for k, v in mh["reihen"].items():
         if "fehler" in v and not v.get("dateien"):
-            continue
+            aus(k, "Feld fehler im Manifest, keine Dateien"); continue
         teile = [pd.read_csv(lade(p.replace("data/", "", 1), v["_basis"])) for p in v.get("dateien", [])]
         if not teile:
-            continue
+            aus(k, "keine Dateien"); continue
         d = pd.concat(teile, ignore_index=True)
         quelle, name = k.split(":", 1)
         if quelle == "wetter":
@@ -350,7 +417,7 @@ if mh:
         elif quelle == "energie" and name.startswith("preis"):
             d["t"] = pd.to_datetime(d.zeit_utc.str.replace("Z", ""))
             s = bis(d.set_index("t").preis_eur_mwh.astype(float).resample("D").mean().dropna())
-            ind[f"strom_{name}"] = (s, [("tag", LAG_SOFORT)]); ind[f"strom_{name}_d1"] = (s.diff(), [("tag", LAG_SOFORT)])
+            ind[f"strom_{name}"] = (s, [("tag", LAG_SOFORT)]); ind[f"strom_{name}_d1"] = (diff_lueckenlos(s, 1), [("tag", LAG_SOFORT)])
         elif quelle == "energie" and name.startswith("erzeugung"):
             d["t"] = pd.to_datetime(d.zeit_utc.str.replace("Z", ""))
             tag = bis(d.set_index("t").apply(pd.to_numeric, errors="coerce")).resample("D").mean()
@@ -365,22 +432,27 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
     try:
         mn = json.load(open(lade(manifest_rel, basis)))
     except Exception as e:
-        log(f"{manifest_rel} nicht lesbar: {e}"); return 0
+        log(f"{manifest_rel} nicht lesbar: {e}"); aus(f"{kurz}:(Manifest)", f"Manifest nicht lesbar: {str(e)[:80]}"); return 0
     for k, v in mn.get("reihen", {}).items():
         if v.get("fehler") or not v.get("datei") or v.get("status", "aktiv") != "aktiv" or f"{kurz}:{k}" in AUSSCHLUSS:
+            if v.get("status", "aktiv") == "aktiv" or f"{kurz}:{k}" in AUSSCHLUSS:   # ruhende Reihen (E8) sind planmässig nicht im Suchraum
+                aus(f"{kurz}:{k}", "gesperrt (korrekturen_neu.json)" if f"{kurz}:{k}" in AUSSCHLUSS else
+                    "Feld fehler im Manifest" if v.get("fehler") else "keine Datei")
             continue
         try:
             d = pd.read_csv(lade(v["datei"].replace("data/", "", 1), basis))
             x = pd.Series(pd.to_numeric(d.wert, errors="coerce").values, index=pd.to_datetime(d.datum)).dropna().sort_index()
             x = korrigieren(f"{kurz}:{k}", bis(x[~x.index.duplicated(keep="last")]))
             if len(x) < 500 or x.index[0] > pd.Timestamp("2015-12-31") or x.index.to_series().diff().dt.days.median() > 3:
+                aus(f"{kurz}:{k}", "weniger als 500 Werte bis zum Stichtag" if len(x) < 500 else
+                    "Beginn nach 2015" if x.index[0] > pd.Timestamp("2015-12-31") else "nicht täglich (Abstand über 3 Tage)")
                 continue
             r = regeln_fuer(f"{kurz}:{k}", 1 + int(VERFUEGBAR.get(f"{kurz}:{k}", v.get("verfuegbar_nach_tagen", 1))))
             basen[f"{kurz}:{k}"] = (x, r)
-            varianten(praefix_ + k.replace(":", "_"), x, r, quelle=f"{kurz}:{k.split(':')[0]}")
+            varianten(praefix_ + k.replace(":", "_"), x, r, quelle=f"{kurz}:{k.split(':')[0]}", grund=(f"{kurz}:{k}",))
             n_ok += 1
         except Exception as e:
-            log(f"{praefix_}{k}: {e}")
+            log(f"{praefix_}{k}: {e}"); aus(f"{kurz}:{k}", f"Lesefehler: {str(e)[:80]}")
     return n_ok
 
 N_NEU = lade_vertrag(BASIS_N, "neu/manifest_neu.json", "neu_", "neu") if BASIS_N else 0
@@ -395,7 +467,7 @@ if os.path.exists(PAARE):
             continue
         name, a, b, art = [t.strip() for t in ln.split(";")[:4]]
         if a not in basen or b not in basen:
-            continue
+            aus(f"paar:{name}", "Grundreihe fehlt: " + ", ".join(k for k in (a, b) if k not in basen)); continue
         (xa, ra), (xb, rb) = basen[a], basen[b]
         j = pd.concat([xa, xb], axis=1, join="inner").dropna()
         if art == "logratio":
@@ -404,7 +476,7 @@ if os.path.exists(PAARE):
         else:
             s = j.iloc[:, 0] - j.iloc[:, 1]
         if len(s) >= 500:
-            varianten(f"paar_{name}", s, ra + rb, quelle=f"paar:{name}"); N_PAARE += 1
+            varianten(f"paar_{name}", s, ra + rb, quelle=f"paar:{name}", grund=(a, b)); N_PAARE += 1
 
 N_INDIZES, INDIZES = 0, {}
 if os.path.exists(MECHANISMEN):
@@ -414,20 +486,25 @@ if os.path.exists(MECHANISMEN):
             continue
         name, komp = [t.strip() for t in ln.split(";")[:2]]
         zs, regeln, genutzt = [], [], []
-        for k in [k.strip() for k in komp.split(",") if k.strip()]:
+        soll = [k.strip() for k in komp.split(",") if k.strip()]
+        fehlt = [k for k in soll if k.lstrip("+-") not in basen]
+        INDIZES_SOLL_IST[name] = {"soll": soll, "fehlt": fehlt, "gesperrt": bool(fehlt)}
+        if fehlt:
+            # V3.11 (E29, ändert E20): fehlt eine festgelegte Komponente, ist der Index gesperrt – er wird nicht mehr still
+            # aus dem Rest gebildet (sonst würde ein anderer Mechanismus geprüft als benannt).
+            aus(f"index:{name}", "gesperrt, Komponente fehlt: " + ", ".join(fehlt)); continue
+        for k in soll:
             vz, key = (-1.0 if k[0] == "-" else 1.0), k.lstrip("+-")
-            if key not in basen:
-                continue
             x, r = basen[key]
             m = x.rolling(252, min_periods=150)
-            zs.append((vz * (x - m.mean()) / m.std()).rename(key)); regeln += r; genutzt.append(k)
+            zs.append((vz * ((x - m.mean()) / m.std()).where(fenster_ok(x.index))).rename(key)); regeln += r; genutzt.append(k)
         if len(zs) < 2:
-            continue
+            aus(f"index:{name}", "weniger als 2 Komponenten"); continue
         j = pd.concat(zs, axis=1, sort=True)
         mind = max(2, int(np.ceil(len(zs) / 2)))
         s = j.mean(axis=1).where(j.notna().sum(axis=1) >= mind).dropna()
         if len(s) >= 500:
-            varianten(f"idx_{name}", s, regeln, quelle=f"index:{name}"); N_INDIZES += 1; INDIZES[name] = genutzt
+            varianten(f"idx_{name}", s, regeln, quelle=f"index:{name}", grund=tuple(k.lstrip("+-") for k in soll)); N_INDIZES += 1; INDIZES[name] = genutzt
 
 BTC_SHA = None
 try:
@@ -439,8 +516,22 @@ try:
     bd = bis(b.close.resample("D").last().dropna())
     if len(bd):
         ind["btc_r1"] = (100 * bd.pct_change(), [("tag", LAG_SOFORT)]); ind["btc_r7"] = (100 * bd.pct_change(7), [("tag", LAG_SOFORT)])
+    else:
+        log("Bitcoin: Datei enthält keine Werte bis zum Stichtag (nicht verfügbar)")
+        aus("bitcoin:btcusd", "nicht verfügbar: Datei enthält keine Werte bis zum Stichtag (beginnt später)")
 except Exception as e:
-    log("BTC übersprungen:", e)
+    log("BTC übersprungen:", e); aus("bitcoin:btcusd", f"nicht verfügbar: {str(e)[:80]}")
+
+DATENMANGEL = datenmangel_pruefen()
+MANGEL_NAMEN = sorted(n for n, g in HERKUNFT.items() if any(k in DATENMANGEL for k in g))
+def hat_datenmangel(indikator):
+    for suf in ("_stand", "_d1", "_d5", "_d20", "_z252"):
+        if indikator.endswith(suf):
+            indikator = indikator[:-len(suf)]; break
+    return indikator in _MANGEL_SET
+_MANGEL_SET = set(MANGEL_NAMEN)
+log(f"Datenmangel: {len(DATENMANGEL)} Grundreihen, {len(MANGEL_NAMEN)} Reihen samt Paaren und Indizes; gesperrte Indizes: "
+    f"{sum(1 for v in INDIZES_SOLL_IST.values() if v['gesperrt'])}; Reihen mit gesperrten Abständen: {len(LUECKEN)}")
 
 # ================================================================== Ereignisse und Einstieg (einmal je Lauf)
 def ereignisse(x, art, ist_ereignis=False):
@@ -451,9 +542,10 @@ def ereignisse(x, art, ist_ereignis=False):
     if art == "hoch":   m = x > fw.quantile(0.95)
     elif art == "tief": m = x < fw.quantile(0.05)
     else:
-        dx = x.diff(); sd = dx.shift(1).rolling(252, min_periods=150).std()
+        dx = diff_lueckenlos(x, 1); sd = dx.shift(1).rolling(252, min_periods=150).std()   # V3.11 (E29): kein Sprung über eine Lücke
         m = (dx > 3 * sd) if art == "sprung_auf" else (dx < -3 * sd)
-    return x.index[m.fillna(False).values]
+    m = m.fillna(False).values & fenster_ok(x.index, 253)   # V3.11 (E29): Schwelle nur aus einem Fenster ohne grössere Lücke
+    return x.index[m]
 
 def einstieg(kal, tage, regeln):
     tage = pd.DatetimeIndex(tage)
@@ -563,24 +655,31 @@ def filtern(df, t_min):
     df["vor"] = (df.t.abs() >= T_VOR) & df.f_kosten & df.f_n & df.f_stabil
     return df
 
-def f5_rotation(a, pos, mu, rng):
+def f5_rotation_zn(a, pos, mu, rng):
     """Rotationstest im gültigen Datenbereich des Ziels (V3.10.1, 2.10.2026, Astra-Befund 3): verschoben wird nur
     innerhalb der Spanne mit Kursen. Rotationen, in denen weniger als 80% der Ereignisse einen Wert haben, sind kein
-    Vergleichsfall und zählen weder im Zähler noch im Nenner. Zu wenige Vergleichsfälle: p = 1 (nicht prüfbar)."""
+    Vergleichsfall und zählen weder im Zähler noch im Nenner. Gibt (k, n) zurück: k Rotationen mindestens so gut wie
+    echt, n gültige Rotationen; (None, None) = nicht prüfbar. V3.11 (E28): Zähler und Nenner werden gespeichert,
+    damit kein gerundeter p-Wert je wieder Recheneingabe wird; p = (k + 1) / (n + 1) wie bisher."""
     ok = np.flatnonzero(~np.isnan(a))
     if len(ok) < 504 or len(pos) == 0:
-        return 1.0
+        return None, None
     g0 = int(ok[0]); m = int(ok[-1]) + 1 - g0
     hi = (m - 252) // 5
     if hi <= 252 // 5:
-        return 1.0
+        return None, None
     offs = rng.integers(252 // 5, hi, size=N_F5) * 5
     w = a[g0 + (pos[None, :] - g0 - offs[:, None]) % m]
     gueltig = (~np.isnan(w)).sum(axis=1) >= max(3, int(np.ceil(0.8 * len(pos))))
     if int(gueltig.sum()) < 200:
-        return 1.0
+        return None, None
     sims = np.nanmean(w[gueltig], axis=1)
-    return float((np.sum(sims >= mu) + 1) / (int(gueltig.sum()) + 1))
+    return int(np.sum(sims >= mu)), int(gueltig.sum())
+
+def f5_rotation(a, pos, mu, rng):
+    """p = (k + 1) / (n + 1); zu wenige Vergleichsfälle: p = 1 (nicht prüfbar)."""
+    k, n = f5_rotation_zn(a, pos, mu, rng)
+    return 1.0 if n is None else float((k + 1) / (n + 1))
 
 def auswahl(df, t_min, mrs, rng):
     df = filtern(df, t_min)
@@ -786,6 +885,7 @@ if __name__ == "__main__":
                                              "trefferchance": round(treffer / max(len(auswahl_k), 1), 3)}
         zus["kalibrierung"] = kal_erg
     echt["quelle"] = echt.indikator.map(quelle_von)
+    echt["datenmangel"] = echt.indikator.map(hat_datenmangel)
     jq = {}
     for q, g in echt.groupby("quelle"):
         pos_ = g[(g.t > 0) & (g.n >= N_MIN)]
@@ -797,6 +897,18 @@ if __name__ == "__main__":
     zus["ziele"] = {fam: f["ziele"] for fam, f in FAM.items()}
     zus["paare"] = N_PAARE
     zus["indizes_n"] = N_INDIZES
+    gruende = {}
+    for a_ in AUSGESCHLOSSEN:
+        g_ = a_["grund"].split(":")[0]; gruende[g_] = gruende.get(g_, 0) + 1
+    zus["reihen_bericht"] = {
+        "regel": "V3.11 E29: erwartete, vorhandene und ausgeschlossene Reihen je Lauf; ruhende Scout-Reihen (E8) sind planmässig nicht im Suchraum und hier nicht aufgeführt",
+        "grundreihen_vorhanden": len(basen), "indikatoren": len(ind),
+        "ausgeschlossen_n": len(AUSGESCHLOSSEN), "ausgeschlossen_je_grund": dict(sorted(gruende.items())), "ausgeschlossen": AUSGESCHLOSSEN,
+        "indizes_soll_ist": INDIZES_SOLL_IST,
+        "datenmangel_regel": f"Grundreihe mit mehr als {MANGEL_ANTEIL:.0%} fehlenden Solltagen in der Discovery oder einer Lücke ab {MANGEL_LUECKE} Solltagen; gilt auch für daraus gebildete Paare und Indizes; im Suchraum, aber kein Finalist (E27)",
+        "datenmangel": DATENMANGEL, "datenmangel_reihen": MANGEL_NAMEN,
+        "luecken_regel": "Änderungen über k Beobachtungen nur bei höchstens k + Toleranz Solltagen (Werktagsreihen: Toleranz 1/2/3 für k 1/5/20 wegen Feiertagen; Kalendertagsreihen: 0); Fenster höchstens 10% + 3 Solltage länger als ihre Beobachtungszahl",
+        "luecken_reihen_n": len(LUECKEN), "luecken_gesperrte_werte": dict(sorted(LUECKEN.items()))}
     zus["umgebung"] = {"numpy": np.__version__, "pandas": pd.__version__, "python": sys.version.split()[0], "btc_sha": BTC_SHA}
     zus["code_sha256"] = hashlib.sha256(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:16]
     zus["dauer_min"] = round((time.time() - t0) / 60, 1)
