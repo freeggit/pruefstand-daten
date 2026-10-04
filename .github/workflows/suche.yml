@@ -6,11 +6,11 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", "vorreg.py", ".github/workflows/suche.yml"]
+    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", "vorreg.py", "integritaet.py", "einchecken.py", ".github/workflows/suche.yml"]
 permissions:
   contents: write
 concurrency:
-  group: suche
+  group: lernen-schreiber   # V3.11 (E28): Suche und Vorregistrierung schreiben nacheinander auf claude/lernen
   cancel-in-progress: false
 jobs:
   suche:
@@ -38,6 +38,10 @@ jobs:
             git worktree add -q --detach _lernen HEAD
             cd _lernen && git checkout -q --orphan lernen-neu && git rm -rq --cached . && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           fi
+      - name: Tests Einchecken und Integrität (nur bei Code-Änderung; V3.11, E28)
+        if: github.event_name == 'push'
+        run: python test_einchecken.py && python test_integritaet.py
+        timeout-minutes: 5
       - name: Siegeltest (nur bei Code-Änderung)
         if: github.event_name == 'push'
         run: python siegel_test.py
@@ -54,7 +58,7 @@ jobs:
           PS_LAUF: /tmp/lauf
         timeout-minutes: 60
         continue-on-error: true
-      - name: Vorregistrierte Hypothesen (Familie V, V3.10 E23; nur wartende Chargen)
+      - name: Vorregistrierte Hypothesen (Familie V, E23; nur wartende Chargen; ab V3.11 Kandidaten der Stufe D)
         run: python vorreg.py
         env:
           PS_CACHE: /tmp/lauf/cache

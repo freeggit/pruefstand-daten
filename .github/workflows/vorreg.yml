@@ -3,12 +3,12 @@ name: Prüfstand Vorregistrierung
 on:
   push:
     branches: [main]
-    paths: ["vorregistrierung/**", "vorreg.py", ".github/workflows/vorreg.yml"]
+    paths: ["vorregistrierung/**", "vorreg.py", "integritaet.py", ".github/workflows/vorreg.yml"]
   workflow_dispatch: {}
 permissions:
   contents: write
 concurrency:
-  group: vorreg
+  group: lernen-schreiber   # V3.11 (E28): Suche und Vorregistrierung schreiben nacheinander auf claude/lernen
   cancel-in-progress: false
 jobs:
 
