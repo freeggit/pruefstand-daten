@@ -1,0 +1,28 @@
+{
+ "vorfall": "Ergebnisdatei einer Charge der Familie V überschrieben",
+ "charge": "2026-10-01",
+ "datum": "2026-10-02",
+ "ablauf": [
+  "2026-10-02 05:00 UTC: Suchlauf #23 startet mit dem alten vorreg.py und dem alten einchecken.py (main 068b002).",
+  "2026-10-02 07:37 UTC: Workflow Vorregistrierung schreibt vorreg/2026-10-01.json mit dem Code V3.10.1 (claude/lernen e2b10af26cf81f965c77708696e86115236c3ddf).",
+  "2026-10-02 08:32 UTC: Suchlauf #23 checkt ein und ersetzt die Datei durch seine eigene Fassung (claude/lernen 447629d)."
+ ],
+ "erste_fassung": {
+  "commit": "e2b10af26cf81f965c77708696e86115236c3ddf",
+  "hinweis": "Mischung: V-2026-10-01-01 und -02 neu mit V3.10.1 bewertet (mit Code- und Datenhash); -03, -04, -05 aus der Fassung vom 1.10.2026 übernommen (V3.10, ohne Hash)."
+ },
+ "heutige_fassung": {
+  "commit": "447629d",
+  "hinweis": "Alle fünf Zeilen aus dem alten Code; Felder methodenstand, code_hash, daten_hash, erstbewertung_utc, charge_vollstaendig fehlen. Gilt als Altbestand."
+ },
+ "unterschied": "Status und Urteil gleich (5 bewertet, 0 Kandidaten). p_f5 weicht in der dritten Nachkommastelle ab (z.B. V-01 0.7429 gegen 0.7363); t und mu höchstens um 0.0001.",
+ "urteil": "Charge 2026-10-01: 0 von 5; unverändert. Keine der beiden Fassungen wird nachträglich geändert oder ersetzt (keine rückdatierte Reparatur).",
+ "ursache": "Zwei Schreiber ohne gemeinsame Warteschlange; einchecken.py übernahm bei Konflikt den eigenen Stand.",
+ "abhilfe": "V3.11, E28: einchecken.py prüft vor jedem Push, dass sich kein veröffentlichtes Endurteil ändert (integritaet.endurteil_geaendert); Suche und Vorregistrierung in derselben Warteschlange; Registrierung als Prüfsumme eingefroren; Zähler und Nenner des Rotationstests gespeichert.",
+ "quellen": [
+  "Interne Gegenprüfung 2.10.2026 (gp_2026-10-02_3)",
+  "Astra-Gutachten 4, Befund N04 (4.10.2026)",
+  "meta/befund_familie_v_2026-10-03"
+ ],
+ "erfasst_utc": "2026-10-04"
+}
