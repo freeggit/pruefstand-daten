@@ -22,8 +22,21 @@ Korrekturen 2.10.2026 (Astra-Befund 19, Reto: «Paket 1 wie vorgeschlagen»):
 - Andere Dateien mit Konflikt: der eigene Stand gilt weiterhin, der Stand von GitHub wird daneben als
   <pfad>.konflikt_<zeit> gesichert statt verworfen.
 - Tests: python test_einchecken.py
+
+V3.11 (E28, 4.10.2026, Reto: «ok, gerne freigeben»; Astra-Gutachten 4, Befunde N04 und N05):
+- Ein veröffentlichtes Endurteil der Familie V darf sich nicht ändern. Vor jedem Push wird jede Datei vorreg/<charge>.json
+  gegen den frisch geholten Stand geprüft (integritaet.endurteil_geaendert), auch ohne Textkonflikt. Bei einem Verstoss
+  bleibt die veröffentlichte Fassung, die eigene wird als <pfad>.verworfen_<zeit> daneben gelegt, der Verstoss steht in
+  index["konflikte"], der Rest des Laufs wird eingecheckt und das Skript endet mit Fehler 1 (sichtbar im Workflow).
+- Listenschlüssel: leere Zeichenketten gelten wie fehlende Werte. Gleiche Kennung mit verschiedenem Inhalt auf der eigenen
+  Seite ist ein Konflikt: beide Einträge bleiben, der Konflikt wird festgehalten. Bekommt ein Eintrag später erstmals eine
+  Nummer, wird er über «datei» wiedererkannt statt verdoppelt.
+- Das Konfliktjournal wird nicht mehr gekürzt.
 """
 import json, os, subprocess, sys, time
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import integritaet as it  # noqa: E402
 
 ZWEIG = "claude/lernen"
 REF = f"refs/remotes/origin/{ZWEIG}"
@@ -45,7 +58,7 @@ KONFLIKTE = []
 def schluessel(e):
     if isinstance(e, dict):
         for k in ("nr", "charge", "datei", "datum"):
-            if e.get(k) is not None:
+            if e.get(k) is not None and e.get(k) != "":
                 return (k, json.dumps(e[k], sort_keys=True))
     return ("wert", json.dumps(e, sort_keys=True, ensure_ascii=False))
 
@@ -69,27 +82,50 @@ def eintrag_mischen(b, t, m, wo):
     return out                          # Felder werden nie entfernt
 
 
+def _datei(e):
+    d = e.get("datei") if isinstance(e, dict) else None
+    return d if d not in (None, "") else None
+
+
 def liste_mischen(basis, theirs, mine, wo="liste"):
-    b, m = {}, {}
+    b, m, doppelt = {}, {}, []
     for e in basis or []:
         b.setdefault(schluessel(e), e)
     for e in mine or []:
-        m[schluessel(e)] = e
+        k = schluessel(e)
+        if k in m:
+            if m[k] != e:               # gleiche Kennung, anderer Inhalt auf der eigenen Seite: Konflikt, beide bleiben
+                doppelt.append(e)
+                KONFLIKTE.append({"wo": f"{wo}[{k[0]}={k[1]}]", "feld": "(Eintrag)", "art": "gleiche Kennung, verschiedener Inhalt",
+                                  "erster": m[k], "zweiter": e})
+            continue                    # identische Doppel fallen zusammen
+        m[k] = e
+    # Wiedererkennen über «datei», wenn eine Seite erstmals eine Nummer vergibt (sonst entstünde ein Doppel)
+    t_datei = {}
+    for e in theirs or []:
+        if _datei(e) is not None:
+            t_datei.setdefault(_datei(e), schluessel(e))
+    alias = {}
+    for k, e in m.items():
+        d = _datei(e)
+        if d is not None and d in t_datei and t_datei[d] != k and t_datei[d] not in m:
+            alias[t_datei[d]] = k       # Schlüssel auf GitHub -> mein Schlüssel für denselben Eintrag
     out, gesehen = [], set()
     for e in theirs or []:
         k = schluessel(e)
         if k in gesehen:
             out.append(e); continue     # doppelter Schlüssel auf GitHub: nichts verwerfen
         gesehen.add(k)
-        if k in m and m[k] != e:
-            out.append(eintrag_mischen(b.get(k), e, m[k], f"{wo}[{k[0]}={k[1]}]"))
+        km = alias.get(k, k)
+        if km in m and m[km] != e:
+            gesehen.add(km)
+            out.append(eintrag_mischen(b.get(km, b.get(k)), e, m[km], f"{wo}[{k[0]}={k[1]}]"))
         else:
             out.append(e)               # gleich, oder bei mir nicht vorhanden: bleibt (nie still verwerfen)
-    for e in mine or []:
-        k = schluessel(e)
+    for k, e in m.items():
         if k not in gesehen:
             gesehen.add(k); out.append(e)   # nur bei mir neu
-    return out
+    return out + doppelt
 
 
 def json_mischen(basis, theirs, mine):
@@ -110,7 +146,7 @@ def json_mischen(basis, theirs, mine):
     if KONFLIKTE:
         zeit = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         alt = out.get("konflikte") if isinstance(out.get("konflikte"), list) else []
-        out["konflikte"] = (alt + [dict(x, zeit=zeit, lauf=PRAEFIX) for x in KONFLIKTE])[-200:]
+        out["konflikte"] = alt + [dict(x, zeit=zeit, lauf=PRAEFIX) for x in KONFLIKTE]   # V3.11: ungekürzt
         del KONFLIKTE[:]
     return out
 
@@ -149,6 +185,57 @@ def konflikte_loesen():
     return True
 
 
+def endurteile_schuetzen():
+    """V3.11 (E28): Ein veröffentlichtes Endurteil darf sich nicht ändern – auch ohne Textkonflikt. Vergleicht jede Datei
+    vorreg/<charge>.json im eigenen Stand mit dem frisch geholten Stand. Bei Verstoss: veröffentlichte Fassung bleibt,
+    eigene Fassung daneben als .verworfen_<zeit>, Eintrag in index["konflikte"]. Gibt die Zahl der Verstösse zurück."""
+    r = git("ls-tree", "-r", "--name-only", REF, "vorreg", ok=True)
+    if r.returncode != 0:
+        return 0
+    n = 0
+    zeit = time.strftime("%Y%m%dT%H%M%SZ", time.gmtime())
+    for p in [x for x in r.stdout.split("\n") if x.endswith(".json") and "/" in x and x.count("/") == 1]:
+        t = git("show", f"{REF}:{p}", ok=True)
+        if t.returncode != 0:
+            continue
+        lokal = os.path.join(LERNEN, p)
+        try:
+            ver = json.loads(t.stdout)
+        except ValueError:
+            continue
+        try:
+            eig = json.load(open(lokal, encoding="utf-8")) if os.path.exists(lokal) else {"hypothesen": []}
+        except ValueError:
+            eig = {"hypothesen": []}
+        verst = it.endurteil_geaendert(ver, eig)
+        if not verst:
+            continue
+        n += 1
+        if os.path.exists(lokal):
+            os.replace(lokal, f"{lokal}.verworfen_{zeit}")
+        with open(lokal, "w", encoding="utf-8") as f:
+            f.write(t.stdout)
+        ip = os.path.join(LERNEN, "index.json")
+        try:
+            idx = json.load(open(ip, encoding="utf-8"))
+        except (OSError, ValueError):
+            idx = None
+        if isinstance(idx, dict):
+            alt = idx.get("konflikte") if isinstance(idx.get("konflikte"), list) else []
+            idx["konflikte"] = alt + [{"wo": p, "art": "Endurteil geschützt: veröffentlichte Fassung bleibt", "verstoesse": verst[:20],
+                                       "verstoesse_n": len(verst), "eigene_fassung": f"{p}.verworfen_{zeit}",
+                                       "zeit": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "lauf": PRAEFIX}]
+            with open(ip, "w", encoding="utf-8") as f:
+                json.dump(idx, f, ensure_ascii=False, indent=1)
+        print(f"SCHUTZ {p}: {len(verst)} Abweichung(en) von einem veröffentlichten Endurteil; veröffentlichte Fassung bleibt, "
+              f"eigene Fassung gesichert als {p}.verworfen_{zeit}")
+    if n:
+        git("add", "-A")
+        if git("diff", "--cached", "--quiet", ok=True).returncode != 0:
+            git("commit", "-q", "-m", f"{PRAEFIX}: Endurteil geschützt ({n} Datei(en)) {time.strftime('%Y-%m-%dT%H:%MZ', time.gmtime())}")
+    return n
+
+
 def main():
     git("config", "user.name", "pruefstand-bot")
     git("config", "user.email", "pruefstand-bot@users.noreply.github.com")
@@ -156,6 +243,7 @@ def main():
     if git("diff", "--cached", "--quiet", ok=True).returncode == 0:
         print("keine Änderung"); return 0
     git("commit", "-q", "-m", f"{PRAEFIX} {time.strftime('%Y-%m-%dT%H:%MZ', time.gmtime())} (GitHub Action)")
+    verstoesse = 0
     for versuch in range(1, 6):
         try:
             if git("ls-remote", "--exit-code", "--heads", "origin", ZWEIG, ok=True).returncode == 0:
@@ -167,9 +255,12 @@ def main():
                         raise RuntimeError(f"Rebase gescheitert ohne lösbaren Konflikt: {r.stderr.strip()[-300:]}")
                     r = subprocess.run(["git", "-C", LERNEN, "-c", "core.editor=true", "rebase", "--continue"],
                                        capture_output=True, text=True)
+                verstoesse += endurteile_schuetzen()
             r = git("push", "-q", "origin", f"HEAD:{ZWEIG}", ok=True)
             if r.returncode == 0:
                 print(f"eingecheckt auf {ZWEIG}: {git('rev-parse', '--short', 'HEAD').stdout.strip()} (Versuch {versuch})")
+                if verstoesse:
+                    print(f"FEHLER: {verstoesse} Versuch(e), ein veröffentlichtes Endurteil zu ändern; die veröffentlichte Fassung blieb."); return 1
                 return 0
             print(f"Versuch {versuch}: Push abgewiesen: {r.stderr.strip()[-300:]}")
         except RuntimeError as e:
