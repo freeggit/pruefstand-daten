@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Prüfstand – Suchlauf in der GitHub Action (Verfassung V3.9, Methode M4).
+"""Prüfstand – Suchlauf in der GitHub Action (Methode M4; Verfassungsversion aus verfassung.txt).
+
+V3.11 (E29, 4.10.2026, Reto: «ok, gerne freigeben»; Astra-Gutachten 4, Befund N09): Jeder Ausführungsversuch erhält eine
+Lauf-ID und einen Laufeintrag suche/laeufe/<Lauf-ID>.json – auch ohne neue Hypothesen und auch bei einem Fehler der
+Suchmaschine: Datenstand, Beginn, Ende, Status je Stufe, vorhandene sowie gegenüber dem Vorlauf entfallene und neue
+Reihen, Prüfsumme der Ergebnisse, Verweis auf die Ausgaben. Ein S####-Dokument entsteht bei neuen Hypothesen, bei
+geändertem Code ODER bei geänderten Ergebnissen (Prüfsumme). Das Vollarchiv S####_alle.csv.gz (rund 10 MB) entsteht nur
+bei neuen Hypothesen oder geändertem Code; sonst verweist der Laufeintrag auf das letzte Vollarchiv (die Schlüssel
+stehen im Register). Den Status der Stufen Analyse, Familie V und Einchecken trägt lauf_status.py nach.
 
 Liest den Stand auf dem Zweig claude/lernen (Arbeitskopie _lernen), rechnet die Suchmaschine auf den lokalen
 Kopien von main, claude/daten-energie und claude/daten-neu und legt das Ergebnis auf claude/lernen ab:
@@ -9,7 +17,7 @@ Ein S####-Eintrag entsteht bei neuen Hypothesen ODER geändertem Code (Suchmasch
 zusätzlich suche/letzter_lauf.json mit Commit-IDs aller Zweige und Prüfsummen (Nachvollziehbarkeit, V3.6).
 Die Routine «Prüfstand Lernrunde» rechnet nicht mehr selbst; sie liest diese Dateien und schreibt den Lernbericht.
 """
-import hashlib, json, os, shutil, subprocess, sys
+import gzip, hashlib, json, os, shutil, subprocess, sys
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
@@ -17,7 +25,46 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 LERNEN = os.path.join(ROOT, "_lernen")
 LAUF = os.environ.get("PS_LAUF", "/tmp/lauf")
 os.makedirs(LAUF, exist_ok=True)
-os.makedirs(os.path.join(LERNEN, "suche"), exist_ok=True)
+os.makedirs(os.path.join(LERNEN, "suche", "laeufe"), exist_ok=True)
+BEGINN = datetime.now(timezone.utc)
+LAUF_ID = "L" + BEGINN.strftime("%Y%m%dT%H%M%SZ")
+try:
+    VERFASSUNG = open(os.path.join(ROOT, "verfassung.txt"), encoding="utf-8").read().split()[0]
+except (OSError, IndexError):
+    VERFASSUNG = "unbekannt (verfassung.txt fehlt)"
+
+def commit(pfad):
+    try:
+        return subprocess.run(["git", "-C", pfad, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip() or None
+    except Exception:
+        return None
+
+def sha(pfad):
+    try:
+        return hashlib.sha256(open(pfad, "rb").read()).hexdigest()[:16]
+    except Exception:
+        return None
+
+def datenstand():
+    return {"commit_main": commit(ROOT), "commit_energie": commit(os.path.join(ROOT, "_daten-energie")),
+            "commit_neu": commit(os.path.join(ROOT, "_daten-neu")),
+            "sha_manifest_main": sha(os.path.join(ROOT, "data", "manifest.json")),
+            "sha_manifest_hr": sha(os.path.join(ROOT, "data", "hr", "manifest_hr.json")),
+            "sha_manifest_sec": sha(os.path.join(ROOT, "data", "sec", "manifest_sec.json")),
+            "sha_manifest_neu": sha(os.path.join(ROOT, "_daten-neu", "data", "neu", "manifest_neu.json")),
+            "sha_manifest_energie": sha(os.path.join(ROOT, "_daten-energie", "data", "hr", "manifest_energie.json"))}
+
+def laufeintrag(e):
+    """Schreibt suche/laeufe/<Lauf-ID>.json und führt suche/letzter_lauf.json nach (lauf_id, stufen)."""
+    e = {"lauf_id": LAUF_ID, "verfassung": VERFASSUNG, "beginn_utc": BEGINN.strftime("%Y-%m-%dT%H:%M:%SZ"),
+         "ende_suche_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+         "anlass": os.environ.get("GITHUB_EVENT_NAME", "lokal"), "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+         "datenstand": datenstand(), **e}
+    e.setdefault("stufen", {})
+    for st in ("analyse", "familie_v", "einchecken"):
+        e["stufen"].setdefault(st, "ausstehend")
+    json.dump(e, open(os.path.join(LERNEN, "suche", "laeufe", f"{LAUF_ID}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    return e
 
 def basis(pfad):
     return "file://" + os.path.join(ROOT, pfad, "data") if pfad else "file://" + os.path.join(ROOT, "data")
@@ -52,21 +99,19 @@ with open(logp, "w") as lg:
 log = open(logp, encoding="utf-8", errors="replace").read()
 print(log[-6000:])
 if rc != 0:
-    print(f"Suchmaschine mit Fehler {rc} beendet"); sys.exit(rc)
+    print(f"Suchmaschine mit Fehler {rc} beendet")
+    laufeintrag({"stufen": {"suche": "fehlgeschlagen"}, "fehler": f"Suchmaschine mit Fehler {rc} beendet", "log_ende": log[-3000:],
+                 "ausgaben": None, "hinweis": "Kein Ergebnis dieses Laufs; letzter_lauf.json und S-Dokumente zeigen frühere Läufe."})
+    lp = os.path.join(LERNEN, "suche", "letzter_lauf.json")
+    try:
+        alt = json.load(open(lp, encoding="utf-8"))
+    except (OSError, ValueError):
+        alt = {}
+    alt["letzter_versuch"] = {"lauf_id": LAUF_ID, "status": "fehlgeschlagen", "zeit_utc": BEGINN.strftime("%Y-%m-%dT%H:%MZ")}
+    json.dump(alt, open(lp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    sys.exit(rc)
 
 zus = json.load(open(os.path.join(LAUF, "suchlauf_zusammenfassung.json")))
-
-def commit(pfad):
-    try:
-        return subprocess.run(["git", "-C", pfad, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip() or None
-    except Exception:
-        return None
-
-def sha(pfad):
-    try:
-        return hashlib.sha256(open(pfad, "rb").read()).hexdigest()[:16]
-    except Exception:
-        return None
 
 code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json")).encode()).hexdigest()[:16]
 herkunft = {
@@ -79,16 +124,62 @@ herkunft = {
     "placebo_laeufe": zus.get("placebo_laeufe"), "umgebung": zus.get("umgebung"),
 }
 jetzt = datetime.now(timezone.utc)
-json.dump({"zeit_utc": jetzt.strftime("%Y-%m-%dT%H:%MZ"), **herkunft, "kandidaten": zus["kandidaten"],
-           "kandidaten_neu": zus["kandidaten_neu"], "huerde_t": zus["huerde_t"], "fund": zus.get("fund"),
-           "p_lauf": zus.get("p_lauf"), "bausteine": len(zus["bausteine"])},
-          open(os.path.join(LERNEN, "suche", "letzter_lauf.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+def ergebnis_pruefsumme(pfad):
+    """Prüfsumme aller Ergebnisse eines Laufs, ohne die Spalte «neu» (die nur sagt, ob der Schlüssel schon im Register stand)."""
+    import csv, io
+    try:
+        zeilen = csv.reader(io.StringIO(gzip.decompress(open(pfad, "rb").read()).decode("utf-8")))
+        kopf = next(zeilen); weg = kopf.index("neu") if "neu" in kopf else None
+        m = hashlib.sha256()
+        for z in [kopf] + list(zeilen):
+            if weg is not None:
+                z = z[:weg] + z[weg + 1:]
+            m.update(("\x1f".join(z) + "\n").encode("utf-8"))
+        return m.hexdigest()[:16]
+    except Exception:
+        return None
+
+ergebnis_hash = ergebnis_pruefsumme(os.path.join(LAUF, "suchlauf_echt.csv.gz"))
 code_neu = index.get("letzter_code_hash") != code_hash
-if zus["kandidaten_neu"] == 0 and not code_neu:
-    print("Keine neuen Hypothesen und kein geänderter Code: nur letzter_lauf.json nachgeführt."); sys.exit(0)
+ergebnis_neu = ergebnis_hash is None or index.get("letzter_ergebnis_hash") != ergebnis_hash
+vollarchiv = bool(zus["kandidaten_neu"] > 0 or code_neu)
+vorher = list(index.get("reihen_letzter_suchlauf") or [])
+entfallen = sorted(set(vorher) - set(zus["indikatoren"])); neu_dabei = sorted(set(zus["indikatoren"]) - set(vorher))
+kern = {"kandidaten": zus["kandidaten"], "kandidaten_neu": zus["kandidaten_neu"], "huerde_t": zus["huerde_t"],
+        "echt_bestes_t": zus.get("echt_bestes_t"), "p_lauf": zus.get("p_lauf"),
+        "kandidaten_stufe_d": len(zus["bausteine"]), "fehlalarmrate": zus.get("fehlalarmrate"), "placebo_laeufe": zus.get("placebo_laeufe")}
+s_schreiben = bool(vollarchiv or ergebnis_neu)
+nr = max([s["nr"] for s in index["suchlaeufe"]] + [0]) + 1
+letzter_s = next((s["datei"] for s in reversed(index["suchlaeufe"]) if s.get("datei")), None)
+eintrag = laufeintrag({
+    "stufen": {"suche": "vollständig"}, "herkunft": herkunft, "ergebnis_hash": ergebnis_hash, **kern,
+    "reihen": {"vorhanden_n": len(zus["indikatoren"]), "vorlauf_n": len(vorher), "entfallen_gegen_vorlauf": entfallen,
+               "neu_gegen_vorlauf": neu_dabei, "erwartet_und_gesperrt": zus.get("reihen_bericht"),
+               "liste": "index.json Feld reihen_letzter_suchlauf"},
+    "ausgaben": {"s_dokument": f"suche/S{nr:04d}.json" if s_schreiben else letzter_s,
+                 "s_dokument_art": "neu in diesem Lauf" if s_schreiben else "unverändert: Ergebnisse dieses Laufs sind Zeichen für Zeichen gleich wie im genannten Dokument",
+                 "vollarchiv": f"suche/S{nr:04d}_alle.csv.gz" if vollarchiv else index.get("letztes_vollarchiv"),
+                 "vollarchiv_art": "neu in diesem Lauf" if vollarchiv else "aus einem früheren Lauf (keine neuen Schlüssel, Code unverändert)"},
+    "anlass_s": ("neue Hypothesen" if zus["kandidaten_neu"] > 0 else "geänderter Code" if code_neu else
+                 "geänderte Ergebnisse (Datenstand)" if ergebnis_neu else "keiner"),
+})
+json.dump({"zeit_utc": jetzt.strftime("%Y-%m-%dT%H:%MZ"), "lauf_id": LAUF_ID, "verfassung": VERFASSUNG, **herkunft, "ergebnis_hash": ergebnis_hash,
+           "kandidaten": zus["kandidaten"], "kandidaten_neu": zus["kandidaten_neu"], "huerde_t": zus["huerde_t"],
+           "fund": False,   # V3.11 (E26): die Discovery wählt nur aus; ein Fund entsteht erst in Stufe B
+           "kandidaten_stufe_d": len(zus["bausteine"]), "p_lauf": zus.get("p_lauf"), "bausteine": len(zus["bausteine"]),
+           "stufen": eintrag["stufen"], "laufeintrag": f"suche/laeufe/{LAUF_ID}.json",
+           "reihen_entfallen_gegen_vorlauf": entfallen, "reihen_neu_gegen_vorlauf": neu_dabei},
+          open(os.path.join(LERNEN, "suche", "letzter_lauf.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+index.setdefault("laeufe", []).append({"datei": f"suche/laeufe/{LAUF_ID}.json", "lauf_id": LAUF_ID,
+                                         "s_dokument": eintrag["ausgaben"]["s_dokument"], "ergebnis_hash": ergebnis_hash})
+index["reihen_letzter_suchlauf"] = zus["indikatoren"]
+index["letzter_lauf_utc"] = jetzt.strftime("%Y-%m-%dT%H:%MZ")
+if not s_schreiben:
+    json.dump(index, open(ip, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"Lauf {LAUF_ID}: keine neuen Hypothesen, Code und Ergebnisse unverändert. Laufeintrag geschrieben, kein neues S-Dokument "
+          f"(gilt weiter: {letzter_s})."); sys.exit(0)
 
 # ---------------------------------------------------------------- Ergebnis ablegen
-nr = max([s["nr"] for s in index["suchlaeufe"]] + [0]) + 1
 lokal = jetzt.astimezone(ZoneInfo("Europe/Zurich"))
 
 def fmt(r):
@@ -101,24 +192,28 @@ for i in zus["indikatoren"]:
          else "Wetter" if i.startswith("wetter_") else "Strom" if i.startswith("strom_") else "Wikipedia" if i.startswith("wiki_")
          else "Bitcoin" if i.startswith("btc_") else "Indizes" if i.startswith("idx_") else "FRED")
     gruppen[g] = gruppen.get(g, 0) + 1
-fund = bool(zus.get("fund"))
-urteil = ("FUND – Fixierung durch Reto nötig. Siegel nicht geöffnet." if fund else
-          "Kein Baustein. Validierung ab 2021 nicht angerührt (S4).")
+fund = False   # V3.11 (E26): ein Fund entsteht erst in Stufe B (Bestätigung der Finalisten)
+ueber_placebo = bool(zus.get("fund"))   # bisheriges Kriterium (Kandidaten vorhanden und p_lauf höchstens 0.05): jetzt Diagnose
+urteil = ("KANDIDAT(EN) DER STUFE D über den Placebo-Läufen – kein Fund; Bestätigung nur über die Finalistenfamilie (E27). "
+          "Siegel nicht geöffnet." if ueber_placebo else
+          "Kein Kandidat der Stufe D über den Placebo-Läufen. Validierung ab 2021 nicht angerührt (S4).")
 if zus["bausteine"]:
-    urteil += " Bausteine: " + "; ".join(f"Route {b.get('route', 'A')}: {b['indikator']} {b['art']} -> {b['ziel']} {b['h']} Tage"
+    urteil += " Kandidaten: " + "; ".join(f"Route {b.get('route', 'A')}: {b['indikator']} {b['art']} -> {b['ziel']} {b['h']} Tage"
                                        for b in zus["bausteine"]) + "."
-if zus["bausteine"] and not fund:
-    urteil += (f" {len(zus['bausteine'])} Baustein-Kandidat(en), aber p_lauf {zus.get('p_lauf')} > 0.05 "
-               "(Placebo-Läufe erreichen ebenso viele): Zufall nicht ausgeschlossen, kein Fund.")
+if zus["bausteine"] and not ueber_placebo:
+    urteil += (f" {len(zus['bausteine'])} Kandidat(en), aber p_lauf {zus.get('p_lauf')} > 0.05 "
+               "(Placebo-Läufe erreichen ebenso viele): Zufall nicht ausgeschlossen.")
 if zus["langzeit_hinweise"]:
     urteil += f" {len(zus['langzeit_hinweise'])} Langzeit-Hinweis(e) ohne Bestätigung auf dem ETF (kein Baustein)."
 
 S = {
     "nr": nr, "sort": nr,
     "zeit": lokal.strftime("%-d.%-m.%Y, %H:%M (Europe/Zurich)"),
-    "verfassung": "V3.9",
+    "verfassung": VERFASSUNG, "lauf_id": LAUF_ID, "stufe": "D (Discovery): Auswahl, kein Fund (V3.11, E26)",
+    "ergebnis_hash": ergebnis_hash, "anlass": eintrag["anlass_s"],
+    "reihen_entfallen_gegen_vorlauf": entfallen, "reihen_neu_gegen_vorlauf": neu_dabei,
     "methode": zus.get("methode", "M4"),
-    "entstehung": "GitHub Action «Prüfstand Suche» (V3.4 E9)" + ("" if zus["kandidaten_neu"] else ", Anlass: geänderter Code"),
+    "entstehung": "GitHub Action «Prüfstand Suche» (V3.4 E9)" + ("" if zus["kandidaten_neu"] else f", Anlass: {eintrag['anlass_s']}"),
     "herkunft": herkunft,
     "stichtag": "2020-12-31",
     "horizonte_tage": [1, 5, 20],
@@ -140,7 +235,7 @@ S = {
     "placebo_laeufe": zus.get("placebo_laeufe"), "placebo_art": zus.get("placebo_art"), "fehlalarmrate": zus.get("fehlalarmrate"), "kalibrierung": zus.get("kalibrierung"), "familie_l_ereignisse": zus.get("familie_l_ereignisse"), "umgebung": zus.get("umgebung"),
     "placebo_bausteine_je_lauf": zus.get("placebo_bausteine_je_lauf"),
     "p_lauf": zus.get("p_lauf"),
-    "fund": fund,
+    "fund": fund, "ueber_placebo_diagnose": ueber_placebo, "kandidaten_stufe_d": len(zus["bausteine"]),
     "datenpruefung_verdachtstage": zus.get("datenpruefung_verdachtstage"),
     "placebo_suchlaeufe_alle_filter": zus.get("placebo_alle_filter_je_lauf"),
     "placebo_suchlaeufe_vorstufe": zus.get("placebo_vorstufe_je_lauf"),
@@ -159,11 +254,13 @@ shutil.copy(os.path.join(LAUF, "hypothesen.txt.gz"), os.path.join(LERNEN, "hypot
 ue = open(os.path.join(LAUF, "suchlauf_ueberlebende.csv"), encoding="utf-8").read().splitlines()
 open(os.path.join(LERNEN, "suche", f"{name}_ueberlebende.csv"), "w", encoding="utf-8").write("\n".join(ue[:201]) + "\n")
 open(os.path.join(LERNEN, "suche", f"{name}_log.txt"), "w", encoding="utf-8").write(log[-20000:])
-shutil.copy(os.path.join(LAUF, "suchlauf_echt.csv.gz"), os.path.join(LERNEN, "suche", f"{name}_alle.csv.gz"))   # vollständige Ergebnisse
+if vollarchiv:
+    shutil.copy(os.path.join(LAUF, "suchlauf_echt.csv.gz"), os.path.join(LERNEN, "suche", f"{name}_alle.csv.gz"))   # vollständige Ergebnisse
+    index["letztes_vollarchiv"] = f"suche/{name}_alle.csv.gz"
 
 index["kumuliert"] = zus["kandidaten_kumuliert"]
 index["suchlaeufe"].append({"nr": nr, "datei": f"suche/{name}.json", "kandidaten": zus["kandidaten"], "in_db": False})
-index["reihen_letzter_suchlauf"] = zus["indikatoren"]
+index["letzter_ergebnis_hash"] = ergebnis_hash
 index["letzter_suchlauf_utc"] = jetzt.strftime("%Y-%m-%dT%H:%MZ")
 index["letzter_code_hash"] = code_hash
 index["methode"] = zus.get("methode", "M4")
