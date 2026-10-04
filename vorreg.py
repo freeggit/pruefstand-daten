@@ -41,7 +41,8 @@ def log(*a):
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LERNEN = os.path.join(ROOT, "_lernen")
 MAX_JE_CHARGE, WARTEFRIST_TAGE, N_ROT_CHARGE, ALPHA = 10, 60, 200, 0.05
-METHODENSTAND = "V3.10.1"
+METHODENSTAND = "V3.11.0"
+VERFASSUNG = "V3.11"
 ENDGUELTIG = ("bewertet", "kontaminiert", "ungueltig", "verfallen")
 basis = "file://" + os.path.join(ROOT, "data")
 sys.argv = [sys.argv[0], basis]
@@ -67,6 +68,7 @@ if not offen:
 
 sys.path.insert(0, ROOT)
 t0 = time.time()
+import integritaet as it  # noqa: E402  (V3.11, E28)
 import suchmaschine as sm  # noqa: E402  (versiegelt: alle Reihen am STICHTAG abgeschnitten)
 F = sm.FAM["S"]; MR = F["mr"]; P_S = sm.praefix(MR); KOSTEN, N_MIN = sm.KOSTEN, sm.N_MIN
 TAB_S = {(e["indikator"], e["art"]): e for e in sm.ereignis_tabelle() if e["fam"] == "S"}
@@ -79,7 +81,7 @@ def sha_datei(pfad):
         return ""
 
 CODE_HASH = hashlib.sha256("".join(sha_datei(os.path.join(ROOT, f)) for f in
-                                   ("suchmaschine.py", "vorreg.py", "paare.txt", "mechanismen.txt", "korrekturen_neu.json")).encode()).hexdigest()[:16]
+                                   ("suchmaschine.py", "vorreg.py", "integritaet.py", "paare.txt", "mechanismen.txt", "korrekturen_neu.json")).encode()).hexdigest()[:16]
 
 def zeit_utc(z):
     """«30.9.2026, 07:12 (Europe/Zurich)» oder ISO-Zeit -> UTC-Zeitstempel; None, wenn nicht lesbar."""
@@ -146,12 +148,18 @@ def bewerte(h, mr, rng, n_f5=sm.N_F5):
         return None
     a = mr[(h["ziel"], h["h"])]; pos = r["_pos"]
     alt = sm.N_F5; sm.N_F5 = n_f5
-    p = sm.f5_rotation(a, pos, r["mu"], rng)
+    k5, n5 = sm.f5_rotation_zn(a, pos, r["mu"], rng)
     sm.N_F5 = alt
+    p = 1.0 if n5 is None else (k5 + 1) / (n5 + 1)
     v = np.array([q in sm.VERDACHT_POS.get(h["ziel"], set()) for q in pos]); wv = a[pos[~v]]
     tv = float((wv.mean() - r["mu0"]) / (max(r["sd0"], np.std(wv, ddof=1)) / np.sqrt(len(wv)))) if len(wv) > 2 else np.nan
+    # V3.11 (E28): Zähler und Nenner des Rotationstests und die ungerundeten Entscheidgrössen werden gespeichert;
+    # gerundet wird nur die Anzeige. «roh» ist die einzige Grundlage späterer Entscheide über diese Zeile.
+    roh = {"mu": float(r["mu"]), "t1": float(r["t1"]), "t2": float(r["t2"]), "n": int(r["n"]),
+           "t_ohne_verdacht": None if np.isnan(tv) else float(tv)}
     return dict(n=int(r["n"]), mu=float(r["mu"]), mu0=float(r["mu0"]), t=float(r["t"]), t1=float(r["t1"]), t2=float(r["t2"]),
-                p_f5=float(p), n_verdacht=int(v.sum()), t_ohne_verdacht=tv, mu_netto=float(r["mu"] - KOSTEN))
+                p_f5=float(p), p_f5_zaehler=None if n5 is None else int(k5 + 1), p_f5_nenner=None if n5 is None else int(n5 + 1),
+                n_verdacht=int(v.sum()), t_ohne_verdacht=tv, mu_netto=float(r["mu"] - KOSTEN), roh=roh)
 
 def holm(ps):
     ps = np.asarray(ps, float); m = len(ps); order = np.argsort(ps); adj = np.empty(m); lauf = 0.0
@@ -160,8 +168,10 @@ def holm(ps):
     return adj
 
 def baustein(x, p_holm):
-    tv = x.get("t_ohne_verdacht")
-    return bool(p_holm <= ALPHA and x["mu"] >= KOSTEN and x["n"] >= N_MIN and x["t1"] >= 1 and x["t2"] >= 1
+    """Ab V3.11 (E26) ist das ein «Kandidat der Stufe D», kein Fund. Entscheid aus den ungerundeten Grössen (E28)."""
+    g = lambda f: it.wert_roh(x, f)
+    tv = g("t_ohne_verdacht")
+    return bool(p_holm <= ALPHA and g("mu") >= KOSTEN and g("n") >= N_MIN and g("t1") >= 1 and g("t2") >= 1
                 and tv is not None and not np.isnan(tv) and tv >= 2)
 
 def rund(v):
@@ -171,13 +181,30 @@ def startwert(key):
     return int(hashlib.sha256(("F5|" + key).encode()).hexdigest()[:12], 16)
 
 def daten_hash(h):
-    """Fingerabdruck der Daten hinter einer Bewertung: Ereignispositionen und Mehrrenditen des Ziels."""
+    """Fingerabdruck der Daten hinter einer Bewertung (V3.11, E28, Astra N02): Ereignispositionen, Mehrrenditen des
+    Ziels, Kalender, Referenzgrenzen lo/hi/mitte und Verdachtstage des Ziels. Datenversionen stehen in datenstand."""
     e = TAB_S[(h["indikator"], h["art"])]; a = MR[(h["ziel"], h["h"])]
-    return hashlib.sha256(np.asarray(e["pos"], dtype=np.int64).tobytes() + np.nan_to_num(np.asarray(a, dtype=np.float64), nan=-9e9).tobytes()).hexdigest()[:16]
+    m = hashlib.sha256()
+    m.update(np.asarray(e["pos"], dtype=np.int64).tobytes())
+    m.update(np.nan_to_num(np.asarray(a, dtype=np.float64), nan=-9e9).tobytes())
+    m.update(np.asarray(F["kal"].values.astype("datetime64[D]").astype(np.int64)).tobytes())
+    m.update(np.asarray([e["lo"], e["hi"], e["mitte"], F["ende"]], dtype=np.int64).tobytes())
+    m.update(np.asarray(sorted(int(q) for q in sm.VERDACHT_POS.get(h["ziel"], set())), dtype=np.int64).tobytes())
+    return m.hexdigest()[:16]
+
+def datenstand():
+    """Prüfsummen der Manifeste hinter dem Lauf (Datenversionen)."""
+    out = {}
+    for name, pfad in (("main", os.path.join(ROOT, "data", "manifest.json")), ("sec", os.path.join(ROOT, "data", "sec", "manifest_sec.json")),
+                       ("neu", os.path.join(ROOT, "_daten-neu", "data", "neu", "manifest_neu.json")),
+                       ("energie", os.path.join(ROOT, "_daten-energie", "data", "hr", "manifest_energie.json"))):
+        s = sha_datei(pfad)
+        out[name] = s[:16] if s else None
+    return out
 
 def charge_pruefen(name, ch, alt, jetzt):
     """Gibt (zeilen, neu, grenze, grenze_art) zurück. zeilen: eine je registrierte Hypothese; gespeicherte endgültige Zeilen unverändert."""
-    hyps = ch.get("hypothesen", [])[:MAX_JE_CHARGE]
+    hyps = ch.get("hypothesen", [])   # Familie und Obergrenze sind vorher mit it.familie_pruefen geprüft (kein Abschneiden)
     datum = str(ch.get("charge", name))[:10]
     grenze, grenze_art = grenze_utc(ch, datum)
     gesehen = gesehen_bis(grenze)
@@ -192,10 +219,9 @@ def charge_pruefen(name, ch, alt, jetzt):
         key = f"{h.get('indikator')}|{h.get('art')}|{h.get('ziel')}|{h['h']}"
         a = alt_z.get(key)
         if a is not None and a.get("status") in ENDGUELTIG:
-            a = dict(a); a["_h"] = h
-            if a["status"] == "bewertet":
-                a.setdefault("bewertet_utc", alt.get("bewertet_utc"))
-                a.setdefault("methodenstand", alt.get("verfassung", "V3.10"))
+            if a.get("id") not in (None, h.get("id")):
+                raise it.IntegritaetsFehler(f"Charge {name}: gespeicherte Zeile {key} gehört zu id {a.get('id')}, registriert ist {h.get('id')}")
+            a = dict(a); a["_h"] = h; a["_fest"] = True   # endgültige Zeile: wird unverändert zurückgeschrieben
             zeilen.append(a); continue
         z = {"id": h.get("id"), "schluessel": key, "mechanismus": h.get("mechanismus"), "literatur": h.get("literatur"), "_h": h}
         if h.get("erwartung", "positiv") != "positiv" or h["h"] not in sm.HORIZONTE or h.get("ziel") not in sm.ZIELE \
@@ -221,22 +247,27 @@ def charge_pruefen(name, ch, alt, jetzt):
 
 def holm_familie(zeilen):
     """Holm über die registrierte Familie; nicht bewertete Hypothesen zählen mit p = 1."""
-    ps = [float(z["p_f5"]) if z["status"] == "bewertet" else 1.0 for z in zeilen]
+    ps = [it.p_roh(z) for z in zeilen]   # aus Zähler und Nenner; nur Altbestand aus dem gespeicherten Wert
     return holm(ps) if ps else np.array([])
 
 jetzt = pd.Timestamp.now(tz="UTC")
+FEHLER = []
 for c in offen:
     name = os.path.splitext(os.path.basename(c))[0]
     ch = json.load(open(c, encoding="utf-8"))
     zp = os.path.join(LERNEN, "vorreg", f"{name}.json")
     alt = json.load(open(zp, encoding="utf-8")) if os.path.exists(zp) else None
-    zeilen, neu, grenze, grenze_art = charge_pruefen(name, ch, alt, jetzt)
+    try:
+        reg_sha = it.familie_pruefen(ch, alt, MAX_JE_CHARGE)
+        zeilen, neu, grenze, grenze_art = charge_pruefen(name, ch, alt, jetzt)
+    except it.IntegritaetsFehler as f:
+        log(f"FEHLER Charge {name}: {f}. Keine Bewertung, Ergebnisdatei unverändert."); FEHLER.append(name); continue
     if alt is not None and neu == 0:
         log(f"Charge {name}: nichts Neues (weiter wartend), Ergebnisdatei unverändert"); continue
     adj = holm_familie(zeilen)
     for z, p in zip(zeilen, adj):
         if z["status"] == "bewertet":
-            z["p_holm"] = float(p)
+            z["p_holm"] = rund(float(p))                                     # Anzeige; entschieden wird mit dem ungerundeten p
             z["v_baustein"] = bool(z.get("v_baustein")) or baustein(z, p)   # ein vergebener Baustein bleibt (Holm ist hier vorsichtig)
     bew = [(i, z) for i, z in enumerate(zeilen) if z["status"] == "bewertet"]
     if bew:
@@ -258,11 +289,20 @@ for c in offen:
         fehl = None
     for z in zeilen:
         z.pop("_h", None)
+        if z.pop("_fest", False):
+            if z.get("status") == "bewertet" and not z.get("code_hash"):
+                pass   # Altbestand ohne Hash: bleibt Zeichen für Zeichen, die Kennzeichnung steht im Kopf (altbestand)
+            continue   # endgültige Zeilen bleiben unverändert; nur p_holm und v_baustein dürfen sich oben ändern
         for k in list(z):
             z[k] = rund(z[k])
     n_b = sum(1 for z in zeilen if z.get("v_baustein"))
     vollst = not any(z["status"] == "wartet" for z in zeilen)
-    erg = {"charge": name, "verfassung": "V3.10", "methodenstand": METHODENSTAND, "familie": "V",
+    altbestand = [z.get("id") for z in zeilen if z.get("status") == "bewertet" and not z.get("p_f5_nenner")]
+    erg = {"charge": name, "verfassung": VERFASSUNG, "methodenstand": METHODENSTAND, "familie": "V",
+           "registrierung_sha": reg_sha, "datenstand": datenstand(),
+           "altbestand": altbestand, "altbestand_hinweis": ("Zeilen ohne Zähler/Nenner stammen aus einer früheren Fassung; ihr p_f5 ist "
+                                                             "nur gerundet überliefert" if altbestand else None),
+           "stufe": "D (Discovery): Auswahl, kein Fund (V3.11, E26)",
            "bewertet_utc": jetzt.strftime("%Y-%m-%dT%H:%MZ"), "erstbewertung_utc": (alt or {}).get("erstbewertung_utc") or (alt or {}).get("bewertet_utc") or jetzt.strftime("%Y-%m-%dT%H:%MZ"),
            "registriert_utc": ch.get("registriert_utc"), "gesehen_grenze_utc": grenze.strftime("%Y-%m-%dT%H:%M:%SZ"), "gesehen_grenze_art": grenze_art,
            "autor": ch.get("autor"), "kosten_pp_je_wechsel": KOSTEN, "code_hash": CODE_HASH,
@@ -271,10 +311,11 @@ for c in offen:
            "anzahl": {s: sum(1 for z in zeilen if z["status"] == s) for s in ("bewertet", "kontaminiert", "wartet", "verfallen", "ungueltig")},
            "v_bausteine": n_b, "fehlalarm_charge": rund(fehl) if fehl is not None else None, "rotationen": N_ROT_CHARGE,
            "fehlalarm_art": "Diagnose (Rotationsmodell nicht validiert), kein Teil der Entscheidregel",
-           "fund": bool(n_b >= 1),
-           "urteil": ("FUND (Familie V) – Fixierung durch Reto nötig. Siegel nicht geöffnet." if n_b else
-                      ("Kein V-Baustein. Validierung ab 2021 nicht angerührt (S4)." if vollst else
-                       "Bisher kein V-Baustein; Charge noch nicht vollständig bewertet. Validierung ab 2021 nicht angerührt (S4).")),
+           "kandidaten_stufe_d": n_b,
+           "fund": False,   # V3.11 (E26): ein Fund entsteht erst in Stufe B (Bestätigung); v_bausteine zählt Kandidaten der Stufe D
+           "urteil": ("KANDIDAT DER STUFE D (Familie V) – kein Fund; Bestätigung nur über die Finalistenfamilie (E27). Siegel nicht geöffnet." if n_b else
+                      ("Kein Kandidat der Stufe D. Validierung ab 2021 nicht angerührt (S4)." if vollst else
+                       "Bisher kein Kandidat der Stufe D; Charge noch nicht vollständig bewertet. Validierung ab 2021 nicht angerührt (S4).")),
            "hypothesen": zeilen}
     json.dump(erg, open(zp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     ip = os.path.join(LERNEN, "index.json")
@@ -282,7 +323,9 @@ for c in offen:
         idx = json.load(open(ip, encoding="utf-8"))
         idx.setdefault("vorreg", [])
         idx["vorreg"] = [v for v in idx["vorreg"] if v.get("charge") != name] + [
-            {"charge": name, "datei": f"vorreg/{name}.json", "v_bausteine": n_b, "fund": bool(n_b >= 1), "vollstaendig": vollst, "in_db": False}]
+            {"charge": name, "datei": f"vorreg/{name}.json", "v_bausteine": n_b, "fund": False, "vollstaendig": vollst, "in_db": False}]
         json.dump(idx, open(ip, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     log(f"Charge {name}: {erg['anzahl']}, V-Bausteine {n_b}, Fehlalarm {erg['fehlalarm_charge']}, vollständig {vollst}")
 log(f"fertig in {(time.time() - t0) / 60:.1f} min")
+if FEHLER:
+    log(f"Integritätsfehler in {len(FEHLER)} Charge(n): {', '.join(FEHLER)}"); sys.exit(1)
