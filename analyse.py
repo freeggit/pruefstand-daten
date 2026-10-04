@@ -218,7 +218,7 @@ def strategie(kand, mr):
         kurve[ende] += x - KOSTEN
     kum = np.cumsum(kurve); dd = float(np.max(np.maximum.accumulate(kum) - kum)) if N else 0.0
     jahre = N / 252
-    out = {"netto_pp_pa": rund(summe / jahre), "brutto_pp_pa": rund((summe + wechsel * KOSTEN) / jahre), "wechsel_pa": rund(wechsel / jahre),
+    out = {"netto_pp_pa": rund(summe / jahre), "_netto_roh": summe / jahre, "brutto_pp_pa": rund((summe + wechsel * KOSTEN) / jahre), "wechsel_pa": rund(wechsel / jahre),
            "wechsel": wechsel, "max_rueckstand_pp": rund(dd), "jahre": rund(jahre, 1)}
     out.update(kosten_steuer_sicht(summe + wechsel * KOSTEN, wechsel, jahre))
     return out
@@ -250,13 +250,18 @@ def simulation(alle, tab):
         d = sm.suchlauf(tab, mrs)
         out["placebo"].append({str(k): strategie(top_k(d, k), mrs["S"][0]) for k in (5, 10, 20)})
     for k in (5, 10, 20):
-        pl = [p[str(k)]["netto_pp_pa"] for p in out["placebo"]]
+        pl = [p[str(k)]["_netto_roh"] for p in out["placebo"]]   # V3.11 (E28, Astra N10): Rangvergleich mit ungerundeten Werten
         out["k"][str(k)]["placebo_netto_pp_pa"] = {"median": rund(float(np.median(pl))), "max": rund(float(np.max(pl))), "min": rund(float(np.min(pl)))}
-        out["k"][str(k)]["echt_ueber_allen_placebos"] = bool(out["k"][str(k)]["netto_pp_pa"] > max(pl))
-        ueber = int(sum(1 for x in pl if x >= out["k"][str(k)]["netto_pp_pa"]))
+        echt = out["k"][str(k)]["_netto_roh"]
+        out["k"][str(k)]["echt_ueber_allen_placebos"] = bool(echt > max(pl))
+        ueber = int(sum(1 for x in pl if x >= echt))
         out["k"][str(k)].update({"placebo_ueberschreitungen": ueber, "placebo_n": len(pl), "p_sim": rund((1 + ueber) / (1 + len(pl)), 4)})
-    ps = [out["k"][str(k)]["p_sim"] for k in (5, 10, 20)]
-    out["p_sim_min_bonferroni_ueber_k"] = rund(min(1.0, 3 * min(ps)), 4)
+    ps = [(1 + out["k"][str(k)]["placebo_ueberschreitungen"]) / (1 + out["k"][str(k)]["placebo_n"]) for k in (5, 10, 20)]
+    out["p_sim_min_bonferroni_ueber_k"] = rund(min(1.0, 3 * min(ps)), 4)   # aus den ungerundeten p; erst das Ergebnis wird gerundet
+    out["p_sim_hinweis"] = (f"Mit {N_PLAC_SIM} Placebos ist der kleinste mögliche Wert nach Bonferroni {rund(3 / (1 + N_PLAC_SIM), 4)}; "
+                            "ein Urteil auf 5% über drei K ist damit nicht möglich. Reine Diagnose.")
+    for d in list(out["k"].values()) + [x for p in out["placebo"] for x in p.values()]:
+        d.pop("_netto_roh", None)
     out["art"] = ("Additive Diagnostik, keine Vermögenssimulation: Mehrrenditen in pp werden addiert (kein Zinseszins, keine "
                   "Ausführungs- und Liquiditätseffekte). Massstab vor dem 28.3.2008 ist ein Ersatz (55% SPY + 45% EFA), nicht ACWI. "
                   "Kein Beleg für das Ziel von 3 pp p.a.; p_sim = (1 + Placebos mindestens so gut wie echt) / (1 + Placebos).")
