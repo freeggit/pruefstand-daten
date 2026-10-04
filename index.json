@@ -1290,9 +1290,16 @@
    "lauf_id": "L20261004T124314Z",
    "s_dokument": "suche/S0022.json",
    "ergebnis_hash": "3a4f9d13d1794761"
+  },
+  {
+   "datei": "suche/laeufe/L20261004T161347Z.json",
+   "lauf_id": "L20261004T161347Z",
+   "s_dokument": "suche/S0022.json",
+   "ergebnis_hash": "3a4f9d13d1794761",
+   "gesamt": "vollständig"
   }
  ],
- "letzter_lauf_utc": "2026-10-04T15:27Z",
+ "letzter_lauf_utc": "2026-10-04T18:32Z",
  "letztes_vollarchiv": "suche/S0022_alle.csv.gz",
  "letzter_ergebnis_hash": "3a4f9d13d1794761",
  "konflikte": [
