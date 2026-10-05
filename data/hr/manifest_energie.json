@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-10-04T02:44:28Z",
+ "erzeugt_utc": "2026-10-05T02:44:12Z",
  "reihen": {
   "energie:preis_ch": {
    "dateien": [
@@ -17,11 +17,9 @@
     "data/hr/energie/preis_ch_2026.csv.gz"
    ],
    "zeilen": 103078,
-   "letzte": "2026-10-04T21:00:00Z",
-   "einheit": "EUR/MWh",
-   "aufloesung": "1h",
-   "quelle": "energy-charts.info",
-   "erste": "2015-01-01T00:00:00Z"
+   "fehler": "2026: HTTP Error 503: Service Unavailable",
+   "erste": "2015-01-01T00:00:00Z",
+   "letzte": "2026-10-04T21:00:00Z"
   },
   "energie:erzeugung_ch": {
    "dateien": [
@@ -39,10 +37,9 @@
     "data/hr/energie/erzeugung_ch_2026.csv.gz"
    ],
    "zeilen": 103056,
-   "letzte": "2026-10-03T23:00:00Z",
-   "einheit": "MW",
-   "quelle": "energy-charts.info",
-   "erste": "2015-01-01T00:00:00Z"
+   "fehler": "2026: HTTP Error 503: Service Unavailable",
+   "erste": "2015-01-01T00:00:00Z",
+   "letzte": "2026-10-03T23:00:00Z"
   },
   "energie:preis_de": {
    "dateien": [
@@ -60,11 +57,9 @@
     "data/hr/energie/preis_de_2026.csv.gz"
    ],
    "zeilen": 129646,
-   "letzte": "2026-10-04T21:45:00Z",
-   "einheit": "EUR/MWh",
-   "aufloesung": "1h",
-   "quelle": "energy-charts.info",
-   "erste": "2015-01-01T00:00:00Z"
+   "fehler": "2026: HTTP Error 503: Service Unavailable",
+   "erste": "2015-01-01T00:00:00Z",
+   "letzte": "2026-10-04T21:45:00Z"
   },
   "energie:erzeugung_de": {
    "dateien": [
@@ -82,10 +77,9 @@
     "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
    "zeilen": 412228,
-   "letzte": "2026-10-04T00:45:00Z",
-   "einheit": "MW",
-   "quelle": "energy-charts.info",
-   "erste": "2015-01-01T00:00:00Z"
+   "fehler": "2026: HTTP Error 503: Service Unavailable",
+   "erste": "2015-01-01T00:00:00Z",
+   "letzte": "2026-10-04T00:45:00Z"
   }
  },
  "teile": [
