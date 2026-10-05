@@ -22,6 +22,15 @@ from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, ROOT)
+from integritaet import ohne_nan  # noqa: E402
+
+def schreibe_json(obj, pfad):
+    """Strenges JSON: NaN und unendliche Werte werden zu null (5.10.2026, Reto: «NaN-Korrektur wie vorgeschlagen»).
+    Anlass: S0022 enthielt NaN in bausteine[0].t_bestaetigung_etf und liess sich nicht in die Datenbank übernehmen."""
+    with open(pfad, "w", encoding="utf-8") as f:
+        json.dump(ohne_nan(obj), f, ensure_ascii=False, indent=1, allow_nan=False)
+
 LERNEN = os.path.join(ROOT, "_lernen")
 LAUF = os.environ.get("PS_LAUF", "/tmp/lauf")
 os.makedirs(LAUF, exist_ok=True)
@@ -63,7 +72,7 @@ def laufeintrag(e):
     e.setdefault("stufen", {})
     for st in ("analyse", "familie_v", "einchecken"):
         e["stufen"].setdefault(st, "ausstehend")
-    json.dump(e, open(os.path.join(LERNEN, "suche", "laeufe", f"{LAUF_ID}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    schreibe_json(e, os.path.join(LERNEN, "suche", "laeufe", f"{LAUF_ID}.json"))
     return e
 
 def basis(pfad):
@@ -108,7 +117,7 @@ if rc != 0:
     except (OSError, ValueError):
         alt = {}
     alt["letzter_versuch"] = {"lauf_id": LAUF_ID, "status": "fehlgeschlagen", "zeit_utc": BEGINN.strftime("%Y-%m-%dT%H:%MZ")}
-    json.dump(alt, open(lp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    schreibe_json(alt, lp)
     sys.exit(rc)
 
 zus = json.load(open(os.path.join(LAUF, "suchlauf_zusammenfassung.json")))
@@ -163,19 +172,19 @@ eintrag = laufeintrag({
     "anlass_s": ("neue Hypothesen" if zus["kandidaten_neu"] > 0 else "geänderter Code" if code_neu else
                  "geänderte Ergebnisse (Datenstand)" if ergebnis_neu else "keiner"),
 })
-json.dump({"zeit_utc": jetzt.strftime("%Y-%m-%dT%H:%MZ"), "lauf_id": LAUF_ID, "verfassung": VERFASSUNG, **herkunft, "ergebnis_hash": ergebnis_hash,
+schreibe_json({"zeit_utc": jetzt.strftime("%Y-%m-%dT%H:%MZ"), "lauf_id": LAUF_ID, "verfassung": VERFASSUNG, **herkunft, "ergebnis_hash": ergebnis_hash,
            "kandidaten": zus["kandidaten"], "kandidaten_neu": zus["kandidaten_neu"], "huerde_t": zus["huerde_t"],
            "fund": False,   # V3.11 (E26): die Discovery wählt nur aus; ein Fund entsteht erst in Stufe B
            "kandidaten_stufe_d": len(zus["bausteine"]), "p_lauf": zus.get("p_lauf"), "bausteine": len(zus["bausteine"]),
            "stufen": eintrag["stufen"], "laufeintrag": f"suche/laeufe/{LAUF_ID}.json",
            "reihen_entfallen_gegen_vorlauf": entfallen, "reihen_neu_gegen_vorlauf": neu_dabei},
-          open(os.path.join(LERNEN, "suche", "letzter_lauf.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          os.path.join(LERNEN, "suche", "letzter_lauf.json"))
 index.setdefault("laeufe", []).append({"datei": f"suche/laeufe/{LAUF_ID}.json", "lauf_id": LAUF_ID,
                                          "s_dokument": eintrag["ausgaben"]["s_dokument"], "ergebnis_hash": ergebnis_hash})
 index["reihen_letzter_suchlauf"] = zus["indikatoren"]
 index["letzter_lauf_utc"] = jetzt.strftime("%Y-%m-%dT%H:%MZ")
 if not s_schreiben:
-    json.dump(index, open(ip, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    schreibe_json(index, ip)
     print(f"Lauf {LAUF_ID}: keine neuen Hypothesen, Code und Ergebnisse unverändert. Laufeintrag geschrieben, kein neues S-Dokument "
           f"(gilt weiter: {letzter_s})."); sys.exit(0)
 
@@ -249,7 +258,7 @@ S = {
     "dauer_min": zus.get("dauer_min"),
 }
 name = f"S{nr:04d}"
-json.dump(S, open(os.path.join(LERNEN, "suche", f"{name}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+schreibe_json(S, os.path.join(LERNEN, "suche", f"{name}.json"))
 shutil.copy(os.path.join(LAUF, "hypothesen.txt.gz"), os.path.join(LERNEN, "hypothesen.txt.gz"))
 ue = open(os.path.join(LAUF, "suchlauf_ueberlebende.csv"), encoding="utf-8").read().splitlines()
 open(os.path.join(LERNEN, "suche", f"{name}_ueberlebende.csv"), "w", encoding="utf-8").write("\n".join(ue[:201]) + "\n")
@@ -264,6 +273,6 @@ index["letzter_ergebnis_hash"] = ergebnis_hash
 index["letzter_suchlauf_utc"] = jetzt.strftime("%Y-%m-%dT%H:%MZ")
 index["letzter_code_hash"] = code_hash
 index["methode"] = zus.get("methode", "M4")
-json.dump(index, open(ip, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+schreibe_json(index, ip)
 print(f"{name}: {zus['kandidaten']} Kandidaten, {zus['kandidaten_neu']} neu, kumuliert {zus['kandidaten_kumuliert']}, "
       f"Hürde {zus['huerde_t']}, Urteil: {urteil}")
