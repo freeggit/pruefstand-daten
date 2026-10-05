@@ -84,6 +84,16 @@ offen = copy.deepcopy(fertig); offen["hypothesen"][1] = {"schluessel": "k2", "st
 ok(it.endurteil_geaendert(offen, fertig) == [], "N04 wartende Zeile darf bewertet werden")
 ok(len(it.endurteil_geaendert(fertig, offen)) >= 1, "N04 bewertete Zeile darf nicht wieder warten")
 
+# 6b NaN und unendliche Werte werden zu null (Betriebslauf 27: S0022 liess sich nicht in die Datenbank übernehmen)
+roh = {"a": float("nan"), "b": [1.5, float("inf"), {"c": float("-inf"), "d": "NaN", "e": 0.0}], "f": None, "g": 3}
+rein = it.ohne_nan(roh)
+ok(rein == {"a": None, "b": [1.5, None, {"c": None, "d": "NaN", "e": 0.0}], "f": None, "g": 3}, "NaN und unendlich werden zu None, alles andere bleibt")
+ok("NaN" not in json.dumps(rein, allow_nan=False).replace('"NaN"', ""), "strenges JSON ohne NaN schreibbar")
+try:
+    json.dumps(roh, allow_nan=False); raise AssertionError("Gegenprobe: NaN hätte abgewiesen werden müssen")
+except ValueError:
+    print("ok  Gegenprobe: ohne Bereinigung weist strenges JSON die Daten ab")
+
 # 7 N04 im Wegwerf-Repo: (a) Textkonflikt, (b) kein Textkonflikt – das veröffentlichte Endurteil bleibt in beiden Fällen
 def g(d, *a):
     r = subprocess.run(["git", "-C", d, *a], capture_output=True, text=True)
