@@ -3063,18 +3063,6 @@
   "aufgenommen_utc": "2026-10-05T09:37:18Z"
  },
  {
-  "id": "eia_rohoel_lagerbestaende_woechentlich",
-  "name": "EIA Wochenbericht Rohoellager (mit Publikationsfrist)",
-  "url": "https://api.eia.gov/v2/petroleum/stoc/wstk/data/",
-  "domain": "api.eia.gov",
-  "bereich": "Rohstoffe und Logistik",
-  "status": "kandidat",
-  "prioritaet": "hoch",
-  "mechanismus": "Ueberraschungen bei Lagerbestaenden bewegen den Oelpreis und damit XLE/USO; unabhaengige Quelle fuer den Mechanismus von DCOILWTICO (L1, Replikation von DCOILWTICO -> IBB/XLV).",
-  "grund": "Replikation unabhaengige Quelle (L1) bzw. Staat/Rohstoffe, Lernrunde 2026-10-05",
-  "aufgenommen_utc": "2026-10-05T09:37:18Z"
- },
- {
   "id": "fda_lebensmittel_rueckrufe_enforcement",
   "name": "FDA Enforcement Reports Lebensmittel-Rueckrufe",
   "url": "https://api.fda.gov/food/enforcement.json?limit=1000",
@@ -3087,27 +3075,39 @@
   "aufgenommen_utc": "2026-10-05T09:37:30Z"
  },
  {
-  "id": "finra_short_volume_taeglich",
-  "name": "FINRA Regulation SHO Tages-Leerverkaufsvolumen (aggregiert)",
-  "url": "https://cdn.finra.org/equity/regsho/daily/CNMSshvol20200102.txt",
-  "domain": "cdn.finra.org",
-  "bereich": "Positionierung",
+  "id": "usgs_mississippi_pegelstand_taeglich",
+  "name": "USGS Wasserstand Mississippi (Pegel St. Louis/Memphis, Tageswerte)",
+  "url": "https://waterservices.usgs.gov/nwis/dv/?format=json&sites=07010000&parameterCd=00065",
+  "domain": "waterservices.usgs.gov",
+  "bereich": "Rohstoffe und Logistik",
   "status": "kandidat",
   "prioritaet": "normal",
-  "mechanismus": "Ein ungewoehnlich hoher Leerverkaufsanteil zeigt starke Absicherung oder Pessimismus und geht oft mit Gegenbewegungen (Short Covering) im Gesamtmarkt einher.",
-  "grund": "Lernrunde 2026-10-05: Vorrat auf 15 aufgefuellt (Zusatz Vorrat)",
-  "aufgenommen_utc": "2026-10-05T09:37:30Z"
+  "mechanismus": "Niedrigwasser verteuert und begrenzt den Frachttransport von Agrargütern auf dem Mississippi und beeinflusst kurzfristig Agrarrohstoffe (DBA).",
+  "grund": "Lernrunde 2026-10-05: neuer Bereich Natur/Logistik/Aufmerksamkeit; Vorrat auf 15",
+  "aufgenommen_utc": "2026-10-05T09:37:52Z"
  },
  {
-  "id": "sp_indexaufnahmen_aenderungen",
-  "name": "S&P-500-Indexaenderungen mit Ankuendigungsdatum (Wikipedia-Liste)",
-  "url": "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
-  "domain": "en.wikipedia.org",
-  "bereich": "Firmenereignisse",
+  "id": "tsa_passagierzahlen_taeglich",
+  "name": "TSA Passagierkontrollen (Tageswerte, ab 2019)",
+  "url": "https://www.tsa.gov/travel/passenger-volumes",
+  "domain": "tsa.gov",
+  "bereich": "Aufmerksamkeit",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Abrupte Veraenderungen im Flugverkehr zeigen Konsum- und Reiseverhalten und bewegen Reise-/Konsumsektoren kurzfristig (Historie kurz, nur Information).",
+  "grund": "Lernrunde 2026-10-05: neuer Bereich Natur/Logistik/Aufmerksamkeit; Vorrat auf 15",
+  "aufgenommen_utc": "2026-10-05T09:37:52Z"
+ },
+ {
+  "id": "nhc_atlantik_hurrikan_ereignistage",
+  "name": "NOAA HURDAT2 Atlantik-Hurrikane (Landfall-Tage seit 1851)",
+  "url": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2023-051124.txt",
+  "domain": "nhc.noaa.gov",
+  "bereich": "Natur",
   "status": "kandidat",
   "prioritaet": "normal",
-  "mechanismus": "Indexaufnahmen loesen Kaeufe passiver Fonds aus (Indexeffekt) und bewegen kurzfristig den betroffenen Sektor; Effekt nach Publikation oft schwaecher.",
-  "grund": "Lernrunde 2026-10-05: Vorrat auf 15 aufgefuellt (Zusatz Vorrat)",
-  "aufgenommen_utc": "2026-10-05T09:37:30Z"
+  "mechanismus": "Hurrikane im Golf von Mexiko unterbrechen Oel- und Gasfoerderung und Raffinerien und bewegen kurzfristig Energiepreise, XLE und UNG.",
+  "grund": "Lernrunde 2026-10-05: neuer Bereich Natur/Logistik/Aufmerksamkeit; Vorrat auf 15",
+  "aufgenommen_utc": "2026-10-05T09:37:52Z"
  }
 ]
