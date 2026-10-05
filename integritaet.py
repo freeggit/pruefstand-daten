@@ -18,6 +18,18 @@ class IntegritaetsFehler(Exception):
     pass
 
 
+def ohne_nan(o):
+    """Ersetzt NaN und unendliche Werte durch None, in beliebig verschachtelten Listen und Wörterbüchern. JSON kennt
+    kein NaN; eine Datei mit NaN lässt sich nicht in die Datenbank übernehmen (Betriebslauf 27, S0022, 5.10.2026)."""
+    if isinstance(o, float):
+        return None if (o != o or o in (float("inf"), float("-inf"))) else o
+    if isinstance(o, dict):
+        return {k: ohne_nan(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [ohne_nan(v) for v in o]
+    return o
+
+
 def _h(h):
     try:
         hh = int(h.get("h", 0))
