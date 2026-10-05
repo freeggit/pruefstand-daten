@@ -3075,18 +3075,6 @@
   "aufgenommen_utc": "2026-10-05T09:37:30Z"
  },
  {
-  "id": "usgs_mississippi_pegelstand_taeglich",
-  "name": "USGS Wasserstand Mississippi (Pegel St. Louis/Memphis, Tageswerte)",
-  "url": "https://waterservices.usgs.gov/nwis/dv/?format=json&sites=07010000&parameterCd=00065",
-  "domain": "waterservices.usgs.gov",
-  "bereich": "Rohstoffe und Logistik",
-  "status": "kandidat",
-  "prioritaet": "normal",
-  "mechanismus": "Niedrigwasser verteuert und begrenzt den Frachttransport von Agrargütern auf dem Mississippi und beeinflusst kurzfristig Agrarrohstoffe (DBA).",
-  "grund": "Lernrunde 2026-10-05: neuer Bereich Natur/Logistik/Aufmerksamkeit; Vorrat auf 15",
-  "aufgenommen_utc": "2026-10-05T09:37:52Z"
- },
- {
   "id": "tsa_passagierzahlen_taeglich",
   "name": "TSA Passagierkontrollen (Tageswerte, ab 2019)",
   "url": "https://www.tsa.gov/travel/passenger-volumes",
@@ -3099,15 +3087,27 @@
   "aufgenommen_utc": "2026-10-05T09:37:52Z"
  },
  {
-  "id": "nhc_atlantik_hurrikan_ereignistage",
-  "name": "NOAA HURDAT2 Atlantik-Hurrikane (Landfall-Tage seit 1851)",
-  "url": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2023-051124.txt",
-  "domain": "nhc.noaa.gov",
-  "bereich": "Natur",
+  "id": "eia_raffinerieauslastung_woechentlich",
+  "name": "EIA Raffinerieauslastung wöchentlich (mit Publikationsfrist)",
+  "url": "https://api.eia.gov/v2/petroleum/pnp/wiup/data/",
+  "domain": "api.eia.gov",
+  "bereich": "Rohstoffe und Logistik",
   "status": "kandidat",
   "prioritaet": "normal",
-  "mechanismus": "Hurrikane im Golf von Mexiko unterbrechen Oel- und Gasfoerderung und Raffinerien und bewegen kurzfristig Energiepreise, XLE und UNG.",
-  "grund": "Lernrunde 2026-10-05: neuer Bereich Natur/Logistik/Aufmerksamkeit; Vorrat auf 15",
-  "aufgenommen_utc": "2026-10-05T09:37:52Z"
+  "mechanismus": "Ungewoehnlich tiefe Raffinerieauslastung verknappt Benzin und Diesel und bewegt kurzfristig Energiesektor (XLE) und Oel gegenueber dem Weltindex.",
+  "grund": "Lernrunde 2026-10-05: Vorrat auf 15",
+  "aufgenommen_utc": "2026-10-05T09:38:09Z"
+ },
+ {
+  "id": "cboe_put_call_ratio_taeglich",
+  "name": "Cboe Put/Call-Verhaeltnis (Tageswerte, Gesamtmarkt)",
+  "url": "https://cdn.cboe.com/resources/options/volume_and_call_put_ratios/totalpc.csv",
+  "domain": "cdn.cboe.com",
+  "bereich": "Positionierung",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Extrem hohe Put-Nachfrage zeigt Absicherungsdruck und Pessimismus; kurzfristig folgen oft Gegenbewegungen bei SPY und Sektoren.",
+  "grund": "Lernrunde 2026-10-05: Vorrat auf 15",
+  "aufgenommen_utc": "2026-10-05T09:38:09Z"
  }
 ]
