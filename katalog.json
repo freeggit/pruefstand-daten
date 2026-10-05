@@ -3056,11 +3056,12 @@
   "url": "https://api.fda.gov/device/enforcement.json?limit=1000",
   "domain": "api.fda.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Rueckrufe bei Medizingeraeten treffen Gesundheitsausruester und koennen den Gesundheitssektor kurzfristig belasten.",
-  "grund": "Lernrunde 2026-10-05: Firmenereignisse erste Prioritaet (Zusatz 8)",
-  "aufgenommen_utc": "2026-10-05T09:37:18Z"
+  "grund": "K6 verletzt: Duplikat, fda_ruckrufe deckt device/enforcement.json bereits als eigene Kategorie-Reihe ab.",
+  "aufgenommen_utc": "2026-10-05T09:37:18Z",
+  "geprueft_utc": "2026-10-05T12:31Z"
  },
  {
   "id": "fda_lebensmittel_rueckrufe_enforcement",
@@ -3068,11 +3069,12 @@
   "url": "https://api.fda.gov/food/enforcement.json?limit=1000",
   "domain": "api.fda.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Grosse Lebensmittelrueckrufe belasten Konsumgueter-Basisgueter (XLP) kurzfristig durch Haftungs- und Imagerisiko.",
-  "grund": "Lernrunde 2026-10-05: Vorrat auf 15 aufgefuellt (Zusatz Vorrat)",
-  "aufgenommen_utc": "2026-10-05T09:37:30Z"
+  "grund": "K6 verletzt: Duplikat, fda_ruckrufe deckt food/enforcement.json bereits als eigene Kategorie-Reihe ab.",
+  "aufgenommen_utc": "2026-10-05T09:37:30Z",
+  "geprueft_utc": "2026-10-05T12:31Z"
  },
  {
   "id": "tsa_passagierzahlen_taeglich",
@@ -3104,10 +3106,11 @@
   "url": "https://cdn.cboe.com/resources/options/volume_and_call_put_ratios/totalpc.csv",
   "domain": "cdn.cboe.com",
   "bereich": "Positionierung",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Extrem hohe Put-Nachfrage zeigt Absicherungsdruck und Pessimismus; kurzfristig folgen oft Gegenbewegungen bei SPY und Sektoren.",
-  "grund": "Lernrunde 2026-10-05: Vorrat auf 15",
-  "aufgenommen_utc": "2026-10-05T09:38:09Z"
+  "grund": "K5 verletzt: Test 2026-10-05T12:31Z, totalpc.csv endet 2019-10-04 (nicht fortgeschrieben).",
+  "aufgenommen_utc": "2026-10-05T09:38:09Z",
+  "geprueft_utc": "2026-10-05T12:31Z"
  }
 ]
