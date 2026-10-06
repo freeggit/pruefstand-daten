@@ -1,0 +1,1695 @@
+{
+ "regel": "E31: erste belegte Rechnung und Veröffentlichung je Grundreihe; Kennzeichnung, kein Ausschluss",
+ "grundreihen": {
+  "BAA10Y": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "DCOILWTICO": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "DEXSZUS": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "DGS10": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "DHHNGSP": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "DTWEXBGS": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "SP500": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "T10Y2Y": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "T10YIE": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "USEPUINDXD": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "VIXCLS": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "idx_dollar_stark": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_energiepreise": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_geldmarkt_straff": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_insider_stimmung": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_kreditstress": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_krisenaufmerksamkeit": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_liquiditaet_knapp": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_unsicherheit": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_volatilitaet": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "idx_zinsanstieg": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "neu_bitcoin_onchain_gebuehren": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_bitcoin_onchain_hashrate": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_bitcoin_onchain_transaktionen": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_boe_bankrate_aenderungstage_aenderungstage": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_boe_sonia_sonia": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_boj_call_rate_call_rate": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_brasilien_selic_entscheide_aenderungstage": {
+   "erst_dokument": "S0016",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 20:13 (Europe/Zurich)",
+   "beleg": "suche/S0016_alle.csv.gz"
+  },
+  "neu_bundesbank_umlauf_bund10y": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_bundesbank_umlauf_bund2y": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_cboe_skew_skew": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_cboe_vix3m_vix3m": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_cboe_vix9d_vix9d": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_cboe_vvix_vvix": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_clinicaltrials_ergebnisse_ergebnisse_industrie": {
+   "erst_dokument": "S0018",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
+   "beleg": "suche/S0018_alle.csv.gz"
+  },
+  "neu_clinicaltrials_ergebnisse_ergebnisse_phase3": {
+   "erst_dokument": "S0018",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
+   "beleg": "suche/S0018_alle.csv.gz"
+  },
+  "neu_cpsc_ruckrufe_ruckrufe": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_ecb_fx_eurchf": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_ecb_fx_eurcny": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_ecb_fx_eurjpy": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_eu_boersenfeiertage_geschlossen": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_fda_ruckrufe_arzneimittel": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fda_ruckrufe_lebensmittel": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fda_ruckrufe_medizinprodukte": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fda_zulassungen_zulassungen": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fdic_bankausfaelle_anzahl": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fedregister_ams_agrarmarkt_anzahl": {
+   "erst_dokument": "S0017",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 09:29 (Europe/Zurich)",
+   "beleg": "suche/S0017_alle.csv.gz"
+  },
+  "neu_fedregister_aphis_agrar_anzahl": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "neu_fedregister_aufsicht_antitrust": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fedregister_aufsicht_ftc": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fedregister_aufsicht_sec": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_fedregister_bankaufsicht_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_bis_exportkontrolle_anzahl": {
+   "erst_dokument": "S0017",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 09:29 (Europe/Zurich)",
+   "beleg": "suche/S0017_alle.csv.gz"
+  },
+  "neu_fedregister_cbp_zoll_anzahl": {
+   "erst_dokument": "S0018",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
+   "beleg": "suche/S0018_alle.csv.gz"
+  },
+  "neu_fedregister_cftc_regeln_anzahl": {
+   "erst_dokument": "S0018",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
+   "beleg": "suche/S0018_alle.csv.gz"
+  },
+  "neu_fedregister_cms_medicare_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_dea_regeln_anzahl": {
+   "erst_dokument": "S0018",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
+   "beleg": "suche/S0018_alle.csv.gz"
+  },
+  "neu_fedregister_dod_verteidigung_anzahl": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "neu_fedregister_doe_energie_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_doj_vergleiche_consent_decrees": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_fedregister_dot_verkehr_anzahl": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "neu_fedregister_epa_regeln_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_faa_ad_anweisungen": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_fedregister_fcc_regeln_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_fda_regeln_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_ftc_fusionen_consent_agreements": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_fedregister_fws_artenschutz_anzahl": {
+   "erst_dokument": "S0017",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 09:29 (Europe/Zurich)",
+   "beleg": "suche/S0017_alle.csv.gz"
+  },
+  "neu_fedregister_handelsschutz_verfuegungen": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_fedregister_hud_wohnen_anzahl": {
+   "erst_dokument": "S0018",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
+   "beleg": "suche/S0018_alle.csv.gz"
+  },
+  "neu_fedregister_interior_energie_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_irs_steuerregeln_anzahl": {
+   "erst_dokument": "S0017",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 09:29 (Europe/Zurich)",
+   "beleg": "suche/S0017_alle.csv.gz"
+  },
+  "neu_fedregister_nhtsa_regeln_anzahl": {
+   "erst_dokument": "S0016",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 20:13 (Europe/Zurich)",
+   "beleg": "suche/S0016_alle.csv.gz"
+  },
+  "neu_fedregister_nrc_kernenergie_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fedregister_ofac_sanktionen_anzahl": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_fedregister_phmsa_pipeline_anzahl": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_fedregister_sec_regeln_anzahl": {
+   "erst_dokument": "S0016",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 20:13 (Europe/Zurich)",
+   "beleg": "suche/S0016_alle.csv.gz"
+  },
+  "neu_fedregister_uscg_schifffahrt_anzahl": {
+   "erst_dokument": "S0017",
+   "erst_lauf": null,
+   "erst_zeit": "1.10.2026, 09:29 (Europe/Zurich)",
+   "beleg": "suche/S0017_alle.csv.gz"
+  },
+  "neu_fedregister_usda_regeln_anzahl": {
+   "erst_dokument": "S0015",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
+   "beleg": "suche/S0015_alle.csv.gz"
+  },
+  "neu_fema_katastrophenerklaerungen_anzahl": {
+   "erst_dokument": "S0016",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 20:13 (Europe/Zurich)",
+   "beleg": "suche/S0016_alle.csv.gz"
+  },
+  "neu_fema_katastrophenerklaerungen_anzahl_stuerme": {
+   "erst_dokument": "S0016",
+   "erst_lauf": null,
+   "erst_zeit": "30.9.2026, 20:13 (Europe/Zurich)",
+   "beleg": "suche/S0016_alle.csv.gz"
+  },
+  "neu_fomc_protokolle_veroeffentlichungstage_protokolle": {
+   "erst_dokument": "S0022",
+   "erst_lauf": "L20261004T124314Z",
+   "erst_zeit": "4.10.2026, 17:27 (Europe/Zurich)",
+   "beleg": "suche/S0022_alle.csv.gz"
+  },
+  "neu_fred_brent_brent": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_credit_spread_aaa": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_fred_credit_spread_baa": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_fred_dtb3_dtb3": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_effr_effr": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_equity_uncertainty_index": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_fx_lang_audusd": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_fx_lang_gbpusd": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_fx_lang_usdcad": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_implied_vol_em": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_implied_vol_gold": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_implied_vol_oel": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_propane_propan": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_treasury_lang_dgs2": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_fred_treasury_lang_dgs3mo": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_fred_usdjpy_usdjpy": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_japan_tankan_veroeffentlichung_tankan_veroeffentlichung": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_kalender_ereignisse_fomc_sitzung": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_kalender_ereignisse_opex_verfall": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_kalender_ereignisse_ustax": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_leitzins_aenderungstage_ezb": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_leitzins_aenderungstage_fomc": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_mof_jgb_zinsen_kurz": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_mof_jgb_zinsen_niveau": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_mof_jgb_zinsen_steilheit": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_msha_bergbauunfaelle_fatal": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_msha_bergbauunfaelle_gesamt": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_nhtsa_ruckrufe_anzahl": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_nhtsa_ruckrufe_einheiten_betroffen": {
+   "erst_dokument": "S0014",
+   "erst_lauf": null,
+   "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
+   "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_ntsb_luftfahrtunfaelle_fatal": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_ntsb_luftfahrtunfaelle_gesamt": {
+   "erst_dokument": "S0013",
+   "erst_lauf": null,
+   "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
+   "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_nyfed_rrp_rrp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_openmeteo_wetter_anbau_mais_guertel": {
+   "erst_dokument": "S0010",
+   "erst_lauf": null,
+   "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
+   "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_openmeteo_wetter_anbau_monsun_indien": {
+   "erst_dokument": "S0010",
+   "erst_lauf": null,
+   "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
+   "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_openmeteo_wetter_anbau_soja_mato_grosso": {
+   "erst_dokument": "S0010",
+   "erst_lauf": null,
+   "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
+   "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_quartalsende_pensionsrebalancing_quartalsende": {
+   "erst_dokument": "S0022",
+   "erst_lauf": "L20261004T124314Z",
+   "erst_zeit": "4.10.2026, 17:27 (Europe/Zurich)",
+   "beleg": "suche/S0022_alle.csv.gz"
+  },
+  "neu_snb_saron_saron": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_sp500_index_aenderungen_anzahl_aenderungen": {
+   "erst_dokument": "S0010",
+   "erst_lauf": null,
+   "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
+   "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_sp500_russell_rebalance_termine_russell_reconstitution": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_treasury_auktionen_bid_to_cover": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_treasury_debt_penny_gesamt": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_treasury_debt_penny_intragovernmental": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_treasury_debt_penny_oeffentlich_gehalten": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_treasury_tga_tga": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_treasury_yield_curve_kurz": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_turn_of_month_effekt_turn_of_month": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_us_arbeitsmarkt_termine_arbeitsmarkt": {
+   "erst_dokument": "S0010",
+   "erst_lauf": null,
+   "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
+   "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_us_boersenfeiertage_geschlossen": {
+   "erst_dokument": "S0011",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
+   "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_us_cpi_termine_cpi": {
+   "erst_dokument": "S0010",
+   "erst_lauf": null,
+   "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
+   "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_usa_wahltag_wahltag": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_usda_wasde_veroeffentlichung_wasde": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "neu_usgs_erdbeben_anzahl_m5": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_duerre": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_halbleiter": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_halbleiter_en": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_hurrikan": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_konkurs": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_oelpreis": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_oelpreis_en": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_pandemie": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_pandemie_en": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_rezession": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_rezession_en": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_streik": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_zinssatz": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wikipedia_weitere_zinssatz_en": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_kurz_ch_us": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_kurz_us_uk": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_oel_brent_wti": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_oel_gas": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_vix_kurz": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_vix_termin": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_zins_us_de": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "paar_zins_us_jp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "sec_sec_edgar_markt_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_markt_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_markt_s1": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlb_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlb_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlc_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlc_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xle_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xle_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlf_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlf_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xli_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xli_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlk_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlk_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlp_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlp_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlre_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlre_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlu_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlu_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlv_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xlv_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xly_13d": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_edgar_xly_8k": {
+   "erst_dokument": "S0020",
+   "erst_lauf": null,
+   "erst_zeit": "2.10.2026, 09:51 (Europe/Zurich)",
+   "beleg": "suche/S0020_alle.csv.gz"
+  },
+  "sec_sec_insider_markt_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_markt_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_markt_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_markt_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlb_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlb_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlb_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlb_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlc_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlc_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlc_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlc_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xle_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xle_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xle_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xle_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlf_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlf_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlf_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlf_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xli_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xli_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xli_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xli_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlk_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlk_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlk_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlk_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlp_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlp_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlp_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlp_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlre_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlre_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlre_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlre_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlu_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlu_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlu_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlu_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlv_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlv_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlv_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xlv_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xly_kaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xly_kaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xly_verkaeufer": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "sec_sec_insider_xly_verkaufwert_usd": {
+   "erst_dokument": "S0012",
+   "erst_lauf": null,
+   "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
+   "beleg": "suche/S0012_alle.csv.gz"
+  },
+  "strom_erzeugung_ch_load": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_ch_renewable_share_of_l": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_ch_residual_load": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_ch_solar": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_ch_wind_onshore": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_de_load": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_de_renewable_share_of_l": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_de_residual_load": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_de_solar": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_de_wind_offshore": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_erzeugung_de_wind_onshore": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_preis_ch": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "strom_preis_de": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_basel_regen": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_basel_temp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_basel_wind": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_basel_wolken": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_chicago_regen": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_chicago_temp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_chicago_wind": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_chicago_wolken": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_frankfurt_regen": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_frankfurt_temp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_frankfurt_wind": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_frankfurt_wolken": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_houston_regen": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_houston_temp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_houston_wind": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_houston_wolken": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_kaub_regen": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_kaub_temp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_kaub_wind": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_kaub_wolken": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_zuerich_regen": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_zuerich_temp": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_zuerich_wind": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wetter_zuerich_wolken": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_de_inflation_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_de_niedrigwasser_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_de_rezession_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_bitcoin_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_heat_wave_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_inflation_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_nestle_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_novartis_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_nvidia_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_oil_price_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_recession_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_roche_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_stock_market_crash_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_tesla_inc_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "wiki_en_ubs_spike": {
+   "erst_dokument": "S0009",
+   "erst_lauf": null,
+   "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
+   "beleg": "suche/S0009_alle.csv.gz"
+  }
+ },
+ "aufbau": {
+  "lauf_id": "L20261006T065243Z",
+  "zeit_utc": "2026-10-06T09:37Z",
+  "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
+ },
+ "stand": {
+  "lauf_id": "L20261006T065243Z",
+  "zeit_utc": "2026-10-06T09:37Z",
+  "grundreihen_n": 280
+ }
+}
