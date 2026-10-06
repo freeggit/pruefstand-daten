@@ -1,0 +1,1278 @@
+{
+ "lauf_id": "L20261006T050355Z",
+ "verfassung": "V3.11",
+ "beginn_utc": "2026-10-06T05:03:55Z",
+ "ende_suche_utc": "2026-10-06T06:26:26Z",
+ "anlass": "schedule",
+ "github_run_id": "37416645053",
+ "datenstand": {
+  "commit_main": "501559077545bda48e9565b78f8bc95949ac6f8c",
+  "commit_energie": "5d532815627893b5786efc7c9f08ee28390caec5",
+  "commit_neu": "56c44010f33ca96a25369c5ed30c86c1b0a6812e",
+  "sha_manifest_main": "1082982ea3bbc23e",
+  "sha_manifest_hr": "7e05d0cd604990f0",
+  "sha_manifest_sec": "7cf61c64cbb1828a",
+  "sha_manifest_neu": "60612476d584f549",
+  "sha_manifest_energie": "65686e0c33186737"
+ },
+ "stufen": {
+  "suche": "vollständig",
+  "analyse": "vollständig",
+  "familie_v": "vollständig",
+  "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
+ },
+ "herkunft": {
+  "commit_main": "501559077545bda48e9565b78f8bc95949ac6f8c",
+  "commit_energie": "5d532815627893b5786efc7c9f08ee28390caec5",
+  "commit_neu": "56c44010f33ca96a25369c5ed30c86c1b0a6812e",
+  "commit_lernen_vorher": "cc05179d84d3d99a6d4e3663825856fb06dec2bf",
+  "code_hash": "95ed8f8524a67bd3",
+  "sha_suchmaschine": "7d21a21ccca2079f",
+  "sha_paare": "faf4e4d850ca9a00",
+  "sha_mechanismen": "4bd02c9ab975654f",
+  "sha_register_vorher": "d14d98b09b38fc3e",
+  "sha_manifest_main": "1082982ea3bbc23e",
+  "sha_manifest_neu": "60612476d584f549",
+  "placebo_laeufe": 200,
+  "umgebung": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "python": "3.12.14",
+   "btc_sha": "aab48a8798ffb779"
+  }
+ },
+ "ergebnis_hash": "d821564e04099c72",
+ "kandidaten": 349794,
+ "kandidaten_neu": 0,
+ "huerde_t": 4.35,
+ "echt_bestes_t": 4.759,
+ "p_lauf": 0.0348,
+ "kandidaten_stufe_d": 1,
+ "fehlalarmrate": 0.03,
+ "placebo_laeufe": 200,
+ "reihen": {
+  "vorhanden_n": 1092,
+  "vorlauf_n": 1046,
+  "entfallen_gegen_vorlauf": [
+   "neu_sp500_index_aenderungen_anzahl_aenderungen_d1",
+   "neu_sp500_index_aenderungen_anzahl_aenderungen_d20",
+   "neu_sp500_index_aenderungen_anzahl_aenderungen_d5",
+   "neu_sp500_index_aenderungen_anzahl_aenderungen_stand",
+   "neu_sp500_index_aenderungen_anzahl_aenderungen_z252"
+  ],
+  "neu_gegen_vorlauf": [
+   "idx_zinsanstieg_d1",
+   "idx_zinsanstieg_d20",
+   "idx_zinsanstieg_d5",
+   "idx_zinsanstieg_stand",
+   "idx_zinsanstieg_z252",
+   "neu_brasilien_selic_entscheide_aenderungstage_stand",
+   "neu_bundesbank_umlauf_bund10y_d1",
+   "neu_bundesbank_umlauf_bund10y_d20",
+   "neu_bundesbank_umlauf_bund10y_d5",
+   "neu_bundesbank_umlauf_bund10y_stand",
+   "neu_bundesbank_umlauf_bund10y_z252",
+   "neu_bundesbank_umlauf_bund2y_d1",
+   "neu_bundesbank_umlauf_bund2y_d20",
+   "neu_bundesbank_umlauf_bund2y_d5",
+   "neu_bundesbank_umlauf_bund2y_stand",
+   "neu_bundesbank_umlauf_bund2y_z252",
+   "neu_ecb_fx_eurchf_d1",
+   "neu_ecb_fx_eurchf_d20",
+   "neu_ecb_fx_eurchf_d5",
+   "neu_ecb_fx_eurchf_stand",
+   "neu_ecb_fx_eurchf_z252",
+   "neu_ecb_fx_eurcny_d1",
+   "neu_ecb_fx_eurcny_d20",
+   "neu_ecb_fx_eurcny_d5",
+   "neu_ecb_fx_eurcny_stand",
+   "neu_ecb_fx_eurcny_z252",
+   "neu_ecb_fx_eurjpy_d1",
+   "neu_ecb_fx_eurjpy_d20",
+   "neu_ecb_fx_eurjpy_d5",
+   "neu_ecb_fx_eurjpy_stand",
+   "neu_ecb_fx_eurjpy_z252",
+   "neu_openmeteo_wetter_anbau_mais_guertel_d1",
+   "neu_openmeteo_wetter_anbau_mais_guertel_d20",
+   "neu_openmeteo_wetter_anbau_mais_guertel_d5",
+   "neu_openmeteo_wetter_anbau_mais_guertel_stand",
+   "neu_openmeteo_wetter_anbau_mais_guertel_z252",
+   "neu_openmeteo_wetter_anbau_monsun_indien_d1",
+   "neu_openmeteo_wetter_anbau_monsun_indien_d20",
+   "neu_openmeteo_wetter_anbau_monsun_indien_d5",
+   "neu_openmeteo_wetter_anbau_monsun_indien_stand",
+   "neu_openmeteo_wetter_anbau_monsun_indien_z252",
+   "neu_openmeteo_wetter_anbau_soja_mato_grosso_d1",
+   "neu_openmeteo_wetter_anbau_soja_mato_grosso_d20",
+   "neu_openmeteo_wetter_anbau_soja_mato_grosso_d5",
+   "neu_openmeteo_wetter_anbau_soja_mato_grosso_stand",
+   "neu_openmeteo_wetter_anbau_soja_mato_grosso_z252",
+   "paar_zins_us_de_d1",
+   "paar_zins_us_de_d20",
+   "paar_zins_us_de_d5",
+   "paar_zins_us_de_stand",
+   "paar_zins_us_de_z252"
+  ],
+  "erwartet_und_gesperrt": {
+   "regel": "V3.11 E29: erwartete, vorhandene und ausgeschlossene Reihen je Lauf; ruhende Scout-Reihen (E8) sind planmässig nicht im Suchraum und hier nicht aufgeführt",
+   "grundreihen_vorhanden": 206,
+   "indikatoren": 1092,
+   "ausgeschlossen_n": 12,
+   "ausgeschlossen_je_grund": {
+    "Beginn nach 2015": 1,
+    "Feld fehler im Manifest": 1,
+    "gesperrt (korrekturen_neu.json)": 3,
+    "gesperrt, Komponente fehlt": 2,
+    "nicht täglich (Abstand über 3 Tage)": 3,
+    "nicht verfügbar": 1,
+    "weniger als 500 Werte bis zum Stichtag": 1
+   },
+   "ausgeschlossen": [
+    {
+     "reihe": "fred:ICSA",
+     "grund": "nicht täglich (Abstand über 3 Tage)"
+    },
+    {
+     "reihe": "fred:WALCL",
+     "grund": "nicht täglich (Abstand über 3 Tage)"
+    },
+    {
+     "reihe": "fred:WEI",
+     "grund": "nicht täglich (Abstand über 3 Tage)"
+    },
+    {
+     "reihe": "fred:BAMLH0A0HYM2",
+     "grund": "weniger als 500 Werte bis zum Stichtag"
+    },
+    {
+     "reihe": "neu:eu_safetygate_ruckrufe:meldungen",
+     "grund": "Beginn nach 2015"
+    },
+    {
+     "reihe": "neu:fda_ruckrufe:arzneimittel",
+     "grund": "gesperrt (korrekturen_neu.json)"
+    },
+    {
+     "reihe": "neu:fda_ruckrufe:lebensmittel",
+     "grund": "gesperrt (korrekturen_neu.json)"
+    },
+    {
+     "reihe": "neu:fda_ruckrufe:medizinprodukte",
+     "grund": "gesperrt (korrekturen_neu.json)"
+    },
+    {
+     "reihe": "neu:sp500_index_aenderungen:anzahl_aenderungen",
+     "grund": "Feld fehler im Manifest"
+    },
+    {
+     "reihe": "index:liquiditaet_knapp",
+     "grund": "gesperrt, Komponente fehlt: -fred:WALCL"
+    },
+    {
+     "reihe": "index:kreditstress",
+     "grund": "gesperrt, Komponente fehlt: +fred:BAMLH0A0HYM2"
+    },
+    {
+     "reihe": "bitcoin:btcusd",
+     "grund": "nicht verfügbar: Datei enthält keine Werte bis zum Stichtag (beginnt später)"
+    }
+   ],
+   "indizes_soll_ist": {
+    "liquiditaet_knapp": {
+     "soll": [
+      "-fred:WALCL",
+      "+neu:treasury_tga:tga",
+      "+neu:nyfed_rrp:rrp"
+     ],
+     "fehlt": [
+      "-fred:WALCL"
+     ],
+     "gesperrt": true
+    },
+    "kreditstress": {
+     "soll": [
+      "+fred:BAA10Y",
+      "+fred:BAMLH0A0HYM2",
+      "+neu:fred_credit_spread:baa"
+     ],
+     "fehlt": [
+      "+fred:BAMLH0A0HYM2"
+     ],
+     "gesperrt": true
+    },
+    "volatilitaet": {
+     "soll": [
+      "+fred:VIXCLS",
+      "+neu:cboe_vvix:vvix",
+      "+neu:fred_implied_vol:oel",
+      "+neu:fred_implied_vol:gold",
+      "+neu:fred_implied_vol:em"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    },
+    "unsicherheit": {
+     "soll": [
+      "+fred:USEPUINDXD",
+      "+neu:fred_equity_uncertainty:index",
+      "+neu:cboe_skew:skew"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    },
+    "energiepreise": {
+     "soll": [
+      "+fred:DCOILWTICO",
+      "+neu:fred_brent:brent",
+      "+fred:DHHNGSP",
+      "+neu:fred_propane:propan"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    },
+    "dollar_stark": {
+     "soll": [
+      "+fred:DTWEXBGS",
+      "+fred:DEXSZUS",
+      "+neu:fred_usdjpy:usdjpy",
+      "-neu:fred_fx_lang:gbpusd",
+      "-neu:fred_fx_lang:audusd",
+      "+neu:fred_fx_lang:usdcad"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    },
+    "zinsanstieg": {
+     "soll": [
+      "+fred:DGS10",
+      "+neu:fred_treasury_lang:dgs2",
+      "+neu:bundesbank_umlauf:bund10y",
+      "+neu:mof_jgb_zinsen:niveau",
+      "+fred:T10YIE"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    },
+    "geldmarkt_straff": {
+     "soll": [
+      "+neu:fred_effr:effr",
+      "+neu:fred_dtb3:dtb3",
+      "+neu:fred_treasury_lang:dgs3mo",
+      "+neu:treasury_yield_curve:kurz"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    },
+    "krisenaufmerksamkeit": {
+     "soll": [
+      "+neu:wikipedia_weitere:rezession",
+      "+neu:wikipedia_weitere:rezession_en",
+      "+neu:wikipedia_weitere:konkurs",
+      "+neu:wikipedia_weitere:pandemie",
+      "+neu:wikipedia_weitere:pandemie_en"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    },
+    "insider_stimmung": {
+     "soll": [
+      "+sec:sec_insider:markt_kaeufer",
+      "-sec:sec_insider:markt_verkaeufer",
+      "+sec:sec_insider:markt_kaufwert_usd"
+     ],
+     "fehlt": [],
+     "gesperrt": false
+    }
+   },
+   "datenmangel_regel": "Grundreihe mit mehr als 7% fehlenden Solltagen in der Discovery oder einer Lücke ab 10 Solltagen; gilt auch für daraus gebildete Paare und Indizes; im Suchraum, aber kein Finalist (E27)",
+   "datenmangel": {
+    "fred:DCOILWTICO": {
+     "fehlende_solltage_anteil": 0.1046,
+     "groesste_luecke_solltage": 5,
+     "kalender": "B"
+    },
+    "fred:DHHNGSP": {
+     "fehlende_solltage_anteil": 0.2442,
+     "groesste_luecke_solltage": 28,
+     "kalender": "B"
+    },
+    "neu:cboe_vvix:vvix": {
+     "fehlende_solltage_anteil": 0.0507,
+     "groesste_luecke_solltage": 14,
+     "kalender": "B"
+    },
+    "neu:fred_brent:brent": {
+     "fehlende_solltage_anteil": 0.0711,
+     "groesste_luecke_solltage": 6,
+     "kalender": "B"
+    },
+    "neu:fred_propane:propan": {
+     "fehlende_solltage_anteil": 0.0745,
+     "groesste_luecke_solltage": 4,
+     "kalender": "B"
+    },
+    "neu:nyfed_rrp:rrp": {
+     "fehlende_solltage_anteil": 0.5925,
+     "groesste_luecke_solltage": 858,
+     "kalender": "B"
+    },
+    "neu:treasury_auktionen:bid_to_cover": {
+     "fehlende_solltage_anteil": 0.4141,
+     "groesste_luecke_solltage": 5,
+     "kalender": "B"
+    },
+    "neu:treasury_debt_penny:intragovernmental": {
+     "fehlende_solltage_anteil": 0.204,
+     "groesste_luecke_solltage": 42,
+     "kalender": "B"
+    },
+    "neu:treasury_debt_penny:oeffentlich_gehalten": {
+     "fehlende_solltage_anteil": 0.204,
+     "groesste_luecke_solltage": 42,
+     "kalender": "B"
+    }
+   },
+   "datenmangel_reihen": [
+    "DCOILWTICO",
+    "DHHNGSP",
+    "idx_energiepreise",
+    "idx_volatilitaet",
+    "neu_cboe_vvix_vvix",
+    "neu_fred_brent_brent",
+    "neu_fred_propane_propan",
+    "neu_nyfed_rrp_rrp",
+    "neu_treasury_auktionen_bid_to_cover",
+    "neu_treasury_debt_penny_intragovernmental",
+    "neu_treasury_debt_penny_oeffentlich_gehalten",
+    "paar_oel_brent_wti",
+    "paar_oel_gas"
+   ],
+   "luecken_regel": "Änderungen über k Beobachtungen nur bei höchstens k + Toleranz Solltagen (Werktagsreihen: Toleranz 1/2/3 für k 1/5/20 wegen Feiertagen; Kalendertagsreihen: 0); Fenster höchstens 10% + 3 Solltage länger als ihre Beobachtungszahl",
+   "luecken_reihen_n": 130,
+   "luecken_gesperrte_werte": {
+    "BAA10Y": {
+     "d1": 2,
+     "d5": 1,
+     "d20": 3,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "DCOILWTICO": {
+     "d1": 169,
+     "d5": 516,
+     "d20": 1733,
+     "z252": 3188,
+     "kalender": "B"
+    },
+    "DEXSZUS": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 44,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "DGS10": {
+     "d1": 5,
+     "d5": 1,
+     "d20": 6,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "DHHNGSP": {
+     "d1": 354,
+     "d5": 677,
+     "d20": 831,
+     "z252": 901,
+     "kalender": "B"
+    },
+    "DTWEXBGS": {
+     "d1": 9,
+     "d5": 14,
+     "d20": 80,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "T10Y2Y": {
+     "d1": 3,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "VIXCLS": {
+     "d1": 4,
+     "d5": 6,
+     "d20": 28,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "idx_dollar_stark": {
+     "d1": 6,
+     "d5": 8,
+     "d20": 31,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "idx_energiepreise": {
+     "d1": 23,
+     "d5": 50,
+     "d20": 206,
+     "z252": 295,
+     "kalender": "B"
+    },
+    "idx_geldmarkt_straff": {
+     "d1": 5,
+     "d5": 1,
+     "d20": 6,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "idx_insider_stimmung": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "idx_volatilitaet": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "idx_zinsanstieg": {
+     "d1": 47,
+     "d5": 116,
+     "d20": 571,
+     "z252": 71,
+     "kalender": "B"
+    },
+    "neu_boe_sonia_sonia": {
+     "d1": 52,
+     "d5": 50,
+     "d20": 35,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_boj_call_rate_call_rate": {
+     "d1": 48,
+     "d5": 172,
+     "d20": 553,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_bundesbank_umlauf_bund10y": {
+     "d1": 46,
+     "d5": 58,
+     "d20": 214,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_bundesbank_umlauf_bund2y": {
+     "d1": 17,
+     "d5": 19,
+     "d20": 71,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_cboe_skew_skew": {
+     "d1": 5,
+     "d5": 11,
+     "d20": 50,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_cboe_vix3m_vix3m": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_cboe_vix9d_vix9d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_cboe_vvix_vvix": {
+     "d1": 10,
+     "d5": 21,
+     "d20": 50,
+     "z252": 112,
+     "kalender": "B"
+    },
+    "neu_ecb_fx_eurchf": {
+     "d1": 35,
+     "d5": 28,
+     "d20": 18,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_ecb_fx_eurcny": {
+     "d1": 35,
+     "d5": 28,
+     "d20": 18,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_ecb_fx_eurjpy": {
+     "d1": 35,
+     "d5": 28,
+     "d20": 18,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_brent_brent": {
+     "d1": 238,
+     "d5": 726,
+     "d20": 1821,
+     "z252": 2569,
+     "kalender": "B"
+    },
+    "neu_fred_credit_spread_aaa": {
+     "d1": 2,
+     "d5": 1,
+     "d20": 3,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_credit_spread_baa": {
+     "d1": 2,
+     "d5": 1,
+     "d20": 3,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_dtb3_dtb3": {
+     "d1": 5,
+     "d5": 1,
+     "d20": 6,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_fx_lang_audusd": {
+     "d1": 10,
+     "d5": 15,
+     "d20": 73,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_fx_lang_gbpusd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 44,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_fx_lang_usdcad": {
+     "d1": 6,
+     "d5": 3,
+     "d20": 24,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_implied_vol_em": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_implied_vol_gold": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_implied_vol_oel": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_propane_propan": {
+     "d1": 111,
+     "d5": 335,
+     "d20": 1570,
+     "z252": 2860,
+     "kalender": "B"
+    },
+    "neu_fred_treasury_lang_dgs2": {
+     "d1": 3,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_treasury_lang_dgs3mo": {
+     "d1": 2,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_fred_usdjpy_usdjpy": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 44,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_mof_jgb_zinsen_kurz": {
+     "d1": 80,
+     "d5": 304,
+     "d20": 779,
+     "z252": 251,
+     "kalender": "B"
+    },
+    "neu_mof_jgb_zinsen_niveau": {
+     "d1": 69,
+     "d5": 249,
+     "d20": 745,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_mof_jgb_zinsen_steilheit": {
+     "d1": 69,
+     "d5": 249,
+     "d20": 745,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_nyfed_rrp_rrp": {
+     "d1": 40,
+     "d5": 51,
+     "d20": 77,
+     "z252": 194,
+     "kalender": "B"
+    },
+    "neu_snb_saron_saron": {
+     "d1": 50,
+     "d5": 38,
+     "d20": 230,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_treasury_auktionen_bid_to_cover": {
+     "d1": 676,
+     "d5": 2224,
+     "d20": 3099,
+     "z252": 2980,
+     "kalender": "B"
+    },
+    "neu_treasury_debt_penny_gesamt": {
+     "d1": 3,
+     "d5": 4,
+     "d20": 29,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "neu_treasury_debt_penny_intragovernmental": {
+     "d1": 45,
+     "d5": 45,
+     "d20": 45,
+     "z252": 147,
+     "kalender": "B"
+    },
+    "neu_treasury_debt_penny_oeffentlich_gehalten": {
+     "d1": 45,
+     "d5": 45,
+     "d20": 45,
+     "z252": 147,
+     "kalender": "B"
+    },
+    "neu_treasury_yield_curve_kurz": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "paar_kurz_ch_us": {
+     "d1": 50,
+     "d5": 38,
+     "d20": 230,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "paar_kurz_us_uk": {
+     "d1": 52,
+     "d5": 50,
+     "d20": 35,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "paar_oel_brent_wti": {
+     "d1": 368,
+     "d5": 1105,
+     "d20": 2202,
+     "z252": 2489,
+     "kalender": "B"
+    },
+    "paar_oel_gas": {
+     "d1": 338,
+     "d5": 622,
+     "d20": 756,
+     "z252": 999,
+     "kalender": "B"
+    },
+    "paar_vix_kurz": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "paar_vix_termin": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "paar_zins_us_de": {
+     "d1": 46,
+     "d5": 58,
+     "d20": 244,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "paar_zins_us_jp": {
+     "d1": 102,
+     "d5": 271,
+     "d20": 1317,
+     "z252": 650,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_markt_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_markt_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_markt_s1": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlb_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlb_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlc_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlc_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xle_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xle_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlf_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlf_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xli_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xli_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlk_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlk_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlp_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlp_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlre_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlre_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlu_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlu_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlv_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xlv_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xly_13d": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_edgar_xly_8k": {
+     "d1": 1,
+     "d5": 0,
+     "d20": 0,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_markt_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_markt_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_markt_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_markt_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlb_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlb_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlb_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlb_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlc_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlc_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlc_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlc_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xle_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xle_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xle_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xle_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlf_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlf_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlf_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlf_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xli_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xli_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xli_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xli_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlk_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlk_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlk_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlk_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlp_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlp_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlp_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlp_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlre_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlre_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlre_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlre_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlu_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlu_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlu_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlu_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlv_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlv_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlv_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xlv_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xly_kaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xly_kaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xly_verkaeufer": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    },
+    "sec_sec_insider_xly_verkaufwert_usd": {
+     "d1": 7,
+     "d5": 8,
+     "d20": 33,
+     "z252": 0,
+     "kalender": "B"
+    }
+   }
+  },
+  "liste": "index.json Feld reihen_letzter_suchlauf"
+ },
+ "ausgaben": {
+  "s_dokument": "suche/S0025.json",
+  "s_dokument_art": "neu in diesem Lauf",
+  "vollarchiv": "suche/S0024_alle.csv.gz",
+  "vollarchiv_art": "aus einem früheren Lauf (keine neuen Schlüssel, Code unverändert)"
+ },
+ "anlass_s": "geänderte Ergebnisse (Datenstand)",
+ "ende_utc": "2026-10-06T06:46:55Z",
+ "gesamt": "vollständig"
+}

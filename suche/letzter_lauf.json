@@ -1,27 +1,27 @@
 {
- "zeit_utc": "2026-10-05T10:32Z",
- "lauf_id": "L20261005T085005Z",
+ "zeit_utc": "2026-10-06T06:26Z",
+ "lauf_id": "L20261006T050355Z",
  "verfassung": "V3.11",
- "commit_main": "95ede0961f59985704289484c78ef2e5d78481be",
- "commit_energie": "f4014076368ff068152a879e36002840ffd885e0",
- "commit_neu": "a39d05ef2fd480a53b2d8e33dc4602dc3219025a",
- "commit_lernen_vorher": "25dea09deacb563a0d5f73464a7ecf4950eabe93",
+ "commit_main": "501559077545bda48e9565b78f8bc95949ac6f8c",
+ "commit_energie": "5d532815627893b5786efc7c9f08ee28390caec5",
+ "commit_neu": "56c44010f33ca96a25369c5ed30c86c1b0a6812e",
+ "commit_lernen_vorher": "cc05179d84d3d99a6d4e3663825856fb06dec2bf",
  "code_hash": "95ed8f8524a67bd3",
  "sha_suchmaschine": "7d21a21ccca2079f",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
  "sha_register_vorher": "d14d98b09b38fc3e",
- "sha_manifest_main": "4f0d29a31e9c5d0b",
- "sha_manifest_neu": "a31d785119fb2bad",
+ "sha_manifest_main": "1082982ea3bbc23e",
+ "sha_manifest_neu": "60612476d584f549",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.3",
   "pandas": "3.0.6",
   "python": "3.12.14",
-  "btc_sha": "cea1393bc3e9dd95"
+  "btc_sha": "aab48a8798ffb779"
  },
- "ergebnis_hash": "7ac86f4c723d5f13",
- "kandidaten": 335031,
+ "ergebnis_hash": "d821564e04099c72",
+ "kandidaten": 349794,
  "kandidaten_neu": 0,
  "huerde_t": 4.35,
  "fund": false,
@@ -33,16 +33,24 @@
   "analyse": "vollständig",
   "familie_v": "vollständig",
   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-  "tests": "vollständig",
-  "siegeltest": "vollständig"
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261005T085005Z.json",
+ "laufeintrag": "suche/laeufe/L20261006T050355Z.json",
  "reihen_entfallen_gegen_vorlauf": [
+  "neu_sp500_index_aenderungen_anzahl_aenderungen_d1",
+  "neu_sp500_index_aenderungen_anzahl_aenderungen_d20",
+  "neu_sp500_index_aenderungen_anzahl_aenderungen_d5",
+  "neu_sp500_index_aenderungen_anzahl_aenderungen_stand",
+  "neu_sp500_index_aenderungen_anzahl_aenderungen_z252"
+ ],
+ "reihen_neu_gegen_vorlauf": [
   "idx_zinsanstieg_d1",
   "idx_zinsanstieg_d20",
   "idx_zinsanstieg_d5",
   "idx_zinsanstieg_stand",
   "idx_zinsanstieg_z252",
+  "neu_brasilien_selic_entscheide_aenderungstage_stand",
   "neu_bundesbank_umlauf_bund10y_d1",
   "neu_bundesbank_umlauf_bund10y_d20",
   "neu_bundesbank_umlauf_bund10y_d5",
@@ -89,6 +97,5 @@
   "paar_zins_us_de_stand",
   "paar_zins_us_de_z252"
  ],
- "reihen_neu_gegen_vorlauf": [],
  "gesamt": "vollständig"
 }
