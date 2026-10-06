@@ -41,7 +41,7 @@ Methode M3 (V3.7, 25.9.2026, zweite externe Gegenprüfung):
 - Register: Schlüssel «M3|…». M3 ist eine Fehlerkorrektur von M2 (vor Sicht auf M3-Ergebnisse festgelegt): eine
   Hypothese, die unter M2 schon zählte, zählt nicht erneut.
 """
-import gzip, hashlib, io, json, os, sys, time, urllib.request
+import gzip, hashlib, io, json, os, re, sys, time, urllib.request
 import numpy as np, pandas as pd
 
 METHODE = "M4"
@@ -533,6 +533,43 @@ _MANGEL_SET = set(MANGEL_NAMEN)
 log(f"Datenmangel: {len(DATENMANGEL)} Grundreihen, {len(MANGEL_NAMEN)} Reihen samt Paaren und Indizes; gesperrte Indizes: "
     f"{sum(1 for v in INDIZES_SOLL_IST.values() if v['gesperrt'])}; Reihen mit gesperrten Abständen: {len(LUECKEN)}")
 
+# ---- V3.12 (E30, 5.10.2026): explorative Grundreihen. Sie bleiben im Suchraum, sind gekennzeichnet und können kein
+# Finalist werden – ebenso alles, was aus ihnen gebildet ist (Paare, Indizes). Die Liste steht in explorativ.json und
+# gilt nur mit Freigabe von Reto; fehlt die Datei, ist keine Reihe explorativ. An Renditen, Hürden und Bausteinen ändert
+# die Kennzeichnung nichts.
+EXPLORATIV_REGELN, EXPLORATIV = {}, {}
+_ep = os.path.join(os.path.dirname(os.path.abspath(__file__)), "explorativ.json")
+if os.path.exists(_ep):
+    EXPLORATIV_REGELN = json.load(open(_ep, encoding="utf-8"))
+def explorativ_grund(schluessel):
+    """Grund, warum eine Grundreihe explorativ ist, sonst None."""
+    r = EXPLORATIV_REGELN
+    if schluessel in r.get("schluessel", {}):
+        return r["schluessel"][schluessel]
+    for p_, g_ in r.get("praefixe", {}).items():
+        if schluessel.startswith(p_):
+            return g_
+    for m_, g_ in r.get("muster", {}).items():
+        if re.search(m_, schluessel):
+            return g_
+    return None
+EXPLORATIV = {k: g for k in basen for g in [explorativ_grund(k)] if g}
+EXPLORATIV_NAMEN = sorted(n for n, g in HERKUNFT.items() if any(k in EXPLORATIV for k in g))
+_EXPLORATIV_SET = set(EXPLORATIV_NAMEN)
+def _grundname(indikator):
+    for suf in ("_stand", "_d1", "_d5", "_d20", "_z252"):
+        if indikator.endswith(suf):
+            return indikator[:-len(suf)]
+    return indikator
+def ist_explorativ(indikator):
+    return _grundname(indikator) in _EXPLORATIV_SET
+def bestaetigungsfaehig(indikator):
+    """E27/E30: weder explorativ noch mit Datenmangel. Reihen ohne Herkunftseintrag (Strom, Wetter, Wikipedia, Bitcoin)
+    haben keine Grundreihe in der Liste und gelten als bestätigungsfähig, solange der Datenaudit nichts anderes festhält."""
+    g = _grundname(indikator)
+    return g not in _EXPLORATIV_SET and g not in _MANGEL_SET
+log(f"Explorativ (E30): {len(EXPLORATIV)} Grundreihen, {len(EXPLORATIV_NAMEN)} Reihen samt Paaren und Indizes")
+
 # ================================================================== Ereignisse und Einstieg (einmal je Lauf)
 def ereignisse(x, art, ist_ereignis=False):
     x = x.dropna()
@@ -790,12 +827,14 @@ if __name__ == "__main__":
         fh.write(gzip.compress("\n".join(sorted(REG | set(schluessel))).encode("utf-8"), mtime=0))
     log(f"{len(roh)} Kandidaten, {len(NEU)} neu; kumuliert {KUM} (Bonferroni t {T_BONF:.2f}, nur Bericht); Hürde C t2 >= {T_C:.2f}")
     # Placebos: bestes t (Hürde A), Route C vollständig, Kandidaten für die spätere Route-A-Auswahl sichern
-    plac_max, plac_c, plac_sicher, plac_vor = [], [], [], []
+    plac_max, plac_c, plac_sicher, plac_vor, plac_max_b = [], [], [], [], []
+    _BF = {i: bestaetigungsfaehig(i) for i in ind}
     for s in range(1, N_PLACEBO + 1):
         prng = np.random.default_rng(1000 + s)
         mrs = {fam: rotiert(fam, prng)[:2] for fam in FAM}
         d = suchlauf(tab, mrs)
         plac_max.append(max_t_a(d))
+        plac_max_b.append(max_t_a(d[d.indikator.map(_BF)]))   # V3.12 (E27b): Familie der bestätigungsfähigen Kandidaten
         c_p, _ = route_c(d, mrs, prng)
         plac_c.append(c_p)
         plac_sicher.append(sichern(d))
@@ -832,6 +871,10 @@ if __name__ == "__main__":
         "kosten_pp_je_wechsel": KOSTEN, "kosten_teile": KOSTEN_TEILE,
         "indizes": INDIZES,
         "placebo_bestes_t_je_lauf": [round(x, 3) for x in plac_max],
+        # V3.12 (E27b): ungerundet, damit kein gerundeter Wert je Recheneingabe wird (Astra-Gutachten 5, Vorschlag B)
+        "placebo_bestes_t_je_lauf_roh": [float(x) for x in plac_max],
+        "placebo_bestes_t_bestaetigungsfaehig_je_lauf_roh": [float(x) for x in plac_max_b],
+        "score_e27_regel": "familienbereinigter p-Wert als Rang-Score, keine Wahrscheinlichkeit: (k + 1) / (B + 1), k = Placebo-Läufe, deren bestes t über ALLE Kandidaten der Suche mindestens so hoch ist wie das t des Kandidaten; B = Zahl der Placebo-Läufe. Die Familie wird nicht nachträglich verkleinert (E27b); die Maxima nur über bestätigungsfähige Kandidaten sind eine Zusatzangabe",
         "familien": {fam: int((echt.familie == fam).sum()) for fam in FAM},
         "echt_alle_filter_positiv": int((echt.alle & (echt.t > 0)).sum()),
         "echt_vorstufe_positiv": int(((echt.t >= T_VOR) & vorfilter_a(echt)).sum()),
@@ -886,6 +929,7 @@ if __name__ == "__main__":
         zus["kalibrierung"] = kal_erg
     echt["quelle"] = echt.indikator.map(quelle_von)
     echt["datenmangel"] = echt.indikator.map(hat_datenmangel)
+    echt["explorativ"] = echt.indikator.map(ist_explorativ)
     jq = {}
     for q, g in echt.groupby("quelle"):
         pos_ = g[(g.t > 0) & (g.n >= N_MIN)]
@@ -907,6 +951,8 @@ if __name__ == "__main__":
         "indizes_soll_ist": INDIZES_SOLL_IST,
         "datenmangel_regel": f"Grundreihe mit mehr als {MANGEL_ANTEIL:.0%} fehlenden Solltagen in der Discovery oder einer Lücke ab {MANGEL_LUECKE} Solltagen; gilt auch für daraus gebildete Paare und Indizes; im Suchraum, aber kein Finalist (E27)",
         "datenmangel": DATENMANGEL, "datenmangel_reihen": MANGEL_NAMEN,
+        "explorativ_regel": "E30: Grundreihen nach explorativ.json samt daraus gebildeten Paaren und Indizes; im Suchraum, gekennzeichnet, kein Finalist",
+        "explorativ": EXPLORATIV, "explorativ_reihen": EXPLORATIV_NAMEN,
         "luecken_regel": "Änderungen über k Beobachtungen nur bei höchstens k + Toleranz Solltagen (Werktagsreihen: Toleranz 1/2/3 für k 1/5/20 wegen Feiertagen; Kalendertagsreihen: 0); Fenster höchstens 10% + 3 Solltage länger als ihre Beobachtungszahl",
         "luecken_reihen_n": len(LUECKEN), "luecken_gesperrte_werte": dict(sorted(LUECKEN.items()))}
     zus["umgebung"] = {"numpy": np.__version__, "pandas": pd.__version__, "python": sys.version.split()[0], "btc_sha": BTC_SHA}
@@ -914,6 +960,11 @@ if __name__ == "__main__":
     zus["dauer_min"] = round((time.time() - t0) / 60, 1)
     json.dump(zus, open("suchlauf_zusammenfassung.json", "w"), indent=1)
     ue = ueber.copy()
+    _pb = np.sort(np.asarray(plac_max, dtype=float))   # ursprüngliche, ganze Familie der Suche (Astra-Gutachten 6, G6-09: keine nachträglich verkleinerte Familie)
+    ue["explorativ"] = ue.indikator.map(ist_explorativ); ue["datenmangel"] = ue.indikator.map(hat_datenmangel)
+    _fae = ~(ue.explorativ | ue.datenmangel)
+    ue["score_e27_zaehler"] = [int(len(_pb) - np.searchsorted(_pb, t, side="left")) + 1 if f else None for t, f in zip(ue.t, _fae)]
+    ue["score_e27_nenner"] = [len(_pb) + 1 if f else None for f in _fae]
     ue["ereignisse"] = [";".join(str(FAM[r.familie]["kal"][p].date()) for p in r._pos) for _, r in ue.iterrows()]
     ue.drop(columns=[c for c in ("_pos", "_r2", "_mitte") if c in ue]).to_csv("suchlauf_ueberlebende.csv", index=False)
     echt.drop(columns=[c for c in ("_pos", "_r2", "_mitte") if c in echt]).round(4).to_csv("suchlauf_echt.csv.gz", index=False)
