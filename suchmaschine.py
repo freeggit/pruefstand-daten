@@ -252,6 +252,7 @@ def regeln_fuer(basis_key, lag):
 # aus w Beobachtungen gilt nur, wenn es höchstens 10% plus 3 Solltage länger ist als w. Festgelegt vor jeder Rechnung mit dieser Regel; sie wird nie nach Ergebnissen angepasst.
 LUECKE_TOL = {1: 1, 5: 2, 20: 3}
 LUECKEN, AUSGESCHLOSSEN, INDIZES_SOLL_IST = {}, [], {}
+ABRUFFEHLER = []   # Reihen, die trotz Abruffehler im Manifest aus ihrer vorhandenen Datei gelesen wurden (Ergänzung zu E29)
 # Datenmangel (V3.11, E27/E29; Reto am 4.10.2026: «gerne variante 2 gem empfehlung» – Ursache zuerst geklärt: die Leerwerte
 # der EIA-Spotpreise stehen so in der Quelle, der Abruf ist richtig). Eine Grundreihe hat einen Datenmangel, wenn ihr in der
 # Discovery mehr als 7% der Solltage fehlen oder eine Lücke von 10 oder mehr Solltagen besteht. Üblich sind rund 4%
@@ -434,11 +435,16 @@ def lade_vertrag(basis, manifest_rel, praefix_, kurz):
     except Exception as e:
         log(f"{manifest_rel} nicht lesbar: {e}"); aus(f"{kurz}:(Manifest)", f"Manifest nicht lesbar: {str(e)[:80]}"); return 0
     for k, v in mn.get("reihen", {}).items():
-        if v.get("fehler") or not v.get("datei") or v.get("status", "aktiv") != "aktiv" or f"{kurz}:{k}" in AUSSCHLUSS:
+        # Ergänzung zu E29 (6.10.2026, Reto: «weiter gerne»): Ein Abruffehler sperrt eine Reihe nicht mehr, wenn ihre Datei
+        # vorliegt. Der Scout lässt bei einem fehlgeschlagenen Abruf die bisherige Datei unverändert; die Werte bis zum
+        # Stichtag ändern sich dadurch nicht. Alle Prüfungen an der Datei unten bleiben. Ohne Datei bleibt die Reihe gesperrt.
+        if not v.get("datei") or v.get("status", "aktiv") != "aktiv" or f"{kurz}:{k}" in AUSSCHLUSS:
             if v.get("status", "aktiv") == "aktiv" or f"{kurz}:{k}" in AUSSCHLUSS:   # ruhende Reihen (E8) sind planmässig nicht im Suchraum
                 aus(f"{kurz}:{k}", "gesperrt (korrekturen_neu.json)" if f"{kurz}:{k}" in AUSSCHLUSS else
-                    "Feld fehler im Manifest" if v.get("fehler") else "keine Datei")
+                    "Feld fehler im Manifest, keine Datei" if v.get("fehler") else "keine Datei")
             continue
+        if v.get("fehler"):
+            ABRUFFEHLER.append({"reihe": f"{kurz}:{k}", "fehler": str(v.get("fehler"))[:120], "letzter_wert": v.get("letzte")})
         try:
             d = pd.read_csv(lade(v["datei"].replace("data/", "", 1), basis))
             x = pd.Series(pd.to_numeric(d.wert, errors="coerce").values, index=pd.to_datetime(d.datum)).dropna().sort_index()
@@ -947,7 +953,7 @@ if __name__ == "__main__":
     zus["reihen_bericht"] = {
         "regel": "V3.11 E29: erwartete, vorhandene und ausgeschlossene Reihen je Lauf; ruhende Scout-Reihen (E8) sind planmässig nicht im Suchraum und hier nicht aufgeführt",
         "grundreihen_vorhanden": len(basen), "indikatoren": len(ind),
-        "ausgeschlossen_n": len(AUSGESCHLOSSEN), "ausgeschlossen_je_grund": dict(sorted(gruende.items())), "ausgeschlossen": AUSGESCHLOSSEN,
+        "abruffehler_mit_datei_n": len(ABRUFFEHLER), "abruffehler_mit_datei": ABRUFFEHLER, "ausgeschlossen_n": len(AUSGESCHLOSSEN), "ausgeschlossen_je_grund": dict(sorted(gruende.items())), "ausgeschlossen": AUSGESCHLOSSEN,
         "indizes_soll_ist": INDIZES_SOLL_IST,
         "datenmangel_regel": f"Grundreihe mit mehr als {MANGEL_ANTEIL:.0%} fehlenden Solltagen in der Discovery oder einer Lücke ab {MANGEL_LUECKE} Solltagen; gilt auch für daraus gebildete Paare und Indizes; im Suchraum, aber kein Finalist (E27)",
         "datenmangel": DATENMANGEL, "datenmangel_reihen": MANGEL_NAMEN,
@@ -963,8 +969,8 @@ if __name__ == "__main__":
     _pb = np.sort(np.asarray(plac_max, dtype=float))   # ursprüngliche, ganze Familie der Suche (Astra-Gutachten 6, G6-09: keine nachträglich verkleinerte Familie)
     ue["explorativ"] = ue.indikator.map(ist_explorativ); ue["datenmangel"] = ue.indikator.map(hat_datenmangel)
     _fae = ~(ue.explorativ | ue.datenmangel)
-    ue["score_e27_zaehler"] = [int(len(_pb) - np.searchsorted(_pb, t, side="left")) + 1 if f else None for t, f in zip(ue.t, _fae)]
-    ue["score_e27_nenner"] = [len(_pb) + 1 if f else None for f in _fae]
+    ue["score_e27_zaehler"] = pd.array([int(len(_pb) - np.searchsorted(_pb, t, side="left")) + 1 if f else None for t, f in zip(ue.t, _fae)], dtype="Int64")
+    ue["score_e27_nenner"] = pd.array([len(_pb) + 1 if f else None for f in _fae], dtype="Int64")   # ganze Zahlen (vorher «134.0»)
     ue["ereignisse"] = [";".join(str(FAM[r.familie]["kal"][p].date()) for p in r._pos) for _, r in ue.iterrows()]
     ue.drop(columns=[c for c in ("_pos", "_r2", "_mitte") if c in ue]).to_csv("suchlauf_ueberlebende.csv", index=False)
     echt.drop(columns=[c for c in ("_pos", "_r2", "_mitte") if c in echt]).round(4).to_csv("suchlauf_echt.csv.gz", index=False)
