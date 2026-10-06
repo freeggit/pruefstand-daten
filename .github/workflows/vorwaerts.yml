@@ -11,8 +11,8 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: lernen-schreiber        # schreibt wie Suche und Vorregistrierung nacheinander auf claude/lernen
-  cancel-in-progress: false
+  group: vorwaerts               # eigene Gruppe: wartet nicht auf die Suche und verdrängt keinen wartenden Lauf;
+  cancel-in-progress: false      # einchecken.py holt claude/lernen vor dem Push und mischt (wie bei der Lernrunde)
 jobs:
   vorwaerts:
     runs-on: ubuntu-24.04
