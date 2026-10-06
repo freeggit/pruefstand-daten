@@ -1,0 +1,18 @@
+{
+ "titel": "Explorative Grundreihen (Verfassung V3.11/V3.12, E30)",
+ "stand": "2026-10-05",
+ "grundsatz": "Bestätigungsfähig ist eine Reihe nur mit Beleg, dass der Wert damals öffentlich war. Die hier genannten Grundreihen bleiben im Suchraum, sind gekennzeichnet und können kein Finalist werden. Das gilt auch für Paare und Indizes, die aus ihnen gebildet sind.",
+ "freigabe": "Reto, 6.10.2026: «gerne weiter gem deinen empfehlungen» (Empfehlung im Zwischenbericht vom 5.10.2026: Liste freigeben)",
+ "schluessel": {
+  "fred:USEPUINDXD": "EPU: tägliche Neuberechnung der letzten 30 Tage; Erstwerte revidiert (Datenaudit 1.10.2026)",
+  "neu:fred_equity_uncertainty:index": "Equity Uncertainty: wie EPU"
+ },
+ "praefixe": {
+  "neu:msha_": "MSHA: Meldefrist bis 14 Kalendertage; Tag der Veröffentlichung je Wert nicht belegt",
+  "neu:ntsb_": "NTSB: Datenbank wird nachgeführt; Tag der Veröffentlichung je Wert nicht belegt",
+  "neu:nhtsa_": "NHTSA-Rückrufe: Tag der Veröffentlichung je Wert nicht belegt"
+ },
+ "muster": {
+  "^sec:[^:]+:(?!markt_)": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)"
+ }
+}
