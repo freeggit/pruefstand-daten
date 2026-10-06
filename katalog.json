@@ -3115,5 +3115,71 @@
   "grund": "K5 verletzt: Test 2026-10-05T12:31Z, totalpc.csv endet 2019-10-04 (nicht fortgeschrieben).",
   "aufgenommen_utc": "2026-10-05T09:38:09Z",
   "geprueft_utc": "2026-10-05T12:31Z"
+ },
+ {
+  "id": "usda_crop_progress_woechentlich",
+  "name": "USDA Crop Progress (Zustand Mais/Soja/Weizen, woechentlich)",
+  "url": "https://usda.library.cornell.edu/concern/publications/8s45q9ds",
+  "domain": "usda.library.cornell.edu",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein Rueckgang der Ernte-Zustandsnote (gut/exzellent) signalisiert Ertragsrisiko; kurzfristig steigen Agrarpreise gegenueber dem Weltindex (DBA, Agrarwerte).",
+  "grund": "Neu 2026-10-06; Reihe ab 1986, Replikation zu Wetter-Anbaureihen (andere Quelle, gleicher Mechanismus)."
+ },
+ {
+  "id": "us_treasury_tic_monatlich",
+  "name": "US Treasury TIC: Auslaenderkaeufe von US-Wertpapieren (monatlich)",
+  "url": "https://ticdata.treasury.gov/Publish/mfh.txt",
+  "domain": "ticdata.treasury.gov",
+  "bereich": "Staat",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Verringerte Auslandsnachfrage nach Treasuries erhoeht kurzfristig Renditedruck auf Anleihen (IEF, TLT) und stuetzt den USD.",
+  "grund": "Neu 2026-10-06; Reihe ab 1978, Ausschluss: Veroeffentlichungsfrist (ca. 18. des Folgemonats) beachten."
+ },
+ {
+  "id": "fed_h6_geldmenge_woechentlich",
+  "name": "Fed H.6 Geldmenge M1/M2 (woechentlich)",
+  "url": "https://www.federalreserve.gov/releases/h6/",
+  "domain": "federalreserve.gov",
+  "bereich": "Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Beschleunigtes oder gebremstes Geldmengenwachstum veraendert die Liquiditaet; kurzfristig relevant fuer Anleihen und zyklische Sektoren.",
+  "grund": "Neu 2026-10-06; Reihe ab 1959, Publikation donnerstags."
+ },
+ {
+  "id": "eia_benzin_retail_woechentlich",
+  "name": "EIA Benzinpreis Endverbraucher USA (woechentlich)",
+  "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=emm_epmr_pte_nus_dpg&f=w",
+  "domain": "eia.gov",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Rasch steigende Benzinpreise belasten den Konsum und die Margen von Transport und Handel gegenueber dem Weltindex (XLY, XLP, JETS).",
+  "grund": "Neu 2026-10-06; Reihe ab 1990, Replikation zu DCOILWTICO (L1: unabhaengige Quelle, anderer Preis)."
+ },
+ {
+  "id": "eia_rohoel_importe_woechentlich",
+  "name": "EIA US-Rohoelimporte (woechentlich)",
+  "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=wcrimus2&f=w",
+  "domain": "eia.gov",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Aenderungen der Importmenge zeigen Raffineriebedarf und Tankerlogistik; kurzfristig relevant fuer Energiesektor (XLE) und Oelpreis.",
+  "grund": "Neu 2026-10-06; Reihe ab 1991, Replikation zu Oel-Befund (L1)."
+ },
+ {
+  "id": "finra_short_interest_halbmonatlich",
+  "name": "FINRA Short Interest (halbmonatlich, aggregiert)",
+  "url": "https://www.finra.org/finra-data/browse-catalog/equity-short-interest/files",
+  "domain": "finra.org",
+  "bereich": "Positionierung",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Hohe aggregierte Leerverkaufsquote zeigt Pessimismus und Squeeze-Risiko; kurzfristig folgen Gegenbewegungen bei Sektoren.",
+  "grund": "Neu 2026-10-06; Vorbehalt: Historie vor 2021 ungeklaert, pruefen; Publikation mit Frist."
  }
 ]
