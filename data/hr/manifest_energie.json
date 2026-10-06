@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-10-05T02:44:12Z",
+ "erzeugt_utc": "2026-10-06T02:44:15Z",
  "reihen": {
   "energie:preis_ch": {
    "dateien": [
@@ -16,10 +16,12 @@
     "data/hr/energie/preis_ch_2025.csv.gz",
     "data/hr/energie/preis_ch_2026.csv.gz"
    ],
-   "zeilen": 103078,
-   "fehler": "2026: HTTP Error 503: Service Unavailable",
-   "erste": "2015-01-01T00:00:00Z",
-   "letzte": "2026-10-04T21:00:00Z"
+   "zeilen": 103126,
+   "letzte": "2026-10-06T21:00:00Z",
+   "einheit": "EUR/MWh",
+   "aufloesung": "1h",
+   "quelle": "energy-charts.info",
+   "erste": "2015-01-01T00:00:00Z"
   },
   "energie:erzeugung_ch": {
    "dateien": [
@@ -36,10 +38,11 @@
     "data/hr/energie/erzeugung_ch_2025.csv.gz",
     "data/hr/energie/erzeugung_ch_2026.csv.gz"
    ],
-   "zeilen": 103056,
-   "fehler": "2026: HTTP Error 503: Service Unavailable",
-   "erste": "2015-01-01T00:00:00Z",
-   "letzte": "2026-10-03T23:00:00Z"
+   "zeilen": 103104,
+   "letzte": "2026-10-05T23:00:00Z",
+   "einheit": "MW",
+   "quelle": "energy-charts.info",
+   "erste": "2015-01-01T00:00:00Z"
   },
   "energie:preis_de": {
    "dateien": [
@@ -56,10 +59,12 @@
     "data/hr/energie/preis_de_2025.csv.gz",
     "data/hr/energie/preis_de_2026.csv.gz"
    ],
-   "zeilen": 129646,
-   "fehler": "2026: HTTP Error 503: Service Unavailable",
-   "erste": "2015-01-01T00:00:00Z",
-   "letzte": "2026-10-04T21:45:00Z"
+   "zeilen": 129838,
+   "letzte": "2026-10-06T21:45:00Z",
+   "einheit": "EUR/MWh",
+   "aufloesung": "1h",
+   "quelle": "energy-charts.info",
+   "erste": "2015-01-01T00:00:00Z"
   },
   "energie:erzeugung_de": {
    "dateien": [
@@ -76,10 +81,11 @@
     "data/hr/energie/erzeugung_de_2025.csv.gz",
     "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
-   "zeilen": 412228,
-   "fehler": "2026: HTTP Error 503: Service Unavailable",
-   "erste": "2015-01-01T00:00:00Z",
-   "letzte": "2026-10-04T00:45:00Z"
+   "zeilen": 412420,
+   "letzte": "2026-10-06T00:45:00Z",
+   "einheit": "MW",
+   "quelle": "energy-charts.info",
+   "erste": "2015-01-01T00:00:00Z"
   }
  },
  "teile": [
