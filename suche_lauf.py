@@ -78,6 +78,65 @@ def laufeintrag(e):
 def basis(pfad):
     return "file://" + os.path.join(ROOT, pfad, "data") if pfad else "file://" + os.path.join(ROOT, "data")
 
+def grundname(indikator):
+    for suf in ("_stand", "_d1", "_d5", "_d20", "_z252"):
+        if indikator.endswith(suf):
+            return indikator[:-len(suf)]
+    return indikator
+
+def exposition_nachfuehren(lernen, indikatoren, lauf_id, zeit_utc):
+    """V3.12 (E31): Expositionsregister auf Ebene der Grundreihe – wann wurde eine Reihe erstmals gerechnet und
+    veröffentlicht? «Vorbekannt» gilt für die ganze Verwandtschaft (gleiche Grundreihe, anderes Ziel, andere Variante,
+    andere Haltedauer); darum genügt ein Eintrag je Grundreihe. Das Register ist eine Kennzeichnung, kein Ausschluss.
+    Fehlt die Datei, wird sie einmalig aus den vorhandenen Vollarchiven suche/S####_alle.csv.gz aufgebaut; Reihen ohne
+    Archivbeleg erhalten den aktuellen Lauf als früheste belegte Sicht. Bestehende Einträge werden nie geändert."""
+    import csv, io, re
+    pf = os.path.join(lernen, "exposition.json")
+    try:
+        reg_ = json.load(open(pf, encoding="utf-8"))
+    except (OSError, ValueError):
+        reg_ = {"regel": "E31: erste belegte Rechnung und Veröffentlichung je Grundreihe; Kennzeichnung, kein Ausschluss", "grundreihen": {}}
+        sd = os.path.join(lernen, "suche")
+        for name in sorted(x for x in os.listdir(sd) if re.fullmatch(r"S\d{4}_alle\.csv\.gz", x)):
+            try:
+                doc = json.load(open(os.path.join(sd, name[:5] + ".json"), encoding="utf-8"))
+                rd = csv.DictReader(io.StringIO(gzip.decompress(open(os.path.join(sd, name), "rb").read()).decode("utf-8")))
+                gesehen = {grundname(z["indikator"]) for z in rd}
+            except Exception:
+                continue
+            for g in sorted(gesehen):
+                reg_["grundreihen"].setdefault(g, {"erst_dokument": name[:5], "erst_lauf": doc.get("lauf_id"), "erst_zeit": doc.get("zeit"),
+                                                   "beleg": f"suche/{name}"})
+        reg_["aufbau"] = {"lauf_id": lauf_id, "zeit_utc": zeit_utc, "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"}
+    neu_ = 0
+    for g in sorted({grundname(i) for i in indikatoren}):
+        if g not in reg_["grundreihen"]:
+            reg_["grundreihen"][g] = {"erst_dokument": None, "erst_lauf": lauf_id, "erst_zeit": zeit_utc, "beleg": f"suche/laeufe/{lauf_id}.json"}
+            neu_ += 1
+    reg_["grundreihen"] = dict(sorted(reg_["grundreihen"].items()))
+    reg_["stand"] = {"lauf_id": lauf_id, "zeit_utc": zeit_utc, "grundreihen_n": len(reg_["grundreihen"])}
+    schreibe_json(reg_, pf)
+    return neu_, len(reg_["grundreihen"])
+
+def index_abgleichen(index, lernen):
+    """V3.12 (Schritt 2): Stimmt die Kandidatenzahl eines Indexeintrags nicht mit seinem S-Dokument überein, gilt das
+    Dokument. Die Berichtigung wird in index["berichtigungen"] festgehalten (Anlass: S0022 wurde am 4.10.2026 von zwei
+    Läufen vergeben; der Indexeintrag nannte die Zahl des Laufs, dessen Dokument als .konflikt_<zeit> daneben liegt)."""
+    n = 0
+    for e in index.get("suchlaeufe", []):
+        d = e.get("datei")
+        if not d:
+            continue
+        try:
+            k = json.load(open(os.path.join(lernen, d), encoding="utf-8")).get("kandidaten")
+        except (OSError, ValueError):
+            continue
+        if isinstance(k, int) and e.get("kandidaten") != k:
+            index.setdefault("berichtigungen", []).append({"wo": f"suchlaeufe[nr={e.get('nr')}].kandidaten", "vorher": e.get("kandidaten"),
+                                                            "jetzt": k, "grund": "Abgleich mit dem S-Dokument", "lauf_id": LAUF_ID})
+            e["kandidaten"] = k; n += 1
+    return n
+
 # ---------------------------------------------------------------- Stand lesen
 ip = os.path.join(LERNEN, "index.json")
 if os.path.exists(ip):
@@ -87,6 +146,9 @@ else:   # Startwerte wie im Auftrag der Lernrunde
              "suchlaeufe": [{"nr": n, "datei": None, "kandidaten": k, "in_db": True}
                             for n, k in [(1, 9332), (2, 13573), (3, 18317), (4, 18303)]]}
     print("index.json fehlt: Startwerte gesetzt")
+_nb = index_abgleichen(index, LERNEN)
+if _nb:
+    print(f"Index: {_nb} Eintrag/Einträge mit dem S-Dokument abgeglichen (siehe index.json, Feld berichtigungen)")
 reg = os.path.join(LERNEN, "hypothesen.txt.gz")
 if not os.path.exists(reg):
     reg = os.path.join(ROOT, "hypothesen_start.txt.gz")
@@ -122,7 +184,7 @@ if rc != 0:
 
 zus = json.load(open(os.path.join(LAUF, "suchlauf_zusammenfassung.json")))
 
-code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json")).encode()).hexdigest()[:16]
+code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json", "explorativ.json")).encode()).hexdigest()[:16]
 herkunft = {
     "commit_main": commit(ROOT), "commit_energie": commit(os.path.join(ROOT, "_daten-energie")),
     "commit_neu": commit(os.path.join(ROOT, "_daten-neu")), "commit_lernen_vorher": commit(LERNEN),
@@ -182,6 +244,8 @@ schreibe_json({"zeit_utc": jetzt.strftime("%Y-%m-%dT%H:%MZ"), "lauf_id": LAUF_ID
 index.setdefault("laeufe", []).append({"datei": f"suche/laeufe/{LAUF_ID}.json", "lauf_id": LAUF_ID,
                                          "s_dokument": eintrag["ausgaben"]["s_dokument"], "ergebnis_hash": ergebnis_hash})
 index["reihen_letzter_suchlauf"] = zus["indikatoren"]
+_en, _eg = exposition_nachfuehren(LERNEN, zus["indikatoren"], LAUF_ID, jetzt.strftime("%Y-%m-%dT%H:%MZ"))
+index["exposition"] = {"datei": "exposition.json", "grundreihen_n": _eg, "neu_in_diesem_lauf": _en}
 index["letzter_lauf_utc"] = jetzt.strftime("%Y-%m-%dT%H:%MZ")
 if not s_schreiben:
     schreibe_json(index, ip)
@@ -234,6 +298,11 @@ S = {
     "kosten_pp_je_wechsel": zus.get("kosten_pp_je_wechsel"), "kosten_teile": zus.get("kosten_teile"),
     "indizes": zus.get("indizes"), "staerkste_indizes": zus.get("staerkste_indizes"),
     "echt_bestes_t": zus.get("echt_bestes_t"), "placebo_bestes_t_je_lauf": zus.get("placebo_bestes_t_je_lauf"),
+    # V3.12 (E27b, E30): ungerundete Placebo-Maxima (alle Kandidaten und nur bestätigungsfähige) als Grundlage des Rang-Scores
+    "placebo_bestes_t_je_lauf_roh": zus.get("placebo_bestes_t_je_lauf_roh"),
+    "placebo_bestes_t_bestaetigungsfaehig_je_lauf_roh": zus.get("placebo_bestes_t_bestaetigungsfaehig_je_lauf_roh"),
+    "score_e27_regel": zus.get("score_e27_regel"),
+    "explorativ_reihen_n": len((zus.get("reihen_bericht") or {}).get("explorativ_reihen") or []),
     "familien": zus["familien"],
     "indikatoren_n": zus["indikatoren_n"],
     "ziele_n": sum(len(v) for v in zus["ziele"].values()),
