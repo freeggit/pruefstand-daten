@@ -1,0 +1,10 @@
+{
+ "titel": "Gesehene Ergebnisse ausserhalb der Läufe (Verfassung V3.12, E31)",
+ "regel": "Kennzeichnung, kein Ausschluss. Gesehene Ideen dürfen Hypothesen der Discovery bleiben und in eine Bestätigung gelangen; sie gelten samt Verwandtschaft (gleiche Grundreihe, anderes Ziel, andere Variante, andere Haltedauer) als vorbekannt.",
+ "eintraege": [
+  {"datum": "2026-10-05", "anlass": "Stand-alone-Auswertungen (11 Berichte) und Astra-Gutachten 5",
+   "gesehen": "Rangfolge und Zerlegung der 25 besten Kandidaten der Discovery; Sektor-Muster nach Schwankungs- und Unsicherheitsereignissen (IBB, XLK, XLV vor; XLF, EWG, EWU, EWL zurück); 36 Fassungen des Ölkandidaten",
+   "grundreihen_praefixe": ["DCOILWTICO", "neu_fred_brent", "paar_oel_brent_wti", "idx_energiepreise", "VIXCLS", "neu_cboe_vvix", "neu_cboe_vix9d", "neu_cboe_vix3m", "neu_cboe_skew", "neu_fred_implied_vol", "idx_volatilitaet", "idx_unsicherheit", "USEPUINDXD", "neu_fred_equity_uncertainty", "paar_kurz_us_uk", "DEXSZUS", "neu_fedregister_hud_wohnen", "neu_treasury_tga", "neu_boj_call_rate", "neu_quartalsende_pensionsrebalancing", "idx_zinsanstieg", "neu_fred_dtb3", "sec_sec_insider_xlf_verkaeufer", "neu_fdic_bankausfaelle", "wetter_houston_wind", "sec_sec_insider_xle_kaufwert_usd", "sec_sec_edgar_xle_13d"],
+   "beleg": "meta/verfassung_v3_12; Berichte vom 5.10.2026 (zerlegung_spitzenkandidaten, schwankungs_ausloeser, schwankungs_buendel, oelkandidat)"}
+ ]
+}
