@@ -236,6 +236,78 @@ def endurteile_schuetzen():
     return n
 
 
+def s_nummern_freimachen():
+    """V3.12 (Schritt 2; Anlass: S0022 am 4.10.2026 von zwei Läufen vergeben). Die S-Nummer gilt erst mit dem Einchecken:
+    Hat der eigene Lauf ein Dokument suche/S####.json neu angelegt, das auf GitHub inzwischen mit anderem Inhalt besteht,
+    erhält der eigene Lauf die nächste freie Nummer. Umbenannt werden alle eigenen Dateien dieser Nummer; die Verweise in
+    index.json, im Laufeintrag und in letzter_lauf.json werden nachgeführt und die Umnummerierung wird in
+    index["berichtigungen"] festgehalten. Gibt die Liste (alt, neu) zurück."""
+    import re
+    basis = git("merge-base", "HEAD", REF, ok=True).stdout.strip()
+    if not basis:
+        return []
+    eigene = [x for x in git("diff", "--name-only", "--diff-filter=A", basis, "HEAD").stdout.split("\n") if x]
+    fern = [x for x in git("ls-tree", "-r", "--name-only", REF, "suche", ok=True).stdout.split("\n") if x]
+    belegt = {int(m.group(1)) for x in fern + eigene for m in [re.match(r"suche/S(\d{4})[._]", x)] if m}
+    try:
+        belegt |= {int(e["nr"]) for e in json.loads(git("show", f"{REF}:index.json").stdout).get("suchlaeufe", []) if isinstance(e.get("nr"), int)}
+    except (RuntimeError, ValueError):
+        pass
+    wechsel = []
+    for x in sorted(eigene):
+        m = re.fullmatch(r"suche/S(\d{4})\.json", x)
+        if not m or x not in fern:
+            continue
+        if git("rev-parse", f"HEAD:{x}").stdout.strip() == git("rev-parse", f"{REF}:{x}").stdout.strip():
+            continue                    # gleicher Inhalt: kein Zusammenstoss
+        alt = int(m.group(1)); neu = max(belegt) + 1; belegt.add(neu)
+        a, n = f"S{alt:04d}", f"S{neu:04d}"
+        for d in [y for y in eigene if re.match(rf"suche/{a}[._]", y)]:
+            git("mv", d, d.replace(f"suche/{a}", f"suche/{n}", 1))
+        text = [f"suche/{n}.json", f"suche/{n}_analyse.json", "suche/letzter_lauf.json"] + [y for y in eigene if y.startswith("suche/laeufe/")]
+        for d in text:
+            pf = os.path.join(LERNEN, d)
+            if os.path.exists(pf):
+                t = open(pf, encoding="utf-8").read()
+                if a in t:
+                    open(pf, "w", encoding="utf-8").write(t.replace(a, n))
+        pf = os.path.join(LERNEN, f"suche/{n}.json")
+        try:
+            sd = json.load(open(pf, encoding="utf-8"))
+            if sd.get("nr") == alt:
+                sd["nr"] = neu; sd["sort"] = neu; sd["nr_berichtigt"] = {"alt": alt, "grund": "Nummer war beim Einchecken schon vergeben"}
+                json.dump(sd, open(pf, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        except (OSError, ValueError):
+            pass
+        ip = os.path.join(LERNEN, "index.json")
+        try:
+            idx = json.load(open(ip, encoding="utf-8"))
+        except (OSError, ValueError):
+            idx = None
+        if isinstance(idx, dict):
+            for e in idx.get("suchlaeufe", []):
+                if e.get("datei") == f"suche/{a}.json" and e.get("nr") == alt:
+                    e["nr"] = neu; e["datei"] = f"suche/{n}.json"
+            for e in idx.get("laeufe", []):
+                if isinstance(e.get("s_dokument"), str) and e.get("datei") in eigene:
+                    e["s_dokument"] = e["s_dokument"].replace(a, n)
+            if isinstance(idx.get("letztes_vollarchiv"), str) and f"suche/{a}_alle.csv.gz" in eigene:
+                idx["letztes_vollarchiv"] = idx["letztes_vollarchiv"].replace(a, n)
+            idx.setdefault("berichtigungen", []).append({"wo": "S-Nummer", "vorher": a, "jetzt": n, "grund": "Nummer war beim Einchecken auf GitHub schon mit anderem Inhalt vergeben",
+                                                          "zeit": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "lauf": PRAEFIX})
+            json.dump(idx, open(ip, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        wechsel.append((a, n))
+        print(f"S-Nummer: {a} ist auf GitHub schon vergeben; eigener Lauf erhält {n}")
+    if wechsel:
+        # Ein einziger eigener Commit mit den neuen Namen: sonst träfe der ursprüngliche Commit im Rebase noch auf die
+        # vergebene Nummer und die Datei des anderen Laufs würde ersetzt.
+        git("add", "-A")
+        git("reset", "-q", "--soft", basis)
+        git("commit", "-q", "-m", f"{PRAEFIX} {time.strftime('%Y-%m-%dT%H:%MZ', time.gmtime())} (GitHub Action; S-Nummer beim Einchecken: "
+            f"{', '.join(f'{a} -> {n}' for a, n in wechsel)})")
+    return wechsel
+
+
 def main():
     git("config", "user.name", "pruefstand-bot")
     git("config", "user.email", "pruefstand-bot@users.noreply.github.com")
@@ -248,6 +320,7 @@ def main():
         try:
             if git("ls-remote", "--exit-code", "--heads", "origin", ZWEIG, ok=True).returncode == 0:
                 git("fetch", "-q", "origin", f"+{ZWEIG}:{REF}")
+                s_nummern_freimachen()
                 r = git("rebase", "-q", REF, ok=True)
                 while r.returncode != 0:
                     if not konflikte_loesen():
