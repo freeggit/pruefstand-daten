@@ -1,18 +1,18 @@
 {
- "zeit_utc": "2026-10-06T13:10Z",
- "lauf_id": "L20261006T102518Z",
+ "zeit_utc": "2026-10-06T17:06Z",
+ "lauf_id": "L20261006T154118Z",
  "verfassung": "V3.14",
- "commit_main": "251c15de13d4eaee771fcc44b76e6150a148ad15",
+ "commit_main": "e0acc43a6d32c96434d67d3029a7644c763ab311",
  "commit_energie": "5d532815627893b5786efc7c9f08ee28390caec5",
- "commit_neu": "2867bb53aae73544627bbf8824bef8239de165e9",
- "commit_lernen_vorher": "5000ac3d5940cf0a978457c0a79d8144e7f9ddaa",
- "code_hash": "cfb9e0c861975095",
- "sha_suchmaschine": "4742e7affb4974a4",
+ "commit_neu": "a25d0d16f8a8a7172f343cac6c585fdc7b31e7a3",
+ "commit_lernen_vorher": "436a5b08890d4a8d43ea24e1c93a68a4a4a99932",
+ "code_hash": "7fde87c033dd7519",
+ "sha_suchmaschine": "ae4a8f542fbb496b",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
  "sha_register_vorher": "d14d98b09b38fc3e",
  "sha_manifest_main": "1082982ea3bbc23e",
- "sha_manifest_neu": "8485b529c62b510a",
+ "sha_manifest_neu": "dd8079dea415451b",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.3",
@@ -20,8 +20,8 @@
   "python": "3.12.14",
   "btc_sha": "aab48a8798ffb779"
  },
- "ergebnis_hash": "592fddda5117b0fc",
- "kandidaten": 346452,
+ "ergebnis_hash": "906ad93b364e6565",
+ "kandidaten": 351539,
  "kandidaten_neu": 0,
  "huerde_t": 4.35,
  "fund": false,
@@ -36,8 +36,9 @@
   "tests": "vollständig",
   "siegeltest": "vollständig"
  },
- "laufeintrag": "suche/laeufe/L20261006T102518Z.json",
- "reihen_entfallen_gegen_vorlauf": [
+ "laufeintrag": "suche/laeufe/L20261006T154118Z.json",
+ "reihen_entfallen_gegen_vorlauf": [],
+ "reihen_neu_gegen_vorlauf": [
   "idx_zinsanstieg_d1",
   "idx_zinsanstieg_d20",
   "idx_zinsanstieg_d5",
@@ -59,13 +60,6 @@
   "paar_zins_us_de_d5",
   "paar_zins_us_de_stand",
   "paar_zins_us_de_z252"
- ],
- "reihen_neu_gegen_vorlauf": [
-  "neu_sp500_index_aenderungen_anzahl_aenderungen_d1",
-  "neu_sp500_index_aenderungen_anzahl_aenderungen_d20",
-  "neu_sp500_index_aenderungen_anzahl_aenderungen_d5",
-  "neu_sp500_index_aenderungen_anzahl_aenderungen_stand",
-  "neu_sp500_index_aenderungen_anzahl_aenderungen_z252"
  ],
  "gesamt": "vollständig"
 }

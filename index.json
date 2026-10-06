@@ -137,6 +137,11 @@
   "idx_volatilitaet_d5",
   "idx_volatilitaet_stand",
   "idx_volatilitaet_z252",
+  "idx_zinsanstieg_d1",
+  "idx_zinsanstieg_d20",
+  "idx_zinsanstieg_d5",
+  "idx_zinsanstieg_stand",
+  "idx_zinsanstieg_z252",
   "neu_bitcoin_onchain_gebuehren_d1",
   "neu_bitcoin_onchain_gebuehren_d20",
   "neu_bitcoin_onchain_gebuehren_d5",
@@ -163,6 +168,17 @@
   "neu_boj_call_rate_call_rate_d5",
   "neu_boj_call_rate_call_rate_stand",
   "neu_boj_call_rate_call_rate_z252",
+  "neu_brasilien_selic_entscheide_aenderungstage_stand",
+  "neu_bundesbank_umlauf_bund10y_d1",
+  "neu_bundesbank_umlauf_bund10y_d20",
+  "neu_bundesbank_umlauf_bund10y_d5",
+  "neu_bundesbank_umlauf_bund10y_stand",
+  "neu_bundesbank_umlauf_bund10y_z252",
+  "neu_bundesbank_umlauf_bund2y_d1",
+  "neu_bundesbank_umlauf_bund2y_d20",
+  "neu_bundesbank_umlauf_bund2y_d5",
+  "neu_bundesbank_umlauf_bund2y_stand",
+  "neu_bundesbank_umlauf_bund2y_z252",
   "neu_cboe_skew_skew_d1",
   "neu_cboe_skew_skew_d20",
   "neu_cboe_skew_skew_d5",
@@ -699,6 +715,11 @@
   "paar_vix_termin_d5",
   "paar_vix_termin_stand",
   "paar_vix_termin_z252",
+  "paar_zins_us_de_d1",
+  "paar_zins_us_de_d20",
+  "paar_zins_us_de_d5",
+  "paar_zins_us_de_stand",
+  "paar_zins_us_de_z252",
   "paar_zins_us_jp_d1",
   "paar_zins_us_jp_d20",
   "paar_zins_us_jp_d5",
@@ -1286,11 +1307,17 @@
    "datei": "suche/S0027.json",
    "kandidaten": 346452,
    "in_db": false
+  },
+  {
+   "nr": 28,
+   "datei": "suche/S0028.json",
+   "kandidaten": 351539,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-06T13:10Z",
+ "letzter_suchlauf_utc": "2026-10-06T17:06Z",
  "pruefung_lernrunde_utc": "2026-10-06T10:00:00Z",
- "letzter_code_hash": "cfb9e0c861975095",
+ "letzter_code_hash": "7fde87c033dd7519",
  "methode": "M4",
  "vorreg": [
   {
@@ -1350,11 +1377,18 @@
    "s_dokument": "suche/S0027.json",
    "ergebnis_hash": "592fddda5117b0fc",
    "gesamt": "vollständig"
+  },
+  {
+   "datei": "suche/laeufe/L20261006T154118Z.json",
+   "lauf_id": "L20261006T154118Z",
+   "s_dokument": "suche/S0028.json",
+   "ergebnis_hash": "906ad93b364e6565",
+   "gesamt": "vollständig"
   }
  ],
- "letzter_lauf_utc": "2026-10-06T13:10Z",
- "letztes_vollarchiv": "suche/S0026_alle.csv.gz",
- "letzter_ergebnis_hash": "592fddda5117b0fc",
+ "letzter_lauf_utc": "2026-10-06T17:06Z",
+ "letztes_vollarchiv": "suche/S0028_alle.csv.gz",
+ "letzter_ergebnis_hash": "906ad93b364e6565",
  "konflikte": [
   {
    "wo": "index",
