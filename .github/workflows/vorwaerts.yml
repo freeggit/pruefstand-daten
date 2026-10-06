@@ -1,0 +1,53 @@
+name: Prüfstand Vorwärtsregister
+# V3.14 (E32): tägliches Logbuch der Auslöser registrierter Stränge. Liest keine Zielkurse, rechnet keine Erträge.
+on:
+  schedule:
+    - cron: "10 4 * * *"         # nach Strom (02:30 UTC) und Datenspiegel (03:15 UTC), vor der Suche (05:00 UTC)
+    - cron: "10 11 * * *"        # zweiter Lauf vor der Eröffnung der US-Börse (13:30 UTC)
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["vorwaerts/**", "vorwaerts.py", ".github/workflows/vorwaerts.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: lernen-schreiber        # schreibt wie Suche und Vorregistrierung nacheinander auf claude/lernen
+  cancel-in-progress: false
+jobs:
+  vorwaerts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - name: Pakete
+        run: pip install -q numpy pandas
+      - name: Zweige holen
+        run: |
+          for z in daten-energie daten-neu lernen; do
+            if git ls-remote --exit-code --heads origin claude/$z >/dev/null 2>&1; then
+              if [ "$z" = "lernen" ]; then git fetch -q origin claude/$z:refs/remotes/origin/claude/$z
+              else git fetch -q --depth 1 origin claude/$z:refs/remotes/origin/claude/$z; fi
+              git worktree add -q --detach _$z origin/claude/$z
+              echo "claude/$z: $(git -C _$z log -1 --format='%h %ci')"
+            else
+              echo "Zweig claude/$z fehlt"
+            fi
+          done
+          test -d _lernen
+      - name: Tests (nur bei Code-Änderung)
+        if: github.event_name == 'push'
+        run: python test_vorwaerts.py
+        timeout-minutes: 5
+      - name: Logbuch fortschreiben
+        id: logbuch
+        run: |
+          export PS_VORWAERTS_STAND="main $(git rev-parse --short HEAD); neu $(git -C _daten-neu rev-parse --short HEAD 2>/dev/null); energie $(git -C _daten-energie rev-parse --short HEAD 2>/dev/null)"
+          python vorwaerts.py
+        env:
+          PS_CACHE: /tmp/vorwaerts-cache
+        timeout-minutes: 15
+      - name: Einchecken auf claude/lernen
+        if: always()
+        run: python einchecken.py "Vorwärtsregister"
