@@ -2115,10 +2115,10 @@
   "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen.",
+  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen.",
   "reihen": [],
   "aufgenommen_utc": "2026-09-28T20:15:44Z",
-  "geprueft_utc": "2026-10-07T08:34Z"
+  "geprueft_utc": "2026-10-07T16:18Z"
  },
  {
   "id": "fedregister_ftc_fusionen",
@@ -3195,11 +3195,12 @@
   "url": "https://www.financialresearch.gov/financial-stress-index/data/fsi.csv",
   "domain": "www.financialresearch.gov",
   "bereich": "Stimmung",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ein Anstieg des OFR-Stressindex (33 Marktgroessen) zeigt Fluchtbewegungen aus Aktien in Anleihen und Gold gegenueber dem Weltindex.",
-  "grund": "Taeglich seit 2000, oeffentlich ohne Login, URL antwortet HTTP 200. Quelle: Fachliteratur zu Finanzstress-Indizes; ergaenzt Einzelreihen (VIX, Spreads) um eine breite Mischgroesse.",
-  "ergaenzt_utc": "2026-10-07T10:00Z"
+  "grund": "Taeglich seit 2000, oeffentlich ohne Login, URL antwortet HTTP 200. Quelle: Fachliteratur zu Finanzstress-Indizes; ergaenzt Einzelreihen (VIX, Spreads) um eine breite Mischgroesse. | Abgelehnt 2026-10-07T16:18Z: K4. Der OFR FSI ist ein dynamisches Faktormodell, das mit jedem Update neu geschaetzt wird; Historie wird rueckwirkend revidiert (nicht punktgenau). CSV (HTTP 200, 2000-01-03 bis 2026-10-05, 9 Spalten) liegt vor, wird nicht abgelegt. Teilreihen aus Marktdaten (VIX, Spreads) sind schon im Spiegel.",
+  "ergaenzt_utc": "2026-10-07T10:00Z",
+  "geprueft_utc": "2026-10-07T16:18Z"
  },
  {
   "id": "nyfed_primary_dealer_positionen",
@@ -3231,11 +3232,16 @@
   "url": "https://ftp.cpc.ncep.noaa.gov/htdocs/degree_days/weighted/daily_data/",
   "domain": "ftp.cpc.ncep.noaa.gov",
   "bereich": "Natur",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Unerwartet hohe Heizgradtage steigern kurzfristig die Erdgasnachfrage und stuetzen Erdgas (UNG) und Versorger gegenueber dem Weltindex.",
-  "grund": "Taeglich ab 1981, oeffentliche Textdateien (HTTP 200). Mechanismus ohne Ergebnisbezug; Norm nur aus Vorjahren (M2).",
-  "ergaenzt_utc": "2026-10-07T10:00Z"
+  "grund": "Taeglich ab 1981, oeffentliche Textdateien (HTTP 200). Mechanismus ohne Ergebnisbezug; Norm nur aus Vorjahren (M2). | Aufnahme 2026-10-07T16:18Z: hdd_conus und cdd_conus (Zeile CONUS, bevoelkerungsgewichtet, Census-Divisionen), je 16714 Zeilen, 1981-01-01 bis 2026-10-05, Median-Abstand 1 Tag. Anteil gleicher Folgewerte 38.9% (HDD) bzw. 64.4% (CDD): erklaert durch ganzzahlige Nullwerte ausserhalb der Heiz- bzw. Kuehlsaison, kein Fehler. Min/Max HDD 0-51, CDD 0-17 plausibel. verfuegbar_nach_tagen 1 (Tageswerte am Folgetag, Stichprobe 2 Tage alt); Revision der Rohdaten nicht belegt, kleine Nachkorrekturen der letzten Tage nicht ausgeschlossen. Historie ab 1981 (vor 1990 teilweise). Mechanismus: Heizgradtage stuetzen Erdgasnachfrage im Winter (UNG, XLU), Kuehlgradtage Strombedarf im Sommer.",
+  "ergaenzt_utc": "2026-10-07T10:00Z",
+  "geprueft_utc": "2026-10-07T16:18Z",
+  "reihen": [
+   "hdd_conus",
+   "cdd_conus"
+  ]
  },
  {
   "id": "us_treasury_quarterly_refunding_termine",

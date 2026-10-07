@@ -1,0 +1,20 @@
+{
+  "cdd_conus": {
+    "beschreibung": "Kuehlgradtage CONUS, bevoelkerungsgewichtet (NOAA CPC, Census-Divisionen, Zeile CONUS), Schwelle 65F",
+    "einheit": "Gradtage (Grad Fahrenheit-Tage, bevoelkerungsgewichtet)",
+    "publikation": "taeglich (NOAA CPC veroeffentlicht die Tageswerte am Folgetag; Stichprobe: letzter Wert 2 Tage alt)",
+    "quelle_url": "https://ftp.cpc.ncep.noaa.gov/htdocs/degree_days/weighted/daily_data/",
+    "revidiert": false,
+    "verdichtung": "keine (Tageswerte, bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "hdd_conus": {
+    "beschreibung": "Heizgradtage CONUS, bevoelkerungsgewichtet (NOAA CPC, Census-Divisionen, Zeile CONUS), Schwelle 65F",
+    "einheit": "Gradtage (Grad Fahrenheit-Tage, bevoelkerungsgewichtet)",
+    "publikation": "taeglich (NOAA CPC veroeffentlicht die Tageswerte am Folgetag; Stichprobe: letzter Wert 2 Tage alt)",
+    "quelle_url": "https://ftp.cpc.ncep.noaa.gov/htdocs/degree_days/weighted/daily_data/",
+    "revidiert": false,
+    "verdichtung": "keine (Tageswerte, bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
