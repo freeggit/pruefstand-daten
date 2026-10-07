@@ -661,6 +661,18 @@
    "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
    "beleg": "suche/S0014_alle.csv.gz"
   },
+  "neu_noaa_cpc_heizgradtage_taeglich_cdd_conus": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261007T180559Z",
+   "erst_zeit": "2026-10-07T20:47Z",
+   "beleg": "suche/laeufe/L20261007T180559Z.json"
+  },
+  "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261007T180559Z",
+   "erst_zeit": "2026-10-07T20:47Z",
+   "beleg": "suche/laeufe/L20261007T180559Z.json"
+  },
   "neu_ntsb_luftfahrtunfaelle_fatal": {
    "erst_dokument": "S0013",
    "erst_lauf": null,
@@ -1688,8 +1700,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261007T143712Z",
-  "zeit_utc": "2026-10-07T17:19Z",
-  "grundreihen_n": 280
+  "lauf_id": "L20261007T180559Z",
+  "zeit_utc": "2026-10-07T20:47Z",
+  "grundreihen_n": 282
  }
 }

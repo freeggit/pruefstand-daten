@@ -1,5 +1,5 @@
 {
- "kumuliert": 690066,
+ "kumuliert": 694793,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -536,6 +536,16 @@
   "neu_nhtsa_ruckrufe_einheiten_betroffen_d5",
   "neu_nhtsa_ruckrufe_einheiten_betroffen_stand",
   "neu_nhtsa_ruckrufe_einheiten_betroffen_z252",
+  "neu_noaa_cpc_heizgradtage_taeglich_cdd_conus_d1",
+  "neu_noaa_cpc_heizgradtage_taeglich_cdd_conus_d20",
+  "neu_noaa_cpc_heizgradtage_taeglich_cdd_conus_d5",
+  "neu_noaa_cpc_heizgradtage_taeglich_cdd_conus_stand",
+  "neu_noaa_cpc_heizgradtage_taeglich_cdd_conus_z252",
+  "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_d1",
+  "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_d20",
+  "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_d5",
+  "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_stand",
+  "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_z252",
   "neu_ntsb_luftfahrtunfaelle_fatal_d1",
   "neu_ntsb_luftfahrtunfaelle_fatal_d20",
   "neu_ntsb_luftfahrtunfaelle_fatal_d5",
@@ -1329,9 +1339,15 @@
    "datei": "suche/S0030.json",
    "kandidaten": 351539,
    "in_db": false
+  },
+  {
+   "nr": 31,
+   "datei": "suche/S0031.json",
+   "kandidaten": 356266,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-07T17:19Z",
+ "letzter_suchlauf_utc": "2026-10-07T20:47Z",
  "pruefung_lernrunde_utc": "2026-10-07T10:00:00Z",
  "letzter_code_hash": "7fde87c033dd7519",
  "methode": "M4",
@@ -1414,11 +1430,18 @@
    "s_dokument": "suche/S0030.json",
    "ergebnis_hash": "c1b2195ac4e96a6a",
    "gesamt": "vollständig"
+  },
+  {
+   "datei": "suche/laeufe/L20261007T180559Z.json",
+   "lauf_id": "L20261007T180559Z",
+   "s_dokument": "suche/S0031.json",
+   "ergebnis_hash": "2204b1c2f7e50bed",
+   "gesamt": "vollständig"
   }
  ],
- "letzter_lauf_utc": "2026-10-07T17:19Z",
- "letztes_vollarchiv": "suche/S0028_alle.csv.gz",
- "letzter_ergebnis_hash": "c1b2195ac4e96a6a",
+ "letzter_lauf_utc": "2026-10-07T20:47Z",
+ "letztes_vollarchiv": "suche/S0031_alle.csv.gz",
+ "letzter_ergebnis_hash": "2204b1c2f7e50bed",
  "konflikte": [
   {
    "wo": "index",
@@ -3653,7 +3676,7 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 280,
-  "neu_in_diesem_lauf": 0
+  "grundreihen_n": 282,
+  "neu_in_diesem_lauf": 2
  }
 }
