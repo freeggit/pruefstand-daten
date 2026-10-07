@@ -79,6 +79,27 @@ def test_daten_gleich():                                                 # Astra
     assert a.daten_gleich(f"main={A};neu={B};energie={C}", {}) is None
 
 
+def test_kandidaten_gleich():                                            # Astra-Gutachten 9, G9-08 / T9-17
+    import gzip, hashlib, os, re, tempfile, types
+    q = open(os.path.join(os.path.dirname(os.path.abspath(a.__file__)), "suche_lauf.py"), encoding="utf-8").read()
+    sp = types.SimpleNamespace(); ns = dict(gzip=gzip, hashlib=hashlib)                 # die Funktion der Suche, ohne den Lauf zu starten
+    exec(re.search(r"def ergebnis_pruefsumme\(pfad\):.*?\n        return None\n", q, re.S).group(0), ns); sp.ergebnis_pruefsumme = ns["ergebnis_pruefsumme"]
+    d = tempfile.mkdtemp()
+    try:
+        pa, pb = os.path.join(d, "a.csv.gz"), os.path.join(d, "b.csv.gz")
+        open(pa, "wb").write(gzip.compress(b"indikator,art,t,neu\nX,hoch,1.2345,1\nY,tief,0.5,0\n"))
+        open(pb, "wb").write(gzip.compress(b"indikator,art,t,neu\nX,hoch,1.2346,1\nY,tief,0.5,0\n"))
+        ha, hb = a.ergebnis_pruefsumme(pa), a.ergebnis_pruefsumme(pb)
+        assert ha == sp.ergebnis_pruefsumme(pa) and hb == sp.ergebnis_pruefsumme(pb) and ha != hb      # gleiche Rechnung wie die Suche
+        open(pb, "wb").write(gzip.compress(b"indikator,art,t,neu\nX,hoch,1.2345,0\nY,tief,0.5,1\n")); assert a.ergebnis_pruefsumme(pb) == ha   # Spalte «neu» zählt nicht
+        assert a.kandidaten_gleich(ha, ha) is True and a.kandidaten_gleich(hb, ha) is False              # Kandidaten von B, Lauf A
+        for x, y in ((None, ha), (ha, None), ("", ""), (None, None), (ha[:8], ha[:8])):
+            assert a.kandidaten_gleich(x, y) is None
+        assert a.ergebnis_pruefsumme(os.path.join(d, "fehlt")) is None
+    finally:
+        import shutil; shutil.rmtree(d)
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_"):
