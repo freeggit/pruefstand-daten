@@ -162,21 +162,38 @@ def k_max(n, niveau):
     return k
 
 
-def schwelle_diskret(p_null, niveau, k_erlaubt=None):
-    """Geeichte Schwelle auf dem Raster der erreichbaren p-Werte (Astra-Gutachten 6, G6-03): die grösste p-Stufe c mit
-    c <= niveau, bei der höchstens k_erlaubt Nullwelten p <= c haben. Bindungen zählen voll. Gibt 0.0 zurück, wenn schon
-    die kleinste Stufe zu viele Welten verwirft (dann verwirft der Test nie)."""
-    p = np.sort(np.asarray(p_null, dtype=float))
+def schwelle_diskret(p_null, niveau, k_erlaubt=None, ziehungen=ZIEHUNGEN):
+    """Geeichte Schwelle auf dem GANZEN Raster der erreichbaren p-Werte j / (ziehungen + 1) (Astra-Gutachten 6, G6-03, und
+    Gutachten 7, G7-14): die grösste Rasterstufe c <= niveau, bei der höchstens k_erlaubt Nullwelten p <= c haben. Bindungen
+    zählen voll. Gesucht wird auf dem ganzen Raster, nicht nur unter den beobachteten Null-p-Werten (sonst wäre die
+    Schwelle unnötig streng). Gibt 0.0 zurück, wenn schon die kleinste Stufe zu viele Welten verwirft."""
+    p = np.sort(np.asarray(p_null, dtype=float)); n = len(p)
     if k_erlaubt is None:
-        k_erlaubt = k_max(len(p), niveau)
-    stufen = np.unique(p[p <= niveau])
-    c = 0.0
-    for s_ in stufen:
-        if int(np.searchsorted(p, s_, side="right")) <= k_erlaubt:
-            c = float(s_)
-        else:
-            break
-    return c
+        k_erlaubt = k_max(n, niveau)
+    b1 = int(ziehungen) + 1
+    j_max = int(np.floor(niveau * b1 + 1e-9))                  # grösste Stufe j / b1 <= niveau
+    if k_erlaubt < 0 or j_max < 1:
+        return 0.0
+    if k_erlaubt >= n or p[k_erlaubt] > j_max / b1 + 1e-12:    # höchstens k_erlaubt Nullwelten liegen auf oder unter der Stufe
+        return j_max / b1
+    j = int(np.ceil(p[k_erlaubt] * b1 - 1e-9)) - 1             # grösste Stufe strikt unter dem (k_erlaubt + 1)-kleinsten p
+    return j / b1 if j >= 1 else 0.0
+
+
+def ereignisse_buendel(einstiege_je_regel):
+    """Zahl der Ereignisse eines Finalisten (V3.15): verschiedene genutzte Einstiegstage über alle Regeln. Mehrere Regeln,
+    die am selben Tag einsteigen, zählen als ein Ereignis (gleichzeitige Teilgeschäfte sind keine getrennten Informationen)."""
+    tage = set()
+    for g in einstiege_je_regel:
+        tage.update(int(x) for x in np.asarray(g).ravel())
+    return len(tage)
+
+
+def urteile_zaehlen(p, ereignisse, schwelle):
+    """Wendet dieselbe Urteilsfunktion auf viele Pfade an (Welten, Abnahme, Öffnung): Anteile der drei Urteile."""
+    u = [urteil(float(a), schwelle, int(b)) for a, b in zip(p, ereignisse)]
+    n = max(len(u), 1)
+    return {k: u.count(k) / n for k in ("bestätigt", "nicht bestätigt", "unentschieden")}
 
 
 def urteil(p, schwelle, ereignisse):
