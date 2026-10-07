@@ -3188,5 +3188,89 @@
   "mechanismus": "Hohe aggregierte Leerverkaufsquote zeigt Pessimismus und Squeeze-Risiko; kurzfristig folgen Gegenbewegungen bei Sektoren.",
   "grund": "K1: halbmonatlich (Median-Abstand ca. 15 Tage)",
   "geprueft_utc": "2026-10-06T12:26Z"
+ },
+ {
+  "id": "ofr_financial_stress_index",
+  "name": "OFR Financial Stress Index (taeglich)",
+  "url": "https://www.financialresearch.gov/financial-stress-index/data/fsi.csv",
+  "domain": "www.financialresearch.gov",
+  "bereich": "Stimmung",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein Anstieg des OFR-Stressindex (33 Marktgroessen) zeigt Fluchtbewegungen aus Aktien in Anleihen und Gold gegenueber dem Weltindex.",
+  "grund": "Taeglich seit 2000, oeffentlich ohne Login, URL antwortet HTTP 200. Quelle: Fachliteratur zu Finanzstress-Indizes; ergaenzt Einzelreihen (VIX, Spreads) um eine breite Mischgroesse.",
+  "ergaenzt_utc": "2026-10-07T10:00Z"
+ },
+ {
+  "id": "nyfed_primary_dealer_positionen",
+  "name": "NY Fed Primary Dealer Positionen (woechentlich)",
+  "url": "https://markets.newyorkfed.org/api/pd/list/timeseries.json",
+  "domain": "markets.newyorkfed.org",
+  "bereich": "Staat und Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Rasch steigende Haendlerbestaende an Staatsanleihen zeigen Absorptionsdruck und folgen auf Rendite- und Anleihenkurs-Bewegungen (IEF, TLT) gegenueber dem Weltindex.",
+  "grund": "Woechentlich ab 2013 (URL HTTP 200, ohne Schluessel). Publikationsfrist: Mittwoch fuer Vorwoche, im Manifest vermerken.",
+  "ergaenzt_utc": "2026-10-07T10:00Z"
+ },
+ {
+  "id": "nyfed_gscpi_lieferketten",
+  "name": "NY Fed Global Supply Chain Pressure Index (monatlich)",
+  "url": "https://www.newyorkfed.org/medialibrary/research/interactive/gscpi/downloads/gscpi_data.xlsx",
+  "domain": "www.newyorkfed.org",
+  "bereich": "Rohstoffe und Logistik",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Starker Anstieg des Lieferkettendrucks erhoeht Inflationserwartungen und belastet Industrie- gegenueber Rohstoff- und Energiesektoren.",
+  "grund": "Monatlich ab 1997, Excel-Datei ohne Login (HTTP 200). Nur monatlich, kleine Kandidatenzahl; Revisionen moeglich, Publikationsfrist pruefen.",
+  "ergaenzt_utc": "2026-10-07T10:00Z"
+ },
+ {
+  "id": "noaa_cpc_heizgradtage_taeglich",
+  "name": "NOAA CPC gewichtete Heizgradtage USA (taeglich)",
+  "url": "https://ftp.cpc.ncep.noaa.gov/htdocs/degree_days/weighted/daily_data/",
+  "domain": "ftp.cpc.ncep.noaa.gov",
+  "bereich": "Natur",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Unerwartet hohe Heizgradtage steigern kurzfristig die Erdgasnachfrage und stuetzen Erdgas (UNG) und Versorger gegenueber dem Weltindex.",
+  "grund": "Taeglich ab 1981, oeffentliche Textdateien (HTTP 200). Mechanismus ohne Ergebnisbezug; Norm nur aus Vorjahren (M2).",
+  "ergaenzt_utc": "2026-10-07T10:00Z"
+ },
+ {
+  "id": "us_treasury_quarterly_refunding_termine",
+  "name": "US-Treasury Quarterly Refunding Ankuendigungen (Termine)",
+  "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding",
+  "domain": "home.treasury.gov",
+  "bereich": "Staat und Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ankuendigungen zu Emissionsvolumen und Laufzeiten veraendern das erwartete Angebot an Laufzeitpraemie und bewegen kurzfristig Anleihen-ETFs.",
+  "grund": "Vier Termine pro Jahr (Februar, Mai, August, November), Historie seit 2000, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse, daher Prioritaet normal.",
+  "ergaenzt_utc": "2026-10-07T10:00Z"
+ },
+ {
+  "id": "sec_nt_verspaetungsmeldungen",
+  "name": "SEC Verspaetungsmeldungen NT 10-K / NT 10-Q (taeglich aggregiert)",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Haeufungen verspaeteter Jahres- und Quartalsabschluesse zeigen Bilanzstress und Pruefungsprobleme und belasten betroffene Sektoren (z.B. Finanzen, Kleinwerte).",
+  "grund": "Taeglich ab 1994 aus dem EDGAR-Tagesindex, Formtypen NT 10-K und NT 10-Q. Abruf nur mit User-Agent; HTTP-403-Risiko wie bei sec_handelsaussetzungen (Sperre nicht umgehen, vorhandener SEC-Weg auf main nutzen).",
+  "ergaenzt_utc": "2026-10-07T10:00Z"
+ },
+ {
+  "id": "fed_beige_book_termine",
+  "name": "Fed Beige Book Veroeffentlichungstage",
+  "url": "https://www.federalreserve.gov/monetarypolicy/publications/beige-book-archive.htm",
+  "domain": "www.federalreserve.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Das Beige Book liefert zwei Wochen vor FOMC-Sitzungen qualitative Konjunkturhinweise und verschiebt kurzfristig Zinserwartungen und Zyklik gegenueber Defensivwerten.",
+  "grund": "Acht Termine pro Jahr, Archiv ab 1970, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse.",
+  "ergaenzt_utc": "2026-10-07T10:00Z"
  }
 ]
