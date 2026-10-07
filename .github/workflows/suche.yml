@@ -15,7 +15,7 @@ concurrency:
 jobs:
   suche:
     runs-on: ubuntu-24.04
-    timeout-minutes: 240
+    timeout-minutes: 360   # 7.10.2026: Die Rechner von GitHub sind zeitweise halb so schnell (Suche 85 oder 169 Minuten); 360 ist die Obergrenze von GitHub
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -47,13 +47,13 @@ jobs:
         id: siegeltest
         if: github.event_name == 'push'
         run: python siegel_test.py
-        timeout-minutes: 30
+        timeout-minutes: 60
       - name: Suchlauf
         id: suche
         run: python suche_lauf.py
         env:
           PS_PLACEBO: "200"
-        timeout-minutes: 200
+        timeout-minutes: 300
       - name: Analyse (Stufe 1 und 4, 50 Profile, 50 Placebo-Simulationen; V3.10)
         id: analyse
         run: python analyse.py
