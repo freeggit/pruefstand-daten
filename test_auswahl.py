@@ -63,6 +63,22 @@ def test_score():
     assert a.score_suche(9.0, [3.0, 4.0, 5.0]) == (1, 4) and a.score_suche(1.0, [3.0, 4.0]) == (3, 3)
 
 
+def test_daten_gleich():                                                 # Astra-Gutachten 8, G8-13 / T8-18
+    A, B, C = "a" * 40, "b" * 40, "c" * 40
+    hk = dict(commit_main=A, commit_neu=B, commit_energie=C)
+    assert a.daten_gleich(f"main={A};neu={B};energie={C}", hk) is True
+    assert a.daten_gleich(f"main={A.upper()};neu={B};energie={C}", hk) is True
+    assert a.daten_gleich(f"main={A};neu={B};energie={B}", hk) is False
+    assert a.daten_gleich("main=;neu=;energie=", hk) is None             # leere Kennungen sind kein Beleg
+    assert a.daten_gleich("", hk) is None and a.daten_gleich(None, hk) is None
+    assert a.daten_gleich(f"main={A[:12]};neu={B};energie={C}", hk) is None      # gekürzt: nicht belegt
+    assert a.daten_gleich(f"main={A};neu={B}", hk) is None
+    assert a.daten_gleich(f"main={A};neu={B};energie={'g' * 40}", hk) is None    # keine Hex-Kennung
+    assert a.daten_gleich(f"main={A};neu={B};energie={C}", dict(hk, commit_neu="")) is None
+    assert a.daten_gleich(f"main={A};neu={B};energie={C}", dict(hk, commit_neu=None)) is None
+    assert a.daten_gleich(f"main={A};neu={B};energie={C}", {}) is None
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_"):
