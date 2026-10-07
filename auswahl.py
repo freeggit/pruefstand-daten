@@ -131,6 +131,22 @@ def score_suche(t, plac_max):
 
 
 # ====================================================================================================== Daten (Discovery)
+def _kennung(x):
+    """Vollständige Commit-Kennung (40 Hex-Zeichen, klein) oder None. Leere, gekürzte und ungültige Angaben sind kein Beleg."""
+    x = x.strip().lower() if isinstance(x, str) else ""
+    return x if len(x) == 40 and all(c in "0123456789abcdef" for c in x) else None
+
+
+def daten_gleich(stand_text, herkunft):
+    """Abgleich der drei Datenstände (Astra-Gutachten 8, G8-13). stand_text: «main=<commit>;neu=<commit>;energie=<commit>».
+    True/False nur, wenn alle sechs Kennungen vollständig sind; sonst None («nicht belegt»). Kein Präfixvergleich."""
+    jetzt = dict(t.split("=", 1) for t in (stand_text or "").split(";") if "=" in t)
+    paare = [(_kennung(jetzt.get(k)), _kennung((herkunft or {}).get(c))) for k, c in (("main", "commit_main"), ("neu", "commit_neu"), ("energie", "commit_energie"))]
+    if any(a_ is None or b_ is None for a_, b_ in paare):
+        return None
+    return all(a_ == b_ for a_, b_ in paare)
+
+
 def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False, laufeintrag=None):
     import pandas as pd
     import suchmaschine as sm                    # lädt nur Daten bis zum Stichtag (Siegel durch Bau)
@@ -177,12 +193,7 @@ def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False, l
     bindung["code_gleich"] = bool(le) and bindung["sha_suchmaschine_lauf"] == bindung["sha_suchmaschine_jetzt"]
     bindung["s_dokument_passt"] = bool(le) and (le.get("lauf_id") == zus.get("lauf_id"))
     # Datenstand: PS_AUSWAHL_STAND = "main=<commit>;neu=<commit>;energie=<commit>" (die ausgecheckten Stände dieses Laufs)
-    jetzt = dict(t.split("=", 1) for t in bindung["datenstand_jetzt"].split(";") if "=" in t)
-    paare = [(jetzt.get(k), hk[c]) for k, c in (("main", "commit_main"), ("neu", "commit_neu"), ("energie", "commit_energie"))]
-    if not le or any(a_ is None or b_ is None for a_, b_ in paare):
-        bindung["daten_gleich"] = None
-    else:
-        bindung["daten_gleich"] = all(b_.startswith(a_) or a_.startswith(b_) for a_, b_ in paare)
+    bindung["daten_gleich"] = daten_gleich(bindung["datenstand_jetzt"], hk) if le else None
     bindung["rechenstand"] = ("Code der Suche " + ("wie archiviert" if bindung["code_gleich"] and bindung["s_dokument_passt"] else "ABWEICHEND oder nicht belegt")
                               + "; Datenstand " + {True: "wie archiviert", False: "ABWEICHEND", None: "nicht belegt"}[bindung["daten_gleich"]])
     plac = zus.get("placebo_bestes_t_je_lauf_roh") or zus["placebo_bestes_t_je_lauf"]     # ältere Läufe: nur gerundet
