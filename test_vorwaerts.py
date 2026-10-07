@@ -2,6 +2,22 @@
 PS_VORWAERTS_DATENTEST=1 python test_vorwaerts.py <BASIS>            (zusätzlich mit Daten, nur Discovery bis 31.12.2020)"""
 import datetime, json, os, shutil, sys, tempfile
 import vorwaerts as v
+GESPERRT_AUSGELIEFERT = v.GESPERRT
+v.GESPERRT = False        # die übrigen Tests prüfen die Logik hinter der Sperre
+
+
+def test_gesperrt():
+    """V3.15: Im ausgelieferten Zustand ist das Register gesperrt; jede Registrierung wird als Fehler gemeldet, nichts wird geschrieben."""
+    assert GESPERRT_AUSGELIEFERT is True
+    d = tempfile.mkdtemp()
+    try:
+        r, l = os.path.join(d, "vorwaerts"), os.path.join(d, "log"); os.makedirs(r)
+        v.GESPERRT = True
+        json.dump(reg(kennung="T1"), open(os.path.join(r, "T1.json"), "w"))
+        z = v.lauf(r, l, datetime.date(2019, 7, 1), "2019-07-01T06:00:00Z")
+        assert z["fehler"] and "gesperrt" in z["fehler"][0]["fehler"][0] and not os.path.exists(l)
+    finally:
+        v.GESPERRT = False; shutil.rmtree(d)
 
 
 def reg(**kw):
