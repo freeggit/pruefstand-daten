@@ -1,0 +1,49 @@
+{
+ "kennung": "UEB1",
+ "art": "uebung",
+ "registriert": "2026-10-07",
+ "regeln": [
+  {
+   "indikator": "DGS10_d1",
+   "art": "hoch",
+   "ziel": "xlu",
+   "h": 5
+  },
+  {
+   "indikator": "neu_bitcoin_onchain_hashrate_d5",
+   "art": "tief",
+   "ziel": "smh",
+   "h": 5
+  },
+  {
+   "indikator": "neu_fedregister_dod_verteidigung_anzahl_d20",
+   "art": "hoch",
+   "ziel": "xli",
+   "h": 5
+  },
+  {
+   "indikator": "neu_fedregister_cms_medicare_anzahl_d1",
+   "art": "tief",
+   "ziel": "xlv",
+   "h": 5
+  },
+  {
+   "indikator": "neu_us_boersenfeiertage_geschlossen_stand",
+   "art": "hoch",
+   "ziel": "xlp",
+   "h": 5
+  }
+ ],
+ "kosten_pp": 0.88,
+ "letzter_einstieg": "2026-11-27",
+ "schlusstag": "2026-12-07",
+ "min_ereignisse": 10,
+ "vorpruefung": {},
+ "code_commit": "be6ccf57bece0fda36fd5312c51d736cee257c3e",
+ "freigabe": {
+  "wortlaut": "Reto, 8.10.2026, 00:25 Uhr Schweizer Zeit (7.10.2026, 22:25 UTC): «V3.16 und UEB1 freigeben»",
+  "datum": "2026-10-07",
+  "kennung": "UEB1"
+ },
+ "mechanismus": "Kein ökonomischer Anspruch: Betriebsprobe des Registers (Aufnahme, Journale, Veröffentlichung, Vermerk). Die Regeln sind nach Häufigkeit ihrer Auslöser in der Discovery gewählt, nicht nach Ertrag."
+}
