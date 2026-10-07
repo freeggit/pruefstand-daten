@@ -147,6 +147,40 @@ def daten_gleich(stand_text, herkunft):
     return all(a_ == b_ for a_, b_ in paare)
 
 
+def kennung_s(indikator, art, ziel, h):
+    """Kennung eines Kandidaten der Familie S. vorwaerts.kanon() liest genau diese Form (Öffnungsmarker, E32f)."""
+    return f"S|{indikator}|{art}|{ziel}|{int(h)}"
+
+
+def kennung_v(hypothesen_id, schluessel):
+    """Kennung einer Hypothese der Familie V; schluessel ist «indikator|art|ziel|h»."""
+    return f"V|{hypothesen_id}|{schluessel}"
+
+
+def ergebnis_pruefsumme(pfad):
+    """Prüfsumme aller Ergebnisse einer Kandidatendatei, ohne die Spalte «neu»; gleiche Rechnung wie in suche_lauf.py
+    (dort steht sie als ergebnis_hash im Laufeintrag). None, wenn die Datei nicht lesbar ist."""
+    import csv, gzip, hashlib, io
+    try:
+        roh = open(pfad, "rb").read()
+        text = (gzip.decompress(roh) if roh[:2] == b"\x1f\x8b" else roh).decode("utf-8")
+        zeilen = csv.reader(io.StringIO(text)); kopf = next(zeilen); weg = kopf.index("neu") if "neu" in kopf else None
+        m = hashlib.sha256()
+        for z in [kopf] + list(zeilen):
+            if weg is not None:
+                z = z[:weg] + z[weg + 1:]
+            m.update(("\x1f".join(z) + "\n").encode("utf-8"))
+        return m.hexdigest()[:16]
+    except Exception:                                           # noqa: BLE001
+        return None
+
+
+def kandidaten_gleich(hash_datei, hash_lauf):
+    """Gehört die Kandidatendatei zum archivierten Lauf (Astra-Gutachten 9, G9-08)? None, wenn eine der Prüfsummen fehlt."""
+    ok = lambda x: isinstance(x, str) and len(x) == 16 and all(c in "0123456789abcdef" for c in x)   # noqa: E731
+    return (hash_datei == hash_lauf) if ok(hash_datei) and ok(hash_lauf) else None
+
+
 def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False, laufeintrag=None):
     import pandas as pd
     import suchmaschine as sm                    # lädt nur Daten bis zum Stichtag (Siegel durch Bau)
@@ -191,10 +225,13 @@ def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False, l
                    commit_main=hk["commit_main"], commit_neu=hk["commit_neu"], commit_energie=hk["commit_energie"],
                    datenstand_jetzt=os.environ.get("PS_AUSWAHL_STAND", ""))
     bindung["code_gleich"] = bool(le) and bindung["sha_suchmaschine_lauf"] == bindung["sha_suchmaschine_jetzt"]
-    bindung["s_dokument_passt"] = bool(le) and (le.get("lauf_id") == zus.get("lauf_id"))
+    bindung["s_dokument_passt"] = bool(le) and bool(le.get("lauf_id")) and (le.get("lauf_id") == zus.get("lauf_id"))   # G9-08: beide Kennungen vorhanden
+    bindung["ergebnis_hash_lauf"] = le.get("ergebnis_hash"); bindung["ergebnis_hash_kandidaten"] = ergebnis_pruefsumme(echt_csv)
+    bindung["kandidaten_gleich"] = kandidaten_gleich(bindung["ergebnis_hash_kandidaten"], bindung["ergebnis_hash_lauf"]) if le else None
     # Datenstand: PS_AUSWAHL_STAND = "main=<commit>;neu=<commit>;energie=<commit>" (die ausgecheckten Stände dieses Laufs)
     bindung["daten_gleich"] = daten_gleich(bindung["datenstand_jetzt"], hk) if le else None
     bindung["rechenstand"] = ("Code der Suche " + ("wie archiviert" if bindung["code_gleich"] and bindung["s_dokument_passt"] else "ABWEICHEND oder nicht belegt")
+                              + "; Kandidatendatei " + {True: "aus diesem Lauf", False: "ABWEICHEND (nicht aus diesem Lauf)", None: "nicht belegt"}[bindung["kandidaten_gleich"]]
                               + "; Datenstand " + {True: "wie archiviert", False: "ABWEICHEND", None: "nicht belegt"}[bindung["daten_gleich"]])
     plac = zus.get("placebo_bestes_t_je_lauf_roh") or zus["placebo_bestes_t_je_lauf"]     # ältere Läufe: nur gerundet
     plac_art = "ungerundet" if zus.get("placebo_bestes_t_je_lauf_roh") else "gerundet (Lauf vor V3.12)"
@@ -212,7 +249,7 @@ def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False, l
     kand = []
     for r in d.itertuples(index=False):
         za, ne = score_suche(float(r.t), plac)
-        kand.append(dict(kennung=f"S|{r.indikator}|{r.art}|{r.ziel}|{int(r.h)}", familie="S", indikator=r.indikator, art=r.art,
+        kand.append(dict(kennung=kennung_s(r.indikator, r.art, r.ziel, r.h), familie="S", indikator=r.indikator, art=r.art,
                          ziel=r.ziel, h=int(r.h), t=float(r.t), n=int(r.n), mu=float(r.mu), je_jahr=float(r.je_jahr),
                          grundreihe=str(r.quelle), score=za / ne, score_zaehler=za, score_nenner=ne))
     n_v = 0
@@ -233,7 +270,7 @@ def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False, l
                 if jj * jahre < MIN_EREIGNISSE:
                     continue
                 n_v += 1
-                kand.append(dict(kennung=f"V|{hy['id']}|{hy['schluessel']}", familie="V", indikator=ind, art=art, ziel=z, h=h,
+                kand.append(dict(kennung=kennung_v(hy["id"], hy["schluessel"]), familie="V", indikator=ind, art=art, ziel=z, h=h,
                                  t=float(hy["t"]), n=int(hy["n"]), mu=float(hy["mu"]), je_jahr=float(jj),
                                  grundreihe=sm.quelle_von(ind), score=float(hy["p_holm"]), score_zaehler=None, score_nenner=None))
     rang = rangfolge(kand); top = beste(rang)
