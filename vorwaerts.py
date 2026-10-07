@@ -20,13 +20,14 @@ des Einstiegstags erkannt waren; alle anderen gelten als verpasst und werden gez
 
 Aufruf: python vorwaerts.py   (in der Action; Daten neben dem Skript)   oder   python vorwaerts.py <BASIS>
 Umgebung: PS_VORWAERTS_DIR (Registrierungen, Standard: vorwaerts neben dem Skript), PS_VORWAERTS_LOG (Ordner des Logbuchs),
-PS_VORWAERTS_HEUTE (JJJJ-MM-TT, nur für Tests), PS_VORWAERTS_STAND (Text zum Datenstand, z. B. Commits).
+PS_VORWAERTS_STAND (Text zum Datenstand, z. B. Commits).
 Tests: python test_vorwaerts.py
 """
 import datetime, hashlib, json, math, os, sys, types
 import numpy as np
 
 HIER = os.path.dirname(os.path.abspath(__file__))
+GESPERRT = True              # V3.15 (7.10.2026, Astra-Gutachten 7): keine Registrierung, auch keine Übung, bis Handelsbuch und Versionsbindung gebaut sind
 MAX_STRAENGE = 3             # gleichzeitig, Typ K eingerechnet (E33, V3.14 P3)
 MAX_JAHRE = 5.0              # längere Stränge werden nicht registriert (V3.14 P2, E36)
 MIN_EREIGNISSE = 10
@@ -224,6 +225,11 @@ def lauf(ordner, logdir, heute, jetzt_utc, datenstand=""):
     if not registrierungen(ordner) and not os.path.exists(os.path.join(logdir, "stand.json")):
         return dict(zeit_utc=jetzt_utc, heute=str(heute), datenstand=datenstand, registrierungen=0, aktiv=[], straenge_je_registriert=0,
                     neue_zeilen=0, regeln=[], fehler=[])       # leeres Register: nichts schreiben
+    if GESPERRT:
+        return dict(zeit_utc=jetzt_utc, heute=str(heute), datenstand=datenstand, registrierungen=len(registrierungen(ordner)), aktiv=[],
+                    straenge_je_registriert=0, neue_zeilen=0, regeln=[],
+                    fehler=[dict(kennung=d.get("kennung", n), fehler=["Register gesperrt (V3.15): keine Registrierung, bis Handelsbuch und Versionsbindung gebaut sind"])
+                            for n, _, d in registrierungen(ordner)])
     os.makedirs(logdir, exist_ok=True)
     p_log, p_stand, p_laeufe = (os.path.join(logdir, n) for n in ("logbuch.jsonl", "stand.json", "laeufe.jsonl"))
     stand = json.load(open(p_stand, encoding="utf-8")) if os.path.exists(p_stand) else {"registrierungen": {}, "reihe_bis": {}}
@@ -287,6 +293,8 @@ def lauf(ordner, logdir, heute, jetzt_utc, datenstand=""):
 def schluss(ordner, logdir, kennung, heute, jetzt_utc):
     import pandas as pd
     import bestaetigung as bt
+    if GESPERRT:
+        raise SystemExit("ABBRUCH: Register gesperrt (V3.15); keine Schlussauswertung.")
     name, text, d = next(x for x in registrierungen(ordner) if x[2].get("kennung") == kennung)
     stand = json.load(open(os.path.join(logdir, "stand.json"), encoding="utf-8"))
     p_aus = os.path.join(logdir, f"schluss_{kennung}.json")
@@ -347,9 +355,7 @@ if __name__ == "__main__":
     ordner = os.environ.get("PS_VORWAERTS_DIR", os.path.join(HIER, "vorwaerts"))
     logdir = os.environ.get("PS_VORWAERTS_LOG", os.path.join(HIER, "_lernen", "vorwaerts"))
     jetzt = datetime.datetime.utcnow()
-    heute = _tag(os.environ["PS_VORWAERTS_HEUTE"]) if os.environ.get("PS_VORWAERTS_HEUTE") else jetzt.date()
-    if os.environ.get("PS_VORWAERTS_HEUTE"):                    # nur Tests: Uhrzeit des gedachten Laufs 06:00 UTC
-        jetzt = datetime.datetime.combine(heute, datetime.time(6, 0))
+    heute = jetzt.date()                                        # kein Testschalter für das Datum im Programmeinstieg (G7-07)
     jz = jetzt.strftime("%Y-%m-%dT%H:%M:%SZ")
     if os.environ.get("PS_VORWAERTS_SCHLUSS"):
         e = schluss(ordner, logdir, os.environ["PS_VORWAERTS_SCHLUSS"], heute, jz)
