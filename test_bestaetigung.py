@@ -57,8 +57,19 @@ ok(abs(x[:2].sum() - 1.0) < 1e-12 and len(g) == 1, "erster Korb ohne Kurse: zwei
 # 10 Abnahmegrenzen (Astra-Gutachten 6, Frage 3) und diskrete Schwelle (G6-03)
 ok((b.k_max(7300, 0.05), b.k_max(7300, 0.025), b.k_max(7300, 0.05 / 3)) == (334, 160, 103), "höchstens 334 / 160 / 103 Fehlalarme in 7300 Welten")
 pn = np.r_[np.full(149, 80 / 2001), np.full(20, 90 / 2001), np.full(2831, 1000 / 2001)]
-c = b.schwelle_diskret(pn, 0.05, k_erlaubt=150)
-ok(abs(c - 80 / 2001) < 1e-15 and int((pn <= c).sum()) == 149, "Bindungen: Schwelle 80/2001 verwirft 149, nicht 169")
-ok(b.schwelle_diskret(np.full(100, 0.001), 0.05, k_erlaubt=3) == 0.0, "zu viele Welten auf der kleinsten Stufe: Test verwirft nie")
+c = b.schwelle_diskret(pn, 0.05, k_erlaubt=150, ziehungen=2000)
+ok(abs(c - 89 / 2001) < 1e-15 and int((pn <= c).sum()) == 149, "Bindungen: grösste Rasterstufe unter 90/2001 verwirft 149, nicht 169")
+ok(b.schwelle_diskret(np.full(100, 1 / 10001), 0.05, k_erlaubt=3) == 0.0, "zu viele Welten auf der kleinsten Stufe: Test verwirft nie")
+# Astra-Gutachten 7, G7-14: ganzes Raster, nicht nur beobachtete Null-p-Werte
+c = b.schwelle_diskret(np.full(100, 0.5), 0.05)
+ok(abs(c - 500 / 10001) < 1e-15, "alle Null-p-Werte 0.5: Schwelle 500/10001 statt 0.0, weiterhin keine Verwerfung")
+c = b.schwelle_diskret(np.full(100, 0.001), 0.05, k_erlaubt=3)
+ok(abs(c - 10 / 10001) < 1e-15 and c < 0.001, "grösste Stufe strikt unter den Null-p-Werten")
+ok(b.schwelle_diskret(np.r_[np.full(3, 0.01), np.full(97, 0.9)], 0.05, k_erlaubt=3) == 500 / 10001, "höchstens k_erlaubt unter dem Niveau: volle Stufe")
+ok(b.schwelle_diskret(np.full(10, 0.9), 0.05, k_erlaubt=-1) == 0.0, "keine zulässige Zahl von Fehlalarmen: Test verwirft nie")
+# Astra-Gutachten 7, G7-04 A: eine Urteilsfunktion überall; Ereignisse eines Bündels
+ok(b.ereignisse_buendel([[1, 5, 9], [5, 20], []]) == 4, "Bündel: verschiedene Einstiegstage zählen, gleiche Tage einmal")
+u = b.urteile_zaehlen([0.001, 0.001, 0.2, 0.01], [9, 12, 40, 10], 0.05)
+ok(u == {"bestätigt": 0.5, "nicht bestätigt": 0.25, "unentschieden": 0.25}, "p 0.001 mit 9 Ereignissen ist unentschieden, kein Erfolg")
 ok(b.urteil(0.001, 0.05, 9) == "unentschieden" and b.urteil(0.001, 0.05, 10) == "bestätigt" and b.urteil(0.2, 0.05, 30) == "nicht bestätigt", "Urteil mit Mindestzahl 10")
 print("alle Tests bestanden")
