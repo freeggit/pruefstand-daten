@@ -1,5 +1,7 @@
 name: Prüfstand Vorwärtsregister
-# V3.14 (E32): tägliches Logbuch der Auslöser registrierter Stränge. Liest keine Zielkurse, rechnet keine Erträge.
+# V3.15 (E32): tägliches Handelsbuch der registrierten Stränge (explorativ). Der Signalrechner erhält gekürzte Kurse;
+# Erträge rechnet nur die einmalige Schlussauswertung eines Strangs nach seinem Schlusstag (im selben Lauf, ohne Schalter).
+# Freigabemodus: vorwaerts/freigabe.json (fehlt die Datei: gesperrt).
 on:
   schedule:
     - cron: "10 4 * * *"         # nach Strom (02:30 UTC) und Datenspiegel (03:15 UTC), vor der Suche (05:00 UTC)
@@ -12,17 +14,18 @@ permissions:
   contents: write
 concurrency:
   group: vorwaerts               # eigene Gruppe: wartet nicht auf die Suche und verdrängt keinen wartenden Lauf;
-  cancel-in-progress: false      # einchecken.py holt claude/lernen vor dem Push und mischt (wie bei der Lernrunde)
+  cancel-in-progress: false      # vorwaerts.py veröffentlicht selbst: holt claude/lernen, prüft die Anhängeregel, setzt den eigenen Stand dahinter
 jobs:
   vorwaerts:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
+        with: { fetch-depth: 0 }   # V3.15: Zeitpunkt des Commits der Registrierung und der festgelegte Code brauchen die Historie
       - uses: actions/setup-python@v6
         with: { python-version: "3.12" }
       - name: Pakete
-        run: pip install -q numpy pandas
+        run: pip install -q numpy==2.5.3 pandas==3.0.6     # feste Versionen: eine reservierte Schlussauswertung wird nur mit denselben fortgesetzt
       - name: Zweige holen
         run: |
           for z in daten-energie daten-neu lernen; do
@@ -36,18 +39,28 @@ jobs:
             fi
           done
           test -d _lernen
-      - name: Tests (nur bei Code-Änderung)
+      - name: Tests (bei Push; unabhängig vom Freigabemodus)
         if: github.event_name == 'push'
         run: python test_vorwaerts.py
         timeout-minutes: 5
-      - name: Logbuch fortschreiben
+      - name: Handelsbuch fortschreiben
         id: logbuch
         run: |
-          export PS_VORWAERTS_STAND="main $(git rev-parse --short HEAD); neu $(git -C _daten-neu rev-parse --short HEAD 2>/dev/null); energie $(git -C _daten-energie rev-parse --short HEAD 2>/dev/null)"
+          export PS_VORWAERTS_STAND="main=$(git rev-parse HEAD);neu=$(git -C _daten-neu rev-parse HEAD 2>/dev/null);energie=$(git -C _daten-energie rev-parse HEAD 2>/dev/null)"
           python vorwaerts.py
         env:
           PS_CACHE: /tmp/vorwaerts-cache
         timeout-minutes: 15
-      - name: Einchecken auf claude/lernen
+      - name: Veröffentlichen (nur vorwaerts/, streng anhängend; danach Vermerk der Zeit nach dem Push)
+        id: push
         if: always()
-        run: python einchecken.py "Vorwärtsregister"
+        run: python vorwaerts.py veroeffentliche
+        timeout-minutes: 5
+      - name: Bergung (lokale Journale sichern, wenn Lauf oder Veröffentlichung scheitert)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vorwaerts-bergung-${{ github.run_id }}
+          path: _lernen/vorwaerts/
+          if-no-files-found: ignore
+          retention-days: 90
