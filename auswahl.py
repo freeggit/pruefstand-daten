@@ -131,7 +131,7 @@ def score_suche(t, plac_max):
 
 
 # ====================================================================================================== Daten (Discovery)
-def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False):
+def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False, laufeintrag=None):
     import pandas as pd
     import suchmaschine as sm                    # lädt nur Daten bis zum Stichtag (Siegel durch Bau)
     import bestaetigung as bt
@@ -161,6 +161,30 @@ def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False):
 
     jahre = jahre_bestaetigung(oeffnungstag); grenze = grenzwert(jahre)
     zus = json.load(open(zus_json))
+    # Bindung an den archivierten Rechenstand (Astra-Gutachten 7, G7-13): Kandidaten und Placebo-Maxima stammen aus einem
+    # archivierten Lauf; die Strategien werden hier mit dem heutigen Code und Datenstand nachgebaut. Der Abgleich wird
+    # ausgewiesen; bei abweichendem Code der Suche ist das Ergebnis als «Rechenstand abweichend» gekennzeichnet.
+    import hashlib
+    _hier = os.path.dirname(os.path.abspath(__file__))
+    _sha = lambda n: hashlib.sha256(open(os.path.join(_hier, n), "rb").read()).hexdigest()[:16]
+    le = json.load(open(laufeintrag)) if laufeintrag and os.path.exists(laufeintrag) else {}
+    hk = dict(le.get("herkunft") or {}); hk = {k: hk.get(k, le.get(k)) for k in ("sha_suchmaschine", "commit_main", "commit_neu", "commit_energie")}
+    bindung = dict(laufeintrag=os.path.basename(laufeintrag) if le else None, lauf_id=le.get("lauf_id"),
+                   sha_suchmaschine_lauf=hk["sha_suchmaschine"], sha_suchmaschine_jetzt=_sha("suchmaschine.py"),
+                   sha_auswahl=_sha("auswahl.py"), sha_bestaetigung=_sha("bestaetigung.py"),
+                   commit_main=hk["commit_main"], commit_neu=hk["commit_neu"], commit_energie=hk["commit_energie"],
+                   datenstand_jetzt=os.environ.get("PS_AUSWAHL_STAND", ""))
+    bindung["code_gleich"] = bool(le) and bindung["sha_suchmaschine_lauf"] == bindung["sha_suchmaschine_jetzt"]
+    bindung["s_dokument_passt"] = bool(le) and (le.get("lauf_id") == zus.get("lauf_id"))
+    # Datenstand: PS_AUSWAHL_STAND = "main=<commit>;neu=<commit>;energie=<commit>" (die ausgecheckten Stände dieses Laufs)
+    jetzt = dict(t.split("=", 1) for t in bindung["datenstand_jetzt"].split(";") if "=" in t)
+    paare = [(jetzt.get(k), hk[c]) for k, c in (("main", "commit_main"), ("neu", "commit_neu"), ("energie", "commit_energie"))]
+    if not le or any(a_ is None or b_ is None for a_, b_ in paare):
+        bindung["daten_gleich"] = None
+    else:
+        bindung["daten_gleich"] = all(b_.startswith(a_) or a_.startswith(b_) for a_, b_ in paare)
+    bindung["rechenstand"] = ("Code der Suche " + ("wie archiviert" if bindung["code_gleich"] and bindung["s_dokument_passt"] else "ABWEICHEND oder nicht belegt")
+                              + "; Datenstand " + {True: "wie archiviert", False: "ABWEICHEND", None: "nicht belegt"}[bindung["daten_gleich"]])
     plac = zus.get("placebo_bestes_t_je_lauf_roh") or zus["placebo_bestes_t_je_lauf"]     # ältere Läufe: nur gerundet
     plac_art = "ungerundet" if zus.get("placebo_bestes_t_je_lauf_roh") else "gerundet (Lauf vor V3.12)"
     d = pd.read_csv(echt_csv)
@@ -227,33 +251,44 @@ def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False):
         nb = int(np.ceil(n_conf / block_w))
 
         def pfad(rng, zen, ziel_je):
+            """Netto-Pfad mit dem endgültigen Tagesrechner: Kosten am Einstiegstag wie in der Bestätigung (Astra-Gutachten 7,
+            G7-04 B). Je Ereignis wird (Ziel - Nettozentrum) gleichmässig über die Haltedauer gelegt."""
             st = rng.integers(0, L, nb); idx = (lo + (st[:, None] + np.arange(block_w)[None, :]) % L).ravel()[:n_conf]
             bi = [[(g, o[idx], c[idx]) for g, o, c in korb] for korb in bench]
-            X, ne = [], []
+            X, G = [], []
             for ev, z, h, ze, zj in zip(evs, zs, hs, zen, ziel_je):
-                x, g = bt.tagesertrag(tage[z][0][idx], tage[z][1][idx], bi, None, np.where(ev[idx])[0], h, 0.0)
+                x, g = bt.tagesertrag(tage[z][0][idx], tage[z][1][idx], bi, None, np.where(ev[idx])[0], h, sm.KOSTEN)
                 for p in g:
                     x[p:p + h] += (zj - ze) / h
-                X.append(x); ne.append(len(g))
-            return np.mean(X, axis=0), X, ne
+                X.append(x); G.append(g)
+            return np.mean(X, axis=0), X, G
         m = len(regeln); seed = SEED + 1000 * m + sum(ord(c) for k in regeln for c in k["kennung"]) % 997
-        rng = np.random.default_rng(seed); su = np.zeros(m); cn = np.zeros(m)
+        rng = np.random.default_rng(seed); su = np.zeros(m); cn = np.zeros(m); je = [[] for _ in range(m)]
         for _ in range(W_ZENTRUM):
-            _, X, ne = pfad(rng, [0.0] * m, [0.0] * m); su += [x.sum() for x in X]; cn += ne
-        zen = su / np.maximum(cn, 1); f = np.maximum(cn / W_ZENTRUM / (n_conf / 252.0), 1e-9)
+            _, X, G = pfad(rng, [0.0] * m, [0.0] * m)
+            for i_, (x, g) in enumerate(zip(X, G)):
+                su[i_] += x.sum(); cn[i_] += len(g); je[i_].append(x.sum())
+        zen = su / np.maximum(cn, 1); f = np.maximum(cn / W_ZENTRUM / (n_conf / 252.0), 1e-9)   # Nettozentrum je Ereignis, einmal bestimmt
+        zen_se = [float(np.std(a_, ddof=1) * np.sqrt(len(a_)) / max(c_, 1)) for a_, c_ in zip(je, cn)]
 
         def pw(npj, sd, n):
-            rg = np.random.default_rng(sd); p = np.empty(n); ne_ = np.empty(n)
+            rg = np.random.default_rng(sd); p = np.empty(n); ne_ = np.empty(n, dtype=int)
             for i in range(n):
-                x, _, ne = pfad(rg, zen, [npj / fi for fi in f])
-                p[i] = bt.p_wert(*bt.blocktest(x, rg, ziehungen=bt.ZIEHUNGEN)[:2]); ne_[i] = sum(ne)
+                x, _, G = pfad(rg, zen, [npj / fi for fi in f])
+                p[i] = bt.p_wert(*bt.blocktest(x, rg, ziehungen=bt.ZIEHUNGEN)[:2]); ne_[i] = bt.ereignisse_buendel(G)
             return p, ne_
-        p0, _ = pw(0.0, seed + 1, W_NULL); c = bt.schwelle_diskret(p0, NIVEAU)
-        p1, ne1 = pw(ALTERNATIVE, seed + 2, W_STAERKE)
-        return dict(staerke=float((p1 <= c).mean()), staerke_nominal=float((p1 <= NIVEAU).mean()), schwelle=float(c),
-                    fehlalarm_nominal=float((p0 <= NIVEAU).mean()), ereignisse_je_pfad=round(float(ne1.mean()), 1),
+        # Eine Urteilsfunktion überall (G7-04 A): Ein Pfad mit weniger als MIN_EREIGNISSE Ereignissen ist «unentschieden» und
+        # kann weder in der Nullwelt verwerfen noch in der Teststärke als Erfolg zählen.
+        p0, n0_ = pw(0.0, seed + 1, W_NULL)
+        c = bt.schwelle_diskret(np.where(n0_ >= bt.MIN_EREIGNISSE, p0, 1.0), NIVEAU, ziehungen=bt.ZIEHUNGEN)
+        p1, n1_ = pw(ALTERNATIVE, seed + 2, W_STAERKE)
+        u0 = bt.urteile_zaehlen(p0, n0_, c); u1 = bt.urteile_zaehlen(p1, n1_, c)
+        return dict(staerke=float(u1["bestätigt"]), anteile_alternative=u1, anteile_null=u0, schwelle=float(c),
+                    staerke_ohne_mindestzahl=float((p1 <= c).mean()), fehlalarm_nominal=float((p0 <= NIVEAU).mean()),
+                    ereignisse_je_pfad=round(float(n1_.mean()), 1), anteil_unter_mindestzahl=float((n1_ < bt.MIN_EREIGNISSE).mean()),
+                    nettozentrum_je_ereignis=[round(float(z_), 4) for z_ in zen], nettozentrum_se=[round(z_, 4) for z_ in zen_se],
                     welten=dict(zentrum=W_ZENTRUM, null=W_NULL, staerke=W_STAERKE), tage=n_conf, startwert=int(seed),
-                    art="Nullwelt gesamt, Ringblöcke 60 Tage, ohne Welt mit Abhängigkeit; Entwicklungsgüte")
+                    art="Nullwelt gesamt, Ringblöcke 60 Tage, Kosten am Einstiegstag, ohne Welt mit Abhängigkeit; Entwicklungsgüte, keine Abnahme")
 
     finalist, pruef = waehlen(top, schwankung_von, grenze, staerke_von if mit_welten else None)
 
@@ -267,12 +302,12 @@ def _lauf(echt_csv, zus_json, vorreg_dir, oeffnungstag, aus, mit_welten=False):
                     jahresertrag_netto_discovery_pp=round(float(x[lo:hi].sum() / ((hi - lo) / 252.0)), 3),
                     jahresschwankung_pp=_r(s), staerke_naeherung=round(staerke_naeherung(s, jahre), 3),
                     abhaengigkeit_rho1=round(rho1(netto), 3))
-    erg = dict(programm="auswahl.py", verfassung="V3.13", regel="E27a, E27b, E27e", erstellt_utc=datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+    erg = dict(programm="auswahl.py", verfassung="V3.15", regel="E27a, E27b, E27e", erstellt_utc=datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
                oeffnungstag=str(oeffnungstag), bestaetigung_beginn=str(BEGINN), jahre=round(jahre, 3),
                grenzwert_jahresschwankung_pp=round(grenze, 3),
                parameter=dict(niveau=NIVEAU, staerke=STAERKE, alternative_pp_pro_jahr=ALTERNATIVE, min_ereignisse=MIN_EREIGNISSE,
                               k_max=K_MAX, block_schwankung=BLOCK_SCHWANKUNG),
-               suchlauf=dict(nr=zus.get("nr"), lauf_id=zus.get("lauf_id"), code_sha256=zus.get("code_sha256"), placebo_laeufe=len(plac), placebo_maxima=plac_art,
+               bindung=bindung, suchlauf=dict(nr=zus.get("nr"), lauf_id=zus.get("lauf_id"), code_sha256=zus.get("code_sha256"), placebo_laeufe=len(plac), placebo_maxima=plac_art,
                              echt_csv=os.path.basename(echt_csv)),
                pool=dict(vorfilter=int(n_vor), bestaetigungsfaehig_ohne_datenmangel=int(n_bf), mit_genug_ereignissen=int(len(d)),
                          klausur=int(n_v), gesamt=len(kand)),
@@ -300,12 +335,14 @@ if __name__ == "__main__":
     tag_ = os.environ.get("PS_AUSWAHL_TAG")
     tag_ = datetime.date.fromisoformat(tag_) if tag_ else datetime.datetime.utcnow().date()
     e = _lauf(echt, zus_, vdir, tag_, os.environ.get("PS_AUSWAHL_AUS", "auswahl_e27.json"),
-              mit_welten=os.environ.get("PS_AUSWAHL_WELTEN", "0") == "1")
+              mit_welten=os.environ.get("PS_AUSWAHL_WELTEN", "0") == "1",
+              laufeintrag=os.environ.get("PS_AUSWAHL_LAUF"))
     f = e["finalist"]
+    print("Rechenstand:", e["bindung"]["rechenstand"])
     print(f"Jahre {e['jahre']}, Grenzwert {e['grenzwert_jahresschwankung_pp']} pp; Pool {e['pool']['gesamt']}")
     for k in e["beste"]:
         print(f"  {k['kennung']}: Score {k['score']:.4f}, t {k['t']}, Schwankung {k['jahresschwankung_pp']} pp, Stärke s.W. {k['staerke_naeherung']}")
     for p in e["pruefungen"]:
         w = p.get("welten")
-        print(f"  Prüfung {p['art']}: Schwankung {p['jahresschwankung_pp']} pp, Vorprüfung {p['vorpruefung']}" + (f", Welten: Stärke {w['staerke']:.3f}, Schwelle {w['schwelle']:.4f}" if w else "") + f", bestanden {p['bestanden']}")
+        print(f"  Prüfung {p['art']}: Schwankung {p['jahresschwankung_pp']} pp, Vorprüfung {p['vorpruefung']}" + (f", Welten: bestätigt {w['staerke']:.3f}, unentschieden {w['anteile_alternative']['unentschieden']:.3f}, Schwelle {w['schwelle']:.4f}" if w else "") + f", bestanden {p['bestanden']}")
     print("Finalist:", "keiner" if f is None else f"{f['art']} {f['regeln']} Schwankung {f['jahresschwankung_pp']} pp, Stärke s.W. {f['staerke_naeherung']}")
