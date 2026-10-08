@@ -983,6 +983,18 @@
   "sha256": "11f1b2bbbdcbe6347a34437c02d04202fda0eca1dbb023726e4b56504b802e27",
   "url": "https://www.sec.gov/files/datastandardsinnovation/data/insider-transactions-data-sets/2026q2_form345.zip"
  },
+ "2026q3": {
+  "abruf_utc": "2026-10-08T03:29:12Z",
+  "ausgeschlossen_n": 11,
+  "ausgeschlossen_wert_usd": 1600036534040237.5,
+  "bytes": 8660776,
+  "content_length": "8660776",
+  "etag": null,
+  "filter": 2,
+  "last_modified": "Wed, 07 Oct 2026 15:48:02 GMT",
+  "sha256": "a4e6a681cfcfa43a3d9e4ca9cfec1fd26a59d0a01eac7e9f7b5a0122092c90f3",
+  "url": "https://www.sec.gov/files/datastandardsinnovation/data/insider-transactions-data-sets/2026q3_form345.zip"
+ },
  "edgar_2001q1": {
   "abruf_utc": "2026-09-27T15:16:54Z",
   "bytes": 10467973,
@@ -1705,10 +1717,10 @@
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR3/master.gz"
  },
  "edgar_2026q4": {
-  "abruf_utc": "2026-10-07T03:29:59Z",
-  "bytes": 1844867,
-  "meldungen": 979,
-  "sha256": "b94e628b7d4d54b8e66d9bfa6cac245b69b007555a10274c9da53dfd386065f4",
+  "abruf_utc": "2026-10-08T03:29:33Z",
+  "bytes": 2131441,
+  "meldungen": 1129,
+  "sha256": "a3f502cd65661363ba43778f5924e3c0b6859c759f2c44b88acac005f109d721",
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR4/master.gz"
  }
 }
