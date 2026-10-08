@@ -3278,5 +3278,18 @@
   "mechanismus": "Das Beige Book liefert zwei Wochen vor FOMC-Sitzungen qualitative Konjunkturhinweise und verschiebt kurzfristig Zinserwartungen und Zyklik gegenueber Defensivwerten.",
   "grund": "Acht Termine pro Jahr, Archiv ab 1970, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse.",
   "ergaenzt_utc": "2026-10-07T10:00Z"
+ },
+ {
+  "id": "nasdaq_ipo_kalender",
+  "name": "Nasdaq IPO-Kalender",
+  "url": "https://api.nasdaq.com/api/ipo/calendar",
+  "domain": "api.nasdaq.com",
+  "bereich": "Firmenereignisse",
+  "status": "fehler",
+  "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4.",
+  "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-08T08:17Z",
+  "geprueft_utc": "2026-10-08T08:17Z"
  }
 ]
