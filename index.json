@@ -1437,9 +1437,16 @@
    "s_dokument": "suche/S0031.json",
    "ergebnis_hash": "2204b1c2f7e50bed",
    "gesamt": "vollständig"
+  },
+  {
+   "datei": "suche/laeufe/L20261007T224240Z.json",
+   "lauf_id": "L20261007T224240Z",
+   "s_dokument": "suche/S0031.json",
+   "ergebnis_hash": "2204b1c2f7e50bed",
+   "gesamt": "vollständig"
   }
  ],
- "letzter_lauf_utc": "2026-10-07T20:47Z",
+ "letzter_lauf_utc": "2026-10-08T00:37Z",
  "letztes_vollarchiv": "suche/S0031_alle.csv.gz",
  "letzter_ergebnis_hash": "2204b1c2f7e50bed",
  "konflikte": [
@@ -3677,6 +3684,6 @@
  "exposition": {
   "datei": "exposition.json",
   "grundreihen_n": 282,
-  "neu_in_diesem_lauf": 2
+  "neu_in_diesem_lauf": 0
  }
 }
