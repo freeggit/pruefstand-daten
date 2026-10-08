@@ -3293,45 +3293,31 @@
   "geprueft_utc": "2026-10-08T08:17Z"
  },
  {
-  "id": "us_treasury_auktionen_ergebnisse",
-  "name": "US Treasury Auktionsergebnisse (Bid-to-Cover, Tail)",
-  "url": "https://www.fiscaldata.treasury.gov/api-documentation/ (Endpunkt /v1/accounting/od/auctions_query)",
-  "domain": "api.fiscaldata.treasury.gov",
+  "id": "freddiemac_pmms_hypothekenzins",
+  "name": "Freddie Mac Hypothekenzins (PMMS, wöchentlich)",
+  "url": "https://www.freddiemac.com/pmms/docs/PMMS_history.csv",
+  "domain": "freddiemac.com",
   "bereich": "Staat und Geldmarkt",
-  "mechanismus": "Schwache Nachfrage in Staatsanleihen-Auktionen (tiefes Bid-to-Cover, grosser Tail) signalisiert Finanzierungsdruck und kann kurzfristig Anleihen-ETFs gegenüber dem Weltindex belasten.",
+  "mechanismus": "Sprünge im Hypothekenzins verändern die Finanzierung von Wohnbau und Immobilien kurzfristig und wirken auf Bau-, Immobilien- und Anleihen-ETFs gegenüber dem Weltindex.",
   "prioritaet": "normal",
-  "grund": "Vorrat auf 15 (Lernrunde 2026-10-08); Fachliteratur zu Auktionsprämien am Staatsanleihenmarkt",
+  "grund": "Vorrat auf 15 (Lernrunde 2026-10-08)",
   "status": "kandidat",
   "reihen": [],
-  "aufgenommen_utc": "2026-10-08T10:00Z",
-  "geprueft_utc": "2026-10-08T10:00Z"
+  "aufgenommen_utc": "2026-10-08T10:30Z",
+  "geprueft_utc": "2026-10-08T10:30Z"
  },
  {
-  "id": "eia_woechentl_benzin_lager_importe",
-  "name": "EIA wöchentliche Benzinlager und Importe",
-  "url": "https://api.eia.gov/v2/petroleum/stoc/wstk/ (oder https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_w.htm)",
-  "domain": "eia.gov",
-  "bereich": "Rohstoffe und Logistik",
-  "mechanismus": "Unabhängige Messung derselben Öl-/Raffinerie-Nachfrage wie DCOILWTICO; Lageraufbau oder -abbau wirkt kurzfristig auf Energie- und Rohstoffpreise gegenüber dem Weltindex.",
-  "prioritaet": "hoch",
-  "grund": "Replikation von DCOILWTICO_d1 -> IBB (Regel L1, unabhängige Quelle)",
-  "status": "kandidat",
-  "reihen": [],
-  "aufgenommen_utc": "2026-10-08T10:00Z",
-  "geprueft_utc": "2026-10-08T10:00Z"
- },
- {
-  "id": "finra_short_interest_halbmonat",
-  "name": "FINRA Short Interest (zweimal monatlich, aggregiert je Sektor)",
-  "url": "https://www.finra.org/finra-data/browse-catalog/equity-short-interest/files",
+  "id": "finra_margin_debt_monatlich",
+  "name": "FINRA Margin Statistics (Belehnung, monatlich)",
+  "url": "https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics",
   "domain": "finra.org",
-  "bereich": "Firmenereignisse aggregiert",
-  "mechanismus": "Hohe Leerverkaufsquote im Sektor zeigt negative Informierte; Verkaufsdruck oder Short-Covering wirkt kurzfristig auf Sektor-ETFs gegenüber dem Weltindex.",
+  "bereich": "Aufmerksamkeit und Positionierung",
+  "mechanismus": "Rasch steigende Belehnung zeigt Hebel und Risikoappetit; Abbau erzwingt Verkäufe und wirkt kurzfristig auf zyklische Sektoren gegenüber dem Weltindex.",
   "prioritaet": "normal",
-  "grund": "Vorrat auf 15; Fachliteratur: Short Interest sagt Renditen voraus (Boehmer/Jones/Zhang)",
+  "grund": "Vorrat auf 15; Fachliteratur zu Margin Debt und Marktrenditen",
   "status": "kandidat",
   "reihen": [],
-  "aufgenommen_utc": "2026-10-08T10:00Z",
-  "geprueft_utc": "2026-10-08T10:00Z"
+  "aufgenommen_utc": "2026-10-08T10:30Z",
+  "geprueft_utc": "2026-10-08T10:30Z"
  }
 ]
