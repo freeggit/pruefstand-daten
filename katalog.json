@@ -3208,11 +3208,12 @@
   "url": "https://markets.newyorkfed.org/api/pd/list/timeseries.json",
   "domain": "markets.newyorkfed.org",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Rasch steigende Haendlerbestaende an Staatsanleihen zeigen Absorptionsdruck und folgen auf Rendite- und Anleihenkurs-Bewegungen (IEF, TLT) gegenueber dem Weltindex.",
-  "grund": "Woechentlich ab 2013 (URL HTTP 200, ohne Schluessel). Publikationsfrist: Mittwoch fuer Vorwoche, im Manifest vermerken.",
-  "ergaenzt_utc": "2026-10-07T10:00Z"
+  "grund": "K1: woechentlich (Median-Abstand 7 Tage > 3).",
+  "ergaenzt_utc": "2026-10-07T10:00Z",
+  "geprueft_utc": "2026-10-08T12:35Z"
  },
  {
   "id": "nyfed_gscpi_lieferketten",
@@ -3220,11 +3221,12 @@
   "url": "https://www.newyorkfed.org/medialibrary/research/interactive/gscpi/downloads/gscpi_data.xlsx",
   "domain": "www.newyorkfed.org",
   "bereich": "Rohstoffe und Logistik",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Starker Anstieg des Lieferkettendrucks erhoeht Inflationserwartungen und belastet Industrie- gegenueber Rohstoff- und Energiesektoren.",
-  "grund": "Monatlich ab 1997, Excel-Datei ohne Login (HTTP 200). Nur monatlich, kleine Kandidatenzahl; Revisionen moeglich, Publikationsfrist pruefen.",
-  "ergaenzt_utc": "2026-10-07T10:00Z"
+  "grund": "K1: monatlich; K4: Revisionen moeglich.",
+  "ergaenzt_utc": "2026-10-07T10:00Z",
+  "geprueft_utc": "2026-10-08T12:35Z"
  },
  {
   "id": "noaa_cpc_heizgradtage_taeglich",
@@ -3300,11 +3302,11 @@
   "bereich": "Staat und Geldmarkt",
   "mechanismus": "Sprünge im Hypothekenzins verändern die Finanzierung von Wohnbau und Immobilien kurzfristig und wirken auf Bau-, Immobilien- und Anleihen-ETFs gegenüber dem Weltindex.",
   "prioritaet": "normal",
-  "grund": "Vorrat auf 15 (Lernrunde 2026-10-08)",
-  "status": "kandidat",
+  "grund": "K1: woechentlich (Median-Abstand 7 Tage > 3); ausserdem Publikation Donnerstag.",
+  "status": "abgelehnt",
   "reihen": [],
   "aufgenommen_utc": "2026-10-08T10:30Z",
-  "geprueft_utc": "2026-10-08T10:30Z"
+  "geprueft_utc": "2026-10-08T12:35Z"
  },
  {
   "id": "finra_margin_debt_monatlich",
@@ -3314,10 +3316,10 @@
   "bereich": "Aufmerksamkeit und Positionierung",
   "mechanismus": "Rasch steigende Belehnung zeigt Hebel und Risikoappetit; Abbau erzwingt Verkäufe und wirkt kurzfristig auf zyklische Sektoren gegenüber dem Weltindex.",
   "prioritaet": "normal",
-  "grund": "Vorrat auf 15; Fachliteratur zu Margin Debt und Marktrenditen",
-  "status": "kandidat",
+  "grund": "K1: monatlich; K4: Werte werden revidiert.",
+  "status": "abgelehnt",
   "reihen": [],
   "aufgenommen_utc": "2026-10-08T10:30Z",
-  "geprueft_utc": "2026-10-08T10:30Z"
+  "geprueft_utc": "2026-10-08T12:35Z"
  }
 ]
