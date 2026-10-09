@@ -3321,5 +3321,53 @@
   "reihen": [],
   "aufgenommen_utc": "2026-10-08T10:30Z",
   "geprueft_utc": "2026-10-08T12:35Z"
+ },
+ {
+  "id": "sec_8k_restrukturierung_item205",
+  "name": "SEC 8-K Item 2.05 (Restrukturierungskosten) je Tag und Sektor",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Gehaeufte Restrukturierungsmeldungen in einem Sektor zeigen Kostendruck und Nachfrageschwaeche an und verschieben kurzfristig Sektor-ETFs gegenueber dem Weltindex.",
+  "grund": "Neuer Bereich: Insolvenz und Restrukturierung aggregiert. Tagesindex ab 1994, ohne Login; Formular 8-K mit Item aus Dokumentkopf, Zugriff mit User-Agent. Aggregation je Tag, nie je Firma.",
+  "ergaenzt_utc": "2026-10-09T10:00Z"
+ },
+ {
+  "id": "sec_8k_insolvenz_item103",
+  "name": "SEC 8-K Item 1.03 (Konkurs, Gläubigerschutz) je Tag und Sektor",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Insolvenzwellen in Energie, Finanz oder Gesundheit erhoehen Kreditrisikoaufschlaege und belasten den betroffenen Sektor kurzfristig gegenueber dem Weltindex.",
+  "grund": "Taegliche Zaehlung ab 1994, oeffentlich. Ergaenzt fdic_bankausfaelle um Nichtbanken.",
+  "ergaenzt_utc": "2026-10-09T10:00Z"
+ },
+ {
+  "id": "sec_8k_bilanzkorrektur_item402",
+  "name": "SEC 8-K Item 4.02 (Bilanzkorrektur, Non-Reliance) je Tag",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Meldungen zu unzuverlaessigen Abschluessen untergraben das Vertrauen in einen Sektor und wirken kurzfristig auf seine Bewertung.",
+  "grund": "Seltene Ereignisse (wenige hundert pro Jahr), Aggregation je Sektor noetig; Mindestzahl Ereignisse pruefen.",
+  "ergaenzt_utc": "2026-10-09T10:00Z"
+ },
+ {
+  "id": "ecb_ratssitzungen_termine",
+  "name": "EZB-Ratssitzungstage und Pressekonferenzen",
+  "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+  "domain": "www.ecb.europa.eu",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Zinsentscheide und Pressekonferenzen der EZB bewegen Euro-Anleihen und Euro-Laenderaktien (Deutschland, Frankreich) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Amtlicher Kalender ab 1999, deterministisch; ergaenzt leitzins_aenderungstage um alle Sitzungstage, auch ohne Zinsaenderung.",
+  "ergaenzt_utc": "2026-10-09T10:00Z"
  }
 ]
