@@ -3251,11 +3251,12 @@
   "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding",
   "domain": "home.treasury.gov",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Ankuendigungen zu Emissionsvolumen und Laufzeiten veraendern das erwartete Angebot an Laufzeitpraemie und bewegen kurzfristig Anleihen-ETFs.",
-  "grund": "Vier Termine pro Jahr (Februar, Mai, August, November), Historie seit 2000, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse, daher Prioritaet normal.",
-  "ergaenzt_utc": "2026-10-07T10:00Z"
+  "grund": "Test 2026-10-09T12:50Z: aktuelle Seite nennt nur die laufenden Termine; Archivseite ohne datierte Liste (nur Verweis auf Daten 1976-2010). Historie ab 2000 nicht strukturiert abrufbar; Jahrseiten im naechsten Lauf pruefen. | Vier Termine pro Jahr (Februar, Mai, August, November), Historie seit 2000, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse, daher Prioritaet normal.",
+  "ergaenzt_utc": "2026-10-07T10:00Z",
+  "geprueft_utc": "2026-10-09T12:50Z"
  },
  {
   "id": "sec_nt_verspaetungsmeldungen",
@@ -3364,10 +3365,11 @@
   "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
   "domain": "www.ecb.europa.eu",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Zinsentscheide und Pressekonferenzen der EZB bewegen Euro-Anleihen und Euro-Laenderaktien (Deutschland, Frankreich) kurzfristig gegenueber dem Weltindex.",
-  "grund": "Amtlicher Kalender ab 1999, deterministisch; ergaenzt leitzins_aenderungstage um alle Sitzungstage, auch ohne Zinsaenderung.",
-  "ergaenzt_utc": "2026-10-09T10:00Z"
+  "grund": "Test 2026-10-09T12:50Z: Kalenderseite der EZB ist skriptgesteuert ohne Daten, Jahresseiten /press/govcdec/mopo/<J>/ leiten auf eine Gesamtseite um (404/301); keine maschinenlesbare Terminhistorie ab 1999 gefunden. Naechster Lauf: Pressemitteilungs-Archiv pr/date pruefen. | Amtlicher Kalender ab 1999, deterministisch; ergaenzt leitzins_aenderungstage um alle Sitzungstage, auch ohne Zinsaenderung.",
+  "ergaenzt_utc": "2026-10-09T10:00Z",
+  "geprueft_utc": "2026-10-09T12:50Z"
  }
 ]
