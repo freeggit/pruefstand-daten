@@ -1,0 +1,1017 @@
+zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xli_8k": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xli_13d": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlk_8k": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlk_13d": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlp_8k": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlp_13d": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlre_8k": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlre_13d": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlu_8k": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlu_13d": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlv_8k": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xlv_13d": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xly_8k": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)",
+   "sec:sec_edgar:xly_13d": "SEC-Sektorreihen: Zuordnung der Firma zum Sektor zum Meldezeitpunkt steht noch aus (Paket 3)"
+  },
+  "explorativ_reihen": [
+   "USEPUINDXD",
+   "idx_unsicherheit",
+   "neu_fred_equity_uncertainty_index",
+   "neu_msha_bergbauunfaelle_fatal",
+   "neu_msha_bergbauunfaelle_gesamt",
+   "neu_nhtsa_ruckrufe_anzahl",
+   "neu_nhtsa_ruckrufe_einheiten_betroffen",
+   "neu_ntsb_luftfahrtunfaelle_fatal",
+   "neu_ntsb_luftfahrtunfaelle_gesamt",
+   "sec_sec_edgar_xlb_13d",
+   "sec_sec_edgar_xlb_8k",
+   "sec_sec_edgar_xlc_13d",
+   "sec_sec_edgar_xlc_8k",
+   "sec_sec_edgar_xle_13d",
+   "sec_sec_edgar_xle_8k",
+   "sec_sec_edgar_xlf_13d",
+   "sec_sec_edgar_xlf_8k",
+   "sec_sec_edgar_xli_13d",
+   "sec_sec_edgar_xli_8k",
+   "sec_sec_edgar_xlk_13d",
+   "sec_sec_edgar_xlk_8k",
+   "sec_sec_edgar_xlp_13d",
+   "sec_sec_edgar_xlp_8k",
+   "sec_sec_edgar_xlre_13d",
+   "sec_sec_edgar_xlre_8k",
+   "sec_sec_edgar_xlu_13d",
+   "sec_sec_edgar_xlu_8k",
+   "sec_sec_edgar_xlv_13d",
+   "sec_sec_edgar_xlv_8k",
+   "sec_sec_edgar_xly_13d",
+   "sec_sec_edgar_xly_8k",
+   "sec_sec_insider_xlb_kaeufer",
+   "sec_sec_insider_xlb_kaufwert_usd",
+   "sec_sec_insider_xlb_verkaeufer",
+   "sec_sec_insider_xlb_verkaufwert_usd",
+   "sec_sec_insider_xlc_kaeufer",
+   "sec_sec_insider_xlc_kaufwert_usd",
+   "sec_sec_insider_xlc_verkaeufer",
+   "sec_sec_insider_xlc_verkaufwert_usd",
+   "sec_sec_insider_xle_kaeufer",
+   "sec_sec_insider_xle_kaufwert_usd",
+   "sec_sec_insider_xle_verkaeufer",
+   "sec_sec_insider_xle_verkaufwert_usd",
+   "sec_sec_insider_xlf_kaeufer",
+   "sec_sec_insider_xlf_kaufwert_usd",
+   "sec_sec_insider_xlf_verkaeufer",
+   "sec_sec_insider_xlf_verkaufwert_usd",
+   "sec_sec_insider_xli_kaeufer",
+   "sec_sec_insider_xli_kaufwert_usd",
+   "sec_sec_insider_xli_verkaeufer",
+   "sec_sec_insider_xli_verkaufwert_usd",
+   "sec_sec_insider_xlk_kaeufer",
+   "sec_sec_insider_xlk_kaufwert_usd",
+   "sec_sec_insider_xlk_verkaeufer",
+   "sec_sec_insider_xlk_verkaufwert_usd",
+   "sec_sec_insider_xlp_kaeufer",
+   "sec_sec_insider_xlp_kaufwert_usd",
+   "sec_sec_insider_xlp_verkaeufer",
+   "sec_sec_insider_xlp_verkaufwert_usd",
+   "sec_sec_insider_xlre_kaeufer",
+   "sec_sec_insider_xlre_kaufwert_usd",
+   "sec_sec_insider_xlre_verkaeufer",
+   "sec_sec_insider_xlre_verkaufwert_usd",
+   "sec_sec_insider_xlu_kaeufer",
+   "sec_sec_insider_xlu_kaufwert_usd",
+   "sec_sec_insider_xlu_verkaeufer",
+   "sec_sec_insider_xlu_verkaufwert_usd",
+   "sec_sec_insider_xlv_kaeufer",
+   "sec_sec_insider_xlv_kaufwert_usd",
+   "sec_sec_insider_xlv_verkaeufer",
+   "sec_sec_insider_xlv_verkaufwert_usd",
+   "sec_sec_insider_xly_kaeufer",
+   "sec_sec_insider_xly_kaufwert_usd",
+   "sec_sec_insider_xly_verkaeufer",
+   "sec_sec_insider_xly_verkaufwert_usd"
+  ],
+  "luecken_regel": "\u00c4nderungen \u00fcber k Beobachtungen nur bei h\u00f6chstens k + Toleranz Solltagen (Werktagsreihen: Toleranz 1/2/3 f\u00fcr k 1/5/20 wegen Feiertagen; Kalendertagsreihen: 0); Fenster h\u00f6chstens 10% + 3 Solltage l\u00e4nger als ihre Beobachtungszahl",
+  "luecken_reihen_n": 130,
+  "luecken_gesperrte_werte": {
+   "BAA10Y": {
+    "d1": 2,
+    "d5": 1,
+    "d20": 3,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "DCOILWTICO": {
+    "d1": 169,
+    "d5": 516,
+    "d20": 1733,
+    "z252": 3188,
+    "kalender": "B"
+   },
+   "DEXSZUS": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 44,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "DGS10": {
+    "d1": 5,
+    "d5": 1,
+    "d20": 6,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "DHHNGSP": {
+    "d1": 354,
+    "d5": 677,
+    "d20": 831,
+    "z252": 901,
+    "kalender": "B"
+   },
+   "DTWEXBGS": {
+    "d1": 9,
+    "d5": 14,
+    "d20": 80,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "T10Y2Y": {
+    "d1": 3,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "VIXCLS": {
+    "d1": 4,
+    "d5": 6,
+    "d20": 28,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "idx_dollar_stark": {
+    "d1": 6,
+    "d5": 8,
+    "d20": 31,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "idx_energiepreise": {
+    "d1": 23,
+    "d5": 50,
+    "d20": 206,
+    "z252": 295,
+    "kalender": "B"
+   },
+   "idx_geldmarkt_straff": {
+    "d1": 5,
+    "d5": 1,
+    "d20": 6,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "idx_insider_stimmung": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "idx_volatilitaet": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "idx_zinsanstieg": {
+    "d1": 47,
+    "d5": 116,
+    "d20": 571,
+    "z252": 71,
+    "kalender": "B"
+   },
+   "neu_boe_sonia_sonia": {
+    "d1": 52,
+    "d5": 50,
+    "d20": 35,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_boj_call_rate_call_rate": {
+    "d1": 48,
+    "d5": 172,
+    "d20": 553,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_bundesbank_umlauf_bund10y": {
+    "d1": 46,
+    "d5": 58,
+    "d20": 214,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_bundesbank_umlauf_bund2y": {
+    "d1": 17,
+    "d5": 19,
+    "d20": 71,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_cboe_skew_skew": {
+    "d1": 5,
+    "d5": 11,
+    "d20": 50,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_cboe_vix3m_vix3m": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_cboe_vix9d_vix9d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_cboe_vvix_vvix": {
+    "d1": 10,
+    "d5": 21,
+    "d20": 50,
+    "z252": 112,
+    "kalender": "B"
+   },
+   "neu_ecb_fx_eurchf": {
+    "d1": 35,
+    "d5": 28,
+    "d20": 18,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_ecb_fx_eurcny": {
+    "d1": 35,
+    "d5": 28,
+    "d20": 18,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_ecb_fx_eurjpy": {
+    "d1": 35,
+    "d5": 28,
+    "d20": 18,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_brent_brent": {
+    "d1": 238,
+    "d5": 726,
+    "d20": 1821,
+    "z252": 2569,
+    "kalender": "B"
+   },
+   "neu_fred_credit_spread_aaa": {
+    "d1": 2,
+    "d5": 1,
+    "d20": 3,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_credit_spread_baa": {
+    "d1": 2,
+    "d5": 1,
+    "d20": 3,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_dtb3_dtb3": {
+    "d1": 5,
+    "d5": 1,
+    "d20": 6,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_fx_lang_audusd": {
+    "d1": 10,
+    "d5": 15,
+    "d20": 73,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_fx_lang_gbpusd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 44,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_fx_lang_usdcad": {
+    "d1": 6,
+    "d5": 3,
+    "d20": 24,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_implied_vol_em": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_implied_vol_gold": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_implied_vol_oel": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_propane_propan": {
+    "d1": 111,
+    "d5": 335,
+    "d20": 1570,
+    "z252": 2860,
+    "kalender": "B"
+   },
+   "neu_fred_treasury_lang_dgs2": {
+    "d1": 3,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_treasury_lang_dgs3mo": {
+    "d1": 2,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_fred_usdjpy_usdjpy": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 44,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_mof_jgb_zinsen_kurz": {
+    "d1": 80,
+    "d5": 304,
+    "d20": 779,
+    "z252": 251,
+    "kalender": "B"
+   },
+   "neu_mof_jgb_zinsen_niveau": {
+    "d1": 69,
+    "d5": 249,
+    "d20": 745,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_mof_jgb_zinsen_steilheit": {
+    "d1": 69,
+    "d5": 249,
+    "d20": 745,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_nyfed_rrp_rrp": {
+    "d1": 40,
+    "d5": 51,
+    "d20": 77,
+    "z252": 194,
+    "kalender": "B"
+   },
+   "neu_snb_saron_saron": {
+    "d1": 50,
+    "d5": 38,
+    "d20": 230,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_treasury_auktionen_bid_to_cover": {
+    "d1": 676,
+    "d5": 2224,
+    "d20": 3099,
+    "z252": 2980,
+    "kalender": "B"
+   },
+   "neu_treasury_debt_penny_gesamt": {
+    "d1": 3,
+    "d5": 4,
+    "d20": 29,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "neu_treasury_debt_penny_intragovernmental": {
+    "d1": 45,
+    "d5": 45,
+    "d20": 45,
+    "z252": 147,
+    "kalender": "B"
+   },
+   "neu_treasury_debt_penny_oeffentlich_gehalten": {
+    "d1": 45,
+    "d5": 45,
+    "d20": 45,
+    "z252": 147,
+    "kalender": "B"
+   },
+   "neu_treasury_yield_curve_kurz": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "paar_kurz_ch_us": {
+    "d1": 50,
+    "d5": 38,
+    "d20": 230,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "paar_kurz_us_uk": {
+    "d1": 52,
+    "d5": 50,
+    "d20": 35,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "paar_oel_brent_wti": {
+    "d1": 368,
+    "d5": 1105,
+    "d20": 2202,
+    "z252": 2489,
+    "kalender": "B"
+   },
+   "paar_oel_gas": {
+    "d1": 338,
+    "d5": 622,
+    "d20": 756,
+    "z252": 999,
+    "kalender": "B"
+   },
+   "paar_vix_kurz": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "paar_vix_termin": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "paar_zins_us_de": {
+    "d1": 46,
+    "d5": 58,
+    "d20": 244,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "paar_zins_us_jp": {
+    "d1": 102,
+    "d5": 271,
+    "d20": 1317,
+    "z252": 650,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_markt_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_markt_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_markt_s1": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlb_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlb_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlc_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlc_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xle_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xle_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlf_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlf_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xli_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xli_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlk_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlk_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlp_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlp_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlre_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlre_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlu_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlu_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlv_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xlv_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xly_13d": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_edgar_xly_8k": {
+    "d1": 1,
+    "d5": 0,
+    "d20": 0,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_markt_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_markt_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_markt_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_markt_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlb_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlb_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlb_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlb_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlc_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlc_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlc_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlc_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xle_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xle_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xle_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xle_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlf_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlf_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlf_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlf_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xli_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xli_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xli_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xli_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlk_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlk_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlk_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlk_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlp_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlp_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlp_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlp_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlre_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlre_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlre_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlre_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlu_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlu_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlu_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlu_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlv_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlv_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlv_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xlv_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xly_kaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xly_kaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xly_verkaeufer": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   },
+   "sec_sec_insider_xly_verkaufwert_usd": {
+    "d1": 7,
+    "d5": 8,
+    "d20": 33,
+    "z252": 0,
+    "kalender": "B"
+   }
+  }
+ },
+ "umgebung": {
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "python": "3.12.15",
+  "btc_sha": "d7bd8261dfd4f3a0"
+ },
+ "code_sha256": "ae4a8f542fbb496b",
+ "dauer_min": 164.8
+}

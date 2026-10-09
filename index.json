@@ -1355,9 +1355,15 @@
    "datei": "suche/S0032.json",
    "kandidaten": 356266,
    "in_db": false
+  },
+  {
+   "nr": 33,
+   "datei": "suche/S0033.json",
+   "kandidaten": 356266,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-08T07:54Z",
+ "letzter_suchlauf_utc": "2026-10-09T07:49Z",
  "pruefung_lernrunde_utc": "2026-10-08T10:30:00Z",
  "letzter_code_hash": "7fde87c033dd7519",
  "methode": "M4",
@@ -1461,11 +1467,18 @@
    "s_dokument": "suche/S0032.json",
    "ergebnis_hash": "6535f7906fecb220",
    "gesamt": "vollständig"
+  },
+  {
+   "datei": "suche/laeufe/L20261009T050449Z.json",
+   "lauf_id": "L20261009T050449Z",
+   "s_dokument": "suche/S0033.json",
+   "ergebnis_hash": "f45ce73333ca3322",
+   "gesamt": "vollständig"
   }
  ],
- "letzter_lauf_utc": "2026-10-08T07:54Z",
+ "letzter_lauf_utc": "2026-10-09T07:49Z",
  "letztes_vollarchiv": "suche/S0031_alle.csv.gz",
- "letzter_ergebnis_hash": "6535f7906fecb220",
+ "letzter_ergebnis_hash": "f45ce73333ca3322",
  "konflikte": [
   {
    "wo": "index",
