@@ -3276,11 +3276,15 @@
   "url": "https://www.federalreserve.gov/monetarypolicy/publications/beige-book-archive.htm",
   "domain": "www.federalreserve.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "tief",
   "mechanismus": "Das Beige Book liefert zwei Wochen vor FOMC-Sitzungen qualitative Konjunkturhinweise und verschiebt kurzfristig Zinserwartungen und Zyklik gegenueber Defensivwerten.",
-  "grund": "Acht Termine pro Jahr, Archiv ab 1970, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse.",
-  "ergaenzt_utc": "2026-10-07T10:00Z"
+  "grund": "Aktiv. Belegquelle: federalreserve.gov beigebook<JJJJ>.htm (1996-2025), fuer das laufende Jahr Einzelseiten beigebook<JJJJ><MM>.htm. 10938 Zeilen 1996-10-30..2026-10-09, 239 Ereignistage (8/Jahr; 1996 erst ab 30.10., 2003 nur 7 laut Archiv). Termine im Voraus im Fed-Kalender bekannt, verfuegbar_nach_tagen 0. Kalenderreihe 0/1, K4 nicht revidiert, K1/K2/K5 erfuellt.",
+  "ergaenzt_utc": "2026-10-07T10:00Z",
+  "reihen": [
+   "termine"
+  ],
+  "geprueft_utc": "2026-10-09T16:17Z"
  },
  {
   "id": "nasdaq_ipo_kalender",

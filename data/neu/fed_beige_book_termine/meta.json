@@ -1,0 +1,11 @@
+{
+  "termine": {
+    "beschreibung": "1 am Veroeffentlichungstag des Fed Beige Book (ca. 2 Wochen vor jeder FOMC-Sitzung, 8x pro Jahr, 14 Uhr Washingtoner Zeit), sonst 0, ab 1996-10-30.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Veroeffentlichungstermine stehen im Voraus im Fed-Kalender; Quelle: federalreserve.gov/monetarypolicy/beige-book-default.htm)",
+    "quelle_url": "https://www.federalreserve.gov/monetarypolicy/beige-book-archive.htm",
+    "revidiert": false,
+    "verdichtung": "keine (Ereignisreihe)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
