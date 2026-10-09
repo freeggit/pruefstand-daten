@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-10-08T03:29:10Z",
+ "erzeugt_utc": "2026-10-09T03:31:12Z",
  "reihen": {
   "sec_insider:markt_kaeufer": {
    "datei": "data/sec/insider/markt_kaeufer.csv.gz",
@@ -628,8 +628,8 @@
   "sec_edgar:markt_8k": {
    "datei": "data/sec/edgar_reihen/markt_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Gesamtmarkt",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -641,8 +641,8 @@
   "sec_edgar:markt_13d": {
    "datei": "data/sec/edgar_reihen/markt_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Gesamtmarkt",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -654,8 +654,8 @@
   "sec_edgar:markt_s1": {
    "datei": "data/sec/edgar_reihen/markt_s1.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Börsenprospekte S-1 und F-1 (Erstmeldung) je Einreichungstag, Gesamtmarkt",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -667,8 +667,8 @@
   "sec_edgar:xlb_8k": {
    "datei": "data/sec/edgar_reihen/xlb_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlb",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -680,8 +680,8 @@
   "sec_edgar:xlb_13d": {
    "datei": "data/sec/edgar_reihen/xlb_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlb",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -693,8 +693,8 @@
   "sec_edgar:xlc_8k": {
    "datei": "data/sec/edgar_reihen/xlc_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlc",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -706,8 +706,8 @@
   "sec_edgar:xlc_13d": {
    "datei": "data/sec/edgar_reihen/xlc_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlc",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -719,8 +719,8 @@
   "sec_edgar:xle_8k": {
    "datei": "data/sec/edgar_reihen/xle_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xle",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -732,8 +732,8 @@
   "sec_edgar:xle_13d": {
    "datei": "data/sec/edgar_reihen/xle_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xle",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -745,8 +745,8 @@
   "sec_edgar:xlf_8k": {
    "datei": "data/sec/edgar_reihen/xlf_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlf",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -758,8 +758,8 @@
   "sec_edgar:xlf_13d": {
    "datei": "data/sec/edgar_reihen/xlf_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlf",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -771,8 +771,8 @@
   "sec_edgar:xli_8k": {
    "datei": "data/sec/edgar_reihen/xli_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xli",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -784,8 +784,8 @@
   "sec_edgar:xli_13d": {
    "datei": "data/sec/edgar_reihen/xli_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xli",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -797,8 +797,8 @@
   "sec_edgar:xlk_8k": {
    "datei": "data/sec/edgar_reihen/xlk_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlk",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -810,8 +810,8 @@
   "sec_edgar:xlk_13d": {
    "datei": "data/sec/edgar_reihen/xlk_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlk",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -823,8 +823,8 @@
   "sec_edgar:xlp_8k": {
    "datei": "data/sec/edgar_reihen/xlp_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlp",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -836,8 +836,8 @@
   "sec_edgar:xlp_13d": {
    "datei": "data/sec/edgar_reihen/xlp_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlp",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -849,8 +849,8 @@
   "sec_edgar:xlre_8k": {
    "datei": "data/sec/edgar_reihen/xlre_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlre",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -862,8 +862,8 @@
   "sec_edgar:xlre_13d": {
    "datei": "data/sec/edgar_reihen/xlre_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlre",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -875,8 +875,8 @@
   "sec_edgar:xlu_8k": {
    "datei": "data/sec/edgar_reihen/xlu_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlu",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -888,8 +888,8 @@
   "sec_edgar:xlu_13d": {
    "datei": "data/sec/edgar_reihen/xlu_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlu",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -901,8 +901,8 @@
   "sec_edgar:xlv_8k": {
    "datei": "data/sec/edgar_reihen/xlv_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xlv",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -914,8 +914,8 @@
   "sec_edgar:xlv_13d": {
    "datei": "data/sec/edgar_reihen/xlv_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xlv",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -927,8 +927,8 @@
   "sec_edgar:xly_8k": {
    "datei": "data/sec/edgar_reihen/xly_8k.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Ad-hoc-Meldungen 8-K (Erstmeldung) je Einreichungstag, Sektor xly",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -940,8 +940,8 @@
   "sec_edgar:xly_13d": {
    "datei": "data/sec/edgar_reihen/xly_13d.csv.gz",
    "erste": "2001-01-02",
-   "letzte": "2026-10-07",
-   "zeilen": 6455,
+   "letzte": "2026-10-08",
+   "zeilen": 6456,
    "einheit": "Anzahl Meldungen",
    "beschreibung": "Beteiligungsmeldungen Schedule 13D (Erstmeldung) je Einreichungstag, Sektor xly",
    "quelle_url": "https://www.sec.gov/Archives/edgar/full-index/",
@@ -971,11 +971,11 @@
    "s1": 0.783
   },
   "meldungen": {
-   "13d": 91941,
-   "8k": 1955501,
-   "s1": 28929
+   "13d": 91951,
+   "8k": 1955659,
+   "s1": 28930
   },
-  "tage": 6455
+  "tage": 6456
  },
  "zugang": {
   "status": "ok",
