@@ -1174,9 +1174,9 @@
   "status": "kandidat",
   "prioritaet": "normal",
   "mechanismus": "Chinesische Leitzinsaenderungen (LPR/MLF) koennen kurzfristig Emerging-Markets- und China-Engagement (FXI, EEM) sowie global Rohstoffe gegenueber dem Weltindex bewegen, analog zu den bereits vorhandenen Leitzins-Aenderungstagen FOMC/EZB.",
-  "grund": "Ergaenzt bestehende leitzins_aenderungstage (bisher nur FOMC/EZB) um eine dritte grosse Notenbank; PBoC veroeffentlicht Ankuendigungen oeffentlich, Terminliste seit LPR-Reform 2019 gut dokumentiert, fruehere Referenzzins-Aenderungen seit 1990er Jahren recherchierbar. | Fortschritt 2026-09-25T20:13:07Z: Anders als bei FOMC/EZB (leitzins_aenderungstage, abgeleitet aus taeglichen FRED-Reihen DFEDTARU/ECBDFR) gibt es fuer die PBoC-Leitzinsen (LPR 1J/5J, MLF) keine oeffentliche taegliche FRED-Zeitreihe (FRED fuehrt fuer China nur monatliche Reihen wie INTDSRCNM193N). Offizielle chinamoney.org.cn/pbc.gov.cn-Quellen erfordern TLS mit 'legacy server connect' (funktioniert per urllib, siehe Skriptnotiz), das JSON-Endpoint chinamoney.com.cn/ags/ms/cm-u-bk-currency/LprHis liefert aber nur ein rollierendes ca. 12-Monats-Fenster unabhaengig von Datumsparametern -- keine vollstaendige Historie seit Reform 2019-08-20 auffindbar ohne Drittanbieter-Aggregatoren (K3-Bedenken). Naechster Schritt: pbc.gov.cn-Archivseiten (nicht chinamoney-Widget) nach einer vollstaendigen amtlichen Ankuendigungsliste seit 2019 durchsuchen, sonst K2/K3 als 'abgelehnt' vermerken. Noch nicht implementiert, um keine unvollstaendige/luckenhafte Reihe aufzunehmen (Zusatz 2: Qualitaet vor Menge). | Kurzpruefung 2026-09-28T04:21:52Z: pbc.gov.cn/en/.../index.html liefert HTTP 302 (Weiterleitung, Seite umstrukturiert), chinamoney LprHis-Endpoint weiterhin nur rollierendes Fenster. Keine vollstaendige amtliche Terminliste seit 2019 in dieser Kurzpruefung gefunden; Status bleibt Kandidat, naechster Lauf: Weiterleitungsziel von pbc.gov.cn folgen und Archivstruktur pruefen.",
+  "grund": "Ergaenzt bestehende leitzins_aenderungstage (bisher nur FOMC/EZB) um eine dritte grosse Notenbank; PBoC veroeffentlicht Ankuendigungen oeffentlich, Terminliste seit LPR-Reform 2019 gut dokumentiert, fruehere Referenzzins-Aenderungen seit 1990er Jahren recherchierbar. | Fortschritt 2026-09-25T20:13:07Z: Anders als bei FOMC/EZB (leitzins_aenderungstage, abgeleitet aus taeglichen FRED-Reihen DFEDTARU/ECBDFR) gibt es fuer die PBoC-Leitzinsen (LPR 1J/5J, MLF) keine oeffentliche taegliche FRED-Zeitreihe (FRED fuehrt fuer China nur monatliche Reihen wie INTDSRCNM193N). Offizielle chinamoney.org.cn/pbc.gov.cn-Quellen erfordern TLS mit 'legacy server connect' (funktioniert per urllib, siehe Skriptnotiz), das JSON-Endpoint chinamoney.com.cn/ags/ms/cm-u-bk-currency/LprHis liefert aber nur ein rollierendes ca. 12-Monats-Fenster unabhaengig von Datumsparametern -- keine vollstaendige Historie seit Reform 2019-08-20 auffindbar ohne Drittanbieter-Aggregatoren (K3-Bedenken). Naechster Schritt: pbc.gov.cn-Archivseiten (nicht chinamoney-Widget) nach einer vollstaendigen amtlichen Ankuendigungsliste seit 2019 durchsuchen, sonst K2/K3 als 'abgelehnt' vermerken. Noch nicht implementiert, um keine unvollstaendige/luckenhafte Reihe aufzunehmen (Zusatz 2: Qualitaet vor Menge). | Kurzpruefung 2026-09-28T04:21:52Z: pbc.gov.cn/en/.../index.html liefert HTTP 302 (Weiterleitung, Seite umstrukturiert), chinamoney LprHis-Endpoint weiterhin nur rollierendes Fenster. Keine vollstaendige amtliche Terminliste seit 2019 in dieser Kurzpruefung gefunden; Status bleibt Kandidat, naechster Lauf: Weiterleitungsziel von pbc.gov.cn folgen und Archivstruktur pruefen. | Lauf 2026-10-10T16:16Z: nicht erneut bearbeitet (Lauf durch Bestandsauffrischung ausgelastet); weiterhin offen.",
   "aufgenommen_utc": "2026-09-25T09:40:00Z",
-  "geprueft_utc": "2026-09-28T04:21:52Z"
+  "geprueft_utc": "2026-10-10T16:16Z"
  },
  {
   "id": "fed_balance_sheet_h41",
@@ -1743,11 +1743,12 @@
   "url": "https://www.ifo.de/en/ifo-business-climate-germany",
   "domain": "ifo.de",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Der monatliche ifo-Geschaeftsklimaindex ueberrascht haeufig den Konsens und kann EWG (Deutschland-ETF) kurzfristig am Veroeffentlichungstag gegenueber dem Weltindex bewegen, analog zu us_arbeitsmarkt_termine/us_cpi_termine fuer die USA.",
-  "grund": "Amtliche/institutionelle Terminliste oeffentlich, Historie fuer das wiedervereinigte Deutschland seit 1991 (nahe an 1990); direktes Deutschland-ETF-Ziel (EWG) vorhanden, deterministische Ereignistage wie bei bestehenden Kalenderreihen.",
-  "aufgenommen_utc": "2026-09-27T09:41:32Z"
+  "grund": "Amtliche/institutionelle Terminliste oeffentlich, Historie fuer das wiedervereinigte Deutschland seit 1991 (nahe an 1990); direktes Deutschland-ETF-Ziel (EWG) vorhanden, deterministische Ereignistage wie bei bestehenden Kalenderreihen. | Pruefung 2026-10-10T16:16Z: ifo.de-Seiten liefern HTTP 404 (Umstrukturierung), keine maschinenlesbare Terminhistorie ab 1991; ifo nicht als Release in ALFRED. Ohne belegte Vorab-Termine keine Reihe (Zusatz 5). Abgelehnt: K2/Beleg.",
+  "aufgenommen_utc": "2026-09-27T09:41:32Z",
+  "geprueft_utc": "2026-10-10T16:16Z"
  },
  {
   "id": "boe_mpc_alle_sitzungstage",
