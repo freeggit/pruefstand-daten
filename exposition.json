@@ -277,6 +277,12 @@
    "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
    "beleg": "suche/S0013_alle.csv.gz"
   },
+  "neu_fed_beige_book_termine_termine": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261010T050359Z",
+   "erst_zeit": "2026-10-10T07:47Z",
+   "beleg": "suche/laeufe/L20261010T050359Z.json"
+  },
   "neu_fedregister_ams_agrarmarkt_anzahl": {
    "erst_dokument": "S0017",
    "erst_lauf": null,
@@ -1700,8 +1706,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261009T050449Z",
-  "zeit_utc": "2026-10-09T07:49Z",
-  "grundreihen_n": 282
+  "lauf_id": "L20261010T050359Z",
+  "zeit_utc": "2026-10-10T07:47Z",
+  "grundreihen_n": 283
  }
 }

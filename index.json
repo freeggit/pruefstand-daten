@@ -1,5 +1,5 @@
 {
- "kumuliert": 694793,
+ "kumuliert": 694883,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -252,6 +252,7 @@
   "neu_fdic_bankausfaelle_anzahl_d5",
   "neu_fdic_bankausfaelle_anzahl_stand",
   "neu_fdic_bankausfaelle_anzahl_z252",
+  "neu_fed_beige_book_termine_termine_stand",
   "neu_fedregister_ams_agrarmarkt_anzahl_d1",
   "neu_fedregister_ams_agrarmarkt_anzahl_d20",
   "neu_fedregister_ams_agrarmarkt_anzahl_d5",
@@ -1365,9 +1366,15 @@
    "datei": "suche/S0033.json",
    "kandidaten": 356266,
    "in_db": false
+  },
+  {
+   "nr": 34,
+   "datei": "suche/S0034.json",
+   "kandidaten": 356356,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-09T07:49Z",
+ "letzter_suchlauf_utc": "2026-10-10T07:47Z",
  "pruefung_lernrunde_utc": "2026-10-09T10:00:00Z",
  "letzter_code_hash": "7fde87c033dd7519",
  "methode": "M4",
@@ -1478,11 +1485,18 @@
    "s_dokument": "suche/S0033.json",
    "ergebnis_hash": "f45ce73333ca3322",
    "gesamt": "vollständig"
+  },
+  {
+   "datei": "suche/laeufe/L20261010T050359Z.json",
+   "lauf_id": "L20261010T050359Z",
+   "s_dokument": "suche/S0034.json",
+   "ergebnis_hash": "1c3e514b771caf39",
+   "gesamt": "vollständig"
   }
  ],
- "letzter_lauf_utc": "2026-10-09T07:49Z",
- "letztes_vollarchiv": "suche/S0031_alle.csv.gz",
- "letzter_ergebnis_hash": "f45ce73333ca3322",
+ "letzter_lauf_utc": "2026-10-10T07:47Z",
+ "letztes_vollarchiv": "suche/S0034_alle.csv.gz",
+ "letzter_ergebnis_hash": "1c3e514b771caf39",
  "konflikte": [
   {
    "wo": "index",
@@ -3717,7 +3731,7 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 282,
-  "neu_in_diesem_lauf": 0
+  "grundreihen_n": 283,
+  "neu_in_diesem_lauf": 1
  }
 }

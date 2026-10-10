@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-09T07:49Z",
- "lauf_id": "L20261009T050449Z",
+ "zeit_utc": "2026-10-10T07:47Z",
+ "lauf_id": "L20261010T050359Z",
  "verfassung": "V3.16",
- "commit_main": "2d8f0a5ce084f3bdbd5440cf0190cb3dddca4865",
- "commit_energie": "1d103f12089adfd4d793a777e10106e71382c3c5",
- "commit_neu": "dd8f7be0340838da03a77cab5c02257942a98be1",
- "commit_lernen_vorher": "28d12b75c01cc18463a03bb97413a7dd9af0a98c",
+ "commit_main": "e3501a01674c4818c2f59434c0796e6c51651b55",
+ "commit_energie": "8fb9506514d75788cf05f343ff5f73bdb3195505",
+ "commit_neu": "42a3f451db1f7ccf7ebd0fbb48cc1b08be2a6ea3",
+ "commit_lernen_vorher": "1b62e4ca77665cb0300442c293add4a78dc5c58a",
  "code_hash": "7fde87c033dd7519",
  "sha_suchmaschine": "ae4a8f542fbb496b",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
  "sha_register_vorher": "47323be3ef678e77",
- "sha_manifest_main": "0fd018b5c808295e",
- "sha_manifest_neu": "c0c3202e3cad1909",
+ "sha_manifest_main": "5dd18cae59905311",
+ "sha_manifest_neu": "9678bd2be7eee0d6",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.3",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "d7bd8261dfd4f3a0"
+  "btc_sha": "74b38238cc57cc86"
  },
- "ergebnis_hash": "f45ce73333ca3322",
- "kandidaten": 356266,
- "kandidaten_neu": 0,
+ "ergebnis_hash": "1c3e514b771caf39",
+ "kandidaten": 356356,
+ "kandidaten_neu": 90,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,8 +36,10 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261009T050449Z.json",
+ "laufeintrag": "suche/laeufe/L20261010T050359Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [],
+ "reihen_neu_gegen_vorlauf": [
+  "neu_fed_beige_book_termine_termine_stand"
+ ],
  "gesamt": "vollständig"
 }
