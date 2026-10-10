@@ -3375,5 +3375,41 @@
   "grund": "Test 2026-10-09T12:50Z: Kalenderseite der EZB ist skriptgesteuert ohne Daten, Jahresseiten /press/govcdec/mopo/<J>/ leiten auf eine Gesamtseite um (404/301); keine maschinenlesbare Terminhistorie ab 1999 gefunden. Naechster Lauf: Pressemitteilungs-Archiv pr/date pruefen. | Amtlicher Kalender ab 1999, deterministisch; ergaenzt leitzins_aenderungstage um alle Sitzungstage, auch ohne Zinsaenderung.",
   "ergaenzt_utc": "2026-10-09T10:00Z",
   "geprueft_utc": "2026-10-09T12:50Z"
+ },
+ {
+  "id": "sec_8k_delisting_item301",
+  "name": "SEC 8-K Item 3.01: Delisting- und Listing-Mitteilungen (taegliche Dichte je Sektor)",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/ (form.<J>QTR<q>.idx, Form 8-K, Item 3.01 im Dokument)",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Haeufen sich Delisting-Mitteilungen in einem Sektor, steigt dort das Ausfall- und Verwaesserungsrisiko; der Sektor-ETF reagiert kurzfristig gegenueber dem Weltindex.",
+  "grund": "Firmenereignisse aggregiert, erste Prioritaet nach Zusatz 8; ergaenzt Item 2.05 und 1.03.",
+  "ergaenzt_utc": "2026-10-10T10:00Z"
+ },
+ {
+  "id": "sec_8k_fuehrungswechsel_item502",
+  "name": "SEC 8-K Item 5.02: Abgang oder Ernennung von Fuehrungskraeften (taegliche Dichte je Sektor)",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/ (form.<J>QTR<q>.idx, Form 8-K, Item 5.02)",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Gehaeufte Fuehrungswechsel signalisieren Strategiebruch oder Krise im Sektor und verschieben die Erwartung an Gewinne gegenueber dem Weltindex.",
+  "grund": "Firmenereignisse aggregiert; oeffentliche Quelle ohne Login, Historie ab 2001.",
+  "ergaenzt_utc": "2026-10-10T10:00Z"
+ },
+ {
+  "id": "fed_stresstest_ergebnisse_termine",
+  "name": "Fed-Stresstest: Veroeffentlichungstage der Ergebnisse (jaehrlich)",
+  "url": "https://www.federalreserve.gov/supervisionreg/dfa-stress-tests-2024.htm (Archivseiten je Jahr, Datum der Ergebnisse)",
+  "domain": "www.federalreserve.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Die Ergebnisse legen Kapitalauflagen und Ausschuettungen der US-Grossbanken fest; der Finanzsektor reagiert kurzfristig gegenueber dem Weltindex.",
+  "grund": "Amtlicher Kalender ab 2009; wenige Ereignisse (ca. 17), daher Prioritaet tief.",
+  "ergaenzt_utc": "2026-10-10T10:00Z"
  }
 ]
