@@ -3412,5 +3412,17 @@
   "mechanismus": "Die Ergebnisse legen Kapitalauflagen und Ausschuettungen der US-Grossbanken fest; der Finanzsektor reagiert kurzfristig gegenueber dem Weltindex.",
   "grund": "Amtlicher Kalender ab 2009; wenige Ereignisse (ca. 17), daher Prioritaet tief.",
   "ergaenzt_utc": "2026-10-10T10:00Z"
+ },
+ {
+  "id": "sec_8k_nichtverlass_item402",
+  "name": "SEC 8-K Item 4.02: Nicht mehr verlaesslicher Abschluss (Bilanzkorrekturen, taegliche Dichte je Sektor)",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/ (form.<J>QTR<q>.idx, Form 8-K, Item 4.02)",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Bilanzkorrekturen gehaeuft in einem Sektor untergraben das Vertrauen in dessen Gewinnzahlen und druecken ihn kurzfristig gegenueber dem Weltindex.",
+  "grund": "Firmenereignisse aggregiert; oeffentliche Quelle ohne Login, Historie ab 2004; Bilanzskandal-Literatur zeigt Kursreaktion.",
+  "ergaenzt_utc": "2026-10-11T10:00Z"
  }
 ]
