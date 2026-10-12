@@ -1,11 +1,11 @@
 {
- "zeit_utc": "2026-10-12T15:29Z",
- "lauf_id": "L20261012T124200Z",
+ "zeit_utc": "2026-10-12T19:02Z",
+ "lauf_id": "L20261012T161632Z",
  "verfassung": "V3.17",
- "commit_main": "d8f3b81fc4d63bcebd8e82bc19404abd5a866b90",
+ "commit_main": "fe256a77935ec88c0dc7afdeee0ba217bdd9c3da",
  "commit_energie": "2d4b806521334b1c0c36d63e4a05d66ecc76ee93",
  "commit_neu": "202d27ec6bef5f2d66477aa1a261e98dac34ee8d",
- "commit_lernen_vorher": "52550b3d6dde7711b22f9a7cbeaa69659fb91499",
+ "commit_lernen_vorher": "a5d3cadc97ef0e38a8da789179c036b9b35db519",
  "code_hash": "c565282c13f4ddb7",
  "sha_suchmaschine": "f6a9531812b0754b",
  "sha_paare": "faf4e4d850ca9a00",
@@ -36,7 +36,7 @@
   "tests": "vollständig",
   "siegeltest": "vollständig"
  },
- "laufeintrag": "suche/laeufe/L20261012T124200Z.json",
+ "laufeintrag": "suche/laeufe/L20261012T161632Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [],
  "gesamt": "vollständig"

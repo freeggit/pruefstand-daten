@@ -1544,9 +1544,17 @@
    "ergebnis_hash": "ab6c6367d9bcde33",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261012T161632Z.json",
+   "lauf_id": "L20261012T161632Z",
+   "s_dokument": "suche/S0037.json",
+   "ergebnis_hash": "ab6c6367d9bcde33",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-12T15:29Z",
+ "letzter_lauf_utc": "2026-10-12T19:02Z",
  "letztes_vollarchiv": "suche/S0037_alle.csv.gz",
  "letzter_ergebnis_hash": "ab6c6367d9bcde33",
  "konflikte": [
@@ -3788,9 +3796,9 @@
  },
  "letztes_vollarchiv_ergebnis_hash": "ab6c6367d9bcde33",
  "pruefungen_bestanden": {
-  "pruef_hash": "78e120d2f02aea96",
-  "lauf_id": "L20261012T124200Z"
+  "pruef_hash": "0c58b24e529ed2da",
+  "lauf_id": "L20261012T161632Z"
  },
  "letzter_eingabe_hash": "e0c4e2424ef82ebd",
- "letzter_gueltiger_lauf": "L20261012T124200Z"
+ "letzter_gueltiger_lauf": "L20261012T161632Z"
 }
