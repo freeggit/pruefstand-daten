@@ -1717,7 +1717,7 @@
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR3/master.gz"
  },
  "edgar_2026q4": {
-  "abruf_utc": "2026-10-11T03:30:30Z",
+  "abruf_utc": "2026-10-12T03:32:54Z",
   "bytes": 2700260,
   "meldungen": 1477,
   "sha256": "ca205b052b1bafa7a6c68e88b9b034ec6d3a4c57dd39f356486d064c2e31a144",
