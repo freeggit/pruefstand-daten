@@ -109,7 +109,7 @@ def bis(x, tag=STICHTAG):
 
 # ================================================================== Familie S (alles abgeschnitten am STICHTAG)
 man = json.load(open(lade("manifest.json")))
-kurse, VERDACHT = {}, {}
+kurse, VERDACHT, ROH_KURSE = {}, {}, {}
 for k, v in man["reihen"].items():
     if k.startswith("kurse:") and "fehler" not in v and v.get("granularitaet") == "1d":
         t = k.split(":", 1)[1]
@@ -121,9 +121,11 @@ for k, v in man["reihen"].items():
         VERDACHT[t] = set(d.index[verdacht])                   # nur Bericht, keine Löschung
         if "AdjClose" in d and d.AdjClose.notna().mean() > 0.99:
             f = (d.AdjClose / d.Close).astype(float)
+            ROH_KURSE[t] = (d[["Open", "Close"]].astype(float), (f / f.shift(1)).round(7))   # V3.17 E9: nur für die Eingabe-Prüfsumme
             kurse[t] = pd.DataFrame({"Open": d.Open * f, "Close": d.AdjClose}).astype(float)
         else:
             kurse[t] = d[["Open", "Close"]].astype(float)
+            ROH_KURSE[t] = (kurse[t], None)
 acwi = kurse.pop("acwi")
 BENCH_NUR = {"efa"}
 ERSATZ = {"spy": 0.55, "efa": 0.45}
@@ -817,8 +819,40 @@ SPALTEN = ["familie", "indikator", "art", "ziel", "h", "n", "mu", "mu_netto", "m
 ZUSATZ = ["placebo_p", "t_bestaetigung_etf", "t_ohne_bestes", "n_verdacht", "t_ohne_verdacht"]
 ZUSATZ_C = ["n1", "n2", "mu1", "mu2", "placebo_p", "n_verdacht", "t_ohne_verdacht", "route"]
 
+def eingaben_schreiben():
+    """V3.17 §4 (E9 neu): Prüfsummen der massgeblichen Eingaben der Discovery, je Teil und gesamt, nach eingabe.json.
+    Alle Teile sind bereits am Stichtag gekürzt (Familie S 31.12.2020, Familie L 31.12.2000). Neue Kurse ab 2021 ändern sie nicht."""
+    from eingabe import pruefsumme
+    _g = globals()
+    # Kurse: Rohkurse (Open, Close) bis zum Stichtag und die Sprünge des Anpassungsfaktors. Angepasste Kurse werden bei jeder
+    # Ausschüttung rückwirkend mit einem festen Faktor neu skaliert; das ändert weder Rohkurse noch Faktorsprünge, also keinen
+    # Lauf. Die daraus abgeleiteten Renditen (BR, FAM S mr) sind dadurch bestimmt und werden nicht zusätzlich gehasht.
+    teile = {"kurse": pruefsumme(ROH_KURSE)}
+    for name in ("ind", "EREIGNIS", "KAL", "VERDACHT_POS", "ZIELE", "QUELLE", "HERKUNFT", "LUECKEN",
+                 "EXPLORATIV", "EXPLORATIV_NAMEN", "KORREKTUREN", "VERFUEGBAR",
+                 "VERFUEGBAR_KAL", "AUSSCHLUSS", "KUM_VORHER", "N_PLACEBO", "KALIBRIERUNG", "LANGZEIT"):
+        if name in _g:
+            teile[name] = pruefsumme(_g[name])
+    # Datenmangel und Ausschlüsse wirken nur über die Zugehörigkeit (welche Reihe); ihre Kennzahlen wachsen täglich mit.
+    teile["DATENMANGEL"] = pruefsumme(sorted(DATENMANGEL))
+    teile["AUSGESCHLOSSEN"] = pruefsumme(sorted({a_["reihe"] for a_ in AUSGESCHLOSSEN}))
+    teile["FAM"] = pruefsumme({fam: {k: v for k, v in f.items() if not callable(v) and not (fam == "S" and k == "mr")}
+                              for fam, f in FAM.items()})
+    teile["umgebung"] = pruefsumme({"numpy": np.__version__, "pandas": pd.__version__, "python": sys.version.split()[0]})
+    gesamt = pruefsumme(teile)
+    if os.environ.get("PS_EINGABE_DETAIL") == "1":   # Diagnose: Prüfsumme je Indikator
+        json.dump({k: pruefsumme(v) for k, v in ind.items()}, open("eingabe_ind.json", "w"), indent=0)
+    json.dump({"eingabe_hash": gesamt, "teile": teile, "methode": METHODE, "stichtag": str(STICHTAG.date())},
+              open("eingabe.json", "w"), indent=1)
+    log(f"Eingabe-Prüfsumme (V3.17, E9): {gesamt}")
+    return gesamt
+
+
 if __name__ == "__main__":
     t0 = time.time()
+    eingaben_schreiben()
+    if os.environ.get("PS_NUR_EINGABEHASH") == "1":
+        sys.exit(0)
     tab = ereignis_tabelle()
     echte = {fam: (f["mr"], praefix(f["mr"])) for fam, f in FAM.items()}
     log(f"Methode {METHODE} | Familien {', '.join(FAM)} | Ziele S {len(ZIELE)} | Indikatoren {len(ind)} | Ereignisreihen {len(tab)} | Placebo {N_PLACEBO}")

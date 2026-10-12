@@ -16,6 +16,13 @@ Kopien von main, claude/daten-energie und claude/daten-neu und legt das Ergebnis
 Ein S####-Eintrag entsteht bei neuen Hypothesen ODER geändertem Code (Suchmaschine, paare.txt, mechanismen.txt). Jeder Lauf schreibt
 zusätzlich suche/letzter_lauf.json mit Commit-IDs aller Zweige und Prüfsummen (Nachvollziehbarkeit, V3.6).
 Die Routine «Prüfstand Lernrunde» rechnet nicht mehr selbst; sie liest diese Dateien und schreibt den Lernbericht.
+
+V3.17 (12.10.2026, Reto: «freigeben»; Astra-Gutachten 15 und 16):
+- §4 (E9 neu): Bei geplanten Läufen (PS_E9=1) rechnet die Suchmaschine zuerst nur die Eingabe-Prüfsumme der Discovery.
+  Gerechnet wird nur bei geänderter Eingabe, ohne gültigen Referenzlauf oder am Montag (Kontrolllauf, gleiche Seeds).
+  Sonst entsteht ein Laufeintrag «keine Neuberechnung» mit Verweis auf den letzten gültigen Lauf.
+- §5 (E38): Ein Vollarchiv entsteht auch bei geänderten Ergebnissen; jeder Laufeintrag nennt die Ergebnis-Prüfsumme des
+  Archivs, auf das er verweist. Die Freigabe (importierbar ja/nein) trägt lauf_status.py ein.
 """
 import gzip, hashlib, json, os, shutil, subprocess, sys
 from datetime import datetime, timezone
@@ -164,6 +171,67 @@ for pfad, var in (("_daten-energie", "PS_BASIS_ENERGIE"), ("_daten-neu", "PS_BAS
         print(f"{pfad} fehlt: diese Reihen entfallen")
 print("Aufruf:", " ".join(args), "| Energie", env.get("PS_BASIS_ENERGIE"), "| Scout", env.get("PS_BASIS_NEU"), "| kumuliert vorher", index["kumuliert"], "| Register", reg, flush=True)
 
+CODE_DATEIEN = ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json", "explorativ.json", "eingabe.py")
+code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in CODE_DATEIEN).encode()).hexdigest()[:16]
+letzter_s = next((s["datei"] for s in reversed(index["suchlaeufe"]) if s.get("datei")), None)
+
+
+def ordner_sha(pfad):
+    """Prüfsumme aller Dateien eines Ordners (Name und Inhalt), z. B. vorregistrierung/ auf main."""
+    if not os.path.isdir(pfad):
+        return None
+    m = hashlib.sha256()
+    for wurzel, _, dateien in sorted(os.walk(pfad)):
+        for d in sorted(dateien):
+            q = os.path.join(wurzel, d)
+            m.update(os.path.relpath(q, pfad).encode("utf-8")); m.update((sha(q) or "").encode())
+    return m.hexdigest()[:16]
+
+
+def github_ausgabe(k, v):
+    if os.environ.get("GITHUB_OUTPUT"):
+        with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+            f.write(f"{k}={v}\n")
+
+
+def eingabe_gesamt():
+    """V3.17 §4: Eingabe der Discovery (aus der Suchmaschine) plus Register, Code, Vorregistrierungen und Placebo-Zahl."""
+    try:
+        teil = json.load(open(os.path.join(LAUF, "eingabe.json"), encoding="utf-8"))
+    except (OSError, ValueError):
+        return None, None
+    ganz = {"daten": teil.get("eingabe_hash"), "register": sha(reg), "code": code_hash,
+            "vorregistrierung": ordner_sha(os.path.join(ROOT, "vorregistrierung")), "placebo": env.get("PS_PLACEBO")}
+    return hashlib.sha256(json.dumps(ganz, sort_keys=True).encode()).hexdigest()[:16], dict(ganz, teile=teil.get("teile"))
+
+
+E9 = {"modus": "immer (Push oder manuell)"}
+if os.environ.get("PS_E9") == "1":
+    rc0 = subprocess.run(args, cwd=LAUF, env=dict(env, PS_NUR_EINGABEHASH="1"), capture_output=True, text=True).returncode
+    eg, eg_teile = eingabe_gesamt() if rc0 == 0 else (None, None)
+    ref = index.get("letzter_eingabe_hash")
+    wtag = int(os.environ.get("PS_E9_WOCHENTAG_TEST", BEGINN.astimezone(ZoneInfo("Europe/Zurich")).weekday()))   # Variable nur für Tests
+    montag = wtag == 0
+    anlaesse = []
+    if eg is None:
+        anlaesse.append("Eingabe nicht lesbar")
+    elif ref is None:
+        anlaesse.append("kein gültiger Referenzlauf")
+    elif eg != ref:
+        anlaesse.append("Eingaben geändert")
+    if montag:
+        anlaesse.append("Kontrolllauf (Montag)")
+    E9 = {"modus": "bei Änderung (V3.17, E9)", "eingabe_hash": eg, "referenz_eingabe_hash": ref,
+          "referenz_lauf": index.get("letzter_gueltiger_lauf"), "anlaesse": anlaesse, "eingabe": eg_teile}
+    if not anlaesse:
+        laufeintrag({"stufen": {"suche": "keine Neuberechnung"}, "e9": E9,
+                     "ausgaben": {"s_dokument": letzter_s, "vollarchiv": index.get("letztes_vollarchiv"),
+                                  "art": "keine Neuberechnung: Eingaben unverändert gegenüber dem letzten gültigen Lauf; kein neues Ergebnis, kein neuer Befund"}})
+        github_ausgabe("gerechnet", "false")
+        print(f"Lauf {LAUF_ID}: keine Neuberechnung (Eingabe {eg} = Referenz, kein Montag)."); sys.exit(0)
+    print("V3.17 E9: gerechnet wird –", ", ".join(anlaesse))
+github_ausgabe("gerechnet", "true")
+
 logp = os.path.join(LAUF, "log.txt")
 with open(logp, "w") as lg:
     rc = subprocess.run(args, cwd=LAUF, env=env, stdout=lg, stderr=subprocess.STDOUT).returncode
@@ -184,7 +252,6 @@ if rc != 0:
 
 zus = json.load(open(os.path.join(LAUF, "suchlauf_zusammenfassung.json")))
 
-code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json", "explorativ.json")).encode()).hexdigest()[:16]
 herkunft = {
     "commit_main": commit(ROOT), "commit_energie": commit(os.path.join(ROOT, "_daten-energie")),
     "commit_neu": commit(os.path.join(ROOT, "_daten-neu")), "commit_lernen_vorher": commit(LERNEN),
@@ -213,7 +280,7 @@ def ergebnis_pruefsumme(pfad):
 ergebnis_hash = ergebnis_pruefsumme(os.path.join(LAUF, "suchlauf_echt.csv.gz"))
 code_neu = index.get("letzter_code_hash") != code_hash
 ergebnis_neu = ergebnis_hash is None or index.get("letzter_ergebnis_hash") != ergebnis_hash
-vollarchiv = bool(zus["kandidaten_neu"] > 0 or code_neu)
+vollarchiv = bool(zus["kandidaten_neu"] > 0 or code_neu or ergebnis_neu)   # V3.17 (E38): Archiv passt immer zum Ergebnis
 vorher = list(index.get("reihen_letzter_suchlauf") or [])
 entfallen = sorted(set(vorher) - set(zus["indikatoren"])); neu_dabei = sorted(set(zus["indikatoren"]) - set(vorher))
 kern = {"kandidaten": zus["kandidaten"], "kandidaten_neu": zus["kandidaten_neu"], "huerde_t": zus["huerde_t"],
@@ -221,7 +288,11 @@ kern = {"kandidaten": zus["kandidaten"], "kandidaten_neu": zus["kandidaten_neu"]
         "kandidaten_stufe_d": len(zus["bausteine"]), "fehlalarmrate": zus.get("fehlalarmrate"), "placebo_laeufe": zus.get("placebo_laeufe")}
 s_schreiben = bool(vollarchiv or ergebnis_neu)
 nr = max([s["nr"] for s in index["suchlaeufe"]] + [0]) + 1
-letzter_s = next((s["datei"] for s in reversed(index["suchlaeufe"]) if s.get("datei")), None)
+eg_lauf, _ = eingabe_gesamt()
+wiederholbarkeit = None
+if E9.get("anlaesse") == ["Kontrolllauf (Montag)"]:
+    wiederholbarkeit = ("gleich" if ergebnis_hash == index.get("letzter_ergebnis_hash") else
+                        "Abweichung trotz gleicher Eingaben – zu klären; keine neue Evidenz (V3.17 §4)")
 eintrag = laufeintrag({
     "stufen": {"suche": "vollständig"}, "herkunft": herkunft, "ergebnis_hash": ergebnis_hash, **kern,
     "reihen": {"vorhanden_n": len(zus["indikatoren"]), "vorlauf_n": len(vorher), "entfallen_gegen_vorlauf": entfallen,
@@ -230,7 +301,9 @@ eintrag = laufeintrag({
     "ausgaben": {"s_dokument": f"suche/S{nr:04d}.json" if s_schreiben else letzter_s,
                  "s_dokument_art": "neu in diesem Lauf" if s_schreiben else "unverändert: Ergebnisse dieses Laufs sind Zeichen für Zeichen gleich wie im genannten Dokument",
                  "vollarchiv": f"suche/S{nr:04d}_alle.csv.gz" if vollarchiv else index.get("letztes_vollarchiv"),
-                 "vollarchiv_art": "neu in diesem Lauf" if vollarchiv else "aus einem früheren Lauf (keine neuen Schlüssel, Code unverändert)"},
+                 "vollarchiv_art": "neu in diesem Lauf" if vollarchiv else "aus einem früheren Lauf mit Zeichen für Zeichen gleichen Ergebnissen",
+                 "vollarchiv_ergebnis_hash": ergebnis_hash if vollarchiv else index.get("letztes_vollarchiv_ergebnis_hash")},
+    "e9": dict(E9, eingabe_hash_lauf=eg_lauf), "wiederholbarkeit": wiederholbarkeit,
     "anlass_s": ("neue Hypothesen" if zus["kandidaten_neu"] > 0 else "geänderter Code" if code_neu else
                  "geänderte Ergebnisse (Datenstand)" if ergebnis_neu else "keiner"),
 })
@@ -335,6 +408,7 @@ open(os.path.join(LERNEN, "suche", f"{name}_log.txt"), "w", encoding="utf-8").wr
 if vollarchiv:
     shutil.copy(os.path.join(LAUF, "suchlauf_echt.csv.gz"), os.path.join(LERNEN, "suche", f"{name}_alle.csv.gz"))   # vollständige Ergebnisse
     index["letztes_vollarchiv"] = f"suche/{name}_alle.csv.gz"
+    index["letztes_vollarchiv_ergebnis_hash"] = ergebnis_hash
 
 index["kumuliert"] = zus["kandidaten_kumuliert"]
 index["suchlaeufe"].append({"nr": nr, "datei": f"suche/{name}.json", "kandidaten": zus["kandidaten"], "in_db": False})

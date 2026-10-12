@@ -6,8 +6,12 @@ Drei Läufe ohne Placebo auf denselben Zweigen (main, Strom, Scout):
      Wetter, Wikipedia, SEC, Ken French)
   C  alle Zeilen nach dem Stichtag gelöscht
 Die Ergebnisse (n, mu, mu0, t, t1, t2, n1, n2, mu1, mu2) müssen in A, B und C identisch sein, inklusive fehlender Werte.
-Aufruf: python3 siegel_test.py (erwartet data/, optional _daten-energie/data und _daten-neu/data neben dem Skript)."""
-import glob, gzip, io, os, shutil, subprocess, sys
+Aufruf: python3 siegel_test.py (erwartet data/, optional _daten-energie/data und _daten-neu/data neben dem Skript).
+
+V3.17 (E9 neu): Zusätzlich wird die Eingabe-Prüfsumme (eingabe.json) in A, B und C verglichen. Sie soll von Daten nach
+dem Stichtag unabhängig sein. Eine Abweichung ist kein Siegelbruch (die Ergebnisse entscheiden), führt aber zu
+unnötigen Suchläufen und wird darum gemeldet. PS_SIEGEL_NUR_EINGABE=1 prüft nur die Prüfsumme (schnell)."""
+import glob, gzip, io, json, os, shutil, subprocess, sys
 import numpy as np, pandas as pd
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -83,9 +87,12 @@ def variante(name, modus, wege):
                     bearbeite_csv(p, modus)
     return ziel
 
+NUR_EINGABE = os.environ.get("PS_SIEGEL_NUR_EINGABE") == "1"
+EINGABE = {}
+
 def lauf(name, ziel):
     d = f"{W}/{name}/lauf"; os.makedirs(d)
-    env = dict(os.environ, PS_CACHE=f"{d}/c", PS_PLACEBO="0", PS_KALIBRIERUNG="0", PS_REGISTER="/dev/null",
+    env = dict(os.environ, PS_CACHE=f"{d}/c", PS_NUR_EINGABEHASH="1" if NUR_EINGABE else "0", PS_PLACEBO="0", PS_KALIBRIERUNG="0", PS_REGISTER="/dev/null",
                PS_PAARE=os.path.join(ROOT, "paare.txt"),
                PS_MECHANISMEN=os.path.join(ROOT, "mechanismen.txt"))
     for k, var in (("_daten-energie", "PS_BASIS_ENERGIE"), ("_daten-neu", "PS_BASIS_NEU")):
@@ -95,7 +102,11 @@ def lauf(name, ziel):
                         stdout=open(f"{d}/log", "w"), stderr=subprocess.STDOUT).returncode
     if rc:
         print(open(f"{d}/log").read()[-3000:]); sys.exit(rc)
-    return pd.read_csv(f"{d}/suchlauf_echt.csv.gz")
+    try:
+        EINGABE[name] = json.load(open(f"{d}/eingabe.json"))
+    except (OSError, ValueError):
+        EINGABE[name] = None
+    return None if NUR_EINGABE else pd.read_csv(f"{d}/suchlauf_echt.csv.gz")
 
 def vergleich(a, b, name):
     k = ["familie", "indikator", "art", "ziel", "h"]
@@ -109,10 +120,24 @@ def vergleich(a, b, name):
     print(f"Siegeltest {name}: {len(a)} Kandidaten, nur in einem Lauf {nur}, Abweichungen je Feld {abw}")
     return nur == 0 and not any(abw.values())
 
+def eingabe_bericht():
+    h = {k: (v or {}).get("eingabe_hash") for k, v in EINGABE.items()}
+    gleich = len(set(h.values())) == 1 and None not in h.values()
+    teile = sorted({t for k in ("B", "C") for t, w in ((EINGABE.get(k) or {}).get("teile") or {}).items()
+                    if w != ((EINGABE.get("A") or {}).get("teile") or {}).get(t)})
+    print(f"Eingabe-Prüfsumme (V3.17, E9) A/B/C: {h} – " + ("unabhängig von Daten nach dem Stichtag" if gleich else
+          f"ABWEICHUNG in {teile} (kein Siegelbruch, aber unnötige Suchläufe; zu klären)"))
+    return gleich
+
 wege = kopien()
+if NUR_EINGABE:
+    for n, m in (("A", None), ("B", "verfaelschen"), ("C", "loeschen")):
+        lauf(n, variante(n, m, wege))
+    sys.exit(0 if eingabe_bericht() else 1)
 A = lauf("A", variante("A", None, wege))
 ok_b = vergleich(A, lauf("B", variante("B", "verfaelschen", wege)), "verfälscht")
 ok_c = vergleich(A, lauf("C", variante("C", "loeschen", wege)), "gelöscht")
+eingabe_bericht()
 if not (ok_b and ok_c):
     print("VERSTOSS S4: Daten nach dem Stichtag beeinflussen die Suche"); sys.exit(1)
 print("Siegel dicht")
