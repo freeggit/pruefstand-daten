@@ -19,6 +19,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import fr_inkrementell  # noqa: E402  (13.10.2026: nur Vorjahr und laufendes Jahr abfragen)
+
 ID = "fedregister_doj_vergleiche"
 BASE = "https://www.federalregister.gov/api/v1/documents.json"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
@@ -29,6 +33,7 @@ TERM = '"consent decree"'
 
 
 def fetch_json(url, retries=3):
+    fr_inkrementell.pause()
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     for attempt in range(retries):
         try:
@@ -85,8 +90,9 @@ def gzip_write(path, rows):
 
 def main():
     current_year = datetime.date.today().year
-    counts = {}
-    for year in range(START_YEAR, current_year + 1):
+    alt, jahre = fr_inkrementell.plan(os.path.join(OUT_DIR, "consent_decrees.csv.gz"), START_YEAR, current_year)
+    counts = dict(alt)
+    for year in jahre:
         fetch_year_counts(year, counts)
 
     if not counts:

@@ -19,6 +19,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import fr_inkrementell  # noqa: E402  (13.10.2026: nur Vorjahr und laufendes Jahr abfragen)
+
 ID = "fedregister_aufsicht"
 BASE = "https://www.federalregister.gov/api/v1/documents.json"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
@@ -33,6 +37,7 @@ SERIES = {
 
 
 def fetch_json(url, retries=3):
+    fr_inkrementell.pause()
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     for attempt in range(retries):
         try:
@@ -90,8 +95,9 @@ def main():
     meta = {}
     os.makedirs(OUT_DIR, exist_ok=True)
     for reihe, (slug, name) in SERIES.items():
-        counts = {}
-        for year in range(START_YEAR, current_year + 1):
+        alt, jahre = fr_inkrementell.plan(os.path.join(OUT_DIR, reihe + ".csv.gz"), START_YEAR, current_year)
+        counts = dict(alt)
+        for year in jahre:
             fetch_year_counts(slug, year, counts)
 
         first_day = datetime.date(START_YEAR, 1, 1)
