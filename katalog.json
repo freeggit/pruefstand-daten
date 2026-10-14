@@ -3432,5 +3432,101 @@
   "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Firmenereignisse aggregiert; oeffentliche Quelle ohne Login, Historie ab 2004; Bilanzskandal-Literatur zeigt Kursreaktion.",
   "ergaenzt_utc": "2026-10-11T10:00Z",
   "geprueft_utc": "2026-10-14T00:15Z"
+ },
+ {
+  "id": "bundesbank_rendite_bund_taeglich",
+  "name": "Rendite Bundesanleihen 10 Jahre, taeglich (Bundesbank Zeitreihen)",
+  "url": "https://api.statistiken.bundesbank.de/rest/data/BBK01/WT1010?format=csv",
+  "domain": "bundesbank.de",
+  "bereich": "Zinsen",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein Renditesprung bei Bunds verschiebt kurzfristig Kapital zwischen Euro-Aktien (EWG, XLF) und US-Anleihen (TLT, IEF) gegenueber dem Weltindex; ergaenzt die US- und Japan-Zinsreihen um die Eurozone.",
+  "grund": "Fehlende Euro-Zinsreihe im Bestand (FRED/MOF decken US und Japan ab). Offene Bundesbank-API ohne Login, Historie ab 1970er Jahren. Herkunft Scout.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+ },
+ {
+  "id": "us_sommerzeit_wechsel",
+  "name": "Tage des Wechsels auf Sommer- und Winterzeit USA (Regel: 2. Sonntag Maerz, 1. Sonntag November), Folgetag Montag",
+  "url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+  "domain": "nist.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Kamstra, Kramer, Levi (2000) zeigen schwache Montagsrenditen nach dem Zeitwechsel durch Schlafmangel und Risikoscheu; Wirkung auf breite Aktien (SPY) gegenueber dem Weltindex.",
+  "grund": "Fachliteratur (Kamstra et al. 2000). Termine rein regelbasiert, keine Sicht auf Ergebnisse noetig. Veroeffentlichte Anomalien werden danach oft schwaecher (L3).",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+ },
+ {
+  "id": "msci_index_review_termine",
+  "name": "Stichtage der halbjaehrlichen MSCI-Indexueberpruefung (letzter Handelstag Mai und November) und Quartalsueberpruefungen",
+  "url": "https://www.msci.com/index-review-timetable",
+  "domain": "msci.com",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Indexaufnahmen und -streichungen erzwingen passive Kaeufe und Verkaeufe an einem bekannten Tag; Laender-ETFs (EEM, FXI, EWJ) koennen gegenueber dem Weltindex kurzfristig abweichen.",
+  "grund": "Neuer Bereich Indexaufnahmen (Zusatz zu sp500_index_aenderungen). Stichtage regelbasiert, aeltere Termine aus Pressemitteilungen. Herkunft Scout.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+ },
+ {
+  "id": "sec_13f_einreichungsfristen",
+  "name": "Einreichungsfristen fuer 13F-Positionsmeldungen (45 Tage nach Quartalsende: 15. Feb, 15. Mai, 15. Aug, 15. Nov)",
+  "url": "https://www.sec.gov/divisions/investment/13ffaq",
+  "domain": "sec.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "An den Fristen werden Grossanleger-Positionen oeffentlich; Nachahmer-Zufluesse koennen Sektoren (XLK, XLV) kurzfristig gegenueber dem Weltindex stuetzen.",
+  "grund": "Positionierungs-Offenlegung ohne eigene Datenreihe noetig, nur Regeltermine. Mechanismus schwach, darum tief.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+ },
+ {
+  "id": "us_bip_bea_veroeffentlichungstage",
+  "name": "Veroeffentlichungstage BEA: BIP-Schaetzungen und PCE-Preisindex",
+  "url": "https://www.bea.gov/news/schedule",
+  "domain": "bea.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Der PCE-Preisindex ist die Zielgroesse der Fed; Termine buendeln Zins- und Wachstumsueberraschungen und bewegen Anleihen (TLT, TIP) und Zyklische (XLY, XLI) gegenueber dem Weltindex.",
+  "grund": "Ergaenzt us_cpi_termine und us_arbeitsmarkt_termine um BEA. Terminliste oeffentlich, Archiv ab 1990er; bls_veroeffentlichungstage wurde abgelehnt, daher Terminherkunft vorab pruefen.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+ },
+ {
+  "id": "us_banken_quartalszahlen_saisonstart",
+  "name": "Tag der ersten Quartalszahlen der Grossbanken (JPMorgan, Citigroup, Wells Fargo), Beginn der Berichtssaison",
+  "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K",
+  "domain": "sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Grossbanken eroeffnen die Berichtssaison und liefern zeitgleich Kredit- und Konjunkturdaten; Finanzwerte (XLF) und Zinssensible reagieren kurzfristig gegenueber dem Weltindex.",
+  "grund": "Unternehmenskalender (Zusatz 8, erste Prioritaet). Termine ueber 8-K Item 2.02 der drei Banken ableitbar, oeffentlich ohne Login.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+ },
+ {
+  "id": "mondphasen_vollmond_neumond",
+  "name": "Tage von Voll- und Neumond (astronomische Berechnung)",
+  "url": "https://aa.usno.navy.mil/data/MoonPhases",
+  "domain": "usno.navy.mil",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Yuan, Zheng, Zhu (2006) finden um Neumond hoehere Renditen als um Vollmond (Stimmung); Wirkung auf breite Aktien gegenueber dem Weltindex. Dient auch als Kontrolle ohne Kausalpfad.",
+  "grund": "Fachliteratur (Yuan et al. 2006). Reihe deterministisch berechenbar, Historie unbegrenzt. Stark von Veroeffentlichung betroffen (L3), darum tief.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+ },
+ {
+  "id": "eia_ethanol_produktion_woechentlich",
+  "name": "Woechentliche US-Ethanolproduktion und -bestaende (EIA)",
+  "url": "https://www.eia.gov/dnav/pet/pet_sum_sndw_dcus_nus_w.htm",
+  "domain": "eia.gov",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ethanol bindet rund ein Drittel der US-Maisernte; Produktionsaenderungen wirken kurzfristig auf Agrarpreise (DBA) und Energie (XLE) gegenueber dem Weltindex.",
+  "grund": "Ergaenzt die EIA-Wochenreihen (Lager, Importe, Raffinerie), die bereits geprueft wurden; Publikation mittwochs, echte Frist beachten.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z"
  }
 ]
