@@ -3439,11 +3439,12 @@
   "url": "https://api.statistiken.bundesbank.de/rest/data/BBK01/WT1010?format=csv",
   "domain": "bundesbank.de",
   "bereich": "Zinsen",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ein Renditesprung bei Bunds verschiebt kurzfristig Kapital zwischen Euro-Aktien (EWG, XLF) und US-Anleihen (TLT, IEF) gegenueber dem Weltindex; ergaenzt die US- und Japan-Zinsreihen um die Eurozone.",
-  "grund": "Fehlende Euro-Zinsreihe im Bestand (FRED/MOF decken US und Japan ab). Offene Bundesbank-API ohne Login, Historie ab 1970er Jahren. Herkunft Scout.",
-  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+  "grund": "Duplikat: Bundesbank-Rendite 10J ist schon als bundesbank_umlauf:bund10y aktiv (ab 2001); Zusatz 3 Redundanz.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z",
+  "geprueft_utc": "2026-10-14T12:16:52Z"
  },
  {
   "id": "us_sommerzeit_wechsel",
@@ -3451,11 +3452,16 @@
   "url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
   "domain": "nist.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Kamstra, Kramer, Levi (2000) zeigen schwache Montagsrenditen nach dem Zeitwechsel durch Schlafmangel und Risikoscheu; Wirkung auf breite Aktien (SPY) gegenueber dem Weltindex.",
-  "grund": "Fachliteratur (Kamstra et al. 2000). Termine rein regelbasiert, keine Sicht auf Ergebnisse noetig. Veroeffentlichte Anomalien werden danach oft schwaecher (L3).",
-  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+  "grund": "Alle Kriterien erfuellt. Deterministisch nach US-Gesetz (Uniform Time Act 1966, Energy Policy Act 2005; NIST), ab 1976 (1974/75 Sonderregelung und 1967-73 uneinheitlich bewusst nicht erfasst). 0/1 am ersten Handelstag nach dem Wechsel, 18551 Tage, verfuegbar_nach_tagen 0. 2 Reihen: Beginn und Ende (verschiedene Ereignisse). K4 nicht revidierbar, K5 bis heute fortgeschrieben.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z",
+  "geprueft_utc": "2026-10-14T12:16:52Z",
+  "reihen": [
+   "beginn",
+   "ende"
+  ]
  },
  {
   "id": "msci_index_review_termine",
@@ -3499,11 +3505,12 @@
   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K",
   "domain": "sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Grossbanken eroeffnen die Berichtssaison und liefern zeitgleich Kredit- und Konjunkturdaten; Finanzwerte (XLF) und Zinssensible reagieren kurzfristig gegenueber dem Weltindex.",
-  "grund": "Unternehmenskalender (Zusatz 8, erste Prioritaet). Termine ueber 8-K Item 2.02 der drei Banken ableitbar, oeffentlich ohne Login.",
-  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+  "grund": "Termine nur ueber 8-K Item 2.02 (EDGAR) ableitbar; SEC sperrt diese Umgebung (403), EDGAR-Quellen laufen laut Zusatz 6 nur ueber die GitHub Action auf main.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z",
+  "geprueft_utc": "2026-10-14T12:16:52Z"
  },
  {
   "id": "mondphasen_vollmond_neumond",

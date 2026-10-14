@@ -1,0 +1,20 @@
+{
+  "beginn": {
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Abruf)",
+    "verfuegbar_nach_tagen": 0,
+    "revidiert": false,
+    "publikation": "taeglich (Termin gesetzlich im Voraus bekannt: Uniform Time Act 1966, Energy Policy Act 2005)",
+    "beschreibung": "1 am ersten Handelstag (Montag) nach Beginn der US-Sommerzeit, sonst 0, ab 1976-01-01 (Regel: 1976-86 letzter So April, 1987-2006 erster So April, ab 2007 zweiter So Maerz)."
+  },
+  "ende": {
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Abruf)",
+    "verfuegbar_nach_tagen": 0,
+    "revidiert": false,
+    "publikation": "taeglich (Termin gesetzlich im Voraus bekannt: Uniform Time Act 1966, Energy Policy Act 2005)",
+    "beschreibung": "1 am ersten Handelstag (Montag) nach Ende der US-Sommerzeit, sonst 0, ab 1976-01-01 (1976-2006 letzter So Oktober, ab 2007 erster So November)."
+  }
+}
