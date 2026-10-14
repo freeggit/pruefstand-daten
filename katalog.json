@@ -3265,11 +3265,12 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Haeufungen verspaeteter Jahres- und Quartalsabschluesse zeigen Bilanzstress und Pruefungsprobleme und belasten betroffene Sektoren (z.B. Finanzen, Kleinwerte).",
-  "grund": "Taeglich ab 1994 aus dem EDGAR-Tagesindex, Formtypen NT 10-K und NT 10-Q. Abruf nur mit User-Agent; HTTP-403-Risiko wie bei sec_handelsaussetzungen (Sperre nicht umgehen, vorhandener SEC-Weg auf main nutzen).",
-  "ergaenzt_utc": "2026-10-07T10:00Z"
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Taeglich ab 1994 aus dem EDGAR-Tagesindex, Formtypen NT 10-K und NT 10-Q. Abruf nur mit User-Agent; HTTP-403-Risiko wie bei sec_handelsaussetzungen (Sperre nicht umgehen, vorhandener SEC-Weg auf main nutzen).",
+  "ergaenzt_utc": "2026-10-07T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  },
  {
   "id": "fed_beige_book_termine",
@@ -3334,11 +3335,12 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Gehaeufte Restrukturierungsmeldungen in einem Sektor zeigen Kostendruck und Nachfrageschwaeche an und verschieben kurzfristig Sektor-ETFs gegenueber dem Weltindex.",
-  "grund": "Neuer Bereich: Insolvenz und Restrukturierung aggregiert. Tagesindex ab 1994, ohne Login; Formular 8-K mit Item aus Dokumentkopf, Zugriff mit User-Agent. Aggregation je Tag, nie je Firma.",
-  "ergaenzt_utc": "2026-10-09T10:00Z"
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Neuer Bereich: Insolvenz und Restrukturierung aggregiert. Tagesindex ab 1994, ohne Login; Formular 8-K mit Item aus Dokumentkopf, Zugriff mit User-Agent. Aggregation je Tag, nie je Firma.",
+  "ergaenzt_utc": "2026-10-09T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  },
  {
   "id": "sec_8k_insolvenz_item103",
@@ -3346,11 +3348,12 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Insolvenzwellen in Energie, Finanz oder Gesundheit erhoehen Kreditrisikoaufschlaege und belasten den betroffenen Sektor kurzfristig gegenueber dem Weltindex.",
-  "grund": "Taegliche Zaehlung ab 1994, oeffentlich. Ergaenzt fdic_bankausfaelle um Nichtbanken.",
-  "ergaenzt_utc": "2026-10-09T10:00Z"
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Taegliche Zaehlung ab 1994, oeffentlich. Ergaenzt fdic_bankausfaelle um Nichtbanken.",
+  "ergaenzt_utc": "2026-10-09T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  },
  {
   "id": "sec_8k_bilanzkorrektur_item402",
@@ -3358,11 +3361,12 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Meldungen zu unzuverlaessigen Abschluessen untergraben das Vertrauen in einen Sektor und wirken kurzfristig auf seine Bewertung.",
-  "grund": "Seltene Ereignisse (wenige hundert pro Jahr), Aggregation je Sektor noetig; Mindestzahl Ereignisse pruefen.",
-  "ergaenzt_utc": "2026-10-09T10:00Z"
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Seltene Ereignisse (wenige hundert pro Jahr), Aggregation je Sektor noetig; Mindestzahl Ereignisse pruefen.",
+  "ergaenzt_utc": "2026-10-09T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  },
  {
   "id": "ecb_ratssitzungen_termine",
@@ -3383,11 +3387,12 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/ (form.<J>QTR<q>.idx, Form 8-K, Item 3.01 im Dokument)",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Haeufen sich Delisting-Mitteilungen in einem Sektor, steigt dort das Ausfall- und Verwaesserungsrisiko; der Sektor-ETF reagiert kurzfristig gegenueber dem Weltindex.",
-  "grund": "Firmenereignisse aggregiert, erste Prioritaet nach Zusatz 8; ergaenzt Item 2.05 und 1.03.",
-  "ergaenzt_utc": "2026-10-10T10:00Z"
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Firmenereignisse aggregiert, erste Prioritaet nach Zusatz 8; ergaenzt Item 2.05 und 1.03.",
+  "ergaenzt_utc": "2026-10-10T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  },
  {
   "id": "sec_8k_fuehrungswechsel_item502",
@@ -3395,11 +3400,12 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/ (form.<J>QTR<q>.idx, Form 8-K, Item 5.02)",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Gehaeufte Fuehrungswechsel signalisieren Strategiebruch oder Krise im Sektor und verschieben die Erwartung an Gewinne gegenueber dem Weltindex.",
-  "grund": "Firmenereignisse aggregiert; oeffentliche Quelle ohne Login, Historie ab 2001.",
-  "ergaenzt_utc": "2026-10-10T10:00Z"
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Firmenereignisse aggregiert; oeffentliche Quelle ohne Login, Historie ab 2001.",
+  "ergaenzt_utc": "2026-10-10T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  },
  {
   "id": "fed_stresstest_ergebnisse_termine",
@@ -3407,11 +3413,12 @@
   "url": "https://www.federalreserve.gov/supervisionreg/dfa-stress-tests-2024.htm (Archivseiten je Jahr, Datum der Ergebnisse)",
   "domain": "www.federalreserve.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Die Ergebnisse legen Kapitalauflagen und Ausschuettungen der US-Grossbanken fest; der Finanzsektor reagiert kurzfristig gegenueber dem Weltindex.",
-  "grund": "Amtlicher Kalender ab 2009; wenige Ereignisse (ca. 17), daher Prioritaet tief.",
-  "ergaenzt_utc": "2026-10-10T10:00Z"
+  "grund": "Nur ca. 17 Ereignisse, zu dünn für die Suche (Qualität vor Menge). Vorher: Amtlicher Kalender ab 2009; wenige Ereignisse (ca. 17), daher Prioritaet tief.",
+  "ergaenzt_utc": "2026-10-10T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  },
  {
   "id": "sec_8k_nichtverlass_item402",
@@ -3419,10 +3426,11 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/ (form.<J>QTR<q>.idx, Form 8-K, Item 4.02)",
   "domain": "www.sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Bilanzkorrekturen gehaeuft in einem Sektor untergraben das Vertrauen in dessen Gewinnzahlen und druecken ihn kurzfristig gegenueber dem Weltindex.",
-  "grund": "Firmenereignisse aggregiert; oeffentliche Quelle ohne Login, Historie ab 2004; Bilanzskandal-Literatur zeigt Kursreaktion.",
-  "ergaenzt_utc": "2026-10-11T10:00Z"
+  "grund": "EDGAR-Quelle: SEC sperrt diese Umgebung (403); Beschaffung nur über GitHub Action auf main (Zusatz 6). Vorher: Firmenereignisse aggregiert; oeffentliche Quelle ohne Login, Historie ab 2004; Bilanzskandal-Literatur zeigt Kursreaktion.",
+  "ergaenzt_utc": "2026-10-11T10:00Z",
+  "geprueft_utc": "2026-10-14T00:15Z"
  }
 ]
