@@ -3469,11 +3469,12 @@
   "url": "https://www.msci.com/index-review-timetable",
   "domain": "msci.com",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Indexaufnahmen und -streichungen erzwingen passive Kaeufe und Verkaeufe an einem bekannten Tag; Laender-ETFs (EEM, FXI, EWJ) koennen gegenueber dem Weltindex kurzfristig abweichen.",
-  "grund": "Neuer Bereich Indexaufnahmen (Zusatz zu sp500_index_aenderungen). Stichtage regelbasiert, aeltere Termine aus Pressemitteilungen. Herkunft Scout.",
-  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+  "grund": "Neuer Bereich Indexaufnahmen (Zusatz zu sp500_index_aenderungen). Stichtage regelbasiert, aeltere Termine aus Pressemitteilungen. Herkunft Scout. | Test 2026-10-14T16:25Z: Timetable-URL liefert 404, keine maschinenlesbare, belegte Terminhistorie ab 2015 ohne Login (K2/K3); Termine nicht aus Wissen rekonstruieren.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z",
+  "geprueft_utc": "2026-10-14T16:25Z"
  },
  {
   "id": "sec_13f_einreichungsfristen",
@@ -3496,8 +3497,9 @@
   "status": "kandidat",
   "prioritaet": "normal",
   "mechanismus": "Der PCE-Preisindex ist die Zielgroesse der Fed; Termine buendeln Zins- und Wachstumsueberraschungen und bewegen Anleihen (TLT, TIP) und Zyklische (XLY, XLI) gegenueber dem Weltindex.",
-  "grund": "Ergaenzt us_cpi_termine und us_arbeitsmarkt_termine um BEA. Terminliste oeffentlich, Archiv ab 1990er; bls_veroeffentlichungstage wurde abgelehnt, daher Terminherkunft vorab pruefen.",
-  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+  "grund": "Ergaenzt us_cpi_termine und us_arbeitsmarkt_termine um BEA. Terminliste oeffentlich, Archiv ab 1990er; bls_veroeffentlichungstage wurde abgelehnt, daher Terminherkunft vorab pruefen. | Test 2026-10-14T16:25Z: Terminplan nur aktuelle Jahre (full-2025, next-year, ICS). Archiv bea.gov/news/archive (Seiten, Jahre 1996-2024) vorhanden, Titelfilter wirkt nicht, Parser fehlt; bleibt Kandidat, naechster Lauf Archiv seitenweise auswerten.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z",
+  "geprueft_utc": "2026-10-14T16:25Z"
  },
  {
   "id": "us_banken_quartalszahlen_saisonstart",
