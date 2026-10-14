@@ -72,6 +72,10 @@
   {
    "datum": "2026-10-13",
    "datei": "lernberichte/2026-10-13.md"
+  },
+  {
+   "datum": "2026-10-14",
+   "datei": "lernberichte/2026-10-14.md"
   }
  ],
  "reihen_letzter_suchlauf": [
@@ -1421,7 +1425,7 @@
   }
  ],
  "letzter_suchlauf_utc": "2026-10-14T06:38Z",
- "pruefung_lernrunde_utc": "2026-10-13T09:37:04Z",
+ "pruefung_lernrunde_utc": "2026-10-14T09:10:00Z",
  "letzter_code_hash": "c565282c13f4ddb7",
  "methode": "M4",
  "vorreg": [
