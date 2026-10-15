@@ -3536,11 +3536,12 @@
   "url": "https://www.eia.gov/dnav/pet/pet_sum_sndw_dcus_nus_w.htm",
   "domain": "eia.gov",
   "bereich": "Rohstoffe",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ethanol bindet rund ein Drittel der US-Maisernte; Produktionsaenderungen wirken kurzfristig auf Agrarpreise (DBA) und Energie (XLE) gegenueber dem Weltindex.",
-  "grund": "Ergaenzt die EIA-Wochenreihen (Lager, Importe, Raffinerie), die bereits geprueft wurden; Publikation mittwochs, echte Frist beachten.",
-  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+  "grund": "K1: woechentliche Frequenz (Median-Abstand 7 Tage); EIA-API zudem mit Schluessel (K3). Ablehnung ohne Abruf (Frequenz aus Quellenbeschreibung).",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z",
+  "geprueft_utc": "2026-10-15T12:30:00Z"
  },
  {
   "id": "dol_erstantraege_arbeitslosenhilfe_woechentlich",
@@ -3548,11 +3549,12 @@
   "url": "https://oui.doleta.gov/unemploy/claims.asp",
   "domain": "dol.gov",
   "bereich": "Staat und Arbeitsmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ein Anstieg der Erstantraege signalisiert eine rasche Abkuehlung der US-Konjunktur und verschiebt kurzfristig Kapital in Anleihen (IEF, TLT) gegenueber dem Weltindex.",
-  "grund": "Zeitnaher Konjunkturindikator, donnerstags veroeffentlicht (echte Frist beachten); Historie ab 1967, Daten vor 1990 pruefbar (zweite Prioritaet).",
-  "aufgenommen_utc": "2026-10-15T09:00:00Z"
+  "grund": "K1: woechentlich; K6: ICSA bereits im Spiegel; K4: Zahlen werden revidiert. Ablehnung ohne Abruf (Frequenz aus Quellenbeschreibung).",
+  "aufgenommen_utc": "2026-10-15T09:00:00Z",
+  "geprueft_utc": "2026-10-15T12:30:00Z"
  },
  {
   "id": "snb_sichtguthaben_woechentlich",
@@ -3560,11 +3562,12 @@
   "url": "https://data.snb.ch/api/cube/snbgwdchfsight/data/csv/de",
   "domain": "snb.ch",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Aenderungen der Franken-Liquiditaet zeigen SNB-Devisenmarkteingriffe an und wirken kurzfristig auf den Franken und Anleihen gegenueber dem Weltindex.",
-  "grund": "Oeffentliche API ohne Login, woechentlich, lange Historie; ergaenzt snb_saron, das bereits geprueft wird.",
-  "aufgenommen_utc": "2026-10-15T09:00:00Z"
+  "grund": "K1: woechentliche Frequenz (Median-Abstand 7 Tage). Ablehnung ohne Abruf (Frequenz aus Quellenbeschreibung).",
+  "aufgenommen_utc": "2026-10-15T09:00:00Z",
+  "geprueft_utc": "2026-10-15T12:30:00Z"
  },
  {
   "id": "ezb_eurosystem_wochenausweis",
@@ -3572,11 +3575,12 @@
   "url": "https://data-api.ecb.europa.eu/service/data/ILM/W.U2.C.T000000.Z5.Z01?format=csvdata",
   "domain": "ecb.europa.eu",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Veraenderungen der Eurosystem-Bilanz (Liquiditaet) verschieben kurzfristig Euro-Anleihen- und Aktienrisikopraemien gegenueber dem Weltindex (EWG, EWU).",
-  "grund": "SDMX-API der EZB ohne Login, wochentlich dienstags; ergaenzt fed_balance_sheet_h41 fuer die Euro-Seite.",
-  "aufgenommen_utc": "2026-10-15T09:00:00Z"
+  "grund": "K1: woechentliche Frequenz (Median-Abstand 7 Tage). Ablehnung ohne Abruf (Frequenz aus Quellenbeschreibung).",
+  "aufgenommen_utc": "2026-10-15T09:00:00Z",
+  "geprueft_utc": "2026-10-15T12:30:00Z"
  },
  {
   "id": "us_monatsabschluss_treasury_defizit",
@@ -3584,11 +3588,12 @@
   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1",
   "domain": "treasury.gov",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Ein ueberraschend hohes Defizit erhoeht das Anleiheangebot und drueckt kurzfristig Staatsanleihen (TLT, IEF) gegenueber dem Weltindex.",
-  "grund": "Gleiche Fiscal-Data-API wie treasury_tga; nur Monatsdaten, daher wenige Ereignisse, darum tief.",
-  "aufgenommen_utc": "2026-10-15T09:00:00Z"
+  "grund": "K1: monatliche Frequenz. Ablehnung ohne Abruf (Frequenz aus Quellenbeschreibung).",
+  "aufgenommen_utc": "2026-10-15T09:00:00Z",
+  "geprueft_utc": "2026-10-15T12:30:00Z"
  },
  {
   "id": "eia_benzinpreis_einzelhandel_woechentlich",
@@ -3596,10 +3601,11 @@
   "url": "https://www.eia.gov/dnav/pet/hist_xls/EMM_EPMR_PTE_NUS_DPGw.xls",
   "domain": "eia.gov",
   "bereich": "Rohstoffe",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Steigende Benzinpreise belasten den Konsum und stuetzen Raffinerien: kurzfristig Wirkung auf Konsumwerte (XLY) und Energie (XLE) gegenueber dem Weltindex.",
-  "grund": "Ergaenzt DCOILWTICO als Mechanismus-Nachbar (L1-Naehe zu Oelpreis-Signal); montags veroeffentlicht, echte Frist beachten.",
-  "aufgenommen_utc": "2026-10-15T09:00:00Z"
+  "grund": "K1: woechentliche Frequenz (Median-Abstand 7 Tage); EIA-Quelle mit Schluessel. Ablehnung ohne Abruf (Frequenz aus Quellenbeschreibung).",
+  "aufgenommen_utc": "2026-10-15T09:00:00Z",
+  "geprueft_utc": "2026-10-15T12:30:00Z"
  }
 ]
