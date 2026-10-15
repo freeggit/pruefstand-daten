@@ -3494,12 +3494,16 @@
   "url": "https://www.bea.gov/news/schedule",
   "domain": "bea.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Der PCE-Preisindex ist die Zielgroesse der Fed; Termine buendeln Zins- und Wachstumsueberraschungen und bewegen Anleihen (TLT, TIP) und Zyklische (XLY, XLI) gegenueber dem Weltindex.",
-  "grund": "Ergaenzt us_cpi_termine und us_arbeitsmarkt_termine um BEA. Terminliste oeffentlich, Archiv ab 1990er; bls_veroeffentlichungstage wurde abgelehnt, daher Terminherkunft vorab pruefen. | Test 2026-10-14T16:25Z: Terminplan nur aktuelle Jahre (full-2025, next-year, ICS). Archiv bea.gov/news/archive (Seiten, Jahre 1996-2024) vorhanden, Titelfilter wirkt nicht, Parser fehlt; bleibt Kandidat, naechster Lauf Archiv seitenweise auswerten.",
+  "grund": "Aufgenommen 2026-10-15T00:19Z: BEA-Archiv https://www.bea.gov/news/archive, Tag-Filter 451 (BIP) und 716+476 (Personal Income and Outlays), Archiv ab 1996. bip: 359 Termine, pce: 362 Termine, je 11246 Tageszeilen 1996-01-01 bis heute, 0/1, Anteil Folgewerte gleich ~97% (Ereignisreihe, erwartet). Luecken: 1996 Teiljahr, 2019/2025 Shutdown-Verschiebungen, 2026 laufend. Termin im BEA-Jahreskalender im Voraus bekannt (verfuegbar_nach_tagen 0). Zwei Reihen messen Verschiedenes (Wachstum vs. Konsum/PCE-Preis). Termine revisionsfrei.",
   "aufgenommen_utc": "2026-10-14T09:00:00Z",
-  "geprueft_utc": "2026-10-14T16:25Z"
+  "geprueft_utc": "2026-10-15T00:19Z",
+  "reihen": [
+   "bip",
+   "pce"
+  ]
  },
  {
   "id": "us_banken_quartalszahlen_saisonstart",

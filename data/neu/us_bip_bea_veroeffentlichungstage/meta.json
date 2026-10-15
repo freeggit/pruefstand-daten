@@ -1,0 +1,20 @@
+{
+  "bip": {
+    "beschreibung": "1 am Veroeffentlichungstag einer BEA-BIP-Schaetzung (Advance/Second/Third bzw. Preliminary/Final), sonst 0, ab 1996-01-01.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Termin im jaehrlichen BEA-Veroeffentlichungskalender im Voraus oeffentlich, https://www.bea.gov/news/schedule)",
+    "quelle_url": "https://www.bea.gov/news/archive",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag aus dem BEA-Archiv)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "pce": {
+    "beschreibung": "1 am Veroeffentlichungstag von Personal Income and Outlays (PCE-Preisindex, Konsum), sonst 0, ab 1996-01-01.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Termin im jaehrlichen BEA-Veroeffentlichungskalender im Voraus oeffentlich, https://www.bea.gov/news/schedule)",
+    "quelle_url": "https://www.bea.gov/news/archive",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag aus dem BEA-Archiv)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
