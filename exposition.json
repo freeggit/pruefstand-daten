@@ -787,6 +787,18 @@
    "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
    "beleg": "suche/S0010_alle.csv.gz"
   },
+  "neu_us_bip_bea_veroeffentlichungstage_bip": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261015T051640Z",
+   "erst_zeit": "2026-10-15T08:03Z",
+   "beleg": "suche/laeufe/L20261015T051640Z.json"
+  },
+  "neu_us_bip_bea_veroeffentlichungstage_pce": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261015T051640Z",
+   "erst_zeit": "2026-10-15T08:03Z",
+   "beleg": "suche/laeufe/L20261015T051640Z.json"
+  },
   "neu_us_boersenfeiertage_geschlossen": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -798,6 +810,18 @@
    "erst_lauf": null,
    "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
    "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_us_sommerzeit_wechsel_beginn": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261015T051640Z",
+   "erst_zeit": "2026-10-15T08:03Z",
+   "beleg": "suche/laeufe/L20261015T051640Z.json"
+  },
+  "neu_us_sommerzeit_wechsel_ende": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261015T051640Z",
+   "erst_zeit": "2026-10-15T08:03Z",
+   "beleg": "suche/laeufe/L20261015T051640Z.json"
   },
   "neu_usa_wahltag_wahltag": {
    "erst_dokument": "S0009",
@@ -1706,8 +1730,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261014T051645Z",
-  "zeit_utc": "2026-10-14T06:38Z",
-  "grundreihen_n": 283
+  "lauf_id": "L20261015T051640Z",
+  "zeit_utc": "2026-10-15T08:03Z",
+  "grundreihen_n": 287
  }
 }

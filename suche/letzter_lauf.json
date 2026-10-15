@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-14T06:38Z",
- "lauf_id": "L20261014T051645Z",
+ "zeit_utc": "2026-10-15T08:03Z",
+ "lauf_id": "L20261015T051640Z",
  "verfassung": "V3.17",
- "commit_main": "fc04fba4714c6453fdce4692f7ed7cdfcee87d9c",
- "commit_energie": "c7d0e4f75c30a01e534b3a6e1cd3b5b446a58c36",
- "commit_neu": "7431ff73b86685e852aaf5e1faa2bd1a90a2474c",
- "commit_lernen_vorher": "68a71f0dbb8d72552c5b199a0e400c7b91f6edc7",
+ "commit_main": "77d4bf027699fae9ccd22bcdc054af8d427c360b",
+ "commit_energie": "132484038688439f8eec20e53da182f5d1ad4ad3",
+ "commit_neu": "ac0dd9f575154562922f1d184458773c59330d04",
+ "commit_lernen_vorher": "c888ad5f4768672722f5da3c7ccd78c61c8ef122",
  "code_hash": "c565282c13f4ddb7",
  "sha_suchmaschine": "f6a9531812b0754b",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "64bad33d2a1240f4",
- "sha_manifest_main": "acb7e9b25d3485ef",
- "sha_manifest_neu": "62a1f6d3e7d9aade",
+ "sha_register_vorher": "1dab4f4ad5fda3ed",
+ "sha_manifest_main": "763aa9e304173078",
+ "sha_manifest_neu": "c3aae25de1072fee",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "042b450c87b09834"
+  "btc_sha": "91d592812ceb5c75"
  },
- "ergebnis_hash": "505d496dc0cd7554",
- "kandidaten": 356360,
- "kandidaten_neu": 8,
+ "ergebnis_hash": "4d6b0bcec437475b",
+ "kandidaten": 356716,
+ "kandidaten_neu": 414,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,8 +36,13 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261014T051645Z.json",
+ "laufeintrag": "suche/laeufe/L20261015T051640Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [],
+ "reihen_neu_gegen_vorlauf": [
+  "neu_us_bip_bea_veroeffentlichungstage_bip_stand",
+  "neu_us_bip_bea_veroeffentlichungstage_pce_stand",
+  "neu_us_sommerzeit_wechsel_beginn_stand",
+  "neu_us_sommerzeit_wechsel_ende_stand"
+ ],
  "gesamt": "vollständig"
 }

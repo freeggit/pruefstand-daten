@@ -1,5 +1,5 @@
 {
- "kumuliert": 694891,
+ "kumuliert": 695305,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -649,8 +649,12 @@
   "neu_treasury_yield_curve_kurz_z252",
   "neu_turn_of_month_effekt_turn_of_month_stand",
   "neu_us_arbeitsmarkt_termine_arbeitsmarkt_stand",
+  "neu_us_bip_bea_veroeffentlichungstage_bip_stand",
+  "neu_us_bip_bea_veroeffentlichungstage_pce_stand",
   "neu_us_boersenfeiertage_geschlossen_stand",
   "neu_us_cpi_termine_cpi_stand",
+  "neu_us_sommerzeit_wechsel_beginn_stand",
+  "neu_us_sommerzeit_wechsel_ende_stand",
   "neu_usa_wahltag_wahltag_stand",
   "neu_usda_wasde_veroeffentlichung_wasde_stand",
   "neu_usgs_erdbeben_anzahl_m5_d1",
@@ -1422,9 +1426,15 @@
    "datei": "suche/S0039.json",
    "kandidaten": 356360,
    "in_db": false
+  },
+  {
+   "nr": 40,
+   "datei": "suche/S0040.json",
+   "kandidaten": 356716,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-14T06:38Z",
+ "letzter_suchlauf_utc": "2026-10-15T08:03Z",
  "pruefung_lernrunde_utc": "2026-10-14T09:10:00Z",
  "letzter_code_hash": "c565282c13f4ddb7",
  "methode": "M4",
@@ -1588,11 +1598,19 @@
    "ergebnis_hash": "505d496dc0cd7554",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261015T051640Z.json",
+   "lauf_id": "L20261015T051640Z",
+   "s_dokument": "suche/S0040.json",
+   "ergebnis_hash": "4d6b0bcec437475b",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-14T06:38Z",
- "letztes_vollarchiv": "suche/S0039_alle.csv.gz",
- "letzter_ergebnis_hash": "505d496dc0cd7554",
+ "letzter_lauf_utc": "2026-10-15T08:03Z",
+ "letztes_vollarchiv": "suche/S0040_alle.csv.gz",
+ "letzter_ergebnis_hash": "4d6b0bcec437475b",
  "konflikte": [
   {
    "wo": "index",
@@ -3827,14 +3845,14 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 283,
-  "neu_in_diesem_lauf": 0
+  "grundreihen_n": 287,
+  "neu_in_diesem_lauf": 4
  },
- "letztes_vollarchiv_ergebnis_hash": "505d496dc0cd7554",
+ "letztes_vollarchiv_ergebnis_hash": "4d6b0bcec437475b",
  "pruefungen_bestanden": {
   "pruef_hash": "0c58b24e529ed2da",
   "lauf_id": "L20261012T161632Z"
  },
- "letzter_eingabe_hash": "12868781854802ff",
- "letzter_gueltiger_lauf": "L20261014T051645Z"
+ "letzter_eingabe_hash": "3e0991b060c10a30",
+ "letzter_gueltiger_lauf": "L20261015T051640Z"
 }
