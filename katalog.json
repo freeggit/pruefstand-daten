@@ -3647,8 +3647,9 @@
   "status": "kandidat",
   "prioritaet": "normal",
   "mechanismus": "Der Konsumbericht ist ein Grosstermin fuer zyklischen Konsum (XLY) und Basiskonsum (XLP) gegenueber dem Weltindex.",
-  "grund": "Kalender ausserhalb von BLS und BEA, bisher nicht abgedeckt. Termine ab 1990er in Archivlisten, reines Ereignisdatum.",
-  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+  "grund": "Kalender ausserhalb von BLS und BEA, bisher nicht abgedeckt. Termine ab 1990er in Archivlisten, reines Ereignisdatum. | 2026-10-16T20Z: Termine ab 2001 liegen offen als binaere XLS (https://www.census.gov/retail/marts/www/MARTSreleasedates.xls, HTTP 200, 38 kB); stdlib hat keinen XLS-Leser, ein BIFF8-Minimalleser im Skript noetig. Naechster Lauf. Publikation: taeglich (Ereignistag, im Voraus bekannt).",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z",
+  "geprueft_utc": "2026-10-16T20:20Z"
  },
  {
   "id": "census_baubeginne_termine",
