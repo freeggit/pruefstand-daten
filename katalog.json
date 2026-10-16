@@ -3617,8 +3617,9 @@
   "status": "kandidat",
   "prioritaet": "hoch",
   "mechanismus": "Abstimmungen der FDA-Beratungsgremien nehmen Zulassungsentscheide oft vorweg und bewegen Biotech (IBB) und Gesundheit (XLV) kurzfristig gegenueber dem Weltindex.",
-  "grund": "Erste Prioritaet Firmenereignisse. Ergaenzt fda_zulassungen (Zulassungstag) um die Vorstufe; Termine ab 1990er oeffentlich. fda.gov war fuer fda_zulassungen erreichbar.",
-  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+  "grund": "Erste Prioritaet Firmenereignisse. Ergaenzt fda_zulassungen (Zulassungstag) um die Vorstufe; Termine ab 1990er oeffentlich. fda.gov war fuer fda_zulassungen erreichbar. | 2026-10-16T12:17Z: FDA-Kalenderseite zeigt nur kommende Sitzungen; Archiv liegt je Ausschuss und Jahr auf eigenen Seiten (dutzende Ausschuesse, kein Sammelarchiv, URL-Muster uneinheitlich); Federal Register zuletzt 403. Aufwendig, in Etappen moeglich, offen.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z",
+  "geprueft_utc": "2026-10-16T12:17Z"
  },
  {
   "id": "usda_acreage_grainstocks_termine",
@@ -3662,11 +3663,12 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLEMCBPIOAS",
   "domain": "fred.stlouisfed.org",
   "bereich": "Zinsen",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ein steigender Risikoaufschlag auf Schwellenlandanleihen signalisiert Kapitalflucht und belastet EEM und Rohstoffe gegenueber dem Weltindex.",
-  "grund": "Anleihen-Schwerpunkt; FRED-Abruf wie bei fred_credit_spread. Taegliche Reihe ab 1998.",
-  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+  "grund": "K2: FRED-Reihe BAMLEMCBPIOAS (ICE BofA) beginnt erst 2023-10-16 (Lizenzbegrenzung auf 3 Jahre), erster Wert nach 31.12.2015",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z",
+  "geprueft_utc": "2026-10-16T12:17Z"
  },
  {
   "id": "fed_sloos_veroeffentlichungstage",
