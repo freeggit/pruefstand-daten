@@ -3607,5 +3607,77 @@
   "grund": "K1: woechentliche Frequenz (Median-Abstand 7 Tage); EIA-Quelle mit Schluessel. Ablehnung ohne Abruf (Frequenz aus Quellenbeschreibung).",
   "aufgenommen_utc": "2026-10-15T09:00:00Z",
   "geprueft_utc": "2026-10-15T12:30:00Z"
+ },
+ {
+  "id": "fda_adcomm_sitzungstermine",
+  "name": "FDA Advisory Committee: Sitzungstermine (Arzneimittel, Geraete)",
+  "url": "https://www.fda.gov/advisory-committees/advisory-committee-calendar",
+  "domain": "fda.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Abstimmungen der FDA-Beratungsgremien nehmen Zulassungsentscheide oft vorweg und bewegen Biotech (IBB) und Gesundheit (XLV) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Erste Prioritaet Firmenereignisse. Ergaenzt fda_zulassungen (Zulassungstag) um die Vorstufe; Termine ab 1990er oeffentlich. fda.gov war fuer fda_zulassungen erreichbar.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+ },
+ {
+  "id": "usda_acreage_grainstocks_termine",
+  "name": "USDA NASS Acreage- und Grain-Stocks-Berichte: Veroeffentlichungstage",
+  "url": "https://esmis.nal.usda.gov/publication/acreage",
+  "domain": "esmis.nal.usda.gov",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Die Juni-Berichte zu Anbauflaeche und Lagerbestaenden gelten als Preisschocks fuer Mais, Soja und Weizen und bewegen den Agrarkorb (DBA) gegenueber dem Weltindex.",
+  "grund": "Ergaenzt usda_wasde (anderer Bericht, anderer Termin). Gleiche Hostweiche esmis.nal.usda.gov wie bei WASDE, da usda.gov gesperrt ist.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+ },
+ {
+  "id": "census_einzelhandelsumsaetze_termine",
+  "name": "US Census: Veroeffentlichungstage der Einzelhandelsumsaetze (Advance Retail Sales)",
+  "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+  "domain": "census.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Der Konsumbericht ist ein Grosstermin fuer zyklischen Konsum (XLY) und Basiskonsum (XLP) gegenueber dem Weltindex.",
+  "grund": "Kalender ausserhalb von BLS und BEA, bisher nicht abgedeckt. Termine ab 1990er in Archivlisten, reines Ereignisdatum.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+ },
+ {
+  "id": "census_baubeginne_termine",
+  "name": "US Census: Veroeffentlichungstage Baubeginne und Baugenehmigungen",
+  "url": "https://www.census.gov/construction/nrc/index.html",
+  "domain": "census.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Wohnungsbaudaten wirken ueber Zinsempfindlichkeit auf Immobilien (XLRE) und Zyklische kurzfristig gegenueber dem Weltindex.",
+  "grund": "Zweiter Census-Termin; tief, weil viele Einzeltermine pro Jahr mit kleinem Effekt zu erwarten sind.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+ },
+ {
+  "id": "fred_em_unternehmensanleihen_spread",
+  "name": "ICE BofA Emerging Markets Corporate Plus Index OAS (taeglich, FRED BAMLEMCBPIOAS)",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLEMCBPIOAS",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Zinsen",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein steigender Risikoaufschlag auf Schwellenlandanleihen signalisiert Kapitalflucht und belastet EEM und Rohstoffe gegenueber dem Weltindex.",
+  "grund": "Anleihen-Schwerpunkt; FRED-Abruf wie bei fred_credit_spread. Taegliche Reihe ab 1998.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+ },
+ {
+  "id": "fed_sloos_veroeffentlichungstage",
+  "name": "Fed Senior Loan Officer Opinion Survey (SLOOS): Veroeffentlichungstage",
+  "url": "https://www.federalreserve.gov/data/sloos.htm",
+  "domain": "federalreserve.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Meldungen ueber strengere Kreditvergabe der Banken belasten Finanzwerte (XLF) und Zyklische kurzfristig gegenueber dem Weltindex.",
+  "grund": "Quartalstermin, wenige Ereignisse pro Jahr (Risiko kleiner Stichprobe), darum tief. Termine ab 1990 oeffentlich.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z"
  }
 ]
