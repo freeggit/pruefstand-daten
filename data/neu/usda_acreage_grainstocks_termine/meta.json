@@ -1,0 +1,20 @@
+{
+  "acreage": {
+    "beschreibung": "1 am Veroeffentlichungstag des USDA-NASS-Bericht Acreage (Anbauflaechen, jaehrlich Ende Juni), sonst 0, fuer jeden Kalendertag ab 1975-06-30 bis heute. Termine aus der ESMIS-Archivliste (National Agricultural Library).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (NASS veroeffentlicht den Berichtskalender im Voraus; ESMIS zeichnet die tatsaechlichen Erscheinungstage auf)",
+    "quelle_url": "https://esmis.nal.usda.gov/publication/acreage",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "grain_stocks": {
+    "beschreibung": "1 am Veroeffentlichungstag des USDA-NASS-Bericht Grain Stocks (Lagerbestaende, quartalsweise), sonst 0, fuer jeden Kalendertag ab 1973-10-24 bis heute. Termine aus der ESMIS-Archivliste (National Agricultural Library).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (NASS veroeffentlicht den Berichtskalender im Voraus; ESMIS zeichnet die tatsaechlichen Erscheinungstage auf)",
+    "quelle_url": "https://esmis.nal.usda.gov/publication/grain-stocks",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

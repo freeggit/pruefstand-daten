@@ -3627,11 +3627,16 @@
   "url": "https://esmis.nal.usda.gov/publication/acreage",
   "domain": "esmis.nal.usda.gov",
   "bereich": "Rohstoffe",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Die Juni-Berichte zu Anbauflaeche und Lagerbestaenden gelten als Preisschocks fuer Mais, Soja und Weizen und bewegen den Agrarkorb (DBA) gegenueber dem Weltindex.",
-  "grund": "Ergaenzt usda_wasde (anderer Bericht, anderer Termin). Gleiche Hostweiche esmis.nal.usda.gov wie bei WASDE, da usda.gov gesperrt ist.",
-  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+  "grund": "Ergaenzt usda_wasde (anderer Bericht, anderer Termin). Gleiche Hostweiche esmis.nal.usda.gov wie bei WASDE, da usda.gov gesperrt ist. | 2026-10-16: aktiv. acreage 1975-06-30 bis heute, 18737 Zeilen, 52 Ereignistage (jaehrlich Ende Juni); grain_stocks 1973-10-24 bis heute, 19351 Zeilen, 219 Ereignistage (quartalsweise). K1 taeglich (Median 1 Tag), K2 vor 1990, K3 offen, K4 Termine nicht revidiert, K5 bis heute berechnet, K6 neu, K7 unter 10 KB, Abruf wenige Sekunden. Anteil gleicher Folgewerte ca. 0.99 (0/1-Ereignisreihe, erwartet). Min 0 / Max 1. Publikation: taeglich, NASS-Kalender im Voraus bekannt, verfuegbar_nach_tagen 0. Historie vor 2010 nur Juni-Acreage (Prospective Plantings im Maerz ist ein eigener Bericht, nicht enthalten).",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z",
+  "reihen": [
+   "acreage",
+   "grain_stocks"
+  ],
+  "geprueft_utc": "2026-10-16T14:00Z"
  },
  {
   "id": "census_einzelhandelsumsaetze_termine",
