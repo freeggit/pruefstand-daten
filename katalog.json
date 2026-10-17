@@ -3689,27 +3689,27 @@
   "aufgenommen_utc": "2026-10-16T09:00:00Z"
  },
  {
-  "id": "boe_mpc_zinsentscheide_tage",
-  "name": "Bank of England: Tage der Zinsentscheide (MPC)",
-  "url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
-  "domain": "bankofengland.co.uk",
-  "bereich": "Geldmarkt",
+  "id": "fred_autoverkaeufe_us_monatlich",
+  "name": "FRED: US-Fahrzeugverkaeufe (TOTALSA) mit Veroeffentlichungstag",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TOTALSA",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Staat und Arbeitsmarkt",
   "status": "kandidat",
   "prioritaet": "normal",
-  "mechanismus": "Zinsentscheide der Bank of England verschieben kurzfristig britische Aktien (EWU) und Pfund-Anleihen gegenueber dem Weltindex.",
-  "grund": "Oeffentliche Bank-Rate-Reihe mit Entscheidungsdatum ab 1975, ohne Login; unabhaengig von US-Quellen.",
+  "mechanismus": "Ein Einbruch der Fahrzeugverkaeufe signalisiert schwachen Konsum und belastet Zyklische (XLY) und Industrie kurzfristig gegenueber dem Weltindex.",
+  "grund": "Oeffentliche FRED-Reihe ab 1976, ohne Login; Veroeffentlichungsfrist als Lag setzen.",
   "aufgenommen_utc": "2026-10-17T10:00:00Z"
  },
  {
-  "id": "fed_beigebuch_veroeffentlichungstage",
-  "name": "Fed Beige Book: Veroeffentlichungstage",
-  "url": "https://www.federalreserve.gov/monetarypolicy/publications/beige-book-default.htm",
-  "domain": "federalreserve.gov",
-  "bereich": "Kalender",
+  "id": "fred_wti_brent_spread_taeglich",
+  "name": "FRED: Spread Brent minus WTI (DCOILBRENTEU, DCOILWTICO)",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Rohstoffe",
   "status": "kandidat",
-  "prioritaet": "tief",
-  "mechanismus": "Das Beige Book berichtet ueber regionale Konjunktur; ueberraschend schwache Lage belastet Zyklische (XLY, XLI) kurzfristig gegenueber dem Weltindex.",
-  "grund": "Acht Termine je Jahr ab 1970, wenige Ereignisse, darum tief.",
+  "prioritaet": "hoch",
+  "mechanismus": "Ein weiter Brent-WTI-Spread zeigt US-Lieferengpass bei Rohoel und stuetzt US-Energiewerte (XLE) gegenueber dem Weltindex. Dient als Replikation (L1) fuer den Beinahe-Treffer Oel-Rueckgang -> IBB mit eigener Preisreihe.",
+  "grund": "Replikation von DCOILWTICO -> IBB: ueberlappt die WTI-Reihe teilweise, daher nur ergaenzend; Brent-Anteil ist unabhaengig.",
   "aufgenommen_utc": "2026-10-17T10:00:00Z"
  }
 ]
