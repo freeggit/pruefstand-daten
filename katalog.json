@@ -3694,11 +3694,12 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TOTALSA",
   "domain": "fred.stlouisfed.org",
   "bereich": "Staat und Arbeitsmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ein Einbruch der Fahrzeugverkaeufe signalisiert schwachen Konsum und belastet Zyklische (XLY) und Industrie kurzfristig gegenueber dem Weltindex.",
-  "grund": "Oeffentliche FRED-Reihe ab 1976, ohne Login; Veroeffentlichungsfrist als Lag setzen.",
-  "aufgenommen_utc": "2026-10-17T10:00:00Z"
+  "grund": "Oeffentliche FRED-Reihe ab 1976, ohne Login; Veroeffentlichungsfrist als Lag setzen. | 2026-10-17T16:45Z: abgelehnt K1 (monatlich, Median-Abstand ~30 Tage); revidiert zudem (K4).",
+  "aufgenommen_utc": "2026-10-17T10:00:00Z",
+  "geprueft_utc": "2026-10-17T16:45Z"
  },
  {
   "id": "fred_wti_brent_spread_taeglich",
