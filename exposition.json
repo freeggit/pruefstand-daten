@@ -829,6 +829,18 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_usda_acreage_grainstocks_termine_acreage": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261017T051354Z",
+   "erst_zeit": "2026-10-17T08:06Z",
+   "beleg": "suche/laeufe/L20261017T051354Z.json"
+  },
+  "neu_usda_acreage_grainstocks_termine_grain_stocks": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261017T051354Z",
+   "erst_zeit": "2026-10-17T08:06Z",
+   "beleg": "suche/laeufe/L20261017T051354Z.json"
+  },
   "neu_usda_wasde_veroeffentlichung_wasde": {
    "erst_dokument": "S0012",
    "erst_lauf": null,
@@ -1730,8 +1742,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261016T051720Z",
-  "zeit_utc": "2026-10-16T07:41Z",
-  "grundreihen_n": 287
+  "lauf_id": "L20261017T051354Z",
+  "zeit_utc": "2026-10-17T08:06Z",
+  "grundreihen_n": 289
  }
 }

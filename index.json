@@ -1,5 +1,5 @@
 {
- "kumuliert": 695305,
+ "kumuliert": 695545,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -664,6 +664,8 @@
   "neu_us_sommerzeit_wechsel_beginn_stand",
   "neu_us_sommerzeit_wechsel_ende_stand",
   "neu_usa_wahltag_wahltag_stand",
+  "neu_usda_acreage_grainstocks_termine_acreage_stand",
+  "neu_usda_acreage_grainstocks_termine_grain_stocks_stand",
   "neu_usda_wasde_veroeffentlichung_wasde_stand",
   "neu_usgs_erdbeben_anzahl_m5_d1",
   "neu_usgs_erdbeben_anzahl_m5_d20",
@@ -1446,9 +1448,15 @@
    "datei": "suche/S0041.json",
    "kandidaten": 356716,
    "in_db": false
+  },
+  {
+   "nr": 42,
+   "datei": "suche/S0042.json",
+   "kandidaten": 356956,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-16T07:41Z",
+ "letzter_suchlauf_utc": "2026-10-17T08:06Z",
  "pruefung_lernrunde_utc": "2026-10-16T09:38:15Z",
  "letzter_code_hash": "c565282c13f4ddb7",
  "methode": "M4",
@@ -1628,11 +1636,19 @@
    "ergebnis_hash": "eedd47693d9784a4",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261017T051354Z.json",
+   "lauf_id": "L20261017T051354Z",
+   "s_dokument": "suche/S0042.json",
+   "ergebnis_hash": "d5a3ecb5f660bdc8",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-16T07:41Z",
- "letztes_vollarchiv": "suche/S0041_alle.csv.gz",
- "letzter_ergebnis_hash": "eedd47693d9784a4",
+ "letzter_lauf_utc": "2026-10-17T08:06Z",
+ "letztes_vollarchiv": "suche/S0042_alle.csv.gz",
+ "letzter_ergebnis_hash": "d5a3ecb5f660bdc8",
  "konflikte": [
   {
    "wo": "index",
@@ -3867,14 +3883,14 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 287,
-  "neu_in_diesem_lauf": 0
+  "grundreihen_n": 289,
+  "neu_in_diesem_lauf": 2
  },
- "letztes_vollarchiv_ergebnis_hash": "eedd47693d9784a4",
+ "letztes_vollarchiv_ergebnis_hash": "d5a3ecb5f660bdc8",
  "pruefungen_bestanden": {
   "pruef_hash": "0c58b24e529ed2da",
   "lauf_id": "L20261012T161632Z"
  },
- "letzter_eingabe_hash": "3d91c66005273d66",
- "letzter_gueltiger_lauf": "L20261016T051720Z"
+ "letzter_eingabe_hash": "f9373ecef2dddf18",
+ "letzter_gueltiger_lauf": "L20261017T051354Z"
 }
