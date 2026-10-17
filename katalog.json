@@ -3644,12 +3644,15 @@
   "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
   "domain": "census.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Der Konsumbericht ist ein Grosstermin fuer zyklischen Konsum (XLY) und Basiskonsum (XLP) gegenueber dem Weltindex.",
-  "grund": "Kalender ausserhalb von BLS und BEA, bisher nicht abgedeckt. Termine ab 1990er in Archivlisten, reines Ereignisdatum. | 2026-10-16T20Z: Termine ab 2001 liegen offen als binaere XLS (https://www.census.gov/retail/marts/www/MARTSreleasedates.xls, HTTP 200, 38 kB); stdlib hat keinen XLS-Leser, ein BIFF8-Minimalleser im Skript noetig. Naechster Lauf. Publikation: taeglich (Ereignistag, im Voraus bekannt).",
+  "grund": "Kalender ausserhalb von BLS und BEA, bisher nicht abgedeckt. Termine ab 1990er in Archivlisten, reines Ereignisdatum. | 2026-10-16T20Z: Termine ab 2001 liegen offen als binaere XLS (https://www.census.gov/retail/marts/www/MARTSreleasedates.xls, HTTP 200, 38 kB); stdlib hat keinen XLS-Leser, ein BIFF8-Minimalleser im Skript noetig. Naechster Lauf. Publikation: taeglich (Ereignistag, im Voraus bekannt). | 2026-10-17T20:30Z: Aktiv. BIFF8-Minimalleser im Skript (MARTSreleasedates.xls). 9421 Zeilen 2001-01-01..2026-10-17, 289 Ereignistage. Verschobene Termine (2013-10/11, 2019, 2025-10..2026-04, Haushaltssperren, damals nicht im Voraus bekannt) ausgelassen. Publikation taeglich, verfuegbar_nach_tagen 0, K1-K7 erfuellt, nicht revidiert.",
   "aufgenommen_utc": "2026-10-16T09:00:00Z",
-  "geprueft_utc": "2026-10-16T20:20Z"
+  "geprueft_utc": "2026-10-17T20:30Z",
+  "reihen": [
+   "termine"
+  ]
  },
  {
   "id": "census_baubeginne_termine",

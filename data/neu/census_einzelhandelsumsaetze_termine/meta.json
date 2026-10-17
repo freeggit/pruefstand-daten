@@ -1,0 +1,11 @@
+{
+  "termine": {
+    "beschreibung": "1 am Veroeffentlichungstag des Advance Monthly Retail Sales Report des US Census Bureau (Einzelhandelsumsaetze Vormonat, 8:30 Uhr Washingtoner Zeit), sonst 0, ab 2001-01-01. Durch Haushaltssperren verschobene Termine (2013-10/11, 2019, 2025-10 bis 2026-04) ausgelassen.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Termine stehen im Voraus im Census-Kalender wirtschaftlicher Indikatoren; Quelle: census.gov/economic-indicators/calendar-listview.html)",
+    "quelle_url": "https://www.census.gov/retail/marts/www/MARTSreleasedates.xls",
+    "revidiert": false,
+    "verdichtung": "keine (Ereignisreihe)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
