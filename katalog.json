@@ -3689,27 +3689,27 @@
   "aufgenommen_utc": "2026-10-16T09:00:00Z"
  },
  {
-  "id": "ecb_ratssitzung_zinsentscheide",
-  "name": "EZB: Tage der geldpolitischen Ratssitzungen",
-  "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
-  "domain": "ecb.europa.eu",
+  "id": "boe_mpc_zinsentscheide_tage",
+  "name": "Bank of England: Tage der Zinsentscheide (MPC)",
+  "url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+  "domain": "bankofengland.co.uk",
   "bereich": "Geldmarkt",
   "status": "kandidat",
   "prioritaet": "normal",
-  "mechanismus": "Zinsentscheide der EZB verschieben kurzfristig Euro-Anleihen und europaeische Banken (EWG, EWU, FEZ) gegenueber dem Weltindex.",
-  "grund": "Oeffentliche Zinsreihe mit Tagesdatum ab 1999, ohne Login; unabhaengig von US-Quellen.",
+  "mechanismus": "Zinsentscheide der Bank of England verschieben kurzfristig britische Aktien (EWU) und Pfund-Anleihen gegenueber dem Weltindex.",
+  "grund": "Oeffentliche Bank-Rate-Reihe mit Entscheidungsdatum ab 1975, ohne Login; unabhaengig von US-Quellen.",
   "aufgenommen_utc": "2026-10-17T10:00:00Z"
  },
  {
-  "id": "opex_verfallstage_dritter_freitag",
-  "name": "Optionsverfall: dritter Freitag im Monat (berechneter Kalender)",
-  "url": "https://www.cboe.com/about/hours/us-options/ (Regel: dritter Freitag, Berechnung ohne Abruf)",
-  "domain": "cboe.com",
+  "id": "fed_beigebuch_veroeffentlichungstage",
+  "name": "Fed Beige Book: Veroeffentlichungstage",
+  "url": "https://www.federalreserve.gov/monetarypolicy/publications/beige-book-default.htm",
+  "domain": "federalreserve.gov",
   "bereich": "Kalender",
   "status": "kandidat",
   "prioritaet": "tief",
-  "mechanismus": "Absicherungsgeschaefte um den Optionsverfall bewegen kurzfristig grosse US-Werte (SPY, QQQ) gegenueber dem Weltindex.",
-  "grund": "Fachliteratur zu Verfallswochen-Effekt; veroeffentlichter Effekt wird danach oft schwaecher, darum tief. Datum rein regelbasiert.",
+  "mechanismus": "Das Beige Book berichtet ueber regionale Konjunktur; ueberraschend schwache Lage belastet Zyklische (XLY, XLI) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Acht Termine je Jahr ab 1970, wenige Ereignisse, darum tief.",
   "aufgenommen_utc": "2026-10-17T10:00:00Z"
  }
 ]
