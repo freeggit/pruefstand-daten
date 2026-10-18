@@ -3723,11 +3723,12 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=THREEFYTP10",
   "domain": "fred.stlouisfed.org",
   "bereich": "Zinsen",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Ein Anstieg der Laufzeitpraemie verteuert langfristige Anleihen und belastet TLT und IEF sowie zinssensible Sektoren (XLRE, XLU) gegenueber dem Weltindex.",
-  "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login.",
-  "aufgenommen_utc": "2026-10-18T09:37Z"
+  "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login. | Geprueft 2026-10-18: Kim-Wright-Termpraemium ist modellgeschaetzt und wird revidiert (K4) -> nicht aufgenommen; Status abgelehnt.",
+  "aufgenommen_utc": "2026-10-18T09:37Z",
+  "geprueft_utc": "2026-10-18T12:00:00Z"
  },
  {
   "id": "fred_inflationserwartung_5y5y_taeglich",

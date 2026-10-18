@@ -1,0 +1,11 @@
+{
+  "t5yifr": {
+    "beschreibung": "5-Jahres-5-Jahres-Forward-Inflationserwartung (FRED T5YIFR), taeglich, abgeleitet aus Marktrenditen nominaler und inflationsindexierter US-Staatsanleihen (Fed H.15).",
+    "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Fed H.15, naechster Geschaeftstag)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIFR",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

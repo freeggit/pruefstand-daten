@@ -1,0 +1,11 @@
+{
+  "dcpf3m": {
+    "beschreibung": "3-Monats-AA-Finanz-Commercial-Paper-Zinssatz USA (FRED DCPF3M), taeglich an Geschaeftstagen, Fed-Commercial-Paper-Release.",
+    "einheit": "Prozent p.a.",
+    "publikation": "taeglich (Fed Commercial Paper Release, naechster Geschaeftstag)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCPF3M",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
