@@ -1,5 +1,5 @@
 {
- "kumuliert": 695545,
+ "kumuliert": 695635,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -243,6 +243,7 @@
   "neu_cboe_vvix_vvix_d5",
   "neu_cboe_vvix_vvix_stand",
   "neu_cboe_vvix_vvix_z252",
+  "neu_census_einzelhandelsumsaetze_termine_termine_stand",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d1",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d20",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d5",
@@ -1458,9 +1459,15 @@
    "datei": "suche/S0042.json",
    "kandidaten": 356956,
    "in_db": false
+  },
+  {
+   "nr": 43,
+   "datei": "suche/S0043.json",
+   "kandidaten": 357046,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-17T08:06Z",
+ "letzter_suchlauf_utc": "2026-10-18T07:16Z",
  "pruefung_lernrunde_utc": "2026-10-17T10:30:00Z",
  "letzter_code_hash": "c565282c13f4ddb7",
  "methode": "M4",
@@ -1648,11 +1655,19 @@
    "ergebnis_hash": "d5a3ecb5f660bdc8",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261018T051407Z.json",
+   "lauf_id": "L20261018T051407Z",
+   "s_dokument": "suche/S0043.json",
+   "ergebnis_hash": "fa13bd151781fbed",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-17T08:06Z",
- "letztes_vollarchiv": "suche/S0042_alle.csv.gz",
- "letzter_ergebnis_hash": "d5a3ecb5f660bdc8",
+ "letzter_lauf_utc": "2026-10-18T07:16Z",
+ "letztes_vollarchiv": "suche/S0043_alle.csv.gz",
+ "letzter_ergebnis_hash": "fa13bd151781fbed",
  "konflikte": [
   {
    "wo": "index",
@@ -3887,14 +3902,14 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 289,
-  "neu_in_diesem_lauf": 2
+  "grundreihen_n": 290,
+  "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "d5a3ecb5f660bdc8",
+ "letztes_vollarchiv_ergebnis_hash": "fa13bd151781fbed",
  "pruefungen_bestanden": {
   "pruef_hash": "0c58b24e529ed2da",
   "lauf_id": "L20261012T161632Z"
  },
- "letzter_eingabe_hash": "f9373ecef2dddf18",
- "letzter_gueltiger_lauf": "L20261017T051354Z"
+ "letzter_eingabe_hash": "3db41f0e763929ce",
+ "letzter_gueltiger_lauf": "L20261018T051407Z"
 }

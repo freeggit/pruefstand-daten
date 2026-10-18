@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-17T08:06Z",
- "lauf_id": "L20261017T051354Z",
+ "zeit_utc": "2026-10-18T07:16Z",
+ "lauf_id": "L20261018T051407Z",
  "verfassung": "V3.17",
- "commit_main": "28581467ef62aa6156b9a477ff2f6491f11ec8ad",
- "commit_energie": "dcb91d26b27f8fff91b73a48def2b90f1b72ee8c",
- "commit_neu": "05fe1284dd5ac7f9509e1f74f8d577bd0d955b35",
- "commit_lernen_vorher": "312f20cbc9600bdecf3d0d3470ee960b86a317d6",
+ "commit_main": "be933f67a31e6260dfa3cf7460e581e880f47de8",
+ "commit_energie": "95dfb9821517c1ae0518a31c9a6d61feee538e48",
+ "commit_neu": "2defbc49f46dbc4bd6d63bb58321d731f1bdd7c0",
+ "commit_lernen_vorher": "188a2ca541fead00eb864b3b9ed291238df52fe9",
  "code_hash": "c565282c13f4ddb7",
  "sha_suchmaschine": "f6a9531812b0754b",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "b4cc2052d20b575e",
- "sha_manifest_main": "f3886de0c5ba8fdd",
- "sha_manifest_neu": "bb2446bef6b0c599",
+ "sha_register_vorher": "57f8f87448f848b2",
+ "sha_manifest_main": "c9cc1ef19d134f83",
+ "sha_manifest_neu": "7f5be0d2a56627fb",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "861a1eb35effb94c"
+  "btc_sha": "eca45d7634a71ba1"
  },
- "ergebnis_hash": "d5a3ecb5f660bdc8",
- "kandidaten": 356956,
- "kandidaten_neu": 240,
+ "ergebnis_hash": "fa13bd151781fbed",
+ "kandidaten": 357046,
+ "kandidaten_neu": 90,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,11 +36,10 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261017T051354Z.json",
+ "laufeintrag": "suche/laeufe/L20261018T051407Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [
-  "neu_usda_acreage_grainstocks_termine_acreage_stand",
-  "neu_usda_acreage_grainstocks_termine_grain_stocks_stand"
+  "neu_census_einzelhandelsumsaetze_termine_termine_stand"
  ],
  "gesamt": "vollständig"
 }

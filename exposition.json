@@ -205,6 +205,12 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_census_einzelhandelsumsaetze_termine_termine": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261018T051407Z",
+   "erst_zeit": "2026-10-18T07:16Z",
+   "beleg": "suche/laeufe/L20261018T051407Z.json"
+  },
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie": {
    "erst_dokument": "S0018",
    "erst_lauf": null,
@@ -1742,8 +1748,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261017T051354Z",
-  "zeit_utc": "2026-10-17T08:06Z",
-  "grundreihen_n": 289
+  "lauf_id": "L20261018T051407Z",
+  "zeit_utc": "2026-10-18T07:16Z",
+  "grundreihen_n": 290
  }
 }
