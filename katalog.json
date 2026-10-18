@@ -3614,12 +3614,12 @@
   "url": "https://www.fda.gov/advisory-committees/advisory-committee-calendar",
   "domain": "fda.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Abstimmungen der FDA-Beratungsgremien nehmen Zulassungsentscheide oft vorweg und bewegen Biotech (IBB) und Gesundheit (XLV) kurzfristig gegenueber dem Weltindex.",
-  "grund": "Erste Prioritaet Firmenereignisse. Ergaenzt fda_zulassungen (Zulassungstag) um die Vorstufe; Termine ab 1990er oeffentlich. fda.gov war fuer fda_zulassungen erreichbar. | 2026-10-16T12:17Z: FDA-Kalenderseite zeigt nur kommende Sitzungen; Archiv liegt je Ausschuss und Jahr auf eigenen Seiten (dutzende Ausschuesse, kein Sammelarchiv, URL-Muster uneinheitlich); Federal Register zuletzt 403. Aufwendig, in Etappen moeglich, offen. | 2026-10-17: Kalenderseite 200, Jahresarchiv-URLs (…/2019-meeting-materials-…) 404, Archiv nur via Wayback (Dritte, nicht erlaubt). Ohne Sammelarchiv nicht machbar; bleibt kandidat, tiefe Aussicht.",
+  "grund": "Erste Prioritaet Firmenereignisse. Ergaenzt fda_zulassungen (Zulassungstag) um die Vorstufe; Termine ab 1990er oeffentlich. fda.gov war fuer fda_zulassungen erreichbar. | 2026-10-16T12:17Z: FDA-Kalenderseite zeigt nur kommende Sitzungen; Archiv liegt je Ausschuss und Jahr auf eigenen Seiten (dutzende Ausschuesse, kein Sammelarchiv, URL-Muster uneinheitlich); Federal Register zuletzt 403. Aufwendig, in Etappen moeglich, offen. | 2026-10-17: Kalenderseite 200, Jahresarchiv-URLs (…/2019-meeting-materials-…) 404, Archiv nur via Wayback (Dritte, nicht erlaubt). Ohne Sammelarchiv nicht machbar; bleibt kandidat, tiefe Aussicht. | 2026-10-18: abgelehnt, kein Sammelarchiv ohne Dritte/Wayback; Jahresarchive 404 (erneut geprüft).",
   "aufgenommen_utc": "2026-10-16T09:00:00Z",
-  "geprueft_utc": "2026-10-17T00:00Z"
+  "geprueft_utc": "2026-10-18T04:24Z"
  },
  {
   "id": "usda_acreage_grainstocks_termine",
