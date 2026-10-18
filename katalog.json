@@ -3736,11 +3736,12 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIFR",
   "domain": "fred.stlouisfed.org",
   "bereich": "Zinsen",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Steigende langfristige Inflationserwartungen stuetzen inflationsgeschuetzte Anleihen (TIP) und Rohstoffsektoren (XLB, XLE) gegenueber Nominalanleihen und dem Weltindex.",
-  "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login.",
-  "aufgenommen_utc": "2026-10-18T09:37Z"
+  "grund": "Duplikat: bereits aktiv als fred_inflationserwartung_5y5y (FRED T5YIFR, ab 2003-01-02, Test 2026-10-18).",
+  "aufgenommen_utc": "2026-10-18T09:37Z",
+  "geprueft_utc": "2026-10-18T20:15Z"
  },
  {
   "id": "fred_commercial_paper_tbill_spread",
