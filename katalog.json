@@ -3716,5 +3716,53 @@
   "grund": "Replikation von DCOILWTICO -> IBB: ueberlappt die WTI-Reihe teilweise, daher nur ergaenzend; Brent-Anteil ist unabhaengig. | 2026-10-18T00:15Z: abgelehnt: Differenzreihe, die bildet die Suchmaschine selbst (paare.txt); Brent liegt schon aktiv als fred_brent. Vorschlag Paar Brent-WTI nur als Hinweis an Reto.",
   "aufgenommen_utc": "2026-10-17T10:00:00Z",
   "geprueft_utc": "2026-10-18T00:15Z"
+ },
+ {
+  "id": "fred_term_premium_kim_wright_taeglich",
+  "name": "FRED: Kim-Wright-Laufzeitpraemie 10 Jahre (THREEFYTP10), taeglich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=THREEFYTP10",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Zinsen",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein Anstieg der Laufzeitpraemie verteuert langfristige Anleihen und belastet TLT und IEF sowie zinssensible Sektoren (XLRE, XLU) gegenueber dem Weltindex.",
+  "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login.",
+  "aufgenommen_utc": "2026-10-18T09:37Z"
+ },
+ {
+  "id": "fred_inflationserwartung_5y5y_taeglich",
+  "name": "FRED: 5-Jahres-Terminsatz der Inflationserwartung in 5 Jahren (T5YIFR), taeglich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIFR",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Zinsen",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Steigende langfristige Inflationserwartungen stuetzen inflationsgeschuetzte Anleihen (TIP) und Rohstoffsektoren (XLB, XLE) gegenueber Nominalanleihen und dem Weltindex.",
+  "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login.",
+  "aufgenommen_utc": "2026-10-18T09:37Z"
+ },
+ {
+  "id": "fred_commercial_paper_tbill_spread",
+  "name": "FRED: Spread 3-Monats-Commercial-Paper (DCPF3M) minus 3-Monats-Treasury-Bill (DTB3), taeglich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCPF3M",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein weiter Spread zeigt Finanzierungsstress am kurzfristigen Unternehmens-Geldmarkt und belastet Finanzwerte (XLF) und Kreditanleihen (LQD) gegenueber kurzen Staatsanleihen und dem Weltindex.",
+  "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login.",
+  "aufgenommen_utc": "2026-10-18T09:37Z"
+ },
+ {
+  "id": "jackson_hole_symposium_termine",
+  "name": "Jackson-Hole-Symposium der Fed Kansas City: Starttage und Rede des Fed-Vorsitzenden",
+  "url": "https://www.kansascityfed.org/research/jackson-hole-economic-symposium/",
+  "domain": "kansascityfed.org",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Reden des Fed-Vorsitzenden in Jackson Hole setzen oft Zins- und Dollar-Erwartungen neu und bewegen kurzfristig Anleihen (TLT, IEF), Gold und zinssensible Sektoren gegenueber dem Weltindex.",
+  "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login.",
+  "aufgenommen_utc": "2026-10-18T09:37Z"
  }
 ]
