@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-18T07:16Z",
- "lauf_id": "L20261018T051407Z",
+ "zeit_utc": "2026-10-19T06:49Z",
+ "lauf_id": "L20261019T052121Z",
  "verfassung": "V3.17",
- "commit_main": "be933f67a31e6260dfa3cf7460e581e880f47de8",
- "commit_energie": "95dfb9821517c1ae0518a31c9a6d61feee538e48",
- "commit_neu": "2defbc49f46dbc4bd6d63bb58321d731f1bdd7c0",
- "commit_lernen_vorher": "188a2ca541fead00eb864b3b9ed291238df52fe9",
+ "commit_main": "b029981c95b189bf66df7a9d3e0e5e5449d68f9b",
+ "commit_energie": "1639e86634ca0a1e416c5c9b43346473ca0be346",
+ "commit_neu": "ca88e4c1aedf5eea4f81d4afc4f7b7fc2fc47ebc",
+ "commit_lernen_vorher": "a0e72ed0540ddb3a120a6954f4093f02da1bdff3",
  "code_hash": "c565282c13f4ddb7",
  "sha_suchmaschine": "f6a9531812b0754b",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "57f8f87448f848b2",
- "sha_manifest_main": "c9cc1ef19d134f83",
- "sha_manifest_neu": "7f5be0d2a56627fb",
+ "sha_register_vorher": "1df79e66808c40fa",
+ "sha_manifest_main": "bdb2831439f26a38",
+ "sha_manifest_neu": "8ced8c913631bb9e",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "eca45d7634a71ba1"
+  "btc_sha": "f6d6011063b69cbf"
  },
- "ergebnis_hash": "fa13bd151781fbed",
+ "ergebnis_hash": "6cf492cc2dd2496e",
  "kandidaten": 357046,
- "kandidaten_neu": 90,
+ "kandidaten_neu": 0,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,10 +36,8 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261018T051407Z.json",
+ "laufeintrag": "suche/laeufe/L20261019T052121Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [
-  "neu_census_einzelhandelsumsaetze_termine_termine_stand"
- ],
+ "reihen_neu_gegen_vorlauf": [],
  "gesamt": "vollständig"
 }

@@ -1469,9 +1469,15 @@
    "datei": "suche/S0043.json",
    "kandidaten": 357046,
    "in_db": false
+  },
+  {
+   "nr": 44,
+   "datei": "suche/S0044.json",
+   "kandidaten": 357046,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-18T07:16Z",
+ "letzter_suchlauf_utc": "2026-10-19T06:49Z",
  "pruefung_lernrunde_utc": "2026-10-18T09:50:00Z",
  "letzter_code_hash": "c565282c13f4ddb7",
  "methode": "M4",
@@ -1667,11 +1673,19 @@
    "ergebnis_hash": "fa13bd151781fbed",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261019T052121Z.json",
+   "lauf_id": "L20261019T052121Z",
+   "s_dokument": "suche/S0044.json",
+   "ergebnis_hash": "6cf492cc2dd2496e",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-18T07:16Z",
- "letztes_vollarchiv": "suche/S0043_alle.csv.gz",
- "letzter_ergebnis_hash": "fa13bd151781fbed",
+ "letzter_lauf_utc": "2026-10-19T06:49Z",
+ "letztes_vollarchiv": "suche/S0044_alle.csv.gz",
+ "letzter_ergebnis_hash": "6cf492cc2dd2496e",
  "konflikte": [
   {
    "wo": "index",
@@ -3907,13 +3921,13 @@
  "exposition": {
   "datei": "exposition.json",
   "grundreihen_n": 290,
-  "neu_in_diesem_lauf": 1
+  "neu_in_diesem_lauf": 0
  },
- "letztes_vollarchiv_ergebnis_hash": "fa13bd151781fbed",
+ "letztes_vollarchiv_ergebnis_hash": "6cf492cc2dd2496e",
  "pruefungen_bestanden": {
   "pruef_hash": "0c58b24e529ed2da",
   "lauf_id": "L20261012T161632Z"
  },
- "letzter_eingabe_hash": "3db41f0e763929ce",
- "letzter_gueltiger_lauf": "L20261018T051407Z"
+ "letzter_eingabe_hash": "14411f3bfc737ae8",
+ "letzter_gueltiger_lauf": "L20261019T052121Z"
 }
