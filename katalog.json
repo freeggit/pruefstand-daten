@@ -3685,11 +3685,12 @@
   "url": "https://www.federalreserve.gov/data/sloos.htm",
   "domain": "federalreserve.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Meldungen ueber strengere Kreditvergabe der Banken belasten Finanzwerte (XLF) und Zyklische kurzfristig gegenueber dem Weltindex.",
-  "grund": "Quartalstermin, wenige Ereignisse pro Jahr (Risiko kleiner Stichprobe), darum tief. Termine ab 1990 oeffentlich.",
-  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+  "grund": "Test 2026-10-19T12:21Z: Einzelseiten sloos-JJJJMM.htm tragen vor ca. 2019 kein Veroeffentlichungsdatum, Archiv ohne datierte Terminliste; Historie nicht belegbar (keine Tage erfinden). Der vorherige Grund (Termine ab 1990) war falsch.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z",
+  "geprueft_utc": "2026-10-19T12:21Z"
  },
  {
   "id": "fred_autoverkaeufe_us_monatlich",
@@ -3775,12 +3776,12 @@
   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
   "domain": "www.federalreserve.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 19.10.2026); kein Doppel",
+  "status": "abgelehnt",
+  "grund": "Test 2026-10-19T12:21Z: reine Verschiebung um einen Tag von fomc_sitzung (kalender_ereignisse); Suchmaschine kann Lag selbst bilden. Redundanz, Zusatz 3.",
   "mechanismus": "Kalenderreihe: 1 am Handelstag vor Zinsentscheid. Mechanismus: Unsicherheitsabbau vor FOMC-Sitzungen (Lucca/Moench 2015, «pre-FOMC drift»); Aktien laufen vor der Ankündigung überdurchschnittlich gegen den Weltindex. Literatur: Effekt nach Veröffentlichung schwächer.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-19T10:00:00Z",
-  "geprueft_utc": null,
+  "geprueft_utc": "2026-10-19T12:21Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
