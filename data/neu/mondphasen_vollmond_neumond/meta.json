@@ -1,0 +1,20 @@
+{
+ "neumond": {
+  "einheit": "0/1 (1 = Tag des Neumond, UTC)",
+  "beschreibung": "Neumond-Tag nach Meeus, Astronomical Algorithms Kap. 49 (Genauigkeit wenige Minuten, UTC-Tag)",
+  "quelle_url": "https://aa.usno.navy.mil/data/MoonPhases",
+  "verdichtung": "keine (berechneter Ereignistag)",
+  "verfuegbar_nach_tagen": 0,
+  "revidiert": false,
+  "publikation": "taeglich: astronomisch im Voraus berechenbar, Termine seit Jahrhunderten oeffentlich (USNO/Meeus)"
+ },
+ "vollmond": {
+  "einheit": "0/1 (1 = Tag des Vollmond, UTC)",
+  "beschreibung": "Vollmond-Tag nach Meeus, Astronomical Algorithms Kap. 49 (Genauigkeit wenige Minuten, UTC-Tag)",
+  "quelle_url": "https://aa.usno.navy.mil/data/MoonPhases",
+  "verdichtung": "keine (berechneter Ereignistag)",
+  "verfuegbar_nach_tagen": 0,
+  "revidiert": false,
+  "publikation": "taeglich: astronomisch im Voraus berechenbar, Termine seit Jahrhunderten oeffentlich (USNO/Meeus)"
+ }
+}

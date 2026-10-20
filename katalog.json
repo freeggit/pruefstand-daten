@@ -3524,11 +3524,16 @@
   "url": "https://aa.usno.navy.mil/data/MoonPhases",
   "domain": "usno.navy.mil",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "tief",
   "mechanismus": "Yuan, Zheng, Zhu (2006) finden um Neumond hoehere Renditen als um Vollmond (Stimmung); Wirkung auf breite Aktien gegenueber dem Weltindex. Dient auch als Kontrolle ohne Kausalpfad.",
-  "grund": "Fachliteratur (Yuan et al. 2006). Reihe deterministisch berechenbar, Historie unbegrenzt. Stark von Veroeffentlichung betroffen (L3), darum tief.",
-  "aufgenommen_utc": "2026-10-14T09:00:00Z"
+  "grund": "Aufgenommen 2026-10-20T12:21:03Z. Deterministisch nach Meeus, Astronomical Algorithms Kap. 49, kein externer Abruf; Stichprobe Neumond 2000-01-06 und 2024-04-08, Vollmond 2024-04-23 korrekt. Ab 1950-01-01, 28052 Zeilen je Reihe, 950 Ereignistage je Reihe, letzter Neumond 2026-10-10, letzter Vollmond 2026-09-26; Tag = UTC-Tag des Moments (Genauigkeit wenige Minuten). verfuegbar_nach_tagen 0, publikation taeglich (im Voraus berechenbar). Kontrollreihe-artig (L3: publizierte Anomalie, vermutlich abgeschwaecht); 2 Reihen sind Ereignis vs. Gegenereignis, keine Redundanz.",
+  "aufgenommen_utc": "2026-10-14T09:00:00Z",
+  "reihen": [
+   "neumond",
+   "vollmond"
+  ],
+  "geprueft_utc": "2026-10-20T12:21:03Z"
  },
  {
   "id": "eia_ethanol_produktion_woechentlich",
