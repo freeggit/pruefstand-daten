@@ -3856,12 +3856,14 @@
   "url": "https://www.cboe.com/tradable_products/vix/vix_futures/specifications/",
   "domain": "www.cboe.com",
   "bereich": "Kalender-Ereignisse",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 20.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login",
+  "status": "aktiv",
+  "grund": "K1-K7 erfuellt: deterministische Kalenderreihe 0/1, 2011-01-01 bis heute, 5772 Zeilen, 189 Verfallstage (Mittwoch 30 Tage vor dem dritten Freitag des Folgemonats). Beleg: Cboe/CFE-Regelwerk SR-CFE-2011-031 (aeltere Feiertagsregel bis Verfall 2021) und CFTC-Einreichung vom 21.12.2021 (neuere Regel ab 2022; Umstellungstag nicht einzeln belegt). Start 2011, da fruehere Fassungen nicht belegt. Stichproben: 15.9.2021, 21.3.2018, 19.3.2019 stimmen. Feiertage aus us_boersenfeiertage. Keine Revision. Zeilen nie in der Zukunft.",
   "mechanismus": "Rund um den VIX-Verfall verschieben Absicherungs- und Volatilitätsverkäufer ihre Positionen; kurzfristiger Druck auf Aktien-Sektoren mit hohem Beta (XLK, XLY) gegenüber dem Weltindex.",
-  "reihen": [],
+  "reihen": [
+   "verfall"
+  ],
   "aufgenommen_utc": "2026-10-20T10:00:00Z",
-  "geprueft_utc": null,
+  "geprueft_utc": "2026-10-20T16:26Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
