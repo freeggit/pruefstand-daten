@@ -1,5 +1,5 @@
 {
- "erzeugt_utc": "2026-10-20T02:36:24Z",
+ "erzeugt_utc": "2026-10-21T02:36:18Z",
  "reihen": {
   "energie:preis_ch": {
    "dateien": [
@@ -16,8 +16,8 @@
     "data/hr/energie/preis_ch_2025.csv.gz",
     "data/hr/energie/preis_ch_2026.csv.gz"
    ],
-   "zeilen": 103462,
-   "letzte": "2026-10-20T21:00:00Z",
+   "zeilen": 103486,
+   "letzte": "2026-10-21T21:00:00Z",
    "einheit": "EUR/MWh",
    "aufloesung": "1h",
    "quelle": "energy-charts.info",
@@ -38,8 +38,8 @@
     "data/hr/energie/erzeugung_ch_2025.csv.gz",
     "data/hr/energie/erzeugung_ch_2026.csv.gz"
    ],
-   "zeilen": 103440,
-   "letzte": "2026-10-19T23:00:00Z",
+   "zeilen": 103461,
+   "letzte": "2026-10-20T20:00:00Z",
    "einheit": "MW",
    "quelle": "energy-charts.info",
    "erste": "2015-01-01T00:00:00Z"
@@ -59,8 +59,8 @@
     "data/hr/energie/preis_de_2025.csv.gz",
     "data/hr/energie/preis_de_2026.csv.gz"
    ],
-   "zeilen": 131182,
-   "letzte": "2026-10-20T21:45:00Z",
+   "zeilen": 131278,
+   "letzte": "2026-10-21T21:45:00Z",
    "einheit": "EUR/MWh",
    "aufloesung": "1h",
    "quelle": "energy-charts.info",
@@ -81,8 +81,8 @@
     "data/hr/energie/erzeugung_de_2025.csv.gz",
     "data/hr/energie/erzeugung_de_2026.csv.gz"
    ],
-   "zeilen": 413764,
-   "letzte": "2026-10-20T00:45:00Z",
+   "zeilen": 413860,
+   "letzte": "2026-10-21T00:45:00Z",
    "einheit": "MW",
    "quelle": "energy-charts.info",
    "erste": "2015-01-01T00:00:00Z"
