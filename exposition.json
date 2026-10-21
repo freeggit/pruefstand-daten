@@ -649,6 +649,18 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_mondphasen_vollmond_neumond_neumond": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261021T051835Z",
+   "erst_zeit": "2026-10-21T07:12Z",
+   "beleg": "suche/laeufe/L20261021T051835Z.json"
+  },
+  "neu_mondphasen_vollmond_neumond_vollmond": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261021T051835Z",
+   "erst_zeit": "2026-10-21T07:12Z",
+   "beleg": "suche/laeufe/L20261021T051835Z.json"
+  },
   "neu_msha_bergbauunfaelle_fatal": {
    "erst_dokument": "S0014",
    "erst_lauf": null,
@@ -858,6 +870,12 @@
    "erst_lauf": null,
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_vix_verfall_termine_verfall": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261021T051835Z",
+   "erst_zeit": "2026-10-21T07:12Z",
+   "beleg": "suche/laeufe/L20261021T051835Z.json"
   },
   "neu_wikipedia_weitere_duerre": {
    "erst_dokument": "S0009",
@@ -1748,8 +1766,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261020T051738Z",
-  "zeit_utc": "2026-10-20T07:43Z",
-  "grundreihen_n": 290
+  "lauf_id": "L20261021T051835Z",
+  "zeit_utc": "2026-10-21T07:12Z",
+  "grundreihen_n": 293
  }
 }

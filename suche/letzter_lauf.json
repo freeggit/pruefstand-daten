@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-20T07:43Z",
- "lauf_id": "L20261020T051738Z",
+ "zeit_utc": "2026-10-21T07:12Z",
+ "lauf_id": "L20261021T051835Z",
  "verfassung": "V3.17",
- "commit_main": "6b0ab02a9147845435877db3da368e44b4fb6b7d",
- "commit_energie": "fbfa412cf2f2c35032bb9586c120a07516ed0db0",
- "commit_neu": "b620f67eb67cdf805c2b1f977d079764a736df85",
- "commit_lernen_vorher": "aca00469d2136769d9791630295b431e01c9109a",
+ "commit_main": "e75400dec8f0b7cd364ebef9b605b10b5a321915",
+ "commit_energie": "510d85ffbf97bdf3bd1289a172a97b6825f652ae",
+ "commit_neu": "544b8231085096758f25679467aa0d41dfc2f018",
+ "commit_lernen_vorher": "55e4b3530d7e8e4b47acef90424818bf2cae01d3",
  "code_hash": "c565282c13f4ddb7",
  "sha_suchmaschine": "f6a9531812b0754b",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
  "sha_register_vorher": "1df79e66808c40fa",
- "sha_manifest_main": "68523f10822c2c8d",
- "sha_manifest_neu": "2d14ed01f3b69e97",
+ "sha_manifest_main": "ccb599863a1a7795",
+ "sha_manifest_neu": "ad8c01046d01545d",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "9cef4d828037f6a4"
+  "btc_sha": "91cdfa0fce60786c"
  },
- "ergebnis_hash": "15d2e41a04f30b71",
- "kandidaten": 357046,
- "kandidaten_neu": 0,
+ "ergebnis_hash": "ec80df93824410ec",
+ "kandidaten": 357382,
+ "kandidaten_neu": 336,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,8 +36,12 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261020T051738Z.json",
+ "laufeintrag": "suche/laeufe/L20261021T051835Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [],
+ "reihen_neu_gegen_vorlauf": [
+  "neu_mondphasen_vollmond_neumond_neumond_stand",
+  "neu_mondphasen_vollmond_neumond_vollmond_stand",
+  "neu_vix_verfall_termine_verfall_stand"
+ ],
  "gesamt": "vollständig"
 }
