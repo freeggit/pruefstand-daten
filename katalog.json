@@ -3964,12 +3964,13 @@
   "domain": "www.riksbank.se",
   "bereich": "Geldmarkt",
   "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Test 2026-10-22T12:54Z: angegebene URL liefert HTTP 404; maschinenlesbare Terminliste noch zu finden.",
   "mechanismus": "Zinsentscheide einer kleinen offenen Volkswirtschaft wirken kurzfristig auf Währung und Anleihen; Länderziel schwach, aber unabhängig von FOMC und EZB.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-22T10:00:00Z",
   "prioritaet": "tief",
-  "herkunft": "Lernrunde"
+  "herkunft": "Lernrunde",
+  "geprueft_utc": "2026-10-22T12:54Z"
  },
  {
   "id": "bls_jolts_veroeffentlichung_termine",
@@ -3977,13 +3978,14 @@
   "url": "https://www.bls.gov/schedule/news_release/jolts.htm",
   "domain": "www.bls.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "status": "fehler",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Test 2026-10-22T12:54Z: bls.gov HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut.",
   "mechanismus": "Der Bericht über offene Stellen verschiebt am Veröffentlichungstag die Zinserwartung der Fed und damit Anleihen (TLT, SHY) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-22T10:00:00Z",
   "prioritaet": "normal",
-  "herkunft": "Lernrunde"
+  "herkunft": "Lernrunde",
+  "geprueft_utc": "2026-10-22T12:54Z"
  },
  {
   "id": "ifo_geschaeftsklima_termine",
@@ -3992,12 +3994,13 @@
   "domain": "www.ifo.de",
   "bereich": "Kalender",
   "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Test 2026-10-22T12:54Z: angegebene URL liefert HTTP 404; maschinenlesbare Terminliste noch zu finden.",
   "mechanismus": "Das ifo-Geschäftsklima wirkt am Veröffentlichungstag auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex; Termine öffentlich und regelmässig.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-22T10:00:00Z",
   "prioritaet": "normal",
-  "herkunft": "Lernrunde"
+  "herkunft": "Lernrunde",
+  "geprueft_utc": "2026-10-22T12:54Z"
  },
  {
   "id": "ecb_bank_lending_survey_termine",
