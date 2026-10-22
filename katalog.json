@@ -3956,5 +3956,61 @@
   "geprueft_utc": "2026-10-22T00:15Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
+ },
+ {
+  "id": "riksbank_leitzins_entscheidtage",
+  "name": "Riksbank: Zinsentscheidtage",
+  "url": "https://www.riksbank.se/en-gb/monetary-policy/monetary-policy-decisions/",
+  "domain": "www.riksbank.se",
+  "bereich": "Geldmarkt",
+  "status": "kandidat",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "mechanismus": "Zinsentscheide einer kleinen offenen Volkswirtschaft wirken kurzfristig auf Währung und Anleihen; Länderziel schwach, aber unabhängig von FOMC und EZB.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-22T10:00:00Z",
+  "prioritaet": "tief",
+  "herkunft": "Lernrunde"
+ },
+ {
+  "id": "bls_jolts_veroeffentlichung_termine",
+  "name": "BLS: JOLTS (offene Stellen) Veröffentlichungstage",
+  "url": "https://www.bls.gov/schedule/news_release/jolts.htm",
+  "domain": "www.bls.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "mechanismus": "Der Bericht über offene Stellen verschiebt am Veröffentlichungstag die Zinserwartung der Fed und damit Anleihen (TLT, SHY) gegenüber dem Weltindex.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-22T10:00:00Z",
+  "prioritaet": "normal",
+  "herkunft": "Lernrunde"
+ },
+ {
+  "id": "ifo_geschaeftsklima_termine",
+  "name": "ifo: Veröffentlichungstage Geschäftsklima",
+  "url": "https://www.ifo.de/en/survey/ifo-business-climate-germany",
+  "domain": "www.ifo.de",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "mechanismus": "Das ifo-Geschäftsklima wirkt am Veröffentlichungstag auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex; Termine öffentlich und regelmässig.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-22T10:00:00Z",
+  "prioritaet": "normal",
+  "herkunft": "Lernrunde"
+ },
+ {
+  "id": "ecb_bank_lending_survey_termine",
+  "name": "EZB: Termine der Bank Lending Survey",
+  "url": "https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/index.en.html",
+  "domain": "www.ecb.europa.eu",
+  "bereich": "Geldmarkt",
+  "status": "kandidat",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "mechanismus": "Die Umfrage zu Kreditstandards der Banken im Euroraum zeigt Kreditverknappung früh und wirkt kurzfristig auf Finanzwerte (EWG, EWL) gegenüber dem Weltindex.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-22T10:00:00Z",
+  "prioritaet": "tief",
+  "herkunft": "Lernrunde"
  }
 ]
