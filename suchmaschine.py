@@ -110,22 +110,56 @@ def bis(x, tag=STICHTAG):
 # ================================================================== Familie S (alles abgeschnitten am STICHTAG)
 man = json.load(open(lade("manifest.json")))
 kurse, VERDACHT, ROH_KURSE = {}, {}, {}
+# Ergänzung zu E29, Erweiterung auf Kurse und FRED (23.10.2026, Reto: «freigeben»): Ein gescheiterter
+# Abruf sperrt ein Papier nicht, wenn die bisherige Datei vorliegt und lesbar ist. fetch.py lässt bei einem Abruffehler die
+# alte Datei stehen (Eintrag mit «fehler», ohne «granularitaet»); die Werte bis zum Stichtag ändern sich dadurch nicht. Die
+# stehende Datei wird dann mit derselben Regel wie in fetch.py geprüft (Median-Abstand der letzten 300 Zeilen 1 Tag; nur
+# Datumswerte). Ein Inhaltsfehler sperrt weiter. Gesperrte Papiere werden mit Grund ausgewiesen (bisher still übergangen).
+KURSE_ABRUFFEHLER, KURSE_AUS = [], []
+
+def median_abstand_wie_fetch(daten):
+    """Wie fetch.py taeglich_pruefen: Abstände der letzten 300 Datumszeilen in Dateireihenfolge, oberer Median in Tagen."""
+    ds = [x.date() for x in pd.to_datetime(daten, errors="coerce") if not pd.isna(x)][-300:]
+    abst = sorted((b - a).days for a, b in zip(ds, ds[1:]))
+    return abst[len(abst) // 2] if abst else None
+
 for k, v in man["reihen"].items():
-    if k.startswith("kurse:") and "fehler" not in v and v.get("granularitaet") == "1d":
-        t = k.split(":", 1)[1]
-        d = bis(pd.read_csv(lade(f"kurse/{t}_d.csv"), parse_dates=["Date"]).drop_duplicates("Date").set_index("Date").sort_index())
-        if len(d) < 60:
+    if not k.startswith("kurse:"):
+        continue
+    abruf = "fehler" in v and "granularitaet" not in v
+    if not abruf and ("fehler" in v or v.get("granularitaet") != "1d"):
+        KURSE_AUS.append((k, f"Feld fehler im Manifest: {str(v.get('fehler'))[:80]}" if "fehler" in v else "nicht täglich"))
+        continue
+    t = k.split(":", 1)[1]
+    try:
+        roh = pd.read_csv(lade(f"kurse/{t}_d.csv"), parse_dates=["Date"])
+    except Exception as e:
+        if not abruf:
+            raise                                           # unerwarteter Lesefehler: Lauf bricht ab wie bisher
+        log(f"{k}: {e}"); KURSE_AUS.append((k, "Feld fehler im Manifest, keine lesbare Datei"))
+        continue
+    d = bis(roh.drop_duplicates("Date").set_index("Date").sort_index())
+    if len(d) < 60:
+        continue
+    if abruf:
+        if median_abstand_wie_fetch(roh.Date) != 1:
+            KURSE_AUS.append((k, "Feld fehler im Manifest, stehende Datei nicht täglich"))
             continue
-        vor = d.Close.shift(1)
-        verdacht = ((d.Open / vor - 1).abs() > 0.05) & ((d.Close / vor - 1).abs() < 0.02)
-        VERDACHT[t] = set(d.index[verdacht])                   # nur Bericht, keine Löschung
-        if "AdjClose" in d and d.AdjClose.notna().mean() > 0.99:
-            f = (d.AdjClose / d.Close).astype(float)
-            ROH_KURSE[t] = (d[["Open", "Close"]].astype(float), (f / f.shift(1)).round(7))   # V3.17 E9: nur für die Eingabe-Prüfsumme
-            kurse[t] = pd.DataFrame({"Open": d.Open * f, "Close": d.AdjClose}).astype(float)
-        else:
-            kurse[t] = d[["Open", "Close"]].astype(float)
-            ROH_KURSE[t] = (kurse[t], None)
+        KURSE_ABRUFFEHLER.append({"reihe": k, "fehler": str(v.get("fehler"))[:120], "letzter_wert": None})
+    vor = d.Close.shift(1)
+    verdacht = ((d.Open / vor - 1).abs() > 0.05) & ((d.Close / vor - 1).abs() < 0.02)
+    VERDACHT[t] = set(d.index[verdacht])                   # nur Bericht, keine Löschung
+    if "AdjClose" in d and d.AdjClose.notna().mean() > 0.99:
+        f = (d.AdjClose / d.Close).astype(float)
+        ROH_KURSE[t] = (d[["Open", "Close"]].astype(float), (f / f.shift(1)).round(7))   # V3.17 E9: nur für die Eingabe-Prüfsumme
+        kurse[t] = pd.DataFrame({"Open": d.Open * f, "Close": d.AdjClose}).astype(float)
+    else:
+        kurse[t] = d[["Open", "Close"]].astype(float)
+        ROH_KURSE[t] = (kurse[t], None)
+_fehlt = [t for t in ("acwi", "spy", "efa") if t not in kurse]
+if _fehlt:   # Ergänzung zu E29 (Erweiterung): ohne Vergleichsreihen kein Lauf, statt den Kalender still zu kürzen
+    log(f"Abbruch: Vergleichsreihe fehlt ({', '.join(_fehlt)}); Gründe: {KURSE_AUS}")
+    sys.exit(3)
 acwi = kurse.pop("acwi")
 BENCH_NUR = {"efa"}
 ERSATZ = {"spy": 0.55, "efa": 0.45}
@@ -254,7 +288,7 @@ def regeln_fuer(basis_key, lag):
 # aus w Beobachtungen gilt nur, wenn es höchstens 10% plus 3 Solltage länger ist als w. Festgelegt vor jeder Rechnung mit dieser Regel; sie wird nie nach Ergebnissen angepasst.
 LUECKE_TOL = {1: 1, 5: 2, 20: 3}
 LUECKEN, AUSGESCHLOSSEN, INDIZES_SOLL_IST = {}, [], {}
-ABRUFFEHLER = []   # Reihen, die trotz Abruffehler im Manifest aus ihrer vorhandenen Datei gelesen wurden (Ergänzung zu E29)
+ABRUFFEHLER = list(KURSE_ABRUFFEHLER)   # Reihen, die trotz Abruffehler im Manifest aus ihrer vorhandenen Datei gelesen wurden (Ergänzung zu E29)
 # Datenmangel (V3.11, E27/E29; Reto am 4.10.2026: «gerne variante 2 gem empfehlung» – Ursache zuerst geklärt: die Leerwerte
 # der EIA-Spotpreise stehen so in der Quelle, der Abruf ist richtig). Eine Grundreihe hat einen Datenmangel, wenn ihr in der
 # Discovery mehr als 7% der Solltage fehlen oder eine Lücke von 10 oder mehr Solltagen besteht. Üblich sind rund 4%
@@ -279,6 +313,9 @@ def datenmangel_pruefen():
 
 def aus(schluessel, grund):
     AUSGESCHLOSSEN.append({"reihe": schluessel, "grund": grund})
+
+for _k, _g in KURSE_AUS:   # Ergänzung zu E29 (Erweiterung): gesperrte Kurse mit Grund ausweisen
+    aus(_k, _g)
 
 def kalenderart(idx):
     return "K" if len(idx) and float((idx.weekday >= 5).mean()) > 0.05 else "B"
@@ -353,13 +390,22 @@ def fred(serie):
     return bis(f.dropna().set_index("d").v.astype(float))
 
 for s, v in man["reihen"].items():
-    if s.startswith("fred:") and ("fehler" in v or s in AUSSCHLUSS):
-        aus(s, "Feld fehler im Manifest" if "fehler" in v else "gesperrt (korrekturen_neu.json)")
-    if s.startswith("fred:") and "fehler" not in v and s not in AUSSCHLUSS:
-        x = fred(s.split(":", 1)[1])
+    if s.startswith("fred:") and s in AUSSCHLUSS:
+        aus(s, "gesperrt (korrekturen_neu.json)")
+    if s.startswith("fred:") and s not in AUSSCHLUSS:
+        # Ergänzung zu E29, Erweiterung auf FRED (23.10.2026, Reto: «freigeben»): Abruffehler mit lesbarer Datei sperrt nicht.
+        try:
+            x = fred(s.split(":", 1)[1])
+        except Exception as e:
+            if "fehler" not in v:
+                raise                                       # unerwarteter Lesefehler: Lauf bricht ab wie bisher
+            log(f"{s}: {e}"); aus(s, "Feld fehler im Manifest, keine lesbare Datei")
+            continue
         if len(x) < 500 or (x.index.to_series().diff().dt.days.median() > 3):
             aus(s, "weniger als 500 Werte bis zum Stichtag" if len(x) < 500 else "nicht täglich (Abstand über 3 Tage)")
             continue
+        if "fehler" in v:
+            ABRUFFEHLER.append({"reihe": s, "fehler": str(v.get("fehler"))[:120], "letzter_wert": None})
         r = regeln_fuer(s, 1 + VERFUEGBAR[s] if s in VERFUEGBAR else LAG_FRED)
         basen[s] = (x, r)
         varianten(s.split(":", 1)[1], x, r, quelle=s, grund=(s,))
