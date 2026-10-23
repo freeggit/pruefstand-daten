@@ -1522,11 +1522,17 @@
    "datei": "suche/S0048.json",
    "kandidaten": 357382,
    "in_db": false
+  },
+  {
+   "nr": 49,
+   "datei": "suche/S0049.json",
+   "kandidaten": 357378,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-23T08:08Z",
+ "letzter_suchlauf_utc": "2026-10-23T20:31Z",
  "pruefung_lernrunde_utc": "2026-10-23T10:00:00Z",
- "letzter_code_hash": "c565282c13f4ddb7",
+ "letzter_code_hash": "d0ab7bcf066bc2fc",
  "methode": "M4",
  "vorreg": [
   {
@@ -1760,11 +1766,19 @@
    "ergebnis_hash": "504650d6c7559a8a",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261023T174243Z.json",
+   "lauf_id": "L20261023T174243Z",
+   "s_dokument": "suche/S0049.json",
+   "ergebnis_hash": "600ddc5d97c50ada",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-23T08:08Z",
- "letztes_vollarchiv": "suche/S0048_alle.csv.gz",
- "letzter_ergebnis_hash": "504650d6c7559a8a",
+ "letzter_lauf_utc": "2026-10-23T20:31Z",
+ "letztes_vollarchiv": "suche/S0049_alle.csv.gz",
+ "letzter_ergebnis_hash": "600ddc5d97c50ada",
  "konflikte": [
   {
    "wo": "index",
@@ -4002,11 +4016,11 @@
   "grundreihen_n": 293,
   "neu_in_diesem_lauf": 0
  },
- "letztes_vollarchiv_ergebnis_hash": "504650d6c7559a8a",
+ "letztes_vollarchiv_ergebnis_hash": "600ddc5d97c50ada",
  "pruefungen_bestanden": {
-  "pruef_hash": "0c58b24e529ed2da",
-  "lauf_id": "L20261012T161632Z"
+  "pruef_hash": "18980eb2125600e5",
+  "lauf_id": "L20261023T174243Z"
  },
- "letzter_eingabe_hash": "ae986a2c5ea8adf3",
- "letzter_gueltiger_lauf": "L20261023T051903Z"
+ "letzter_eingabe_hash": "38ec43c518c15645",
+ "letzter_gueltiger_lauf": "L20261023T174243Z"
 }
