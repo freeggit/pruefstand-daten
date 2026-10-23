@@ -1,33 +1,33 @@
 {
- "zeit_utc": "2026-10-22T07:04Z",
- "lauf_id": "L20261022T051950Z",
+ "zeit_utc": "2026-10-23T08:08Z",
+ "lauf_id": "L20261023T051903Z",
  "verfassung": "V3.17",
- "commit_main": "e184e33a06f4fb3bbb880f14a81bab38535dbd7a",
- "commit_energie": "fd049c23ecf52c6c8f14c9a4141fc4095ee95b4e",
- "commit_neu": "71572f6361daae4d67a1f3c129ddd4b3bfa53ad9",
- "commit_lernen_vorher": "a383ab9b28186acb916ff2dae1f04ab80a3fcd4e",
+ "commit_main": "c64499ccbceafd7a8536d8a879d16d0138d121be",
+ "commit_energie": "d747cb4bc574df7631c129565556309843ef50b8",
+ "commit_neu": "1c08b51d2e1faa82e1ca8b332a9eec3f3df29f1f",
+ "commit_lernen_vorher": "7de90b6eb42b913fc281f2f687884d15600c69a3",
  "code_hash": "c565282c13f4ddb7",
  "sha_suchmaschine": "f6a9531812b0754b",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
  "sha_register_vorher": "80af7b72a5893400",
- "sha_manifest_main": "6a68b0650f6870a9",
- "sha_manifest_neu": "c664ff3079b95aa0",
+ "sha_manifest_main": "0925385334882b87",
+ "sha_manifest_neu": "51f3c6b306eb9128",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
-  "pandas": "3.0.6",
+  "pandas": "3.1.0",
   "python": "3.12.15",
-  "btc_sha": "aa4d0e0e4a6f1703"
+  "btc_sha": "b4a2913ada7e51e5"
  },
- "ergebnis_hash": "3ed05e157913d0ca",
- "kandidaten": 318283,
+ "ergebnis_hash": "504650d6c7559a8a",
+ "kandidaten": 357382,
  "kandidaten_neu": 0,
  "huerde_t": 4.35,
  "fund": false,
- "kandidaten_stufe_d": 0,
- "p_lauf": 1.0,
- "bausteine": 0,
+ "kandidaten_stufe_d": 1,
+ "p_lauf": 0.0348,
+ "bausteine": 1,
  "stufen": {
   "suche": "vollständig",
   "analyse": "vollständig",
@@ -36,8 +36,9 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261022T051950Z.json",
- "reihen_entfallen_gegen_vorlauf": [
+ "laufeintrag": "suche/laeufe/L20261023T051903Z.json",
+ "reihen_entfallen_gegen_vorlauf": [],
+ "reihen_neu_gegen_vorlauf": [
   "BAA10Y_d1",
   "BAA10Y_d20",
   "BAA10Y_d5",
@@ -149,6 +150,5 @@
   "paar_zins_us_jp_stand",
   "paar_zins_us_jp_z252"
  ],
- "reihen_neu_gegen_vorlauf": [],
  "gesamt": "vollständig"
 }
