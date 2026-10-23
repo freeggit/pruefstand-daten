@@ -4015,5 +4015,19 @@
   "aufgenommen_utc": "2026-10-22T10:00:00Z",
   "prioritaet": "tief",
   "herkunft": "Lernrunde"
+ },
+ {
+  "id": "opec_basket_preis_tageswert_replikation",
+  "name": "Ersatzreihe Rohölpreis (unabhängig von FRED): Tageswerte Ölsorte aus öffentlicher Börsen- oder Behördenquelle",
+  "url": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls",
+  "domain": "www.eia.gov",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "grund": "Replikation von DCOILWTICO_d1 -> IBB, 5 Tage (S0048, t 4.76, über Hürde A 4.35, Stufe D). Regel L1: nur unabhängige Quelle für denselben Mechanismus, keine Variante auf denselben Daten.",
+  "mechanismus": "Fallende Ölpreise senken Energie- und Transportkosten und stützen kurzfristig zinsreagible, wachstumsabhängige Werte wie Biotech gegenüber dem Weltindex; eine zweite Preisquelle prüft, ob der Effekt am Preis oder nur an einer Datenreihe hängt.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-23T10:00:00Z",
+  "prioritaet": "hoch",
+  "herkunft": "Lernrunde L1"
  }
 ]
