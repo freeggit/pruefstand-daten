@@ -4022,12 +4022,13 @@
   "url": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls",
   "domain": "www.eia.gov",
   "bereich": "Rohstoffe",
-  "status": "kandidat",
-  "grund": "Replikation von DCOILWTICO_d1 -> IBB, 5 Tage (S0048, t 4.76, über Hürde A 4.35, Stufe D). Regel L1: nur unabhängige Quelle für denselben Mechanismus, keine Variante auf denselben Daten.",
+  "status": "abgelehnt",
+  "grund": "Replikation von DCOILWTICO_d1 -> IBB, 5 Tage (S0048, t 4.76, über Hürde A 4.35, Stufe D). Regel L1: nur unabhängige Quelle für denselben Mechanismus, keine Variante auf denselben Daten. | Geprüft 2026-10-23: EIA RBRTEd (Brent) erreichbar (HTTP 200), aber identische Daten liegen bereits als quellen/fred_brent.py (FRED DCOILBRENTEU = EIA) vor; keine unabhängige Quelle, K6 verletzt. Unabhängige Börsenquelle (ICE/CME/Stooq/Yahoo) von dieser Umgebung nicht frei abrufbar (Stooq keine Verbindung, Yahoo 422, ICE Umleitung/Bedingungen). Nächster Versuch nur mit neuer unabhängiger Quelle.",
   "mechanismus": "Fallende Ölpreise senken Energie- und Transportkosten und stützen kurzfristig zinsreagible, wachstumsabhängige Werte wie Biotech gegenüber dem Weltindex; eine zweite Preisquelle prüft, ob der Effekt am Preis oder nur an einer Datenreihe hängt.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-23T10:00:00Z",
   "prioritaet": "hoch",
-  "herkunft": "Lernrunde L1"
+  "herkunft": "Lernrunde L1",
+  "geprueft_utc": "2026-10-23T12:16Z"
  }
 ]
