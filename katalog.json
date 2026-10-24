@@ -4005,13 +4005,13 @@
   "domain": "www.ifo.de",
   "bereich": "Kalender",
   "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Test 2026-10-22T12:54Z: angegebene URL liefert HTTP 404; maschinenlesbare Terminliste noch zu finden.",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Test 2026-10-22T12:54Z: angegebene URL liefert HTTP 404; maschinenlesbare Terminliste noch zu finden. | Test 2026-10-24T16:31Z: ifo-Seiten weiterhin HTTP 404; kein maschinenlesbarer Terminkalender gefunden.",
   "mechanismus": "Das ifo-Geschäftsklima wirkt am Veröffentlichungstag auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex; Termine öffentlich und regelmässig.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-22T10:00:00Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde",
-  "geprueft_utc": "2026-10-22T12:54Z"
+  "geprueft_utc": "2026-10-24T16:31Z"
  },
  {
   "id": "ecb_bank_lending_survey_termine",
@@ -4048,12 +4048,13 @@
   "url": "https://www.nasdaq.com/market-activity/stocks/splits",
   "domain": "www.nasdaq.com",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen).",
+  "status": "fehler",
+  "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut.",
   "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-24T10:00:00Z",
   "prioritaet": "normal",
-  "herkunft": "Lernrunde"
+  "herkunft": "Lernrunde",
+  "geprueft_utc": "2026-10-24T16:31Z"
  }
 ]
