@@ -15,12 +15,14 @@ jobs:
   vorreg:
     runs-on: ubuntu-24.04
     timeout-minutes: 60
+    env:
+      NPY_DISABLE_CPU_FEATURES: "X86_V4 AVX512_ICL AVX512_SPR"   # V3.17 E9: gleicher Rechenweg auf allen Rechnern, ohne AVX-512 (23.10.2026)
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
-        with: { python-version: "3.12" }
+        with: { python-version: "3.12.15" }   # V3.17 E9: Umgebung festgeschrieben (23.10.2026)
       - name: Pakete
-        run: pip install -q numpy pandas
+        run: pip install -q numpy==2.5.4 pandas==3.0.6   # V3.17 E9: Umgebung vom 13. bis 22.10.2026; nur bewusst ändern
       - name: Zweige holen
         run: |
           for z in daten-energie daten-neu lernen; do
