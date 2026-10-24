@@ -1,5 +1,5 @@
 {
- "kumuliert": 695971,
+ "kumuliert": 696061,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -229,6 +229,7 @@
   "neu_bitcoin_onchain_transaktionen_d5",
   "neu_bitcoin_onchain_transaktionen_stand",
   "neu_bitcoin_onchain_transaktionen_z252",
+  "neu_bls_jolts_veroeffentlichung_termine_jolts_stand",
   "neu_boe_bankrate_aenderungstage_aenderungstage_stand",
   "neu_boe_sonia_sonia_d1",
   "neu_boe_sonia_sonia_d20",
@@ -1538,9 +1539,15 @@
    "datei": "suche/S0050.json",
    "kandidaten": 357378,
    "in_db": false
+  },
+  {
+   "nr": 51,
+   "datei": "suche/S0051.json",
+   "kandidaten": 357468,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-24T06:41Z",
+ "letzter_suchlauf_utc": "2026-10-24T21:57Z",
  "pruefung_lernrunde_utc": "2026-10-24T09:37:51Z",
  "letzter_code_hash": "d0ab7bcf066bc2fc",
  "methode": "M4",
@@ -1792,11 +1799,19 @@
    "ergebnis_hash": "87c468b60fc9cbfd",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261024T190840Z.json",
+   "lauf_id": "L20261024T190840Z",
+   "s_dokument": "suche/S0051.json",
+   "ergebnis_hash": "3dd66e8fc29f013b",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-24T06:41Z",
- "letztes_vollarchiv": "suche/S0050_alle.csv.gz",
- "letzter_ergebnis_hash": "87c468b60fc9cbfd",
+ "letzter_lauf_utc": "2026-10-24T21:57Z",
+ "letztes_vollarchiv": "suche/S0051_alle.csv.gz",
+ "letzter_ergebnis_hash": "3dd66e8fc29f013b",
  "konflikte": [
   {
    "wo": "index",
@@ -4031,14 +4046,14 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 293,
-  "neu_in_diesem_lauf": 0
+  "grundreihen_n": 294,
+  "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "87c468b60fc9cbfd",
+ "letztes_vollarchiv_ergebnis_hash": "3dd66e8fc29f013b",
  "pruefungen_bestanden": {
-  "pruef_hash": "18980eb2125600e5",
-  "lauf_id": "L20261023T174243Z"
+  "pruef_hash": "058e74074fd39970",
+  "lauf_id": "L20261024T190840Z"
  },
- "letzter_eingabe_hash": "353a0505af96c81b",
- "letzter_gueltiger_lauf": "L20261024T051515Z"
+ "letzter_eingabe_hash": "a4375cdbc0a9d153",
+ "letzter_gueltiger_lauf": "L20261024T190840Z"
 }

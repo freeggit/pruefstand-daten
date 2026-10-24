@@ -145,6 +145,12 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_bls_jolts_veroeffentlichung_termine_jolts": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261024T190840Z",
+   "erst_zeit": "2026-10-24T21:57Z",
+   "beleg": "suche/laeufe/L20261024T190840Z.json"
+  },
   "neu_boe_bankrate_aenderungstage_aenderungstage": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -1766,8 +1772,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261024T051515Z",
-  "zeit_utc": "2026-10-24T06:41Z",
-  "grundreihen_n": 293
+  "lauf_id": "L20261024T190840Z",
+  "zeit_utc": "2026-10-24T21:57Z",
+  "grundreihen_n": 294
  }
 }

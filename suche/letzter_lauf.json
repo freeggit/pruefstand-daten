@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-24T06:41Z",
- "lauf_id": "L20261024T051515Z",
+ "zeit_utc": "2026-10-24T21:57Z",
+ "lauf_id": "L20261024T190840Z",
  "verfassung": "V3.17",
- "commit_main": "789e4f175a5199c345668c1ac67c2af084a6903e",
+ "commit_main": "cb272708528d5301482bc92659c2541d12abc581",
  "commit_energie": "28f690ad892b23facd59bbbcb5819fa191c5a6f5",
- "commit_neu": "67556f5942824a2e5edd6330e93f179ef19eece3",
- "commit_lernen_vorher": "125746b336edb78ff2e46ad602f8df06ae81a029",
+ "commit_neu": "0872bb8e5c46854eaec46fb2c8193ee42489b22c",
+ "commit_lernen_vorher": "36bb057a0977fecc469c22c3d5fb95e88f0ca4e9",
  "code_hash": "d0ab7bcf066bc2fc",
  "sha_suchmaschine": "172a405d41e775e0",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
  "sha_register_vorher": "80af7b72a5893400",
  "sha_manifest_main": "14c438aefb3b379d",
- "sha_manifest_neu": "f5fd8c2407a07e21",
+ "sha_manifest_neu": "45e4141df2cf8f9a",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
-  "pandas": "3.1.0",
+  "pandas": "3.0.6",
   "python": "3.12.15",
   "btc_sha": "e5db9dfd99685272"
  },
- "ergebnis_hash": "87c468b60fc9cbfd",
- "kandidaten": 357378,
- "kandidaten_neu": 0,
+ "ergebnis_hash": "3dd66e8fc29f013b",
+ "kandidaten": 357468,
+ "kandidaten_neu": 90,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -33,11 +33,13 @@
   "analyse": "vollständig",
   "familie_v": "vollständig",
   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-  "tests": "übersprungen",
-  "siegeltest": "übersprungen"
+  "tests": "vollständig",
+  "siegeltest": "vollständig"
  },
- "laufeintrag": "suche/laeufe/L20261024T051515Z.json",
+ "laufeintrag": "suche/laeufe/L20261024T190840Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [],
+ "reihen_neu_gegen_vorlauf": [
+  "neu_bls_jolts_veroeffentlichung_termine_jolts_stand"
+ ],
  "gesamt": "vollständig"
 }
