@@ -4030,5 +4030,19 @@
   "prioritaet": "hoch",
   "herkunft": "Lernrunde L1",
   "geprueft_utc": "2026-10-23T12:16Z"
+ },
+ {
+  "id": "cftc_cot_rohstoffe_woechentlich",
+  "name": "CFTC Commitments of Traders: Positionierung Rohstoffe (Öl, Gold, Kupfer), Freitagsveröffentlichung",
+  "url": "https://www.cftc.gov/dea/newcot/deacom.txt",
+  "domain": "www.cftc.gov",
+  "bereich": "Rohstoffe und Logistik",
+  "status": "kandidat",
+  "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; Veröffentlichung Freitag 15:30 ET für Dienstagsstand (echte Frist beachten).",
+  "mechanismus": "Extreme Netto-Positionierung spekulativer Händler in Rohstoff-Futures zeigt überfüllte Positionen, deren Auflösung kurzfristig Rohstoff- und Energiesektor gegenüber dem Weltindex bewegt.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-24T10:00:00Z",
+  "prioritaet": "normal",
+  "herkunft": "Lernrunde"
  }
 ]
