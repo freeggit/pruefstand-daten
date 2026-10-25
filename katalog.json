@@ -2116,10 +2116,10 @@
   "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen.",
+  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut.",
   "reihen": [],
   "aufgenommen_utc": "2026-09-28T20:15:44Z",
-  "geprueft_utc": "2026-10-22T08:15Z"
+  "geprueft_utc": "2026-10-25T04:15Z"
  },
  {
   "id": "fedregister_ftc_fusionen",
@@ -3949,11 +3949,11 @@
   "domain": "www.opec.org",
   "bereich": "Rohstoffe und Logistik",
   "status": "fehler",
-  "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut.",
+  "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut.",
   "mechanismus": "Revidierte Nachfrage- und Angebotsschätzungen der OPEC verschieben die Ölpreiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-21T10:00:00Z",
-  "geprueft_utc": "2026-10-22T00:15Z",
+  "geprueft_utc": "2026-10-25T04:15Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
@@ -4008,13 +4008,13 @@
   "domain": "www.ifo.de",
   "bereich": "Kalender",
   "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Test 2026-10-22T12:54Z: angegebene URL liefert HTTP 404; maschinenlesbare Terminliste noch zu finden. | Test 2026-10-24T16:31Z: ifo-Seiten weiterhin HTTP 404; kein maschinenlesbarer Terminkalender gefunden.",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Test 2026-10-22T12:54Z: angegebene URL liefert HTTP 404; maschinenlesbare Terminliste noch zu finden. | Test 2026-10-24T16:31Z: ifo-Seiten weiterhin HTTP 404; kein maschinenlesbarer Terminkalender gefunden. | Test 2026-10-25T04:15Z: HTTP 404 Seite von dieser Umgebung; nicht umgangen, nächster Lauf erneut.",
   "mechanismus": "Das ifo-Geschäftsklima wirkt am Veröffentlichungstag auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex; Termine öffentlich und regelmässig.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-22T10:00:00Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde",
-  "geprueft_utc": "2026-10-24T16:31Z"
+  "geprueft_utc": "2026-10-25T04:15Z"
  },
  {
   "id": "ecb_bank_lending_survey_termine",
