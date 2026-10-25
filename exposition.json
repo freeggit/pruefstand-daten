@@ -745,6 +745,12 @@
    "erst_zeit": "4.10.2026, 17:27 (Europe/Zurich)",
    "beleg": "suche/S0022_alle.csv.gz"
   },
+  "neu_riksbank_leitzins_entscheidtage_aenderungstage": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261025T092904Z",
+   "erst_zeit": "2026-10-25T12:20Z",
+   "beleg": "suche/laeufe/L20261025T092904Z.json"
+  },
   "neu_snb_saron_saron": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -1772,8 +1778,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261024T190840Z",
-  "zeit_utc": "2026-10-24T21:57Z",
-  "grundreihen_n": 294
+  "lauf_id": "L20261025T092904Z",
+  "zeit_utc": "2026-10-25T12:20Z",
+  "grundreihen_n": 295
  }
 }

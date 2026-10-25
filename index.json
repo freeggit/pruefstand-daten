@@ -1,5 +1,5 @@
 {
- "kumuliert": 696061,
+ "kumuliert": 696178,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -654,6 +654,7 @@
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_stand",
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_z252",
   "neu_quartalsende_pensionsrebalancing_quartalsende_stand",
+  "neu_riksbank_leitzins_entscheidtage_aenderungstage_stand",
   "neu_snb_saron_saron_d1",
   "neu_snb_saron_saron_d20",
   "neu_snb_saron_saron_d5",
@@ -1549,9 +1550,15 @@
    "datei": "suche/S0051.json",
    "kandidaten": 357468,
    "in_db": false
+  },
+  {
+   "nr": 52,
+   "datei": "suche/S0052.json",
+   "kandidaten": 357585,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-24T21:57Z",
+ "letzter_suchlauf_utc": "2026-10-25T12:20Z",
  "pruefung_lernrunde_utc": "2026-10-25T09:37:30Z",
  "letzter_code_hash": "d0ab7bcf066bc2fc",
  "methode": "M4",
@@ -1811,11 +1818,19 @@
    "ergebnis_hash": "3dd66e8fc29f013b",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261025T092904Z.json",
+   "lauf_id": "L20261025T092904Z",
+   "s_dokument": "suche/S0052.json",
+   "ergebnis_hash": "aa6de4df8aaa9cd3",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-24T21:57Z",
- "letztes_vollarchiv": "suche/S0051_alle.csv.gz",
- "letzter_ergebnis_hash": "3dd66e8fc29f013b",
+ "letzter_lauf_utc": "2026-10-25T12:20Z",
+ "letztes_vollarchiv": "suche/S0052_alle.csv.gz",
+ "letzter_ergebnis_hash": "aa6de4df8aaa9cd3",
  "konflikte": [
   {
    "wo": "index",
@@ -4050,14 +4065,14 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 294,
+  "grundreihen_n": 295,
   "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "3dd66e8fc29f013b",
+ "letztes_vollarchiv_ergebnis_hash": "aa6de4df8aaa9cd3",
  "pruefungen_bestanden": {
   "pruef_hash": "058e74074fd39970",
   "lauf_id": "L20261024T190840Z"
  },
- "letzter_eingabe_hash": "a4375cdbc0a9d153",
- "letzter_gueltiger_lauf": "L20261024T190840Z"
+ "letzter_eingabe_hash": "754455b15a94c869",
+ "letzter_gueltiger_lauf": "L20261025T092904Z"
 }

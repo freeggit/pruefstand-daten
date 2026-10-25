@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-24T21:57Z",
- "lauf_id": "L20261024T190840Z",
+ "zeit_utc": "2026-10-25T12:20Z",
+ "lauf_id": "L20261025T092904Z",
  "verfassung": "V3.17",
- "commit_main": "cb272708528d5301482bc92659c2541d12abc581",
- "commit_energie": "28f690ad892b23facd59bbbcb5819fa191c5a6f5",
- "commit_neu": "0872bb8e5c46854eaec46fb2c8193ee42489b22c",
- "commit_lernen_vorher": "36bb057a0977fecc469c22c3d5fb95e88f0ca4e9",
+ "commit_main": "798ca0562780387ae6f644f6daf6c183d9404a8e",
+ "commit_energie": "82cc77d2ae0de14cb986ef21f8967bfaf395adda",
+ "commit_neu": "74d13111e036160401b6ccc109a0b9d340d50da9",
+ "commit_lernen_vorher": "c2120bb7b5d7288deb0ee8678b9f2919a49d43bb",
  "code_hash": "d0ab7bcf066bc2fc",
  "sha_suchmaschine": "172a405d41e775e0",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "80af7b72a5893400",
- "sha_manifest_main": "14c438aefb3b379d",
- "sha_manifest_neu": "45e4141df2cf8f9a",
+ "sha_register_vorher": "2debe6e893606541",
+ "sha_manifest_main": "07581a7d6df12cec",
+ "sha_manifest_neu": "361beb61ff8f98fc",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "e5db9dfd99685272"
+  "btc_sha": "b24f86e08ac9a833"
  },
- "ergebnis_hash": "3dd66e8fc29f013b",
- "kandidaten": 357468,
- "kandidaten_neu": 90,
+ "ergebnis_hash": "aa6de4df8aaa9cd3",
+ "kandidaten": 357585,
+ "kandidaten_neu": 117,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -33,13 +33,13 @@
   "analyse": "vollständig",
   "familie_v": "vollständig",
   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-  "tests": "vollständig",
-  "siegeltest": "vollständig"
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261024T190840Z.json",
+ "laufeintrag": "suche/laeufe/L20261025T092904Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [
-  "neu_bls_jolts_veroeffentlichung_termine_jolts_stand"
+  "neu_riksbank_leitzins_entscheidtage_aenderungstage_stand"
  ],
  "gesamt": "vollständig"
 }
