@@ -1,0 +1,21 @@
+{
+  "aenderungstage": {
+    "beschreibung": "1 am ersten Tag, an dem ein geaenderter Repo-Satz der Riksbank gilt (Wirksamkeitstag), sonst 0 (nur Aenderungen ab 0,10 Prozentpunkten; kleinere Schritte des Marktsatzes 1994-95 zaehlen nicht). Der Entscheid wird vorher bekanntgegeben (meist ca. eine Woche vor Wirksamkeit), der Flag liegt also nie vor der Bekanntgabe.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Bekanntgabe liegt vor dem Wirksamkeitstag; Quelle: Riksbank Pressemitteilungen zu Zinsentscheiden)",
+    "quelle_url": "https://api.riksbank.se/swea/v1/Observations/SECBREPOEFF",
+    "revidiert": false,
+    "verdichtung": "keine (Aenderungsindikator aus Tagesreihe abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "ziel": {
+    "beschreibung": "Repo-Satz der Riksbank, Wirksamkeitsdatum, Bankarbeitstage",
+    "einheit": "% p.a.",
+    "publikation": "taeglich (Satz vor Wirksamkeit bekanntgegeben)",
+    "quelle_url": "https://api.riksbank.se/swea/v1/Observations/SECBREPOEFF",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "keine",
+    "verfuegbar_nach_tagen": 0
+  }
+}
