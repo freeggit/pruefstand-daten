@@ -4066,13 +4066,14 @@
   "url": "https://www.bea.gov/news/schedule",
   "domain": "www.bea.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» von 13 auf 15 aufgefüllt (Lernrunde 25.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login. Test 2026-10-25: Terminseite HTTP 200; Termine als Tagesdatum-Liste, Historie über Archivseiten zu prüfen.",
+  "status": "abgelehnt",
+  "grund": "Vorrat «kandidat» von 13 auf 15 aufgefüllt (Lernrunde 25.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login. Test 2026-10-25: Terminseite HTTP 200; Termine als Tagesdatum-Liste, Historie über Archivseiten zu prüfen. | Test 2026-10-25T12:16Z: Terminseiten /news/schedule/full nur ab 2024, keine Archivliste bis 2015; K2 nicht erfüllbar (Termine nicht rückwirkend belegt, nichts erfunden).",
   "mechanismus": "Der PCE-Preisindex ist die bevorzugte Inflationsgrösse der Fed; am Veröffentlichungstag ändern sich die Zinserwartungen und damit Anleihen (TLT, IEF) und zinssensitive Sektoren (XLRE, XLU) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-25T10:00:00Z",
   "prioritaet": "normal",
-  "herkunft": "Lernrunde"
+  "herkunft": "Lernrunde",
+  "geprueft_utc": "2026-10-25T12:16Z:00"
  },
  {
   "id": "ism_pmi_veroeffentlichung_termine",
@@ -4080,12 +4081,13 @@
   "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
   "domain": "www.ismworld.org",
   "bereich": "Kalender",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» von 13 auf 15 aufgefüllt (Lernrunde 25.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login. Termine regelmässig (erster und dritter Werktag des Monats), URL-Idee: Terminliste der Report-on-Business-Seite; Zugriff zu prüfen.",
+  "status": "abgelehnt",
+  "grund": "Vorrat «kandidat» von 13 auf 15 aufgefüllt (Lernrunde 25.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login. Termine regelmässig (erster und dritter Werktag des Monats), URL-Idee: Terminliste der Report-on-Business-Seite; Zugriff zu prüfen. | Test 2026-10-25T12:16Z: ismworld.org liefert reCAPTCHA-Zwischenseite statt Daten; K3 (offen, ohne Login/Prüfung) nicht erfüllt, nicht umgangen.",
   "mechanismus": "Der ISM-Index gilt als frühester Konjunkturindikator der USA; am Veröffentlichungstag verschieben sich Erwartungen für zyklische Sektoren (XLI, XLB, XLY) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-25T10:00:00Z",
   "prioritaet": "normal",
-  "herkunft": "Lernrunde"
+  "herkunft": "Lernrunde",
+  "geprueft_utc": "2026-10-25T12:16Z:00"
  }
 ]
