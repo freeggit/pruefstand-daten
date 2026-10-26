@@ -3299,7 +3299,8 @@
   "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-08T08:17Z",
-  "geprueft_utc": "2026-10-22T08:15Z"
+  "geprueft_utc": "2026-10-22T08:15Z",
+  "prioritaet": "normal"
  },
  {
   "id": "freddiemac_pmms_hypothekenzins",
@@ -4089,5 +4090,27 @@
   "prioritaet": "normal",
   "herkunft": "Lernrunde",
   "geprueft_utc": "2026-10-25T12:16Z:00"
+ },
+ {
+  "id": "adp_beschaeftigung_termine",
+  "name": "ADP National Employment Report, Veroeffentlichungstage",
+  "url": "https://adpemploymentreport.com/",
+  "domain": "adpemploymentreport.com",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Der ADP-Bericht erscheint zwei Tage vor dem offiziellen Arbeitsmarktbericht und verschiebt die Zinserwartungen, was kurzfristig Anleihen (IEF, TLT) und zinsempfindliche Sektoren gegenueber dem Weltindex bewegen kann.",
+  "grund": "Ergaenzt us_arbeitsmarkt_termine (BLS) um den Vorlaufbericht; Termine oeffentlich (mittwochs vor dem BLS-Freitag, ab 2002 rekonstruierbar aus BLS-Terminen minus zwei Tage; kein Login). Herkunft: Vorratsauffuellung."
+ },
+ {
+  "id": "aramco_osp_ankuendigungen",
+  "name": "Saudi Aramco Official Selling Price (OSP), Ankuendigungstage",
+  "url": "https://www.aramco.com/en/news-media/news",
+  "domain": "aramco.com",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Die monatliche OSP-Ankuendigung (um den 5. des Monats) signalisiert Angebot und Nachfrage am Rohoelmarkt und kann kurzfristig Energiesektor (XLE, USO) gegenueber dem Weltindex bewegen.",
+  "grund": "Unabhaengig von den FRED-Oelreihen (Terminereignis statt Preisreihe); oeffentliche Pressemitteilungen, kein Login; Termin-Rekonstruktion aus Nachrichtenarchiv noetig. Herkunft: Vorratsauffuellung."
  }
 ]
