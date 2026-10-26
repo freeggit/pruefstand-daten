@@ -1,0 +1,13 @@
+{
+  "adp": {
+    "beschreibung": "1 am Veroeffentlichungstag des monatlichen ADP National Employment Report (privater Beschaeftigungsbericht, zwei Tage vor dem BLS-Arbeitsmarktbericht), sonst 0, fuer jeden Kalendertag ab 2011-01-01 bis heute. Termine aus dem ALFRED-Archiv der tatsaechlichen Veroeffentlichungstage dieses Release (rid=194).",
+    "einheit": "Indikator (0/1)",
+    "entfernte_vintages": [],
+    "entfernte_vintages_grund": "keine",
+    "publikation": "taeglich (Veroeffentlichungstermin von ADP im Voraus als Jahreskalender oeffentlich, https://adpemploymentreport.com/)",
+    "quelle_url": "https://alfred.stlouisfed.org/release/downloaddates?rid=194&ff=txt (Terminarchiv, ALFRED/Federal Reserve Bank of St. Louis) und https://adpemploymentreport.com/",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Terminarchiv uebernommen)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

@@ -4094,13 +4094,26 @@
  {
   "id": "adp_beschaeftigung_termine",
   "name": "ADP National Employment Report, Veroeffentlichungstage",
-  "url": "https://adpemploymentreport.com/",
-  "domain": "adpemploymentreport.com",
+  "url": "https://alfred.stlouisfed.org/release/downloaddates?rid=194&ff=txt",
+  "domain": "alfred.stlouisfed.org",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Der ADP-Bericht erscheint zwei Tage vor dem offiziellen Arbeitsmarktbericht und verschiebt die Zinserwartungen, was kurzfristig Anleihen (IEF, TLT) und zinsempfindliche Sektoren gegenueber dem Weltindex bewegen kann.",
-  "grund": "Ergaenzt us_arbeitsmarkt_termine (BLS) um den Vorlaufbericht; Termine oeffentlich (mittwochs vor dem BLS-Freitag, ab 2002 rekonstruierbar aus BLS-Terminen minus zwei Tage; kein Login). Herkunft: Vorratsauffuellung."
+  "grund": "ALFRED-Terminarchiv (Release rid=194, kein Schlüssel/Login). K1 täglich (0/1), K2 erster Wert 2011-01-01 (ALFRED führt ADP-Termine ab 2011-02-02, nichts früher erfunden), K3 offen, K4 Termine nicht revidiert, K5 laufend bis heute, K6 neu, K7 klein. Prüfung 26.10.2026: 5778 Zeilen 2011-01-01..2026-10-26, 188 Ereignistage, Min 0 Max 1. Publikation: täglich, Termin im Voraus als Jahreskalender bekannt, verfuegbar_nach_tagen 0. | Vorher: Ergaenzt us_arbeitsmarkt_termine (BLS) um den Vorlaufbericht; Termine oeffentlich (mittwochs vor dem BLS-Freitag, ab 2002 rekonstruierbar aus BLS-Terminen minus zwei Tage; kein Login). Herkunft: Vorratsauffuellung.",
+  "reihen": [
+   {
+    "reihe": "adp",
+    "zeilen": 5778,
+    "erste": "2011-01-01",
+    "letzte": "2026-10-26",
+    "median_abstand_tage": 1,
+    "anteil_gleiche_folgewerte": 0.97,
+    "min": 0,
+    "max": 1
+   }
+  ],
+  "geprueft_utc": "2026-10-26T12:40Z"
  },
  {
   "id": "aramco_osp_ankuendigungen",
