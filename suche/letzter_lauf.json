@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-25T12:20Z",
- "lauf_id": "L20261025T092904Z",
+ "zeit_utc": "2026-10-26T13:25Z",
+ "lauf_id": "L20261026T103713Z",
  "verfassung": "V3.17",
- "commit_main": "798ca0562780387ae6f644f6daf6c183d9404a8e",
- "commit_energie": "82cc77d2ae0de14cb986ef21f8967bfaf395adda",
- "commit_neu": "74d13111e036160401b6ccc109a0b9d340d50da9",
- "commit_lernen_vorher": "c2120bb7b5d7288deb0ee8678b9f2919a49d43bb",
+ "commit_main": "8985d135b368b73de11756a44e5e7dc37f588ca2",
+ "commit_energie": "97eaa5694a9f39154e33b7256c0b0476655a2c0b",
+ "commit_neu": "e21e07bb867339e3c2f5dc9835b9ba33e6253160",
+ "commit_lernen_vorher": "9f84698c7376f2a601c93863302666288080a13f",
  "code_hash": "d0ab7bcf066bc2fc",
  "sha_suchmaschine": "172a405d41e775e0",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "2debe6e893606541",
- "sha_manifest_main": "07581a7d6df12cec",
- "sha_manifest_neu": "361beb61ff8f98fc",
+ "sha_register_vorher": "2d3059c5958a3712",
+ "sha_manifest_main": "9648511682361b5f",
+ "sha_manifest_neu": "0a28312e9910b9d6",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "b24f86e08ac9a833"
+  "btc_sha": "36f9a8e103862d85"
  },
- "ergebnis_hash": "aa6de4df8aaa9cd3",
+ "ergebnis_hash": "46bb0ecf1bee791a",
  "kandidaten": 357585,
- "kandidaten_neu": 117,
+ "kandidaten_neu": 0,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,10 +36,8 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261025T092904Z.json",
+ "laufeintrag": "suche/laeufe/L20261026T103713Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [
-  "neu_riksbank_leitzins_entscheidtage_aenderungstage_stand"
- ],
+ "reihen_neu_gegen_vorlauf": [],
  "gesamt": "vollständig"
 }
