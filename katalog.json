@@ -4130,13 +4130,27 @@
  {
   "id": "bls_ppi_termine",
   "name": "US Erzeugerpreise (PPI), Veroeffentlichungstage",
-  "url": "https://www.bls.gov/schedule/news_release/ppi.htm",
-  "domain": "bls.gov",
+  "url": "https://alfred.stlouisfed.org/release/downloaddates?rid=46&ff=txt",
+  "domain": "alfred.stlouisfed.org",
   "bereich": "Kalender-Ereignisse",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Die PPI-Veroeffentlichung ueberrascht bei Rohstoff- und Zinserwartungen und kann kurzfristig Energie, Materialien und Anleihen gegenueber dem Weltindex bewegen.",
-  "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat)."
+  "grund": "Firmen-/Makroereignis-Kalender, Vorlage us_cpi_termine. bls.gov gesperrt (403), darum ALFRED-Terminarchiv (rid=46, Producer Price Index, kein Login/Schluessel). K1 taeglich (0/1 je Kalendertag), K2 ALFRED fuehrt Termine ab 1978, Reihenbeginn bewusst 1985-01-01 (OMB Statistical Policy Directive No. 3 (1985) belegt im Voraus veroeffentlichten Jahrestermin-Kalender; frueher nicht belegt, Zusatz 5). K4 vergangene Termine nicht revidiert. K5 laeuft bis heute. K6 neu. K7 klein. Pruefung: 15275 Zeilen, 521 Ereignistage (~12.4/Jahr), gleiche Folgewerte 0.9319 (binaer erwartet), Min 0 Max 1. publikation taeglich, verfuegbar_nach_tagen 0.",
+  "aufgenommen_utc": "2026-10-27T12:33Z",
+  "geprueft_utc": "2026-10-27T12:33Z",
+  "reihen": [
+   {
+    "reihe": "ppi",
+    "zeilen": 15275,
+    "erste": "1985-01-01",
+    "letzte": "2026-10-27",
+    "median_abstand_tage": 1,
+    "anteil_gleiche_folgewerte": 0.9319,
+    "min": 0.0,
+    "max": 1.0
+   }
+  ]
  },
  {
   "id": "usda_hogs_pigs_termine",

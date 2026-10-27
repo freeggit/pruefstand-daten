@@ -1,0 +1,13 @@
+{
+  "ppi": {
+    "beschreibung": "1 am Veroeffentlichungstag der monatlichen BLS-Veroeffentlichung des Producer Price Index (Erzeugerpreise), sonst 0, fuer jeden Kalendertag ab 1985-01-01 bis heute. Termine aus dem ALFRED-Archiv der tatsaechlichen Veroeffentlichungstage dieses Release (rid=46).",
+    "einheit": "Indikator (0/1)",
+    "entfernte_vintages": [],
+    "entfernte_vintages_grund": "keine",
+    "publikation": "taeglich (Veroeffentlichungstermin laut OMB Statistical Policy Directive No. 3 (1985) im Voraus als Jahreskalender oeffentlich bekannt gegeben, https://www.bls.gov/bls/statistical-policy-directive-3.pdf)",
+    "quelle_url": "https://alfred.stlouisfed.org/release/downloaddates?rid=46&ff=txt (Terminarchiv, ALFRED/Federal Reserve Bank of St. Louis) und https://www.bls.gov/schedule/news_release/ppi.htm",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Terminarchiv uebernommen)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
