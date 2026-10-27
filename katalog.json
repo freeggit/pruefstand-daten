@@ -4126,5 +4126,38 @@
   "prioritaet": "normal",
   "mechanismus": "Die monatliche OSP-Ankuendigung (um den 5. des Monats) signalisiert Angebot und Nachfrage am Rohoelmarkt und kann kurzfristig Energiesektor (XLE, USO) gegenueber dem Weltindex bewegen.",
   "grund": "Unabhaengig von den FRED-Oelreihen (Terminereignis statt Preisreihe); oeffentliche Pressemitteilungen, kein Login; Termin-Rekonstruktion aus Nachrichtenarchiv noetig. Herkunft: Vorratsauffuellung."
+ },
+ {
+  "id": "bls_ppi_termine",
+  "name": "US Erzeugerpreise (PPI), Veroeffentlichungstage",
+  "url": "https://www.bls.gov/schedule/news_release/ppi.htm",
+  "domain": "bls.gov",
+  "bereich": "Kalender-Ereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Die PPI-Veroeffentlichung ueberrascht bei Rohstoff- und Zinserwartungen und kann kurzfristig Energie, Materialien und Anleihen gegenueber dem Weltindex bewegen.",
+  "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat)."
+ },
+ {
+  "id": "usda_hogs_pigs_termine",
+  "name": "USDA Hogs and Pigs / Quarterly Reports, Veroeffentlichungstage",
+  "url": "https://www.nass.usda.gov/Publications/Calendar/index.php",
+  "domain": "nass.usda.gov",
+  "bereich": "Rohstoffe",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Quartalsberichte zum Schweinebestand verschieben Erwartungen zu Futtergetreide und Fleischpreisen und wirken kurzfristig auf Agrar- und Basiskonsumwerte (DBA, XLP).",
+  "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat)."
+ },
+ {
+  "id": "umich_konsumklima_termine",
+  "name": "University of Michigan Konsumklima, Veroeffentlichungstage",
+  "url": "https://www.sca.isr.umich.edu/",
+  "domain": "sca.isr.umich.edu",
+  "bereich": "Kalender-Ereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Die Vorab- und Endwerte des Konsumklimas und der Inflationserwartungen bewegen kurzfristig zyklische Konsumwerte (XLY) und Anleihen (TLT, IEF) gegenueber dem Weltindex.",
+  "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat)."
  }
 ]
