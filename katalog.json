@@ -3666,11 +3666,12 @@
   "url": "https://www.census.gov/construction/nrc/index.html",
   "domain": "census.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Wohnungsbaudaten wirken ueber Zinsempfindlichkeit auf Immobilien (XLRE) und Zyklische kurzfristig gegenueber dem Weltindex.",
-  "grund": "Zweiter Census-Termin; tief, weil viele Einzeltermine pro Jahr mit kleinem Effekt zu erwarten sind.",
-  "aufgenommen_utc": "2026-10-16T09:00:00Z"
+  "grund": "K2: Test 2026-10-27T08:19Z: xls-Terminliste nicht erreichbar (Verbindung 000); Census-Kalender calendar-listview nennt nur 2026/2027, keine belegte Historie bis 2015.",
+  "aufgenommen_utc": "2026-10-16T09:00:00Z",
+  "geprueft_utc": "2026-10-27T08:19Z"
  },
  {
   "id": "fred_em_unternehmensanleihen_spread",
@@ -3874,12 +3875,12 @@
   "url": "https://www.nass.usda.gov/Publications/Calendar/index.php",
   "domain": "www.nass.usda.gov",
   "bereich": "Rohstoffe und Logistik",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 20.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login",
+  "status": "abgelehnt",
+  "grund": "K3/K2: Test 2026-10-27T08:19Z: nass.usda.gov Kalender HTTP 403/404 von dieser Umgebung; keine belegte Terminhistorie ohne Umgehung erreichbar.",
   "mechanismus": "Überraschungen bei Tierbeständen verschieben Futter- und Fleischpreise kurzfristig; wirkt auf Agrar-Rohstoffe (DBA) und Basiskonsum (XLP) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-20T10:00:00Z",
-  "geprueft_utc": null,
+  "geprueft_utc": "2026-10-27T08:19Z",
   "prioritaet": "tief",
   "herkunft": "Lernrunde"
  },
