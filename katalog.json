@@ -4155,13 +4155,27 @@
  {
   "id": "usda_hogs_pigs_termine",
   "name": "USDA Hogs and Pigs / Quarterly Reports, Veroeffentlichungstage",
-  "url": "https://www.nass.usda.gov/Publications/Calendar/index.php",
-  "domain": "nass.usda.gov",
+  "url": "https://esmis.nal.usda.gov/publication/hogs-and-pigs",
+  "domain": "esmis.nal.usda.gov",
   "bereich": "Rohstoffe",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
-  "mechanismus": "Quartalsberichte zum Schweinebestand verschieben Erwartungen zu Futtergetreide und Fleischpreisen und wirken kurzfristig auf Agrar- und Basiskonsumwerte (DBA, XLP).",
-  "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat)."
+  "mechanismus": "Der Quartalsbericht zum Schweinebestand bewegt Lean-Hog-Preise und damit Fleisch-/Agrarwerte (XLP, DBA) kurzfristig gegenueber dem Weltindex.",
+  "grund": "Terminliste aus USDA-ESMIS-Archiv (Seitendurchlauf, kein Login/Schluessel). Archiv reicht bis 1968; Reihenbeginn bewusst 2005-01-01, da 2001-2004 zusaetzliche Nicht-Quartalstermine enthalten sind und Vorabbekanntgabe fruehere Jahre nicht belegt (Zusatz 5). Vereinzelte Zusatztermine (2016-03-21, 2018-12-10) bleiben enthalten, vermutlich Korrektur-/Sondertermine. K1 taeglich 0/1, K4 Termine nicht revidiert, K5 bis heute, K6 neu, K7 klein. Pruefung: 7970 Zeilen, 89 Ereignistage, gleiche Folgewerte 0.9777 (binaer erwartet), Min 0 Max 1. publikation taeglich (NASS-Kalender im Voraus), verfuegbar_nach_tagen 0.",
+  "aufgenommen_utc": "2026-10-27T16:29Z",
+  "geprueft_utc": "2026-10-27T16:29Z",
+  "reihen": [
+   {
+    "reihe": "hogs_pigs",
+    "zeilen": 7970,
+    "erste": "2005-01-01",
+    "letzte": "2026-10-27",
+    "median_abstand_tage": 1,
+    "anteil_gleiche_folgewerte": 0.9777,
+    "min": 0.0,
+    "max": 1.0
+   }
+  ]
  },
  {
   "id": "umich_konsumklima_termine",
@@ -4169,9 +4183,10 @@
   "url": "https://www.sca.isr.umich.edu/",
   "domain": "sca.isr.umich.edu",
   "bereich": "Kalender-Ereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Die Vorab- und Endwerte des Konsumklimas und der Inflationserwartungen bewegen kurzfristig zyklische Konsumwerte (XLY) und Anleihen (TLT, IEF) gegenueber dem Weltindex.",
-  "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat)."
+  "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat). | Test 2026-10-27T16:29Z: ALFRED-Terminarchiv (rid=91) enthaelt nur die Endwert-Termine (12 je Jahr, Ende des Monats, ab 1998); die marktrelevanten Vorabtermine (Monatsmitte) fehlen, sca.isr.umich.edu ohne maschinenlesbare Terminliste. Unvollstaendige Reihe, Qualitaet vor Menge.",
+  "geprueft_utc": "2026-10-27T16:29Z"
  }
 ]

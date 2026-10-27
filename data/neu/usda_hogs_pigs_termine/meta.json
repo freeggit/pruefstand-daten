@@ -1,0 +1,11 @@
+{
+  "hogs_pigs": {
+    "beschreibung": "1 am Veroeffentlichungstag des vierteljaehrlichen USDA-NASS-Berichts Hogs and Pigs (Schweinebestand), sonst 0, fuer jeden Kalendertag ab 2005-01-01 bis heute (Archiv enthaelt vereinzelt Zusatztermine, z.B. 2016-03-21, 2018-12-10). Termine aus dem ESMIS-Archiv.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (NASS veroeffentlicht den Berichtskalender im Voraus, https://www.nass.usda.gov/Publications/Calendar/; Archivtermin = tatsaechlicher Veroeffentlichungstag)",
+    "quelle_url": "https://esmis.nal.usda.gov/publication/hogs-and-pigs",
+    "revidiert": false,
+    "verdichtung": "keine (ein Termin je Kalendertag, aus amtlichem Archiv uebernommen)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
