@@ -127,6 +127,12 @@
    "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
    "beleg": "suche/S0012_alle.csv.gz"
   },
+  "neu_adp_beschaeftigung_termine_adp": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261027T100646Z",
+   "erst_zeit": "2026-10-27T12:54Z",
+   "beleg": "suche/laeufe/L20261027T100646Z.json"
+  },
   "neu_bitcoin_onchain_gebuehren": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -1778,8 +1784,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261026T103713Z",
-  "zeit_utc": "2026-10-26T13:25Z",
-  "grundreihen_n": 295
+  "lauf_id": "L20261027T100646Z",
+  "zeit_utc": "2026-10-27T12:54Z",
+  "grundreihen_n": 296
  }
 }

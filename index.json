@@ -1,5 +1,5 @@
 {
- "kumuliert": 696178,
+ "kumuliert": 696268,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -226,6 +226,7 @@
   "idx_zinsanstieg_d5",
   "idx_zinsanstieg_stand",
   "idx_zinsanstieg_z252",
+  "neu_adp_beschaeftigung_termine_adp_stand",
   "neu_bitcoin_onchain_gebuehren_d1",
   "neu_bitcoin_onchain_gebuehren_d20",
   "neu_bitcoin_onchain_gebuehren_d5",
@@ -1570,9 +1571,15 @@
    "datei": "suche/S0053.json",
    "kandidaten": 357585,
    "in_db": false
+  },
+  {
+   "nr": 54,
+   "datei": "suche/S0054.json",
+   "kandidaten": 357675,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-26T13:25Z",
+ "letzter_suchlauf_utc": "2026-10-27T12:54Z",
  "pruefung_lernrunde_utc": "2026-10-27T09:45:00Z",
  "letzter_code_hash": "d0ab7bcf066bc2fc",
  "methode": "M4",
@@ -1848,11 +1855,19 @@
    "ergebnis_hash": "46bb0ecf1bee791a",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261027T100646Z.json",
+   "lauf_id": "L20261027T100646Z",
+   "s_dokument": "suche/S0054.json",
+   "ergebnis_hash": "1fa3b70a257251f1",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-26T13:25Z",
- "letztes_vollarchiv": "suche/S0053_alle.csv.gz",
- "letzter_ergebnis_hash": "46bb0ecf1bee791a",
+ "letzter_lauf_utc": "2026-10-27T12:54Z",
+ "letztes_vollarchiv": "suche/S0054_alle.csv.gz",
+ "letzter_ergebnis_hash": "1fa3b70a257251f1",
  "konflikte": [
   {
    "wo": "index",
@@ -4087,14 +4102,14 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 295,
-  "neu_in_diesem_lauf": 0
+  "grundreihen_n": 296,
+  "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "46bb0ecf1bee791a",
+ "letztes_vollarchiv_ergebnis_hash": "1fa3b70a257251f1",
  "pruefungen_bestanden": {
   "pruef_hash": "058e74074fd39970",
   "lauf_id": "L20261024T190840Z"
  },
- "letzter_eingabe_hash": "6144dcc17ae724d9",
- "letzter_gueltiger_lauf": "L20261026T103713Z"
+ "letzter_eingabe_hash": "317b41574f56fc13",
+ "letzter_gueltiger_lauf": "L20261027T100646Z"
 }
