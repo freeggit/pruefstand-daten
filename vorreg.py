@@ -49,6 +49,18 @@ sys.argv = [sys.argv[0], basis]
 for pfad, var in (("_daten-energie", "PS_BASIS_ENERGIE"), ("_daten-neu", "PS_BASIS_NEU")):
     if var not in os.environ and os.path.isdir(os.path.join(ROOT, pfad, "data")):
         os.environ[var] = "file://" + os.path.join(ROOT, pfad, "data")
+# V3.18 (E9 Stufe 2, Entwurf): Familie V rechnet auf demselben eingefrorenen Discovery-Stand wie die Suche, nur lesend.
+try:
+    import discovery as _discovery
+    _stand_aktiv = bool(getattr(_discovery, "AKTIV", False))
+except ImportError:
+    _stand_aktiv = False
+for _k in ("PS_DISCOVERY_EINFRIEREN", "PS_DISCOVERY_BERICHT", "PS_DISCOVERY_NACHFUEHRUNG"):
+    os.environ.pop(_k, None)                                 # nie schreiben, nie nachführen
+if not _stand_aktiv:
+    os.environ.pop("PS_DISCOVERY_STAND", None)
+elif "PS_DISCOVERY_STAND" not in os.environ and os.path.exists(os.path.join(LERNEN, "discovery", "stand.json")):
+    os.environ["PS_DISCOVERY_STAND"] = os.path.join(LERNEN, "discovery")
 
 chargen = sorted(glob.glob(os.path.join(ROOT, "vorregistrierung", "*.json")))
 if not chargen:
@@ -81,7 +93,8 @@ def sha_datei(pfad):
         return ""
 
 CODE_HASH = hashlib.sha256("".join(sha_datei(os.path.join(ROOT, f)) for f in
-                                   ("suchmaschine.py", "vorreg.py", "integritaet.py", "paare.txt", "mechanismen.txt", "korrekturen_neu.json")).encode()).hexdigest()[:16]
+                                   ("suchmaschine.py", "vorreg.py", "integritaet.py", "paare.txt", "mechanismen.txt", "korrekturen_neu.json",
+                                    "discovery.py")).encode()).hexdigest()[:16]   # V3.18 E9 (Entwurf): discovery.py dazu
 
 def zeit_utc(z):
     """«30.9.2026, 07:12 (Europe/Zurich)» oder ISO-Zeit -> UTC-Zeitstempel; None, wenn nicht lesbar."""
@@ -200,6 +213,9 @@ def datenstand():
                        ("energie", os.path.join(ROOT, "_daten-energie", "data", "hr", "manifest_energie.json"))):
         s = sha_datei(pfad)
         out[name] = s[:16] if s else None
+    if os.environ.get("PS_DISCOVERY_STAND"):   # V3.18 Fassung 2 (Gutachten 23, M1): festgehaltene Fassung des Stands
+        s = sha_datei(os.path.join(os.environ["PS_DISCOVERY_STAND"], "stand.json"))
+        out["discovery_stand"] = s[:16] if s else None
     return out
 
 def charge_pruefen(name, ch, alt, jetzt):
