@@ -12,6 +12,7 @@ kleiner als rund 1e-12 relativ löst darum keinen Lauf aus (offengelegt, V3.17 �
 Rohkurse und Faktorsprünge ein (siehe suchmaschine.py, eingaben_schreiben).
 """
 import hashlib
+import json
 import numpy as np
 import pandas as pd
 
@@ -78,3 +79,22 @@ def pruefsumme(obj):
     m = hashlib.sha256()
     _fuettern(m, obj)
     return m.hexdigest()[:16]
+
+
+# V3.18 Fassung 2 (Astra-Gutachten 23, M2/M3): Entscheidungs-Prüfsumme für den Kontrolllauf am Montag. Positivliste der
+# rechnerischen Entscheidungen der Suche (Placebo-Pfad, Hürden, Route C, Kandidaten der Stufe D, Kalibrierung). Nicht
+# enthalten: Angaben, die nur vom Register oder der kumulierten Zahl abhängen (Zähler, Kennzeichen «neu»,
+# Bonferroni-Bericht), Berichte aus den täglichen Manifesten (reihen_bericht) sowie Dauer, Umgebung und Code-Kennung.
+# Genau (json, keine Rundung): Der Kontrolllauf verlangt Zeichen für Zeichen gleiche Ergebnisse.
+ENTSCHEIDUNG_FELDER = ("kandidaten", "indikatoren", "huerde_t", "huerde_c_t2", "route_c_stufe1", "placebo_laeufe",
+                       "placebo_bestes_t_je_lauf_roh", "placebo_bestes_t_bestaetigungsfaehig_je_lauf_roh",
+                       "placebo_bausteine_je_lauf", "placebo_vorstufe_je_lauf", "fehlalarmrate", "p_lauf", "fund",
+                       "echt_bestes_t", "echt_mehr_als_staerkster_placebo", "bausteine", "langzeit_hinweise", "kalibrierung")
+
+
+def entscheidung_pruefsumme(zus):
+    try:
+        auszug = {k: zus.get(k) for k in ENTSCHEIDUNG_FELDER}
+        return hashlib.sha256(json.dumps(auszug, sort_keys=True, ensure_ascii=False, default=str).encode("utf-8")).hexdigest()[:16]
+    except (TypeError, ValueError, AttributeError):
+        return None
