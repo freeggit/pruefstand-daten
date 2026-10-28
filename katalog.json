@@ -4188,5 +4188,38 @@
   "mechanismus": "Die Vorab- und Endwerte des Konsumklimas und der Inflationserwartungen bewegen kurzfristig zyklische Konsumwerte (XLY) und Anleihen (TLT, IEF) gegenueber dem Weltindex.",
   "grund": "Termin-Ereignis, oeffentlich, kein Login. Herkunft: Vorratsauffuellung (Zusatz Vorrat). | Test 2026-10-27T16:29Z: ALFRED-Terminarchiv (rid=91) enthaelt nur die Endwert-Termine (12 je Jahr, Ende des Monats, ab 1998); die marktrelevanten Vorabtermine (Monatsmitte) fehlen, sca.isr.umich.edu ohne maschinenlesbare Terminliste. Unvollstaendige Reihe, Qualitaet vor Menge.",
   "geprueft_utc": "2026-10-27T16:29Z"
+ },
+ {
+  "id": "sec_8k_item203_neue_finanzschulden",
+  "name": "SEC 8-K Item 2.03 (neue Finanzverbindlichkeiten), Tagesanzahl",
+  "url": "https://www.sec.gov/cgi-bin/srch-edgar?text=form-type%3D8-K&first=2000&last=2026",
+  "domain": "sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Eine Häufung von Schuldenaufnahmen an einem Tag zeigt offene Kreditmärkte und Refinanzierungsdruck und bewegt kurzfristig Kreditanleihen (LQD) und Finanzwerte (XLF) gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 28.10.2026); Firmenereignisse aggregiert (erste Priorität); EDGAR-Tagesindex ohne Login, Item-Zählung wie bei den bestehenden 8-K-Einträgen; kein Doppel."
+ },
+ {
+  "id": "fred_rrp_reverse_repo_taeglich",
+  "name": "Fed Reverse-Repo-Volumen (RRPONTSYD), täglich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Staat und Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Sinkt das Reverse-Repo-Volumen, fliesst Geldmarktliquidität in Staatspapiere und Risikoanlagen; das wirkt kurzfristig auf Anleihen (SHY, TLT) und Aktien gegenüber dem Weltindex und ergänzt die Treasury-General-Account-Beobachtung.",
+  "grund": "Vorrat auf 15 aufgefüllt (Lernrunde 28.10.2026); L3, öffentliche CSV ohne Login, Reihe täglich ab 2013; kein Doppel (nur sofr, srf, h41 im Katalog). Ab 2021 ausserhalb der Siegelgrenze nur als Datenreihe vor 2021 nutzbar."
+ },
+ {
+  "id": "sec_8k_item101_wesentliche_vertraege",
+  "name": "SEC 8-K Item 1.01 (wesentliche Verträge), Tagesanzahl",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/",
+  "domain": "sec.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Eine Häufung von Meldungen über wesentliche Verträge (Übernahmen, Kredit- und Liefervereinbarungen) zeigt Dealaktivität und Risikobereitschaft und bewegt kurzfristig Finanz- und Industriewerte (XLF, XLI) gegenüber dem Weltindex.",
+  "grund": "Vorrat auf 15 aufgefüllt (Lernrunde 28.10.2026); Firmenereignisse aggregiert (erste Priorität); EDGAR-Tagesindex ohne Login wie bei den bestehenden 8-K-Einträgen; kein Doppel (Items 1.03, 2.02, 2.05, 3.01, 4.02, 5.02 bestehen, 1.01 nicht)."
  }
 ]
