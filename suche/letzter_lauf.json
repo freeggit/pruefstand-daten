@@ -1,28 +1,28 @@
 {
- "zeit_utc": "2026-10-27T12:54Z",
- "lauf_id": "L20261027T100646Z",
- "verfassung": "V3.17",
- "commit_main": "4c6b05b955cbd200278de2e4fdb4205217797031",
- "commit_energie": "c185e9028cb1318c3529f667fd83b5cdf9c8aa19",
- "commit_neu": "2f828d7caeb62568a09bd24efc0537c20698d6a7",
- "commit_lernen_vorher": "4f47dfb522a690a13d7e0e638a37177d07233909",
- "code_hash": "d0ab7bcf066bc2fc",
- "sha_suchmaschine": "172a405d41e775e0",
+ "zeit_utc": "2026-10-28T13:44Z",
+ "lauf_id": "L20261028T105311Z",
+ "verfassung": "V3.18",
+ "commit_main": "46e094962bdab2d84a9600f70e41efa8e873562f",
+ "commit_energie": "031950889be2a172d1be153b1c5c79fb9f2f1138",
+ "commit_neu": "eb07e5b9af38155b9d63e941f6107d7edd8c9429",
+ "commit_lernen_vorher": "87c0d83b272c31b9af4dac15742cc4fd38ed5707",
+ "code_hash": "d074671047ae3b27",
+ "sha_suchmaschine": "a63264581c5ed5f1",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "2d3059c5958a3712",
- "sha_manifest_main": "41d28700fb6db1ff",
- "sha_manifest_neu": "9f9cd93c94b6fb6c",
+ "sha_register_vorher": "f5ad282f4d7ccf90",
+ "sha_manifest_main": "c8cc3cb40802c2e9",
+ "sha_manifest_neu": "4eeff6278418757f",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
   "pandas": "3.0.6",
   "python": "3.12.15",
-  "btc_sha": "e4b1bb06c58ebbb0"
+  "btc_sha": "8c16152e4bd556aa"
  },
- "ergebnis_hash": "1fa3b70a257251f1",
- "kandidaten": 357675,
- "kandidaten_neu": 90,
+ "ergebnis_hash": "71d73627334f5d57",
+ "kandidaten": 357885,
+ "kandidaten_neu": 213,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,10 +36,11 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261027T100646Z.json",
+ "laufeintrag": "suche/laeufe/L20261028T105311Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [
-  "neu_adp_beschaeftigung_termine_adp_stand"
+  "neu_bls_ppi_termine_ppi_stand",
+  "neu_usda_hogs_pigs_termine_hogs_pigs_stand"
  ],
- "gesamt": "vollständig"
+ "gesamt": "teilweise"
 }

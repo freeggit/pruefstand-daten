@@ -157,6 +157,12 @@
    "erst_zeit": "2026-10-24T21:57Z",
    "beleg": "suche/laeufe/L20261024T190840Z.json"
   },
+  "neu_bls_ppi_termine_ppi": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261028T105311Z",
+   "erst_zeit": "2026-10-28T13:44Z",
+   "beleg": "suche/laeufe/L20261028T105311Z.json"
+  },
   "neu_boe_bankrate_aenderungstage_aenderungstage": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -876,6 +882,12 @@
    "erst_lauf": "L20261017T051354Z",
    "erst_zeit": "2026-10-17T08:06Z",
    "beleg": "suche/laeufe/L20261017T051354Z.json"
+  },
+  "neu_usda_hogs_pigs_termine_hogs_pigs": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261028T105311Z",
+   "erst_zeit": "2026-10-28T13:44Z",
+   "beleg": "suche/laeufe/L20261028T105311Z.json"
   },
   "neu_usda_wasde_veroeffentlichung_wasde": {
    "erst_dokument": "S0012",
@@ -1784,8 +1796,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261027T100646Z",
-  "zeit_utc": "2026-10-27T12:54Z",
-  "grundreihen_n": 296
+  "lauf_id": "L20261028T105311Z",
+  "zeit_utc": "2026-10-28T13:44Z",
+  "grundreihen_n": 298
  }
 }

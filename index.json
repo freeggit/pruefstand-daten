@@ -1,5 +1,5 @@
 {
- "kumuliert": 696268,
+ "kumuliert": 696481,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -247,6 +247,7 @@
   "neu_bitcoin_onchain_transaktionen_stand",
   "neu_bitcoin_onchain_transaktionen_z252",
   "neu_bls_jolts_veroeffentlichung_termine_jolts_stand",
+  "neu_bls_ppi_termine_ppi_stand",
   "neu_boe_bankrate_aenderungstage_aenderungstage_stand",
   "neu_boe_sonia_sonia_d1",
   "neu_boe_sonia_sonia_d20",
@@ -720,6 +721,7 @@
   "neu_usa_wahltag_wahltag_stand",
   "neu_usda_acreage_grainstocks_termine_acreage_stand",
   "neu_usda_acreage_grainstocks_termine_grain_stocks_stand",
+  "neu_usda_hogs_pigs_termine_hogs_pigs_stand",
   "neu_usda_wasde_veroeffentlichung_wasde_stand",
   "neu_usgs_erdbeben_anzahl_m5_d1",
   "neu_usgs_erdbeben_anzahl_m5_d20",
@@ -1581,11 +1583,17 @@
    "datei": "suche/S0054.json",
    "kandidaten": 357675,
    "in_db": false
+  },
+  {
+   "nr": 55,
+   "datei": "suche/S0055.json",
+   "kandidaten": 357885,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-27T12:54Z",
+ "letzter_suchlauf_utc": "2026-10-28T13:44Z",
  "pruefung_lernrunde_utc": "2026-10-28T09:45:00Z",
- "letzter_code_hash": "d0ab7bcf066bc2fc",
+ "letzter_code_hash": "d074671047ae3b27",
  "methode": "M4",
  "vorreg": [
   {
@@ -1867,11 +1875,19 @@
    "ergebnis_hash": "1fa3b70a257251f1",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261028T105311Z.json",
+   "lauf_id": "L20261028T105311Z",
+   "s_dokument": "suche/S0055.json",
+   "ergebnis_hash": "71d73627334f5d57",
+   "gesamt": "teilweise",
+   "importierbar": false
   }
  ],
- "letzter_lauf_utc": "2026-10-27T12:54Z",
- "letztes_vollarchiv": "suche/S0054_alle.csv.gz",
- "letzter_ergebnis_hash": "1fa3b70a257251f1",
+ "letzter_lauf_utc": "2026-10-28T13:44Z",
+ "letztes_vollarchiv": "suche/S0055_alle.csv.gz",
+ "letzter_ergebnis_hash": "71d73627334f5d57",
  "konflikte": [
   {
    "wo": "index",
@@ -4106,14 +4122,15 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 296,
-  "neu_in_diesem_lauf": 1
+  "grundreihen_n": 298,
+  "neu_in_diesem_lauf": 2
  },
- "letztes_vollarchiv_ergebnis_hash": "1fa3b70a257251f1",
+ "letztes_vollarchiv_ergebnis_hash": "71d73627334f5d57",
  "pruefungen_bestanden": {
   "pruef_hash": "058e74074fd39970",
   "lauf_id": "L20261024T190840Z"
  },
  "letzter_eingabe_hash": "317b41574f56fc13",
- "letzter_gueltiger_lauf": "L20261027T100646Z"
+ "letzter_gueltiger_lauf": "L20261027T100646Z",
+ "letzter_entscheidung_hash": "246e8fa8ef087c6f"
 }
