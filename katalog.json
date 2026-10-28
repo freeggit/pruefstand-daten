@@ -4195,10 +4195,11 @@
   "url": "https://www.sec.gov/cgi-bin/srch-edgar?text=form-type%3D8-K&first=2000&last=2026",
   "domain": "sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Eine Häufung von Schuldenaufnahmen an einem Tag zeigt offene Kreditmärkte und Refinanzierungsdruck und bewegt kurzfristig Kreditanleihen (LQD) und Finanzwerte (XLF) gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 28.10.2026); Firmenereignisse aggregiert (erste Priorität); EDGAR-Tagesindex ohne Login, Item-Zählung wie bei den bestehenden 8-K-Einträgen; kein Doppel."
+  "grund": "EDGAR-Quelle (8-K): SEC sperrt diese Umgebung (403); Beschaffung ueber GitHub Action auf main (Zusatz 6), nicht selbst versuchen. Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 28.10.2026); Firmenereignisse aggregiert (erste Priorität); EDGAR-Tagesindex ohne Login, Item-Zählung wie bei den bestehenden 8-K-Einträgen; kein ",
+  "geprueft_utc": "2026-10-28T20:15Z"
  },
  {
   "id": "fred_rrp_reverse_repo_taeglich",
@@ -4221,9 +4222,10 @@
   "url": "https://www.sec.gov/Archives/edgar/daily-index/",
   "domain": "sec.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Eine Häufung von Meldungen über wesentliche Verträge (Übernahmen, Kredit- und Liefervereinbarungen) zeigt Dealaktivität und Risikobereitschaft und bewegt kurzfristig Finanz- und Industriewerte (XLF, XLI) gegenüber dem Weltindex.",
-  "grund": "Vorrat auf 15 aufgefüllt (Lernrunde 28.10.2026); Firmenereignisse aggregiert (erste Priorität); EDGAR-Tagesindex ohne Login wie bei den bestehenden 8-K-Einträgen; kein Doppel (Items 1.03, 2.02, 2.05, 3.01, 4.02, 5.02 bestehen, 1.01 nicht)."
+  "grund": "EDGAR-Quelle (8-K): SEC sperrt diese Umgebung (403); Beschaffung ueber GitHub Action auf main (Zusatz 6), nicht selbst versuchen. Vorrat auf 15 aufgefüllt (Lernrunde 28.10.2026); Firmenereignisse aggregiert (erste Priorität); EDGAR-Tagesindex ohne Login wie bei den bestehenden 8-K-Einträgen; kein Doppel (Items 1.03, 2.02, 2.05, ",
+  "geprueft_utc": "2026-10-28T20:15Z"
  }
 ]
