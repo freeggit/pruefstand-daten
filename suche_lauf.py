@@ -23,6 +23,28 @@ V3.17 (12.10.2026, Reto: «freigeben»; Astra-Gutachten 15 und 16):
   Sonst entsteht ein Laufeintrag «keine Neuberechnung» mit Verweis auf den letzten gültigen Lauf.
 - §5 (E38): Ein Vollarchiv entsteht auch bei geänderten Ergebnissen; jeder Laufeintrag nennt die Ergebnis-Prüfsumme des
   Archivs, auf das er verweist. Die Freigabe (importierbar ja/nein) trägt lauf_status.py ein.
+
+V3.18 (E9 Stufe 2, ENTWURF 27.10.2026, nicht in Kraft):
+- Die Suchmaschine liest die Discovery-Daten aus dem eingefrorenen Stand _lernen/discovery (discovery.py). Jeder Lauf
+  beginnt mit dem Eingabe-Durchgang: neue Dateien werden gekürzt und eingefroren, freigegebene Nachführungen
+  (nachfuehrung.json) angewandt, Revisionen des Spiegels nur berichtet (discovery/revisionen.json). Danach prüft die
+  Einfrierprüfung den ganzen Stand; bei einem Verstoss wird nicht gerechnet.
+- Vergleichsstand nach der Registereintragung: Der Laufeintrag nennt zusätzlich eingabe_hash_nach_eintragung (neues
+  Register, neue kumulierte Zahl). lauf_status.py setzt diesen Wert als Referenz, damit sich ein Lauf am Folgetag nicht
+  selbst noch einmal auslöst.
+Fassung 2 (28.10.2026, Astra-Gutachten 23):
+- M1: Die Vorprüfung (Eingabe-Durchgang) hält genau eine Fassung von stand.json fest (Feld stand.fassung) und stellt
+  daraus alle Dateien im Cache der Suchmaschine bereit (Feld stand.bereitgestellt). Die Rechnung liest ausschliesslich
+  diese Dateien (ohne Einfrieren, ohne Nachführung). Danach muss gelten: gleiche Fassung, bereitgestellte Dateien
+  unverändert, keine weiteren Dateien, gleiche Eingabe-Prüfsumme wie in der Vorprüfung. Scheitert die Vorprüfung
+  (unlesbare Pflicht-Eingabe, Familie L nicht lesbar, Verstoss in der Einfrierprüfung), wird vor der Rechnung
+  abgebrochen; der Lauf ist fehlgeschlagen.
+- M2: eingabe_hash_lauf ist die tatsächliche Eingabe der Rechnung (E38, Finalisten) und bleibt unverändert;
+  eingabe_hash_nach_eintragung dient nur dem Auslöser (gleiche Definition, nur die eigenen Änderungen eingerechnet).
+  eingabe_hash_lauf ist die Prüfsumme der Vorprüfung, also vor der Rechnung gesichert. Der Kontrolllauf am Montag
+  vergleicht Ergebnis-Prüfsumme und Entscheidungs-Prüfsumme (Positivliste in eingabe.py: Placebo-Pfad, Hürden, Route C,
+  Kandidaten der Stufe D, Kalibrierung). Register und kumulierte Zahl gehen nicht in Entscheidungen ein (nur Kennzeichen
+  «neu», Zähler und Bonferroni-Bericht), solange mindestens 40 Placebo-Läufe rechnen (Betrieb: 200).
 """
 import gzip, hashlib, json, os, shutil, subprocess, sys
 from datetime import datetime, timezone
@@ -31,6 +53,16 @@ from zoneinfo import ZoneInfo
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
 from integritaet import ohne_nan  # noqa: E402
+try:
+    from eingabe import entscheidung_pruefsumme  # noqa: E402  (V3.18 Fassung 2)
+except ImportError:   # eingabe.py noch ohne die Funktion (Dateien einzeln hochgeladen): keine Entscheidungs-Prüfsumme
+    def entscheidung_pruefsumme(z):
+        return None
+try:
+    import discovery  # noqa: E402  (V3.18 E9, Entwurf: eingefrorener Discovery-Stand)
+except ImportError:   # Code noch nicht vollständig hochgeladen: wie bisher ohne Stand
+    discovery = None
+STAND_AKTIV = bool(discovery is not None and getattr(discovery, "AKTIV", False))   # Rückweg: discovery.AKTIV = False
 
 def schreibe_json(obj, pfad):
     """Strenges JSON: NaN und unendliche Werte werden zu null (5.10.2026, Reto: «NaN-Korrektur wie vorgeschlagen»).
@@ -163,6 +195,13 @@ if not os.path.exists(reg):
 env = dict(os.environ, PS_CACHE=os.path.join(LAUF, "cache"), PS_KUM_VORHER=str(int(index["kumuliert"])),
            PS_REGISTER=reg, PS_PAARE=os.path.join(ROOT, "paare.txt"), PS_MECHANISMEN=os.path.join(ROOT, "mechanismen.txt"))
 env.setdefault("PS_PLACEBO", "200")
+# V3.18 (E9 Stufe 2, Entwurf): eingefrorener Discovery-Stand auf claude/lernen; nur die Suche nimmt neue Dateien auf.
+STAND_DIR = os.path.join(LERNEN, "discovery")
+for _k in [k for k in env if k.startswith("PS_DISCOVERY_")]:
+    env.pop(_k)
+if STAND_AKTIV:
+    env.update(PS_DISCOVERY_STAND=STAND_DIR, PS_DISCOVERY_EINFRIEREN="1", PS_DISCOVERY_BERICHT="1",
+               PS_DISCOVERY_NACHFUEHRUNG=os.path.join(ROOT, "nachfuehrung.json"), PS_LAUF_ID=LAUF_ID)
 args = [sys.executable, os.path.join(ROOT, "suchmaschine.py"), basis(None)]
 for pfad, var in (("_daten-energie", "PS_BASIS_ENERGIE"), ("_daten-neu", "PS_BASIS_NEU")):
     if os.path.isdir(os.path.join(ROOT, pfad, "data")):
@@ -171,7 +210,8 @@ for pfad, var in (("_daten-energie", "PS_BASIS_ENERGIE"), ("_daten-neu", "PS_BAS
         print(f"{pfad} fehlt: diese Reihen entfallen")
 print("Aufruf:", " ".join(args), "| Energie", env.get("PS_BASIS_ENERGIE"), "| Scout", env.get("PS_BASIS_NEU"), "| kumuliert vorher", index["kumuliert"], "| Register", reg, flush=True)
 
-CODE_DATEIEN = ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json", "explorativ.json", "eingabe.py")
+CODE_DATEIEN = ("suchmaschine.py", "paare.txt", "suche_lauf.py", "mechanismen.txt", "korrekturen_neu.json", "explorativ.json", "eingabe.py",
+                "discovery.py", "nachfuehrung.json")   # V3.18 E9 (Entwurf): Stand-Code und Nachführliste
 code_hash = hashlib.sha256("".join(sha(os.path.join(ROOT, f)) or "" for f in CODE_DATEIEN).encode()).hexdigest()[:16]
 letzter_s = next((s["datei"] for s in reversed(index["suchlaeufe"]) if s.get("datei")), None)
 
@@ -194,21 +234,136 @@ def github_ausgabe(k, v):
             f.write(f"{k}={v}\n")
 
 
+def register_sha(pfad):
+    """V3.18 E9 (Entwurf): Prüfsumme des entpackten Registers, unabhängig von der Gzip-Fassung."""
+    try:
+        return hashlib.sha256(gzip.decompress(open(pfad, "rb").read())).hexdigest()[:16]
+    except Exception:
+        return None
+
+
 def eingabe_gesamt():
     """V3.17 §4: Eingabe der Discovery (aus der Suchmaschine) plus Register, Code, Vorregistrierungen und Placebo-Zahl."""
     try:
         teil = json.load(open(os.path.join(LAUF, "eingabe.json"), encoding="utf-8"))
     except (OSError, ValueError):
         return None, None
-    ganz = {"daten": teil.get("eingabe_hash"), "register": sha(reg), "code": code_hash,
+    ganz = {"daten": teil.get("eingabe_hash"), "register": register_sha(reg), "code": code_hash,
             "vorregistrierung": ordner_sha(os.path.join(ROOT, "vorregistrierung")), "placebo": env.get("PS_PLACEBO")}
     return hashlib.sha256(json.dumps(ganz, sort_keys=True).encode()).hexdigest()[:16], dict(ganz, teile=teil.get("teile"))
 
 
-E9 = {"modus": "immer (Push oder manuell)"}
+def eingabe_nach_eintragung(kum_neu, reg_neu):
+    """V3.18 (E9, Entwurf): Vergleichs-Prüfsumme nach der eigenen Registereintragung des Laufs, genau so, wie die Prüfung
+    am Folgetag sie ohne weitere Änderung berechnet: neues Register und neue kumulierte Zahl, alles andere gleich."""
+    try:
+        teil = json.load(open(os.path.join(LAUF, "eingabe.json"), encoding="utf-8"))
+        from eingabe import pruefsumme
+    except (OSError, ValueError, ImportError):
+        return None
+    teile = dict(teil.get("teile") or {})
+    if "KUM_VORHER" not in teile or kum_neu is None or not os.path.exists(reg_neu):
+        return None
+    if pruefsumme(teile) != teil.get("eingabe_hash"):   # Gutachten 23, M2: nur bei nachweislich gleicher Definition
+        return None
+    teile["KUM_VORHER"] = pruefsumme(int(kum_neu))
+    ganz = {"daten": pruefsumme(teile), "register": register_sha(reg_neu), "code": code_hash,
+            "vorregistrierung": ordner_sha(os.path.join(ROOT, "vorregistrierung")), "placebo": env.get("PS_PLACEBO")}
+    return hashlib.sha256(json.dumps(ganz, sort_keys=True).encode()).hexdigest()[:16]
+
+
+# ---------------------------------------------------------------- V3.18 (E9 Stufe 2, Entwurf): Eingabe-Durchgang
+# Vor jeder Rechnung (auch bei Push): Dateien aus dem eingefrorenen Stand bereitstellen, neue Dateien einfrieren,
+# freigegebene Nachführungen anwenden, Revisionen des Spiegels berichten, Eingabe-Prüfsumme schreiben.
+_p0 = subprocess.run(args, cwd=LAUF, env=dict(env, PS_NUR_EINGABEHASH="1"), capture_output=True, text=True)
+rc0 = _p0.returncode
+try:
+    _sb = json.load(open(os.path.join(LAUF, "discovery_bericht.json"), encoding="utf-8"))
+except (OSError, ValueError):
+    _sb = None
+_gelesen = set(_sb["gelesen"]) if (_sb and isinstance(_sb.get("gelesen"), list)) else None   # ohne Bericht: alles streng
+_pr = (discovery.pruefen(STAND_DIR, _gelesen) if STAND_AKTIV else
+       {"dateien_n": 0, "verstoesse": [], "befunde_nicht_gelesen": [], "ohne_eintrag": []})
+# Gutachten 23, M1/M2: Eingabe der Vorprüfung (soll gerechnet werden), die festgehaltene Fassung von stand.json und die
+# von der Vorprüfung bereitgestellten Dateien (Cache der Suchmaschine). Die Rechnung liest ausschliesslich diese Dateien.
+eg_vor, eg_vor_teile = eingabe_gesamt() if rc0 == 0 else (None, None)
+STAND_FASSUNG = sha(os.path.join(STAND_DIR, "stand.json")) if STAND_AKTIV else None
+
+
+def bereitgestellt():
+    c = env["PS_CACHE"]
+    try:
+        namen = sorted(os.listdir(c))
+    except OSError:
+        return {}
+    return {n: sha(os.path.join(c, n)) for n in namen if os.path.isfile(os.path.join(c, n))}
+
+
+CACHE_VOR = bereitgestellt()
+if _sb is not None:
+    schreibe_json({"lauf_id": LAUF_ID, "zeit_utc": BEGINN.strftime("%Y-%m-%dT%H:%M:%SZ"), "regel": _sb.get("regel"),
+                   "revisionen_n": _sb.get("revisionen_n"), "revisionen_je_gruppe": _sb.get("revisionen_je_gruppe"),
+                   "revisionen_summe": _sb.get("revisionen_summe"), "revisionen": _sb.get("revisionen")},
+                  os.path.join(STAND_DIR, "revisionen.json"))
+STAND_KURZ = {
+    "aktiv": STAND_AKTIV, "ordner": "discovery/ (claude/lernen)", "dateien_n": _pr["dateien_n"],
+    "fassung": STAND_FASSUNG, "fassung_regel": "Prüfsumme von stand.json nach der Vorprüfung; die Rechnung liest nur die daraus bereitgestellten Dateien (Gutachten 23, M1)",
+    "bereitgestellt": {"dateien_n": len(CACHE_VOR), "pruefsumme": hashlib.sha256(json.dumps(CACHE_VOR, sort_keys=True).encode()).hexdigest()[:16]},
+    "neu_eingefroren_n": (_sb or {}).get("neu_eingefroren_n"), "neu_eingefroren": ((_sb or {}).get("neu_eingefroren") or [])[:60],
+    "nachgefuehrt": (_sb or {}).get("nachgefuehrt"), "nachfuehrung_angewandt": (_sb or {}).get("nachfuehrung_angewandt"),
+    "nachfuehrung_fehler": (_sb or {}).get("nachfuehrung_fehler"), "nicht_eingefroren": (_sb or {}).get("nicht_eingefroren"),
+    "revisionen_n": (_sb or {}).get("revisionen_n"), "revisionen_je_gruppe": (_sb or {}).get("revisionen_je_gruppe"),
+    "revisionen_summe": (_sb or {}).get("revisionen_summe"),
+    "revisionen_bericht": "discovery/revisionen.json (nur Bericht, löst nichts aus)",
+    "einfrierpruefung": {"bestanden": not _pr["verstoesse"], "verstoesse": _pr["verstoesse"][:20],
+                         "befunde_nicht_gelesen": _pr.get("befunde_nicht_gelesen", [])[:20],
+                         "geprueft": ("alle gelesenen eingefrorenen Fassungen streng" if _gelesen is not None
+                                      else "alle eingefrorenen Fassungen streng (kein Bericht)"),
+                         "nicht_eingefroren": "nicht im Stand; Stichtagskürzung der Suchmaschine wie bisher",
+                         "ohne_eintrag_n": len(_pr["ohne_eintrag"])},
+}
+if rc0 != 0:
+    STAND_KURZ["eingabe_durchgang_fehler"] = (_p0.stdout + _p0.stderr)[-1500:]
+
+
+def abbruch(fehler, status, hinweis, e9):
+    """Gutachten 23, M1: Der Lauf endet vor oder nach der Rechnung ohne Ergebnis; er ist fehlgeschlagen und wird nicht
+    Vergleichsstand (lauf_status.py setzt nur importierbare Läufe als Referenz)."""
+    laufeintrag({"stufen": {"suche": "fehlgeschlagen"}, "e9": e9, "fehler": fehler, "ausgaben": None, "hinweis": hinweis})
+    _lp = os.path.join(LERNEN, "suche", "letzter_lauf.json")
+    try:
+        _alt = json.load(open(_lp, encoding="utf-8"))
+    except (OSError, ValueError):
+        _alt = {}
+    _alt["letzter_versuch"] = {"lauf_id": LAUF_ID, "status": status, "zeit_utc": BEGINN.strftime("%Y-%m-%dT%H:%MZ")}
+    schreibe_json(_alt, _lp)
+    print(f"Lauf {LAUF_ID}: {fehler}"); sys.exit(4)
+
+
+if _pr["verstoesse"]:
+    abbruch(f"Einfrierprüfung nicht bestanden: {len(_pr['verstoesse'])} Verstoss/Verstösse im Discovery-Stand; nicht gerechnet",
+            "fehlgeschlagen (Einfrierprüfung)",
+            ("Kein Ergebnis dieses Laufs. Behebung über einen freigegebenen Eintrag in nachfuehrung.json für die genannten "
+             "Dateien (ersetzt auch eine fehlende oder beschädigte Fassung) oder Rückweg mit discovery.AKTIV = False."),
+            {"modus": "V3.18: Einfrierprüfung vor der Rechnung", "stand": STAND_KURZ})
+if STAND_AKTIV and (eg_vor is None or _sb is None):   # Gutachten 23, M1: unlesbare Pflicht-Eingabe -> Abbruch, kein Ersatz
+    abbruch("Vorprüfung fehlgeschlagen: Eingabe nicht vollständig lesbar, Eingabe-Prüfsumme oder Bericht des Stands fehlt; nicht gerechnet",
+            "fehlgeschlagen (Vorprüfung)",
+            ("Kein Ergebnis dieses Laufs (V3.18 §3 Ziff. 9 und §5). Ursache siehe e9.stand.eingabe_durchgang_fehler. "
+             "Die Daten werden nicht ersetzt; der nächste Lauf versucht es erneut."),
+            {"modus": "V3.18: Vorprüfung vor der Rechnung", "stand": STAND_KURZ})
+_l_gelesen = any(n.startswith("french__") and "aily" in n for n in (_gelesen or ()))
+if STAND_AKTIV and os.environ.get("PS_LANGZEIT", "1") == "1" and ("Langzeit übersprungen" in (_p0.stdout or "") or not _l_gelesen):
+    # Familie L ist Pflichtbestand (Gutachten 23, M1): nicht gelesen oder nicht aufgebaut -> Abbruch
+    abbruch("Vorprüfung fehlgeschlagen: Familie L (Ken French) nicht lesbar; nicht gerechnet",
+            "fehlgeschlagen (Vorprüfung)",
+            ("Kein Ergebnis dieses Laufs (V3.18 §3 Ziff. 9). Familie L wird nicht stillschweigend weggelassen. "
+             "Behebung über Nachführung oder Rückweg (§8)."),
+            {"modus": "V3.18: Vorprüfung vor der Rechnung", "stand": STAND_KURZ})
+
+E9 = {"modus": "immer (Push oder manuell)", "eingabe_hash": eg_vor, "stand": STAND_KURZ}
 if os.environ.get("PS_E9") == "1":
-    rc0 = subprocess.run(args, cwd=LAUF, env=dict(env, PS_NUR_EINGABEHASH="1"), capture_output=True, text=True).returncode
-    eg, eg_teile = eingabe_gesamt() if rc0 == 0 else (None, None)
+    eg, eg_teile = eg_vor, eg_vor_teile
     ref = index.get("letzter_eingabe_hash")
     wtag = int(os.environ.get("PS_E9_WOCHENTAG_TEST", BEGINN.astimezone(ZoneInfo("Europe/Zurich")).weekday()))   # Variable nur für Tests
     montag = wtag == 0
@@ -221,8 +376,8 @@ if os.environ.get("PS_E9") == "1":
         anlaesse.append("Eingaben geändert")
     if montag:
         anlaesse.append("Kontrolllauf (Montag)")
-    E9 = {"modus": "bei Änderung (V3.17, E9)", "eingabe_hash": eg, "referenz_eingabe_hash": ref,
-          "referenz_lauf": index.get("letzter_gueltiger_lauf"), "anlaesse": anlaesse, "eingabe": eg_teile}
+    E9 = {"modus": "bei Änderung (V3.17, E9; V3.18 mit eingefrorenem Stand, Entwurf)", "eingabe_hash": eg, "referenz_eingabe_hash": ref,
+          "referenz_lauf": index.get("letzter_gueltiger_lauf"), "anlaesse": anlaesse, "eingabe": eg_teile, "stand": STAND_KURZ}
     if not anlaesse:
         laufeintrag({"stufen": {"suche": "keine Neuberechnung"}, "e9": E9,
                      "ausgaben": {"s_dokument": letzter_s, "vollarchiv": index.get("letztes_vollarchiv"),
@@ -233,8 +388,12 @@ if os.environ.get("PS_E9") == "1":
 github_ausgabe("gerechnet", "true")
 
 logp = os.path.join(LAUF, "log.txt")
+env_rechnung = dict(env)
+if STAND_AKTIV:   # Gutachten 23, M1: Die Rechnung liest nur die festgehaltene Fassung (kein Einfrieren, keine Nachführung)
+    env_rechnung.update(PS_DISCOVERY_EINFRIEREN="0", PS_DISCOVERY_BERICHT="0")
+    env_rechnung.pop("PS_DISCOVERY_NACHFUEHRUNG", None)
 with open(logp, "w") as lg:
-    rc = subprocess.run(args, cwd=LAUF, env=env, stdout=lg, stderr=subprocess.STDOUT).returncode
+    rc = subprocess.run(args, cwd=LAUF, env=env_rechnung, stdout=lg, stderr=subprocess.STDOUT).returncode
 log = open(logp, encoding="utf-8", errors="replace").read()
 print(log[-6000:])
 if rc != 0:
@@ -251,6 +410,26 @@ if rc != 0:
     sys.exit(rc)
 
 zus = json.load(open(os.path.join(LAUF, "suchlauf_zusammenfassung.json")))
+eg_rechnung, _ = eingabe_gesamt()   # Eingabe-Prüfsumme, wie die Rechnung sie gebildet hat
+eg_lauf = eg_vor if eg_vor is not None else eg_rechnung   # tatsächliche Eingabe, vor der Rechnung gesichert (Gutachten 23, M2)
+if STAND_AKTIV:   # Gutachten 23, M1: Die Rechnung las genau die von der Vorprüfung bereitgestellten Dateien
+    _fest = []
+    if sha(os.path.join(STAND_DIR, "stand.json")) != STAND_FASSUNG:
+        _fest.append("stand.json hat sich während der Rechnung geändert")
+    if eg_rechnung != eg_vor:
+        _fest.append(f"Eingabe-Prüfsumme der Rechnung {eg_rechnung} ungleich Vorprüfung {eg_vor}")
+    CACHE_NACH = bereitgestellt()
+    _anders = sorted(n for n in CACHE_VOR if CACHE_NACH.get(n) != CACHE_VOR[n])
+    _dazu = sorted(set(CACHE_NACH) - set(CACHE_VOR))
+    if _anders:
+        _fest.append(f"bereitgestellte Dateien während der Rechnung verändert: {_anders[:5]}")
+    if _dazu:
+        _fest.append(f"Dateien gelesen, welche die Vorprüfung nicht bereitgestellt hat: {_dazu[:5]}")
+    STAND_KURZ["rechnung_auf_fassung"] = "bestätigt: gleiche Fassung, gleiche bereitgestellte Dateien, gleiche Eingabe" if not _fest else _fest
+    if _fest:
+        abbruch("Rechnung nicht auf der vorgeprüften Fassung: " + "; ".join(_fest), "fehlgeschlagen (Fassung)",
+                "Kein Ergebnis dieses Laufs (V3.18 §3 Ziff. 3, Gutachten 23 M1). Die Ausgaben der Rechnung werden nicht verwendet.",
+                dict(E9, eingabe_hash_vorpruefung=eg_vor, eingabe_hash_lauf=eg_lauf, eingabe_hash_rechnung=eg_rechnung))
 
 herkunft = {
     "commit_main": commit(ROOT), "commit_energie": commit(os.path.join(ROOT, "_daten-energie")),
@@ -288,11 +467,27 @@ kern = {"kandidaten": zus["kandidaten"], "kandidaten_neu": zus["kandidaten_neu"]
         "kandidaten_stufe_d": len(zus["bausteine"]), "fehlalarmrate": zus.get("fehlalarmrate"), "placebo_laeufe": zus.get("placebo_laeufe")}
 s_schreiben = bool(vollarchiv or ergebnis_neu)
 nr = max([s["nr"] for s in index["suchlaeufe"]] + [0]) + 1
-eg_lauf, _ = eingabe_gesamt()
-wiederholbarkeit = None
+# V3.18 E9 (Entwurf): Register und kumulierte Zahl so, wie sie nach diesem Lauf auf claude/lernen stehen. Nur die eigenen
+# Änderungen dieses Laufs sind eingerechnet; was andere während des Laufs auf claude/lernen eintragen, bleibt eine
+# offene Änderung und löst den nächsten Lauf aus (Gutachten 23, M2).
+eg_nach = (eingabe_nach_eintragung(zus.get("kandidaten_kumuliert"), os.path.join(LAUF, "hypothesen.txt.gz")) if s_schreiben
+           else eingabe_nach_eintragung(index.get("kumuliert"), reg))
+# Gutachten 23 (M2/M3): Entscheidungs-Prüfsumme über die Positivliste eingabe.ENTSCHEIDUNG_FELDER (Placebo-Pfad, Hürden,
+# Route C, Kandidaten der Stufe D, Kalibrierung); ohne Zähler, Kennzeichen «neu», Bonferroni-Bericht und ohne die Berichte
+# aus den täglichen Manifesten.
+entscheidung_hash = entscheidung_pruefsumme(zus)
+wiederholbarkeit, wiederholbarkeit_detail = None, None
 if E9.get("anlaesse") == ["Kontrolllauf (Montag)"]:
-    wiederholbarkeit = ("gleich" if ergebnis_hash == index.get("letzter_ergebnis_hash") else
+    _g_erg = ergebnis_hash == index.get("letzter_ergebnis_hash")
+    _ref_ent = index.get("letzter_entscheidung_hash")
+    _g_ent = None if _ref_ent is None else entscheidung_hash == _ref_ent
+    wiederholbarkeit = ("gleich" if _g_erg and _g_ent is not False else
                         "Abweichung trotz gleicher Eingaben – zu klären; keine neue Evidenz (V3.17 §4)")
+    wiederholbarkeit_detail = {"ergebnis": "gleich" if _g_erg else "abweichend",
+                               "entscheidungen": ("kein Vergleichswert (erster Lauf mit Entscheidungs-Prüfsumme)" if _g_ent is None
+                                                  else "gleich" if _g_ent else "abweichend"),
+                               "startwerte": "fest im Code (Placebo 1000+s, Auswahl 20260925, F5 5000+s, Kalibrierung 777)"}
+index["letzter_entscheidung_hash"] = entscheidung_hash
 eintrag = laufeintrag({
     "stufen": {"suche": "vollständig"}, "herkunft": herkunft, "ergebnis_hash": ergebnis_hash, **kern,
     "reihen": {"vorhanden_n": len(zus["indikatoren"]), "vorlauf_n": len(vorher), "entfallen_gegen_vorlauf": entfallen,
@@ -303,7 +498,11 @@ eintrag = laufeintrag({
                  "vollarchiv": f"suche/S{nr:04d}_alle.csv.gz" if vollarchiv else index.get("letztes_vollarchiv"),
                  "vollarchiv_art": "neu in diesem Lauf" if vollarchiv else "aus einem früheren Lauf mit Zeichen für Zeichen gleichen Ergebnissen",
                  "vollarchiv_ergebnis_hash": ergebnis_hash if vollarchiv else index.get("letztes_vollarchiv_ergebnis_hash")},
-    "e9": dict(E9, eingabe_hash_lauf=eg_lauf), "wiederholbarkeit": wiederholbarkeit,
+    "e9": dict(E9, eingabe_hash_vorpruefung=eg_vor, eingabe_hash_lauf=eg_lauf, eingabe_hash_rechnung=eg_rechnung,
+               eingabe_hash_nach_eintragung=eg_nach,
+               bedeutung={"eingabe_hash_lauf": "tatsächliche Eingabe dieser Rechnung, in der Vorprüfung vor der Rechnung gesichert; massgeblich für E38 und Finalisten",
+                          "eingabe_hash_nach_eintragung": "nur Vergleichsstand für den Auslöser (§4): Ausgangszustand plus eigene Register- und Zählstandsänderungen; nicht für E38 oder Finalisten"}),
+    "entscheidung_hash": entscheidung_hash, "wiederholbarkeit": wiederholbarkeit, "wiederholbarkeit_detail": wiederholbarkeit_detail,
     "anlass_s": ("neue Hypothesen" if zus["kandidaten_neu"] > 0 else "geänderter Code" if code_neu else
                  "geänderte Ergebnisse (Datenstand)" if ergebnis_neu else "keiner"),
 })
