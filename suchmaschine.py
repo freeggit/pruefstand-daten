@@ -2,7 +2,9 @@
 """Prüfstand – Suchmaschine (Suchraum, Verfassung V3.9, Methode M4).
 Aufruf: python3 suchmaschine.py <basis main/data> [<basis claude/daten-energie/data>] [<basis claude/daten-neu/data>]
 Umgebung: PS_CACHE, PS_KUM_VORHER, PS_REGISTER, PS_PLACEBO (Standard 20), PS_LANGZEIT, PS_PAARE, PS_MECHANISMEN,
-          PS_BASIS_ENERGIE, PS_BASIS_NEU, PS_KALIBRIERUNG (1 = Trefferchance mit eingepflanztem Effekt messen, Standard 1).
+          PS_BASIS_ENERGIE, PS_BASIS_NEU, PS_KALIBRIERUNG (1 = Trefferchance mit eingepflanztem Effekt messen, Standard 1),
+          V3.18 (Entwurf): PS_DISCOVERY_STAND (Ordner des eingefrorenen Stands), PS_DISCOVERY_EINFRIEREN (1 = neue Dateien
+          aufnehmen), PS_DISCOVERY_BERICHT (1 = Revisionsbericht), PS_DISCOVERY_NACHFUEHRUNG (nachfuehrung.json), PS_LAUF_ID.
 
 Methode M4 (V3.9, 27.9.2026, von Reto freigegeben «a bis d umsetzen»), baut auf M3 auf:
 - A Hürde aus den Placebos: T_A = 97.5%-Quantil des besten Placebo-t je Lauf (unter denselben Vorfiltern wie ein
@@ -81,13 +83,29 @@ os.makedirs(CACHE, exist_ok=True)
 def log(*a):
     print(*a, flush=True)
 
+# V3.18 (E9 Stufe 2, ENTWURF 27.10.2026): Die Discovery liest ihre Daten aus dem eingefrorenen Stand (discovery.py).
+# Ohne PS_DISCOVERY_STAND wie bisher direkt aus den Spiegeln (z. B. siegel_test.py). Manifeste bleiben immer live.
+STAND = None
+if os.environ.get("PS_DISCOVERY_STAND"):
+    import discovery
+    STAND = discovery.Stand(os.environ["PS_DISCOVERY_STAND"], schreiben=os.environ.get("PS_DISCOVERY_EINFRIEREN") == "1",
+                            bericht=os.environ.get("PS_DISCOVERY_BERICHT") == "1",
+                            nachfuehrung=os.environ.get("PS_DISCOVERY_NACHFUEHRUNG"), lauf_id=os.environ.get("PS_LAUF_ID"))
+
+def _holen(url):
+    with urllib.request.urlopen(url, timeout=120) as r:
+        return r.read()
+
 def lade(rel, basis=None):
     basis = basis or BASIS
     tag = "" if basis == BASIS else ("e__" if basis == BASIS_E else "n__")
     p = os.path.join(CACHE, tag + rel.replace("/", "__"))
     if not os.path.exists(p):
-        with urllib.request.urlopen(f"{basis}/{rel}", timeout=120) as r, open(p, "wb") as f:
-            f.write(r.read())
+        if STAND is not None and not rel.endswith(".json"):
+            STAND.bereitstellen(tag + rel.replace("/", "__"), lambda: _holen(f"{basis}/{rel}"), p)
+        else:
+            with urllib.request.urlopen(f"{basis}/{rel}", timeout=120) as r, open(p, "wb") as f:
+                f.write(r.read())
     return p
 
 def register_laden():
@@ -211,8 +229,17 @@ def french_tag(dateiname):
     d = d.apply(pd.to_numeric, errors="coerce")
     return bis(d.mask(d <= -99.99), L_ENDE)
 
+FRENCH_TAG_FEST = {"french:12_Industry_Portfolios_daily_CSV.zip": "12_Industry_Portfolios_Daily.csv",
+                   "french:F-F_Research_Data_Factors_daily_CSV.zip": "F-F_Research_Data_Factors_daily.csv"}
+
+
 def familie_l():
     dateien = [n for k, v in man["reihen"].items() if k.startswith("french:") for n in v.get("dateien", [])]
+    # V3.18 Fassung 2 (Gutachten 23, M1): Ein Abruffehler bei Ken French (Manifest mit «fehler», ohne Dateiliste) sperrt
+    # Familie L nicht, wenn die bisherige Datei vorliegt (wie E29 für Kurse und FRED, 23.10.2026): Es gelten die festen
+    # Tagesdateien; mit eingefrorenem Stand aus dem Stand, sonst die bisherige Datei im Spiegel. Gilt in allen Lesepfaden,
+    # damit der Siegeltest (A, B, C ohne Stand; D, BS, CS mit Stand) auf denselben Daten vergleicht.
+    dateien += [n for k, n in FRENCH_TAG_FEST.items() if "fehler" in (man["reihen"].get(k) or {}) and n not in dateien]
     ind_d = [n for n in dateien if "12_industry" in n.lower() and "daily" in n.lower()]
     fak_d = [n for n in dateien if "research_data_factors" in n.lower() and "daily" in n.lower() and "5_factors" not in n.lower()]
     if not ind_d or not fak_d:
@@ -564,7 +591,11 @@ BTC_SHA = None
 try:
     btc_p = os.path.join(CACHE, "btc.csv")
     if not os.path.exists(btc_p):
-        urllib.request.urlretrieve("https://raw.githubusercontent.com/ff137/bitstamp-btcusd-minute-data/main/data/updates/btcusd_bitstamp_1min_latest.csv", btc_p)
+        _btc_url = "https://raw.githubusercontent.com/ff137/bitstamp-btcusd-minute-data/main/data/updates/btcusd_bitstamp_1min_latest.csv"
+        if STAND is not None:   # V3.18 E9: auch Bitcoin aus dem eingefrorenen Stand
+            STAND.bereitstellen("btc.csv", lambda: _holen(_btc_url), btc_p)
+        else:
+            urllib.request.urlretrieve(_btc_url, btc_p)
     BTC_SHA = hashlib.sha256(open(btc_p, "rb").read()).hexdigest()[:16]
     b = pd.read_csv(btc_p); b.index = pd.to_datetime(b.timestamp, unit="s")
     bd = bis(b.close.resample("D").last().dropna())
@@ -891,6 +922,11 @@ def eingaben_schreiben():
     json.dump({"eingabe_hash": gesamt, "teile": teile, "methode": METHODE, "stichtag": str(STICHTAG.date())},
               open("eingabe.json", "w"), indent=1)
     log(f"Eingabe-Prüfsumme (V3.17, E9): {gesamt}")
+    if STAND is not None and STAND.aufrufe:   # V3.18 E9: Bericht des Durchgangs, der die Dateien bereitgestellt hat
+        b = STAND.abschliessen()
+        json.dump(b, open("discovery_bericht.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        log(f"Discovery-Stand (V3.18, E9): {b['dateien_n']} Dateien, neu eingefroren {b['neu_eingefroren_n']}, "
+            f"nachgeführt {len(b['nachgefuehrt'])}, Revisionen im Spiegel {b['revisionen_n']} (nur Bericht)")
     return gesamt
 
 
