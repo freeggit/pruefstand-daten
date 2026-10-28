@@ -1,0 +1,5 @@
+{
+ "regel": "V3.18 E9 (Entwurf): Revisionen der Discovery-Daten bis 31.12.2020 werden nur über einen Eintrag in dieser Liste übernommen. Jeder Eintrag braucht id, dateien (Muster auf die Namen in discovery/dateien auf claude/lernen), grund und freigabe (Reto, Datum). Er wirkt genau einmal; danach folgt ein Lauf.",
+ "beispiel": {"id": "N0001", "dateien": ["fred__SP500.csv"], "grund": "Quelle hat Werte 2016 bis 2020 berichtigt (Revisionsbericht vom TT.MM.JJJJ)", "freigabe": "Reto, TT.MM.JJJJ: «freigeben»"},
+ "eintraege": []
+}
