@@ -4206,10 +4206,14 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD",
   "domain": "fred.stlouisfed.org",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Sinkt das Reverse-Repo-Volumen, fliesst Geldmarktliquidität in Staatspapiere und Risikoanlagen; das wirkt kurzfristig auf Anleihen (SHY, TLT) und Aktien gegenüber dem Weltindex und ergänzt die Treasury-General-Account-Beobachtung.",
-  "grund": "Vorrat auf 15 aufgefüllt (Lernrunde 28.10.2026); L3, öffentliche CSV ohne Login, Reihe täglich ab 2013; kein Doppel (nur sofr, srf, h41 im Katalog). Ab 2021 ausserhalb der Siegelgrenze nur als Datenreihe vor 2021 nutzbar."
+  "grund": "Aufgenommen 28.10.2026: 3355 Zeilen, 2003-02-07 bis 2026-10-27, Median-Abstand 1 Tag, gleiche Folgewerte 2.6%, Min 0.0, Max 2553.7 Mrd. USD. K1-K7 erfüllt (K4: Messwert/Operationsergebnis, nicht revidiert). Publikation: täglich, NY Fed am Abend, FRED nächster Geschäftstag (verfuegbar_nach_tagen 1).",
+  "reihen": [
+   "rrp_volumen"
+  ],
+  "geprueft_utc": "2026-10-28T12:40:00Z"
  },
  {
   "id": "sec_8k_item101_wesentliche_vertraege",

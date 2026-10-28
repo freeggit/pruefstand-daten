@@ -1,0 +1,11 @@
+{
+  "rrp_volumen": {
+    "beschreibung": "Overnight Reverse Repurchase Agreements der Federal Reserve Bank of New York (Gebote der Gegenparteien, Serie RRPONTSYD), taeglich an US-Bankarbeitstagen; Geldmarktliquiditaet.",
+    "einheit": "Mrd. USD",
+    "publikation": "taeglich (NY Fed veroeffentlicht Operationsergebnis am Abend des Operationstags, FRED am naechsten Geschaeftstag)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
