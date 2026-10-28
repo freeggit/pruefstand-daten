@@ -595,6 +595,12 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261028T195301Z",
+   "erst_zeit": "2026-10-28T22:44Z",
+   "beleg": "suche/laeufe/L20261028T195301Z.json"
+  },
   "neu_fred_treasury_lang_dgs2": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -1796,8 +1802,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261028T105311Z",
-  "zeit_utc": "2026-10-28T13:44Z",
-  "grundreihen_n": 298
+  "lauf_id": "L20261028T195301Z",
+  "zeit_utc": "2026-10-28T22:44Z",
+  "grundreihen_n": 299
  }
 }

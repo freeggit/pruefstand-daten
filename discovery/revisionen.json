@@ -1,9 +1,53 @@
 {
- "lauf_id": "L20261028T105311Z",
- "zeit_utc": "2026-10-28T10:53:11Z",
+ "lauf_id": "L20261028T195301Z",
+ "zeit_utc": "2026-10-28T19:53:01Z",
  "regel": "V3.18 E9 (Entwurf): Discovery-Daten bis 31.12.2020, eingefroren bei der ersten Verwendung; Revisionen nur über nachfuehrung.json mit Grund und Freigabe",
- "revisionen_n": 0,
- "revisionen_je_gruppe": {},
- "revisionen_summe": {},
- "revisionen": []
+ "revisionen_n": 2,
+ "revisionen_je_gruppe": {
+  "n__neu": 2
+ },
+ "revisionen_summe": {
+  "geaendert": 105,
+  "hinzugekommen": 0,
+  "entfallen": 0,
+  "werte_fehlen_im_spiegel": 0,
+  "werte_neu_im_spiegel": 0,
+  "relativ_nicht_definiert": 105
+ },
+ "revisionen": [
+  {
+   "datei": "n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz",
+   "geaendert": 24,
+   "hinzugekommen": 0,
+   "entfallen": 0,
+   "werte_fehlen_im_spiegel": 0,
+   "werte_neu_im_spiegel": 0,
+   "max_rel_abweichung": 0.0,
+   "max_abs_abweichung": 1.0,
+   "relativ_nicht_definiert": 24,
+   "max_abs_abweichung_bei_null": 1.0,
+   "zeilen_nur_stand": 24,
+   "zeilen_nur_spiegel": 24,
+   "kopf_geaendert": false,
+   "erstes_datum": "1974-01-24",
+   "letztes_datum": "2020-09-30"
+  },
+  {
+   "datei": "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz",
+   "geaendert": 81,
+   "hinzugekommen": 0,
+   "entfallen": 0,
+   "werte_fehlen_im_spiegel": 0,
+   "werte_neu_im_spiegel": 0,
+   "max_rel_abweichung": 0.0,
+   "max_abs_abweichung": 1.0,
+   "relativ_nicht_definiert": 81,
+   "max_abs_abweichung_bei_null": 1.0,
+   "zeilen_nur_stand": 81,
+   "zeilen_nur_spiegel": 81,
+   "kopf_geaendert": false,
+   "erstes_datum": "1975-01-27",
+   "letztes_datum": "2020-12-10"
+  }
+ ]
 }

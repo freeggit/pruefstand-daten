@@ -1,5 +1,5 @@
 {
- "kumuliert": 696481,
+ "kumuliert": 697368,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -569,6 +569,11 @@
   "neu_fred_propane_propan_d5",
   "neu_fred_propane_propan_stand",
   "neu_fred_propane_propan_z252",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d1",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d20",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d5",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_stand",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_z252",
   "neu_fred_treasury_lang_dgs2_d1",
   "neu_fred_treasury_lang_dgs2_d20",
   "neu_fred_treasury_lang_dgs2_d5",
@@ -1589,9 +1594,15 @@
    "datei": "suche/S0055.json",
    "kandidaten": 357885,
    "in_db": false
+  },
+  {
+   "nr": 56,
+   "datei": "suche/S0056.json",
+   "kandidaten": 358772,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-28T13:44Z",
+ "letzter_suchlauf_utc": "2026-10-28T22:44Z",
  "pruefung_lernrunde_utc": "2026-10-28T09:45:00Z",
  "letzter_code_hash": "d074671047ae3b27",
  "methode": "M4",
@@ -1883,11 +1894,19 @@
    "ergebnis_hash": "71d73627334f5d57",
    "gesamt": "teilweise",
    "importierbar": false
+  },
+  {
+   "datei": "suche/laeufe/L20261028T195301Z.json",
+   "lauf_id": "L20261028T195301Z",
+   "s_dokument": "suche/S0056.json",
+   "ergebnis_hash": "de62b36836adac31",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-28T13:44Z",
- "letztes_vollarchiv": "suche/S0055_alle.csv.gz",
- "letzter_ergebnis_hash": "71d73627334f5d57",
+ "letzter_lauf_utc": "2026-10-28T22:44Z",
+ "letztes_vollarchiv": "suche/S0056_alle.csv.gz",
+ "letzter_ergebnis_hash": "de62b36836adac31",
  "konflikte": [
   {
    "wo": "index",
@@ -4122,15 +4141,28 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 298,
-  "neu_in_diesem_lauf": 2
+  "grundreihen_n": 299,
+  "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "71d73627334f5d57",
+ "letztes_vollarchiv_ergebnis_hash": "de62b36836adac31",
  "pruefungen_bestanden": {
-  "pruef_hash": "058e74074fd39970",
-  "lauf_id": "L20261024T190840Z"
+  "pruef_hash": "90ec151939c3dc8a",
+  "lauf_id": "L20261028T195301Z",
+  "zeit_utc": "2026-10-28T23:27:04Z",
+  "eingabe_hash": "a2d4834d6dffaa40",
+  "umgebung": {
+   "python": "3.12.15",
+   "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
+   "ImageOS": "ubuntu24",
+   "ImageVersion": "20261026.354.1",
+   "numpy": "2.5.4",
+   "pandas": "3.0.6",
+   "python-dateutil": "3.0.0",
+   "tzdata": "2026.6"
+  },
+  "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "317b41574f56fc13",
- "letzter_gueltiger_lauf": "L20261027T100646Z",
- "letzter_entscheidung_hash": "246e8fa8ef087c6f"
+ "letzter_eingabe_hash": "f18447b1ce296fe8",
+ "letzter_gueltiger_lauf": "L20261028T195301Z",
+ "letzter_entscheidung_hash": "8aae1a269b101fc0"
 }

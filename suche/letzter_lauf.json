@@ -1,18 +1,18 @@
 {
- "zeit_utc": "2026-10-28T13:44Z",
- "lauf_id": "L20261028T105311Z",
+ "zeit_utc": "2026-10-28T22:44Z",
+ "lauf_id": "L20261028T195301Z",
  "verfassung": "V3.18",
- "commit_main": "46e094962bdab2d84a9600f70e41efa8e873562f",
+ "commit_main": "5f42beb973253b6795a088e9240d409df1637616",
  "commit_energie": "031950889be2a172d1be153b1c5c79fb9f2f1138",
- "commit_neu": "eb07e5b9af38155b9d63e941f6107d7edd8c9429",
- "commit_lernen_vorher": "87c0d83b272c31b9af4dac15742cc4fd38ed5707",
+ "commit_neu": "0e6bde20ca098ceef6452234982c1718d4111c64",
+ "commit_lernen_vorher": "39fb9f9ee91d45de7b91cde4833bebfd7a73442a",
  "code_hash": "d074671047ae3b27",
  "sha_suchmaschine": "a63264581c5ed5f1",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "f5ad282f4d7ccf90",
+ "sha_register_vorher": "5fe2ca49992c5192",
  "sha_manifest_main": "c8cc3cb40802c2e9",
- "sha_manifest_neu": "4eeff6278418757f",
+ "sha_manifest_neu": "f45c3b996622bc25",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
@@ -20,9 +20,9 @@
   "python": "3.12.15",
   "btc_sha": "8c16152e4bd556aa"
  },
- "ergebnis_hash": "71d73627334f5d57",
- "kandidaten": 357885,
- "kandidaten_neu": 213,
+ "ergebnis_hash": "de62b36836adac31",
+ "kandidaten": 358772,
+ "kandidaten_neu": 887,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -33,14 +33,17 @@
   "analyse": "vollständig",
   "familie_v": "vollständig",
   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-  "tests": "übersprungen",
-  "siegeltest": "übersprungen"
+  "tests": "vollständig",
+  "siegeltest": "vollständig"
  },
- "laufeintrag": "suche/laeufe/L20261028T105311Z.json",
+ "laufeintrag": "suche/laeufe/L20261028T195301Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [
-  "neu_bls_ppi_termine_ppi_stand",
-  "neu_usda_hogs_pigs_termine_hogs_pigs_stand"
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d1",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d20",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d5",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_stand",
+  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_z252"
  ],
- "gesamt": "teilweise"
+ "gesamt": "vollständig"
 }

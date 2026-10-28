@@ -3224,6 +3224,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:37Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fred_rrp_reverse_repo_taeglich__rrp_volumen.csv.gz": {
+   "datei": "n__neu__fred_rrp_reverse_repo_taeglich__rrp_volumen.csv.gz@482ed4879dd167ce",
+   "sha": "482ed4879dd167ce8c39de66d44fc198b7ac77334ba969c67a77e65453cdcb4a",
+   "sha_inhalt": "b27ac92576ab9e9d56dd4173c16000f39ffc531178d5b486c8bf97f362845a10",
+   "zeilen": 1903,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-10-28T19:53:28Z",
+   "lauf_id": "L20261028T195301Z"
+  },
   "n__neu__fred_treasury_lang__dgs2.csv.gz": {
    "datei": "n__neu__fred_treasury_lang__dgs2.csv.gz@3e9fee931f9b5ba0",
    "sha": "3e9fee931f9b5ba0d4abdf45d2eb72063cecbff9bae6a30851b2729f07e5eaf1",
@@ -4477,6 +4486,6 @@
   }
  },
  "nachfuehrungen": {},
- "stand_utc": "2026-10-28T10:53:44Z",
- "dateien_n": 497
+ "stand_utc": "2026-10-28T19:53:35Z",
+ "dateien_n": 498
 }
