@@ -2,13 +2,17 @@ name: Prüfstand Suche
 # V3.4 (E9): Suchlauf in der GitHub Action statt in der Routine. Ergebnis auf dem Zweig claude/lernen.
 # V3.17 (E9 neu, 12.10.2026): Der geplante Lauf prüft täglich die Eingabe-Prüfsumme der Discovery und rechnet nur bei
 # Änderung, ohne gültigen Referenzlauf oder am Montag (Kontrolllauf). Push und manueller Start rechnen immer.
+# V3.18 (ENTWURF 27.10.2026, nicht in Kraft): Die Discovery liest einen eingefrorenen Datenstand (discovery.py, Ordner
+# discovery/ auf claude/lernen). §6: Tests und Siegeltest laufen bei Code-Änderung und zusätzlich montags.
+# Fassung 2 (28.10.2026, Astra-Gutachten 23): Tests gehören zum Prüfstand (push: paths). Fehlt ein gültiger Nachweis
+# für den aktuellen Prüfstand, laufen Tests und Siegeltest zuerst, bei jedem Start (Soll); scheitern sie, entfällt die Rechnung.
 on:
   schedule:
     - cron: "0 5 * * *"          # täglich 07:00 Sommerzeit, nach Datenspiegel (03:15 UTC) und Strom (02:30 UTC); ab V3.17 nur Prüfung, Rechnung bei Änderung
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", "vorreg.py", "integritaet.py", "einchecken.py", "lauf_status.py", "eingabe.py", "korrekturen_neu.json", "explorativ.json", "verfassung.txt", ".github/workflows/suche.yml"]
+    paths: ["suchmaschine.py", "suche_lauf.py", "paare.txt", "mechanismen.txt", "siegel_test.py", "analyse.py", "vorreg.py", "integritaet.py", "einchecken.py", "lauf_status.py", "eingabe.py", "korrekturen_neu.json", "explorativ.json", "verfassung.txt", ".github/workflows/suche.yml", "discovery.py", "nachfuehrung.json", "test_einchecken.py", "test_integritaet.py", "test_lauf_status.py", "test_discovery.py"]
 permissions:
   contents: write
 concurrency:
@@ -20,6 +24,7 @@ jobs:
     timeout-minutes: 360   # 7.10.2026: Die Rechner von GitHub sind zeitweise halb so schnell (Suche 85 oder 169 Minuten); 360 ist die Obergrenze von GitHub
     env:
       NPY_DISABLE_CPU_FEATURES: "X86_V4 AVX512_ICL AVX512_SPR"   # V3.17 E9: gleicher Rechenweg auf allen Rechnern, ohne AVX-512 (23.10.2026)
+      PS_PAR6: "1"   # V3.18 §6 angenommen: Nachweis an die tatsächliche Umgebung gebunden (lauf_status.py); ohne §6 fehlt diese Zeile
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -42,14 +47,20 @@ jobs:
             git worktree add -q --detach _lernen HEAD
             cd _lernen && git checkout -q --orphan lernen-neu && git rm -rq --cached . && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           fi
-      - name: Tests Einchecken und Integrität (nur bei Code-Änderung; V3.11, E28)
+      - name: Wochentag (V3.18 §6, Entwurf)
+        id: tag
+        run: echo "montag=$([ "$(TZ=Europe/Zurich date +%u)" = 1 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Prüfnachweis für den aktuellen Prüfstand (V3.18 §6, Gutachten 23)
+        id: nachweis
+        run: python lauf_status.py --nachweis
+      - name: Tests Einchecken, Integrität, Status und Discovery-Stand (bei Code-Änderung, montags und ohne gültigen Nachweis; V3.11 E28, V3.18 §6)
         id: tests
-        if: github.event_name == 'push'
-        run: python test_einchecken.py && python test_integritaet.py && python test_lauf_status.py
+        if: github.event_name == 'push' || steps.nachweis.outputs.gueltig != 'true' || (github.event_name == 'schedule' && steps.tag.outputs.montag == 'true')
+        run: python test_einchecken.py && python test_integritaet.py && python test_lauf_status.py && python test_discovery.py
         timeout-minutes: 5
-      - name: Siegeltest (nur bei Code-Änderung)
+      - name: Siegeltest (bei Code-Änderung, montags und ohne gültigen Nachweis; V3.18 §6, ab Fassung 2 auch über den Stand)
         id: siegeltest
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' || steps.nachweis.outputs.gueltig != 'true' || (github.event_name == 'schedule' && steps.tag.outputs.montag == 'true')
         run: python siegel_test.py
         timeout-minutes: 60
       - name: Suchlauf
