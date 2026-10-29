@@ -4234,13 +4234,13 @@
   "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
   "domain": "usaspending.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Eine Häufung grosser Verteidigungsaufträge an einem Vergabetag stützt kurzfristig die Umsätze von Rüstungs- und Industriewerten (ITA, XAR) gegenüber dem Weltindex.",
-  "grund": "Firmenereignisse aggregiert mit Tagesdatum; öffentliche API ohne Login, Daten ab 2001. Herkunft: Lernrunde 29.10.2026 (L3, Zusatz 6 des Scouts).",
+  "grund": "K4/K7: API-Abfrage nur je Tag (ca. 3300 Anfragen, weit über 3 Minuten); Auftragsdaten werden nachträglich ergänzt und geändert (Revision); Vergabedatum ≠ Bekanntgabedatum.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-29T09:38:38Z",
-  "geprueft_utc": null
+  "geprueft_utc": "2026-10-29T12:20:28Z"
  },
  {
   "id": "healthcanada_produktrueckrufe_replikation_cpsc",
@@ -4248,13 +4248,13 @@
   "url": "https://recalls-rappels.canada.ca/en/search/site",
   "domain": "recalls-rappels.canada.ca",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Rückrufhäufungen bei Konsumgütern belasten kurzfristig Konsum- und Handelswerte (XLY, XRT) gegenüber dem Weltindex, unabhängig vom Land der Behörde.",
-  "grund": "Regel L1: cpsc_ruckrufe erreichte t 3.71 (Hürde A 4.35); nur Replikation mit unabhängiger Quelle, keine Variante auf denselben Daten. Öffentliche Seite, kein Login; Archiv-Tiefe vor Abruf prüfen. Herkunft: Lernrunde 29.10.2026.",
+  "grund": "K4: Open-Data-Export (HCRSAMOpenData) enthält nur «Last updated» (Revisionsdatum, nicht Veröffentlichungstag), 2717 von 34303 Einträgen ohne Datum; Ereignisse liessen sich nur rückdatieren. Alte API healthycanadians.gc.ca endet 2021.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-29T09:38:38Z",
-  "geprueft_utc": null
+  "geprueft_utc": "2026-10-29T12:20:28Z"
  },
  {
   "id": "treasury_dts_steuereinnahmen_taeglich",
