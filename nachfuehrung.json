@@ -1,5 +1,7 @@
 {
  "regel": "V3.18 E9 (Entwurf): Revisionen der Discovery-Daten bis 31.12.2020 werden nur über einen Eintrag in dieser Liste übernommen. Jeder Eintrag braucht id, dateien (Muster auf die Namen in discovery/dateien auf claude/lernen), grund und freigabe (Reto, Datum). Er wirkt genau einmal; danach folgt ein Lauf.",
  "beispiel": {"id": "N0001", "dateien": ["fred__SP500.csv"], "grund": "Quelle hat Werte 2016 bis 2020 berichtigt (Revisionsbericht vom TT.MM.JJJJ)", "freigabe": "Reto, TT.MM.JJJJ: «freigeben»"},
- "eintraege": []
+ "eintraege": [
+  {"id": "N0001", "dateien": ["n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz", "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz"], "grund": "Fehler der eingefrorenen Daten, keine Revision der Quelle: Der Lauf L20261028T105311Z fror am 28.10.2026 die verkürzten Dateien der Scout-Auffrischung von 08:33 UTC ein (Abruffehler). Bis 2020 fehlen im Stand 24 von 195 Terminen (Grain Stocks) und 81 von 631 (WASDE). Seit 28.10.2026 16:29 UTC sind die Spiegel wieder vollständig (am 29.10.2026 um 07:19 UTC erneut gezählt: 195 und 631). Belege: Revisionsbericht des Laufs L20261028T195301Z, meta/befund_stand_usda_2026-10-29.", "freigabe": "Reto, 29.10.2026: «gerne freugeben» (sic) auf den Vorschlag N0001 vom 29.10.2026"}
+ ]
 }
