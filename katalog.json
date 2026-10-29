@@ -210,12 +210,12 @@
   "domain": "bankofengland.co.uk",
   "bereich": "Geldmarkt",
   "status": "aktiv",
-  "grund": "Alle Kriterien erfuellt. K1 taeglich (Bankarbeitstage, Median-Abstand 1 Tag). K2 Historie ab 1997-01-02 (7509 Werte), weit vor 31.12.2015. K3 offen, BoE IADB CSV-Export ohne Login/Schluessel. K4 punktgenau: administrierter Referenzsatz, nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-21 (3 Tage alt). K6 neu: kein GBP-Geldmarktsatz im Spiegel vorhanden. K7 Umfang: 190 KB unkomprimiert, Abruf unter 2s. Pruefung: Min 0.0394 / Max 8.6068 Prozent (plausibel fuer Zeitraum 1997-2026, inkl. Nullzinsphase und Zinserhoehungszyklus ab 2022), Anteil gleicher Folgewerte 5.1% (unauffaellig). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | Abruffehler 2026-10-28T08Z: Parse-Fehler (HTML statt CSV), alte Datei bleibt; naechster Lauf erneut.",
+  "grund": "Alle Kriterien erfuellt. K1 taeglich (Bankarbeitstage, Median-Abstand 1 Tag). K2 Historie ab 1997-01-02 (7509 Werte), weit vor 31.12.2015. K3 offen, BoE IADB CSV-Export ohne Login/Schluessel. K4 punktgenau: administrierter Referenzsatz, nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-21 (3 Tage alt). K6 neu: kein GBP-Geldmarktsatz im Spiegel vorhanden. K7 Umfang: 190 KB unkomprimiert, Abruf unter 2s. Pruefung: Min 0.0394 / Max 8.6068 Prozent (plausibel fuer Zeitraum 1997-2026, inkl. Nullzinsphase und Zinserhoehungszyklus ab 2022), Anteil gleicher Folgewerte 5.1% (unauffaellig). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | Abruffehler 2026-10-28T08Z: Parse-Fehler (HTML statt CSV), alte Datei bleibt; naechster Lauf erneut. | Lauf 2026-10-29T00:25Z: Abruf gescheitert (HTML statt CSV (moegliche Sperre BoE)), alte Dateien bleiben; Status unveraendert, naechster Lauf erneut.",
   "reihen": [
    "sonia"
   ],
   "aufgenommen_utc": "2026-09-23T15:44:36Z",
-  "geprueft_utc": "2026-10-28T08Z",
+  "geprueft_utc": "2026-10-29T00:25Z",
   "mechanismus": "SONIA ist der von der Bank of England administrierte GBP-Tagesgeldsatz und spiegelt in Echtzeit die Geldpolitik und Liquiditaetslage am britischen Geldmarkt; kurzfristige Spruenge (Leitzinsentscheide, Repo-Stress, Jahresend-Effekte) koennen auf breitere GBP-Finanzierungskosten und globale Risikostimmung wirken und sich auf Sicht von 1-20 Handelstagen im Finanzsektor (XLF) und bei Staatsanleihen (TLT) gegenueber dem Weltindex niederschlagen.",
   "prioritaet": "normal"
  },
@@ -1350,12 +1350,12 @@
   "status": "aktiv",
   "prioritaet": "hoch",
   "mechanismus": "BoE-Zinsentscheide sind ein eigenstaendiges geldpolitisches Ereignis wie FOMC/EZB (bereits in leitzins_aenderungstage); testet kurzfristige Reaktion GBP-naher Ziele (EWU, GBP-Paare) auf eine dritte grosse Notenbank mit sehr langer Reihe.",
-  "grund": "Oeffentliche Statistical-Interactive-Database ohne Login, taegliche Bank-Rate-Reihe seit 1975 dokumentiert (Aenderungstage weit vor 1990, Zusatz 4 Schwerpunkt). | Geprueft 2026-09-26T12:14:28Z: oeffentlicher CSV-Export der BoE Interactive Statistical Database (Serie IUDBEDR) ohne Login/Schluessel funktioniert; 13077 Zeilen, erste 1975-01-02, letzte 2026-09-24, Median-Abstand 1.0 Kalendertag(e), Anteil gleicher Folgewerte 96.4% (plausibel: Bank Rate aendert sich selten), Wertebereich 0.0-1.0% (plausibel). Alle Kriterien K1-K7 erfuellt. Aktiv als eigenstaendige dritte Notenbank neben FOMC/EZB (leitzins_aenderungstage). | Abruffehler 2026-10-28T08Z: zu wenige Daten, alte Datei bleibt.",
+  "grund": "Oeffentliche Statistical-Interactive-Database ohne Login, taegliche Bank-Rate-Reihe seit 1975 dokumentiert (Aenderungstage weit vor 1990, Zusatz 4 Schwerpunkt). | Geprueft 2026-09-26T12:14:28Z: oeffentlicher CSV-Export der BoE Interactive Statistical Database (Serie IUDBEDR) ohne Login/Schluessel funktioniert; 13077 Zeilen, erste 1975-01-02, letzte 2026-09-24, Median-Abstand 1.0 Kalendertag(e), Anteil gleicher Folgewerte 96.4% (plausibel: Bank Rate aendert sich selten), Wertebereich 0.0-1.0% (plausibel). Alle Kriterien K1-K7 erfuellt. Aktiv als eigenstaendige dritte Notenbank neben FOMC/EZB (leitzins_aenderungstage). | Abruffehler 2026-10-28T08Z: zu wenige Daten, alte Datei bleibt. | Lauf 2026-10-29T00:25Z: Abruf gescheitert (keine/zu wenige Daten), alte Dateien bleiben; Status unveraendert, naechster Lauf erneut.",
   "aufgenommen_utc": "2026-09-26T09:40:47Z",
   "reihen": [
    "aenderungstage"
   ],
-  "geprueft_utc": "2026-10-28T08Z"
+  "geprueft_utc": "2026-10-29T00:25Z"
  },
  {
   "id": "us_boersenfeiertage",
@@ -1629,13 +1629,13 @@
   "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Ueberraschende Selic-Entscheide der brasilianischen Zentralbank veraendern Carry-Trade-Attraktivitaet und Kapitalfluesse nach Brasilien; koennen EWZ innert wenigen Handelstagen um den Entscheidtermin gegenueber dem Weltindex bewegen, analog zu den bereits aktiven Leitzins-Aenderungstagen (FOMC/EZB).",
-  "grund": "K1-K7 erfuellt. BCB SGS 432 (Selic-Zielsatz), oeffentlich ohne Login/Schluessel, kalendertaeglich, 10071 Zeilen, erste 1999-03-05, letzte 2026-09-29, Median-Abstand 1 Tag, gleiche Folgewerte 96.8% (Stufenreihe, erwartet), Min 2.0 Max 45.0 % (plausibel), 161 Aenderungstage. Nicht revidiert. Aktiv: aenderungstage (0/1); ruhend: ziel (Niveau, Redundanz, Zusatz 3). Datum = Wirksamkeitstag, Copom-Entscheid am Vorabend bekannt (verfuegbar 0). Historie vor 1999 nicht verfuegbar (Meta Selic erst seit Maerz 1999). | Lauf 2026-10-05T16:16Z: Timeout beim Abruf | Abruffehler 2026-10-28T08Z: Timeout, alte Datei bleibt.",
+  "grund": "K1-K7 erfuellt. BCB SGS 432 (Selic-Zielsatz), oeffentlich ohne Login/Schluessel, kalendertaeglich, 10071 Zeilen, erste 1999-03-05, letzte 2026-09-29, Median-Abstand 1 Tag, gleiche Folgewerte 96.8% (Stufenreihe, erwartet), Min 2.0 Max 45.0 % (plausibel), 161 Aenderungstage. Nicht revidiert. Aktiv: aenderungstage (0/1); ruhend: ziel (Niveau, Redundanz, Zusatz 3). Datum = Wirksamkeitstag, Copom-Entscheid am Vorabend bekannt (verfuegbar 0). Historie vor 1999 nicht verfuegbar (Meta Selic erst seit Maerz 1999). | Lauf 2026-10-05T16:16Z: Timeout beim Abruf | Abruffehler 2026-10-28T08Z: Timeout, alte Datei bleibt. | Lauf 2026-10-29T00:25Z: Abruf gescheitert (HTTP 502), alte Dateien bleiben; Status unveraendert, naechster Lauf erneut.",
   "aufgenommen_utc": "2026-09-29T16:16:55Z",
   "reihen": [
    "aenderungstage",
    "ziel"
   ],
-  "geprueft_utc": "2026-10-28T08Z"
+  "geprueft_utc": "2026-10-29T00:25Z"
  },
  {
   "id": "indien_rbi_repo_entscheide",
@@ -1866,7 +1866,7 @@
   "bereich": "Firmenereignisse",
   "status": "aktiv",
   "mechanismus": "Produktrueckrufe der US-Verbraucherschutzbehoerde CPSC kennzeichnen Sicherheits- oder Qualitaetsprobleme betroffener Hersteller/Haendler und koennen kurzfristig (1 bis 20 Handelstage) Vertrauen, Umsatz und Haftungsrisiko im zyklischen und nichtzyklischen Konsumsektor (XLY, XLP) gegenueber dem Weltindex belasten, insbesondere bei Haeufung mehrerer Ruckrufe in kurzer Zeit.",
-  "grund": "Zusatz 6 (27.9.2026), Prioritaet 2 (Rueckrufe, Ergaenzung zu fda_ruckrufe um CPSC-Produktkategorien). K1 taeglich: nullgefuellte Tagesreihe (RecallDate, taegliches Bekanntgabedatum), Median-Abstand 1 Tag. K2 Historie: erster Wert 1973-06-08 (Gruendungsjahr der CPSC), 19470 Zeilen -- deutlich vor 1990 (Zusatz 4 E11). K3 offen: oeffentliche SaferProducts.gov-RestWebService-API ohne Login/Schluessel, Abruf in 54 Jahresabfragen (1973-2026), Gesamtsumme 10027 Faelle, ca. 31 Sek. K4 punktgenau: RecallDate (Datum der oeffentlichen Bekanntgabe) wird nach Veroeffentlichung nicht rueckwirkend geaendert, nur neue Ruckrufe kommen hinzu. K5 laufend: Zero-Fill bis zum heutigen Tag, juengster Einzelfall 2026-09-24 (3 Tage vor diesem Lauf) -- taegliche Publikation (cpsc.gov/Recalls), verfuegbar_nach_tagen=2. K6 neu: kein CPSC-Rueckruf-Feed im Spiegel (ergaenzt fda_ruckrufe um andere Produktkategorien, keine Redundanz). K7 Umfang: 48 KB komprimiert, Abruf ca. 31 Sek. Plausibilitaet: Anteil gleicher Folgewerte 0.664 (77% Nulltage, erwartungsgemaess bei seltenem Tagesereignis wie bei fda_ruckrufe), Max 27 an einem Tag plausibel (Sammelruckrufe), keine Anomalie.",
+  "grund": "Zusatz 6 (27.9.2026), Prioritaet 2 (Rueckrufe, Ergaenzung zu fda_ruckrufe um CPSC-Produktkategorien). K1 taeglich: nullgefuellte Tagesreihe (RecallDate, taegliches Bekanntgabedatum), Median-Abstand 1 Tag. K2 Historie: erster Wert 1973-06-08 (Gruendungsjahr der CPSC), 19470 Zeilen -- deutlich vor 1990 (Zusatz 4 E11). K3 offen: oeffentliche SaferProducts.gov-RestWebService-API ohne Login/Schluessel, Abruf in 54 Jahresabfragen (1973-2026), Gesamtsumme 10027 Faelle, ca. 31 Sek. K4 punktgenau: RecallDate (Datum der oeffentlichen Bekanntgabe) wird nach Veroeffentlichung nicht rueckwirkend geaendert, nur neue Ruckrufe kommen hinzu. K5 laufend: Zero-Fill bis zum heutigen Tag, juengster Einzelfall 2026-09-24 (3 Tage vor diesem Lauf) -- taegliche Publikation (cpsc.gov/Recalls), verfuegbar_nach_tagen=2. K6 neu: kein CPSC-Rueckruf-Feed im Spiegel (ergaenzt fda_ruckrufe um andere Produktkategorien, keine Redundanz). K7 Umfang: 48 KB komprimiert, Abruf ca. 31 Sek. Plausibilitaet: Anteil gleicher Folgewerte 0.664 (77% Nulltage, erwartungsgemaess bei seltenem Tagesereignis wie bei fda_ruckrufe), Max 27 an einem Tag plausibel (Sammelruckrufe), keine Anomalie. | Lauf 2026-10-29T00:25Z: Abruf gescheitert (Zeitlimit 180 s), alte Dateien bleiben; Status unveraendert, naechster Lauf erneut.",
   "reihen": [
    {
     "reihe": "ruckrufe",
@@ -1880,7 +1880,7 @@
    }
   ],
   "aufgenommen_utc": "2026-09-27T20:16:45Z",
-  "geprueft_utc": "2026-09-27T20:16:45Z",
+  "geprueft_utc": "2026-10-29T00:25Z",
   "prioritaet": "hoch"
  },
  {
