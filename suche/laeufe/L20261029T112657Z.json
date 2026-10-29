@@ -1,0 +1,116 @@
+{
+ "lauf_id": "L20261029T112657Z",
+ "verfassung": "V3.18",
+ "beginn_utc": "2026-10-29T11:26:57Z",
+ "ende_suche_utc": "2026-10-29T11:27:30Z",
+ "anlass": "schedule",
+ "github_run_id": "40863198937",
+ "datenstand": {
+  "commit_main": "b05e0ab4f5cd1f9e8b43c41130f3b54921612c52",
+  "commit_energie": "e87924835041a25b892ed478fabb7d2b763c4cf8",
+  "commit_neu": "54510a6943354ffcc49c6e38c0b5ffe1dfb0e593",
+  "sha_manifest_main": "ce0a9997a3c63f15",
+  "sha_manifest_hr": "5b57c0a4787d71d6",
+  "sha_manifest_sec": "18996c363599a7f5",
+  "sha_manifest_neu": "18c26050e52540f2",
+  "sha_manifest_energie": "f41a612d6256df54"
+ },
+ "stufen": {
+  "suche": "keine Neuberechnung",
+  "analyse": "übersprungen",
+  "familie_v": "übersprungen",
+  "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
+ },
+ "e9": {
+  "modus": "bei Änderung (V3.17, E9; V3.18 mit eingefrorenem Stand, Entwurf)",
+  "eingabe_hash": "3494e0b0ceac0cc0",
+  "referenz_eingabe_hash": "3494e0b0ceac0cc0",
+  "referenz_lauf": "L20261029T074958Z",
+  "anlaesse": [],
+  "eingabe": {
+   "daten": "be22647d5f0f9eaa",
+   "register": "229f4c0d6ef07197",
+   "code": "1389bea68c457515",
+   "vorregistrierung": "ccdd56c94beefacc",
+   "placebo": "200",
+   "teile": {
+    "kurse": "96faad0ff5c5e526",
+    "ind": "73990d1f0332a305",
+    "EREIGNIS": "0b4043bc41ad4411",
+    "KAL": "cb2a5be8409f7805",
+    "VERDACHT_POS": "feda7b588336f928",
+    "ZIELE": "4e0f8540f1ee39f0",
+    "QUELLE": "8e1c1c90211588d6",
+    "HERKUNFT": "6b168a2a68dff01f",
+    "LUECKEN": "20f180ae2bd039ff",
+    "EXPLORATIV": "65728502cfdd8e03",
+    "EXPLORATIV_NAMEN": "86839ac2826e9e9e",
+    "KORREKTUREN": "2756cd8bfc0d24e3",
+    "VERFUEGBAR": "44136fa355b3678a",
+    "VERFUEGBAR_KAL": "1632dc0a15929035",
+    "AUSSCHLUSS": "13ac3f72165e2ba7",
+    "KUM_VORHER": "72dc9878680dfe7e",
+    "N_PLACEBO": "27badc983df1780b",
+    "KALIBRIERUNG": "3cbc87c7681f34db",
+    "LANGZEIT": "3cbc87c7681f34db",
+    "DATENMANGEL": "24ccd078fd406f6c",
+    "AUSGESCHLOSSEN": "a269a7f4b6d9ef94",
+    "FAM": "d68171b88acbaaf9",
+    "umgebung": "a21668d34071bb23"
+   }
+  },
+  "stand": {
+   "aktiv": true,
+   "ordner": "discovery/ (claude/lernen)",
+   "dateien_n": 498,
+   "fassung": "c90b7f8ee3ae1282",
+   "fassung_regel": "Prüfsumme von stand.json nach der Vorprüfung; die Rechnung liest nur die daraus bereitgestellten Dateien (Gutachten 23, M1)",
+   "bereitgestellt": {
+    "dateien_n": 503,
+    "pruefsumme": "8603abff8fd692f2"
+   },
+   "neu_eingefroren_n": 0,
+   "neu_eingefroren": [],
+   "nachgefuehrt": [],
+   "nachfuehrung_angewandt": [],
+   "nachfuehrung_fehler": [],
+   "nicht_eingefroren": [],
+   "revisionen_n": 35,
+   "revisionen_je_gruppe": {
+    "fred": 1,
+    "kurse": 32,
+    "n__neu": 2
+   },
+   "revisionen_summe": {
+    "geaendert": 12346,
+    "hinzugekommen": 0,
+    "entfallen": 1,
+    "werte_fehlen_im_spiegel": 0,
+    "werte_neu_im_spiegel": 0,
+    "relativ_nicht_definiert": 11
+   },
+   "revisionen_bericht": "discovery/revisionen.json (nur Bericht, löst nichts aus)",
+   "einfrierpruefung": {
+    "bestanden": true,
+    "verstoesse": [],
+    "befunde_nicht_gelesen": [],
+    "geprueft": "alle gelesenen eingefrorenen Fassungen streng",
+    "nicht_eingefroren": "nicht im Stand; Stichtagskürzung der Suchmaschine wie bisher",
+    "ohne_eintrag_n": 0
+   }
+  }
+ },
+ "ausgaben": {
+  "s_dokument": "suche/S0057.json",
+  "vollarchiv": "suche/S0057_alle.csv.gz",
+  "art": "keine Neuberechnung: Eingaben unverändert gegenüber dem letzten gültigen Lauf; kein neues Ergebnis, kein neuer Befund"
+ },
+ "ende_utc": "2026-10-29T11:27:31Z",
+ "gesamt": "keine Neuberechnung",
+ "e38": {
+  "importierbar": false,
+  "grund": "keine Neuberechnung: kein neues Ergebnis (V3.17 §4)"
+ }
+}

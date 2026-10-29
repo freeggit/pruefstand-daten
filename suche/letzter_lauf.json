@@ -39,5 +39,18 @@
  "laufeintrag": "suche/laeufe/L20261029T074958Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [],
- "gesamt": "vollständig"
+ "gesamt": "vollständig",
+ "letzter_versuch": {
+  "lauf_id": "L20261029T112657Z",
+  "gesamt": "keine Neuberechnung",
+  "stufen": {
+   "suche": "keine Neuberechnung",
+   "analyse": "übersprungen",
+   "familie_v": "übersprungen",
+   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+   "tests": "übersprungen",
+   "siegeltest": "übersprungen"
+  },
+  "zeit_utc": "2026-10-29T11:27Z"
+ }
 }

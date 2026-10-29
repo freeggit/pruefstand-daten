@@ -1920,6 +1920,12 @@
    "ergebnis_hash": "d7afb7e1c1e3cae0",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261029T112657Z.json",
+   "lauf_id": "L20261029T112657Z",
+   "gesamt": "keine Neuberechnung",
+   "importierbar": false
   }
  ],
  "letzter_lauf_utc": "2026-10-29T10:43Z",
