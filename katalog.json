@@ -2116,10 +2116,10 @@
   "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen.",
+  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen.",
   "reihen": [],
   "aufgenommen_utc": "2026-09-28T20:15:44Z",
-  "geprueft_utc": "2026-10-28T08Z"
+  "geprueft_utc": "2026-10-29T20Z"
  },
  {
   "id": "fedregister_ftc_fusionen",
@@ -3295,11 +3295,11 @@
   "domain": "api.nasdaq.com",
   "bereich": "Firmenereignisse",
   "status": "fehler",
-  "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen.",
+  "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com.",
   "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-08T08:17Z",
-  "geprueft_utc": "2026-10-22T08:15Z",
+  "geprueft_utc": "2026-10-29T20Z",
   "prioritaet": "normal"
  },
  {
@@ -3891,11 +3891,11 @@
   "domain": "www.eia.gov",
   "bereich": "Rohstoffe und Logistik",
   "status": "fehler",
-  "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen.",
+  "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen.",
   "mechanismus": "Revidierte Prognosen zu Ölnachfrage und Förderung verschieben die Preiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-20T10:00:00Z",
-  "geprueft_utc": "2026-10-28T08Z",
+  "geprueft_utc": "2026-10-29T20Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
@@ -3936,11 +3936,11 @@
   "domain": "www.zew.de",
   "bereich": "Kalender",
   "status": "fehler",
-  "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler.",
+  "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler. | Test 2026-10-29T20Z: www.zew.de 200, aber weiterhin keine maschinenlesbare Terminliste (robots: Crawl-delay 15).",
   "mechanismus": "Die Stimmung institutioneller Anleger in Deutschland wirkt kurzfristig auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-21T10:00:00Z",
-  "geprueft_utc": "2026-10-28T08Z",
+  "geprueft_utc": "2026-10-29T20Z",
   "prioritaet": "tief",
   "herkunft": "Lernrunde"
  },
@@ -3951,11 +3951,11 @@
   "domain": "www.opec.org",
   "bereich": "Rohstoffe und Logistik",
   "status": "fehler",
-  "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen.",
+  "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen.",
   "mechanismus": "Revidierte Nachfrage- und Angebotsschätzungen der OPEC verschieben die Ölpreiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-21T10:00:00Z",
-  "geprueft_utc": "2026-10-28T08Z",
+  "geprueft_utc": "2026-10-29T20Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
@@ -4054,13 +4054,13 @@
   "domain": "www.nasdaq.com",
   "bereich": "Firmenereignisse",
   "status": "fehler",
-  "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000).",
+  "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com.",
   "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-24T10:00:00Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde",
-  "geprueft_utc": "2026-10-28T08Z"
+  "geprueft_utc": "2026-10-29T20Z"
  },
  {
   "id": "bea_bip_pce_termine",
