@@ -1,0 +1,21 @@
+{
+  "aenderungstage": {
+    "beschreibung": "1 am ersten Tag, an dem ein geaenderter Leitzins der Norges Bank (Sight Deposit Rate) gilt (Wirksamkeitstag), sonst 0 (Aenderungen ab 0,10 Prozentpunkten, Flags erst ab 4.2.1994 gemaess Regel Zusatz 5). Der Entscheid wird vorher bekanntgegeben (am oder vor Wirksamkeit), der Flag liegt also nie vor der Bekanntgabe.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Bekanntgabe liegt vor dem Wirksamkeitstag; Quelle: Norges Bank Pressemitteilungen zu Zinsentscheiden; Wirksamkeit am oder nach dem Bekanntgabetag)",
+    "quelle_url": "https://data.norges-bank.no/api/data/IR/B.KPRA.SD.",
+    "revidiert": false,
+    "verdichtung": "keine (Aenderungsindikator aus Tagesreihe abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "ziel": {
+    "beschreibung": "Leitzins der Norges Bank (Sight Deposit Rate), Wirksamkeitsdatum, Bankarbeitstage",
+    "einheit": "% p.a.",
+    "publikation": "taeglich (Satz vor Wirksamkeit bekanntgegeben)",
+    "quelle_url": "https://data.norges-bank.no/api/data/IR/B.KPRA.SD.",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "keine",
+    "verfuegbar_nach_tagen": 0
+  }
+}

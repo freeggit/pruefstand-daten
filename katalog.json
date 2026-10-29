@@ -4262,13 +4262,13 @@
   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/deposits_withdrawals_operating_cash",
   "domain": "fiscaldata.treasury.gov",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Grosse Steuereinzahlungstage entziehen dem Geldmarkt kurzfristig Liquidität und können Anleihen und Zinssensitive Sektoren gegenüber dem Weltindex bewegen.",
-  "grund": "Öffentliche API ohne Login; ergänzt treasury_tga (dort t 3.55 als Bestand) um Einzahlungen als Fluss. Herkunft: Lernrunde 29.10.2026 (L3).",
+  "grund": "Öffentliche API ohne Login; ergänzt treasury_tga (dort t 3.55 als Bestand) um Einzahlungen als Fluss. Herkunft: Lernrunde 29.10.2026 (L3). | Test 2026-10-29T16:30:00Z: API erreichbar, aber Kategorien der Einzahlungen nur bis 2022 grob (nur «Individual Income and Employment Taxes, Not Withheld», Estate, Customs), Aufteilung nach Körperschaft/Quellensteuer erst ab 2023 -> keine konsistente Steuerreihe ab 2015 (K2); Strukturbruch.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-29T09:38:38Z",
-  "geprueft_utc": null
+  "geprueft_utc": "2026-10-29T16:30:00Z"
  },
  {
   "id": "norges_bank_leitzins_entscheidtage",
@@ -4276,12 +4276,34 @@
   "url": "https://www.norges-bank.no/en/topics/Monetary-policy/Monetary-policy-meetings/",
   "domain": "norges-bank.no",
   "bereich": "Kalender-Ereignisse",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Zinsentscheide der Norges Bank bewegen die Norwegische Krone und mit ihr kurzfristig ölnahe Werte (XLE, EWN) gegenüber dem Weltindex.",
-  "grund": "Termine seit 2001 aus öffentlichen Pressemitteilungen rekonstruierbar, kein Login. Herkunft: Lernrunde 29.10.2026 (L3), Ergänzung zu riksbank_leitzins_entscheidtage.",
-  "reihen": [],
-  "aufgenommen_utc": "2026-10-29T09:38:38Z",
-  "geprueft_utc": null
+  "grund": "K1-K7 erfüllt: Norges Bank Datenportal (SDMX, IR/B.KPRA.SD.), offen ohne Schlüssel, Bankarbeitstage ab 1991-01-01, letzter Wert 2026-10-28, Leitzins wird nicht revidiert, Abruf <5 s. Reihen: aenderungstage (0/1, aktiv; 92 Änderungen ab 4.2.1994, Schwelle 0,1 Pp, Flag am Wirksamkeitstag, nie vor Bekanntgabe, Regel Zusatz 5 wie riksbank) und ziel (Satz, 1991-2026, min 0, max 11; ruhend, Redundanz, Zusatz 3). Aenderungstage-Flags vor 1994-02-04 bewusst 0. Belegquelle: Norges Bank Pressemitteilungen zu Zinsentscheiden.",
+  "reihen": [
+   {
+    "reihe": "aenderungstage",
+    "zeilen": 9052,
+    "erste": "1991-01-01",
+    "letzte": "2026-10-28",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.99,
+    "min": 0,
+    "max": 1
+   },
+   {
+    "reihe": "ziel",
+    "zeilen": 9052,
+    "erste": "1991-01-01",
+    "letzte": "2026-10-28",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.99,
+    "min": 0.0,
+    "max": 11.0,
+    "status": "ruhend"
+   }
+  ],
+  "aufgenommen_utc": "2026-10-29T16:30:00Z",
+  "geprueft_utc": "2026-10-29T16:30:00Z"
  }
 ]
