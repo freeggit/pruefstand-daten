@@ -4123,9 +4123,9 @@
   "domain": "aramco.com",
   "bereich": "Rohstoffe",
   "status": "kandidat",
-  "prioritaet": "normal",
+  "prioritaet": "hoch",
   "mechanismus": "Die monatliche OSP-Ankuendigung (um den 5. des Monats) signalisiert Angebot und Nachfrage am Rohoelmarkt und kann kurzfristig Energiesektor (XLE, USO) gegenueber dem Weltindex bewegen.",
-  "grund": "Unabhaengig von den FRED-Oelreihen (Terminereignis statt Preisreihe); oeffentliche Pressemitteilungen, kein Login; Termin-Rekonstruktion aus Nachrichtenarchiv noetig. Herkunft: Vorratsauffuellung."
+  "grund": "Unabhaengig von den FRED-Oelreihen (Terminereignis statt Preisreihe); oeffentliche Pressemitteilungen, kein Login; Termin-Rekonstruktion aus Nachrichtenarchiv noetig. Herkunft: Vorratsauffuellung. Lernrunde 29.10.2026: Priorität hoch (Regel L1, Replikation von DCOILWTICO → IBB, t 4.76)."
  },
  {
   "id": "bls_ppi_termine",
@@ -4227,5 +4227,61 @@
   "mechanismus": "Eine Häufung von Meldungen über wesentliche Verträge (Übernahmen, Kredit- und Liefervereinbarungen) zeigt Dealaktivität und Risikobereitschaft und bewegt kurzfristig Finanz- und Industriewerte (XLF, XLI) gegenüber dem Weltindex.",
   "grund": "EDGAR-Quelle (8-K): SEC sperrt diese Umgebung (403); Beschaffung ueber GitHub Action auf main (Zusatz 6), nicht selbst versuchen. Vorrat auf 15 aufgefüllt (Lernrunde 28.10.2026); Firmenereignisse aggregiert (erste Priorität); EDGAR-Tagesindex ohne Login wie bei den bestehenden 8-K-Einträgen; kein Doppel (Items 1.03, 2.02, 2.05, ",
   "geprueft_utc": "2026-10-28T20:15Z"
+ },
+ {
+  "id": "usaspending_dod_grossauftraege_taeglich",
+  "name": "US-Verteidigungsministerium: Grossauftraege je Vergabetag (USAspending)",
+  "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+  "domain": "usaspending.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Eine Häufung grosser Verteidigungsaufträge an einem Vergabetag stützt kurzfristig die Umsätze von Rüstungs- und Industriewerten (ITA, XAR) gegenüber dem Weltindex.",
+  "grund": "Firmenereignisse aggregiert mit Tagesdatum; öffentliche API ohne Login, Daten ab 2001. Herkunft: Lernrunde 29.10.2026 (L3, Zusatz 6 des Scouts).",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-29T09:38:38Z",
+  "geprueft_utc": null
+ },
+ {
+  "id": "healthcanada_produktrueckrufe_replikation_cpsc",
+  "name": "Health Canada: Rückrufe von Konsumgütern, Tageszahl (Replikation von cpsc_ruckrufe)",
+  "url": "https://recalls-rappels.canada.ca/en/search/site",
+  "domain": "recalls-rappels.canada.ca",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Rückrufhäufungen bei Konsumgütern belasten kurzfristig Konsum- und Handelswerte (XLY, XRT) gegenüber dem Weltindex, unabhängig vom Land der Behörde.",
+  "grund": "Regel L1: cpsc_ruckrufe erreichte t 3.71 (Hürde A 4.35); nur Replikation mit unabhängiger Quelle, keine Variante auf denselben Daten. Öffentliche Seite, kein Login; Archiv-Tiefe vor Abruf prüfen. Herkunft: Lernrunde 29.10.2026.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-29T09:38:38Z",
+  "geprueft_utc": null
+ },
+ {
+  "id": "treasury_dts_steuereinnahmen_taeglich",
+  "name": "US-Treasury Daily Treasury Statement: Steuereinzahlungen je Tag",
+  "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/deposits_withdrawals_operating_cash",
+  "domain": "fiscaldata.treasury.gov",
+  "bereich": "Staat und Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Grosse Steuereinzahlungstage entziehen dem Geldmarkt kurzfristig Liquidität und können Anleihen und Zinssensitive Sektoren gegenüber dem Weltindex bewegen.",
+  "grund": "Öffentliche API ohne Login; ergänzt treasury_tga (dort t 3.55 als Bestand) um Einzahlungen als Fluss. Herkunft: Lernrunde 29.10.2026 (L3).",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-29T09:38:38Z",
+  "geprueft_utc": null
+ },
+ {
+  "id": "norges_bank_leitzins_entscheidtage",
+  "name": "Norges Bank: Leitzins-Entscheidtage",
+  "url": "https://www.norges-bank.no/en/topics/Monetary-policy/Monetary-policy-meetings/",
+  "domain": "norges-bank.no",
+  "bereich": "Kalender-Ereignisse",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Zinsentscheide der Norges Bank bewegen die Norwegische Krone und mit ihr kurzfristig ölnahe Werte (XLE, EWN) gegenüber dem Weltindex.",
+  "grund": "Termine seit 2001 aus öffentlichen Pressemitteilungen rekonstruierbar, kein Login. Herkunft: Lernrunde 29.10.2026 (L3), Ergänzung zu riksbank_leitzins_entscheidtage.",
+  "reihen": [],
+  "aufgenommen_utc": "2026-10-29T09:38:38Z",
+  "geprueft_utc": null
  }
 ]
