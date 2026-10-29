@@ -3657,13 +3657,16 @@
    "lauf_id": "L20261028T105311Z"
   },
   "n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz": {
-   "datei": "n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz@365313ab7b7cb600",
-   "sha": "365313ab7b7cb60076a8f8b944c2b4fa271d806ae8e071a140c411662e887d87",
-   "sha_inhalt": "1201330db50f68e0a30fe97cb82924a5b5cc81153536dd15b4ba2cf933141913",
+   "datei": "n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz@29aea2c151663444",
+   "sha": "29aea2c151663444832bda45809dabe587d7cc8289fda8d7490fa6dfeb67ab2c",
+   "sha_inhalt": "0608d0c509db4aba89766abab7a05f20bd2646ab9f1672117c757fbcca0d4158",
    "zeilen": 17236,
    "datum": "iso:datum",
-   "aufgenommen_utc": "2026-10-28T10:53:40Z",
-   "lauf_id": "L20261028T105311Z"
+   "aufgenommen_utc": "2026-10-29T07:50:27Z",
+   "lauf_id": "L20261029T074958Z",
+   "nachfuehrung": "N0001",
+   "vorher_sha": "365313ab7b7cb60076a8f8b944c2b4fa271d806ae8e071a140c411662e887d87",
+   "erstmals_aufgenommen_utc": "2026-10-28T10:53:40Z"
   },
   "n__neu__usda_hogs_pigs_termine__hogs_pigs.csv.gz": {
    "datei": "n__neu__usda_hogs_pigs_termine__hogs_pigs.csv.gz@bfa852c1cfe07586",
@@ -3675,13 +3678,16 @@
    "lauf_id": "L20261028T105311Z"
   },
   "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz": {
-   "datei": "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz@5c98fe829f2e1a40",
-   "sha": "5c98fe829f2e1a40b048ed38ffd8371a364ddf5fd4389473c81da48347663af5",
-   "sha_inhalt": "3af2b4cf92df33e2029969f2dca5ee0c2af03db0c2689f7d890a32092da2a8ca",
+   "datei": "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz@1c70864f8d0a4537",
+   "sha": "1c70864f8d0a4537cf1b450305cf846178d96e020f6b4c2d810c8e74f8939620",
+   "sha_inhalt": "14c1c55e4bc34ee44823b377c726a4edf909c9d7d7604ef5559c68e505d66116",
    "zeilen": 17273,
    "datum": "iso:datum",
-   "aufgenommen_utc": "2026-10-28T10:53:40Z",
-   "lauf_id": "L20261028T105311Z"
+   "aufgenommen_utc": "2026-10-29T07:50:27Z",
+   "lauf_id": "L20261029T074958Z",
+   "nachfuehrung": "N0001",
+   "vorher_sha": "5c98fe829f2e1a40b048ed38ffd8371a364ddf5fd4389473c81da48347663af5",
+   "erstmals_aufgenommen_utc": "2026-10-28T10:53:40Z"
   },
   "n__neu__usgs_erdbeben__anzahl_m5.csv.gz": {
    "datei": "n__neu__usgs_erdbeben__anzahl_m5.csv.gz@4beb27ffd3513c32",
@@ -4485,7 +4491,29 @@
    "lauf_id": "L20261028T105311Z"
   }
  },
- "nachfuehrungen": {},
- "stand_utc": "2026-10-28T19:53:35Z",
+ "nachfuehrungen": {
+  "N0001": {
+   "grund": "Fehler der eingefrorenen Daten, keine Revision der Quelle: Der Lauf L20261028T105311Z fror am 28.10.2026 die verkürzten Dateien der Scout-Auffrischung von 08:33 UTC ein (Abruffehler). Bis 2020 fehlen im Stand 24 von 195 Terminen (Grain Stocks) und 81 von 631 (WASDE). Seit 28.10.2026 16:29 UTC sind die Spiegel wieder vollständig (am 29.10.2026 um 07:19 UTC erneut gezählt: 195 und 631). Belege: Revisionsbericht des Laufs L20261028T195301Z, meta/befund_stand_usda_2026-10-29.",
+   "freigabe": "Reto, 29.10.2026: «gerne freugeben» (sic) auf den Vorschlag N0001 vom 29.10.2026",
+   "muster": [
+    "n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz",
+    "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz"
+   ],
+   "gemeint": [
+    "n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz",
+    "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz"
+   ],
+   "dateien": [
+    "n__neu__usda_acreage_grainstocks_termine__grain_stocks.csv.gz",
+    "n__neu__usda_wasde_veroeffentlichung__wasde.csv.gz"
+   ],
+   "offen": [],
+   "vollstaendig": true,
+   "erstmals_angewandt_utc": "2026-10-29T07:50:31Z",
+   "zuletzt_utc": "2026-10-29T07:50:31Z",
+   "lauf_id": "L20261029T074958Z"
+  }
+ },
+ "stand_utc": "2026-10-29T07:50:31Z",
  "dateien_n": 498
 }

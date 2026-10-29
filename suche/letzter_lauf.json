@@ -1,18 +1,18 @@
 {
- "zeit_utc": "2026-10-28T22:44Z",
- "lauf_id": "L20261028T195301Z",
+ "zeit_utc": "2026-10-29T10:43Z",
+ "lauf_id": "L20261029T074958Z",
  "verfassung": "V3.18",
- "commit_main": "5f42beb973253b6795a088e9240d409df1637616",
- "commit_energie": "031950889be2a172d1be153b1c5c79fb9f2f1138",
- "commit_neu": "0e6bde20ca098ceef6452234982c1718d4111c64",
- "commit_lernen_vorher": "39fb9f9ee91d45de7b91cde4833bebfd7a73442a",
- "code_hash": "d074671047ae3b27",
+ "commit_main": "816fc50e202dbbff4c6bd37927d55a62410c5a20",
+ "commit_energie": "e87924835041a25b892ed478fabb7d2b763c4cf8",
+ "commit_neu": "0f99b793e6e85aec3b9e5dae31fafba9007d3f38",
+ "commit_lernen_vorher": "ae307e2b46dd65d0f9641c9fe56d6e2a010f255a",
+ "code_hash": "1389bea68c457515",
  "sha_suchmaschine": "a63264581c5ed5f1",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "5fe2ca49992c5192",
+ "sha_register_vorher": "a77bfd4c5a3c780b",
  "sha_manifest_main": "c8cc3cb40802c2e9",
- "sha_manifest_neu": "f45c3b996622bc25",
+ "sha_manifest_neu": "3fc4d7fb9dc16dea",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
@@ -20,9 +20,9 @@
   "python": "3.12.15",
   "btc_sha": "8c16152e4bd556aa"
  },
- "ergebnis_hash": "de62b36836adac31",
- "kandidaten": 358772,
- "kandidaten_neu": 887,
+ "ergebnis_hash": "d7afb7e1c1e3cae0",
+ "kandidaten": 358775,
+ "kandidaten_neu": 0,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,14 +36,8 @@
   "tests": "vollständig",
   "siegeltest": "vollständig"
  },
- "laufeintrag": "suche/laeufe/L20261028T195301Z.json",
+ "laufeintrag": "suche/laeufe/L20261029T074958Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [
-  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d1",
-  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d20",
-  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d5",
-  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_stand",
-  "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_z252"
- ],
+ "reihen_neu_gegen_vorlauf": [],
  "gesamt": "vollständig"
 }

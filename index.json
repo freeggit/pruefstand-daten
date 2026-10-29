@@ -1604,11 +1604,17 @@
    "datei": "suche/S0056.json",
    "kandidaten": 358772,
    "in_db": false
+  },
+  {
+   "nr": 57,
+   "datei": "suche/S0057.json",
+   "kandidaten": 358775,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-28T22:44Z",
+ "letzter_suchlauf_utc": "2026-10-29T10:43Z",
  "pruefung_lernrunde_utc": "2026-10-29T09:38:59Z",
- "letzter_code_hash": "d074671047ae3b27",
+ "letzter_code_hash": "1389bea68c457515",
  "methode": "M4",
  "vorreg": [
   {
@@ -1906,11 +1912,19 @@
    "ergebnis_hash": "de62b36836adac31",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261029T074958Z.json",
+   "lauf_id": "L20261029T074958Z",
+   "s_dokument": "suche/S0057.json",
+   "ergebnis_hash": "d7afb7e1c1e3cae0",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-28T22:44Z",
- "letztes_vollarchiv": "suche/S0056_alle.csv.gz",
- "letzter_ergebnis_hash": "de62b36836adac31",
+ "letzter_lauf_utc": "2026-10-29T10:43Z",
+ "letztes_vollarchiv": "suche/S0057_alle.csv.gz",
+ "letzter_ergebnis_hash": "d7afb7e1c1e3cae0",
  "konflikte": [
   {
    "wo": "index",
@@ -4146,14 +4160,14 @@
  "exposition": {
   "datei": "exposition.json",
   "grundreihen_n": 299,
-  "neu_in_diesem_lauf": 1
+  "neu_in_diesem_lauf": 0
  },
- "letztes_vollarchiv_ergebnis_hash": "de62b36836adac31",
+ "letztes_vollarchiv_ergebnis_hash": "d7afb7e1c1e3cae0",
  "pruefungen_bestanden": {
-  "pruef_hash": "90ec151939c3dc8a",
-  "lauf_id": "L20261028T195301Z",
-  "zeit_utc": "2026-10-28T23:27:04Z",
-  "eingabe_hash": "a2d4834d6dffaa40",
+  "pruef_hash": "2b1f2ae2a032d469",
+  "lauf_id": "L20261029T074958Z",
+  "zeit_utc": "2026-10-29T11:25:51Z",
+  "eingabe_hash": "3494e0b0ceac0cc0",
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
@@ -4166,7 +4180,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "f18447b1ce296fe8",
- "letzter_gueltiger_lauf": "L20261028T195301Z",
- "letzter_entscheidung_hash": "8aae1a269b101fc0"
+ "letzter_eingabe_hash": "3494e0b0ceac0cc0",
+ "letzter_gueltiger_lauf": "L20261029T074958Z",
+ "letzter_entscheidung_hash": "e59ddaa3e71faf87"
 }
