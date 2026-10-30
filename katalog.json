@@ -4306,5 +4306,53 @@
   ],
   "aufgenommen_utc": "2026-10-29T16:30:00Z",
   "geprueft_utc": "2026-10-29T16:30:00Z"
+ },
+ {
+  "id": "ecb_wochenausweis_liquiditaet",
+  "name": "EZB Konsolidierter Wochenausweis des Eurosystems (Überschussliquidität)",
+  "url": "https://data.ecb.europa.eu/data/datasets/ILM",
+  "domain": "data.ecb.europa.eu",
+  "bereich": "Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Änderungen der Überschussliquidität im Euroraum verschieben kurzfristig Bankenmargen und Risikoappetit und können deutsche Aktien (EWG) gegenüber dem Weltindex bewegen.",
+  "grund": "Eigene Wochenreihe der EZB, öffentlich ohne Login, Historie ab 1999; Publikationstag Dienstag, Verfügbarkeit mit Lag. L3: Liquiditätskanal der Geldpolitik. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
+  "geprueft_utc": "2026-10-30T09:50Z"
+ },
+ {
+  "id": "japan_mof_interventionstage",
+  "name": "Japan MoF Devisenmarkt-Interventionen (Tage)",
+  "url": "https://www.mof.go.jp/english/policy/international_policy/reference/feio/index.htm",
+  "domain": "mof.go.jp",
+  "bereich": "Waehrung",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Interventionen gegen Yen-Schwäche oder -Stärke verschieben kurzfristig die Gewinne japanischer Exporteure und damit Japan (EWJ) gegenüber dem Weltindex.",
+  "grund": "Amtliche Monatsübersicht mit Tagesdaten ab 1991, öffentlich; Datum der Veröffentlichung bildet Frist (Lag ca. 1 Monat bis Quartalsende), Frist beachten. L3: Interventionsstudien (Ito, Neely). Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
+  "geprueft_utc": "2026-10-30T09:50Z"
+ },
+ {
+  "id": "fed_sloos_veroeffentlichung_termine",
+  "name": "Fed Senior Loan Officer Survey (SLOOS), Veröffentlichungstage",
+  "url": "https://www.federalreserve.gov/data/sloos.htm",
+  "domain": "federalreserve.gov",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Die Umfrage zur Kreditvergabe zeigt Verschärfung oder Lockerung der Bankkredite und kann Finanzwerte (XLF) und Kreditspreads kurzfristig gegenüber dem Weltindex bewegen.",
+  "grund": "Termine deterministisch (quartalsweise, ca. 2 Monate nach Quartalsende, 14 Uhr), öffentlich ohne Login; wenige Ereignisse je Jahr (n klein), darum tief. L3: Lown/Morgan, Kreditstandards. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
+  "geprueft_utc": "2026-10-30T09:50Z"
+ },
+ {
+  "id": "umich_konsumentenstimmung_termine",
+  "name": "University of Michigan Konsumentenstimmung, Veröffentlichungstage",
+  "url": "https://www.sca.isr.umich.edu/",
+  "domain": "sca.isr.umich.edu",
+  "bereich": "Kalender",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Eine Überraschung bei Konsumentenstimmung und Inflationserwartungen verschiebt kurzfristig konsumnahe Sektoren (XLY, XLP) gegenüber dem Weltindex.",
+  "grund": "Termine deterministisch (vorläufig zweiter Freitag, endgültig letzter Freitag des Monats), Historie der Termine ab 1978; Zugang zu Archiv ungeprüft. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
+  "geprueft_utc": "2026-10-30T09:50Z"
  }
 ]
