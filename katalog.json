@@ -4125,7 +4125,8 @@
   "status": "kandidat",
   "prioritaet": "hoch",
   "mechanismus": "Die monatliche OSP-Ankuendigung (um den 5. des Monats) signalisiert Angebot und Nachfrage am Rohoelmarkt und kann kurzfristig Energiesektor (XLE, USO) gegenueber dem Weltindex bewegen.",
-  "grund": "Unabhaengig von den FRED-Oelreihen (Terminereignis statt Preisreihe); oeffentliche Pressemitteilungen, kein Login; Termin-Rekonstruktion aus Nachrichtenarchiv noetig. Herkunft: Vorratsauffuellung. Lernrunde 29.10.2026: Priorität hoch (Regel L1, Replikation von DCOILWTICO → IBB, t 4.76)."
+  "grund": "Unabhaengig von den FRED-Oelreihen (Terminereignis statt Preisreihe); oeffentliche Pressemitteilungen, kein Login; Termin-Rekonstruktion aus Nachrichtenarchiv noetig. Herkunft: Vorratsauffuellung. Lernrunde 29.10.2026: Priorität hoch (Regel L1, Replikation von DCOILWTICO → IBB, t 4.76). | Test 2026-10-30T08:26Z: aramco.com HTTP 200, aber Newsseite ohne maschinenlesbares Archiv ab 2015; Terminrekonstruktion nicht belegbar, bleibt kandidat.",
+  "geprueft_utc": "2026-10-30T08:26Z"
  },
  {
   "id": "bls_ppi_termine",
