@@ -4325,11 +4325,11 @@
   "url": "https://www.mof.go.jp/english/policy/international_policy/reference/feio/index.htm",
   "domain": "mof.go.jp",
   "bereich": "Waehrung",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Interventionen gegen Yen-Schwäche oder -Stärke verschieben kurzfristig die Gewinne japanischer Exporteure und damit Japan (EWJ) gegenüber dem Weltindex.",
-  "grund": "Amtliche Monatsübersicht mit Tagesdaten ab 1991, öffentlich; Datum der Veröffentlichung bildet Frist (Lag ca. 1 Monat bis Quartalsende), Frist beachten. L3: Interventionsstudien (Ito, Neely). Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
-  "geprueft_utc": "2026-10-30T09:50Z"
+  "grund": "Amtliche Monatsübersicht mit Tagesdaten ab 1991, öffentlich; Datum der Veröffentlichung bildet Frist (Lag ca. 1 Monat bis Quartalsende), Frist beachten. L3: Interventionsstudien (Ito, Neely). Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel. | Test 2026-10-30T12:30Z: CSV (Quartalsveroeffentlichung, ab 1991-05-13, 81 Interventionstage) und Monatsmeldungen oeffentlich, ohne Login. Reihe lueckenlos nur bis 2026-07-29 (Tage erst mit Quartalsveroeffentlichung bekannt; Monatsmeldung Jul/Aug 2026 nennt nur Summe >0), verfuegbar_nach_tagen 125. K5 verletzt (letzter Wert 93 Tage alt, strukturell >10 Tage). Skript quellen/japan_mof_interventionstage.py bleibt zur Wiederaufnahme; Ausnahme von K5 entscheidet Reto.",
+  "geprueft_utc": "2026-10-30T12:30Z"
  },
  {
   "id": "fed_sloos_veroeffentlichung_termine",
