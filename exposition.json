@@ -721,6 +721,12 @@
    "erst_zeit": "2026-10-07T20:47Z",
    "beleg": "suche/laeufe/L20261007T180559Z.json"
   },
+  "neu_norges_bank_leitzins_entscheidtage_aenderungstage": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261030T110516Z",
+   "erst_zeit": "2026-10-30T13:04Z",
+   "beleg": "suche/laeufe/L20261030T110516Z.json"
+  },
   "neu_ntsb_luftfahrtunfaelle_fatal": {
    "erst_dokument": "S0013",
    "erst_lauf": null,
@@ -1802,8 +1808,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261029T074958Z",
-  "zeit_utc": "2026-10-29T10:43Z",
-  "grundreihen_n": 299
+  "lauf_id": "L20261030T110516Z",
+  "zeit_utc": "2026-10-30T13:04Z",
+  "grundreihen_n": 300
  }
 }

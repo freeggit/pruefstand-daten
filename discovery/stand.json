@@ -3413,6 +3413,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:38Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__norges_bank_leitzins_entscheidtage__aenderungstage.csv.gz": {
+   "datei": "n__neu__norges_bank_leitzins_entscheidtage__aenderungstage.csv.gz@b57bf8f96d6d97d3",
+   "sha": "b57bf8f96d6d97d3027f5f6c5cbc8671908af3b7dce83119afc20830744f7f81",
+   "sha_inhalt": "21fd39ec3abd8b194c9c91f41fc81134ef5db9124b92b917c39209aca2ac29d5",
+   "zeilen": 7585,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-10-30T11:05:40Z",
+   "lauf_id": "L20261030T110516Z"
+  },
   "n__neu__ntsb_luftfahrtunfaelle__fatal.csv.gz": {
    "datei": "n__neu__ntsb_luftfahrtunfaelle__fatal.csv.gz@1a09f031b9f1e651",
    "sha": "1a09f031b9f1e6518cb6429af1f8bfe36e2e137b182d9e8fb7ad45f9332ab38a",
@@ -4514,6 +4523,6 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-10-29T07:50:31Z",
- "dateien_n": 498
+ "stand_utc": "2026-10-30T11:05:45Z",
+ "dateien_n": 499
 }

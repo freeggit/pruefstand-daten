@@ -1,5 +1,5 @@
 {
- "kumuliert": 697368,
+ "kumuliert": 697485,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -650,6 +650,7 @@
   "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_d5",
   "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_stand",
   "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_z252",
+  "neu_norges_bank_leitzins_entscheidtage_aenderungstage_stand",
   "neu_ntsb_luftfahrtunfaelle_fatal_d1",
   "neu_ntsb_luftfahrtunfaelle_fatal_d20",
   "neu_ntsb_luftfahrtunfaelle_fatal_d5",
@@ -1614,9 +1615,15 @@
    "datei": "suche/S0057.json",
    "kandidaten": 358775,
    "in_db": false
+  },
+  {
+   "nr": 58,
+   "datei": "suche/S0058.json",
+   "kandidaten": 358892,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-29T10:43Z",
+ "letzter_suchlauf_utc": "2026-10-30T13:04Z",
  "pruefung_lernrunde_utc": "2026-10-30T09:55:00Z",
  "letzter_code_hash": "1389bea68c457515",
  "methode": "M4",
@@ -1930,11 +1937,19 @@
    "lauf_id": "L20261029T112657Z",
    "gesamt": "keine Neuberechnung",
    "importierbar": false
+  },
+  {
+   "datei": "suche/laeufe/L20261030T110516Z.json",
+   "lauf_id": "L20261030T110516Z",
+   "s_dokument": "suche/S0058.json",
+   "ergebnis_hash": "c07e521b6fb338dd",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-29T10:43Z",
- "letztes_vollarchiv": "suche/S0057_alle.csv.gz",
- "letzter_ergebnis_hash": "d7afb7e1c1e3cae0",
+ "letzter_lauf_utc": "2026-10-30T13:04Z",
+ "letztes_vollarchiv": "suche/S0058_alle.csv.gz",
+ "letzter_ergebnis_hash": "c07e521b6fb338dd",
  "konflikte": [
   {
    "wo": "index",
@@ -4169,10 +4184,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 299,
-  "neu_in_diesem_lauf": 0
+  "grundreihen_n": 300,
+  "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "d7afb7e1c1e3cae0",
+ "letztes_vollarchiv_ergebnis_hash": "c07e521b6fb338dd",
  "pruefungen_bestanden": {
   "pruef_hash": "2b1f2ae2a032d469",
   "lauf_id": "L20261029T074958Z",
@@ -4190,7 +4205,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "3494e0b0ceac0cc0",
- "letzter_gueltiger_lauf": "L20261029T074958Z",
- "letzter_entscheidung_hash": "e59ddaa3e71faf87"
+ "letzter_eingabe_hash": "af58400136d279b4",
+ "letzter_gueltiger_lauf": "L20261030T110516Z",
+ "letzter_entscheidung_hash": "7cf62fc9669f3a5b"
 }

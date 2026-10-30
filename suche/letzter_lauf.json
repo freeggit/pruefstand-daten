@@ -1,18 +1,18 @@
 {
- "zeit_utc": "2026-10-29T10:43Z",
- "lauf_id": "L20261029T074958Z",
+ "zeit_utc": "2026-10-30T13:04Z",
+ "lauf_id": "L20261030T110516Z",
  "verfassung": "V3.18",
- "commit_main": "816fc50e202dbbff4c6bd37927d55a62410c5a20",
- "commit_energie": "e87924835041a25b892ed478fabb7d2b763c4cf8",
- "commit_neu": "0f99b793e6e85aec3b9e5dae31fafba9007d3f38",
- "commit_lernen_vorher": "ae307e2b46dd65d0f9641c9fe56d6e2a010f255a",
+ "commit_main": "15e8a894fbdf9134ff7ce390c3ebef5ce4c50e39",
+ "commit_energie": "7acff924d3dad8ff5c366ca58e8e2cf055330b08",
+ "commit_neu": "469cdfb118f6f2203a3372a8239fd16167d37987",
+ "commit_lernen_vorher": "f5c08e602cde4f3d398e0d1726b6b40194be428e",
  "code_hash": "1389bea68c457515",
  "sha_suchmaschine": "a63264581c5ed5f1",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
  "sha_register_vorher": "a77bfd4c5a3c780b",
- "sha_manifest_main": "c8cc3cb40802c2e9",
- "sha_manifest_neu": "3fc4d7fb9dc16dea",
+ "sha_manifest_main": "026b023385b3a29a",
+ "sha_manifest_neu": "3a16cf47d173ca6a",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
@@ -20,9 +20,9 @@
   "python": "3.12.15",
   "btc_sha": "8c16152e4bd556aa"
  },
- "ergebnis_hash": "d7afb7e1c1e3cae0",
- "kandidaten": 358775,
- "kandidaten_neu": 0,
+ "ergebnis_hash": "c07e521b6fb338dd",
+ "kandidaten": 358892,
+ "kandidaten_neu": 117,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -33,24 +33,13 @@
   "analyse": "vollständig",
   "familie_v": "vollständig",
   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-  "tests": "vollständig",
-  "siegeltest": "vollständig"
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261029T074958Z.json",
+ "laufeintrag": "suche/laeufe/L20261030T110516Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
- "reihen_neu_gegen_vorlauf": [],
- "gesamt": "vollständig",
- "letzter_versuch": {
-  "lauf_id": "L20261029T112657Z",
-  "gesamt": "keine Neuberechnung",
-  "stufen": {
-   "suche": "keine Neuberechnung",
-   "analyse": "übersprungen",
-   "familie_v": "übersprungen",
-   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-   "tests": "übersprungen",
-   "siegeltest": "übersprungen"
-  },
-  "zeit_utc": "2026-10-29T11:27Z"
- }
+ "reihen_neu_gegen_vorlauf": [
+  "neu_norges_bank_leitzins_entscheidtage_aenderungstage_stand"
+ ],
+ "gesamt": "vollständig"
 }
