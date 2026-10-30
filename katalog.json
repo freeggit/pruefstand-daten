@@ -4354,5 +4354,30 @@
   "mechanismus": "Eine Überraschung bei Konsumentenstimmung und Inflationserwartungen verschiebt kurzfristig konsumnahe Sektoren (XLY, XLP) gegenüber dem Weltindex.",
   "grund": "Termine deterministisch (vorläufig zweiter Freitag, endgültig letzter Freitag des Monats), Historie der Termine ab 1978; Zugang zu Archiv ungeprüft. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
   "geprueft_utc": "2026-10-30T09:50Z"
+ },
+ {
+  "id": "fedregister_executive_orders",
+  "name": "Federal Register: Executive Orders des US-Praesidenten (Zaehlreihe)",
+  "url": "https://www.federalregister.gov/api/v1/documents.json",
+  "domain": "federalregister.gov",
+  "bereich": "Firmenereignisse",
+  "status": "aktiv",
+  "prioritaet": "hoch",
+  "mechanismus": "Executive Orders setzen Zoelle, Sanktionen, Energie- und Branchenpolitik per Dekret und koennen Sektoren (XLE, XLB, XLI) oder Laender kurzfristig gegenueber dem Weltindex bewegen.",
+  "grund": "Zusatz 6 Prioritaet 5 (regulatorische Ereignisse), FR-API wie fedregister_dea_regeln. K1 taeglich (Nullfuellung). K2 ab 1994-01-01, 11989 Zeilen. K3 offen. K4 Publikationsdatum nicht revidiert. K5 letzter Wert 2026-10-28. K6 neu. K7 Abruf ca. 24 s. Datum = FR-Publikationsdatum (meist einige Tage nach Unterzeichnung, damit konservativ), verfuegbar_nach_tagen 0. 1574 EO gesamt, Min 0, Max 12, gleiche Folgewerte 0.82 (duenne Ereignisreihe).",
+  "reihen": [
+   {
+    "reihe": "anzahl",
+    "zeilen": 11989,
+    "erste": "1994-01-01",
+    "letzte": "2026-10-28",
+    "median_abstand_tage": 1.0,
+    "anteil_gleiche_folgewerte": 0.82,
+    "min": 0.0,
+    "max": 12.0
+   }
+  ],
+  "aufgenommen_utc": "2026-10-30T16:46:20Z",
+  "geprueft_utc": "2026-10-30T16:46:20Z"
  }
 ]
