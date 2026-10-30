@@ -4126,7 +4126,7 @@
   "prioritaet": "hoch",
   "mechanismus": "Die monatliche OSP-Ankuendigung (um den 5. des Monats) signalisiert Angebot und Nachfrage am Rohoelmarkt und kann kurzfristig Energiesektor (XLE, USO) gegenueber dem Weltindex bewegen.",
   "grund": "Unabhaengig von den FRED-Oelreihen (Terminereignis statt Preisreihe); oeffentliche Pressemitteilungen, kein Login; Termin-Rekonstruktion aus Nachrichtenarchiv noetig. Herkunft: Vorratsauffuellung. Lernrunde 29.10.2026: Priorität hoch (Regel L1, Replikation von DCOILWTICO → IBB, t 4.76). | Test 2026-10-30T08:26Z: aramco.com HTTP 200, aber Newsseite ohne maschinenlesbares Archiv ab 2015; Terminrekonstruktion nicht belegbar, bleibt kandidat.",
-  "geprueft_utc": "2026-10-30T08:26Z"
+  "geprueft_utc": "2026-10-30T20Z"
  },
  {
   "id": "bls_ppi_termine",
@@ -4313,11 +4313,11 @@
   "url": "https://data.ecb.europa.eu/data/datasets/ILM",
   "domain": "data.ecb.europa.eu",
   "bereich": "Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Änderungen der Überschussliquidität im Euroraum verschieben kurzfristig Bankenmargen und Risikoappetit und können deutsche Aktien (EWG) gegenüber dem Weltindex bewegen.",
-  "grund": "Eigene Wochenreihe der EZB, öffentlich ohne Login, Historie ab 1999; Publikationstag Dienstag, Verfügbarkeit mit Lag. L3: Liquiditätskanal der Geldpolitik. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
-  "geprueft_utc": "2026-10-30T09:50Z"
+  "grund": "Eigene Wochenreihe der EZB, öffentlich ohne Login, Historie ab 1999; Publikationstag Dienstag, Verfügbarkeit mit Lag. L3: Liquiditätskanal der Geldpolitik. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel. | Test 2026-10-30T20Z: K1: Wochenreihe (Median-Abstand 7 Tage).",
+  "geprueft_utc": "2026-10-30T20Z"
  },
  {
   "id": "japan_mof_interventionstage",
@@ -4349,11 +4349,11 @@
   "url": "https://www.sca.isr.umich.edu/",
   "domain": "sca.isr.umich.edu",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Eine Überraschung bei Konsumentenstimmung und Inflationserwartungen verschiebt kurzfristig konsumnahe Sektoren (XLY, XLP) gegenüber dem Weltindex.",
-  "grund": "Termine deterministisch (vorläufig zweiter Freitag, endgültig letzter Freitag des Monats), Historie der Termine ab 1978; Zugang zu Archiv ungeprüft. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
-  "geprueft_utc": "2026-10-30T09:50Z"
+  "grund": "Termine deterministisch (vorläufig zweiter Freitag, endgültig letzter Freitag des Monats), Historie der Termine ab 1978; Zugang zu Archiv ungeprüft. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel. | Test 2026-10-30T20Z: sca.isr.umich.edu HTTP 200, aber weder Terminkalender noch Archiv der Veröffentlichungstage; Regel «zweiter/letzter Freitag» nicht belegbar, keine Tage erfinden.",
+  "geprueft_utc": "2026-10-30T20Z"
  },
  {
   "id": "fedregister_executive_orders",
