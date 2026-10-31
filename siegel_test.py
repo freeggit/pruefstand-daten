@@ -250,8 +250,11 @@ except ImportError:
 
 
 def stand(name):
-    """Frisch eingefrorener Stand je Variante (wie die Suche: Einfrieren bei der ersten Verwendung)."""
-    return {"PS_DISCOVERY_STAND": f"{W}/{name}/stand", "PS_DISCOVERY_EINFRIEREN": "1", "PS_DISCOVERY_BERICHT": "0"}
+    """Frisch eingefrorener Stand je Variante: Einfrieren bei der ersten Verwendung (PS_DISCOVERY_BESTAETIGUNGEN=0). Der
+    Siegeltest prüft den Lesepfad über den Stand; die Aufnahme nach zwei Bestätigungen (Ergänzung zu V3.18 vom 31.10.2026)
+    prüft test_discovery.py."""
+    return {"PS_DISCOVERY_STAND": f"{W}/{name}/stand", "PS_DISCOVERY_EINFRIEREN": "1", "PS_DISCOVERY_BERICHT": "0",
+            "PS_DISCOVERY_BESTAETIGUNGEN": "0"}
 
 
 def _french_zeilen(b):
