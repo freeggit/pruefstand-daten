@@ -1,8 +1,14 @@
-"""Tests zu discovery.py (V3.18, E9 Stufe 2; ENTWURF 27.10.2026, Fassung 2 vom 28.10.2026). Aufruf: python test_discovery.py – ohne Netz, im Wegwerf-Ordner."""
+"""Tests zu discovery.py (V3.18, E9 Stufe 2; Fassung 2 vom 28.10.2026; Ergänzung vom 31.10.2026 zu §3 Ziff. 1 und 7).
+Aufruf: python test_discovery.py – ohne Netz, im Wegwerf-Ordner."""
 import gzip, json, os, sys, tempfile
+from datetime import date, datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import discovery as d  # noqa: E402
+
+# Die Tests bis zum Abschnitt «Ergänzung vom 31.10.2026» prüfen Einfrieren, Nachführung und Einfrierprüfung wie bisher
+# (Einfrieren bei der ersten Verwendung, PS_DISCOVERY_BESTAETIGUNGEN=0); die Aufnahme nach Bestätigungen folgt am Schluss.
+os.environ["PS_DISCOVERY_BESTAETIGUNGEN"] = "0"
 
 
 def ok(b, name):
@@ -204,4 +210,138 @@ ok(u3_["kopf_geaendert"] and u3_["geaendert"] == 1 and u3_["hinzugekommen"] == 0
    and u3_["erstes_datum"] == "20201230", "Revisionsbericht Ken French: Textzeilen als Kopf, nicht als Daten")
 
 ok(d.AKTIV is True, "Schalter AKTIV (Rückweg) vorhanden und eingeschaltet")
+
+# ---------------------------------------------------------------- Ergänzung vom 31.10.2026: Aufnahme nach zwei Bestätigungen
+ok(d.kennzahl(k, "kurse__spy_d.csv") == (2, "2020-12-30"), "Kennzahl Kurse: Zeilen mit Werten, erstes Datum")
+ok(d.kennzahl(d.kuerzen(french, "french__F-F_Research_Data_Factors_daily.csv")[0], "french__F-F_Research_Data_Factors_daily.csv")
+   == (2, "1926-11-02"), "Kennzahl Ken French: Datumszeilen bis zum Stichtag")
+ok(d.kennzahl(b"timestamp,close\n1609459199,29000\n", "btc.csv") == (1, "2020-12-31"), "Kennzahl Bitcoin: Unix-Sekunden")
+ok(d.kennzahl(b"observation_date,X\n2020-01-01,.\n2020-01-02,0\n2020-01-03,1.5\n2020-01-06,nan\n", "fred__X.csv") == (1, "2020-01-01"),
+   "Kennzahl: fehlende Werte («.», NaN) und 0 zählen nicht")
+
+os.environ.pop("PS_DISCOVERY_BESTAETIGUNGEN", None)
+ok(d.Stand(tempfile.mkdtemp()).bestaetigungen == 2, "ohne Variable: zwei Bestätigungen (Regel der Suche)")
+os.environ["PS_DISCOVERY_BESTAETIGUNGEN"] = "0"
+ok(d.Stand(tempfile.mkdtemp()).bestaetigungen == 0, "PS_DISCOVERY_BESTAETIGUNGEN=0: Einfrieren bei der ersten Verwendung (Siegeltest)")
+os.environ.pop("PS_DISCOVERY_BESTAETIGUNGEN", None)
+
+UHR = [None]
+d._jetzt = lambda: UHR[0]
+
+
+def um(h):
+    """Uhr der Läufe: h Stunden nach dem 1.11.2026, 05:00 UTC."""
+    UHR[0] = (datetime(2026, 11, 1, 5, tzinfo=timezone.utc) + timedelta(hours=h)).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def termine(fehlen=(), beginn="2019-01-01"):
+    """Scout-Terminreihe wie USDA: jeder Kalendertag bis 10.1.2021, 1 am 10. jedes Monats (24 Termine bis 2020)."""
+    t0 = date.fromisoformat(beginn)
+    z = ["datum,wert"]
+    for i in range((date(2021, 1, 10) - t0).days + 1):
+        t = t0 + timedelta(days=i)
+        z.append(f"{t.isoformat()},{1 if t.day == 10 and t.isoformat() not in fehlen else 0}")
+    return gzip.compress(("\n".join(z) + "\n").encode(), mtime=0)
+
+
+voll = termine()
+kurz = termine(fehlen=("2019-03-10", "2019-07-10", "2020-02-10"))        # verkürzter Abruf: 21 statt 24 Termine
+N = "n__neu__usda__wasde.csv.gz"
+ok(d.kennzahl(d.kuerzen(voll, N)[0], N) == (24, "2019-01-01") and d.kennzahl(d.kuerzen(kurz, N)[0], N)[0] == 21,
+   "Kennzahl Terminreihe: Termine, nicht Zeilen (verkürzt: gleiche Zeilenzahl, weniger Termine)")
+
+
+def lauf(stand, cache, dateien, h, lauf_id, schreiben=True, bericht=True, **kw):
+    um(h)
+    s = d.Stand(stand, schreiben=schreiben, bericht=bericht, lauf_id=lauf_id, **kw)
+    for name, roh in dateien.items():
+        s.bereitstellen(name, holen(roh), os.path.join(cache, f"{lauf_id}_{name}"))
+    return s.abschliessen()
+
+
+with tempfile.TemporaryDirectory() as tmp:
+    stand, cache = os.path.join(tmp, "discovery"), os.path.join(tmp, "c")
+    os.makedirs(cache)
+    b = lauf(stand, cache, {N: voll}, 0, "R1")
+    v = verz(stand)
+    ok(N not in v["dateien"] and N in v["vorgemerkt"] and b["vorgemerkt_neu"][0]["datei"] == N and not b["neu_eingefroren"]
+       and open(os.path.join(cache, f"R1_{N}"), "rb").read() == d.kuerzen(voll, N)[0] and b["vorgemerkt_n"] == 1,
+       "neue Datei: vorgemerkt, gekürzt aus dem Spiegel gelesen, nicht eingefroren")
+    vorher = open(os.path.join(stand, "stand.json"), "rb").read()
+    b = lauf(stand, cache, {N: voll}, 5, "R2")
+    ok(open(os.path.join(stand, "stand.json"), "rb").read() == vorher and not b["bestaetigung"] and N not in verz(stand)["dateien"],
+       "Lauf nach 5 Stunden: zählt nicht, Stand unverändert")
+    b = lauf(stand, cache, {N: voll}, 24, "R3")
+    ok(b["bestaetigung"] == [{"datei": N, "sichtung": 2, "von": 3, "werte": 24, "beste_werte": 24, "eingefroren": False}]
+       and N not in verz(stand)["dateien"], "erste Bestätigung nach 24 Stunden: noch nicht eingefroren")
+    b = lauf(stand, cache, {N: voll}, 48, "R4")
+    v = verz(stand)
+    ok(N in v["dateien"] and N not in v["vorgemerkt"] and b["neu_eingefroren"] == [N] and b["bestaetigung"][0]["eingefroren"]
+       and v["dateien"][N]["sha"] == d.sha(d.kuerzen(voll, N)[0]) and v["dateien"][N]["lauf_id"] == "R4" and not d.pruefen(stand)["verstoesse"],
+       "zweite Bestätigung nach 48 Stunden: jüngste Fassung eingefroren, Einfrierprüfung bestanden")
+
+    G = "n__neu__usda__grain.csv.gz"                                      # USDA-Fall: verkürzt bei der ersten Sichtung
+    lauf(stand, cache, {G: kurz}, 0, "G1")
+    b = lauf(stand, cache, {G: voll}, 24, "G2")
+    ok(G not in verz(stand)["dateien"] and b["zurueckgehalten"][0]["datei"] == G and b["zurueckgehalten"][0]["werte"] == 21
+       and b["zurueckgehalten"][0]["beste_werte"] == 24, "verkürzte erste Sichtung: zurückgehalten, sobald die vollständige Fassung erscheint")
+    lauf(stand, cache, {G: voll}, 48, "G3")
+    ok(G not in verz(stand)["dateien"], "ein Rückgang verlangt danach drei gute Sichtungen")
+    b = lauf(stand, cache, {G: voll}, 72, "G4")
+    ok(verz(stand)["dateien"][G]["sha"] == d.sha(d.kuerzen(voll, G)[0]) and b["neu_eingefroren"] == [G],
+       "USDA-Fall: eingefroren wird die vollständige Fassung (24 Termine), nicht die verkürzte")
+
+    X = "n__neu__fda__zulassungen.csv.gz"                                 # Rückgang zwischen zwei Sichtungen (unter 20 h)
+    lauf(stand, cache, {X: voll}, 0, "X1")
+    b = lauf(stand, cache, {X: kurz}, 3, "X2")
+    e = verz(stand)["vorgemerkt"][X]
+    ok(len(e["sichtungen"]) == 1 and e["sichtungen"][0]["werte"] == 21 and e["beste_werte"] == 24 and b["zurueckgehalten"][0]["datei"] == X,
+       "Rückgang nach 3 Stunden: ersetzt die letzte Sichtung, zurückgehalten")
+    for h, lid in ((24, "X3"), (48, "X4")):
+        lauf(stand, cache, {X: voll}, h, lid)
+    ok(X not in verz(stand)["dateien"], "nach dem Rückgang: zwei gute Sichtungen genügen nicht")
+    lauf(stand, cache, {X: voll}, 72, "X5")
+    ok(X in verz(stand)["dateien"], "nach dem Rückgang: drei gute Sichtungen, eingefroren")
+
+    Y = "n__neu__norges__ziel.csv.gz"                                     # erstes Datum später, ohne Verlust von Terminen
+    y0 = termine(fehlen={f"2019-{m:02d}-10" for m in range(1, 6)})
+    y1 = termine(fehlen={f"2019-{m:02d}-10" for m in range(1, 6)}, beginn="2019-03-01")
+    y2 = termine(fehlen={f"2019-{m:02d}-10" for m in range(1, 6)}, beginn="2019-01-03")
+    lauf(stand, cache, {Y: y0}, 0, "Y1")
+    b = lauf(stand, cache, {Y: y1}, 24, "Y2")
+    ok(b["zurueckgehalten"] and b["zurueckgehalten"][0]["grund"].startswith("erstes Datum"), "erstes Datum 59 Tage später: zurückgehalten")
+    Z = "n__neu__rollend__x.csv.gz"                                       # Rollfenster: Beginn 2 Tage später ist erlaubt
+    lauf(stand, cache, {Z: y0}, 0, "Z1")
+    lauf(stand, cache, {Z: y2}, 24, "Z2")
+    lauf(stand, cache, {Z: y2}, 48, "Z3")
+    ok(Z in verz(stand)["dateien"], "Rollfenster (Beginn 2 Tage später, keine Termine verloren): eingefroren")
+
+    W_ = "n__neu__wackel__w.csv.gz"                                       # schwankt dauernd: Befund nach 7 Tagen
+    for t in range(0, 9):
+        b = lauf(stand, cache, {W_: voll if t % 2 == 0 else kurz}, 24 * t, f"W{t}")
+    ok(W_ not in verz(stand)["dateien"] and b["vorgemerkt_ueber_7_tage"] == [W_], "dauernd schwankende Datei: nie eingefroren, Befund nach 7 Tagen")
+
+    F = "n__neu__familie__v.csv.gz"
+    b = lauf(stand, cache, {F: voll}, 300, "V1", schreiben=False)
+    ok(b["nur_gelesen_nicht_eingefroren"] == [F] and F not in (verz(stand).get("vorgemerkt") or {}), "Familie V (nur lesend): nicht vorgemerkt")
+    ok(not d.pruefen(stand)["verstoesse"], "vorgemerkte Dateien stören die Einfrierprüfung nicht")
+
+with tempfile.TemporaryDirectory() as tmp:                                # Warnung im Revisionsbericht (§3 Ziff. 7)
+    stand, cache = os.path.join(tmp, "discovery"), os.path.join(tmp, "c")
+    os.makedirs(cache)
+    lauf(stand, cache, {N: kurz}, 0, "A1", bestaetigungen=0)              # verkürzt eingefroren wie am 28.10.2026
+    b = lauf(stand, cache, {N: voll}, 24, "A2")
+    r = b["revisionen"][0]
+    ok(r["stand_unvollstaendig"] and r["werte_ungleich_null_stand"] == 21 and r["werte_ungleich_null_spiegel"] == 24
+       and b["warnungen_stand_unvollstaendig"] == [{"datei": N, "werte_stand": 21, "werte_spiegel": 24}],
+       "Stand mit weniger Terminen als der Spiegel: Warnung «Stand möglicherweise unvollständig»")
+    viel = b"datum,wert\n" + b"".join(f"2020-{1 + i // 28:02d}-{1 + i % 28:02d},{1 + i % 5}\n".encode() for i in range(201))
+    wenig = viel.replace(b"2020-01-05,5\n", b"2020-01-05,0\n")
+    lauf(stand, cache, {"n__neu__klein__k.csv": wenig}, 48, "A3", bestaetigungen=0)
+    b = lauf(stand, cache, {"n__neu__klein__k.csv": viel}, 72, "A4")
+    ok(not b["revisionen"][0]["stand_unvollstaendig"] and not b["warnungen_stand_unvollstaendig"],
+       "Stand mit 200 statt 201 Werten (unter 1%): keine Warnung, nur Revision")
+    b = lauf(stand, cache, {N: kurz}, 96, "A5")
+    ok(b["revisionen_n"] == 0 and not b["warnungen_stand_unvollstaendig"], "Spiegel gleich wie Stand: keine Revision, keine Warnung")
+
 print("alle Tests bestanden")
