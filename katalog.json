@@ -4388,8 +4388,22 @@
   "bereich": "Staat und Geldmarkt (Anleihen)",
   "mechanismus": "Ein Sprung des Realzinses verschiebt kurzfristig Gold, inflationsgeschützte Anleihen und zinsempfindliche Sektoren gegenüber dem Weltindex; bisher nur Breakeven (T10YIE), nicht der Realzins selbst.",
   "prioritaet": "normal",
-  "grund": "Tagesreihe ab 2003-01-02, offen ohne Login, Veröffentlichung am Folgetag. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Tagesreihe ab 2003-01-02, offen ohne Login, Veröffentlichung am Folgetag. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel. | Geprueft 31.10.2026: K1 Median 1 Tag, K2 ab 2003-01-02 (5961 Werte), K3 offen, K4 Fed H.15 nicht revidiert, K5 letzter Wert 2026-10-29, K6 nicht im Spiegel. Gleiche Folgewerte 9.1%, Min -1.19 (2021), Max 3.15 plausibel. Publikation taeglich, verfuegbar_nach_tagen 1.",
+  "status": "aktiv",
+  "geprueft_utc": "2026-10-31T12:30:00Z",
+  "reihen": [
+   {
+    "reihe": "dfii10",
+    "zeilen": 5961,
+    "erste": "2003-01-02",
+    "letzte": "2026-10-29",
+    "median_abstand_tage": 1,
+    "anteil_gleiche_folgewerte": 0.0911,
+    "min": -1.19,
+    "max": 3.15
+   }
+  ],
+  "aufgenommen_utc": "2026-10-31T12:30:00Z"
  },
  {
   "id": "fred_crack_spread_benzin_wti_taeglich",
@@ -4399,8 +4413,9 @@
   "bereich": "Rohstoffe und Logistik",
   "mechanismus": "Eine stark steigende oder fallende Raffineriemarge ändert kurzfristig die Gewinnerwartung von Raffinerien und damit des Energiesektors (XLE) gegenüber dem Weltindex, unabhängig vom Rohölpreis allein.",
   "prioritaet": "normal",
-  "grund": "Tagesreihe EIA-Spotpreise ab 1986 (Benzin), Differenz aus zwei offenen FRED-Reihen, ohne Login. Neu gegenüber wti_brent_spread und propan. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Tagesreihe EIA-Spotpreise ab 1986 (Benzin), Differenz aus zwei offenen FRED-Reihen, ohne Login. Neu gegenüber wti_brent_spread und propan. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel. | 31.10.2026 abgelehnt: Differenzreihe zweier Reihen; Differenzen bildet die Suchmaschine selbst (paare.txt). Vorschlag Paar: DGASNYH minus DCOILWTICO, Mechanismus Raffineriemarge (XLE).",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-31T12:30:00Z"
  },
  {
   "id": "fred_dollar_em_index_taeglich",
@@ -4421,8 +4436,9 @@
   "bereich": "Firmenereignisse",
   "mechanismus": "Häufen sich Warnbriefe der FDA an Hersteller, steigt die Regulierungsunsicherheit für Gesundheits- und Biotechwerte (XLV, IBB) kurzfristig gegenüber dem Weltindex.",
   "prioritaet": "hoch",
-  "grund": "Öffentliche Tabelle mit Ausstellungsdatum, ohne Login; Tiefe der Historie und maschineller Abruf ungeprüft (Scout muss Zugang testen, Sperren nicht umgehen). Firmenereignisse haben erste Priorität (Zusatz 8). Neu gegenüber fda_ruckrufe und fda_*_enforcement. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Öffentliche Tabelle mit Ausstellungsdatum, ohne Login; Tiefe der Historie und maschineller Abruf ungeprüft (Scout muss Zugang testen, Sperren nicht umgehen). Firmenereignisse haben erste Priorität (Zusatz 8). Neu gegenüber fda_ruckrufe und fda_*_enforcement. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel. | 31.10.2026 abgelehnt: datatables-data-Export liefert nur 1000 Zeilen (xlsx), Paging-Parameter (page/start/length) wirkungslos; Ausgabe ungeordnet, nicht vollstaendige Historie abrufbar, K2/K5 nicht belegbar. Kein Umgehen versucht.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-31T12:30:00Z"
  },
  {
   "id": "sec_sc13d_aktivisten_meldungen_dichte",
@@ -4432,8 +4448,9 @@
   "bereich": "Firmenereignisse",
   "mechanismus": "Eine Häufung von 13D-Meldungen zeigt Aktivisten- und Übernahmedruck; Bewertungsaufschläge wirken kurzfristig auf kleinere zyklische Sektoren gegenüber dem Weltindex.",
   "prioritaet": "hoch",
-  "grund": "Formtyp SC 13D / SCHEDULE 13D im EDGAR-Tagesindex ab 1994, Zähler je Tag; Abruf wie edgar_daily_index_meldungen, ohne Login. Neu gegenüber sec_13f_einreichungsfristen (Fristen, nicht Ereignisse). Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Formtyp SC 13D / SCHEDULE 13D im EDGAR-Tagesindex ab 1994, Zähler je Tag; Abruf wie edgar_daily_index_meldungen, ohne Login. Neu gegenüber sec_13f_einreichungsfristen (Fristen, nicht Ereignisse). Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel. | 31.10.2026 abgelehnt: EDGAR-Quellen laufen ueber GitHub Action auf main (SEC sperrt diese Umgebung).",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-31T12:30:00Z"
  },
  {
   "id": "fred_stlfsi_stress_woechentlich",

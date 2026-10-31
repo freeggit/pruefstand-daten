@@ -1,0 +1,11 @@
+{
+  "dfii10": {
+    "beschreibung": "Realzins 10-jaehrige inflationsgeschuetzte US-Staatsanleihe (TIPS), konstante Laufzeit (Fed H.15, FRED DFII10), taeglich an US-Bankarbeitstagen ab 2003.",
+    "einheit": "Prozent p.a. (realer Zins)",
+    "publikation": "taeglich (Fed H.15 Release, am naechsten Geschaeftstag)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
