@@ -4379,5 +4379,71 @@
   ],
   "aufgenommen_utc": "2026-10-30T16:46:20Z",
   "geprueft_utc": "2026-10-30T16:46:20Z"
+ },
+ {
+  "id": "fred_realzins_dfii10_taeglich",
+  "name": "Realzins 10 Jahre (TIPS), täglich, FRED DFII10",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Staat und Geldmarkt (Anleihen)",
+  "mechanismus": "Ein Sprung des Realzinses verschiebt kurzfristig Gold, inflationsgeschützte Anleihen und zinsempfindliche Sektoren gegenüber dem Weltindex; bisher nur Breakeven (T10YIE), nicht der Realzins selbst.",
+  "prioritaet": "normal",
+  "grund": "Tagesreihe ab 2003-01-02, offen ohne Login, Veröffentlichung am Folgetag. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fred_crack_spread_benzin_wti_taeglich",
+  "name": "Raffineriemarge: NY-Harbor-Benzin minus WTI, täglich (FRED DGASNYH, DCOILWTICO)",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGASNYH",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Rohstoffe und Logistik",
+  "mechanismus": "Eine stark steigende oder fallende Raffineriemarge ändert kurzfristig die Gewinnerwartung von Raffinerien und damit des Energiesektors (XLE) gegenüber dem Weltindex, unabhängig vom Rohölpreis allein.",
+  "prioritaet": "normal",
+  "grund": "Tagesreihe EIA-Spotpreise ab 1986 (Benzin), Differenz aus zwei offenen FRED-Reihen, ohne Login. Neu gegenüber wti_brent_spread und propan. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fred_dollar_em_index_taeglich",
+  "name": "Handelsgewichteter US-Dollar gegen Schwellenländer, täglich (FRED DTWEXEMEGS)",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXEMEGS",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Währung",
+  "mechanismus": "Ein starker Dollar gegenüber Schwellenländerwährungen verteuert deren Dollarschulden und drückt kurzfristig Schwellenländer-Aktien (EEM, EWZ) gegenüber dem Weltindex; der breite Dollarindex mischt dies mit Industrieländern.",
+  "prioritaet": "tief",
+  "grund": "Tagesreihe ab 2006-01-02, offen. Teilüberschneidung mit DTWEXBGS, darum tief (Bereich Dollar bereits ausgeschöpft). Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fda_warning_letters_woechentlich",
+  "name": "FDA Warning Letters, Ausstellungstage (Firmenereignis, aggregiert)",
+  "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/compliance-actions-and-activities/warning-letters",
+  "domain": "fda.gov",
+  "bereich": "Firmenereignisse",
+  "mechanismus": "Häufen sich Warnbriefe der FDA an Hersteller, steigt die Regulierungsunsicherheit für Gesundheits- und Biotechwerte (XLV, IBB) kurzfristig gegenüber dem Weltindex.",
+  "prioritaet": "hoch",
+  "grund": "Öffentliche Tabelle mit Ausstellungsdatum, ohne Login; Tiefe der Historie und maschineller Abruf ungeprüft (Scout muss Zugang testen, Sperren nicht umgehen). Firmenereignisse haben erste Priorität (Zusatz 8). Neu gegenüber fda_ruckrufe und fda_*_enforcement. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "sec_sc13d_aktivisten_meldungen_dichte",
+  "name": "SEC EDGAR: tägliche Anzahl Schedule-13D-Meldungen (Grossbeteiligungen, Aktivisten)",
+  "url": "https://www.sec.gov/Archives/edgar/daily-index/",
+  "domain": "sec.gov",
+  "bereich": "Firmenereignisse",
+  "mechanismus": "Eine Häufung von 13D-Meldungen zeigt Aktivisten- und Übernahmedruck; Bewertungsaufschläge wirken kurzfristig auf kleinere zyklische Sektoren gegenüber dem Weltindex.",
+  "prioritaet": "hoch",
+  "grund": "Formtyp SC 13D / SCHEDULE 13D im EDGAR-Tagesindex ab 1994, Zähler je Tag; Abruf wie edgar_daily_index_meldungen, ohne Login. Neu gegenüber sec_13f_einreichungsfristen (Fristen, nicht Ereignisse). Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fred_stlfsi_stress_woechentlich",
+  "name": "Finanzstress: St. Louis Fed Financial Stress Index (FRED STLFSI4), wöchentlich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=STLFSI4",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Staat und Geldmarkt (Anleihen)",
+  "mechanismus": "Ein Anstieg des Finanzstresses über 18 Marktgrössen löst kurzfristig Flucht in Staatsanleihen und defensive Sektoren (IEF, XLU, XLP) gegenüber dem Weltindex aus.",
+  "prioritaet": "tief",
+  "grund": "Wochenreihe ab 1993, offen. Teilüberschneidung mit ofr_financial_stress_index und NFCI, darum tief. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
+  "status": "kandidat"
  }
 ]
