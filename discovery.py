@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""Prüfstand – eingefrorener Discovery-Stand (Verfassung V3.18, E9 Stufe 2). ENTWURF, Fassung 2 vom 28.10.2026 nach
-Astra-Gutachten 23 (M1: nur eingefrorene Fassungen unterliegen der Einfrierprüfung; Soll: Revisionsbericht nach
-geändert, hinzugekommen und entfallen). Nicht in Kraft.
+"""Prüfstand – eingefrorener Discovery-Stand (Verfassung V3.18, E9 Stufe 2; in Kraft seit 28.10.2026). Fassung 2 vom
+28.10.2026 nach Astra-Gutachten 23 (M1: nur eingefrorene Fassungen unterliegen der Einfrierprüfung; Soll: Revisionsbericht
+nach geändert, hinzugekommen und entfallen). Ergänzung vom 31.10.2026 zu §3 Ziff. 1 und 7 (Gegenprüfung gp_2026-10-30_1;
+Reto: «freigeben»): Aufnahme neuer Dateien erst nach zwei Bestätigungen, Warnung bei möglicherweise unvollständigem Stand.
 
 Zweck: Die Suche rechnet nur neu, wenn sich eine massgebliche Eingabe wirklich geändert hat. Die täglichen Spiegel
 liefern die Daten bis 31.12.2020 aber nicht Zeichen für Zeichen gleich: Angepasste Kurse von Yahoo schwanken in der
 letzten Stelle, FRED-SP500 verschiebt seinen Beginn, NTSB-Unfälle wandern um einen Tag, Wetterdaten wechseln die
 Fassung. Darum liest die Discovery ihre Daten aus einem eingefrorenen Stand:
 
-1. Jede Datei, die die Suchmaschine über lade() liest (ausser Manifesten *.json), wird bei ihrer ersten Verwendung
-   einmal gekürzt (nur Zeilen bis zum Stichtag 31.12.2020) und mit Prüfsumme im Stand abgelegt.
+1. Jede Datei, die die Suchmaschine über lade() liest (ausser Manifesten *.json), wird gekürzt (nur Zeilen bis zum
+   Stichtag 31.12.2020) und nach zwei Bestätigungen einmal mit Prüfsumme im Stand abgelegt (Ergänzung vom 31.10.2026,
+   siehe unten). Bis dahin liest die Suche sie gekürzt aus dem Spiegel.
 2. Danach liest die Suche nur noch diese Datei. Der Spiegel ändert sie nicht.
 3. Weicht der Spiegel bis zum Stichtag vom Stand ab (Revision), wird das berichtet (Revisionsbericht), aber nur
    übernommen, wenn nachfuehrung.json auf main einen Eintrag mit Grund und Freigabe nennt. Jeder Eintrag wirkt je Datei
@@ -18,6 +20,23 @@ Fassung. Darum liest die Discovery ihre Daten aus einem eingefrorenen Stand:
 5. Einfrierprüfung (pruefen): Jede eingefrorene Fassung des Stands passt zu ihrer Prüfsumme, ihr Datum ist sicher
    lesbar und sie enthält keine Zeile nach dem Stichtag. Nicht eingefrorene Dateien (nicht sicher kürzbar) stehen nicht
    im Stand; für sie gilt wie bisher die Stichtagskürzung der Suchmaschine (31.12.2020, Familie L 31.12.2000).
+
+Ergänzung vom 31.10.2026 (§3 Ziff. 1 und 7; Grund: Am 28.10.2026 fror der Stand zwei verkürzt abgerufene USDA-Reihen ein.
+Die Dateien hatten gleich viele Zeilen und kein Feld fehler im Manifest; nur Termine standen auf 0 statt 1):
+- Werte ungleich 0: Datenzeilen bis zum Stichtag mit mindestens einem Wert ungleich 0 ausserhalb der Datumsspalte
+  (fehlende Werte wie «.» oder NaN zählen nicht).
+- Eine neue Datei wird beim ersten Lauf nur vorgemerkt (stand.json, Feld vorgemerkt: Werte ungleich 0, erstes Datum,
+  Prüfsumme des Inhalts). Gezählt wird höchstens eine Sichtung je 20 Stunden. Ein Lauf dazwischen zählt nur, wenn er
+  einen Rückgang zeigt; dann ersetzt er die letzte Sichtung.
+- Eingefroren wird die jüngste Fassung, sobald die letzten drei gezählten Sichtungen (zwei Bestätigungen) je mindestens
+  99% der höchsten gesehenen Zahl Werte ungleich 0 haben und ihr erstes Datum höchstens 5 Tage nach dem frühesten liegt.
+  Sonst bleibt die Datei vorgemerkt; ein Rückgang verlangt danach wieder drei gute Sichtungen.
+- Bleibt eine gelesene Datei mehr als 7 Tage vorgemerkt, nennt der Bericht sie als Befund.
+- Revisionsbericht: Hat eine eingefrorene Datei im gemeinsamen Zeitraum mindestens 1% (und mindestens einen) Wert
+  ungleich 0 weniger als der Spiegel, trägt ihr Eintrag stand_unvollstaendig = true («Stand möglicherweise
+  unvollständig»). Nur Bericht; Behebung wie bisher über nachfuehrung.json mit Grund und Freigabe.
+- PS_DISCOVERY_BESTAETIGUNGEN=0 friert wie bisher bei der ersten Verwendung ein. Nur für Siegeltest und Tests:
+  suche_lauf.py entfernt vor dem Lauf alle Variablen PS_DISCOVERY_*.
 
 Rückweg: AKTIV = False schaltet den Stand ab (suche_lauf.py und vorreg.py fragen diesen Schalter ab). Dann rechnet die
 Suche wie bisher direkt auf den Spiegeln.
@@ -46,8 +65,15 @@ from datetime import datetime, timezone
 AKTIV = True                                  # Rückweg: False = kein Stand, Suche wie bisher auf den Spiegeln
 STICHTAG = "2020-12-31"
 STICHTAG_EPOCH = 1609459199                   # 2020-12-31T23:59:59Z
-REGEL = ("V3.18 E9 (Entwurf): Discovery-Daten bis 31.12.2020, eingefroren bei der ersten Verwendung; "
-         "Revisionen nur über nachfuehrung.json mit Grund und Freigabe")
+REGEL = ("V3.18 E9 mit Ergänzung vom 31.10.2026: Discovery-Daten bis 31.12.2020, eingefroren nach zwei Bestätigungen "
+         "(je mindestens 20 h Abstand, mindestens 99% der Werte ungleich 0); Revisionen nur über nachfuehrung.json mit Grund "
+         "und Freigabe; Warnung bei möglicherweise unvollständigem Stand")
+BESTAETIGUNGEN = 2                            # Ergänzung vom 31.10.2026: zwei Bestätigungen nach der ersten Sichtung
+ABSTAND_STUNDEN = 20                          # höchstens eine gezählte Sichtung je 20 Stunden
+GRENZE_WERTE = 0.99                           # je Sichtung mindestens 99% der höchsten gesehenen Zahl Werte ungleich 0
+MAX_TAGE_SPAETER = 5                          # erstes Datum höchstens 5 Tage nach dem frühesten gesehenen
+BEFUND_TAGE = 7                               # länger vorgemerkt: Befund im Bericht
+WARNUNG_ANTEIL = 0.01                         # Revisionsbericht: Stand mit mindestens 1% weniger Werten als der Spiegel
 _ISO = re.compile(r"^\d{4}-\d{2}-\d{2}")
 _FRENCH_GRENZE = {8: "20201231", 6: "202012", 4: "2020"}
 # Datumsspalte je Quelle, wie suchmaschine.py sie liest (Präfix des Cache-Namens -> Art, Spalte; 0 = erste Spalte)
@@ -171,6 +197,73 @@ def _zahl(b):
 _FEHLT = {b"", b".", b"nan", b"NaN", b"NA", b"null", b"None"}   # fehlender Wert (FRED: «.»)
 
 
+def _ungleich_null(x):
+    """Ergänzung vom 31.10.2026: Ist das Feld ein vorhandener Wert ungleich 0? Fehlende Werte und NaN zählen nicht."""
+    x = x.strip()
+    if x in _FEHLT:
+        return False
+    v = _zahl(x)
+    return v is not None and v == v and v != 0.0
+
+
+def _werte_zeilen(daten, name):
+    """Ergänzung vom 31.10.2026: [(Datum JJJJ-MM-TT, mindestens ein Wert ungleich 0)] je Datenzeile einer entpackten
+    Fassung; Datum aus derselben Spalte wie beim Kürzen, Werte aus allen übrigen Spalten. Ken French: Zeilen mit Datum
+    (JJJJMMTT, JJJJMM, JJJJ), Monate und Jahre auf den ersten Tag gesetzt."""
+    art, spalte = _quelle(name)
+    zeilen, out = daten.splitlines(), []
+    if art == "french":
+        for z in zeilen:
+            f = z.split(b",")
+            k = f[0].strip()
+            if k.isdigit() and len(k) in _FRENCH_GRENZE:
+                s = k.decode()
+                out.append((f"{s[:4]}-{s[4:6] or '01'}-{s[6:8] or '01'}", any(_ungleich_null(x) for x in f[1:])))
+        return out
+    if art is None or not zeilen:
+        return out
+    kopf = [f.strip() for f in zeilen[0].decode("utf-8", "replace").lstrip("﻿").split(",")]
+    idx = 0 if spalte == 0 else (kopf.index(spalte) if spalte in kopf else None)
+    if idx is None:
+        return out
+    for z in zeilen[1:]:
+        f = z.split(b",")
+        if idx >= len(f) or not f[idx].strip():
+            continue
+        w = f[idx].strip().decode("utf-8", "replace")
+        if art == "epoch":
+            try:
+                d = datetime.fromtimestamp(float(w), timezone.utc).strftime("%Y-%m-%d")
+            except (ValueError, OverflowError, OSError):
+                continue
+        else:
+            d = w[:10]
+        out.append((d, any(_ungleich_null(x) for j, x in enumerate(f) if j != idx)))
+    return out
+
+
+def kennzahl(roh, name):
+    """Ergänzung vom 31.10.2026: (Werte ungleich 0, erstes Datum) einer gekürzten Fassung (auch gzip)."""
+    z = _werte_zeilen(_entpacken(roh, name)[0], name)
+    return sum(1 for _, v in z if v), (min(d for d, _ in z) if z else None)
+
+
+def _zeit(s):
+    return datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+
+
+def _stunden(a, b):
+    return (_zeit(b) - _zeit(a)).total_seconds() / 3600
+
+
+def _tage(frueh, spaet):
+    """Tage, um die ein erstes Datum später liegt als das früheste (0, wenn eines fehlt oder früher liegt)."""
+    try:
+        return max(0, (datetime.fromisoformat(spaet[:10]) - datetime.fromisoformat(frueh[:10])).days)
+    except (TypeError, ValueError):
+        return 0
+
+
 def unterschied(alt, neu, name):
     """Revisionsbericht für eine Datei, je Datum der abweichenden Zeilen (Gutachten 23, Soll): an gleichem Datum
     geändert, nur im Spiegel (hinzugekommen), nur im Stand (entfallen); fehlende Werte gesondert; grösste Abweichung einer
@@ -233,7 +326,14 @@ def unterschied(alt, neu, name):
             else:
                 max_rel = max(max_rel, d / abs(u))
     daten_ = sorted(s.decode("utf-8", "replace")[:10] for s in set(ka) | set(kb))
-    return {"geaendert": len(beide), "hinzugekommen": len(set(kb) - set(ka)), "entfallen": len(set(ka) - set(kb)),
+    # Ergänzung vom 31.10.2026 (§3 Ziff. 7): Werte ungleich 0 im gemeinsamen Zeitraum; weniger im Stand -> Warnung
+    wa, wb = _werte_zeilen(a, name), _werte_zeilen(b, name)
+    ab = max(min((d for d, _ in wa), default=""), min((d for d, _ in wb), default=""))
+    w_stand = sum(1 for d, v in wa if v and d >= ab)
+    w_spiegel = sum(1 for d, v in wb if v and d >= ab)
+    return {"werte_ungleich_null_stand": w_stand, "werte_ungleich_null_spiegel": w_spiegel,
+            "stand_unvollstaendig": w_spiegel - w_stand >= 1 and w_stand <= (1 - WARNUNG_ANTEIL) * w_spiegel,
+            "geaendert": len(beide), "hinzugekommen": len(set(kb) - set(ka)), "entfallen": len(set(ka) - set(kb)),
             "werte_fehlen_im_spiegel": fehlt_im_spiegel, "werte_neu_im_spiegel": neu_im_spiegel,
             "max_rel_abweichung": float(f"{max_rel:.3g}"), "max_abs_abweichung": float(f"{max_abs:.3g}"),
             "relativ_nicht_definiert": rel_undef, "max_abs_abweichung_bei_null": float(f"{max_abs_null:.3g}"),
@@ -245,8 +345,12 @@ def unterschied(alt, neu, name):
 class Stand:
     """Eingefrorener Discovery-Stand. schreiben=True nur in suche_lauf.py (Suche); Familie V liest nur."""
 
-    def __init__(self, ordner, schreiben=False, bericht=False, nachfuehrung=None, lauf_id=None):
+    def __init__(self, ordner, schreiben=False, bericht=False, nachfuehrung=None, lauf_id=None, bestaetigungen=None):
         self.ordner, self.dordner = ordner, os.path.join(ordner, "dateien")
+        # Ergänzung vom 31.10.2026: Zahl der Bestätigungen vor dem Einfrieren (0 = bei der ersten Verwendung, nur Tests)
+        self.bestaetigungen = (int(os.environ.get("PS_DISCOVERY_BESTAETIGUNGEN", BESTAETIGUNGEN)) if bestaetigungen is None
+                               else int(bestaetigungen))
+        self.vorgemerkt_neu, self.bestaetigung, self.zurueckgehalten, self._vm_geaendert = [], [], [], False
         self.pfad = os.path.join(ordner, "stand.json")
         if os.path.exists(self.pfad):
             self.verz = json.load(open(self.pfad, encoding="utf-8"))   # ein beschädigtes Verzeichnis bricht ab
@@ -352,8 +456,54 @@ class Stand:
         if not self.schreiben:
             self.nur_gelesen.append(name)                   # nur gelesen, nicht eingefroren (Familie V)
             return
+        if self.bestaetigungen > 0 and not self._bestaetigt(name, schnitt):
+            return                                          # Ergänzung vom 31.10.2026: vorgemerkt, noch nicht eingefroren
         self._ablegen(name, schnitt, info)
         self.neu.append(name)
+
+    def _bestaetigt(self, name, schnitt):
+        """Ergänzung vom 31.10.2026 (§3 Ziff. 1): Sichtung einer neuen Datei vermerken; True, wenn sie jetzt eingefroren wird."""
+        werte, erste = kennzahl(schnitt, name)
+        jetzt = _jetzt()
+        vm = self.verz.setdefault("vorgemerkt", {})
+        sicht = {"utc": jetzt, "lauf_id": self.lauf_id, "werte": werte, "erste": erste, "sha_inhalt": inhalt_sha(schnitt, name)}
+        e = vm.get(name)
+        if e is None:
+            vm[name] = {"erstmals_utc": jetzt, "beste_werte": werte, "frueheste_erste": erste, "sichtungen": [sicht]}
+            self.vorgemerkt_neu.append({"datei": name, "werte": werte, "erste": erste})
+            self._vm_geaendert = True
+            return False
+        beste = max(e.get("beste_werte") or 0, werte)
+        frueh = min([x for x in (e.get("frueheste_erste"), erste) if x], default=None)
+
+        def gut(s):
+            return s["werte"] >= GRENZE_WERTE * beste and _tage(frueh, s.get("erste")) <= MAX_TAGE_SPAETER
+
+        sichtungen = e.get("sichtungen") or []
+        if sichtungen and _stunden(sichtungen[-1]["utc"], jetzt) < ABSTAND_STUNDEN:
+            if gut(sicht):
+                return False                                # zu früh für eine Bestätigung; nichts zu vermerken
+            sichtungen = sichtungen[:-1] + [sicht]          # Rückgang zwischen zwei Sichtungen: ersetzt die letzte
+        else:
+            sichtungen = sichtungen + [sicht]
+        sichtungen = sichtungen[-(self.bestaetigungen + 1):]
+        e.update({"beste_werte": beste, "frueheste_erste": frueh, "sichtungen": sichtungen})
+        self._vm_geaendert = True
+        if len(sichtungen) == self.bestaetigungen + 1 and all(gut(s) for s in sichtungen):
+            vm.pop(name)
+            self.bestaetigung.append({"datei": name, "sichtung": len(sichtungen), "von": self.bestaetigungen + 1,
+                                      "werte": werte, "beste_werte": beste, "eingefroren": True})
+            return True
+        if not all(gut(s) for s in sichtungen):
+            schlecht = [s for s in sichtungen if not gut(s)][-1]
+            self.zurueckgehalten.append({"datei": name, "werte": schlecht["werte"], "beste_werte": beste, "utc": schlecht["utc"],
+                                         "grund": (f"weniger als {GRENZE_WERTE:.0%} der höchsten Zahl Werte ungleich 0"
+                                                   if schlecht["werte"] < GRENZE_WERTE * beste
+                                                   else f"erstes Datum mehr als {MAX_TAGE_SPAETER} Tage später")})
+        else:
+            self.bestaetigung.append({"datei": name, "sichtung": len(sichtungen), "von": self.bestaetigungen + 1,
+                                      "werte": werte, "beste_werte": beste, "eingefroren": False})
+        return False
 
     def abschliessen(self):
         """Legt vorgemerkte Dateien ab, schreibt stand.json atomar (nur bei schreiben=True und Änderung), räumt ersetzte
@@ -388,8 +538,10 @@ class Stand:
                                                         "vollstaendig": bool(gemeint) and not rest,
                                                         "erstmals_angewandt_utc": alt.get("erstmals_angewandt_utc") or (_jetzt() if erledigt else None),
                                                         "zuletzt_utc": _jetzt(), "lauf_id": self.lauf_id}
-            if self._ablage or vermerkt:
+            if self._ablage or vermerkt or self._vm_geaendert:
                 self.verz["dateien"] = dict(sorted(self.verz["dateien"].items()))
+                if "vorgemerkt" in self.verz:
+                    self.verz["vorgemerkt"] = dict(sorted(self.verz["vorgemerkt"].items()))
                 self.verz.update({"stand_utc": _jetzt(), "dateien_n": len(self.verz["dateien"])})
                 os.makedirs(self.ordner, exist_ok=True)
                 with open(self.pfad + ".tmp", "w", encoding="utf-8") as f:
@@ -407,7 +559,18 @@ class Stand:
             for f in ("geaendert", "hinzugekommen", "entfallen", "werte_fehlen_im_spiegel", "werte_neu_im_spiegel",
                       "relativ_nicht_definiert"):
                 summe[f] += int(r.get(f) or 0)
+        vm = self.verz.get("vorgemerkt") or {}
+        jetzt = _jetzt()
+        lange = sorted(n for n, e in vm.items() if n in self.gelesen and e.get("erstmals_utc")
+                       and _stunden(e["erstmals_utc"], jetzt) > 24 * BEFUND_TAGE)
         return {"regel": REGEL, "dateien_n": len(self.verz["dateien"]), "neu_eingefroren_n": len(self.neu),
+                "aufnahme": {"bestaetigungen": self.bestaetigungen, "abstand_stunden": ABSTAND_STUNDEN,
+                             "grenze_werte": GRENZE_WERTE, "max_tage_spaeter": MAX_TAGE_SPAETER},
+                "vorgemerkt_n": len(vm), "vorgemerkt_neu": self.vorgemerkt_neu, "bestaetigung": self.bestaetigung,
+                "zurueckgehalten": self.zurueckgehalten, "vorgemerkt_ueber_7_tage": lange,
+                "warnungen_stand_unvollstaendig": [{"datei": r["datei"], "werte_stand": r.get("werte_ungleich_null_stand"),
+                                                    "werte_spiegel": r.get("werte_ungleich_null_spiegel")}
+                                                   for r in self.revisionen if r.get("stand_unvollstaendig")],
                 "neu_eingefroren": self.neu, "nachgefuehrt": self.nachgefuehrt, "nachfuehrung_angewandt": angewandt,
                 "nachfuehrung_fehler": self.nachfuehrung_fehler, "nicht_eingefroren": self.nicht_eingefroren,
                 "nur_gelesen_nicht_eingefroren": self.nur_gelesen, "gelesen": sorted(self.gelesen),
