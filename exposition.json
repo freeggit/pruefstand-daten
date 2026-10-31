@@ -601,6 +601,12 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_fred_realzins_dfii10_taeglich_dfii10": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261031T142656Z",
+   "erst_zeit": "2026-10-31T17:21Z",
+   "beleg": "suche/laeufe/L20261031T142656Z.json"
+  },
   "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen": {
    "erst_dokument": null,
    "erst_lauf": "L20261028T195301Z",
@@ -1814,8 +1820,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261031T103939Z",
-  "zeit_utc": "2026-10-31T13:31Z",
-  "grundreihen_n": 301
+  "lauf_id": "L20261031T142656Z",
+  "zeit_utc": "2026-10-31T17:21Z",
+  "grundreihen_n": 302
  }
 }

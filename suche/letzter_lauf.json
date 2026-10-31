@@ -1,18 +1,18 @@
 {
- "zeit_utc": "2026-10-31T13:31Z",
- "lauf_id": "L20261031T103939Z",
+ "zeit_utc": "2026-10-31T17:21Z",
+ "lauf_id": "L20261031T142656Z",
  "verfassung": "V3.18",
- "commit_main": "bfdcb2e0935b69886d24b3a2d93efeb97cdaf0ef",
+ "commit_main": "8cbadadbcffbdbd387efcc2f989287959ca14a46",
  "commit_energie": "4c17647c71cb24a9db8629b6722f10f17c4f5525",
- "commit_neu": "783f06ca22da34642ae0fdf1f06401365f5163ac",
- "commit_lernen_vorher": "b5ae8562a4a4edfac8fed9cd674d5e5059744fcc",
- "code_hash": "1389bea68c457515",
+ "commit_neu": "532a5b8c52cf0a360f613cd4cea37c35969f45b5",
+ "commit_lernen_vorher": "14c41ba0e260bfed700052170b9840c000a20d26",
+ "code_hash": "2d79c8b050a7c3ee",
  "sha_suchmaschine": "a63264581c5ed5f1",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "0754dd82356e9d44",
+ "sha_register_vorher": "29b2fcc169db2ef9",
  "sha_manifest_main": "5bc9a8c6b674f82a",
- "sha_manifest_neu": "5a13274be87ec01a",
+ "sha_manifest_neu": "a86eaf582f538e90",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
@@ -20,9 +20,9 @@
   "python": "3.12.15",
   "btc_sha": "8c16152e4bd556aa"
  },
- "ergebnis_hash": "582332e634de9bf7",
- "kandidaten": 361161,
- "kandidaten_neu": 2269,
+ "ergebnis_hash": "1d91c2dda0d201e5",
+ "kandidaten": 362135,
+ "kandidaten_neu": 974,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -33,17 +33,17 @@
   "analyse": "vollständig",
   "familie_v": "vollständig",
   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-  "tests": "übersprungen",
-  "siegeltest": "übersprungen"
+  "tests": "vollständig",
+  "siegeltest": "vollständig"
  },
- "laufeintrag": "suche/laeufe/L20261031T103939Z.json",
+ "laufeintrag": "suche/laeufe/L20261031T142656Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [
-  "neu_fedregister_executive_orders_anzahl_d1",
-  "neu_fedregister_executive_orders_anzahl_d20",
-  "neu_fedregister_executive_orders_anzahl_d5",
-  "neu_fedregister_executive_orders_anzahl_stand",
-  "neu_fedregister_executive_orders_anzahl_z252"
+  "neu_fred_realzins_dfii10_taeglich_dfii10_d1",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_d20",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_d5",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_stand",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_z252"
  ],
  "gesamt": "vollständig"
 }

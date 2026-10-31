@@ -1,5 +1,5 @@
 {
- "kumuliert": 699754,
+ "kumuliert": 700728,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -586,6 +586,11 @@
   "neu_fred_propane_propan_d5",
   "neu_fred_propane_propan_stand",
   "neu_fred_propane_propan_z252",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_d1",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_d20",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_d5",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_stand",
+  "neu_fred_realzins_dfii10_taeglich_dfii10_z252",
   "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d1",
   "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d20",
   "neu_fred_rrp_reverse_repo_taeglich_rrp_volumen_d5",
@@ -1636,11 +1641,17 @@
    "datei": "suche/S0059.json",
    "kandidaten": 361161,
    "in_db": false
+  },
+  {
+   "nr": 60,
+   "datei": "suche/S0060.json",
+   "kandidaten": 362135,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-31T13:31Z",
+ "letzter_suchlauf_utc": "2026-10-31T17:21Z",
  "pruefung_lernrunde_utc": "2026-10-31T10:00:00Z",
- "letzter_code_hash": "1389bea68c457515",
+ "letzter_code_hash": "2d79c8b050a7c3ee",
  "methode": "M4",
  "vorreg": [
   {
@@ -1968,11 +1979,19 @@
    "ergebnis_hash": "582332e634de9bf7",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261031T142656Z.json",
+   "lauf_id": "L20261031T142656Z",
+   "s_dokument": "suche/S0060.json",
+   "ergebnis_hash": "1d91c2dda0d201e5",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-31T13:31Z",
- "letztes_vollarchiv": "suche/S0059_alle.csv.gz",
- "letzter_ergebnis_hash": "582332e634de9bf7",
+ "letzter_lauf_utc": "2026-10-31T17:21Z",
+ "letztes_vollarchiv": "suche/S0060_alle.csv.gz",
+ "letzter_ergebnis_hash": "1d91c2dda0d201e5",
  "konflikte": [
   {
    "wo": "index",
@@ -4207,15 +4226,15 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 301,
+  "grundreihen_n": 302,
   "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "582332e634de9bf7",
+ "letztes_vollarchiv_ergebnis_hash": "1d91c2dda0d201e5",
  "pruefungen_bestanden": {
-  "pruef_hash": "2b1f2ae2a032d469",
-  "lauf_id": "L20261029T074958Z",
-  "zeit_utc": "2026-10-29T11:25:51Z",
-  "eingabe_hash": "3494e0b0ceac0cc0",
+  "pruef_hash": "a4e8eafe6d59ff99",
+  "lauf_id": "L20261031T142656Z",
+  "zeit_utc": "2026-10-31T18:04:31Z",
+  "eingabe_hash": "f2c3c7bc2737d13b",
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
@@ -4228,7 +4247,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "7b8c3fb911a8c96a",
- "letzter_gueltiger_lauf": "L20261031T103939Z",
- "letzter_entscheidung_hash": "ae9bb3dfd703c396"
+ "letzter_eingabe_hash": "34b1bae46edfafd5",
+ "letzter_gueltiger_lauf": "L20261031T142656Z",
+ "letzter_entscheidung_hash": "d305a4e78318bef0"
 }

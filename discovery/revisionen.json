@@ -1,7 +1,7 @@
 {
- "lauf_id": "L20261031T103939Z",
- "zeit_utc": "2026-10-31T10:39:39Z",
- "regel": "V3.18 E9 (Entwurf): Discovery-Daten bis 31.12.2020, eingefroren bei der ersten Verwendung; Revisionen nur über nachfuehrung.json mit Grund und Freigabe",
+ "lauf_id": "L20261031T142656Z",
+ "zeit_utc": "2026-10-31T14:26:56Z",
+ "regel": "V3.18 E9 mit Ergänzung vom 31.10.2026: Discovery-Daten bis 31.12.2020, eingefroren nach zwei Bestätigungen (je mindestens 20 h Abstand, mindestens 99% der Werte ungleich 0); Revisionen nur über nachfuehrung.json mit Grund und Freigabe; Warnung bei möglicherweise unvollständigem Stand",
  "revisionen_n": 39,
  "revisionen_je_gruppe": {
   "fred": 2,
@@ -16,9 +16,13 @@
   "werte_neu_im_spiegel": 0,
   "relativ_nicht_definiert": 9
  },
+ "warnungen_stand_unvollstaendig": [],
  "revisionen": [
   {
    "datei": "kurse__spy_d.csv",
+   "werte_ungleich_null_stand": 7033,
+   "werte_ungleich_null_spiegel": 7033,
+   "stand_unvollstaendig": false,
    "geaendert": 1582,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -36,6 +40,9 @@
   },
   {
    "datei": "kurse__acwi_d.csv",
+   "werte_ungleich_null_stand": 3215,
+   "werte_ungleich_null_spiegel": 3215,
+   "stand_unvollstaendig": false,
    "geaendert": 200,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -53,6 +60,9 @@
   },
   {
    "datei": "kurse__efa_d.csv",
+   "werte_ungleich_null_stand": 4868,
+   "werte_ungleich_null_spiegel": 4868,
+   "stand_unvollstaendig": false,
    "geaendert": 265,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -70,6 +80,9 @@
   },
   {
    "datei": "kurse__ewj_d.csv",
+   "werte_ungleich_null_stand": 6242,
+   "werte_ungleich_null_spiegel": 6242,
+   "stand_unvollstaendig": false,
    "geaendert": 324,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -87,6 +100,9 @@
   },
   {
    "datei": "kurse__xlb_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 168,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -104,6 +120,9 @@
   },
   {
    "datei": "kurse__xlc_d.csv",
+   "werte_ungleich_null_stand": 640,
+   "werte_ungleich_null_spiegel": 640,
+   "stand_unvollstaendig": false,
    "geaendert": 41,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -121,6 +140,9 @@
   },
   {
    "datei": "kurse__xle_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 197,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -138,6 +160,9 @@
   },
   {
    "datei": "kurse__xlf_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 184,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -155,6 +180,9 @@
   },
   {
    "datei": "kurse__xli_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 370,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -172,6 +200,9 @@
   },
   {
    "datei": "kurse__xlk_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 171,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -189,6 +220,9 @@
   },
   {
    "datei": "kurse__xlp_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 251,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -206,6 +240,9 @@
   },
   {
    "datei": "kurse__xlre_d.csv",
+   "werte_ungleich_null_stand": 1318,
+   "werte_ungleich_null_spiegel": 1318,
+   "stand_unvollstaendig": false,
    "geaendert": 56,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -223,6 +260,9 @@
   },
   {
    "datei": "kurse__xlu_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 114,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -240,6 +280,9 @@
   },
   {
    "datei": "kurse__xlv_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 399,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -257,6 +300,9 @@
   },
   {
    "datei": "kurse__xly_d.csv",
+   "werte_ungleich_null_stand": 5543,
+   "werte_ungleich_null_spiegel": 5543,
+   "stand_unvollstaendig": false,
    "geaendert": 219,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -274,6 +320,9 @@
   },
   {
    "datei": "kurse__ewl_d.csv",
+   "werte_ungleich_null_stand": 6242,
+   "werte_ungleich_null_spiegel": 6242,
+   "stand_unvollstaendig": false,
    "geaendert": 133,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -291,6 +340,9 @@
   },
   {
    "datei": "kurse__ewg_d.csv",
+   "werte_ungleich_null_stand": 6242,
+   "werte_ungleich_null_spiegel": 6242,
+   "stand_unvollstaendig": false,
    "geaendert": 116,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -308,6 +360,9 @@
   },
   {
    "datei": "kurse__dba_d.csv",
+   "werte_ungleich_null_stand": 3523,
+   "werte_ungleich_null_spiegel": 3523,
+   "stand_unvollstaendig": false,
    "geaendert": 41,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -325,6 +380,9 @@
   },
   {
    "datei": "kurse__tlt_d.csv",
+   "werte_ungleich_null_stand": 4640,
+   "werte_ungleich_null_spiegel": 4640,
+   "stand_unvollstaendig": false,
    "geaendert": 1140,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -342,6 +400,9 @@
   },
   {
    "datei": "kurse__bas.de_d.csv",
+   "werte_ungleich_null_stand": 6165,
+   "werte_ungleich_null_spiegel": 6165,
+   "stand_unvollstaendig": false,
    "geaendert": 134,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -359,6 +420,9 @@
   },
   {
    "datei": "kurse__hlag.de_d.csv",
+   "werte_ungleich_null_stand": 1305,
+   "werte_ungleich_null_spiegel": 1305,
+   "stand_unvollstaendig": false,
    "geaendert": 29,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -376,6 +440,9 @@
   },
   {
    "datei": "kurse__knin.sw_d.csv",
+   "werte_ungleich_null_stand": 5242,
+   "werte_ungleich_null_spiegel": 5242,
+   "stand_unvollstaendig": false,
    "geaendert": 337,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -393,6 +460,9 @@
   },
   {
    "datei": "kurse__eem_d.csv",
+   "werte_ungleich_null_stand": 4462,
+   "werte_ungleich_null_spiegel": 4462,
+   "stand_unvollstaendig": false,
    "geaendert": 164,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -410,6 +480,9 @@
   },
   {
    "datei": "kurse__ewz_d.csv",
+   "werte_ungleich_null_stand": 5150,
+   "werte_ungleich_null_spiegel": 5150,
+   "stand_unvollstaendig": false,
    "geaendert": 181,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -427,6 +500,9 @@
   },
   {
    "datei": "kurse__fxi_d.csv",
+   "werte_ungleich_null_stand": 4087,
+   "werte_ungleich_null_spiegel": 4087,
+   "stand_unvollstaendig": false,
    "geaendert": 162,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -444,6 +520,9 @@
   },
   {
    "datei": "kurse__smh_d.csv",
+   "werte_ungleich_null_stand": 5178,
+   "werte_ungleich_null_spiegel": 5178,
+   "stand_unvollstaendig": false,
    "geaendert": 107,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -461,6 +540,9 @@
   },
   {
    "datei": "kurse__ibb_d.csv",
+   "werte_ungleich_null_stand": 5004,
+   "werte_ungleich_null_spiegel": 5004,
+   "stand_unvollstaendig": false,
    "geaendert": 444,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -478,6 +560,9 @@
   },
   {
    "datei": "kurse__tip_d.csv",
+   "werte_ungleich_null_stand": 4298,
+   "werte_ungleich_null_spiegel": 4298,
+   "stand_unvollstaendig": false,
    "geaendert": 893,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -495,6 +580,9 @@
   },
   {
    "datei": "kurse__lqd_d.csv",
+   "werte_ungleich_null_stand": 4640,
+   "werte_ungleich_null_spiegel": 4640,
+   "stand_unvollstaendig": false,
    "geaendert": 1018,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -512,6 +600,9 @@
   },
   {
    "datei": "kurse__ief_d.csv",
+   "werte_ungleich_null_stand": 4640,
+   "werte_ungleich_null_spiegel": 4640,
+   "stand_unvollstaendig": false,
    "geaendert": 1098,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -529,6 +620,9 @@
   },
   {
    "datei": "kurse__shy_d.csv",
+   "werte_ungleich_null_stand": 4640,
+   "werte_ungleich_null_spiegel": 4640,
+   "stand_unvollstaendig": false,
    "geaendert": 1205,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -546,6 +640,9 @@
   },
   {
    "datei": "kurse__ewu_d.csv",
+   "werte_ungleich_null_stand": 6242,
+   "werte_ungleich_null_spiegel": 6242,
+   "stand_unvollstaendig": false,
    "geaendert": 173,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -563,6 +660,9 @@
   },
   {
    "datei": "fred__WEI.csv",
+   "werte_ungleich_null_stand": 678,
+   "werte_ungleich_null_spiegel": 678,
+   "stand_unvollstaendig": false,
    "geaendert": 4,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -580,6 +680,9 @@
   },
   {
    "datei": "fred__SP500.csv",
+   "werte_ungleich_null_stand": 1050,
+   "werte_ungleich_null_spiegel": 1050,
+   "stand_unvollstaendig": false,
    "geaendert": 0,
    "hinzugekommen": 0,
    "entfallen": 1,
@@ -597,6 +700,9 @@
   },
   {
    "datei": "n__neu__nhtsa_ruckrufe__anzahl.csv.gz",
+   "werte_ungleich_null_stand": 9032,
+   "werte_ungleich_null_spiegel": 9032,
+   "stand_unvollstaendig": false,
    "geaendert": 1,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -614,6 +720,9 @@
   },
   {
    "datei": "n__neu__nhtsa_ruckrufe__einheiten_betroffen.csv.gz",
+   "werte_ungleich_null_stand": 9026,
+   "werte_ungleich_null_spiegel": 9026,
+   "stand_unvollstaendig": false,
    "geaendert": 1,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -631,6 +740,9 @@
   },
   {
    "datei": "n__neu__ntsb_luftfahrtunfaelle__fatal.csv.gz",
+   "werte_ungleich_null_stand": 3632,
+   "werte_ungleich_null_spiegel": 3628,
+   "stand_unvollstaendig": false,
    "geaendert": 40,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -648,6 +760,9 @@
   },
   {
    "datei": "n__neu__ntsb_luftfahrtunfaelle__gesamt.csv.gz",
+   "werte_ungleich_null_stand": 5729,
+   "werte_ungleich_null_spiegel": 5729,
+   "stand_unvollstaendig": false,
    "geaendert": 100,
    "hinzugekommen": 0,
    "entfallen": 0,
@@ -665,6 +780,9 @@
   },
   {
    "datei": "n__neu__sp500_index_aenderungen__anzahl_aenderungen.csv.gz",
+   "werte_ungleich_null_stand": 228,
+   "werte_ungleich_null_spiegel": 229,
+   "stand_unvollstaendig": false,
    "geaendert": 1,
    "hinzugekommen": 0,
    "entfallen": 0,
