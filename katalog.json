@@ -3891,11 +3891,11 @@
   "domain": "www.eia.gov",
   "bereich": "Rohstoffe und Logistik",
   "status": "fehler",
-  "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen.",
+  "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen.",
   "mechanismus": "Revidierte Prognosen zu Ölnachfrage und Förderung verschieben die Preiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-20T10:00:00Z",
-  "geprueft_utc": "2026-10-29T20Z",
+  "geprueft_utc": "2026-10-31T20Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
@@ -3936,11 +3936,11 @@
   "domain": "www.zew.de",
   "bereich": "Kalender",
   "status": "fehler",
-  "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler. | Test 2026-10-29T20Z: www.zew.de 200, aber weiterhin keine maschinenlesbare Terminliste (robots: Crawl-delay 15).",
+  "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler. | Test 2026-10-29T20Z: www.zew.de 200, aber weiterhin keine maschinenlesbare Terminliste (robots: Crawl-delay 15). | Lauf 2026-10-31T20Z: www.zew.de HTTP 200 (wieder erreichbar); maschinenlesbare Terminliste noch nicht gefunden.",
   "mechanismus": "Die Stimmung institutioneller Anleger in Deutschland wirkt kurzfristig auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-21T10:00:00Z",
-  "geprueft_utc": "2026-10-29T20Z",
+  "geprueft_utc": "2026-10-31T20Z",
   "prioritaet": "tief",
   "herkunft": "Lernrunde"
  },
@@ -4340,8 +4340,8 @@
   "status": "kandidat",
   "prioritaet": "tief",
   "mechanismus": "Die Umfrage zur Kreditvergabe zeigt Verschärfung oder Lockerung der Bankkredite und kann Finanzwerte (XLF) und Kreditspreads kurzfristig gegenüber dem Weltindex bewegen.",
-  "grund": "Termine deterministisch (quartalsweise, ca. 2 Monate nach Quartalsende, 14 Uhr), öffentlich ohne Login; wenige Ereignisse je Jahr (n klein), darum tief. L3: Lown/Morgan, Kreditstandards. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel.",
-  "geprueft_utc": "2026-10-30T09:50Z"
+  "grund": "Termine deterministisch (quartalsweise, ca. 2 Monate nach Quartalsende, 14 Uhr), öffentlich ohne Login; wenige Ereignisse je Jahr (n klein), darum tief. L3: Lown/Morgan, Kreditstandards. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel. | Lauf 2026-10-31T20Z: Erreichbarkeit ok (HTTP 200). Auf federalreserve.gov/data/sloos.htm nur Seiten ab 2018; K2 (Beginn bis 2015) bräuchte ältere boarddocs-Seiten, nicht gelöst. Bleibt kandidat.",
+  "geprueft_utc": "2026-10-31T20Z"
  },
  {
   "id": "umich_konsumentenstimmung_termine",
@@ -4425,8 +4425,9 @@
   "bereich": "Währung",
   "mechanismus": "Ein starker Dollar gegenüber Schwellenländerwährungen verteuert deren Dollarschulden und drückt kurzfristig Schwellenländer-Aktien (EEM, EWZ) gegenüber dem Weltindex; der breite Dollarindex mischt dies mit Industrieländern.",
   "prioritaet": "tief",
-  "grund": "Tagesreihe ab 2006-01-02, offen. Teilüberschneidung mit DTWEXBGS, darum tief (Bereich Dollar bereits ausgeschöpft). Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Tagesreihe ab 2006-01-02, offen. Teilüberschneidung mit DTWEXBGS, darum tief (Bereich Dollar bereits ausgeschöpft). Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel. | Lauf 2026-10-31T20Z: abgelehnt. K4: H.10-Dollarindizes werden mit jährlicher Neugewichtung rückwirkend neu berechnet (revidiert); zudem Fed-H.10 wöchentlich publiziert und Überschneidung mit DTWEXBGS (K6-nah). Nicht abgerufen.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-31T20Z"
  },
  {
   "id": "fda_warning_letters_woechentlich",
@@ -4460,7 +4461,8 @@
   "bereich": "Staat und Geldmarkt (Anleihen)",
   "mechanismus": "Ein Anstieg des Finanzstresses über 18 Marktgrössen löst kurzfristig Flucht in Staatsanleihen und defensive Sektoren (IEF, XLU, XLP) gegenüber dem Weltindex aus.",
   "prioritaet": "tief",
-  "grund": "Wochenreihe ab 1993, offen. Teilüberschneidung mit ofr_financial_stress_index und NFCI, darum tief. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Wochenreihe ab 1993, offen. Teilüberschneidung mit ofr_financial_stress_index und NFCI, darum tief. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel. | Lauf 2026-10-31T20Z: abgelehnt. K1: wöchentlich (Median-Abstand 7 Tage > 3); zudem revidiert (K4, Index wird bei neuen Daten neu berechnet).",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-10-31T20Z"
  }
 ]
