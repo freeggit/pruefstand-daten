@@ -303,7 +303,9 @@ CACHE_VOR = bereitgestellt()
 if _sb is not None:
     schreibe_json({"lauf_id": LAUF_ID, "zeit_utc": BEGINN.strftime("%Y-%m-%dT%H:%M:%SZ"), "regel": _sb.get("regel"),
                    "revisionen_n": _sb.get("revisionen_n"), "revisionen_je_gruppe": _sb.get("revisionen_je_gruppe"),
-                   "revisionen_summe": _sb.get("revisionen_summe"), "revisionen": _sb.get("revisionen")},
+                   "revisionen_summe": _sb.get("revisionen_summe"),
+                   "warnungen_stand_unvollstaendig": _sb.get("warnungen_stand_unvollstaendig"),   # Ergänzung vom 31.10.2026
+                   "revisionen": _sb.get("revisionen")},
                   os.path.join(STAND_DIR, "revisionen.json"))
 STAND_KURZ = {
     "aktiv": STAND_AKTIV, "ordner": "discovery/ (claude/lernen)", "dateien_n": _pr["dateien_n"],
@@ -314,6 +316,12 @@ STAND_KURZ = {
     "nachfuehrung_fehler": (_sb or {}).get("nachfuehrung_fehler"), "nicht_eingefroren": (_sb or {}).get("nicht_eingefroren"),
     "revisionen_n": (_sb or {}).get("revisionen_n"), "revisionen_je_gruppe": (_sb or {}).get("revisionen_je_gruppe"),
     "revisionen_summe": (_sb or {}).get("revisionen_summe"),
+    # Ergänzung vom 31.10.2026 zu V3.18 §3 Ziff. 1 und 7: Aufnahme nach zwei Bestätigungen, Warnung bei unvollständigem Stand
+    "aufnahme": (_sb or {}).get("aufnahme"), "vorgemerkt_n": (_sb or {}).get("vorgemerkt_n"),
+    "vorgemerkt_neu": ((_sb or {}).get("vorgemerkt_neu") or [])[:60], "bestaetigung": ((_sb or {}).get("bestaetigung") or [])[:60],
+    "zurueckgehalten": ((_sb or {}).get("zurueckgehalten") or [])[:60],
+    "vorgemerkt_ueber_7_tage": (_sb or {}).get("vorgemerkt_ueber_7_tage"),
+    "warnungen_stand_unvollstaendig": (_sb or {}).get("warnungen_stand_unvollstaendig"),
     "revisionen_bericht": "discovery/revisionen.json (nur Bericht, löst nichts aus)",
     "einfrierpruefung": {"bestanden": not _pr["verstoesse"], "verstoesse": _pr["verstoesse"][:20],
                          "befunde_nicht_gelesen": _pr.get("befunde_nicht_gelesen", [])[:20],
