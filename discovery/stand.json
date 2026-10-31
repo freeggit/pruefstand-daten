@@ -2936,6 +2936,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:35Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fedregister_executive_orders__anzahl.csv.gz": {
+   "datei": "n__neu__fedregister_executive_orders__anzahl.csv.gz@c18dfb014fd21213",
+   "sha": "c18dfb014fd212136c130bdb52ab6668b851c89a877c3d1e6640c8c68d0c90be",
+   "sha_inhalt": "c92666b039cfba46ca5eade1c9d6fe04943ffb8353cd960d0dfc05ea1a444ffe",
+   "zeilen": 9862,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-10-31T10:40:04Z",
+   "lauf_id": "L20261031T103939Z"
+  },
   "n__neu__fedregister_faa_ad__anweisungen.csv.gz": {
    "datei": "n__neu__fedregister_faa_ad__anweisungen.csv.gz@9ccc1469867cf1dc",
    "sha": "9ccc1469867cf1dca8f692935cdcf7fda087e985b3e2cf26a84f3ca8c6e5016f",
@@ -4523,6 +4532,6 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-10-30T11:05:45Z",
- "dateien_n": 499
+ "stand_utc": "2026-10-31T10:40:14Z",
+ "dateien_n": 500
 }

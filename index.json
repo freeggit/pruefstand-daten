@@ -1,5 +1,5 @@
 {
- "kumuliert": 697485,
+ "kumuliert": 699754,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -425,6 +425,11 @@
   "neu_fedregister_epa_regeln_anzahl_d5",
   "neu_fedregister_epa_regeln_anzahl_stand",
   "neu_fedregister_epa_regeln_anzahl_z252",
+  "neu_fedregister_executive_orders_anzahl_d1",
+  "neu_fedregister_executive_orders_anzahl_d20",
+  "neu_fedregister_executive_orders_anzahl_d5",
+  "neu_fedregister_executive_orders_anzahl_stand",
+  "neu_fedregister_executive_orders_anzahl_z252",
   "neu_fedregister_faa_ad_anweisungen_d1",
   "neu_fedregister_faa_ad_anweisungen_d20",
   "neu_fedregister_faa_ad_anweisungen_d5",
@@ -1625,9 +1630,15 @@
    "datei": "suche/S0058.json",
    "kandidaten": 358892,
    "in_db": false
+  },
+  {
+   "nr": 59,
+   "datei": "suche/S0059.json",
+   "kandidaten": 361161,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-30T13:04Z",
+ "letzter_suchlauf_utc": "2026-10-31T13:31Z",
  "pruefung_lernrunde_utc": "2026-10-31T10:00:00Z",
  "letzter_code_hash": "1389bea68c457515",
  "methode": "M4",
@@ -1949,11 +1960,19 @@
    "ergebnis_hash": "c07e521b6fb338dd",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261031T103939Z.json",
+   "lauf_id": "L20261031T103939Z",
+   "s_dokument": "suche/S0059.json",
+   "ergebnis_hash": "582332e634de9bf7",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-30T13:04Z",
- "letztes_vollarchiv": "suche/S0058_alle.csv.gz",
- "letzter_ergebnis_hash": "c07e521b6fb338dd",
+ "letzter_lauf_utc": "2026-10-31T13:31Z",
+ "letztes_vollarchiv": "suche/S0059_alle.csv.gz",
+ "letzter_ergebnis_hash": "582332e634de9bf7",
  "konflikte": [
   {
    "wo": "index",
@@ -4188,10 +4207,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 300,
+  "grundreihen_n": 301,
   "neu_in_diesem_lauf": 1
  },
- "letztes_vollarchiv_ergebnis_hash": "c07e521b6fb338dd",
+ "letztes_vollarchiv_ergebnis_hash": "582332e634de9bf7",
  "pruefungen_bestanden": {
   "pruef_hash": "2b1f2ae2a032d469",
   "lauf_id": "L20261029T074958Z",
@@ -4209,7 +4228,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "af58400136d279b4",
- "letzter_gueltiger_lauf": "L20261030T110516Z",
- "letzter_entscheidung_hash": "7cf62fc9669f3a5b"
+ "letzter_eingabe_hash": "7b8c3fb911a8c96a",
+ "letzter_gueltiger_lauf": "L20261031T103939Z",
+ "letzter_entscheidung_hash": "ae9bb3dfd703c396"
 }

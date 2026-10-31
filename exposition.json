@@ -403,6 +403,12 @@
    "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
    "beleg": "suche/S0015_alle.csv.gz"
   },
+  "neu_fedregister_executive_orders_anzahl": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261031T103939Z",
+   "erst_zeit": "2026-10-31T13:31Z",
+   "beleg": "suche/laeufe/L20261031T103939Z.json"
+  },
   "neu_fedregister_faa_ad_anweisungen": {
    "erst_dokument": "S0014",
    "erst_lauf": null,
@@ -1808,8 +1814,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261030T110516Z",
-  "zeit_utc": "2026-10-30T13:04Z",
-  "grundreihen_n": 300
+  "lauf_id": "L20261031T103939Z",
+  "zeit_utc": "2026-10-31T13:31Z",
+  "grundreihen_n": 301
  }
 }

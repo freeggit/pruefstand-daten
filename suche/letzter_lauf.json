@@ -1,18 +1,18 @@
 {
- "zeit_utc": "2026-10-30T13:04Z",
- "lauf_id": "L20261030T110516Z",
+ "zeit_utc": "2026-10-31T13:31Z",
+ "lauf_id": "L20261031T103939Z",
  "verfassung": "V3.18",
- "commit_main": "15e8a894fbdf9134ff7ce390c3ebef5ce4c50e39",
- "commit_energie": "7acff924d3dad8ff5c366ca58e8e2cf055330b08",
- "commit_neu": "469cdfb118f6f2203a3372a8239fd16167d37987",
- "commit_lernen_vorher": "f5c08e602cde4f3d398e0d1726b6b40194be428e",
+ "commit_main": "bfdcb2e0935b69886d24b3a2d93efeb97cdaf0ef",
+ "commit_energie": "4c17647c71cb24a9db8629b6722f10f17c4f5525",
+ "commit_neu": "783f06ca22da34642ae0fdf1f06401365f5163ac",
+ "commit_lernen_vorher": "b5ae8562a4a4edfac8fed9cd674d5e5059744fcc",
  "code_hash": "1389bea68c457515",
  "sha_suchmaschine": "a63264581c5ed5f1",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "a77bfd4c5a3c780b",
- "sha_manifest_main": "026b023385b3a29a",
- "sha_manifest_neu": "3a16cf47d173ca6a",
+ "sha_register_vorher": "0754dd82356e9d44",
+ "sha_manifest_main": "5bc9a8c6b674f82a",
+ "sha_manifest_neu": "5a13274be87ec01a",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
@@ -20,9 +20,9 @@
   "python": "3.12.15",
   "btc_sha": "8c16152e4bd556aa"
  },
- "ergebnis_hash": "c07e521b6fb338dd",
- "kandidaten": 358892,
- "kandidaten_neu": 117,
+ "ergebnis_hash": "582332e634de9bf7",
+ "kandidaten": 361161,
+ "kandidaten_neu": 2269,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -36,10 +36,14 @@
   "tests": "übersprungen",
   "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261030T110516Z.json",
+ "laufeintrag": "suche/laeufe/L20261031T103939Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [
-  "neu_norges_bank_leitzins_entscheidtage_aenderungstage_stand"
+  "neu_fedregister_executive_orders_anzahl_d1",
+  "neu_fedregister_executive_orders_anzahl_d20",
+  "neu_fedregister_executive_orders_anzahl_d5",
+  "neu_fedregister_executive_orders_anzahl_stand",
+  "neu_fedregister_executive_orders_anzahl_z252"
  ],
  "gesamt": "vollständig"
 }
