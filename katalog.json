@@ -4464,5 +4464,82 @@
   "grund": "Wochenreihe ab 1993, offen. Teilüberschneidung mit ofr_financial_stress_index und NFCI, darum tief. Herkunft: Vorratsauffüllung. Lernrunde 31.10.2026; L3, kein Doppel. | Lauf 2026-10-31T20Z: abgelehnt. K1: wöchentlich (Median-Abstand 7 Tage > 3); zudem revidiert (K4, Index wird bei neuen Daten neu berechnet).",
   "status": "abgelehnt",
   "geprueft_utc": "2026-10-31T20Z"
+ },
+ {
+  "id": "sec_litigation_releases",
+  "name": "SEC Litigation Releases: Klagen der SEC gegen Firmen und Personen (Tagesdatum)",
+  "url": "https://www.sec.gov/litigation/litreleases.htm",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "mechanismus": "Eine Häufung von SEC-Klagen wegen Bilanz- und Anlagebetrug mindert kurzfristig das Vertrauen in Finanzwerte, XLF verliert gegenüber dem Weltindex.",
+  "prioritaet": "hoch",
+  "grund": "Firmenereignis mit Tagesdatum, Seiten je Jahr ab 1995, öffentlich ohne Login (Zusatz 8). Unterschied zu fedregister_sec_regeln: Einzelverfahren statt Regeln. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fda_drug_shortages_neue_engpaesse",
+  "name": "FDA Arzneimittelengpässe: neu gemeldete Engpässe (openFDA drug/shortage)",
+  "url": "https://api.fda.gov/drug/shortage.json?search=initial_posting_date:[20170101+TO+20201231]&limit=1000",
+  "domain": "api.fda.gov",
+  "bereich": "Firmenereignisse",
+  "mechanismus": "Neue Engpässe bei Generika zeigen Produktionsprobleme bei Herstellern, das belastet Pharma (XLV, IBB) kurzfristig gegenüber dem Weltindex.",
+  "prioritaet": "normal",
+  "grund": "Firmenereignis mit Tagesdatum, offene API ohne Login. Historie nur bis ca. 2017, darum normal statt hoch. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fred_heizoel_nyh_taeglich",
+  "name": "Heizöl Nr. 2 New York Harbor, Spotpreis täglich (FRED DHOILNYH)",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DHOILNYH",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Rohstoffe und Logistik",
+  "mechanismus": "Ein Preissprung bei Heizöl im Winter belastet Versorger und Verkehr und stützt Energie (XLE, XLU) gegenüber dem Weltindex.",
+  "prioritaet": "normal",
+  "grund": "Tagesreihe ab 1986, offen. Anderes Produkt als WTI, Brent, Propan und Erdgas. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fred_kerosin_golf_taeglich",
+  "name": "Kerosin Golfküste, Spotpreis täglich (FRED DJFUELUSGULF)",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJFUELUSGULF",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Rohstoffe und Logistik",
+  "mechanismus": "Steigende Kerosinpreise erhöhen die Kosten der Fluggesellschaften und belasten Industrie und Transport (XLI) gegenüber dem Weltindex.",
+  "prioritaet": "normal",
+  "grund": "Tagesreihe ab 1990, offen. Anderes Produkt als die bestehenden Ölreihen. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "rbnz_ocr_entscheidtage",
+  "name": "Reserve Bank of New Zealand: OCR-Entscheidtage",
+  "url": "https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/monetary-policy-decisions",
+  "domain": "www.rbnz.govt.nz",
+  "bereich": "Geldmarkt",
+  "mechanismus": "Überraschende Zinsentscheide in Neuseeland bewegen Rohstoffwährungen und damit Australien und Rohstoffländer (EWA) gegenüber dem Weltindex.",
+  "prioritaet": "tief",
+  "grund": "Ereignistage ab 1999, offen. Zentralbank-Entscheidtage sind laut Suchlauf schwach (Norges Bank bestes t 3.65), darum tief. Kein Variantenlauf, andere Bank. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "sifma_anleihen_fruehschluss_termine",
+  "name": "SIFMA: Empfehlungen für Anleihen-Frühschluss und Feiertage",
+  "url": "https://www.sifma.org/resources/general/holiday-schedule/",
+  "domain": "www.sifma.org",
+  "bereich": "Kalender",
+  "mechanismus": "An Frühschlusstagen ist der Anleihenmarkt dünn, Preisbewegungen werden verstärkt und wirken auf IEF und TLT gegenüber dem Weltindex.",
+  "prioritaet": "tief",
+  "grund": "Kalender mit Tagesdatum, öffentlich. Unterschied zu us_boersenfeiertage: Anleihenmarkt statt Aktienbörse. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "kandidat"
+ },
+ {
+  "id": "nasdaq100_jahresreconstitution_termine",
+  "name": "Nasdaq-100: jährliche Neugewichtung im Dezember (Termine)",
+  "url": "https://www.nasdaq.com/market-activity/quotes/nasdaq-ndx-index",
+  "domain": "www.nasdaq.com",
+  "bereich": "Kalender",
+  "mechanismus": "Indexfonds müssen am Stichtag umschichten, das drückt oder stützt Technologiewerte (XLK) kurzfristig gegenüber dem Weltindex.",
+  "prioritaet": "tief",
+  "grund": "Ein Termin je Jahr, wenige Ereignisse, darum tief. Unterschied zu sp500_russell_rebalance_termine: anderer Index. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "kandidat"
  }
 ]
