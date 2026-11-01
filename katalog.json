@@ -4493,10 +4493,14 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DHOILNYH",
   "domain": "fred.stlouisfed.org",
   "bereich": "Rohstoffe und Logistik",
-  "mechanismus": "Ein Preissprung bei Heizöl im Winter belastet Versorger und Verkehr und stützt Energie (XLE, XLU) gegenüber dem Weltindex.",
+  "mechanismus": "Heizöl-/Destillatpreis wirkt kurzfristig auf Energiesektor (XLE), Transport und Rohstoffe gegenüber dem Weltindex.",
   "prioritaet": "normal",
-  "grund": "Tagesreihe ab 1986, offen. Anderes Produkt als WTI, Brent, Propan und Erdgas. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Aufgenommen 2026-11-01T12:16Z: 8815 Zeilen, 1986-06-02 bis 2026-10-27, Median-Abstand 1 Tg, gleiche Folgewerte 2.5%, Min 0.284, Max 5.163. K1-K7 erfüllt (FRED/EIA, offen, nicht revidiert). Publikation wöchentlich, verfuegbar_nach_tagen 8 (Zusatz 5). Historie vor 1990 bzw. 1990 (Zusatz 4).",
+  "status": "aktiv",
+  "reihen": [
+   "heizoel"
+  ],
+  "geprueft_utc": "2026-11-01T12:16Z"
  },
  {
   "id": "fred_kerosin_golf_taeglich",
@@ -4504,10 +4508,14 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJFUELUSGULF",
   "domain": "fred.stlouisfed.org",
   "bereich": "Rohstoffe und Logistik",
-  "mechanismus": "Steigende Kerosinpreise erhöhen die Kosten der Fluggesellschaften und belasten Industrie und Transport (XLI) gegenüber dem Weltindex.",
+  "mechanismus": "Kerosinpreis wirkt kurzfristig auf Luftfahrt/Industrie (XLI) und Energie (XLE) gegenüber dem Weltindex.",
   "prioritaet": "normal",
-  "grund": "Tagesreihe ab 1990, offen. Anderes Produkt als die bestehenden Ölreihen. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Aufgenommen 2026-11-01T12:16Z: 8066 Zeilen, 1990-04-02 bis 2026-10-27, Median-Abstand 1 Tg, gleiche Folgewerte 2.0%, Min 0.282, Max 5.066. K1-K7 erfüllt (FRED/EIA, offen, nicht revidiert). Publikation wöchentlich, verfuegbar_nach_tagen 8 (Zusatz 5). Historie vor 1990 bzw. 1990 (Zusatz 4).",
+  "status": "aktiv",
+  "reihen": [
+   "kerosin"
+  ],
+  "geprueft_utc": "2026-11-01T12:16Z"
  },
  {
   "id": "rbnz_ocr_entscheidtage",

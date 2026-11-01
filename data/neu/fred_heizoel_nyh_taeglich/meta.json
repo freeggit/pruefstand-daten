@@ -1,0 +1,11 @@
+{
+  "heizoel": {
+    "beschreibung": "No. 2 Heating Oil New York Harbor Spotpreis (DHOILNYH), taeglich, USD je Gallone, ab 1986; Destillat-Referenzpreis, andere Ware als WTI/Brent",
+    "einheit": "USD je Gallone",
+    "publikation": "woechentlich (EIA-Spotpreis, wie fred_propane woechentlich publiziert (Zusatz 5))",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DHOILNYH",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, US-Handelstage)",
+    "verfuegbar_nach_tagen": 8
+  }
+}

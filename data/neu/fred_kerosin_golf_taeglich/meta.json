@@ -1,0 +1,11 @@
+{
+  "kerosin": {
+    "beschreibung": "Kerosin-Flugtreibstoff US Gulf Coast Spotpreis (DJFUELUSGULF), taeglich, USD je Gallone, ab 1990; Referenzpreis Luftfahrt-Treibstoff",
+    "einheit": "USD je Gallone",
+    "publikation": "woechentlich (EIA-Spotpreis, wie fred_propane woechentlich publiziert (Zusatz 5))",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJFUELUSGULF",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, US-Handelstage)",
+    "verfuegbar_nach_tagen": 8
+  }
+}
