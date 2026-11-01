@@ -1991,6 +1991,12 @@
    "ergebnis_hash": "1d91c2dda0d201e5",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261101T114610Z.json",
+   "lauf_id": "L20261101T114610Z",
+   "gesamt": "keine Neuberechnung",
+   "importierbar": false
   }
  ],
  "letzter_lauf_utc": "2026-10-31T17:21Z",
@@ -4235,10 +4241,10 @@
  },
  "letztes_vollarchiv_ergebnis_hash": "1d91c2dda0d201e5",
  "pruefungen_bestanden": {
-  "pruef_hash": "a4e8eafe6d59ff99",
-  "lauf_id": "L20261031T142656Z",
-  "zeit_utc": "2026-10-31T18:04:31Z",
-  "eingabe_hash": "f2c3c7bc2737d13b",
+  "pruef_hash": "ce1b5646fd681a05",
+  "lauf_id": "L20261101T114610Z",
+  "zeit_utc": "2026-11-01T11:46:49Z",
+  "eingabe_hash": "34b1bae46edfafd5",
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
@@ -4246,7 +4252,7 @@
    "ImageVersion": "20261026.354.1",
    "numpy": "2.5.4",
    "pandas": "3.0.6",
-   "python-dateutil": "3.0.0",
+   "python-dateutil": "4.0.0",
    "tzdata": "2026.6"
   },
   "ausnahmen_abgedeckt": []

@@ -45,5 +45,18 @@
   "neu_fred_realzins_dfii10_taeglich_dfii10_stand",
   "neu_fred_realzins_dfii10_taeglich_dfii10_z252"
  ],
- "gesamt": "vollständig"
+ "gesamt": "vollständig",
+ "letzter_versuch": {
+  "lauf_id": "L20261101T114610Z",
+  "gesamt": "keine Neuberechnung",
+  "stufen": {
+   "suche": "keine Neuberechnung",
+   "analyse": "übersprungen",
+   "familie_v": "übersprungen",
+   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+   "tests": "vollständig",
+   "siegeltest": "vollständig"
+  },
+  "zeit_utc": "2026-11-01T11:46Z"
+ }
 }

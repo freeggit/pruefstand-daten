@@ -4532,7 +4532,7 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-10-31T14:27:31Z",
+ "stand_utc": "2026-11-01T11:46:44Z",
  "dateien_n": 500,
  "vorgemerkt": {
   "n__neu__fred_realzins_dfii10_taeglich__dfii10.csv.gz": {
@@ -4543,6 +4543,13 @@
     {
      "utc": "2026-10-31T14:27:23Z",
      "lauf_id": "L20261031T142656Z",
+     "werte": 4490,
+     "erste": "2003-01-02",
+     "sha_inhalt": "fdb3f9d30bb1b5ae2272a7e6a90aa252a9c5e4a339a61dea0956a21d2fce0664"
+    },
+    {
+     "utc": "2026-11-01T11:46:37Z",
+     "lauf_id": "L20261101T114610Z",
      "werte": 4490,
      "erste": "2003-01-02",
      "sha_inhalt": "fdb3f9d30bb1b5ae2272a7e6a90aa252a9c5e4a339a61dea0956a21d2fce0664"

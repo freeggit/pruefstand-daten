@@ -1,0 +1,137 @@
+{
+ "lauf_id": "L20261101T114610Z",
+ "verfassung": "V3.18",
+ "beginn_utc": "2026-11-01T11:46:10Z",
+ "ende_suche_utc": "2026-11-01T11:46:49Z",
+ "anlass": "schedule",
+ "github_run_id": "41302373821",
+ "datenstand": {
+  "commit_main": "80672e774188c3565d3f8410574961461a2a3b6e",
+  "commit_energie": "a67c9668e42791e3d8d705ff00783d55fdd3ffbd",
+  "commit_neu": "9773059eb4b18c31e42d1454c882adae9e040cc7",
+  "sha_manifest_main": "3ae32d3fd07e5e49",
+  "sha_manifest_hr": "c9904d3abc1f2d00",
+  "sha_manifest_sec": "bc5c52cf48e18291",
+  "sha_manifest_neu": "d15f1f0f49a1a116",
+  "sha_manifest_energie": "cbc5a5d5f098e6b5"
+ },
+ "stufen": {
+  "suche": "keine Neuberechnung",
+  "analyse": "übersprungen",
+  "familie_v": "übersprungen",
+  "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+  "tests": "vollständig",
+  "siegeltest": "vollständig"
+ },
+ "e9": {
+  "modus": "bei Änderung (V3.17, E9; V3.18 mit eingefrorenem Stand, Entwurf)",
+  "eingabe_hash": "34b1bae46edfafd5",
+  "referenz_eingabe_hash": "34b1bae46edfafd5",
+  "referenz_lauf": "L20261031T142656Z",
+  "anlaesse": [],
+  "eingabe": {
+   "daten": "9c472deb9d093f2e",
+   "register": "b13f714b7d3f4d46",
+   "code": "2d79c8b050a7c3ee",
+   "vorregistrierung": "ccdd56c94beefacc",
+   "placebo": "200",
+   "teile": {
+    "kurse": "96faad0ff5c5e526",
+    "ind": "1a81873effe2e744",
+    "EREIGNIS": "48a12d3955628ac1",
+    "KAL": "cb2a5be8409f7805",
+    "VERDACHT_POS": "feda7b588336f928",
+    "ZIELE": "4e0f8540f1ee39f0",
+    "QUELLE": "a20db97e4d590e52",
+    "HERKUNFT": "a39e2a880d65a2cc",
+    "LUECKEN": "20f180ae2bd039ff",
+    "EXPLORATIV": "65728502cfdd8e03",
+    "EXPLORATIV_NAMEN": "86839ac2826e9e9e",
+    "KORREKTUREN": "2756cd8bfc0d24e3",
+    "VERFUEGBAR": "44136fa355b3678a",
+    "VERFUEGBAR_KAL": "1632dc0a15929035",
+    "AUSSCHLUSS": "13ac3f72165e2ba7",
+    "KUM_VORHER": "bc4a00f9587c13bb",
+    "N_PLACEBO": "27badc983df1780b",
+    "KALIBRIERUNG": "3cbc87c7681f34db",
+    "LANGZEIT": "3cbc87c7681f34db",
+    "DATENMANGEL": "24ccd078fd406f6c",
+    "AUSGESCHLOSSEN": "a269a7f4b6d9ef94",
+    "FAM": "d68171b88acbaaf9",
+    "umgebung": "a21668d34071bb23"
+   }
+  },
+  "stand": {
+   "aktiv": true,
+   "ordner": "discovery/ (claude/lernen)",
+   "dateien_n": 500,
+   "fassung": "02dfb8a9e37580c4",
+   "fassung_regel": "Prüfsumme von stand.json nach der Vorprüfung; die Rechnung liest nur die daraus bereitgestellten Dateien (Gutachten 23, M1)",
+   "bereitgestellt": {
+    "dateien_n": 506,
+    "pruefsumme": "2f5cdf6b7eeabf5b"
+   },
+   "neu_eingefroren_n": 0,
+   "neu_eingefroren": [],
+   "nachgefuehrt": [],
+   "nachfuehrung_angewandt": [],
+   "nachfuehrung_fehler": [],
+   "nicht_eingefroren": [],
+   "revisionen_n": 39,
+   "revisionen_je_gruppe": {
+    "fred": 2,
+    "kurse": 32,
+    "n__neu": 5
+   },
+   "revisionen_summe": {
+    "geaendert": 12324,
+    "hinzugekommen": 0,
+    "entfallen": 1,
+    "werte_fehlen_im_spiegel": 0,
+    "werte_neu_im_spiegel": 0,
+    "relativ_nicht_definiert": 9
+   },
+   "aufnahme": {
+    "bestaetigungen": 2,
+    "abstand_stunden": 20,
+    "grenze_werte": 0.99,
+    "max_tage_spaeter": 5
+   },
+   "vorgemerkt_n": 1,
+   "vorgemerkt_neu": [],
+   "bestaetigung": [
+    {
+     "datei": "n__neu__fred_realzins_dfii10_taeglich__dfii10.csv.gz",
+     "sichtung": 2,
+     "von": 3,
+     "werte": 4490,
+     "beste_werte": 4490,
+     "eingefroren": false
+    }
+   ],
+   "zurueckgehalten": [],
+   "vorgemerkt_ueber_7_tage": [],
+   "warnungen_stand_unvollstaendig": [],
+   "revisionen_bericht": "discovery/revisionen.json (nur Bericht, löst nichts aus)",
+   "einfrierpruefung": {
+    "bestanden": true,
+    "verstoesse": [],
+    "befunde_nicht_gelesen": [],
+    "geprueft": "alle gelesenen eingefrorenen Fassungen streng",
+    "nicht_eingefroren": "nicht im Stand; Stichtagskürzung der Suchmaschine wie bisher",
+    "ohne_eintrag_n": 0
+   }
+  }
+ },
+ "ausgaben": {
+  "s_dokument": "suche/S0060.json",
+  "vollarchiv": "suche/S0060_alle.csv.gz",
+  "art": "keine Neuberechnung: Eingaben unverändert gegenüber dem letzten gültigen Lauf; kein neues Ergebnis, kein neuer Befund"
+ },
+ "ende_utc": "2026-11-01T11:46:49Z",
+ "gesamt": "keine Neuberechnung",
+ "e38": {
+  "importierbar": false,
+  "grund": "keine Neuberechnung: kein neues Ergebnis (V3.17 §4)"
+ }
+}
