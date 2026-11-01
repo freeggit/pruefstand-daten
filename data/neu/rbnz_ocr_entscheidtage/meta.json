@@ -1,0 +1,21 @@
+{
+  "aenderungstage": {
+    "beschreibung": "1 am ersten Tag, an dem ein geaenderter Leitzins der RBNZ (Official Cash Rate, OCR) gilt (Wirksamkeitstag), sonst 0 (Aenderungen ab 0,10 Prozentpunkten, OCR erst seit 17.3.1999, davor Overnight-Satz nicht verwendet; Zusatz 5). Der Entscheid wird vorher bekanntgegeben (am oder vor Wirksamkeit), der Flag liegt also nie vor der Bekanntgabe.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Bekanntgabe liegt vor dem Wirksamkeitstag; Quelle: RBNZ Monetary Policy Statements; Wirksamkeit am oder nach dem Bekanntgabetag)",
+    "quelle_url": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.NZ",
+    "revidiert": false,
+    "verdichtung": "keine (Aenderungsindikator aus Tagesreihe abgeleitet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "ziel": {
+    "beschreibung": "Leitzins der RBNZ (Official Cash Rate, OCR), Wirksamkeitsdatum, Kalendertage laut BIS",
+    "einheit": "% p.a.",
+    "publikation": "taeglich (Satz vor Wirksamkeit bekanntgegeben)",
+    "quelle_url": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.NZ",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "keine",
+    "verfuegbar_nach_tagen": 0
+  }
+}

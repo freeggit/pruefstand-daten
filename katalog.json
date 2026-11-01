@@ -4473,8 +4473,9 @@
   "bereich": "Firmenereignisse",
   "mechanismus": "Eine Häufung von SEC-Klagen wegen Bilanz- und Anlagebetrug mindert kurzfristig das Vertrauen in Finanzwerte, XLF verliert gegenüber dem Weltindex.",
   "prioritaet": "hoch",
-  "grund": "Firmenereignis mit Tagesdatum, Seiten je Jahr ab 1995, öffentlich ohne Login (Zusatz 8). Unterschied zu fedregister_sec_regeln: Einzelverfahren statt Regeln. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "sec.gov gesperrt (403) von dieser Umgebung; EDGAR/SEC-Quellen laufen über die GitHub Action auf main (Zusatz 6), nicht selbst versucht. Vorher: Firmenereignis mit Tagesdatum, Seiten je Jahr ab 1995, öffentlich ohne Login (Zusatz 8). Unterschied zu fedregister_sec_regeln: Einzelverfahren statt Regeln. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-01T16:30:00Z"
  },
  {
   "id": "fda_drug_shortages_neue_engpaesse",
@@ -4484,8 +4485,9 @@
   "bereich": "Firmenereignisse",
   "mechanismus": "Neue Engpässe bei Generika zeigen Produktionsprobleme bei Herstellern, das belastet Pharma (XLV, IBB) kurzfristig gegenüber dem Weltindex.",
   "prioritaet": "normal",
-  "grund": "Firmenereignis mit Tagesdatum, offene API ohne Login. Historie nur bis ca. 2017, darum normal statt hoch. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "K2: openFDA drug/shortage liefert vor 2016 keine Einträge (Test 2026-11-01: leere Antwort für initial_posting_date bis 2016-01-01); Historie beginnt nach 31.12.2015. Vorher: Firmenereignis mit Tagesdatum, offene API ohne Login. Historie nur bis ca. 2017, darum normal statt hoch. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-01T16:30:00Z"
  },
  {
   "id": "fred_heizoel_nyh_taeglich",
@@ -4520,13 +4522,38 @@
  {
   "id": "rbnz_ocr_entscheidtage",
   "name": "Reserve Bank of New Zealand: OCR-Entscheidtage",
-  "url": "https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/monetary-policy-decisions",
-  "domain": "www.rbnz.govt.nz",
+  "url": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.NZ",
+  "domain": "stats.bis.org",
   "bereich": "Geldmarkt",
   "mechanismus": "Überraschende Zinsentscheide in Neuseeland bewegen Rohstoffwährungen und damit Australien und Rohstoffländer (EWA) gegenüber dem Weltindex.",
   "prioritaet": "tief",
-  "grund": "Ereignistage ab 1999, offen. Zentralbank-Entscheidtage sind laut Suchlauf schwach (Norges Bank bestes t 3.65), darum tief. Kein Variantenlauf, andere Bank. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "K1-K7 erfüllt: BIS Data Portal WS_CBPOL (Tagesreihe RBNZ OCR ab 17.3.1999), offen ohne Schlüssel, Abruf <5 s, letzter Wert 2026-10-23 (9 Tage, knapp unter K5), Leitzins nicht revidiert. Reihen: aenderungstage (0/1, aktiv; 77 Änderungen ab 18.3.1999, Schwelle 0,1 Pp, Flag am Wirksamkeitstag = Bekanntgabetag, wie Norges/Riksbank; Belegquelle RBNZ Monetary Policy Statements; vor OCR-Einführung 1999 keine Flags) und ziel (Satz 0,25-8,25; ruhend, Redundanz, Zusatz 3). 10061 Zeilen, Median-Abstand 1, gleiche Folgewerte 98 % (Ereignisreihe, erwartet).",
+  "status": "aktiv",
+  "reihen": [
+   {
+    "reihe": "aenderungstage",
+    "zeilen": 10061,
+    "erste": "1999-03-17",
+    "letzte": "2026-10-23",
+    "median_abstand_tage": 1,
+    "anteil_gleiche_folgewerte": 0.985,
+    "min": 0,
+    "max": 1
+   },
+   {
+    "reihe": "ziel",
+    "zeilen": 10061,
+    "erste": "1999-03-17",
+    "letzte": "2026-10-23",
+    "median_abstand_tage": 1,
+    "anteil_gleiche_folgewerte": 0.807,
+    "min": 0.25,
+    "max": 8.25,
+    "status": "ruhend"
+   }
+  ],
+  "aufgenommen_utc": "2026-11-01T16:30:00Z",
+  "geprueft_utc": "2026-11-01T16:30:00Z"
  },
  {
   "id": "sifma_anleihen_fruehschluss_termine",
