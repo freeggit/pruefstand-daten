@@ -4574,7 +4574,8 @@
   "bereich": "Kalender",
   "mechanismus": "Indexfonds müssen am Stichtag umschichten, das drückt oder stützt Technologiewerte (XLK) kurzfristig gegenüber dem Weltindex.",
   "prioritaet": "tief",
-  "grund": "Ein Termin je Jahr, wenige Ereignisse, darum tief. Unterschied zu sp500_russell_rebalance_termine: anderer Index. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Ein Termin je Jahr, wenige Ereignisse, darum tief. Unterschied zu sp500_russell_rebalance_termine: anderer Index. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel. | Lauf 2026-11-02T00:24Z: abgelehnt, kein eigener Mechanismus: Reconstitution wird am dritten Freitag im Dezember wirksam, identisch mit opex_verfall in kalender_ereignisse (Doppel); nur 1 Ereignis/Jahr.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-02T00:24Z"
  }
 ]
