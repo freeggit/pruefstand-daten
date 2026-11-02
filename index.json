@@ -1,5 +1,5 @@
 {
- "kumuliert": 700728,
+ "kumuliert": 703373,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -570,6 +570,11 @@
   "neu_fred_fx_lang_usdcad_d5",
   "neu_fred_fx_lang_usdcad_stand",
   "neu_fred_fx_lang_usdcad_z252",
+  "neu_fred_heizoel_nyh_taeglich_heizoel_d1",
+  "neu_fred_heizoel_nyh_taeglich_heizoel_d20",
+  "neu_fred_heizoel_nyh_taeglich_heizoel_d5",
+  "neu_fred_heizoel_nyh_taeglich_heizoel_stand",
+  "neu_fred_heizoel_nyh_taeglich_heizoel_z252",
   "neu_fred_implied_vol_em_d1",
   "neu_fred_implied_vol_em_d20",
   "neu_fred_implied_vol_em_d5",
@@ -585,6 +590,11 @@
   "neu_fred_implied_vol_oel_d5",
   "neu_fred_implied_vol_oel_stand",
   "neu_fred_implied_vol_oel_z252",
+  "neu_fred_kerosin_golf_taeglich_kerosin_d1",
+  "neu_fred_kerosin_golf_taeglich_kerosin_d20",
+  "neu_fred_kerosin_golf_taeglich_kerosin_d5",
+  "neu_fred_kerosin_golf_taeglich_kerosin_stand",
+  "neu_fred_kerosin_golf_taeglich_kerosin_z252",
   "neu_fred_propane_propan_d1",
   "neu_fred_propane_propan_d20",
   "neu_fred_propane_propan_d5",
@@ -700,6 +710,7 @@
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_stand",
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_z252",
   "neu_quartalsende_pensionsrebalancing_quartalsende_stand",
+  "neu_rbnz_ocr_entscheidtage_aenderungstage_stand",
   "neu_riksbank_leitzins_entscheidtage_aenderungstage_stand",
   "neu_snb_saron_saron_d1",
   "neu_snb_saron_saron_d20",
@@ -1651,9 +1662,15 @@
    "datei": "suche/S0060.json",
    "kandidaten": 362135,
    "in_db": false
+  },
+  {
+   "nr": 61,
+   "datei": "suche/S0061.json",
+   "kandidaten": 364780,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-10-31T17:21Z",
+ "letzter_suchlauf_utc": "2026-11-02T16:06Z",
  "pruefung_lernrunde_utc": "2026-11-02T09:38:00Z",
  "letzter_code_hash": "2d79c8b050a7c3ee",
  "methode": "M4",
@@ -1997,11 +2014,19 @@
    "lauf_id": "L20261101T114610Z",
    "gesamt": "keine Neuberechnung",
    "importierbar": false
+  },
+  {
+   "datei": "suche/laeufe/L20261102T130854Z.json",
+   "lauf_id": "L20261102T130854Z",
+   "s_dokument": "suche/S0061.json",
+   "ergebnis_hash": "d9bda54245e968a1",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-10-31T17:21Z",
- "letztes_vollarchiv": "suche/S0060_alle.csv.gz",
- "letzter_ergebnis_hash": "1d91c2dda0d201e5",
+ "letzter_lauf_utc": "2026-11-02T16:06Z",
+ "letztes_vollarchiv": "suche/S0061_alle.csv.gz",
+ "letzter_ergebnis_hash": "d9bda54245e968a1",
  "konflikte": [
   {
    "wo": "index",
@@ -4236,15 +4261,15 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 302,
-  "neu_in_diesem_lauf": 1
+  "grundreihen_n": 305,
+  "neu_in_diesem_lauf": 3
  },
- "letztes_vollarchiv_ergebnis_hash": "1d91c2dda0d201e5",
+ "letztes_vollarchiv_ergebnis_hash": "d9bda54245e968a1",
  "pruefungen_bestanden": {
   "pruef_hash": "ce1b5646fd681a05",
-  "lauf_id": "L20261101T114610Z",
-  "zeit_utc": "2026-11-01T11:46:49Z",
-  "eingabe_hash": "34b1bae46edfafd5",
+  "lauf_id": "L20261102T130854Z",
+  "zeit_utc": "2026-11-02T16:50:47Z",
+  "eingabe_hash": "31b961e164d5f641",
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
@@ -4257,7 +4282,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "34b1bae46edfafd5",
- "letzter_gueltiger_lauf": "L20261031T142656Z",
- "letzter_entscheidung_hash": "d305a4e78318bef0"
+ "letzter_eingabe_hash": "a26850529b8cd717",
+ "letzter_gueltiger_lauf": "L20261102T130854Z",
+ "letzter_entscheidung_hash": "597ad4cc91fda520"
 }

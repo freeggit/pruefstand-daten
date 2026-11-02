@@ -3233,6 +3233,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:37Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fred_realzins_dfii10_taeglich__dfii10.csv.gz": {
+   "datei": "n__neu__fred_realzins_dfii10_taeglich__dfii10.csv.gz@445a3b07aa2c9c3e",
+   "sha": "445a3b07aa2c9c3e4846294e9443bc00f0502df7b3055e1879195816b4d5c8e4",
+   "sha_inhalt": "fdb3f9d30bb1b5ae2272a7e6a90aa252a9c5e4a339a61dea0956a21d2fce0664",
+   "zeilen": 4504,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-02T13:09:21Z",
+   "lauf_id": "L20261102T130854Z"
+  },
   "n__neu__fred_rrp_reverse_repo_taeglich__rrp_volumen.csv.gz": {
    "datei": "n__neu__fred_rrp_reverse_repo_taeglich__rrp_volumen.csv.gz@482ed4879dd167ce",
    "sha": "482ed4879dd167ce8c39de66d44fc198b7ac77334ba969c67a77e65453cdcb4a",
@@ -4532,27 +4541,48 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-01T11:46:44Z",
- "dateien_n": 500,
+ "stand_utc": "2026-11-02T13:09:29Z",
+ "dateien_n": 501,
  "vorgemerkt": {
-  "n__neu__fred_realzins_dfii10_taeglich__dfii10.csv.gz": {
-   "erstmals_utc": "2026-10-31T14:27:23Z",
-   "beste_werte": 4490,
-   "frueheste_erste": "2003-01-02",
+  "n__neu__fred_heizoel_nyh_taeglich__heizoel.csv.gz": {
+   "erstmals_utc": "2026-11-02T13:09:21Z",
+   "beste_werte": 7362,
+   "frueheste_erste": "1986-06-02",
    "sichtungen": [
     {
-     "utc": "2026-10-31T14:27:23Z",
-     "lauf_id": "L20261031T142656Z",
-     "werte": 4490,
-     "erste": "2003-01-02",
-     "sha_inhalt": "fdb3f9d30bb1b5ae2272a7e6a90aa252a9c5e4a339a61dea0956a21d2fce0664"
-    },
+     "utc": "2026-11-02T13:09:21Z",
+     "lauf_id": "L20261102T130854Z",
+     "werte": 7362,
+     "erste": "1986-06-02",
+     "sha_inhalt": "6c283c371e9340bd5c737d19b4ffca2e5d4a316118b2d47f1752b94db1380853"
+    }
+   ]
+  },
+  "n__neu__fred_kerosin_golf_taeglich__kerosin.csv.gz": {
+   "erstmals_utc": "2026-11-02T13:09:21Z",
+   "beste_werte": 6613,
+   "frueheste_erste": "1990-04-02",
+   "sichtungen": [
     {
-     "utc": "2026-11-01T11:46:37Z",
-     "lauf_id": "L20261101T114610Z",
-     "werte": 4490,
-     "erste": "2003-01-02",
-     "sha_inhalt": "fdb3f9d30bb1b5ae2272a7e6a90aa252a9c5e4a339a61dea0956a21d2fce0664"
+     "utc": "2026-11-02T13:09:21Z",
+     "lauf_id": "L20261102T130854Z",
+     "werte": 6613,
+     "erste": "1990-04-02",
+     "sha_inhalt": "91017781e1891168b27791c76c9b331cbf89ee441310efd9d7a35bc2240963d9"
+    }
+   ]
+  },
+  "n__neu__rbnz_ocr_entscheidtage__aenderungstage.csv.gz": {
+   "erstmals_utc": "2026-11-02T13:09:23Z",
+   "beste_werte": 54,
+   "frueheste_erste": "1999-03-17",
+   "sichtungen": [
+    {
+     "utc": "2026-11-02T13:09:23Z",
+     "lauf_id": "L20261102T130854Z",
+     "werte": 54,
+     "erste": "1999-03-17",
+     "sha_inhalt": "bad3c7c7dc4821a41baa84b9052980ae443106a9ff179ebbcf5e421f863c86e4"
     }
    ]
   }

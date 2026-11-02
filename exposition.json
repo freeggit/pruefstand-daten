@@ -577,6 +577,12 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_fred_heizoel_nyh_taeglich_heizoel": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261102T130854Z",
+   "erst_zeit": "2026-11-02T16:06Z",
+   "beleg": "suche/laeufe/L20261102T130854Z.json"
+  },
   "neu_fred_implied_vol_em": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -594,6 +600,12 @@
    "erst_lauf": null,
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_fred_kerosin_golf_taeglich_kerosin": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261102T130854Z",
+   "erst_zeit": "2026-11-02T16:06Z",
+   "beleg": "suche/laeufe/L20261102T130854Z.json"
   },
   "neu_fred_propane_propan": {
    "erst_dokument": "S0009",
@@ -780,6 +792,12 @@
    "erst_lauf": "L20261004T124314Z",
    "erst_zeit": "4.10.2026, 17:27 (Europe/Zurich)",
    "beleg": "suche/S0022_alle.csv.gz"
+  },
+  "neu_rbnz_ocr_entscheidtage_aenderungstage": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261102T130854Z",
+   "erst_zeit": "2026-11-02T16:06Z",
+   "beleg": "suche/laeufe/L20261102T130854Z.json"
   },
   "neu_riksbank_leitzins_entscheidtage_aenderungstage": {
    "erst_dokument": null,
@@ -1820,8 +1838,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261031T142656Z",
-  "zeit_utc": "2026-10-31T17:21Z",
-  "grundreihen_n": 302
+  "lauf_id": "L20261102T130854Z",
+  "zeit_utc": "2026-11-02T16:06Z",
+  "grundreihen_n": 305
  }
 }
