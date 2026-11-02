@@ -4337,11 +4337,11 @@
   "url": "https://www.federalreserve.gov/data/sloos.htm",
   "domain": "federalreserve.gov",
   "bereich": "Kalender",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Die Umfrage zur Kreditvergabe zeigt Verschärfung oder Lockerung der Bankkredite und kann Finanzwerte (XLF) und Kreditspreads kurzfristig gegenüber dem Weltindex bewegen.",
-  "grund": "Termine deterministisch (quartalsweise, ca. 2 Monate nach Quartalsende, 14 Uhr), öffentlich ohne Login; wenige Ereignisse je Jahr (n klein), darum tief. L3: Lown/Morgan, Kreditstandards. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel. | Lauf 2026-10-31T20Z: Erreichbarkeit ok (HTTP 200). Auf federalreserve.gov/data/sloos.htm nur Seiten ab 2018; K2 (Beginn bis 2015) bräuchte ältere boarddocs-Seiten, nicht gelöst. Bleibt kandidat.",
-  "geprueft_utc": "2026-10-31T20Z"
+  "grund": "Termine deterministisch (quartalsweise, ca. 2 Monate nach Quartalsende, 14 Uhr), öffentlich ohne Login; wenige Ereignisse je Jahr (n klein), darum tief. L3: Lown/Morgan, Kreditstandards. Herkunft: Vorratsauffüllung. Lernrunde 30.10.2026; L3, kein Doppel. | Lauf 2026-10-31T20Z: Erreichbarkeit ok (HTTP 200). Auf federalreserve.gov/data/sloos.htm nur Seiten ab 2018; K2 (Beginn bis 2015) bräuchte ältere boarddocs-Seiten, nicht gelöst. Bleibt kandidat. | Lauf 2026-11-02T08Z: K2 nicht erfüllbar (öffentliche Terminseiten erst ab 2018) und nur ca. 4 Ereignisse/Jahr; abgelehnt.",
+  "geprueft_utc": "2026-11-02T08Z"
  },
  {
   "id": "umich_konsumentenstimmung_termine",
@@ -4563,8 +4563,9 @@
   "bereich": "Kalender",
   "mechanismus": "An Frühschlusstagen ist der Anleihenmarkt dünn, Preisbewegungen werden verstärkt und wirken auf IEF und TLT gegenüber dem Weltindex.",
   "prioritaet": "tief",
-  "grund": "Kalender mit Tagesdatum, öffentlich. Unterschied zu us_boersenfeiertage: Anleihenmarkt statt Aktienbörse. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel.",
-  "status": "kandidat"
+  "grund": "Kalender mit Tagesdatum, öffentlich. Unterschied zu us_boersenfeiertage: Anleihenmarkt statt Aktienbörse. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel. | Lauf 2026-11-02T08Z: Seite erreichbar (HTTP 200), nennt aber nur Frühschlusstage 2025 bis 2027; keine Historie bis 2015 (K2). Abgelehnt.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-02T08Z"
  },
  {
   "id": "nasdaq100_jahresreconstitution_termine",
