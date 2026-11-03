@@ -4599,8 +4599,9 @@
   "bereich": "Rohstoffe und Logistik",
   "mechanismus": "Wagenladungen für Kohle, Getreide und Chemie zeigen die reale Nachfrage früh, das wirkt auf Industrie und Materialien (XLI, XLB).",
   "prioritaet": "normal",
-  "grund": "Unabhängig von Preisreihen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
-  "status": "kandidat"
+  "grund": "Unabhängig von Preisreihen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T16:16Z: abgelehnt K1: wöchentliche Publikation (Median-Abstand 7 Tage > 3).",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-03T16:16Z"
  },
  {
   "id": "nrc_reaktorleistung_taeglich",
@@ -4610,9 +4611,9 @@
   "bereich": "Staat",
   "mechanismus": "Abschaltungen von Reaktoren erhöhen den Bedarf an Gas und Kohle und stützen Energiewerte (XLE, UNG) kurzfristig.",
   "prioritaet": "normal",
-  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Etappenaufbau begonnen: quellen/nrc_reaktorleistung_taeglich.py, Tagesberichte nrc.gov ab 2015-01-01 (ca. 3 s je Tag), Cache data/neu/nrc_reaktorleistung_taeglich/cache.json; Stand 556 Tage, 3768 offen (ca. 25 Läufe bei 500 s); CSV/Aktivierung erst bei lückenloser Historie. Reihen: mittlere_leistung_pct, anzahl_abgeschaltet. Fehlende Berichtstage bleiben fehlend.",
+  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Etappenaufbau begonnen: quellen/nrc_reaktorleistung_taeglich.py, Tagesberichte nrc.gov ab 2015-01-01 (ca. 3 s je Tag), Cache data/neu/nrc_reaktorleistung_taeglich/cache.json; Stand 556 Tage, 3768 offen (ca. 25 Läufe bei 500 s); CSV/Aktivierung erst bei lückenloser Historie. Reihen: mittlere_leistung_pct, anzahl_abgeschaltet. Fehlende Berichtstage bleiben fehlend. | 2026-11-03T16:30Z: Etappe: Stand 685 Tage, 3640 offen (ca. 128 Tage je Lauf).",
   "status": "kandidat",
-  "geprueft_utc": "2026-11-03T12:27Z"
+  "geprueft_utc": "2026-11-03T16:30Z"
  },
  {
   "id": "fed_beigebuch_termine",
@@ -4656,7 +4657,8 @@
   "bereich": "Firmenereignisse",
   "mechanismus": "Gehäufte Verkaufsabsichten von Insidern zeigen Vorwissen über schwächere Gewinne, das kann Sektoren kurzfristig belasten.",
   "prioritaet": "hoch",
-  "grund": "Firmenereignisse zuerst. Unterschied zu sec_insider: Absicht statt vollzogener Kauf. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
-  "status": "kandidat"
+  "grund": "Firmenereignisse zuerst. Unterschied zu sec_insider: Absicht statt vollzogener Kauf. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T16:16Z: abgelehnt: SEC/EDGAR-Quelle, wird nicht selbst abgerufen (SEC sperrt diese Umgebung, Zusatz 6); Beschaffung nur über GitHub Action auf main.",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-03T16:16Z"
  }
 ]
