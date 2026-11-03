@@ -4541,7 +4541,7 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-02T13:09:29Z",
+ "stand_utc": "2026-11-03T12:28:43Z",
  "dateien_n": 501,
  "vorgemerkt": {
   "n__neu__fred_heizoel_nyh_taeglich__heizoel.csv.gz": {
@@ -4552,6 +4552,13 @@
     {
      "utc": "2026-11-02T13:09:21Z",
      "lauf_id": "L20261102T130854Z",
+     "werte": 7362,
+     "erste": "1986-06-02",
+     "sha_inhalt": "6c283c371e9340bd5c737d19b4ffca2e5d4a316118b2d47f1752b94db1380853"
+    },
+    {
+     "utc": "2026-11-03T12:28:34Z",
+     "lauf_id": "L20261103T122807Z",
      "werte": 7362,
      "erste": "1986-06-02",
      "sha_inhalt": "6c283c371e9340bd5c737d19b4ffca2e5d4a316118b2d47f1752b94db1380853"
@@ -4569,6 +4576,13 @@
      "werte": 6613,
      "erste": "1990-04-02",
      "sha_inhalt": "91017781e1891168b27791c76c9b331cbf89ee441310efd9d7a35bc2240963d9"
+    },
+    {
+     "utc": "2026-11-03T12:28:34Z",
+     "lauf_id": "L20261103T122807Z",
+     "werte": 6613,
+     "erste": "1990-04-02",
+     "sha_inhalt": "91017781e1891168b27791c76c9b331cbf89ee441310efd9d7a35bc2240963d9"
     }
    ]
   },
@@ -4580,6 +4594,13 @@
     {
      "utc": "2026-11-02T13:09:23Z",
      "lauf_id": "L20261102T130854Z",
+     "werte": 54,
+     "erste": "1999-03-17",
+     "sha_inhalt": "bad3c7c7dc4821a41baa84b9052980ae443106a9ff179ebbcf5e421f863c86e4"
+    },
+    {
+     "utc": "2026-11-03T12:28:37Z",
+     "lauf_id": "L20261103T122807Z",
      "werte": 54,
      "erste": "1999-03-17",
      "sha_inhalt": "bad3c7c7dc4821a41baa84b9052980ae443106a9ff179ebbcf5e421f863c86e4"

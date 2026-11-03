@@ -51,5 +51,18 @@
   "neu_fred_kerosin_golf_taeglich_kerosin_z252",
   "neu_rbnz_ocr_entscheidtage_aenderungstage_stand"
  ],
- "gesamt": "vollständig"
+ "gesamt": "vollständig",
+ "letzter_versuch": {
+  "lauf_id": "L20261103T122807Z",
+  "gesamt": "keine Neuberechnung",
+  "stufen": {
+   "suche": "keine Neuberechnung",
+   "analyse": "übersprungen",
+   "familie_v": "übersprungen",
+   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+   "tests": "übersprungen",
+   "siegeltest": "übersprungen"
+  },
+  "zeit_utc": "2026-11-03T12:28Z"
+ }
 }

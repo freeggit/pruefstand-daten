@@ -2026,6 +2026,12 @@
    "ergebnis_hash": "d9bda54245e968a1",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261103T122807Z.json",
+   "lauf_id": "L20261103T122807Z",
+   "gesamt": "keine Neuberechnung",
+   "importierbar": false
   }
  ],
  "letzter_lauf_utc": "2026-11-02T16:06Z",
