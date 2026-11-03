@@ -4578,5 +4578,82 @@
   "grund": "Ein Termin je Jahr, wenige Ereignisse, darum tief. Unterschied zu sp500_russell_rebalance_termine: anderer Index. Herkunft: Vorratsauffüllung. Lernrunde 01.11.2026; L3, kein Doppel. | Lauf 2026-11-02T00:24Z: abgelehnt, kein eigener Mechanismus: Reconstitution wird am dritten Freitag im Dezember wirksam, identisch mit opex_verfall in kalender_ereignisse (Doppel); nur 1 Ereignis/Jahr.",
   "status": "abgelehnt",
   "geprueft_utc": "2026-11-02T00:24Z"
+ },
+ {
+  "id": "nasdaq_earnings_kalender_dichte",
+  "name": "Nasdaq: Quartalszahlen-Kalender, Zahl der S&P-500-Firmen mit Zahlen je Tag",
+  "url": "https://api.nasdaq.com/api/calendar/earnings?date=YYYY-MM-DD",
+  "domain": "api.nasdaq.com",
+  "bereich": "Firmenereignisse",
+  "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
+  "prioritaet": "hoch",
+  "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
+  "status": "kandidat"
+ },
+ {
+  "id": "aar_bahnverkehr_woechentlich",
+  "name": "AAR: US-Bahnverkehr wöchentlich (Wagenladungen)",
+  "url": "https://www.aar.org/data-center/rail-traffic-data/",
+  "domain": "www.aar.org",
+  "bereich": "Rohstoffe und Logistik",
+  "mechanismus": "Wagenladungen für Kohle, Getreide und Chemie zeigen die reale Nachfrage früh, das wirkt auf Industrie und Materialien (XLI, XLB).",
+  "prioritaet": "normal",
+  "grund": "Unabhängig von Preisreihen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
+  "status": "kandidat"
+ },
+ {
+  "id": "nrc_reaktorleistung_taeglich",
+  "name": "NRC: Leistung der US-Kernkraftwerke täglich",
+  "url": "https://www.nrc.gov/reading-rm/doc-collections/event-status/reactor-status/",
+  "domain": "www.nrc.gov",
+  "bereich": "Staat",
+  "mechanismus": "Abschaltungen von Reaktoren erhöhen den Bedarf an Gas und Kohle und stützen Energiewerte (XLE, UNG) kurzfristig.",
+  "prioritaet": "normal",
+  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
+  "status": "kandidat"
+ },
+ {
+  "id": "fed_beigebuch_termine",
+  "name": "Fed: Veröffentlichungstage des Beige Book",
+  "url": "https://www.federalreserve.gov/monetarypolicy/beigebook.htm",
+  "domain": "www.federalreserve.gov",
+  "bereich": "Kalender-Ereignisse",
+  "mechanismus": "Das Beige Book bündelt Konjunkturinformation vor FOMC-Sitzungen, das bewegt Anleihen (IEF, TLT) kurzfristig.",
+  "prioritaet": "normal",
+  "grund": "Termine ab 1970 bekannt, Historie vor 1990 möglich. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
+  "status": "kandidat"
+ },
+ {
+  "id": "treasury_tic_auslandsbesitz_monat",
+  "name": "US-Finanzministerium: TIC, ausländischer Besitz an US-Staatsanleihen",
+  "url": "https://ticdata.treasury.gov/Publish/mfh.txt",
+  "domain": "ticdata.treasury.gov",
+  "bereich": "Staat und Geldmarkt (Anleihen)",
+  "mechanismus": "Verkäufe durch Japan oder China drücken die Nachfrage nach US-Anleihen und treiben die Renditen, das trifft TLT und IEF.",
+  "prioritaet": "tief",
+  "grund": "Monatsreihe, wenige Ereignisse, darum tief. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
+  "status": "kandidat"
+ },
+ {
+  "id": "nyfed_inflationserwartungen_konsumenten",
+  "name": "NY Fed: Umfrage zu Konsumenten-Inflationserwartungen (Termine)",
+  "url": "https://www.newyorkfed.org/microeconomics/sce",
+  "domain": "www.newyorkfed.org",
+  "bereich": "Kalender-Ereignisse",
+  "mechanismus": "Steigende Inflationserwartungen verschieben die Zinserwartung und bewegen TIP und lange Anleihen gegenüber dem Weltindex.",
+  "prioritaet": "tief",
+  "grund": "Monatsreihe, darum tief. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
+  "status": "kandidat"
+ },
+ {
+  "id": "sec_form144_verkaufsabsichten_dichte",
+  "name": "SEC: Form 144, Verkaufsabsichten von Grossaktionären (Tagesdichte)",
+  "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=144",
+  "domain": "www.sec.gov",
+  "bereich": "Firmenereignisse",
+  "mechanismus": "Gehäufte Verkaufsabsichten von Insidern zeigen Vorwissen über schwächere Gewinne, das kann Sektoren kurzfristig belasten.",
+  "prioritaet": "hoch",
+  "grund": "Firmenereignisse zuerst. Unterschied zu sec_insider: Absicht statt vollzogener Kauf. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
+  "status": "kandidat"
  }
 ]
