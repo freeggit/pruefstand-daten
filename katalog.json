@@ -4587,8 +4587,9 @@
   "bereich": "Firmenereignisse",
   "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
   "prioritaet": "hoch",
-  "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
-  "status": "kandidat"
+  "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut.",
+  "status": "fehler",
+  "geprueft_utc": "2026-11-03T12:27Z"
  },
  {
   "id": "aar_bahnverkehr_woechentlich",
@@ -4609,8 +4610,9 @@
   "bereich": "Staat",
   "mechanismus": "Abschaltungen von Reaktoren erhöhen den Bedarf an Gas und Kohle und stützen Energiewerte (XLE, UNG) kurzfristig.",
   "prioritaet": "normal",
-  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
-  "status": "kandidat"
+  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Etappenaufbau begonnen: quellen/nrc_reaktorleistung_taeglich.py, Tagesberichte nrc.gov ab 2015-01-01 (ca. 3 s je Tag), Cache data/neu/nrc_reaktorleistung_taeglich/cache.json; Stand 556 Tage, 3768 offen (ca. 25 Läufe bei 500 s); CSV/Aktivierung erst bei lückenloser Historie. Reihen: mittlere_leistung_pct, anzahl_abgeschaltet. Fehlende Berichtstage bleiben fehlend.",
+  "status": "kandidat",
+  "geprueft_utc": "2026-11-03T12:27Z"
  },
  {
   "id": "fed_beigebuch_termine",
@@ -4620,8 +4622,9 @@
   "bereich": "Kalender-Ereignisse",
   "mechanismus": "Das Beige Book bündelt Konjunkturinformation vor FOMC-Sitzungen, das bewegt Anleihen (IEF, TLT) kurzfristig.",
   "prioritaet": "normal",
-  "grund": "Termine ab 1970 bekannt, Historie vor 1990 möglich. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
-  "status": "kandidat"
+  "grund": "Termine ab 1970 bekannt, Historie vor 1990 möglich. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Doppel zu aktivem fed_beige_book_termine (K6).",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-03T12:27Z"
  },
  {
   "id": "treasury_tic_auslandsbesitz_monat",
