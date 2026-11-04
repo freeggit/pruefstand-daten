@@ -1,0 +1,157 @@
+{
+ "lauf_id": "L20261104T123908Z",
+ "verfassung": "V3.18",
+ "beginn_utc": "2026-11-04T12:39:08Z",
+ "ende_suche_utc": "2026-11-04T12:39:47Z",
+ "anlass": "schedule",
+ "github_run_id": "41830974883",
+ "datenstand": {
+  "commit_main": "c0e885bf1881ab4de8c6cde50854dad27aec77e8",
+  "commit_energie": "f7baab30a4767f47f644410bc07f9c79d5db2e19",
+  "commit_neu": "e2b8614ac837351af2b15cc5fc7394ee3d12e38e",
+  "sha_manifest_main": "bed9b280e4d9f907",
+  "sha_manifest_hr": "1462acc334c35d36",
+  "sha_manifest_sec": "6885cd5fdf9f50a8",
+  "sha_manifest_neu": "cd9851dcae693624",
+  "sha_manifest_energie": "9923ff25ecc44edc"
+ },
+ "stufen": {
+  "suche": "keine Neuberechnung",
+  "analyse": "übersprungen",
+  "familie_v": "übersprungen",
+  "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
+ },
+ "e9": {
+  "modus": "bei Änderung (V3.17, E9; V3.18 mit eingefrorenem Stand, Entwurf)",
+  "eingabe_hash": "a26850529b8cd717",
+  "referenz_eingabe_hash": "a26850529b8cd717",
+  "referenz_lauf": "L20261102T130854Z",
+  "anlaesse": [],
+  "eingabe": {
+   "daten": "18f9d9bd8758cc7c",
+   "register": "154a373eafad47ca",
+   "code": "2d79c8b050a7c3ee",
+   "vorregistrierung": "ccdd56c94beefacc",
+   "placebo": "200",
+   "teile": {
+    "kurse": "96faad0ff5c5e526",
+    "ind": "230fae2118db6b83",
+    "EREIGNIS": "f05ef2ad22686143",
+    "KAL": "cb2a5be8409f7805",
+    "VERDACHT_POS": "feda7b588336f928",
+    "ZIELE": "4e0f8540f1ee39f0",
+    "QUELLE": "84e0ca25b3d8e22c",
+    "HERKUNFT": "524b6c87c59fa764",
+    "LUECKEN": "3d33b8057b93f6d6",
+    "EXPLORATIV": "65728502cfdd8e03",
+    "EXPLORATIV_NAMEN": "86839ac2826e9e9e",
+    "KORREKTUREN": "2756cd8bfc0d24e3",
+    "VERFUEGBAR": "44136fa355b3678a",
+    "VERFUEGBAR_KAL": "1632dc0a15929035",
+    "AUSSCHLUSS": "13ac3f72165e2ba7",
+    "KUM_VORHER": "2ca0f48bf13091eb",
+    "N_PLACEBO": "27badc983df1780b",
+    "KALIBRIERUNG": "3cbc87c7681f34db",
+    "LANGZEIT": "3cbc87c7681f34db",
+    "DATENMANGEL": "c8db0725afc08c20",
+    "AUSGESCHLOSSEN": "a269a7f4b6d9ef94",
+    "FAM": "d68171b88acbaaf9",
+    "umgebung": "a21668d34071bb23"
+   }
+  },
+  "stand": {
+   "aktiv": true,
+   "ordner": "discovery/ (claude/lernen)",
+   "dateien_n": 504,
+   "fassung": "999b4d90f610e684",
+   "fassung_regel": "Prüfsumme von stand.json nach der Vorprüfung; die Rechnung liest nur die daraus bereitgestellten Dateien (Gutachten 23, M1)",
+   "bereitgestellt": {
+    "dateien_n": 509,
+    "pruefsumme": "b09d4347ccdac83e"
+   },
+   "neu_eingefroren_n": 3,
+   "neu_eingefroren": [
+    "n__neu__fred_heizoel_nyh_taeglich__heizoel.csv.gz",
+    "n__neu__fred_kerosin_golf_taeglich__kerosin.csv.gz",
+    "n__neu__rbnz_ocr_entscheidtage__aenderungstage.csv.gz"
+   ],
+   "nachgefuehrt": [],
+   "nachfuehrung_angewandt": [],
+   "nachfuehrung_fehler": [],
+   "nicht_eingefroren": [],
+   "revisionen_n": 39,
+   "revisionen_je_gruppe": {
+    "fred": 2,
+    "kurse": 32,
+    "n__neu": 5
+   },
+   "revisionen_summe": {
+    "geaendert": 26303,
+    "hinzugekommen": 0,
+    "entfallen": 5,
+    "werte_fehlen_im_spiegel": 0,
+    "werte_neu_im_spiegel": 0,
+    "relativ_nicht_definiert": 10
+   },
+   "aufnahme": {
+    "bestaetigungen": 2,
+    "abstand_stunden": 20,
+    "grenze_werte": 0.99,
+    "max_tage_spaeter": 5
+   },
+   "vorgemerkt_n": 0,
+   "vorgemerkt_neu": [],
+   "bestaetigung": [
+    {
+     "datei": "n__neu__fred_heizoel_nyh_taeglich__heizoel.csv.gz",
+     "sichtung": 3,
+     "von": 3,
+     "werte": 7362,
+     "beste_werte": 7362,
+     "eingefroren": true
+    },
+    {
+     "datei": "n__neu__fred_kerosin_golf_taeglich__kerosin.csv.gz",
+     "sichtung": 3,
+     "von": 3,
+     "werte": 6613,
+     "beste_werte": 6613,
+     "eingefroren": true
+    },
+    {
+     "datei": "n__neu__rbnz_ocr_entscheidtage__aenderungstage.csv.gz",
+     "sichtung": 3,
+     "von": 3,
+     "werte": 54,
+     "beste_werte": 54,
+     "eingefroren": true
+    }
+   ],
+   "zurueckgehalten": [],
+   "vorgemerkt_ueber_7_tage": [],
+   "warnungen_stand_unvollstaendig": [],
+   "revisionen_bericht": "discovery/revisionen.json (nur Bericht, löst nichts aus)",
+   "einfrierpruefung": {
+    "bestanden": true,
+    "verstoesse": [],
+    "befunde_nicht_gelesen": [],
+    "geprueft": "alle gelesenen eingefrorenen Fassungen streng",
+    "nicht_eingefroren": "nicht im Stand; Stichtagskürzung der Suchmaschine wie bisher",
+    "ohne_eintrag_n": 0
+   }
+  }
+ },
+ "ausgaben": {
+  "s_dokument": "suche/S0061.json",
+  "vollarchiv": "suche/S0061_alle.csv.gz",
+  "art": "keine Neuberechnung: Eingaben unverändert gegenüber dem letzten gültigen Lauf; kein neues Ergebnis, kein neuer Befund"
+ },
+ "ende_utc": "2026-11-04T12:39:47Z",
+ "gesamt": "keine Neuberechnung",
+ "e38": {
+  "importierbar": false,
+  "grund": "keine Neuberechnung: kein neues Ergebnis (V3.17 §4)"
+ }
+}
