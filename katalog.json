@@ -4611,9 +4611,9 @@
   "bereich": "Staat",
   "mechanismus": "Abschaltungen von Reaktoren erhöhen den Bedarf an Gas und Kohle und stützen Energiewerte (XLE, UNG) kurzfristig.",
   "prioritaet": "normal",
-  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Etappenaufbau begonnen: quellen/nrc_reaktorleistung_taeglich.py, Tagesberichte nrc.gov ab 2015-01-01 (ca. 3 s je Tag), Cache data/neu/nrc_reaktorleistung_taeglich/cache.json; Stand 556 Tage, 3768 offen (ca. 25 Läufe bei 500 s); CSV/Aktivierung erst bei lückenloser Historie. Reihen: mittlere_leistung_pct, anzahl_abgeschaltet. Fehlende Berichtstage bleiben fehlend. | 2026-11-03T16:30Z: Etappe: Stand 685 Tage, 3640 offen (ca. 128 Tage je Lauf). | 2026-11-04T: Etappe: Stand 809 Tage, 3513 offen (ca. 127 Tage je Lauf). | 2026-11-04T08Z: Etappe: Stand 893 Tage, 3429 offen. | 2026-11-04T12Z: Etappe: Stand 970 Tage, 3352 offen. | 2026-11-04T12Z(2): keine Etappe, Auffrischung dauerte 17 min.",
+  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Etappenaufbau begonnen: quellen/nrc_reaktorleistung_taeglich.py, Tagesberichte nrc.gov ab 2015-01-01 (ca. 3 s je Tag), Cache data/neu/nrc_reaktorleistung_taeglich/cache.json; Stand 556 Tage, 3768 offen (ca. 25 Läufe bei 500 s); CSV/Aktivierung erst bei lückenloser Historie. Reihen: mittlere_leistung_pct, anzahl_abgeschaltet. Fehlende Berichtstage bleiben fehlend. | 2026-11-03T16:30Z: Etappe: Stand 685 Tage, 3640 offen (ca. 128 Tage je Lauf). | 2026-11-04T: Etappe: Stand 809 Tage, 3513 offen (ca. 127 Tage je Lauf). | 2026-11-04T08Z: Etappe: Stand 893 Tage, 3429 offen. | 2026-11-04T12Z: Etappe: Stand 970 Tage, 3352 offen. | 2026-11-04T12Z(2): keine Etappe, Auffrischung dauerte 17 min. | 2026-11-04T16Z: Etappe: Stand 1021 Tage, 3302 offen.",
   "status": "kandidat",
-  "geprueft_utc": "2026-11-04T12:00Z"
+  "geprueft_utc": "2026-11-04T16:30Z"
  },
  {
   "id": "fed_beigebuch_termine",
