@@ -2116,10 +2116,10 @@
   "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen",
+  "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen",
   "reihen": [],
   "aufgenommen_utc": "2026-09-28T20:15:44Z",
-  "geprueft_utc": "2026-10-31T08:15Z"
+  "geprueft_utc": "2026-11-05T04Z"
  },
  {
   "id": "fedregister_ftc_fusionen",
@@ -3891,11 +3891,11 @@
   "domain": "www.eia.gov",
   "bereich": "Rohstoffe und Logistik",
   "status": "fehler",
-  "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen.",
+  "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen",
   "mechanismus": "Revidierte Prognosen zu Ölnachfrage und Förderung verschieben die Preiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-20T10:00:00Z",
-  "geprueft_utc": "2026-11-02T16Z",
+  "geprueft_utc": "2026-11-05T04Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
@@ -3951,11 +3951,11 @@
   "domain": "www.opec.org",
   "bereich": "Rohstoffe und Logistik",
   "status": "fehler",
-  "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen.",
+  "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen",
   "mechanismus": "Revidierte Nachfrage- und Angebotsschätzungen der OPEC verschieben die Ölpreiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-21T10:00:00Z",
-  "geprueft_utc": "2026-10-31T08:15Z",
+  "geprueft_utc": "2026-11-05T04Z",
   "prioritaet": "normal",
   "herkunft": "Lernrunde"
  },
@@ -4587,9 +4587,9 @@
   "bereich": "Firmenereignisse",
   "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
   "prioritaet": "hoch",
-  "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut.",
+  "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen",
   "status": "fehler",
-  "geprueft_utc": "2026-11-03T12:27Z"
+  "geprueft_utc": "2026-11-05T04Z"
  },
  {
   "id": "aar_bahnverkehr_woechentlich",
@@ -4611,9 +4611,9 @@
   "bereich": "Staat",
   "mechanismus": "Abschaltungen von Reaktoren erhöhen den Bedarf an Gas und Kohle und stützen Energiewerte (XLE, UNG) kurzfristig.",
   "prioritaet": "normal",
-  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Etappenaufbau begonnen: quellen/nrc_reaktorleistung_taeglich.py, Tagesberichte nrc.gov ab 2015-01-01 (ca. 3 s je Tag), Cache data/neu/nrc_reaktorleistung_taeglich/cache.json; Stand 556 Tage, 3768 offen (ca. 25 Läufe bei 500 s); CSV/Aktivierung erst bei lückenloser Historie. Reihen: mittlere_leistung_pct, anzahl_abgeschaltet. Fehlende Berichtstage bleiben fehlend. | 2026-11-03T16:30Z: Etappe: Stand 685 Tage, 3640 offen (ca. 128 Tage je Lauf). | 2026-11-04T: Etappe: Stand 809 Tage, 3513 offen (ca. 127 Tage je Lauf). | 2026-11-04T08Z: Etappe: Stand 893 Tage, 3429 offen. | 2026-11-04T12Z: Etappe: Stand 970 Tage, 3352 offen. | 2026-11-04T12Z(2): keine Etappe, Auffrischung dauerte 17 min. | 2026-11-04T16Z: Etappe: Stand 1021 Tage, 3302 offen. | 2026-11-04T20Z: Etappe: Stand 1154 Tage, 3169 offen. | 2026-11-05T: Etappe: Stand 1201 Tage, 3122 offen; Kalenderkorrektur-Patch: alle 7 Dateien sha256_neu, schon erledigt.",
+  "grund": "Kein Doppel zu nrc_ereignismeldungen: Leistungsstand statt Meldungen. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: Etappenaufbau begonnen: quellen/nrc_reaktorleistung_taeglich.py, Tagesberichte nrc.gov ab 2015-01-01 (ca. 3 s je Tag), Cache data/neu/nrc_reaktorleistung_taeglich/cache.json; Stand 556 Tage, 3768 offen (ca. 25 Läufe bei 500 s); CSV/Aktivierung erst bei lückenloser Historie. Reihen: mittlere_leistung_pct, anzahl_abgeschaltet. Fehlende Berichtstage bleiben fehlend. | 2026-11-03T16:30Z: Etappe: Stand 685 Tage, 3640 offen (ca. 128 Tage je Lauf). | 2026-11-04T: Etappe: Stand 809 Tage, 3513 offen (ca. 127 Tage je Lauf). | 2026-11-04T08Z: Etappe: Stand 893 Tage, 3429 offen. | 2026-11-04T12Z: Etappe: Stand 970 Tage, 3352 offen. | 2026-11-04T12Z(2): keine Etappe, Auffrischung dauerte 17 min. | 2026-11-04T16Z: Etappe: Stand 1021 Tage, 3302 offen. | 2026-11-04T20Z: Etappe: Stand 1154 Tage, 3169 offen. | 2026-11-05T: Etappe: Stand 1201 Tage, 3122 offen; Kalenderkorrektur-Patch: alle 7 Dateien sha256_neu, schon erledigt. | 2026-11-05T04Z: Etappe: Stand 1255 Tage, 3068 offen (Lauf nach Zeitlimit, 54 neu)",
   "status": "kandidat",
-  "geprueft_utc": "2026-11-05T00:00Z"
+  "geprueft_utc": "2026-11-05T04Z"
  },
  {
   "id": "fed_beigebuch_termine",
