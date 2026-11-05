@@ -2038,6 +2038,12 @@
    "lauf_id": "L20261104T123908Z",
    "gesamt": "keine Neuberechnung",
    "importierbar": false
+  },
+  {
+   "datei": "suche/laeufe/L20261105T125029Z.json",
+   "lauf_id": "L20261105T125029Z",
+   "gesamt": "keine Neuberechnung",
+   "importierbar": false
   }
  ],
  "letzter_lauf_utc": "2026-11-02T16:06Z",

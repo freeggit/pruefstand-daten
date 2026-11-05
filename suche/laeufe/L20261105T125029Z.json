@@ -1,0 +1,128 @@
+{
+ "lauf_id": "L20261105T125029Z",
+ "verfassung": "V3.18",
+ "beginn_utc": "2026-11-05T12:50:29Z",
+ "ende_suche_utc": "2026-11-05T12:51:01Z",
+ "anlass": "schedule",
+ "github_run_id": "42030386213",
+ "datenstand": {
+  "commit_main": "08b75cc398f78fa164bb700f432398f3e4b799f2",
+  "commit_energie": "78385324e4545aeb260e66958d102cf733134752",
+  "commit_neu": "ee7ac41161ee3f737f542c5ad628b23756162c25",
+  "sha_manifest_main": "ef40be7a400c07d6",
+  "sha_manifest_hr": "f805f1962600e5b0",
+  "sha_manifest_sec": "1a986b56b7cfa50f",
+  "sha_manifest_neu": "78a376c45106bf1b",
+  "sha_manifest_energie": "bb431dabb55608c9"
+ },
+ "stufen": {
+  "suche": "keine Neuberechnung",
+  "analyse": "übersprungen",
+  "familie_v": "übersprungen",
+  "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
+ },
+ "e9": {
+  "modus": "bei Änderung (V3.17, E9; V3.18 mit eingefrorenem Stand, Entwurf)",
+  "eingabe_hash": "a26850529b8cd717",
+  "referenz_eingabe_hash": "a26850529b8cd717",
+  "referenz_lauf": "L20261102T130854Z",
+  "anlaesse": [],
+  "eingabe": {
+   "daten": "18f9d9bd8758cc7c",
+   "register": "154a373eafad47ca",
+   "code": "2d79c8b050a7c3ee",
+   "vorregistrierung": "ccdd56c94beefacc",
+   "placebo": "200",
+   "teile": {
+    "kurse": "96faad0ff5c5e526",
+    "ind": "230fae2118db6b83",
+    "EREIGNIS": "f05ef2ad22686143",
+    "KAL": "cb2a5be8409f7805",
+    "VERDACHT_POS": "feda7b588336f928",
+    "ZIELE": "4e0f8540f1ee39f0",
+    "QUELLE": "84e0ca25b3d8e22c",
+    "HERKUNFT": "524b6c87c59fa764",
+    "LUECKEN": "3d33b8057b93f6d6",
+    "EXPLORATIV": "65728502cfdd8e03",
+    "EXPLORATIV_NAMEN": "86839ac2826e9e9e",
+    "KORREKTUREN": "2756cd8bfc0d24e3",
+    "VERFUEGBAR": "44136fa355b3678a",
+    "VERFUEGBAR_KAL": "1632dc0a15929035",
+    "AUSSCHLUSS": "13ac3f72165e2ba7",
+    "KUM_VORHER": "2ca0f48bf13091eb",
+    "N_PLACEBO": "27badc983df1780b",
+    "KALIBRIERUNG": "3cbc87c7681f34db",
+    "LANGZEIT": "3cbc87c7681f34db",
+    "DATENMANGEL": "c8db0725afc08c20",
+    "AUSGESCHLOSSEN": "a269a7f4b6d9ef94",
+    "FAM": "d68171b88acbaaf9",
+    "umgebung": "a21668d34071bb23"
+   }
+  },
+  "stand": {
+   "aktiv": true,
+   "ordner": "discovery/ (claude/lernen)",
+   "dateien_n": 504,
+   "fassung": "999b4d90f610e684",
+   "fassung_regel": "Prüfsumme von stand.json nach der Vorprüfung; die Rechnung liest nur die daraus bereitgestellten Dateien (Gutachten 23, M1)",
+   "bereitgestellt": {
+    "dateien_n": 509,
+    "pruefsumme": "6a79df5a129a85b9"
+   },
+   "neu_eingefroren_n": 0,
+   "neu_eingefroren": [],
+   "nachgefuehrt": [],
+   "nachfuehrung_angewandt": [],
+   "nachfuehrung_fehler": [],
+   "nicht_eingefroren": [],
+   "revisionen_n": 39,
+   "revisionen_je_gruppe": {
+    "fred": 2,
+    "kurse": 32,
+    "n__neu": 5
+   },
+   "revisionen_summe": {
+    "geaendert": 26265,
+    "hinzugekommen": 0,
+    "entfallen": 6,
+    "werte_fehlen_im_spiegel": 0,
+    "werte_neu_im_spiegel": 0,
+    "relativ_nicht_definiert": 10
+   },
+   "aufnahme": {
+    "bestaetigungen": 2,
+    "abstand_stunden": 20,
+    "grenze_werte": 0.99,
+    "max_tage_spaeter": 5
+   },
+   "vorgemerkt_n": 0,
+   "vorgemerkt_neu": [],
+   "bestaetigung": [],
+   "zurueckgehalten": [],
+   "vorgemerkt_ueber_7_tage": [],
+   "warnungen_stand_unvollstaendig": [],
+   "revisionen_bericht": "discovery/revisionen.json (nur Bericht, löst nichts aus)",
+   "einfrierpruefung": {
+    "bestanden": true,
+    "verstoesse": [],
+    "befunde_nicht_gelesen": [],
+    "geprueft": "alle gelesenen eingefrorenen Fassungen streng",
+    "nicht_eingefroren": "nicht im Stand; Stichtagskürzung der Suchmaschine wie bisher",
+    "ohne_eintrag_n": 0
+   }
+  }
+ },
+ "ausgaben": {
+  "s_dokument": "suche/S0061.json",
+  "vollarchiv": "suche/S0061_alle.csv.gz",
+  "art": "keine Neuberechnung: Eingaben unverändert gegenüber dem letzten gültigen Lauf; kein neues Ergebnis, kein neuer Befund"
+ },
+ "ende_utc": "2026-11-05T12:51:01Z",
+ "gesamt": "keine Neuberechnung",
+ "e38": {
+  "importierbar": false,
+  "grund": "keine Neuberechnung: kein neues Ergebnis (V3.17 §4)"
+ }
+}
