@@ -4660,5 +4660,38 @@
   "grund": "Firmenereignisse zuerst. Unterschied zu sec_insider: Absicht statt vollzogener Kauf. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T16:16Z: abgelehnt: SEC/EDGAR-Quelle, wird nicht selbst abgerufen (SEC sperrt diese Umgebung, Zusatz 6); Beschaffung nur über GitHub Action auf main.",
   "status": "abgelehnt",
   "geprueft_utc": "2026-11-03T16:16Z"
+ },
+ {
+  "id": "nasdaq_regsho_schwellenliste_dichte",
+  "name": "Nasdaq Trader: Reg-SHO-Schwellenliste (Aktien mit anhaltenden Lieferausfällen), tägliche Anzahl",
+  "url": "https://www.nasdaqtrader.com/dynamic/symdir/regsho/nasdaqth.txt",
+  "domain": "nasdaqtrader.com",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Eine hohe Zahl von Aktien auf der Schwellenliste zeigt Leerverkaufsdruck und Squeeze-Risiko in Nebenwerten und bewegt kurzfristig kleine Werte (IWM) gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Firmenereignisse aggregiert (erste Priorität). Replikation für finra_shortvolume_dichte mit unabhängiger Quelle."
+ },
+ {
+  "id": "eia_destillatlager_woechentlich",
+  "name": "EIA: US-Destillatlager (Diesel/Heizöl) wöchentlich, Änderung",
+  "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WDISTUS1&f=W",
+  "domain": "www.eia.gov",
+  "bereich": "Rohstoffe und Logistik",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein starker Abbau der Destillatlager verknappt Diesel und Heizöl und stützt Energiewerte (XLE) und Ölpreisfonds gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Mit Publikationsfrist wie EIA wöchentlich (Zusatz 5)."
+ },
+ {
+  "id": "occ_optionsvolumen_taeglich",
+  "name": "OCC: Gesamtvolumen der US-Aktienoptionen, täglich",
+  "url": "https://www.theocc.com/market-data/market-data-reports/volume-reports/daily-volume",
+  "domain": "theocc.com",
+  "bereich": "Aufmerksamkeit",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Extremes Optionsvolumen markiert spekulative Übertreibung und geht kurzfristig oft mit Umkehr in Wachstumswerten (QQQ) gegenüber dem Weltindex einher.",
+  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Aufmerksamkeit/Spekulation; Kontrast zu cboe_put_call_ratio_taeglich."
  }
 ]
