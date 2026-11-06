@@ -4667,10 +4667,11 @@
   "url": "https://www.nasdaqtrader.com/dynamic/symdir/regsho/nasdaqth.txt",
   "domain": "nasdaqtrader.com",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "fehler",
   "prioritaet": "hoch",
   "mechanismus": "Eine hohe Zahl von Aktien auf der Schwellenliste zeigt Leerverkaufsdruck und Squeeze-Risiko in Nebenwerten und bewegt kurzfristig kleine Werte (IWM) gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Firmenereignisse aggregiert (erste Priorität). Replikation für finra_shortvolume_dichte mit unabhängiger Quelle."
+  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Firmenereignisse aggregiert (erste Priorität). Replikation für finra_shortvolume_dichte mit unabhängiger Quelle. | 2026-11-06T: Test: nasdaqth.txt (ohne Datum) leitet um (302); datierte Tagesdateien nasdaqth<JJJJMMTT>.txt: 2026-11-05 HTTP 200 (85 Zeilen), 2019-01-04 liefert Incapsula-Bot-Schutzseite (kein Inhalt), 2015-11-02 liefert 16 Zeilen. Historie nur teilweise/unstabil abrufbar; Bot-Schutz nicht umgangen (Befund). K2/K3 offen, nächster Lauf erneut mit weiterem Stichprobentest.",
+  "geprueft_utc": "2026-11-06T"
  },
  {
   "id": "eia_destillatlager_woechentlich",
