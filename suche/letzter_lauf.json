@@ -53,7 +53,7 @@
  ],
  "gesamt": "vollständig",
  "letzter_versuch": {
-  "lauf_id": "L20261106T123434Z",
+  "lauf_id": "L20261107T112344Z",
   "gesamt": "keine Neuberechnung",
   "stufen": {
    "suche": "keine Neuberechnung",
@@ -63,6 +63,6 @@
    "tests": "übersprungen",
    "siegeltest": "übersprungen"
   },
-  "zeit_utc": "2026-11-06T12:35Z"
+  "zeit_utc": "2026-11-07T11:24Z"
  }
 }
