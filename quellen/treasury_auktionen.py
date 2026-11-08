@@ -5,6 +5,10 @@ import json
 import os
 import urllib.request
 
+import sys  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vorfassung  # noqa: E402  (Vorschlaege 17/20 (Reto, 7.11.2026): Vorfassungspruefung bis 2020)
+
 ID = "treasury_auktionen"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
@@ -15,6 +19,7 @@ def fetch_all():
     rows = []
     page = 1
     size = 1000
+    gesamt = None   # Vorschlaege 17/20 (Reto, 7.11.2026): von Fiscal Data gemeldete Gesamtzahl (meta.total-count)
     while True:
         url = (
             BASE
@@ -28,9 +33,17 @@ def fetch_all():
             payload = json.loads(resp.read().decode("utf-8"))
         rows.extend(payload["data"])
         total_pages = payload["meta"]["total-pages"]
+        if gesamt is None:
+            gesamt = payload["meta"].get("total-count")
+        if not payload["data"] and page < total_pages:
+            # Vorschlaege 17/20 (Reto, 7.11.2026): leere Seite vor der letzten = Abruffehler, nicht Luecke
+            raise SystemExit("Abruffehler %s: leere Seite %d von %d; bisherige Datei bleibt" % (ID, page, total_pages))
         if page >= total_pages:
             break
         page += 1
+    if isinstance(gesamt, int) and len(rows) < gesamt:
+        raise SystemExit("Abruffehler %s: nur %d von %d Datensaetzen geholt; bisherige Datei bleibt"
+                         % (ID, len(rows), gesamt))
     return rows
 
 
@@ -67,6 +80,7 @@ def main():
     if not rows:
         raise SystemExit("keine Daten erhalten")
 
+    vorfassung.pruefe(os.path.join(OUT_DIR, "bid_to_cover.csv.gz"), rows, ID + ":bid_to_cover", art="vorhanden")
     gzip_write(os.path.join(OUT_DIR, "bid_to_cover.csv.gz"), rows)
 
     meta = {

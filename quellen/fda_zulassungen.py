@@ -9,6 +9,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+import sys  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vorfassung  # noqa: E402  (Vorschlaege 17/20 (Reto, 7.11.2026): Vorfassungspruefung bis 2020)
+
 ID = "fda_zulassungen"
 BASE = "https://api.fda.gov/drug/drugsfda.json"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
@@ -56,6 +60,8 @@ def main():
     approvals = {}  # application_number -> datum (aelteste ORIG-AP-Zulassung)
     last_updated = None
     skip = 0
+    gesamt = None   # Vorschlaege 17/20 (Reto, 7.11.2026): von openFDA gemeldete Trefferzahl (meta.results.total)
+    geholt = 0
     while skip <= MAX_SKIP:
         url = BASE + "?" + urllib.parse.urlencode(
             {"search": q, "limit": PAGE, "skip": skip}
@@ -63,8 +69,15 @@ def main():
         d = fetch(url)
         last_updated = d.get("meta", {}).get("last_updated", last_updated)
         results = d.get("results", [])
+        if results and gesamt is None:
+            total = ((d.get("meta") or {}).get("results") or {}).get("total")
+            gesamt = total if isinstance(total, int) else None
         if not results:
+            if gesamt is not None and skip < gesamt:
+                raise SystemExit("Abruffehler %s: leere Seite bei skip %d von %d Treffern; "
+                                 "bisherige Datei bleibt" % (ID, skip, gesamt))
             break
+        geholt += len(results)
         for rec in results:
             app_num = rec.get("application_number", "")
             # Nur neue Wirkstoffe/Biologika (NDA, BLA), keine Generika (ANDA)
@@ -87,6 +100,9 @@ def main():
         if len(results) < PAGE:
             break
 
+    if gesamt is not None and geholt < gesamt:
+        raise SystemExit("Abruffehler %s: nur %d von %d Treffern geholt (Seitenlimit skip %d); "
+                         "bisherige Datei bleibt" % (ID, geholt, gesamt, MAX_SKIP))
     if not approvals:
         raise RuntimeError("keine Zulassungen gefunden")
 
@@ -115,6 +131,7 @@ def main():
         rows.append((iso, counts.get(iso, 0)))
         d += datetime.timedelta(days=1)
 
+    vorfassung.pruefe(os.path.join(OUT_DIR, "zulassungen.csv.gz"), rows, ID + ":zulassungen")
     os.makedirs(OUT_DIR, exist_ok=True)
     gzip_write(os.path.join(OUT_DIR, "zulassungen.csv.gz"), rows)
 

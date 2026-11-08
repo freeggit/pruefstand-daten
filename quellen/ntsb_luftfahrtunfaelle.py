@@ -8,6 +8,10 @@ import time
 import urllib.error
 import urllib.request
 
+import sys  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vorfassung  # noqa: E402  (Vorschlaege 17/20 (Reto, 7.11.2026): Vorfassungspruefung bis 2020)
+
 ID = "ntsb_luftfahrtunfaelle"
 URL = "https://data.ntsb.gov/carol-main-public/api/Query/Main"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
@@ -107,6 +111,11 @@ def main():
             d = fetch_page(w_start.isoformat(), w_end.isoformat(), offset)
             results = d.get("Results", [])
             if not results:
+                # Vorschlaege 17/20 (Reto, 7.11.2026): ein abgeschlossenes Jahr ohne einen einzigen Fall ist ein
+                # Abruffehler, kein leeres Jahr
+                if offset == 0 and w_end.year < today.year:
+                    raise SystemExit("Abruffehler %s: keine Faelle fuer %d; bisherige Datei bleibt"
+                                     % (ID, w_start.year))
                 break
             for res in results:
                 entry_id = res.get("EntryId")
@@ -144,9 +153,14 @@ def main():
             cur += datetime.timedelta(days=1)
         return rows
 
+    rows_gesamt, rows_fatal = build_rows(counts_all), build_rows(counts_fatal)
+    # Vorschlaege 17/20 (Reto, 7.11.2026): Faelle wandern zwischen Laeufen um einen Tag (EventDate),
+    # darum Summenpruefung bis 2020 statt Tagespruefung; erst pruefen, dann schreiben
+    vorfassung.pruefe(os.path.join(OUT_DIR, "gesamt.csv.gz"), rows_gesamt, ID + ":gesamt", art="summe")
+    vorfassung.pruefe(os.path.join(OUT_DIR, "fatal.csv.gz"), rows_fatal, ID + ":fatal", art="summe")
     os.makedirs(OUT_DIR, exist_ok=True)
-    gzip_write(os.path.join(OUT_DIR, "gesamt.csv.gz"), build_rows(counts_all))
-    gzip_write(os.path.join(OUT_DIR, "fatal.csv.gz"), build_rows(counts_fatal))
+    gzip_write(os.path.join(OUT_DIR, "gesamt.csv.gz"), rows_gesamt)
+    gzip_write(os.path.join(OUT_DIR, "fatal.csv.gz"), rows_fatal)
 
     publikation_beleg = (
         "verzoegert: Stichprobe am Laufdatum zeigte Faelle mit EventDate bis zu "

@@ -21,6 +21,10 @@ import re
 import time
 import urllib.request
 
+import sys  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vorfassung  # noqa: E402  (Vorschlaege 17/20 (Reto, 7.11.2026): Vorfassungspruefung bis 2020)
+
 ID = "usda_wasde_veroeffentlichung"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
@@ -62,6 +66,10 @@ def fetch_all_dates():
             if empty_streak >= 2:
                 break
         else:
+            if empty_streak:
+                # Vorschlaege 17/20 (Reto, 7.11.2026): leere Seite vor einer Seite mit Terminen = Abruffehler
+                raise SystemExit("Abruffehler %s: leere Seite %d vor Seite %d mit Terminen; "
+                                 "bisherige Datei bleibt" % (ID, page - 1, page))
             empty_streak = 0
             for s in found:
                 dates.add(datetime.date.fromisoformat(s))
@@ -89,6 +97,7 @@ def main():
     all_dates = fetch_all_dates() - KEIN_TERMIN
     start = min(all_dates)
     rows = [(d, 1 if d in all_dates else 0) for d in daterange(start, end)]
+    vorfassung.pruefe(os.path.join(OUT_DIR, "wasde.csv.gz"), rows, ID + ":wasde")
     gzip_write(os.path.join(OUT_DIR, "wasde.csv.gz"), rows)
 
     meta = {

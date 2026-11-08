@@ -2,7 +2,7 @@
 """USDA NASS Quarterly Hogs and Pigs, Veroeffentlichungstage: 1 am Tag der
 Veroeffentlichung (Ende Maerz/Juni/September/Dezember), sonst 0. Terminliste aus
 dem oeffentlichen USDA-ESMIS-Archiv (esmis.nal.usda.gov, kein Schluessel, kein Login),
-Seitendurchlauf bis zur leeren Seite. NASS gibt den Kalender im Voraus bekannt."""
+Seitendurchlauf bis zu zwei leeren Seiten in Folge (7.11.2026). NASS gibt den Kalender im Voraus bekannt."""
 import datetime
 import gzip
 import io
@@ -10,6 +10,10 @@ import json
 import os
 import re
 import urllib.request
+
+import sys  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vorfassung  # noqa: E402  (Vorschlaege 17/20 (Reto, 7.11.2026): Vorfassungspruefung bis 2020)
 
 ID = "usda_hogs_pigs_termine"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
@@ -29,13 +33,22 @@ def daterange(start, end):
 
 def fetch_release_dates():
     dates = set()
+    leer = None
     for page in range(0, 60):
         req = urllib.request.Request(URL % page, headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=30) as resp:
             text = resp.read().decode("utf-8", "replace")
         found = set(PAT.findall(text))
         if not found:
-            break
+            # Vorschlaege 17/20 (Reto, 7.11.2026): erst zwei leere Seiten in Folge beenden die Liste;
+            # eine leere Seite vor einer Seite mit Terminen ist ein Abruffehler
+            if leer is not None:
+                break
+            leer = page
+            continue
+        if leer is not None:
+            raise SystemExit("Abruffehler %s: leere Seite %d vor Seite %d mit Terminen; "
+                             "bisherige Datei bleibt" % (ID, leer, page))
         dates |= {datetime.date.fromisoformat(x) for x in found}
     if not dates:
         raise SystemExit("keine Veroeffentlichungstermine gefunden")
@@ -60,6 +73,7 @@ def main():
     event_days = fetch_release_dates()
     start = max(min(event_days).replace(month=1, day=1), START)
     rows = [(d, 1 if d in event_days else 0) for d in daterange(start, end)]
+    vorfassung.pruefe(os.path.join(OUT_DIR, "hogs_pigs.csv.gz"), rows, ID + ":hogs_pigs")
     gzip_write(os.path.join(OUT_DIR, "hogs_pigs.csv.gz"), rows)
     meta = {
         "hogs_pigs": {

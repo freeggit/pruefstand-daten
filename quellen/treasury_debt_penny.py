@@ -34,6 +34,11 @@ def fetch_all():
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=60) as resp:
         data = json.loads(resp.read().decode("utf-8"))
+    seiten = (data.get("meta") or {}).get("total-pages", 1)
+    if isinstance(seiten, int) and seiten > 1:
+        # Vorschlaege 17/20 (Reto, 7.11.2026): geholt wird nur Seite 1; weitere Seiten waeren still verloren
+        raise SystemExit("Abruffehler %s: %d Seiten, geholt wird nur Seite 1; bisherige Datei bleibt"
+                         % (ID, seiten))
     return data["data"]
 
 

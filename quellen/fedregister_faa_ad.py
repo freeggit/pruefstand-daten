@@ -70,6 +70,9 @@ def fetch_year_counts(year, counts):
                 continue
             counts[d] = counts.get(d, 0) + 1
         total_pages = data.get("total_pages", 1)
+        if not results and page < total_pages:
+            # Vorschlaege 17/20 (Reto, 7.11.2026): leere Seite vor der letzten = Abruffehler, nicht Ende
+            raise SystemExit("Abruffehler %s: leere Seite %d von %d; bisherige Datei bleibt" % (ID, page, total_pages))
         if page >= total_pages or not results:
             break
         page += 1

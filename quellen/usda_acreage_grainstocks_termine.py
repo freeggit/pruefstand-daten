@@ -12,6 +12,10 @@ import re
 import time
 import urllib.request
 
+import sys  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vorfassung  # noqa: E402  (Vorschlaege 17/20 (Reto, 7.11.2026): Vorfassungspruefung bis 2020)
+
 ID = "usda_acreage_grainstocks_termine"
 UA = "pruefstand-daten/1.2 (public research mirror; github.com/freeggit/pruefstand-daten)"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
@@ -44,6 +48,10 @@ def fetch_all_dates(name):
             if empty_streak >= 2:
                 break
         else:
+            if empty_streak:
+                # Vorschlaege 17/20 (Reto, 7.11.2026): leere Seite vor einer Seite mit Terminen = Abruffehler
+                raise SystemExit("Abruffehler %s (%s): leere Seite %d vor Seite %d mit Terminen; "
+                                 "bisherige Datei bleibt" % (ID, name, page - 1, page))
             empty_streak = 0
             for s in found:
                 dates.add(datetime.date.fromisoformat(s))
@@ -75,11 +83,12 @@ SERIEN = {
 def main():
     end = datetime.datetime.now(datetime.timezone.utc).date()
     meta = {}
+    ausgabe = []
     for reihe, (name, text) in SERIEN.items():
         dates = fetch_all_dates(name)
         start = min(dates)
         rows = [(d, 1 if d in dates else 0) for d in daterange(start, end)]
-        gzip_write(os.path.join(OUT_DIR, reihe + ".csv.gz"), rows)
+        ausgabe.append((reihe, rows))
         meta[reihe] = {
             "einheit": "Indikator (0/1)",
             "beschreibung": "1 am Veroeffentlichungstag des %s, sonst 0, fuer jeden Kalendertag ab %s bis heute. Termine aus der ESMIS-Archivliste (National Agricultural Library)." % (text, start.isoformat()),
@@ -89,6 +98,11 @@ def main():
             "verfuegbar_nach_tagen": 0,
             "revidiert": False,
         }
+    # Vorschlaege 17/20 (Reto, 7.11.2026): erst alle Reihen gegen die Vorfassung pruefen, dann schreiben
+    for reihe, rows in ausgabe:
+        vorfassung.pruefe(os.path.join(OUT_DIR, reihe + ".csv.gz"), rows, "%s:%s" % (ID, reihe))
+    for reihe, rows in ausgabe:
+        gzip_write(os.path.join(OUT_DIR, reihe + ".csv.gz"), rows)
     with open(os.path.join(OUT_DIR, "meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=2, sort_keys=True)
 

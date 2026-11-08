@@ -30,6 +30,11 @@ def fetch_account_type(account_type):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as resp:
         data = json.loads(resp.read().decode("utf-8"))
+    seiten = (data.get("meta") or {}).get("total-pages", 1)
+    if isinstance(seiten, int) and seiten > 1:
+        # Vorschlaege 17/20 (Reto, 7.11.2026): geholt wird nur Seite 1; weitere Seiten waeren still verloren
+        raise SystemExit("Abruffehler %s: %s hat %d Seiten, geholt wird nur Seite 1; bisherige Datei bleibt"
+                         % (ID, account_type, seiten))
     return data["data"]
 
 
