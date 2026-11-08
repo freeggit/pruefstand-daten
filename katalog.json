@@ -4688,13 +4688,18 @@
  {
   "id": "occ_optionsvolumen_taeglich",
   "name": "OCC: Gesamtvolumen der US-Aktienoptionen, täglich",
-  "url": "https://www.theocc.com/market-data/market-data-reports/volume-reports/daily-volume",
+  "url": "https://marketdata.theocc.com/daily-volume-statistics?reportType=D&format=csv&reportDate=JJJJMMTT",
   "domain": "theocc.com",
   "bereich": "Aufmerksamkeit",
-  "status": "fehler",
+  "status": "aktiv",
   "prioritaet": "normal",
-  "mechanismus": "Extremes Optionsvolumen markiert spekulative Übertreibung und geht kurzfristig oft mit Umkehr in Wachstumswerten (QQQ) gegenüber dem Weltindex einher.",
-  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Aufmerksamkeit/Spekulation; Kontrast zu cboe_put_call_ratio_taeglich. | Test 2026-11-06T16Z: theocc.com Historienseite HTTP 403 von dieser Umgebung; marktdata.theocc.com liefert leere Antwort (0 Byte); Sperre nicht umgangen, nächster Lauf erneut.",
-  "geprueft_utc": "2026-11-06T16Z"
+  "mechanismus": "Das Verhältnis von Aktien- zu Indexoptionsvolumen zeigt Spekulation versus Absicherung und könnte kurzfristig Risikobereitschaft und Marktstress gegenüber dem Weltindex anzeigen.",
+  "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Aufmerksamkeit/Spekulation; Kontrast zu cboe_put_call_ratio_taeglich. | Test 2026-11-06T16Z: theocc.com Historienseite HTTP 403 von dieser Umgebung; marktdata.theocc.com liefert leere Antwort (0 Byte); Sperre nicht umgangen, nächster Lauf erneut. | 2026-11-08T04:07Z: Aufgenommen. marketdata.theocc.com liefert Monatsdateien (HTTP 200, vorher leer/403). Zeilen 4743 je Reihe, erste 2008-01-02 (davor \"Report is not available\"), letzte 2026-11-06, Median-Abstand 1 Tag, gleiche Folgewerte 0.02%, Min/Max plausibel. Börsenschliessungen (0 Kontrakte: 2012-10-29/30, 2018-12-05, 2025-01-09) weggelassen. verfuegbar_nach_tagen 1. Nur 2 Varianten (equity, index_sonstige).",
+  "geprueft_utc": "2026-11-08T04:07Z",
+  "reihen": [
+   "equity",
+   "index_sonstige"
+  ],
+  "aufgenommen_utc": "2026-11-08T04:07Z"
  }
 ]

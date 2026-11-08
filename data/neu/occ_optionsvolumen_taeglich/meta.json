@@ -1,0 +1,20 @@
+{
+ "equity": {
+  "verdichtung": "keine (Tagessumme der gehandelten Kontrakte)",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "quelle_url": "https://www.theocc.com/market-data/market-data-reports/volume-reports/daily-volume",
+  "publikation": "taeglich (OCC veroeffentlicht das Tagesvolumen am Abend des Handelstags bzw. am Folgetag; Monatsdatei wird fortgeschrieben)",
+  "einheit": "Kontrakte je Tag",
+  "beschreibung": "OCC Tagesvolumen Aktienoptionen (Equity), alle US-Optionsbörsen"
+ },
+ "index_sonstige": {
+  "verdichtung": "keine (Tagessumme der gehandelten Kontrakte)",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "quelle_url": "https://www.theocc.com/market-data/market-data-reports/volume-reports/daily-volume",
+  "publikation": "taeglich (OCC veroeffentlicht das Tagesvolumen am Abend des Handelstags bzw. am Folgetag; Monatsdatei wird fortgeschrieben)",
+  "einheit": "Kontrakte je Tag",
+  "beschreibung": "OCC Tagesvolumen Index- und sonstige Optionen (Index/Others)"
+ }
+}
