@@ -769,6 +769,18 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_occ_optionsvolumen_taeglich_equity": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261108T113619Z",
+   "erst_zeit": "2026-11-08T14:31Z",
+   "beleg": "suche/laeufe/L20261108T113619Z.json"
+  },
+  "neu_occ_optionsvolumen_taeglich_index_sonstige": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261108T113619Z",
+   "erst_zeit": "2026-11-08T14:31Z",
+   "beleg": "suche/laeufe/L20261108T113619Z.json"
+  },
   "neu_openmeteo_wetter_anbau_mais_guertel": {
    "erst_dokument": "S0010",
    "erst_lauf": null,
@@ -1838,8 +1850,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261102T130854Z",
-  "zeit_utc": "2026-11-02T16:06Z",
-  "grundreihen_n": 305
+  "lauf_id": "L20261108T113619Z",
+  "zeit_utc": "2026-11-08T14:31Z",
+  "grundreihen_n": 307
  }
 }

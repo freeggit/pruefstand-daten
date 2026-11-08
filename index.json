@@ -1,5 +1,5 @@
 {
- "kumuliert": 703373,
+ "kumuliert": 705165,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -702,6 +702,16 @@
   "neu_nyfed_rrp_rrp_d5",
   "neu_nyfed_rrp_rrp_stand",
   "neu_nyfed_rrp_rrp_z252",
+  "neu_occ_optionsvolumen_taeglich_equity_d1",
+  "neu_occ_optionsvolumen_taeglich_equity_d20",
+  "neu_occ_optionsvolumen_taeglich_equity_d5",
+  "neu_occ_optionsvolumen_taeglich_equity_stand",
+  "neu_occ_optionsvolumen_taeglich_equity_z252",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_d1",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_d20",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_d5",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_stand",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_z252",
   "neu_openmeteo_wetter_anbau_mais_guertel_d1",
   "neu_openmeteo_wetter_anbau_mais_guertel_d20",
   "neu_openmeteo_wetter_anbau_mais_guertel_d5",
@@ -1676,9 +1686,15 @@
    "datei": "suche/S0061.json",
    "kandidaten": 364780,
    "in_db": false
+  },
+  {
+   "nr": 62,
+   "datei": "suche/S0062.json",
+   "kandidaten": 366572,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-02T16:06Z",
+ "letzter_suchlauf_utc": "2026-11-08T14:31Z",
  "pruefung_lernrunde_utc": "2026-11-08T09:37:00Z",
  "letzter_code_hash": "2d79c8b050a7c3ee",
  "methode": "M4",
@@ -2060,11 +2076,19 @@
    "lauf_id": "L20261107T112344Z",
    "gesamt": "keine Neuberechnung",
    "importierbar": false
+  },
+  {
+   "datei": "suche/laeufe/L20261108T113619Z.json",
+   "lauf_id": "L20261108T113619Z",
+   "s_dokument": "suche/S0062.json",
+   "ergebnis_hash": "0936c6068dfb513a",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-02T16:06Z",
- "letztes_vollarchiv": "suche/S0061_alle.csv.gz",
- "letzter_ergebnis_hash": "d9bda54245e968a1",
+ "letzter_lauf_utc": "2026-11-08T14:31Z",
+ "letztes_vollarchiv": "suche/S0062_alle.csv.gz",
+ "letzter_ergebnis_hash": "0936c6068dfb513a",
  "konflikte": [
   {
    "wo": "index",
@@ -4299,10 +4323,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 305,
-  "neu_in_diesem_lauf": 3
+  "grundreihen_n": 307,
+  "neu_in_diesem_lauf": 2
  },
- "letztes_vollarchiv_ergebnis_hash": "d9bda54245e968a1",
+ "letztes_vollarchiv_ergebnis_hash": "0936c6068dfb513a",
  "pruefungen_bestanden": {
   "pruef_hash": "ce1b5646fd681a05",
   "lauf_id": "L20261102T130854Z",
@@ -4320,7 +4344,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "a26850529b8cd717",
- "letzter_gueltiger_lauf": "L20261102T130854Z",
- "letzter_entscheidung_hash": "597ad4cc91fda520"
+ "letzter_eingabe_hash": "67050a354de1c801",
+ "letzter_gueltiger_lauf": "L20261108T113619Z",
+ "letzter_entscheidung_hash": "d060e0cdeda3763f"
 }

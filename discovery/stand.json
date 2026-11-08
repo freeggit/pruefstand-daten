@@ -4568,7 +4568,36 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-04T12:39:43Z",
+ "stand_utc": "2026-11-08T11:36:54Z",
  "dateien_n": 504,
- "vorgemerkt": {}
+ "vorgemerkt": {
+  "n__neu__occ_optionsvolumen_taeglich__equity.csv.gz": {
+   "erstmals_utc": "2026-11-08T11:36:47Z",
+   "beste_werte": 3274,
+   "frueheste_erste": "2008-01-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-08T11:36:47Z",
+     "lauf_id": "L20261108T113619Z",
+     "werte": 3274,
+     "erste": "2008-01-02",
+     "sha_inhalt": "09f76206970b15487ebf920840d7623852c475894d638c01f9beeded8cc76df2"
+    }
+   ]
+  },
+  "n__neu__occ_optionsvolumen_taeglich__index_sonstige.csv.gz": {
+   "erstmals_utc": "2026-11-08T11:36:47Z",
+   "beste_werte": 3274,
+   "frueheste_erste": "2008-01-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-08T11:36:47Z",
+     "lauf_id": "L20261108T113619Z",
+     "werte": 3274,
+     "erste": "2008-01-02",
+     "sha_inhalt": "1cd1f9addf35a5eda58657740bed039b2bb6f8f0586159afbfa6562dfb951350"
+    }
+   ]
+  }
+ }
 }

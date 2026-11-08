@@ -1,18 +1,18 @@
 {
- "zeit_utc": "2026-11-02T16:06Z",
- "lauf_id": "L20261102T130854Z",
+ "zeit_utc": "2026-11-08T14:31Z",
+ "lauf_id": "L20261108T113619Z",
  "verfassung": "V3.18",
- "commit_main": "a9ebb9290146918e50279cd36e4c9a0ca91ab6fa",
- "commit_energie": "22d8660b2b9536fbc04a4f7fa8061998616dd600",
- "commit_neu": "90ba4dd97d08d91f2105897a00db29bbc63f3353",
- "commit_lernen_vorher": "632436d4f5da0303a5f2f8cfa19c676262e45dc0",
+ "commit_main": "15e5a73961236642db4d809ee6cf7b057c31e91f",
+ "commit_energie": "62510e648cf2e1892db0813c56e8870b2963af87",
+ "commit_neu": "1512f1a234040865f3081ad23f576e689205dfcc",
+ "commit_lernen_vorher": "c157e46415cc017c0606d1df7eae4a38fd51a09e",
  "code_hash": "2d79c8b050a7c3ee",
  "sha_suchmaschine": "a63264581c5ed5f1",
  "sha_paare": "faf4e4d850ca9a00",
  "sha_mechanismen": "4bd02c9ab975654f",
- "sha_register_vorher": "7122f39865e5f20c",
- "sha_manifest_main": "6cfa7bb98382e1fe",
- "sha_manifest_neu": "a609381f44960970",
+ "sha_register_vorher": "8ebad9aca3eb9150",
+ "sha_manifest_main": "98c221f5fd87100e",
+ "sha_manifest_neu": "c3455912b2bc11ec",
  "placebo_laeufe": 200,
  "umgebung": {
   "numpy": "2.5.4",
@@ -20,9 +20,9 @@
   "python": "3.12.15",
   "btc_sha": "8c16152e4bd556aa"
  },
- "ergebnis_hash": "d9bda54245e968a1",
- "kandidaten": 364780,
- "kandidaten_neu": 2645,
+ "ergebnis_hash": "0936c6068dfb513a",
+ "kandidaten": 366572,
+ "kandidaten_neu": 1792,
  "huerde_t": 4.35,
  "fund": false,
  "kandidaten_stufe_d": 1,
@@ -33,36 +33,22 @@
   "analyse": "vollständig",
   "familie_v": "vollständig",
   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-  "tests": "vollständig",
-  "siegeltest": "vollständig"
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
  },
- "laufeintrag": "suche/laeufe/L20261102T130854Z.json",
+ "laufeintrag": "suche/laeufe/L20261108T113619Z.json",
  "reihen_entfallen_gegen_vorlauf": [],
  "reihen_neu_gegen_vorlauf": [
-  "neu_fred_heizoel_nyh_taeglich_heizoel_d1",
-  "neu_fred_heizoel_nyh_taeglich_heizoel_d20",
-  "neu_fred_heizoel_nyh_taeglich_heizoel_d5",
-  "neu_fred_heizoel_nyh_taeglich_heizoel_stand",
-  "neu_fred_heizoel_nyh_taeglich_heizoel_z252",
-  "neu_fred_kerosin_golf_taeglich_kerosin_d1",
-  "neu_fred_kerosin_golf_taeglich_kerosin_d20",
-  "neu_fred_kerosin_golf_taeglich_kerosin_d5",
-  "neu_fred_kerosin_golf_taeglich_kerosin_stand",
-  "neu_fred_kerosin_golf_taeglich_kerosin_z252",
-  "neu_rbnz_ocr_entscheidtage_aenderungstage_stand"
+  "neu_occ_optionsvolumen_taeglich_equity_d1",
+  "neu_occ_optionsvolumen_taeglich_equity_d20",
+  "neu_occ_optionsvolumen_taeglich_equity_d5",
+  "neu_occ_optionsvolumen_taeglich_equity_stand",
+  "neu_occ_optionsvolumen_taeglich_equity_z252",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_d1",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_d20",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_d5",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_stand",
+  "neu_occ_optionsvolumen_taeglich_index_sonstige_z252"
  ],
- "gesamt": "vollständig",
- "letzter_versuch": {
-  "lauf_id": "L20261107T112344Z",
-  "gesamt": "keine Neuberechnung",
-  "stufen": {
-   "suche": "keine Neuberechnung",
-   "analyse": "übersprungen",
-   "familie_v": "übersprungen",
-   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
-   "tests": "übersprungen",
-   "siegeltest": "übersprungen"
-  },
-  "zeit_utc": "2026-11-07T11:24Z"
- }
+ "gesamt": "vollständig"
 }
