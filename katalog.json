@@ -683,9 +683,9 @@
   "domain": "fred.stlouisfed.org",
   "bereich": "Rohstoffe",
   "status": "aktiv",
-  "prioritaet": "normal",
+  "prioritaet": "hoch",
   "mechanismus": "Brent ist der internationale Rohoel-Referenzpreis (Nordsee/Europa/Asien), unabhaengig vom bereits vorhandenen WTI (USO/DCOILWTICO, US-Binnenmarkt); Verschiebungen im Brent-WTI-Spread zeigen kurzfristig globale Angebots-/Logistikverschiebungen an, die den Energiesektor (XLE) und rohstoffnahe Laender gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen koennen.",
-  "grund": "Neu aufgenommen (2026-09-24T12:10:51Z). Oeffentliche fredgraph.csv-Ausgabe der FRED-Reihe DCOILBRENTEU, kein API-Schluessel noetig. Pruefung: 9092 Zeilen, erster Wert 1987-05-20, letzter Wert 2026-09-22, Median-Abstand 1 Kalendertag (K1 erfuellt), Historie weit vor 2015 (K2 erfuellt), oeffentlich ohne Login/Schluessel (K3), taeglicher Spotpreis wird nicht nachtraeglich revidiert (K4), letzter Wert 2 Tage alt (K5), Reihe nicht im bestehenden Spiegel (K6 -- nur WTI/DCOILWTICO und USO vorhanden, kein Brent), unter 20 MB und Abruf in Sekunden (K7). Anteil gleicher Folgewerte 1.9% (unauffaellig). Min 9.10 USD (April 2020, negative/sehr niedrige Oelpreise plausibel), Max 143.95 USD (2008) -- beides plausibel. | Zusatz 5 (25.9.2026): FRED-Metadaten (WebFetch) fuer DCOILBRENTEU zeigen 7-Tage-Luecke zwischen Releases trotz 'Daily'-Label -> Publikation tatsaechlich woechentlich gebuendelt (EIA-Muster); verfuegbar_nach_tagen von 1 auf 8 korrigiert, Feld publikation ergaenzt.",
+  "grund": "Neu aufgenommen (2026-09-24T12:10:51Z). Oeffentliche fredgraph.csv-Ausgabe der FRED-Reihe DCOILBRENTEU, kein API-Schluessel noetig. Pruefung: 9092 Zeilen, erster Wert 1987-05-20, letzter Wert 2026-09-22, Median-Abstand 1 Kalendertag (K1 erfuellt), Historie weit vor 2015 (K2 erfuellt), oeffentlich ohne Login/Schluessel (K3), taeglicher Spotpreis wird nicht nachtraeglich revidiert (K4), letzter Wert 2 Tage alt (K5), Reihe nicht im bestehenden Spiegel (K6 -- nur WTI/DCOILWTICO und USO vorhanden, kein Brent), unter 20 MB und Abruf in Sekunden (K7). Anteil gleicher Folgewerte 1.9% (unauffaellig). Min 9.10 USD (April 2020, negative/sehr niedrige Oelpreise plausibel), Max 143.95 USD (2008) -- beides plausibel. | Zusatz 5 (25.9.2026): FRED-Metadaten (WebFetch) fuer DCOILBRENTEU zeigen 7-Tage-Luecke zwischen Releases trotz 'Daily'-Label -> Publikation tatsaechlich woechentlich gebuendelt (EIA-Muster); verfuegbar_nach_tagen von 1 auf 8 korrigiert, Feld publikation ergaenzt. | Lernrunde 09.11.2026 (L1): unabhängige Replikation für DCOILWTICO tief -> IBB 5 Tage (t 4.76, kein Fund). Brent gibt in S0062 max t 3.18; keine Variante auf denselben Daten.",
   "reihen": [
    "brent"
   ],
@@ -4701,5 +4701,49 @@
    "index_sonstige"
   ],
   "aufgenommen_utc": "2026-11-08T04:07Z"
+ },
+ {
+  "id": "fred_aktienvol_vxn_rvx_vxd",
+  "name": "FRED: Implizite Volatilität Nasdaq-100 (VXN), Russell 2000 (RVX), Dow (VXD), täglich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXNCLS (ebenso RVXCLS, VXDCLS)",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Stimmung",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Steigt die erwartete Schwankung der Technologie- und Nebenwerte stärker als die des Gesamtmarkts, werden Wachstumswerte (XLK) und Nebenwerte kurzfristig verkauft, gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Ergänzt fred_implied_vol (dort nur Öl, Gold, Schwellenländer). Aktienvolatilität nach Segment."
+ },
+ {
+  "id": "ecb_einlagefazilitaet_nutzung_taeglich",
+  "name": "EZB: Inanspruchnahme der Einlagefazilität (Überschussliquidität im Euroraum), täglich",
+  "url": "https://data-api.ecb.europa.eu/service/data/ILM/ (Reihe Einlagefazilität, Format csvdata)",
+  "domain": "data-api.ecb.europa.eu",
+  "bereich": "Staat und Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Ein starker Anstieg der Überschussliquidität senkt die Geldmarktzinsen im Euroraum und stützt kurzfristig Finanzwerte und Länder im Euroraum (EWG, EWL) gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Geldmarkt; Ergänzung zu ecb_estr und ecb_wochenausweis_liquiditaet (täglich statt wöchentlich). Serienschlüssel im ersten Test klären."
+ },
+ {
+  "id": "ca_warn_entlassungsmeldungen_dichte",
+  "name": "Kalifornien EDD: WARN-Meldungen (Massenentlassungen) je Tag, Zahl der Meldungen und betroffene Stellen",
+  "url": "https://edd.ca.gov/en/jobs_and_training/Layoff_Services_WARN",
+  "domain": "edd.ca.gov",
+  "bereich": "Firmenereignisse",
+  "status": "kandidat",
+  "prioritaet": "hoch",
+  "mechanismus": "Eine Häufung von Massenentlassungsmeldungen grosser Firmen zeigt Nachfrageschwäche an und verschiebt Geld kurzfristig in defensive Sektoren (XLP, XLU, XLV) gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Firmenereignisse aggregiert (erste Priorität). Prüfpunkte: Historie ab 2014, Meldedatum statt Wirkdatum, Publikationsfrist."
+ },
+ {
+  "id": "fred_euro_hochzins_spread_taeglich",
+  "name": "FRED/ICE BofA: Euro-Hochzinsanleihen, Optionsbereinigter Spread, täglich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLHE00EHYIOAS",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Geldmarkt",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Weitet sich der Kreditaufschlag in Europa, steigt das Risiko für europäische Banken und Zykliker und Länderfonds (EWG, EWL) verlieren kurzfristig gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Ergänzt fred_credit_spread (US) und fred_em_unternehmensanleihen_spread; Priorität «tief», da die Kreditspread-Quellen bisher keinen Kandidaten über t 3.5 hatten (fred_credit_spread max t 3.39). Historie ab 1997; FRED kürzt ICE-Reihen eventuell auf 3 Jahre: im Test prüfen."
  }
 ]
