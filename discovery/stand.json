@@ -4568,9 +4568,51 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-08T11:36:54Z",
+ "stand_utc": "2026-11-09T13:38:07Z",
  "dateien_n": 504,
  "vorgemerkt": {
+  "n__neu__fred_aktienvol_vxn_rvx_vxd__rvx.csv.gz": {
+   "erstmals_utc": "2026-11-09T13:38:00Z",
+   "beste_werte": 4278,
+   "frueheste_erste": "2004-01-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-09T13:38:00Z",
+     "lauf_id": "L20261109T133737Z",
+     "werte": 4278,
+     "erste": "2004-01-02",
+     "sha_inhalt": "e9d0d35001ee606a04744bb547315a00e3ca62779079190f6490765cd74f7021"
+    }
+   ]
+  },
+  "n__neu__fred_aktienvol_vxn_rvx_vxd__vxd.csv.gz": {
+   "erstmals_utc": "2026-11-09T13:38:00Z",
+   "beste_werte": 5847,
+   "frueheste_erste": "1997-10-07",
+   "sichtungen": [
+    {
+     "utc": "2026-11-09T13:38:00Z",
+     "lauf_id": "L20261109T133737Z",
+     "werte": 5847,
+     "erste": "1997-10-07",
+     "sha_inhalt": "514d8d5d8f1e8172bee16d06984feb09fa90e139bb5d97f5e1dd7a3adb0a242a"
+    }
+   ]
+  },
+  "n__neu__fred_aktienvol_vxn_rvx_vxd__vxn.csv.gz": {
+   "erstmals_utc": "2026-11-09T13:38:00Z",
+   "beste_werte": 5009,
+   "frueheste_erste": "2001-02-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-09T13:38:00Z",
+     "lauf_id": "L20261109T133737Z",
+     "werte": 5009,
+     "erste": "2001-02-02",
+     "sha_inhalt": "4170ce8b23d86d19eff85b6f082f6e0dc2ab833d761c68db704148231fd4408a"
+    }
+   ]
+  },
   "n__neu__occ_optionsvolumen_taeglich__equity.csv.gz": {
    "erstmals_utc": "2026-11-08T11:36:47Z",
    "beste_werte": 3274,
@@ -4579,6 +4621,13 @@
     {
      "utc": "2026-11-08T11:36:47Z",
      "lauf_id": "L20261108T113619Z",
+     "werte": 3274,
+     "erste": "2008-01-02",
+     "sha_inhalt": "09f76206970b15487ebf920840d7623852c475894d638c01f9beeded8cc76df2"
+    },
+    {
+     "utc": "2026-11-09T13:38:02Z",
+     "lauf_id": "L20261109T133737Z",
      "werte": 3274,
      "erste": "2008-01-02",
      "sha_inhalt": "09f76206970b15487ebf920840d7623852c475894d638c01f9beeded8cc76df2"
@@ -4593,6 +4642,13 @@
     {
      "utc": "2026-11-08T11:36:47Z",
      "lauf_id": "L20261108T113619Z",
+     "werte": 3274,
+     "erste": "2008-01-02",
+     "sha_inhalt": "1cd1f9addf35a5eda58657740bed039b2bb6f8f0586159afbfa6562dfb951350"
+    },
+    {
+     "utc": "2026-11-09T13:38:02Z",
+     "lauf_id": "L20261109T133737Z",
      "werte": 3274,
      "erste": "2008-01-02",
      "sha_inhalt": "1cd1f9addf35a5eda58657740bed039b2bb6f8f0586159afbfa6562dfb951350"

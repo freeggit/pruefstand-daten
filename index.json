@@ -1,5 +1,5 @@
 {
- "kumuliert": 705165,
+ "kumuliert": 710275,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -537,6 +537,21 @@
   "neu_fema_katastrophenerklaerungen_anzahl_stuerme_z252",
   "neu_fema_katastrophenerklaerungen_anzahl_z252",
   "neu_fomc_protokolle_veroeffentlichungstage_protokolle_stand",
+  "neu_fred_aktienvol_vxn_rvx_vxd_rvx_d1",
+  "neu_fred_aktienvol_vxn_rvx_vxd_rvx_d20",
+  "neu_fred_aktienvol_vxn_rvx_vxd_rvx_d5",
+  "neu_fred_aktienvol_vxn_rvx_vxd_rvx_stand",
+  "neu_fred_aktienvol_vxn_rvx_vxd_rvx_z252",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxd_d1",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxd_d20",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxd_d5",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxd_stand",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxd_z252",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxn_d1",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxn_d20",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxn_d5",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxn_stand",
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxn_z252",
   "neu_fred_brent_brent_d1",
   "neu_fred_brent_brent_d20",
   "neu_fred_brent_brent_d5",
@@ -1696,9 +1711,15 @@
    "datei": "suche/S0062.json",
    "kandidaten": 366572,
    "in_db": false
+  },
+  {
+   "nr": 63,
+   "datei": "suche/S0063.json",
+   "kandidaten": 371682,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-08T14:31Z",
+ "letzter_suchlauf_utc": "2026-11-09T15:40Z",
  "pruefung_lernrunde_utc": "2026-11-09T09:00:00Z",
  "letzter_code_hash": "2d79c8b050a7c3ee",
  "methode": "M4",
@@ -2088,11 +2109,19 @@
    "ergebnis_hash": "0936c6068dfb513a",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261109T133737Z.json",
+   "lauf_id": "L20261109T133737Z",
+   "s_dokument": "suche/S0063.json",
+   "ergebnis_hash": "b4cd84be56a518c7",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-08T14:31Z",
- "letztes_vollarchiv": "suche/S0062_alle.csv.gz",
- "letzter_ergebnis_hash": "0936c6068dfb513a",
+ "letzter_lauf_utc": "2026-11-09T15:40Z",
+ "letztes_vollarchiv": "suche/S0063_alle.csv.gz",
+ "letzter_ergebnis_hash": "b4cd84be56a518c7",
  "konflikte": [
   {
    "wo": "index",
@@ -4327,20 +4356,20 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 307,
-  "neu_in_diesem_lauf": 2
+  "grundreihen_n": 310,
+  "neu_in_diesem_lauf": 3
  },
- "letztes_vollarchiv_ergebnis_hash": "0936c6068dfb513a",
+ "letztes_vollarchiv_ergebnis_hash": "b4cd84be56a518c7",
  "pruefungen_bestanden": {
   "pruef_hash": "ce1b5646fd681a05",
-  "lauf_id": "L20261102T130854Z",
-  "zeit_utc": "2026-11-02T16:50:47Z",
-  "eingabe_hash": "31b961e164d5f641",
+  "lauf_id": "L20261109T133737Z",
+  "zeit_utc": "2026-11-09T16:11:43Z",
+  "eingabe_hash": "c650dda8e1cfe31d",
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
    "ImageOS": "ubuntu24",
-   "ImageVersion": "20261026.354.1",
+   "ImageVersion": "20261101.360.1",
    "numpy": "2.5.4",
    "pandas": "3.0.6",
    "python-dateutil": "4.0.0",
@@ -4348,7 +4377,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "67050a354de1c801",
- "letzter_gueltiger_lauf": "L20261108T113619Z",
- "letzter_entscheidung_hash": "d060e0cdeda3763f"
+ "letzter_eingabe_hash": "5de048a3de9d6abc",
+ "letzter_gueltiger_lauf": "L20261109T133737Z",
+ "letzter_entscheidung_hash": "9438fcef3a34aa39"
 }

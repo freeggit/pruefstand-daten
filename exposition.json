@@ -523,6 +523,24 @@
    "erst_zeit": "4.10.2026, 17:27 (Europe/Zurich)",
    "beleg": "suche/S0022_alle.csv.gz"
   },
+  "neu_fred_aktienvol_vxn_rvx_vxd_rvx": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261109T133737Z",
+   "erst_zeit": "2026-11-09T15:40Z",
+   "beleg": "suche/laeufe/L20261109T133737Z.json"
+  },
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxd": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261109T133737Z",
+   "erst_zeit": "2026-11-09T15:40Z",
+   "beleg": "suche/laeufe/L20261109T133737Z.json"
+  },
+  "neu_fred_aktienvol_vxn_rvx_vxd_vxn": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261109T133737Z",
+   "erst_zeit": "2026-11-09T15:40Z",
+   "beleg": "suche/laeufe/L20261109T133737Z.json"
+  },
   "neu_fred_brent_brent": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -1850,8 +1868,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261108T113619Z",
-  "zeit_utc": "2026-11-08T14:31Z",
-  "grundreihen_n": 307
+  "lauf_id": "L20261109T133737Z",
+  "zeit_utc": "2026-11-09T15:40Z",
+  "grundreihen_n": 310
  }
 }
