@@ -4708,10 +4708,16 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXNCLS (ebenso RVXCLS, VXDCLS)",
   "domain": "fred.stlouisfed.org",
   "bereich": "Stimmung",
-  "status": "kandidat",
+  "status": "aktiv",
   "prioritaet": "normal",
   "mechanismus": "Steigt die erwartete Schwankung der Technologie- und Nebenwerte stärker als die des Gesamtmarkts, werden Wachstumswerte (XLK) und Nebenwerte kurzfristig verkauft, gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Ergänzt fred_implied_vol (dort nur Öl, Gold, Schwellenländer). Aktienvolatilität nach Segment."
+  "grund": "Neu aufgenommen (2026-11-09T12:17:28Z). K1 Median-Abstand 1 Tag. K2: vxn 2001-02-02 n=6479; rvx 2004-01-02 n=5746; vxd 1997-10-07 n=7318 (alle bis 2026-11-05). K3 fredgraph.csv ohne Login. K4 Cboe-Schlusswerte, nicht revidiert. K5 letzter Wert 2026-11-05. K6 nicht im Spiegel (nur VIXCLS). Gleiche Folgewerte je 0.5-0.7%. Min/Max: vxn 10.31/80.64, rvx 11.83/87.62, vxd 2.71/74.6 (VXD-Minimum 2.71 auffaellig, Quellwert unveraendert uebernommen, Datenfehler moeglich). Publikation taeglich, verfuegbar_nach_tagen 1. Zusatz 3: drei Reihen = Obergrenze, verschiedene Indizes.",
+  "reihen": [
+   "vxn",
+   "rvx",
+   "vxd"
+  ],
+  "geprueft_utc": "2026-11-09T12:17:28Z"
  },
  {
   "id": "ecb_einlagefazilitaet_nutzung_taeglich",
@@ -4719,10 +4725,11 @@
   "url": "https://data-api.ecb.europa.eu/service/data/ILM/ (Reihe Einlagefazilität, Format csvdata)",
   "domain": "data-api.ecb.europa.eu",
   "bereich": "Staat und Geldmarkt",
-  "status": "kandidat",
+  "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Ein starker Anstieg der Überschussliquidität senkt die Geldmarktzinsen im Euroraum und stützt kurzfristig Finanzwerte und Länder im Euroraum (EWG, EWL) gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Geldmarkt; Ergänzung zu ecb_estr und ecb_wochenausweis_liquiditaet (täglich statt wöchentlich). Serienschlüssel im ersten Test klären."
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Geldmarkt; Ergänzung zu ecb_estr und ecb_wochenausweis_liquiditaet (täglich statt wöchentlich). Serienschlüssel im ersten Test klären. | Test 2026-11-09T12:17:28Z: ILM-Schluessel W.U2.C.L050.U2.EUR liefert 404, taegliche Reihe in der Daten-API nicht gefunden; naechster Lauf erneut mit anderem Dataflow.",
+  "geprueft_utc": "2026-11-09T12:17:28Z"
  },
  {
   "id": "ca_warn_entlassungsmeldungen_dichte",

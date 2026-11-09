@@ -1,0 +1,29 @@
+{
+  "rvx": {
+    "beschreibung": "CBOE Russell 2000 Volatility Index (RVX), implizite Volatilitaet aus Russell-2000-Optionen",
+    "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "publikation": "taeglich (Cboe VXN/RVX/VXD Schlusswerte, laut FRED-Metadaten taeglich ohne Wochenluecke gespiegelt, geprueft 9.11.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RVXCLS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "vxd": {
+    "beschreibung": "CBOE DJIA Volatility Index (VXD), implizite Volatilitaet aus Dow-Jones-Optionen",
+    "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "publikation": "taeglich (Cboe VXN/RVX/VXD Schlusswerte, laut FRED-Metadaten taeglich ohne Wochenluecke gespiegelt, geprueft 9.11.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXDCLS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "vxn": {
+    "beschreibung": "CBOE Nasdaq-100 Volatility Index (VXN), implizite Volatilitaet aus Nasdaq-100-Optionen",
+    "einheit": "Index (annualisierte implizite Volatilitaet in %)",
+    "publikation": "taeglich (Cboe VXN/RVX/VXD Schlusswerte, laut FRED-Metadaten taeglich ohne Wochenluecke gespiegelt, geprueft 9.11.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXNCLS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
