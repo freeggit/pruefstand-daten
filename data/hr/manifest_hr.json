@@ -4,8 +4,8 @@
    "dateien": [
     "data/hr/pegel/kaub_2026.csv.gz"
    ],
-   "zeilen": 7371,
-   "letzte": "2026-11-08T11:00:00+01:00",
+   "zeilen": 7472,
+   "letzte": "2026-11-09T12:15:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -15,8 +15,8 @@
    "dateien": [
     "data/hr/pegel/maxau_2026.csv.gz"
    ],
-   "zeilen": 7376,
-   "letzte": "2026-11-08T11:00:00+01:00",
+   "zeilen": 7477,
+   "letzte": "2026-11-09T12:15:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -26,8 +26,8 @@
    "dateien": [
     "data/hr/pegel/koeln_2026.csv.gz"
    ],
-   "zeilen": 7373,
-   "letzte": "2026-11-08T11:00:00+01:00",
+   "zeilen": 7474,
+   "letzte": "2026-11-09T12:15:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -37,8 +37,8 @@
    "dateien": [
     "data/hr/pegel/duisburg-ruhrort_2026.csv.gz"
    ],
-   "zeilen": 7377,
-   "letzte": "2026-11-08T11:00:00+01:00",
+   "zeilen": 7478,
+   "letzte": "2026-11-09T12:15:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -90,9 +90,9 @@
     "data/hr/wetter/basel_2025.csv.gz",
     "data/hr/wetter/basel_2026.csv.gz"
    ],
-   "zeilen": 235272,
+   "zeilen": 235296,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-02T23:00:00Z",
+   "letzte": "2026-11-03T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -127,9 +127,9 @@
     "data/hr/wetter/chicago_2025.csv.gz",
     "data/hr/wetter/chicago_2026.csv.gz"
    ],
-   "zeilen": 235272,
+   "zeilen": 235296,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-02T23:00:00Z",
+   "letzte": "2026-11-03T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -167,9 +167,7 @@
    "zeilen": 235272,
    "erste": "2000-01-01T00:00:00Z",
    "letzte": "2026-11-02T23:00:00Z",
-   "aufloesung": "1h",
-   "quelle": "open-meteo ERA5",
-   "einheiten": "°C, mm, km/h, %"
+   "fehler": "2026: <urlopen error _ssl.c:994: The handshake operation timed out>"
   },
   "wetter:houston": {
    "dateien": [
@@ -201,9 +199,9 @@
     "data/hr/wetter/houston_2025.csv.gz",
     "data/hr/wetter/houston_2026.csv.gz"
    ],
-   "zeilen": 235272,
+   "zeilen": 235296,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-02T23:00:00Z",
+   "letzte": "2026-11-03T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -238,9 +236,9 @@
     "data/hr/wetter/kaub_2025.csv.gz",
     "data/hr/wetter/kaub_2026.csv.gz"
    ],
-   "zeilen": 235272,
+   "zeilen": 235296,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-02T23:00:00Z",
+   "letzte": "2026-11-03T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -275,9 +273,9 @@
     "data/hr/wetter/zuerich_2025.csv.gz",
     "data/hr/wetter/zuerich_2026.csv.gz"
    ],
-   "zeilen": 235272,
+   "zeilen": 235296,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-02T23:00:00Z",
+   "letzte": "2026-11-03T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -438,6 +436,6 @@
   "wiki",
   "wetter"
  ],
- "inventur_utc": "2026-11-08T10:16:06Z",
- "erzeugt_utc": "2026-11-08T10:12:45Z"
+ "inventur_utc": "2026-11-09T11:27:29Z",
+ "erzeugt_utc": "2026-11-09T11:24:33Z"
 }
