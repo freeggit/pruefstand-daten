@@ -4728,8 +4728,8 @@
   "status": "fehler",
   "prioritaet": "normal",
   "mechanismus": "Ein starker Anstieg der Überschussliquidität senkt die Geldmarktzinsen im Euroraum und stützt kurzfristig Finanzwerte und Länder im Euroraum (EWG, EWL) gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Geldmarkt; Ergänzung zu ecb_estr und ecb_wochenausweis_liquiditaet (täglich statt wöchentlich). Serienschlüssel im ersten Test klären. | Test 2026-11-09T12:17:28Z: ILM-Schluessel W.U2.C.L050.U2.EUR liefert 404, taegliche Reihe in der Daten-API nicht gefunden; naechster Lauf erneut mit anderem Dataflow.",
-  "geprueft_utc": "2026-11-09T12:17:28Z"
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Geldmarkt; Ergänzung zu ecb_estr und ecb_wochenausweis_liquiditaet (täglich statt wöchentlich). Serienschlüssel im ersten Test klären. | Test 2026-11-09T12:17:28Z: ILM-Schluessel W.U2.C.L050.U2.EUR liefert 404, taegliche Reihe in der Daten-API nicht gefunden; naechster Lauf erneut mit anderem Dataflow. | Test 2026-11-09T16:24Z: Daten-API ILM kennt nur woechentliche Reihen (D.U2.C.L050/L051/A020: 404, L020: Timeout); taegliche Zahlen nur auf Webseite; naechster Lauf anderen Weg pruefen.",
+  "geprueft_utc": "2026-11-09T16:24Z"
  },
  {
   "id": "ca_warn_entlassungsmeldungen_dichte",
@@ -4737,10 +4737,11 @@
   "url": "https://edd.ca.gov/en/jobs_and_training/Layoff_Services_WARN",
   "domain": "edd.ca.gov",
   "bereich": "Firmenereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "hoch",
   "mechanismus": "Eine Häufung von Massenentlassungsmeldungen grosser Firmen zeigt Nachfrageschwäche an und verschiebt Geld kurzfristig in defensive Sektoren (XLP, XLU, XLV) gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Firmenereignisse aggregiert (erste Priorität). Prüfpunkte: Historie ab 2014, Meldedatum statt Wirkdatum, Publikationsfrist."
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Firmenereignisse aggregiert (erste Priorität). Prüfpunkte: Historie ab 2014, Meldedatum statt Wirkdatum, Publikationsfrist. | Test 2026-11-09T16:24Z: K2/Format: edd.ca.gov bietet nur die laufende XLSX (aktuelles Berichtsjahr); aeltere Jahre ab 2014 nur als PDF, mit Standardbibliothek nicht maschinenlesbar.",
+  "geprueft_utc": "2026-11-09T16:24Z"
  },
  {
   "id": "fred_euro_hochzins_spread_taeglich",
@@ -4748,9 +4749,10 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLHE00EHYIOAS",
   "domain": "fred.stlouisfed.org",
   "bereich": "Geldmarkt",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Weitet sich der Kreditaufschlag in Europa, steigt das Risiko für europäische Banken und Zykliker und Länderfonds (EWG, EWL) verlieren kurzfristig gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Ergänzt fred_credit_spread (US) und fred_em_unternehmensanleihen_spread; Priorität «tief», da die Kreditspread-Quellen bisher keinen Kandidaten über t 3.5 hatten (fred_credit_spread max t 3.39). Historie ab 1997; FRED kürzt ICE-Reihen eventuell auf 3 Jahre: im Test prüfen."
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Ergänzt fred_credit_spread (US) und fred_em_unternehmensanleihen_spread; Priorität «tief», da die Kreditspread-Quellen bisher keinen Kandidaten über t 3.5 hatten (fred_credit_spread max t 3.39). Historie ab 1997; FRED kürzt ICE-Reihen eventuell auf 3 Jahre: im Test prüfen. | Test 2026-11-09T16:24Z: K2: FRED-Reihe BAMLHE00EHYIOAS beginnt 2023-11-10 (ICE-Lizenz, nur 3 Jahre), unter 2016 nicht erreichbar.",
+  "geprueft_utc": "2026-11-09T16:24Z"
  }
 ]
