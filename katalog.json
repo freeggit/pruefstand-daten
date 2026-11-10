@@ -1655,11 +1655,12 @@
   "url": "http://www.pbc.gov.cn/en/3688006/3688055/3828468/index.html",
   "domain": "pbc.gov.cn",
   "bereich": "Staat",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Grosse monatliche Aenderungen der chinesischen Devisenreserven signalisieren Kapitalflussdruck und moegliche PBoC-Interventionen; koennen FXI und EEM in den Tagen nach der monatlichen Veroeffentlichung (i.d.R. Anfang Monat) gegenueber dem Weltindex bewegen.",
-  "grund": "Amtliche PBoC-Quelle oeffentlich, aber nur monatliche Frequenz (kleine Kandidatenzahl) und Sprach-/Layout-Pruefung noch offen (aehnliches K3-Risiko wie bei china_pboc_leitzins); tiefe Prioritaet bis Erreichbarkeit/Format geprueft.",
-  "aufgenommen_utc": "2026-09-27T09:41:32Z"
+  "grund": "Amtliche PBoC-Quelle oeffentlich, aber nur monatliche Frequenz (kleine Kandidatenzahl) und Sprach-/Layout-Pruefung noch offen (aehnliches K3-Risiko wie bei china_pboc_leitzins); tiefe Prioritaet bis Erreichbarkeit/Format geprueft. | Abgelehnt 2026-11-10T12:17Z: K1: monatlich; K4: revidiert",
+  "aufgenommen_utc": "2026-09-27T09:41:32Z",
+  "geprueft_utc": "2026-11-10T12:17Z"
  },
  {
   "id": "sec_aktienrueckkaeufe_ankuendigungen",
@@ -3813,12 +3814,12 @@
   "url": "https://www.eia.gov/dnav/ng/hist/n9133us2m.htm",
   "domain": "www.eia.gov",
   "bereich": "Rohstoffe und Logistik",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 19.10.2026); kein Doppel",
+  "status": "abgelehnt",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 19.10.2026); kein Doppel | Abgelehnt 2026-11-10T12:17Z: K1: Monats-/Wochenwerte",
   "mechanismus": "Monats-/Wochenmenge der LNG-Ausfuhr. Mechanismus: Exportmengen verknappen den US-Gasmarkt und stützen Erdgaspreis und Energiesektor (UNG, XLE) gegenüber dem Weltindex. Nur mit echter Publikationsfrist verwendbar.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-19T10:00:00Z",
-  "geprueft_utc": null,
+  "geprueft_utc": "2026-11-10T12:17Z",
   "prioritaet": "tief",
   "herkunft": "Lernrunde"
  },
@@ -4024,13 +4025,14 @@
   "url": "https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/index.en.html",
   "domain": "www.ecb.europa.eu",
   "bereich": "Geldmarkt",
-  "status": "kandidat",
-  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login.",
+  "status": "abgelehnt",
+  "grund": "Vorrat «kandidat» auf 15 aufgefüllt (Lernrunde 22.10.2026); L3, kein Doppel; nur öffentliche Quelle ohne Login. | Abgelehnt 2026-11-10T12:17Z: K1: vierteljaehrlich, kaum Ereignisse",
   "mechanismus": "Die Umfrage zu Kreditstandards der Banken im Euroraum zeigt Kreditverknappung früh und wirkt kurzfristig auf Finanzwerte (EWG, EWL) gegenüber dem Weltindex.",
   "reihen": [],
   "aufgenommen_utc": "2026-10-22T10:00:00Z",
   "prioritaet": "tief",
-  "herkunft": "Lernrunde"
+  "herkunft": "Lernrunde",
+  "geprueft_utc": "2026-11-10T12:17Z"
  },
  {
   "id": "opec_basket_preis_tageswert_replikation",
@@ -4635,8 +4637,9 @@
   "bereich": "Staat und Geldmarkt (Anleihen)",
   "mechanismus": "Verkäufe durch Japan oder China drücken die Nachfrage nach US-Anleihen und treiben die Renditen, das trifft TLT und IEF.",
   "prioritaet": "tief",
-  "grund": "Monatsreihe, wenige Ereignisse, darum tief. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
-  "status": "kandidat"
+  "grund": "Monatsreihe, wenige Ereignisse, darum tief. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | Abgelehnt 2026-11-10T12:17Z: K1: monatlich; K4: revidiert",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-10T12:17Z"
  },
  {
   "id": "nyfed_inflationserwartungen_konsumenten",
@@ -4646,8 +4649,9 @@
   "bereich": "Kalender-Ereignisse",
   "mechanismus": "Steigende Inflationserwartungen verschieben die Zinserwartung und bewegen TIP und lange Anleihen gegenüber dem Weltindex.",
   "prioritaet": "tief",
-  "grund": "Monatsreihe, darum tief. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3.",
-  "status": "kandidat"
+  "grund": "Monatsreihe, darum tief. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | Abgelehnt 2026-11-10T12:17Z: K1: monatlich",
+  "status": "abgelehnt",
+  "geprueft_utc": "2026-11-10T12:17Z"
  },
  {
   "id": "sec_form144_verkaufsabsichten_dichte",
@@ -4761,10 +4765,11 @@
   "url": "https://usdmdataservices.unl.edu/api/USStatistics/GetDroughtSeverityStatisticsByAreaPercent?aoi=us&startdate=1/1/2000&enddate=12/31/2020&statisticsType=1",
   "domain": "usdmdataservices.unl.edu",
   "bereich": "Wetter und Agrar",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Verschärft sich die Dürre in den USA, steigen Agrarpreise kurzfristig und der Agrarfonds DBA gewinnt gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login. | Abgelehnt 2026-11-10T12:17Z: K1: woechentlich; zudem revidiert (K4)",
+  "geprueft_utc": "2026-11-10T12:17Z"
  },
  {
   "id": "fred_mortgage30us_woechentlich",
@@ -4772,10 +4777,11 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US",
   "domain": "fred.stlouisfed.org",
   "bereich": "Staat und Geldmarkt (Anleihen)",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "normal",
   "mechanismus": "Springt der Hypothekarzins, sinkt die Nachfrage nach Wohnraum und Immobilienwerte (XLRE) verlieren kurzfristig gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login. | Abgelehnt 2026-11-10T12:17Z: K1: woechentlich (Median-Abstand 7 Tage), Publikation woechentlich",
+  "geprueft_utc": "2026-11-10T12:17Z"
  },
  {
   "id": "hafen_los_angeles_container_monat",
@@ -4783,10 +4789,11 @@
   "url": "https://www.portoflosangeles.org/business/statistics/container-statistics",
   "domain": "portoflosangeles.org",
   "bereich": "Rohstoffe und Logistik",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Bricht der Containerumschlag ein, signalisiert das schwächeren US-Handel und Konsum; Konsum- und Industriesektoren (XLY, XLI) verlieren kurzfristig gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login. | Abgelehnt 2026-11-10T12:17Z: K1: monatlich",
+  "geprueft_utc": "2026-11-10T12:17Z"
  },
  {
   "id": "fred_cfnai",
@@ -4794,9 +4801,10 @@
   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CFNAI",
   "domain": "fred.stlouisfed.org",
   "bereich": "Kalender-Ereignisse",
-  "status": "kandidat",
+  "status": "abgelehnt",
   "prioritaet": "tief",
   "mechanismus": "Fällt die Konjunkturaktivität unter Trend, verlieren Zykliker (XLI, XLB) kurzfristig gegenüber dem Weltindex.",
-  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login. | Abgelehnt 2026-11-10T12:17Z: K1: monatlich; K4: revidierte Wirtschaftsstatistik",
+  "geprueft_utc": "2026-11-10T12:17Z"
  }
 ]
