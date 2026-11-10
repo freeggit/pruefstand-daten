@@ -4754,5 +4754,49 @@
   "mechanismus": "Weitet sich der Kreditaufschlag in Europa, steigt das Risiko für europäische Banken und Zykliker und Länderfonds (EWG, EWL) verlieren kurzfristig gegenüber dem Weltindex.",
   "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 09.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403). Ergänzt fred_credit_spread (US) und fred_em_unternehmensanleihen_spread; Priorität «tief», da die Kreditspread-Quellen bisher keinen Kandidaten über t 3.5 hatten (fred_credit_spread max t 3.39). Historie ab 1997; FRED kürzt ICE-Reihen eventuell auf 3 Jahre: im Test prüfen. | Test 2026-11-09T16:24Z: K2: FRED-Reihe BAMLHE00EHYIOAS beginnt 2023-11-10 (ICE-Lizenz, nur 3 Jahre), unter 2016 nicht erreichbar.",
   "geprueft_utc": "2026-11-09T16:24Z"
+ },
+ {
+  "id": "us_drought_monitor_woechentlich",
+  "name": "US Drought Monitor: Anteil Fläche in Dürre, wöchentlich (Donnerstag)",
+  "url": "https://usdmdataservices.unl.edu/api/USStatistics/GetDroughtSeverityStatisticsByAreaPercent?aoi=us&startdate=1/1/2000&enddate=12/31/2020&statisticsType=1",
+  "domain": "usdmdataservices.unl.edu",
+  "bereich": "Wetter und Agrar",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Verschärft sich die Dürre in den USA, steigen Agrarpreise kurzfristig und der Agrarfonds DBA gewinnt gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
+ },
+ {
+  "id": "fred_mortgage30us_woechentlich",
+  "name": "FRED/Freddie Mac: 30-jähriger Hypothekarzins USA, wöchentlich (Donnerstag)",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Staat und Geldmarkt (Anleihen)",
+  "status": "kandidat",
+  "prioritaet": "normal",
+  "mechanismus": "Springt der Hypothekarzins, sinkt die Nachfrage nach Wohnraum und Immobilienwerte (XLRE) verlieren kurzfristig gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
+ },
+ {
+  "id": "hafen_los_angeles_container_monat",
+  "name": "Hafen Los Angeles: Containerumschlag (TEU), monatlich",
+  "url": "https://www.portoflosangeles.org/business/statistics/container-statistics",
+  "domain": "portoflosangeles.org",
+  "bereich": "Rohstoffe und Logistik",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Bricht der Containerumschlag ein, signalisiert das schwächeren US-Handel und Konsum; Konsum- und Industriesektoren (XLY, XLI) verlieren kurzfristig gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
+ },
+ {
+  "id": "fred_cfnai",
+  "name": "Chicago Fed National Activity Index (CFNAI), monatlich",
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CFNAI",
+  "domain": "fred.stlouisfed.org",
+  "bereich": "Kalender-Ereignisse",
+  "status": "kandidat",
+  "prioritaet": "tief",
+  "mechanismus": "Fällt die Konjunkturaktivität unter Trend, verlieren Zykliker (XLI, XLB) kurzfristig gegenüber dem Weltindex.",
+  "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login."
  }
 ]
