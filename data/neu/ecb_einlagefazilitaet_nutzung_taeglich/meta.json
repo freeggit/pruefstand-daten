@@ -1,0 +1,20 @@
+{
+  "einlagefazilitaet": {
+    "beschreibung": "EZB ILM L020200: Inanspruchnahme der Einlagefazilitaet des Eurosystems (Tagesendstand)",
+    "einheit": "Mio. EUR",
+    "publikation": "taeglich (EZB veroeffentlicht die Liquiditaetslage des Eurosystems am folgenden TARGET-Geschaeftstag; Tageswerte aus Bilanzposten, keine statistische Revision)",
+    "quelle_url": "https://data-api.ecb.europa.eu/service/data/ILM/D.U2.C.L020200.U2.EUR",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, nur TARGET-Geschaeftstage)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "girokonten": {
+    "beschreibung": "EZB ILM L020100: Guthaben der Kreditinstitute des Euroraums auf Girokonten beim Eurosystem (Tagesendstand, inkl. Mindestreserven)",
+    "einheit": "Mio. EUR",
+    "publikation": "taeglich (EZB veroeffentlicht die Liquiditaetslage des Eurosystems am folgenden TARGET-Geschaeftstag; Tageswerte aus Bilanzposten, keine statistische Revision)",
+    "quelle_url": "https://data-api.ecb.europa.eu/service/data/ILM/D.U2.C.L020100.U2.EUR",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich, nur TARGET-Geschaeftstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

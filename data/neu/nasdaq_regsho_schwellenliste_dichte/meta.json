@@ -1,0 +1,11 @@
+{
+  "anzahl": {
+    "beschreibung": "Anzahl Nasdaq-gelisteter Titel auf der Reg-SHO-Schwellenliste (anhaltende Lieferausfaelle), Liste mit Datum = Datei nasdaqth<JJJJMMTT>.txt",
+    "einheit": "Anzahl Titel",
+    "publikation": "taeglich (Fusszeile jeder Datei nennt die Erstellzeit, ca. 23:00 ET am Datumstag, also nach Boersenschluss; darum 1 Tag)",
+    "quelle_url": "https://www.nasdaqtrader.com/dynamic/symdir/regsho/nasdaqth<JJJJMMTT>.txt",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Listenzeilen je Tagesdatei (nur Handelstage)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
