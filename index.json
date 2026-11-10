@@ -2121,6 +2121,12 @@
    "ergebnis_hash": "b4cd84be56a518c7",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261110T130646Z.json",
+   "lauf_id": "L20261110T130646Z",
+   "gesamt": "keine Neuberechnung",
+   "importierbar": false
   }
  ],
  "letzter_lauf_utc": "2026-11-09T15:40Z",

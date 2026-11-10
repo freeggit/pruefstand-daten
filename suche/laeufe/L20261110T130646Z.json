@@ -1,0 +1,172 @@
+{
+ "lauf_id": "L20261110T130646Z",
+ "verfassung": "V3.18",
+ "beginn_utc": "2026-11-10T13:06:46Z",
+ "ende_suche_utc": "2026-11-10T13:07:18Z",
+ "anlass": "schedule",
+ "github_run_id": "42821398437",
+ "datenstand": {
+  "commit_main": "e8a999901258ad9eb7ff5c2ed6dbfdb71eeb50c8",
+  "commit_energie": "a2e3abeaed6d6f6fba0167c94f3e80606a2a59c4",
+  "commit_neu": "ae6251ef97b04c23baed9ff3949f2c9513be35fd",
+  "sha_manifest_main": "984903047076c336",
+  "sha_manifest_hr": "545dbfd2b693b745",
+  "sha_manifest_sec": "2d8b726afd5a1ea7",
+  "sha_manifest_neu": "6b33aea25b35ba55",
+  "sha_manifest_energie": "9ba50b9374d00f90"
+ },
+ "stufen": {
+  "suche": "keine Neuberechnung",
+  "analyse": "übersprungen",
+  "familie_v": "übersprungen",
+  "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)",
+  "tests": "übersprungen",
+  "siegeltest": "übersprungen"
+ },
+ "e9": {
+  "modus": "bei Änderung (V3.17, E9; V3.18 mit eingefrorenem Stand, Entwurf)",
+  "eingabe_hash": "5de048a3de9d6abc",
+  "referenz_eingabe_hash": "5de048a3de9d6abc",
+  "referenz_lauf": "L20261109T133737Z",
+  "anlaesse": [],
+  "eingabe": {
+   "daten": "784714892e2af6f6",
+   "register": "4406a98e580b6298",
+   "code": "2d79c8b050a7c3ee",
+   "vorregistrierung": "ccdd56c94beefacc",
+   "placebo": "200",
+   "teile": {
+    "kurse": "96faad0ff5c5e526",
+    "ind": "49f7b609a18ed943",
+    "EREIGNIS": "f05ef2ad22686143",
+    "KAL": "cb2a5be8409f7805",
+    "VERDACHT_POS": "feda7b588336f928",
+    "ZIELE": "4e0f8540f1ee39f0",
+    "QUELLE": "ca36fcd99d43da8f",
+    "HERKUNFT": "dc63fac056841930",
+    "LUECKEN": "0d0f7ee0c5defce5",
+    "EXPLORATIV": "65728502cfdd8e03",
+    "EXPLORATIV_NAMEN": "86839ac2826e9e9e",
+    "KORREKTUREN": "2756cd8bfc0d24e3",
+    "VERFUEGBAR": "44136fa355b3678a",
+    "VERFUEGBAR_KAL": "1632dc0a15929035",
+    "AUSSCHLUSS": "13ac3f72165e2ba7",
+    "KUM_VORHER": "790d12f16ff9088a",
+    "N_PLACEBO": "27badc983df1780b",
+    "KALIBRIERUNG": "3cbc87c7681f34db",
+    "LANGZEIT": "3cbc87c7681f34db",
+    "DATENMANGEL": "c8db0725afc08c20",
+    "AUSGESCHLOSSEN": "a269a7f4b6d9ef94",
+    "FAM": "d68171b88acbaaf9",
+    "umgebung": "a21668d34071bb23"
+   }
+  },
+  "stand": {
+   "aktiv": true,
+   "ordner": "discovery/ (claude/lernen)",
+   "dateien_n": 506,
+   "fassung": "3700ad2fdb01899b",
+   "fassung_regel": "Prüfsumme von stand.json nach der Vorprüfung; die Rechnung liest nur die daraus bereitgestellten Dateien (Gutachten 23, M1)",
+   "bereitgestellt": {
+    "dateien_n": 514,
+    "pruefsumme": "c49ed1f038ddc860"
+   },
+   "neu_eingefroren_n": 2,
+   "neu_eingefroren": [
+    "n__neu__occ_optionsvolumen_taeglich__equity.csv.gz",
+    "n__neu__occ_optionsvolumen_taeglich__index_sonstige.csv.gz"
+   ],
+   "nachgefuehrt": [],
+   "nachfuehrung_angewandt": [],
+   "nachfuehrung_fehler": [],
+   "nicht_eingefroren": [],
+   "revisionen_n": 39,
+   "revisionen_je_gruppe": {
+    "fred": 2,
+    "kurse": 32,
+    "n__neu": 5
+   },
+   "revisionen_summe": {
+    "geaendert": 12479,
+    "hinzugekommen": 0,
+    "entfallen": 6,
+    "werte_fehlen_im_spiegel": 0,
+    "werte_neu_im_spiegel": 0,
+    "relativ_nicht_definiert": 17
+   },
+   "aufnahme": {
+    "bestaetigungen": 2,
+    "abstand_stunden": 20,
+    "grenze_werte": 0.99,
+    "max_tage_spaeter": 5
+   },
+   "vorgemerkt_n": 3,
+   "vorgemerkt_neu": [],
+   "bestaetigung": [
+    {
+     "datei": "n__neu__fred_aktienvol_vxn_rvx_vxd__rvx.csv.gz",
+     "sichtung": 2,
+     "von": 3,
+     "werte": 4278,
+     "beste_werte": 4278,
+     "eingefroren": false
+    },
+    {
+     "datei": "n__neu__fred_aktienvol_vxn_rvx_vxd__vxd.csv.gz",
+     "sichtung": 2,
+     "von": 3,
+     "werte": 5847,
+     "beste_werte": 5847,
+     "eingefroren": false
+    },
+    {
+     "datei": "n__neu__fred_aktienvol_vxn_rvx_vxd__vxn.csv.gz",
+     "sichtung": 2,
+     "von": 3,
+     "werte": 5009,
+     "beste_werte": 5009,
+     "eingefroren": false
+    },
+    {
+     "datei": "n__neu__occ_optionsvolumen_taeglich__equity.csv.gz",
+     "sichtung": 3,
+     "von": 3,
+     "werte": 3274,
+     "beste_werte": 3274,
+     "eingefroren": true
+    },
+    {
+     "datei": "n__neu__occ_optionsvolumen_taeglich__index_sonstige.csv.gz",
+     "sichtung": 3,
+     "von": 3,
+     "werte": 3274,
+     "beste_werte": 3274,
+     "eingefroren": true
+    }
+   ],
+   "zurueckgehalten": [],
+   "vorgemerkt_ueber_7_tage": [],
+   "warnungen_stand_unvollstaendig": [],
+   "revisionen_bericht": "discovery/revisionen.json (nur Bericht, löst nichts aus)",
+   "einfrierpruefung": {
+    "bestanden": true,
+    "verstoesse": [],
+    "befunde_nicht_gelesen": [],
+    "geprueft": "alle gelesenen eingefrorenen Fassungen streng",
+    "nicht_eingefroren": "nicht im Stand; Stichtagskürzung der Suchmaschine wie bisher",
+    "ohne_eintrag_n": 0
+   }
+  }
+ },
+ "ausgaben": {
+  "s_dokument": "suche/S0063.json",
+  "vollarchiv": "suche/S0063_alle.csv.gz",
+  "art": "keine Neuberechnung: Eingaben unverändert gegenüber dem letzten gültigen Lauf; kein neues Ergebnis, kein neuer Befund"
+ },
+ "ende_utc": "2026-11-10T13:07:18Z",
+ "gesamt": "keine Neuberechnung",
+ "e38": {
+  "importierbar": false,
+  "grund": "keine Neuberechnung: kein neues Ergebnis (V3.17 §4)"
+ }
+}
