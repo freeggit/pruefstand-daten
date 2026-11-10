@@ -1,4 +1,5 @@
-"""Tests zu discovery.py (V3.18, E9 Stufe 2; Fassung 2 vom 28.10.2026; Ergänzung vom 31.10.2026 zu §3 Ziff. 1 und 7).
+"""Tests zu discovery.py (V3.18, E9 Stufe 2; Fassung 2 vom 28.10.2026; Ergänzung vom 31.10.2026 zu §3 Ziff. 1 und 7;
+Ergänzung vom 10.11.2026: Warnung in Gegenrichtung, Vorschläge 17 und 20, Schritt 2).
 Aufruf: python test_discovery.py – ohne Netz, im Wegwerf-Ordner."""
 import gzip, json, os, sys, tempfile
 from datetime import date, datetime, timedelta, timezone
@@ -343,5 +344,55 @@ with tempfile.TemporaryDirectory() as tmp:                                # Warn
        "Stand mit 200 statt 201 Werten (unter 1%): keine Warnung, nur Revision")
     b = lauf(stand, cache, {N: kurz}, 96, "A5")
     ok(b["revisionen_n"] == 0 and not b["warnungen_stand_unvollstaendig"], "Spiegel gleich wie Stand: keine Revision, keine Warnung")
+
+# ---------------------------------------------------------------- Ergänzung vom 10.11.2026: Warnung in Gegenrichtung
+ws_ = d.unterschied(b"datum,wert\n2020-01-01,1\n2020-01-02,1\n2020-01-03,0\n",
+                    b"datum,wert\n2020-01-01,1\n2020-01-02,0\n2020-01-03,0\n", "n__neu__x__y.csv")
+ok(ws_["spiegel_unvollstaendig"] and not ws_["stand_unvollstaendig"] and ws_["werte_ungleich_null_stand"] == 2
+   and ws_["werte_ungleich_null_spiegel"] == 1, "unterschied: Spiegel mit weniger Werten ungleich 0 -> spiegel_unvollstaendig")
+ok(not u_["spiegel_unvollstaendig"] and not u_["stand_unvollstaendig"],
+   "unterschied: gleich viele Werte ungleich 0 im gemeinsamen Zeitraum -> keine Warnung (nur Revision)")
+
+with tempfile.TemporaryDirectory() as tmp:
+    stand, cache = os.path.join(tmp, "discovery"), os.path.join(tmp, "c")
+    os.makedirs(cache)
+    lauf(stand, cache, {N: voll}, 0, "B1", bestaetigungen=0)              # vollständig eingefroren (wie WASDE seit N0001)
+    vorher = open(os.path.join(stand, "stand.json"), "rb").read()
+    b = lauf(stand, cache, {N: kurz}, 24, "B2")                           # Spiegel verliert 3 Termine (Abruffehler)
+    r = b["revisionen"][0]
+    ok(r["spiegel_unvollstaendig"] and not r["stand_unvollstaendig"] and r["werte_ungleich_null_stand"] == 24
+       and r["werte_ungleich_null_spiegel"] == 21 and not b["warnungen_stand_unvollstaendig"]
+       and b["warnungen_spiegel_unvollstaendig"] == [{"datei": N, "werte_stand": 24, "werte_spiegel": 21}],
+       "Spiegel mit weniger Terminen als der Stand: Warnung «Spiegel möglicherweise unvollständig»")
+    ok(open(os.path.join(cache, f"B2_{N}"), "rb").read() == d.kuerzen(voll, N)[0]
+       and open(os.path.join(stand, "stand.json"), "rb").read() == vorher and not b["neu_eingefroren"] and not b["nachgefuehrt"]
+       and not d.pruefen(stand)["verstoesse"],
+       "nur Bericht: Die Suche liest weiter die eingefrorene Fassung, Stand und Einfrierprüfung unverändert")
+
+    M = "n__neu__usda__grain2.csv.gz"                                     # Gegenfall: Stand verkürzt, Spiegel vollständig
+    lauf(stand, cache, {M: kurz}, 48, "B3", bestaetigungen=0)
+    b = lauf(stand, cache, {M: voll}, 72, "B4")
+    ok(b["revisionen"][0]["stand_unvollstaendig"] and not b["revisionen"][0]["spiegel_unvollstaendig"]
+       and not b["warnungen_spiegel_unvollstaendig"], "Stand mit weniger Terminen: nur die bisherige Warnung, nicht die Gegenrichtung")
+
+    K = "n__neu__klein__k2.csv"                                           # 201 Werte eingefroren, Spiegel mit 200
+    lauf(stand, cache, {K: viel}, 96, "B5", bestaetigungen=0)
+    b = lauf(stand, cache, {K: wenig}, 120, "B6")
+    ok(b["revisionen"][0]["werte_ungleich_null_spiegel"] == 200 and not b["revisionen"][0]["spiegel_unvollstaendig"]
+       and not b["warnungen_spiegel_unvollstaendig"], "Spiegel mit 200 statt 201 Werten (unter 1%): keine Warnung, nur Revision")
+
+    R = "fred__ROLL.csv"                                                  # Rollfenster wie FRED-SP500: Spiegel beginnt später
+    roll = b"observation_date,X\n" + b"".join(f"2019-{m:02d}-01,{m}\n".encode() for m in range(1, 13)) + b"2020-01-01,13\n"
+    roll_spaeter = b"observation_date,X\n" + b"".join(f"2019-{m:02d}-01,{m}\n".encode() for m in range(7, 13)) + b"2020-01-01,13\n"
+    lauf(stand, cache, {R: roll}, 144, "B7", bestaetigungen=0)
+    b = lauf(stand, cache, {R: roll_spaeter}, 168, "B8")
+    r = b["revisionen"][0]
+    ok(r["entfallen"] == 6 and r["werte_ungleich_null_stand"] == 7 and r["werte_ungleich_null_spiegel"] == 7
+       and not r["spiegel_unvollstaendig"] and not b["warnungen_spiegel_unvollstaendig"],
+       "Spiegel beginnt später (Rollfenster): Vergleich nur im gemeinsamen Zeitraum, keine Warnung")
+
+    b = lauf(stand, cache, {N: voll, M: voll}, 192, "B9")
+    ok([x["datei"] for x in b["revisionen"]] == [M] and b["warnungen_spiegel_unvollstaendig"] == []
+       and len(b["warnungen_stand_unvollstaendig"]) == 1, "Spiegel gleich wie Stand: keine Revision und keine Warnung in Gegenrichtung")
 
 print("alle Tests bestanden")
