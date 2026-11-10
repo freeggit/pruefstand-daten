@@ -3,6 +3,7 @@
 28.10.2026 nach Astra-Gutachten 23 (M1: nur eingefrorene Fassungen unterliegen der Einfrierprüfung; Soll: Revisionsbericht
 nach geändert, hinzugekommen und entfallen). Ergänzung vom 31.10.2026 zu §3 Ziff. 1 und 7 (Gegenprüfung gp_2026-10-30_1;
 Reto: «freigeben»): Aufnahme neuer Dateien erst nach zwei Bestätigungen, Warnung bei möglicherweise unvollständigem Stand.
+Ergänzung vom 10.11.2026 (Vorschläge 17 und 20, Schritt 2): Warnung auch bei möglicherweise unvollständigem Spiegel.
 
 Zweck: Die Suche rechnet nur neu, wenn sich eine massgebliche Eingabe wirklich geändert hat. Die täglichen Spiegel
 liefern die Daten bis 31.12.2020 aber nicht Zeichen für Zeichen gleich: Angepasste Kurse von Yahoo schwanken in der
@@ -38,6 +39,14 @@ Die Dateien hatten gleich viele Zeilen und kein Feld fehler im Manifest; nur Ter
 - PS_DISCOVERY_BESTAETIGUNGEN=0 friert wie bisher bei der ersten Verwendung ein. Nur für Siegeltest und Tests:
   suche_lauf.py entfernt vor dem Lauf alle Variablen PS_DISCOVERY_*.
 
+Ergänzung vom 10.11.2026 (Vorschläge 17 und 20, Schritt 2, meta/vorschlag_paginierung_2026-11-07; Grund: Gegenprüfung
+gp_2026-11-06_1, der WASDE-Spiegel verlor zeitweise Termine bis 2020; bisher warnte der Revisionsbericht nur, wenn der
+Stand weniger hatte):
+- Revisionsbericht in Gegenrichtung: Hat der Spiegel im gemeinsamen Zeitraum mindestens 1% (und mindestens einen) Wert
+  ungleich 0 weniger als die eingefrorene Datei, trägt ihr Eintrag spiegel_unvollstaendig = true («Spiegel möglicherweise
+  unvollständig», z. B. nach einem Abruffehler im Scout). Der Bericht führt die Liste warnungen_spiegel_unvollstaendig.
+- Nur Bericht: Die Suche liest weiter die eingefrorene Fassung; Stand, Eingabe-Prüfsumme und Ergebnisse bleiben gleich.
+
 Rückweg: AKTIV = False schaltet den Stand ab (suche_lauf.py und vorreg.py fragen diesen Schalter ab). Dann rechnet die
 Suche wie bisher direkt auf den Spiegeln.
 
@@ -67,13 +76,13 @@ STICHTAG = "2020-12-31"
 STICHTAG_EPOCH = 1609459199                   # 2020-12-31T23:59:59Z
 REGEL = ("V3.18 E9 mit Ergänzung vom 31.10.2026: Discovery-Daten bis 31.12.2020, eingefroren nach zwei Bestätigungen "
          "(je mindestens 20 h Abstand, mindestens 99% der Werte ungleich 0); Revisionen nur über nachfuehrung.json mit Grund "
-         "und Freigabe; Warnung bei möglicherweise unvollständigem Stand")
+         "und Freigabe; Warnung bei möglicherweise unvollständigem Stand oder Spiegel")
 BESTAETIGUNGEN = 2                            # Ergänzung vom 31.10.2026: zwei Bestätigungen nach der ersten Sichtung
 ABSTAND_STUNDEN = 20                          # höchstens eine gezählte Sichtung je 20 Stunden
 GRENZE_WERTE = 0.99                           # je Sichtung mindestens 99% der höchsten gesehenen Zahl Werte ungleich 0
 MAX_TAGE_SPAETER = 5                          # erstes Datum höchstens 5 Tage nach dem frühesten gesehenen
 BEFUND_TAGE = 7                               # länger vorgemerkt: Befund im Bericht
-WARNUNG_ANTEIL = 0.01                         # Revisionsbericht: Stand mit mindestens 1% weniger Werten als der Spiegel
+WARNUNG_ANTEIL = 0.01                         # Revisionsbericht: Stand (ab 10.11.2026 auch Spiegel) mit mindestens 1% weniger Werten
 _ISO = re.compile(r"^\d{4}-\d{2}-\d{2}")
 _FRENCH_GRENZE = {8: "20201231", 6: "202012", 4: "2020"}
 # Datumsspalte je Quelle, wie suchmaschine.py sie liest (Präfix des Cache-Namens -> Art, Spalte; 0 = erste Spalte)
@@ -327,12 +336,14 @@ def unterschied(alt, neu, name):
                 max_rel = max(max_rel, d / abs(u))
     daten_ = sorted(s.decode("utf-8", "replace")[:10] for s in set(ka) | set(kb))
     # Ergänzung vom 31.10.2026 (§3 Ziff. 7): Werte ungleich 0 im gemeinsamen Zeitraum; weniger im Stand -> Warnung
+    # Ergänzung vom 10.11.2026 (Vorschläge 17 und 20, Schritt 2): weniger im Spiegel -> Warnung in Gegenrichtung, nur Bericht
     wa, wb = _werte_zeilen(a, name), _werte_zeilen(b, name)
     ab = max(min((d for d, _ in wa), default=""), min((d for d, _ in wb), default=""))
     w_stand = sum(1 for d, v in wa if v and d >= ab)
     w_spiegel = sum(1 for d, v in wb if v and d >= ab)
     return {"werte_ungleich_null_stand": w_stand, "werte_ungleich_null_spiegel": w_spiegel,
             "stand_unvollstaendig": w_spiegel - w_stand >= 1 and w_stand <= (1 - WARNUNG_ANTEIL) * w_spiegel,
+            "spiegel_unvollstaendig": w_stand - w_spiegel >= 1 and w_spiegel <= (1 - WARNUNG_ANTEIL) * w_stand,
             "geaendert": len(beide), "hinzugekommen": len(set(kb) - set(ka)), "entfallen": len(set(ka) - set(kb)),
             "werte_fehlen_im_spiegel": fehlt_im_spiegel, "werte_neu_im_spiegel": neu_im_spiegel,
             "max_rel_abweichung": float(f"{max_rel:.3g}"), "max_abs_abweichung": float(f"{max_abs:.3g}"),
@@ -571,6 +582,9 @@ class Stand:
                 "warnungen_stand_unvollstaendig": [{"datei": r["datei"], "werte_stand": r.get("werte_ungleich_null_stand"),
                                                     "werte_spiegel": r.get("werte_ungleich_null_spiegel")}
                                                    for r in self.revisionen if r.get("stand_unvollstaendig")],
+                "warnungen_spiegel_unvollstaendig": [{"datei": r["datei"], "werte_stand": r.get("werte_ungleich_null_stand"),
+                                                      "werte_spiegel": r.get("werte_ungleich_null_spiegel")}
+                                                     for r in self.revisionen if r.get("spiegel_unvollstaendig")],   # 10.11.2026
                 "neu_eingefroren": self.neu, "nachgefuehrt": self.nachgefuehrt, "nachfuehrung_angewandt": angewandt,
                 "nachfuehrung_fehler": self.nachfuehrung_fehler, "nicht_eingefroren": self.nicht_eingefroren,
                 "nur_gelesen_nicht_eingefroren": self.nur_gelesen, "gelesen": sorted(self.gelesen),
