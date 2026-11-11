@@ -4967,11 +4967,12 @@
     "url": "https://orders.fdic.gov/s/searchform",
     "domain": "orders.fdic.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Massnahmen gegen kleinere und regionale Banken zeigen Kredit- und Kontrollprobleme im Bankensektor; ihre Häufung kann Finanzwerte (XLF) kurzfristig belasten.",
-    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T20:17Z"
   },
   {
     "id": "osha_todesfaelle_meldungen",
@@ -4979,11 +4980,12 @@
     "url": "https://www.osha.gov/severeinjury",
     "domain": "www.osha.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
-    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich).",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T20:17Z"
   },
   {
     "id": "epa_echo_vollzugsfaelle",
@@ -4991,11 +4993,12 @@
     "url": "https://echo.epa.gov/tools/data-downloads",
     "domain": "echo.epa.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Umwelt-Vergleiche und Bussen treffen vor allem Energie-, Chemie- und Versorgerfirmen; Häufungen können XLE, XLB und XLU gegenüber dem Weltindex kurzfristig belasten.",
-    "grund": "Vollzugsfälle statt Regeln (unterscheidet sich von fedregister_epa_regeln). Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Vollzugsfälle statt Regeln (unterscheidet sich von fedregister_epa_regeln). Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: case_downloads.zip (82 MB, wöchentlich aktualisiert, Stand 2026-11-07) frei abrufbar, Skript quellen/epa_echo_vollzugsfaelle.py geschrieben und geprüft (faelle_gesamt: 10902 Tage 1997-01-01..2026-11-06, Median-Abstand 1, gleiche Folgewerte 18.7%, Min 0 Max 478, Mittel 9.9; faelle_justiz: gleiche Folgewerte 69.8%). Abgelehnt: das öffentlich bedeutsame Datum (Final Order) wird rückwirkend nachgetragen (Median 8 Tage, 18-33% der Fälle über 30 Tage nach dem Entscheid erfasst) = Revision (K4); das punktgenaue Erfassungsdatum ist administrativ (Spitzen zum US-Fiskaljahresende Ende September, z.B. 2006-09: bis 234/Tag) und kein Tag öffentlicher Bekanntgabe = kein Mechanismus. Daten nicht abgelegt.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T20:17Z"
   },
   {
     "id": "phmsa_pipeline_vorfaelle",
@@ -5003,11 +5006,12 @@
     "url": "https://www.phmsa.dot.gov/data-and-statistics/pipeline/distribution-transmission-gathering-lng-and-liquid-accident-and-incident-data",
     "domain": "www.phmsa.dot.gov",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
-    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T20:17Z"
   },
   {
     "id": "fra_bahnunfaelle_taeglich",
@@ -5015,11 +5019,12 @@
     "url": "https://safetydata.fra.dot.gov/OfficeofSafety/publicsite/on_the_fly_download.aspx",
     "domain": "safetydata.fra.dot.gov",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Entgleisungen mit Gefahrgut oder auf Hauptstrecken unterbrechen Güterverkehr und lösen Haftungsrisiken aus; relevant für Industrie (XLI) und Agrar-/Rohstofftransport (DBA).",
-    "grund": "Unfalldaten statt Regeln (unterscheidet sich von fedregister_fra_bahn); Historie ab 1975, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Unfalldaten statt Regeln (unterscheidet sich von fedregister_fra_bahn); Historie ab 1975, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: safetydata.fra.dot.gov antwortet 200, liefert aber nur Fehlerseite «FRA - Unknown Error» (ASP.NET-Formular, kein direkter Download); nächster Lauf erneut. Hinweis: FRA-Unfalldaten erscheinen monatlich mit etwa 2 Monaten Verzug (K5 fraglich).",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T20:17Z"
   },
   {
     "id": "nhtsa_odi_untersuchungen",
