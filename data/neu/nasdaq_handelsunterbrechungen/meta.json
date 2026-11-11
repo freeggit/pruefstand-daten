@@ -1,0 +1,20 @@
+{
+  "firmen": {
+    "beschreibung": "Anzahl Handelsunterbrechungen an Nasdaq-Systemen je HaltDate (US-Ostzeit), alle Gruende ausser Volatilitaetspausen: ausstehende Nachrichten (T1/T3), Regulierung (H-Codes), Delisting u.a.; Grundcode wird nach Wiederaufnahme von T1 auf T3 nachgefuehrt, darum zusammengefasst",
+    "einheit": "Anzahl Unterbrechungen",
+    "publikation": "taeglich (Echtzeit-Feed: jede Unterbrechung erscheint im Moment der Anordnung; Tag abgeschlossen mit Ende Nachhandel 20:00 ET; Quelle: nasdaqtrader.com Trade Halts RSS)",
+    "quelle_url": "https://www.nasdaqtrader.com/rss.aspx?feed=tradehalts&haltdate=<MMTTJJJJ>",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Archiv-Eintraege je Werktag; Werktage ohne Eintrag = 0 (auch Boersenfeiertage)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "volatilitaet": {
+    "beschreibung": "Anzahl Volatilitaetspausen (LULD LUDP/LUDS, M, MWC*) je HaltDate, ab Start des Limit-Up-Limit-Down-Plans 2013-04-08",
+    "einheit": "Anzahl Unterbrechungen",
+    "publikation": "taeglich (Echtzeit-Feed: jede Unterbrechung erscheint im Moment der Anordnung; Tag abgeschlossen mit Ende Nachhandel 20:00 ET; Quelle: nasdaqtrader.com Trade Halts RSS)",
+    "quelle_url": "https://www.nasdaqtrader.com/rss.aspx?feed=tradehalts&haltdate=<MMTTJJJJ>",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Archiv-Eintraege je Werktag; Werktage ohne Eintrag = 0 (auch Boersenfeiertage)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

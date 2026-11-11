@@ -3296,11 +3296,11 @@
     "domain": "api.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com.",
+    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut.",
     "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-08T08:17Z",
-    "geprueft_utc": "2026-10-29T20Z",
+    "geprueft_utc": "2026-11-11T00:28Z",
     "prioritaet": "normal"
   },
   {
@@ -4056,13 +4056,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut.",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-02T16Z"
+    "geprueft_utc": "2026-11-11T00:28Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -4843,5 +4843,42 @@
     "mechanismus": "Fällt die Konjunkturaktivität unter Trend, verlieren Zykliker (XLI, XLB) kurzfristig gegenüber dem Weltindex.",
     "grund": "Vorrat «kandidat» von 11 auf 15 aufgefüllt (Lernrunde 10.11.2026); kein Doppel; nur öffentliche Quelle ohne Login. | Abgelehnt 2026-11-10T12:17Z: K1: monatlich; K4: revidierte Wirtschaftsstatistik",
     "geprueft_utc": "2026-11-10T12:17Z"
+  },
+  {
+    "id": "nasdaq_handelsunterbrechungen",
+    "name": "Nasdaq Trader: Archiv der Handelsunterbrechungen (Trade Halts), Anzahl je Tag",
+    "url": "https://www.nasdaqtrader.com/rss.aspx?feed=tradehalts&haltdate=MMTTJJJJ",
+    "domain": "nasdaqtrader.com",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Häufen sich Einzelfirmen-Halts wegen ausstehender Nachrichten oder Regulierung, steigt die Dichte kursrelevanter Firmenmeldungen (v.a. Nebenwerte, Biotech, Technologie), und viele Volatilitätspausen zeigen Liquiditätsstress, der kleine und volatile Sektoren kurzfristig gegenüber dem Weltindex belasten kann.",
+    "grund": "Eigene Recherche 2026-11-11T00:28Z (Zusatz 6, Firmenereignisse; Nasdaq-API api.nasdaq.com gesperrt, aber nasdaqtrader.com erreichbar). RSS-Archiv je HaltDate ab 2006-01-03 lückenlos abrufbar (HTTP 200, numItems = Anzahl Einträge geprüft). Ganze Historie in 5 Etappen geholt (cache.json, 4 parallele Anfragen, Budget 150 s je Lauf; laufend nur neue Tage). Zwei Reihen, verschiedene Grössen: firmen (alle Codes ausser Volatilitätspausen; T1 wird nach Wiederaufnahme auf T3 nachgeführt, darum nicht nach Code getrennt) und volatilitaet (LUDP/LUDS/M/MWC* ab LULD-Start 2013-04-08). Werktage ohne Eintrag = 0, auch Börsenfeiertage. K3: öffentlich ohne Login/Schlüssel, Copyright-Vermerk wie bei nasdaq_regsho_schwellenliste_dichte; K4: Ereignisliste je Tag fest, Grundcode kann nachgeführt werden (darum gruppiert); Vollständigkeit des Archivs vor 2010 nicht unabhängig prüfbar (Mittel 3-4 Halts je Tag). verfuegbar_nach_tagen 0 (Echtzeit-Feed). Gleiche Folgewerte firmen 13.2%, volatilitaet 4.7%. Paarvorschlag für Reto: keiner.",
+    "reihen": [
+      {
+        "reihe": "firmen",
+        "status": "aktiv",
+        "zeilen": 5440,
+        "erste": "2006-01-03",
+        "letzte": "2026-11-09",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.1316,
+        "min": 0.0,
+        "max": 39.0
+      },
+      {
+        "reihe": "volatilitaet",
+        "status": "aktiv",
+        "zeilen": 3546,
+        "erste": "2013-04-08",
+        "letzte": "2026-11-09",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.0468,
+        "min": 0.0,
+        "max": 1475.0
+      }
+    ],
+    "aufgenommen_utc": "2026-11-11T00:28Z",
+    "geprueft_utc": "2026-11-11T00:28Z"
   }
 ]
