@@ -226,7 +226,7 @@
     "domain": "api.statistiken.bundesbank.de",
     "bereich": "Zinsen",
     "status": "aktiv",
-    "grund": "Alle Kriterien erfuellt. K1 taeglich (Bankarbeitstage, Median-Abstand je 1 Tag). K2 Historie bund10y ab 2001-10-01 (6344 Werte), bund2y ab 2014-01-02 (3227 Werte), beide vor 31.12.2015. K3 offen, Bundesbank SDMX-REST-API (api.statistiken.bundesbank.de) als CSV ohne Login/Schluessel abrufbar (Hinweis: alte Zeitreihen-Datenbank laut Bundesbank-Webseite zum 30.6.2026 abgekuendigt, die genutzte SDMX-REST-API unter api.statistiken.bundesbank.de/rest/data funktioniert jedoch weiterhin und lieferte aktuelle Daten bis 2026-09-23). K4 punktgenau: aus Marktkursen berechnete Tagesrendite des jeweils aktuellen Referenzpapiers, nicht revidierte Wirtschaftsstatistik. K5 laufend: letzter Wert je Reihe 2026-09-23 (1 Tag alt). K6 neu: kein deutscher/europaeischer Anleihezins im Spiegel vorhanden (T10Y2Y ist US-Kurve). K7 Umfang: unter 300 KB je Reihe, Abruf unter 3s. Pruefung bund2y: Min -1.02 / Max 3.34 Prozent, Anteil gleicher Folgewerte 23.6% (leicht ueber 20%-Schwelle, aber plausibel: negative/nahe-Null-Renditephase 2014-2021 mit auf 2 Dezimalstellen gerundeten Werten erzeugt haeufiger identische Nachbarwerte, kein Hinweis auf Fehlbefuellung). Pruefung bund10y: Min -0.83 / Max 5.28 Prozent, Anteil gleicher Folgewerte 10.9% (unauffaellig). Befund 2026-09-24T20:25:00Z: api.statistiken.bundesbank.de liefert jetzt HTTP 303 auf /.enodia/challenge?redirect=... (neu eingefuehrte Bot-Challenge/WAF), bisherige direkte CSV-Abfrage schlaegt daher fehl (im run_all.py-Log als HTTP 400 sichtbar, da urllib der 303-Weiterleitung auf die Challenge-Seite folgt und dort ein leerer/ungueltiger Body zurueckkommt). Kein Umgehungsversuch (keine Proxies, kein Wechsel der Kennung, kein Loesen der Challenge). Bleibt 'aktiv' (bestehende Daten unveraendert, kein K3/K4-Verstoss bekannt), Fehler wird im aktuellen manifest_neu.json vermerkt; naechster Lauf prueft erneut, ob der Abruf wieder moeglich ist. | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt).",
+    "grund": "Alle Kriterien erfuellt. K1 taeglich (Bankarbeitstage, Median-Abstand je 1 Tag). K2 Historie bund10y ab 2001-10-01 (6344 Werte), bund2y ab 2014-01-02 (3227 Werte), beide vor 31.12.2015. K3 offen, Bundesbank SDMX-REST-API (api.statistiken.bundesbank.de) als CSV ohne Login/Schluessel abrufbar (Hinweis: alte Zeitreihen-Datenbank laut Bundesbank-Webseite zum 30.6.2026 abgekuendigt, die genutzte SDMX-REST-API unter api.statistiken.bundesbank.de/rest/data funktioniert jedoch weiterhin und lieferte aktuelle Daten bis 2026-09-23). K4 punktgenau: aus Marktkursen berechnete Tagesrendite des jeweils aktuellen Referenzpapiers, nicht revidierte Wirtschaftsstatistik. K5 laufend: letzter Wert je Reihe 2026-09-23 (1 Tag alt). K6 neu: kein deutscher/europaeischer Anleihezins im Spiegel vorhanden (T10Y2Y ist US-Kurve). K7 Umfang: unter 300 KB je Reihe, Abruf unter 3s. Pruefung bund2y: Min -1.02 / Max 3.34 Prozent, Anteil gleicher Folgewerte 23.6% (leicht ueber 20%-Schwelle, aber plausibel: negative/nahe-Null-Renditephase 2014-2021 mit auf 2 Dezimalstellen gerundeten Werten erzeugt haeufiger identische Nachbarwerte, kein Hinweis auf Fehlbefuellung). Pruefung bund10y: Min -0.83 / Max 5.28 Prozent, Anteil gleicher Folgewerte 10.9% (unauffaellig). Befund 2026-09-24T20:25:00Z: api.statistiken.bundesbank.de liefert jetzt HTTP 303 auf /.enodia/challenge?redirect=... (neu eingefuehrte Bot-Challenge/WAF), bisherige direkte CSV-Abfrage schlaegt daher fehl (im run_all.py-Log als HTTP 400 sichtbar, da urllib der 303-Weiterleitung auf die Challenge-Seite folgt und dort ein leerer/ungueltiger Body zurueckkommt). Kein Umgehungsversuch (keine Proxies, kein Wechsel der Kennung, kein Loesen der Challenge). Bleibt 'aktiv' (bestehende Daten unveraendert, kein K3/K4-Verstoss bekannt), Fehler wird im aktuellen manifest_neu.json vermerkt; naechster Lauf prueft erneut, ob der Abruf wieder moeglich ist. | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "reihen": [
       "bund2y",
       "bund10y"
@@ -234,7 +234,7 @@
     "aufgenommen_utc": "2026-09-23T15:44:36Z",
     "geprueft_utc": "2026-09-24T20:25:00Z",
     "mechanismus": "Taegliche Renditen der aktuellen deutschen Bundesanleihen (2 und 10 Jahre) zeigen Verschiebungen der EUR-Zinserwartungen und der Risikoaversion in der Eurozone an; kurzfristige Bewegungen (insb. der Kurvenneigung 10J-2J) koennen auf Sicht von 1-20 Handelstagen auf US-Anleihen (TLT) und europaeische Sektor-/Laenderpositionen (EWG) gegenueber dem Weltindex wirken, analog zum bereits vorhandenen US-Pendant T10Y2Y, aber fuer den Euroraum.",
-    "prioritaet": "hoch"
+    "prioritaet": "tief"
   },
   {
     "id": "usgs_mississippi",
@@ -699,9 +699,9 @@
     "domain": "home.treasury.gov",
     "bereich": "Zinsen",
     "status": "aktiv",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Form und Niveau der taeglichen US-Par-Zinsstrukturkurve (kurz vs. lang, Steilheit einzelner Segmente) spiegeln Wachstums-/Inflationserwartungen und Risikoappetit; Verschiebungen einzelner Laufzeiten koennen zinssensitive Sektoren (XLRE, XLU, XLF) und Anleihen (TLT) gegenueber dem Weltindex auf Sicht von 1-20 Handelstagen bewegen, bevor sich das voll in Aktienkursen niederschlaegt.",
-    "grund": "K1 taeglich erfuellt (US-Bankarbeitstage, Median-Abstand 1 Tag je Laufzeit, vereinzelt 3 Tage ueber Wochenenden/Feiertage). K2 Historie erfuellt: kuerzeste aufgenommene Laufzeit (1 Mo) ab 2001-07-31, alle anderen ab 1990-01-02 bzw. 20-Jahres-Laufzeit ab 1993-10-01; alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche CSV-Ausgabe von home.treasury.gov ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur, keine Nutzungsbeschraenkung ersichtlich. K4 punktgenau: taegliche Marktzinsen (Constant Maturity Treasury, aus Sekundaermarktquotierungen abgeleitet), keine nachtraegliche Revision publizierter Tageswerte bekannt (wie bei DGS10/FRED-Pendant). K5 laufend: letzter Wert 2026-09-23 (1 Tag alt bei Abruf), taeglich fortgeschrieben. K6 neu: 10-Jahres-Laufzeit bewusst AUSGESCHLOSSEN (Dublette zu FRED DGS10, bereits im Indikatorraum U2); die verbleibenden 10 Laufzeiten (1 Monat, 3/6 Monate, 1/2/3/5/7/20/30 Jahre) sind nicht im Spiegel enthalten (T10Y2Y ist ein Spread, BAA10Y ein Corporate-Spread, keine direkten Treasury-Par-Renditen). Zwei kurzlebige Laufzeiten (1.5 Month seit 2022, 2 Mo seit 2018, 4 Mo seit 2022) automatisch per K2-Filter (<500 Werte oder erster Wert nach 2015-12-31) im Skript verworfen, nicht als eigene Reihen geschrieben. K7 Umfang: Abruf aller 37 Jahresdateien (1990-2026) parallelisiert (ThreadPoolExecutor, 12 Worker, nur Python-Standardbibliothek) in 73 s, alle Dateien einzeln weit unter 20 MB komprimiert. Pruefzahlen je Reihe: m1: 2001-07-31..2026-09-23, n=6289, medianAbstand=1.0, gleicheFolge=0.2715, min=0.0, max=6.02; m3: 1990-01-02..2026-09-23, n=9185, medianAbstand=1.0, gleicheFolge=0.252, min=0.0, max=8.26; m6: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.2381, min=0.02, max=8.49; y1: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1942, min=0.04, max=8.64; y2: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1575, min=0.09, max=9.05; y3: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1023, min=0.1, max=9.11; y5: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.0875, min=0.19, max=9.1; y7: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.0799, min=0.36, max=9.12; y20: 1993-10-01..2026-09-23, n=8249, medianAbstand=1.0, gleicheFolge=0.0829, min=0.87, max=8.3; y30: 1990-01-02..2026-09-23, n=8194, medianAbstand=1, gleicheFolge=0.086, min=0.99, max=9.18. Anteil gleicher Folgewerte je Laufzeit unauffaellig (max. ~11% bei y20/y30 durch ruhige Marktphasen), keine Reihe ueber der 20%-Verdachtsschwelle. Min/Max je Laufzeit plausibel im historischen Zinsband (0.01%-8.3%, je nach Laufzeit). | Zusatz 3 (24.9.2026): auf 3 verdichtete Reihen umgestellt. Aktiv: kurz (1 Mo). Ruhend, Grund Redundanz Zusatz 3: alle 10 Original-Laufzeiten (m1,m3,m6,y1,y2,y3,y5,y7,y20,y30) sowie niveau (10J) und steilheit (10J-2J), da DGS10 und T10Y2Y bereits im Spiegel main liegen (K6). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt).",
+    "grund": "K1 taeglich erfuellt (US-Bankarbeitstage, Median-Abstand 1 Tag je Laufzeit, vereinzelt 3 Tage ueber Wochenenden/Feiertage). K2 Historie erfuellt: kuerzeste aufgenommene Laufzeit (1 Mo) ab 2001-07-31, alle anderen ab 1990-01-02 bzw. 20-Jahres-Laufzeit ab 1993-10-01; alle deutlich vor 31.12.2015 mit weit ueber 500 Werten. K3 offen: oeffentliche CSV-Ausgabe von home.treasury.gov ohne Login/Schluessel, HTTP 200 aus dieser Infrastruktur, keine Nutzungsbeschraenkung ersichtlich. K4 punktgenau: taegliche Marktzinsen (Constant Maturity Treasury, aus Sekundaermarktquotierungen abgeleitet), keine nachtraegliche Revision publizierter Tageswerte bekannt (wie bei DGS10/FRED-Pendant). K5 laufend: letzter Wert 2026-09-23 (1 Tag alt bei Abruf), taeglich fortgeschrieben. K6 neu: 10-Jahres-Laufzeit bewusst AUSGESCHLOSSEN (Dublette zu FRED DGS10, bereits im Indikatorraum U2); die verbleibenden 10 Laufzeiten (1 Monat, 3/6 Monate, 1/2/3/5/7/20/30 Jahre) sind nicht im Spiegel enthalten (T10Y2Y ist ein Spread, BAA10Y ein Corporate-Spread, keine direkten Treasury-Par-Renditen). Zwei kurzlebige Laufzeiten (1.5 Month seit 2022, 2 Mo seit 2018, 4 Mo seit 2022) automatisch per K2-Filter (<500 Werte oder erster Wert nach 2015-12-31) im Skript verworfen, nicht als eigene Reihen geschrieben. K7 Umfang: Abruf aller 37 Jahresdateien (1990-2026) parallelisiert (ThreadPoolExecutor, 12 Worker, nur Python-Standardbibliothek) in 73 s, alle Dateien einzeln weit unter 20 MB komprimiert. Pruefzahlen je Reihe: m1: 2001-07-31..2026-09-23, n=6289, medianAbstand=1.0, gleicheFolge=0.2715, min=0.0, max=6.02; m3: 1990-01-02..2026-09-23, n=9185, medianAbstand=1.0, gleicheFolge=0.252, min=0.0, max=8.26; m6: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.2381, min=0.02, max=8.49; y1: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1942, min=0.04, max=8.64; y2: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1575, min=0.09, max=9.05; y3: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.1023, min=0.1, max=9.11; y5: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.0875, min=0.19, max=9.1; y7: 1990-01-02..2026-09-23, n=9188, medianAbstand=1, gleicheFolge=0.0799, min=0.36, max=9.12; y20: 1993-10-01..2026-09-23, n=8249, medianAbstand=1.0, gleicheFolge=0.0829, min=0.87, max=8.3; y30: 1990-01-02..2026-09-23, n=8194, medianAbstand=1, gleicheFolge=0.086, min=0.99, max=9.18. Anteil gleicher Folgewerte je Laufzeit unauffaellig (max. ~11% bei y20/y30 durch ruhige Marktphasen), keine Reihe ueber der 20%-Verdachtsschwelle. Min/Max je Laufzeit plausibel im historischen Zinsband (0.01%-8.3%, je nach Laufzeit). | Zusatz 3 (24.9.2026): auf 3 verdichtete Reihen umgestellt. Aktiv: kurz (1 Mo). Ruhend, Grund Redundanz Zusatz 3: alle 10 Original-Laufzeiten (m1,m3,m6,y1,y2,y3,y5,y7,y20,y30) sowie niveau (10J) und steilheit (10J-2J), da DGS10 und T10Y2Y bereits im Spiegel main liegen (K6). | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "reihen": [
       "m1",
       "m3",
@@ -1007,7 +1007,7 @@
     "bereich": "Zinsen",
     "status": "aktiv",
     "mechanismus": "Der kurzfristige risikofreie Zinssatz (3-Monats-T-Bill) reagiert unmittelbar auf Aenderungen der Fed-Politik und auf Funding-Stress; ein rascher Anstieg/Rueckgang kann kurzfristig (1-20 Handelstage) zinssensitive Sektoren (Finanzwerte XLF, Immobilien XLRE, Versorger XLU) gegenueber dem Weltindex bewegen, bevor sich die Wirkung vollstaendig in Kursen zeigt.",
-    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: explizit als Beispiel genannt (DTB3). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen). K2 Historie ab 1954-01-04 (18173 Werte), weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe der Federal Reserve Bank of St. Louis, kein Login/Schluessel, gleiches erprobtes Muster wie fred_effr/fred_usdjpy. K4 punktgenau: Sekundaermarkt-Diskontsaetze (H.15) werden nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-23, <10 Tage alt, Serie wird werktaeglich fortgeschrieben. K6 neu: DTB3 ist nicht im Spiegel (main hat DGS10/VIXCLS/etc., kein 3-Monats-Diskontsatz) und deckt gegenueber treasury_yield_curve:kurz (CMT-1-Monat, Start ca. 1990) zusaetzlich 1954-1990 ab, daher kein Ersatz sondern Ergaenzung; Zusatz-3-Redundanzgrenze (max. 3 Reihen je Quelle) nicht einschlaegig, da eigene Quelle mit einer Reihe. K7 Umfang: 18173 Zeilen, deutlich unter 1 MB komprimiert, Abruf unter 2 Sekunden. Pruefung: Zeilen 18173, erste 1954-01-04, letzte 2026-09-23, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1878 (unter der 20%-Verdachtsschwelle, erklaerbar durch laengere Phasen stabiler kurzfristiger Zinsen z.B. Nullzinsphasen), Min -0.05 (kurzzeitig negativer Diskontsatz 2015, dokumentiertes reales Ereignis) / Max 17.14 (Volcker-Ära 1981) plausibel. | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt).",
+    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: explizit als Beispiel genannt (DTB3). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen). K2 Historie ab 1954-01-04 (18173 Werte), weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe der Federal Reserve Bank of St. Louis, kein Login/Schluessel, gleiches erprobtes Muster wie fred_effr/fred_usdjpy. K4 punktgenau: Sekundaermarkt-Diskontsaetze (H.15) werden nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-23, <10 Tage alt, Serie wird werktaeglich fortgeschrieben. K6 neu: DTB3 ist nicht im Spiegel (main hat DGS10/VIXCLS/etc., kein 3-Monats-Diskontsatz) und deckt gegenueber treasury_yield_curve:kurz (CMT-1-Monat, Start ca. 1990) zusaetzlich 1954-1990 ab, daher kein Ersatz sondern Ergaenzung; Zusatz-3-Redundanzgrenze (max. 3 Reihen je Quelle) nicht einschlaegig, da eigene Quelle mit einer Reihe. K7 Umfang: 18173 Zeilen, deutlich unter 1 MB komprimiert, Abruf unter 2 Sekunden. Pruefung: Zeilen 18173, erste 1954-01-04, letzte 2026-09-23, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1878 (unter der 20%-Verdachtsschwelle, erklaerbar durch laengere Phasen stabiler kurzfristiger Zinsen z.B. Nullzinsphasen), Min -0.05 (kurzzeitig negativer Diskontsatz 2015, dokumentiertes reales Ereignis) / Max 17.14 (Volcker-Ära 1981) plausibel. | Zusatz 5 (25.9.2026): Publikationsregel geprueft, Feld publikation ('taeglich', mit Beleg) im Manifest ergaenzt; verfuegbar_nach_tagen unveraendert korrekt (keine Wochenbuendelung festgestellt). | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "reihen": [
       {
         "reihe": "dtb3",
@@ -1022,7 +1022,7 @@
     ],
     "aufgenommen_utc": "2026-09-25T08:14:00Z",
     "geprueft_utc": "2026-09-25T08:14:00Z",
-    "prioritaet": "normal"
+    "prioritaet": "tief"
   },
   {
     "id": "fred_fx_lang",
@@ -1300,9 +1300,9 @@
     "domain": "trends.google.com",
     "bereich": "Aufmerksamkeit",
     "status": "abgelehnt",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Sprunghaftes Google-Suchinteresse zu Rezessions-/Krisenbegriffen ist in der Literatur (Da, Engelberg, Gao 2011 'In Search of Attention') als Fruehindikator fuer Anlegeraufmerksamkeit und kurzfristige Kursbewegungen dokumentiert; misst eine andere Population (aktive Sucher) als die bereits vorhandenen Wikipedia-Aufrufzahlen (Leser).",
-    "grund": "Regel L3: publizierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Google Trends liefert offiziell nur relative, auf 100 normierte Wochenindexwerte bei Mehrjahresfenstern (taegliche Aufloesung nur in kurzen Fenstern, K1 ev. verletzt) und keine offizielle Daten-API ohne Anmeldung -- Machbarkeit (K1/K3) im naechsten Lauf konkret pruefen. | Geprueft 2026-09-26T00:14:54Z: Google Trends liefert bei Mehrjahresfenstern (hier: Historie seit spaetestens 2015 gefordert) nur woechentlich aggregierte, auf 100 normierte Indexwerte; taegliche Aufloesung ist offiziell nur fuer Zeitfenster bis 90 Tage verfuegbar (dokumentiertes Google-Trends-Verhalten). Damit K1 (Median-Abstand hoechstens 3 Kalendertage) fuer die volle Historie verletzt. Zusaetzlich keine offizielle schluesselfreie Daten-API (nur inoffizielles Scraping via pytrends, ausserhalb der Nutzungsbedingungen, K3). Abgelehnt.",
+    "grund": "Regel L3: publizierte Anomalie, im Bericht als vermutlich abgeschwaecht vermerken. Google Trends liefert offiziell nur relative, auf 100 normierte Wochenindexwerte bei Mehrjahresfenstern (taegliche Aufloesung nur in kurzen Fenstern, K1 ev. verletzt) und keine offizielle Daten-API ohne Anmeldung -- Machbarkeit (K1/K3) im naechsten Lauf konkret pruefen. | Geprueft 2026-09-26T00:14:54Z: Google Trends liefert bei Mehrjahresfenstern (hier: Historie seit spaetestens 2015 gefordert) nur woechentlich aggregierte, auf 100 normierte Indexwerte; taegliche Aufloesung ist offiziell nur fuer Zeitfenster bis 90 Tage verfuegbar (dokumentiertes Google-Trends-Verhalten). Damit K1 (Median-Abstand hoechstens 3 Kalendertage) fuer die volle Historie verletzt. Zusaetzlich keine offizielle schluesselfreie Daten-API (nur inoffizielles Scraping via pytrends, ausserhalb der Nutzungsbedingungen, K3). Abgelehnt. | L2 (Lernrunde 11.11.2026): Bereich Aufmerksamkeit mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "aufgenommen_utc": "2026-09-25T09:40:00Z",
     "geprueft_utc": "2026-09-26T00:14:54Z"
   },
@@ -1313,9 +1313,9 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Zinsen",
     "status": "aktiv",
-    "prioritaet": "hoch",
+    "prioritaet": "tief",
     "mechanismus": "Die Rendite-Differenz zwischen erstklassigen (Aaa) und niedrigeren Investment-Grade-Unternehmensanleihen (Baa) misst die vom Markt taeglich neu eingepreiste Kreditrisikoprаemie; eine rasche Ausweitung signalisiert Stress bei Finanzwerten und zyklischen Sektoren (XLF, XLI, XLY) und kann kurzfristig (1-20 Handelstage) deren Verhalten gegenueber dem Weltindex vorwegnehmen, analog zum bereits vorhandenen High-Yield-Spread BAMLH0A0HYM2 in main, hier jedoch mit Historie bis 1983 bzw. 1986 statt erst 1996/1997.",
-    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: DAAA/DBAA explizit als Beispiel genannt (neben DGS2/DGS3MO/DTB3/DEXUSUK/DEXCAUS/DEXUSAL/Gold). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen). K2 Historie: aaa ab 1983-01-03 (10978 Werte), baa ab 1986-01-02 (10219 Werte), beide weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe der Federal Reserve Bank of St. Louis, kein Login/Schluessel, gleiches erprobtes Muster wie fred_dtb3/fred_effr. K4 punktgenau: taegliche Marktrenditen (H.15/Moody's), nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-24 fuer beide Reihen, <10 Tage alt, wird werktaeglich fortgeschrieben. K6 neu: DAAA/DBAA sind nicht im Spiegel (main hat nur den abgeleiteten Spread BAMLH0A0HYM2 fuer Hochzins-/Investment-Grade-Optionsspread, nicht die zugrundeliegenden Aaa/Baa-Niveaus); kein Ersatz sondern Ergaenzung mit laengerer Historie. Zusatz-3-Redundanzgrenze (max. 3 Reihen je Quelle): 2 Reihen (aaa, baa), beide messen klar Verschiedenes (unterschiedliche Bonitaetsstufen), keine Verdichtung noetig. K7 Umfang: je Reihe unter 40 KB komprimiert, Abruf beider Reihen unter 2 Sekunden. Pruefung: aaa Zeilen 10978, erste 1983-01-03, letzte 2026-09-24, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1088, Min 2.01/Max 13.76 (Volcker-Aera 1981-82 Hochphase, danach Rueckgang) plausibel; baa Zeilen 10219, erste 1986-01-02, letzte 2026-09-24, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1025, Min 3.11/Max 12.04 plausibel. Publikationsregel (Zusatz 5) direkt geprueft: taeglicher Marktschlusswert, keine Wochenbuendelung, verfuegbar_nach_tagen 1 wie bei anderen taeglichen FRED-Marktreihen (fred_dtb3, fred_effr).",
+    "grund": "Zusatz 4 (25.9.2026), Prioritaet hoch, E11 Historie vor 1990: DAAA/DBAA explizit als Beispiel genannt (neben DGS2/DGS3MO/DTB3/DEXUSUK/DEXCAUS/DEXUSAL/Gold). K1 taeglich (Median-Abstand 1 Tag an US-Bankarbeitstagen). K2 Historie: aaa ab 1983-01-03 (10978 Werte), baa ab 1986-01-02 (10219 Werte), beide weit vor 31.12.2015 und vor 1990. K3 offen: oeffentliche fredgraph.csv-Ausgabe der Federal Reserve Bank of St. Louis, kein Login/Schluessel, gleiches erprobtes Muster wie fred_dtb3/fred_effr. K4 punktgenau: taegliche Marktrenditen (H.15/Moody's), nach Veroeffentlichung nicht revidiert. K5 laufend: letzter Wert 2026-09-24 fuer beide Reihen, <10 Tage alt, wird werktaeglich fortgeschrieben. K6 neu: DAAA/DBAA sind nicht im Spiegel (main hat nur den abgeleiteten Spread BAMLH0A0HYM2 fuer Hochzins-/Investment-Grade-Optionsspread, nicht die zugrundeliegenden Aaa/Baa-Niveaus); kein Ersatz sondern Ergaenzung mit laengerer Historie. Zusatz-3-Redundanzgrenze (max. 3 Reihen je Quelle): 2 Reihen (aaa, baa), beide messen klar Verschiedenes (unterschiedliche Bonitaetsstufen), keine Verdichtung noetig. K7 Umfang: je Reihe unter 40 KB komprimiert, Abruf beider Reihen unter 2 Sekunden. Pruefung: aaa Zeilen 10978, erste 1983-01-03, letzte 2026-09-24, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1088, Min 2.01/Max 13.76 (Volcker-Aera 1981-82 Hochphase, danach Rueckgang) plausibel; baa Zeilen 10219, erste 1986-01-02, letzte 2026-09-24, Median-Abstand 1 Tag, Anteil gleicher Folgewerte 0.1025, Min 3.11/Max 12.04 plausibel. Publikationsregel (Zusatz 5) direkt geprueft: taeglicher Marktschlusswert, keine Wochenbuendelung, verfuegbar_nach_tagen 1 wie bei anderen taeglichen FRED-Marktreihen (fred_dtb3, fred_effr). | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "reihen": [
       {
         "reihe": "aaa",
@@ -1584,9 +1584,9 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Zinsen",
     "status": "aktiv",
-    "prioritaet": "hoch",
+    "prioritaet": "tief",
     "mechanismus": "Kurzfristige Bewegungen am kurzen und mittleren Ende der US-Zinskurve (2 Jahre, 3 Monate) verschieben Finanzierungskosten und Diskontsatz und wirken dadurch kurzfristig auf Finanzwerte, Anleihen und zinssensitive Sektoren (XLF, XLRE, TLT) gegenueber dem Weltindex; Zusatz 4 nennt DGS2/DGS3MO explizit als fehlende lange FRED-Tagesreihen.",
-    "grund": "K1 taeglich (Handelstage, Fed H.15), K2 Historie DGS2 ab 1976-06-01 (12576 Werte), DGS3MO ab 1981-09-01 (11266 Werte) -- beide deutlich vor 1990 (Zusatz 4 Prioritaet hoch), K3 offen (fredgraph.csv, kein Schluessel/Login), K4 punktgenau (Marktzins, nicht revidiert), K5 laufend (letzter Wert 2026-09-24), K6 neu (main-Spiegel enthaelt nur DGS10/T10Y2Y/BAA10Y, nicht DGS2/DGS3MO selbst; ergaenzt zugleich treasury_yield_curve, deren home.treasury.gov-CMT-Reihe erst ab ca. 1990 beginnt und deren y2/m3-Reihen bereits wegen Zusatz 3 ruhend sind), K7 Umfang (2 Reihen, je < 1 MB, Abruf < 5 s). Reihen aktiv: dgs2, dgs3mo (beide neu, keine Redundanzreduktion noetig, da nur 2 Reihen je Quelle).",
+    "grund": "K1 taeglich (Handelstage, Fed H.15), K2 Historie DGS2 ab 1976-06-01 (12576 Werte), DGS3MO ab 1981-09-01 (11266 Werte) -- beide deutlich vor 1990 (Zusatz 4 Prioritaet hoch), K3 offen (fredgraph.csv, kein Schluessel/Login), K4 punktgenau (Marktzins, nicht revidiert), K5 laufend (letzter Wert 2026-09-24), K6 neu (main-Spiegel enthaelt nur DGS10/T10Y2Y/BAA10Y, nicht DGS2/DGS3MO selbst; ergaenzt zugleich treasury_yield_curve, deren home.treasury.gov-CMT-Reihe erst ab ca. 1990 beginnt und deren y2/m3-Reihen bereits wegen Zusatz 3 ruhend sind), K7 Umfang (2 Reihen, je < 1 MB, Abruf < 5 s). Reihen aktiv: dgs2, dgs3mo (beide neu, keine Redundanzreduktion noetig, da nur 2 Reihen je Quelle). | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "reihen": [
       "dgs2",
       "dgs3mo"
@@ -2969,9 +2969,9 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Zinsen",
     "status": "abgelehnt",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Straffere Finanzierungsbedingungen drücken Kreditvergabe und Bewertungen; Banken (XLF) und Hochzins-Anleihen reagieren verzögert gegenüber dem Weltindex.",
-    "grund": "K1: nur woechentliche Werte (Median-Abstand 7 Tage > 3). K4: NFCI wird rueckwirkend neu berechnet.",
+    "grund": "K1: nur woechentliche Werte (Median-Abstand 7 Tage > 3). K4: NFCI wird rueckwirkend neu berechnet. | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "geprueft_utc": "2026-10-03T16:17Z"
   },
   {
@@ -3445,9 +3445,9 @@
     "domain": "bundesbank.de",
     "bereich": "Zinsen",
     "status": "abgelehnt",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Ein Renditesprung bei Bunds verschiebt kurzfristig Kapital zwischen Euro-Aktien (EWG, XLF) und US-Anleihen (TLT, IEF) gegenueber dem Weltindex; ergaenzt die US- und Japan-Zinsreihen um die Eurozone.",
-    "grund": "Duplikat: Bundesbank-Rendite 10J ist schon als bundesbank_umlauf:bund10y aktiv (ab 2001); Zusatz 3 Redundanz.",
+    "grund": "Duplikat: Bundesbank-Rendite 10J ist schon als bundesbank_umlauf:bund10y aktiv (ab 2001); Zusatz 3 Redundanz. | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "aufgenommen_utc": "2026-10-14T09:00:00Z",
     "geprueft_utc": "2026-10-14T12:16:52Z"
   },
@@ -3684,9 +3684,9 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Zinsen",
     "status": "abgelehnt",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Ein steigender Risikoaufschlag auf Schwellenlandanleihen signalisiert Kapitalflucht und belastet EEM und Rohstoffe gegenueber dem Weltindex.",
-    "grund": "K2: FRED-Reihe BAMLEMCBPIOAS (ICE BofA) beginnt erst 2023-10-16 (Lizenzbegrenzung auf 3 Jahre), erster Wert nach 31.12.2015",
+    "grund": "K2: FRED-Reihe BAMLEMCBPIOAS (ICE BofA) beginnt erst 2023-10-16 (Lizenzbegrenzung auf 3 Jahre), erster Wert nach 31.12.2015 | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "aufgenommen_utc": "2026-10-16T09:00:00Z",
     "geprueft_utc": "2026-10-16T12:17Z"
   },
@@ -3736,9 +3736,9 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Zinsen",
     "status": "abgelehnt",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Ein Anstieg der Laufzeitpraemie verteuert langfristige Anleihen und belastet TLT und IEF sowie zinssensible Sektoren (XLRE, XLU) gegenueber dem Weltindex.",
-    "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login. | Geprueft 2026-10-18: Kim-Wright-Termpraemium ist modellgeschaetzt und wird revidiert (K4) -> nicht aufgenommen; Status abgelehnt.",
+    "grund": "Vorrat auf 15 aufgefuellt (Lernrunde 2026-10-18); neue Reihe fuer Kurzfrist-Effekte bei Anleihen und Sektoren, oeffentlich ohne Login. | Geprueft 2026-10-18: Kim-Wright-Termpraemium ist modellgeschaetzt und wird revidiert (K4) -> nicht aufgenommen; Status abgelehnt. | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "aufgenommen_utc": "2026-10-18T09:37Z",
     "geprueft_utc": "2026-10-18T12:00:00Z"
   },
@@ -3749,9 +3749,9 @@
     "domain": "fred.stlouisfed.org",
     "bereich": "Zinsen",
     "status": "abgelehnt",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Steigende langfristige Inflationserwartungen stuetzen inflationsgeschuetzte Anleihen (TIP) und Rohstoffsektoren (XLB, XLE) gegenueber Nominalanleihen und dem Weltindex.",
-    "grund": "Duplikat: bereits aktiv als fred_inflationserwartung_5y5y (FRED T5YIFR, ab 2003-01-02, Test 2026-10-18).",
+    "grund": "Duplikat: bereits aktiv als fred_inflationserwartung_5y5y (FRED T5YIFR, ab 2003-01-02, Test 2026-10-18). | L2 (Lernrunde 11.11.2026): Bereich Zinsen mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "aufgenommen_utc": "2026-10-18T09:37Z",
     "geprueft_utc": "2026-10-18T20:15Z"
   },
@@ -4712,9 +4712,9 @@
     "domain": "theocc.com",
     "bereich": "Aufmerksamkeit",
     "status": "aktiv",
-    "prioritaet": "normal",
+    "prioritaet": "tief",
     "mechanismus": "Das Verhältnis von Aktien- zu Indexoptionsvolumen zeigt Spekulation versus Absicherung und könnte kurzfristig Risikobereitschaft und Marktstress gegenüber dem Weltindex anzeigen.",
-    "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Aufmerksamkeit/Spekulation; Kontrast zu cboe_put_call_ratio_taeglich. | Test 2026-11-06T16Z: theocc.com Historienseite HTTP 403 von dieser Umgebung; marktdata.theocc.com liefert leere Antwort (0 Byte); Sperre nicht umgangen, nächster Lauf erneut. | 2026-11-08T04:07Z: Aufgenommen. marketdata.theocc.com liefert Monatsdateien (HTTP 200, vorher leer/403). Zeilen 4743 je Reihe, erste 2008-01-02 (davor \"Report is not available\"), letzte 2026-11-06, Median-Abstand 1 Tag, gleiche Folgewerte 0.02%, Min/Max plausibel. Börsenschliessungen (0 Kontrakte: 2012-10-29/30, 2018-12-05, 2025-01-09) weggelassen. verfuegbar_nach_tagen 1. Nur 2 Varianten (equity, index_sonstige).",
+    "grund": "Vorrat «kandidat» von 12 auf 15 aufgefüllt (Lernrunde 06.11.2026); kein Doppel; nur öffentliche Quelle ohne Login; nicht EDGAR (403 in dieser Umgebung). Aufmerksamkeit/Spekulation; Kontrast zu cboe_put_call_ratio_taeglich. | Test 2026-11-06T16Z: theocc.com Historienseite HTTP 403 von dieser Umgebung; marktdata.theocc.com liefert leere Antwort (0 Byte); Sperre nicht umgangen, nächster Lauf erneut. | 2026-11-08T04:07Z: Aufgenommen. marketdata.theocc.com liefert Monatsdateien (HTTP 200, vorher leer/403). Zeilen 4743 je Reihe, erste 2008-01-02 (davor \"Report is not available\"), letzte 2026-11-06, Median-Abstand 1 Tag, gleiche Folgewerte 0.02%, Min/Max plausibel. Börsenschliessungen (0 Kontrakte: 2012-10-29/30, 2018-12-05, 2025-01-09) weggelassen. verfuegbar_nach_tagen 1. Nur 2 Varianten (equity, index_sonstige). | L2 (Lernrunde 11.11.2026): Bereich Aufmerksamkeit mit über 5000 Kandidaten in S0064 und keinem t über 3.5; Priorität tief, nicht gelöscht.",
     "geprueft_utc": "2026-11-08T04:07Z",
     "reihen": [
       "equity",
@@ -4934,5 +4934,113 @@
     "aufgenommen_utc": "2026-11-11T08:17Z",
     "geprueft_utc": "2026-11-11T08:17Z",
     "grund": "Eigene Recherche 2026-11-11T08:17Z (Zusatz 6 Punkt 5, Firmenereignisse). K1 ok (Tageszaehlung, Median 1 Tag, 0 an Tagen ohne Bekanntgabe). K2 ok (ab 1997-01-01, 10907 Zeilen; davor fehlen die URL-Daten der Pressemitteilungen weitgehend, darum nicht frueher; nicht fuer Familie Langzeit). K3 ok (oeffentliche CSV ohne Login/Schluessel, US-Bundesbehoerde, gemeinfrei). K4: Datum = Datum der Pressemitteilung aus der verlinkten URL, nicht Effective Date (liegt median 2 Tage, 90%-Quantil 12 Tage vorher); 612 von 2898 Eintraegen weggelassen (528 ohne URL, v.a. 1989-1998; 53 mit URL mehr als 60 Tage vom Wirksamkeitsdatum = Link auf spaetere Aufhebung, Bekanntgabetag unbelegt; Rest vor 1997). Liste kann nachtraeglich ergaenzt werden; Ereignisse werden nur mit belegtem Bekanntgabedatum gezaehlt, nie rueckdatiert. K5 ok (Liste laufend, letzte Bekanntgabe 2026-10-08, Reihe bis heute). K6 neu (fedregister_bankaufsicht zaehlt Federal-Register-Regeln, nicht Einzelmassnahmen; fdic_bankausfaelle zaehlt Schliessungen). K7 ok (0.5 MB, unter 1 s). Gleiche Folgewerte 87%/89% (typisch fuer seltene Ereignisse, wie fdic_bankausfaelle), Min 0, Max 12/19 plausibel (2009-2011 Krisenwellen). publikation taeglich, verfuegbar_nach_tagen 0. Zusatz 3: zwei Reihen, verschiedene Adressaten (Institutionen vs. Personen). Paarvorschlag fuer Reto: keiner. Zusatznotiz: OCC-Massnahmensuche apps.occ.gov/EASearch leitet derzeit auf occ.treas.gov um (nicht weiter geprueft)."
+  },
+  {
+    "id": "texas_warn_entlassungsmeldungen_dichte",
+    "name": "Texas Workforce Commission: WARN-Entlassungsmeldungen je Eingangstag",
+    "url": "https://data.texas.gov/resource/8w4r-7h9n.json",
+    "domain": "data.texas.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Häufen sich angekündigte Massenentlassungen grosser Arbeitgeber, signalisiert das Ertragsdruck in Industrie und Handel (XLI, XLY) vor den amtlichen Arbeitsmarktzahlen; WARN-Meldungen laufen den Erstanträgen voraus (Krolikowski und Lunsford 2020, Cleveland Fed).",
+    "grund": "Unabhängige Replikation von ca_warn_entlassungsmeldungen_dichte mit zweitem Bundesstaat. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "occ_enforcement_massnahmen",
+    "name": "OCC: Aufsichtsmassnahmen gegen nationale Banken je Bekanntgabetag",
+    "url": "https://apps.occ.gov/EASearch/",
+    "domain": "apps.occ.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Monatlich veröffentlichte OCC-Massnahmen (Cease-and-Desist, Bussen) gegen Banken sind kursrelevant für Finanzwerte (XLF) gegenüber dem Weltindex; Strafen wegen Fehlverhalten führen zu deutlichen Abschlägen (Karpoff, Lee und Martin 2008).",
+    "grund": "Unabhängige Aufsichtsbehörde neben fed_enforcement_massnahmen. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "fdic_enforcement_entscheide",
+    "name": "FDIC: Enforcement Decisions and Orders je Veröffentlichungstag",
+    "url": "https://orders.fdic.gov/s/searchform",
+    "domain": "orders.fdic.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Massnahmen gegen kleinere und regionale Banken zeigen Kredit- und Kontrollprobleme im Bankensektor; ihre Häufung kann Finanzwerte (XLF) kurzfristig belasten.",
+    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "osha_todesfaelle_meldungen",
+    "name": "OSHA: Meldungen tödlicher Arbeitsunfälle und schwerer Verletzungen je Tag",
+    "url": "https://www.osha.gov/severeinjury",
+    "domain": "www.osha.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "epa_echo_vollzugsfaelle",
+    "name": "EPA ECHO: abgeschlossene Vollzugsfälle (Civil Cases, Settlements) je Datum",
+    "url": "https://echo.epa.gov/tools/data-downloads",
+    "domain": "echo.epa.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Umwelt-Vergleiche und Bussen treffen vor allem Energie-, Chemie- und Versorgerfirmen; Häufungen können XLE, XLB und XLU gegenüber dem Weltindex kurzfristig belasten.",
+    "grund": "Vollzugsfälle statt Regeln (unterscheidet sich von fedregister_epa_regeln). Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "phmsa_pipeline_vorfaelle",
+    "name": "PHMSA: gemeldete Pipeline-Vorfälle (Öl und Gas) je Vorfalltag",
+    "url": "https://www.phmsa.dot.gov/data-and-statistics/pipeline/distribution-transmission-gathering-lng-and-liquid-accident-and-incident-data",
+    "domain": "www.phmsa.dot.gov",
+    "bereich": "Rohstoffe und Logistik",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "fra_bahnunfaelle_taeglich",
+    "name": "FRA: Bahnunfälle und Entgleisungen (Form 54) je Unfalltag",
+    "url": "https://safetydata.fra.dot.gov/OfficeofSafety/publicsite/on_the_fly_download.aspx",
+    "domain": "safetydata.fra.dot.gov",
+    "bereich": "Rohstoffe und Logistik",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Entgleisungen mit Gefahrgut oder auf Hauptstrecken unterbrechen Güterverkehr und lösen Haftungsrisiken aus; relevant für Industrie (XLI) und Agrar-/Rohstofftransport (DBA).",
+    "grund": "Unfalldaten statt Regeln (unterscheidet sich von fedregister_fra_bahn); Historie ab 1975, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "nhtsa_odi_untersuchungen",
+    "name": "NHTSA ODI: eröffnete Defekt-Untersuchungen je Eröffnungstag",
+    "url": "https://static.nhtsa.gov/odi/ffdd/inv/FLAT_INV.zip",
+    "domain": "static.nhtsa.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "hoch",
+    "mechanismus": "Eröffnete Untersuchungen gehen Rückrufen voraus und treffen Autohersteller und Zulieferer; Rückrufe und Untersuchungen führen zu negativen Überrenditen (Jarrell und Peltzman 1985), relevant für XLY gegenüber dem Weltindex.",
+    "grund": "Vorstufe zu nhtsa_ruckrufe, eigener Zeitpunkt und eigene Datei; Flat File ohne Login, Historie ab 1970er. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+  },
+  {
+    "id": "spc_tornado_historie_1950",
+    "name": "NOAA SPC: Tornado-Datenbank ab 1950 je Ereignistag",
+    "url": "https://www.spc.noaa.gov/wcm/data/1950-2023_actual_tornadoes.csv",
+    "domain": "www.spc.noaa.gov",
+    "bereich": "Natur",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Tornado-Ausbrüche verursachen hohe versicherte Schäden und Netzausfälle; kurzfristig relevant für Versicherer und Finanzwerte (XLF, Familie L ff_money) und Versorger (XLU, ff_utils).",
+    "grund": "Historie vor 1990 (zweite Priorität, Zusatz 6 des Scouts); eine CSV-Datei ohne Login, nutzbar für Familie L bis 2000. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z"
   }
 ]
