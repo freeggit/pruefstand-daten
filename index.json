@@ -1,5 +1,5 @@
 {
- "kumuliert": 710275,
+ "kumuliert": 714902,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -338,6 +338,16 @@
   "neu_cpsc_ruckrufe_ruckrufe_d5",
   "neu_cpsc_ruckrufe_ruckrufe_stand",
   "neu_cpsc_ruckrufe_ruckrufe_z252",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d1",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d20",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d5",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_stand",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_z252",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_girokonten_d1",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_girokonten_d20",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_girokonten_d5",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_girokonten_stand",
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_girokonten_z252",
   "neu_ecb_fx_eurchf_d1",
   "neu_ecb_fx_eurchf_d20",
   "neu_ecb_fx_eurchf_d5",
@@ -689,6 +699,11 @@
   "neu_msha_bergbauunfaelle_gesamt_d5",
   "neu_msha_bergbauunfaelle_gesamt_stand",
   "neu_msha_bergbauunfaelle_gesamt_z252",
+  "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d1",
+  "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d20",
+  "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d5",
+  "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_stand",
+  "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_z252",
   "neu_nhtsa_ruckrufe_anzahl_d1",
   "neu_nhtsa_ruckrufe_anzahl_d20",
   "neu_nhtsa_ruckrufe_anzahl_d5",
@@ -1721,11 +1736,17 @@
    "datei": "suche/S0063.json",
    "kandidaten": 371682,
    "in_db": false
+  },
+  {
+   "nr": 64,
+   "datei": "suche/S0064.json",
+   "kandidaten": 376309,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-09T15:40Z",
+ "letzter_suchlauf_utc": "2026-11-11T01:26Z",
  "pruefung_lernrunde_utc": "2026-11-10T09:40:00Z",
- "letzter_code_hash": "2d79c8b050a7c3ee",
+ "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
  "vorreg": [
   {
@@ -2127,11 +2148,19 @@
    "lauf_id": "L20261110T130646Z",
    "gesamt": "keine Neuberechnung",
    "importierbar": false
+  },
+  {
+   "datei": "suche/laeufe/L20261110T225026Z.json",
+   "lauf_id": "L20261110T225026Z",
+   "s_dokument": "suche/S0064.json",
+   "ergebnis_hash": "03cd4525be7ad58b",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-09T15:40Z",
- "letztes_vollarchiv": "suche/S0063_alle.csv.gz",
- "letzter_ergebnis_hash": "b4cd84be56a518c7",
+ "letzter_lauf_utc": "2026-11-11T01:26Z",
+ "letztes_vollarchiv": "suche/S0064_alle.csv.gz",
+ "letzter_ergebnis_hash": "03cd4525be7ad58b",
  "konflikte": [
   {
    "wo": "index",
@@ -4366,15 +4395,15 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 310,
+  "grundreihen_n": 313,
   "neu_in_diesem_lauf": 3
  },
- "letztes_vollarchiv_ergebnis_hash": "b4cd84be56a518c7",
+ "letztes_vollarchiv_ergebnis_hash": "03cd4525be7ad58b",
  "pruefungen_bestanden": {
-  "pruef_hash": "ce1b5646fd681a05",
-  "lauf_id": "L20261109T133737Z",
-  "zeit_utc": "2026-11-09T16:11:43Z",
-  "eingabe_hash": "c650dda8e1cfe31d",
+  "pruef_hash": "5f7cfaa3386d98eb",
+  "lauf_id": "L20261110T225026Z",
+  "zeit_utc": "2026-11-11T02:04:42Z",
+  "eingabe_hash": "7d243b0c71cdc482",
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
@@ -4387,7 +4416,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "5de048a3de9d6abc",
- "letzter_gueltiger_lauf": "L20261109T133737Z",
- "letzter_entscheidung_hash": "9438fcef3a34aa39"
+ "letzter_eingabe_hash": "0fbcf3c23c99dea6",
+ "letzter_gueltiger_lauf": "L20261110T225026Z",
+ "letzter_entscheidung_hash": "13b196045365150f"
 }

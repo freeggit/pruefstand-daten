@@ -247,6 +247,18 @@
    "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
    "beleg": "suche/S0013_alle.csv.gz"
   },
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261110T225026Z",
+   "erst_zeit": "2026-11-11T01:26Z",
+   "beleg": "suche/laeufe/L20261110T225026Z.json"
+  },
+  "neu_ecb_einlagefazilitaet_nutzung_taeglich_girokonten": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261110T225026Z",
+   "erst_zeit": "2026-11-11T01:26Z",
+   "beleg": "suche/laeufe/L20261110T225026Z.json"
+  },
   "neu_ecb_fx_eurchf": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -738,6 +750,12 @@
    "erst_lauf": null,
    "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
    "beleg": "suche/S0014_alle.csv.gz"
+  },
+  "neu_nasdaq_regsho_schwellenliste_dichte_anzahl": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261110T225026Z",
+   "erst_zeit": "2026-11-11T01:26Z",
+   "beleg": "suche/laeufe/L20261110T225026Z.json"
   },
   "neu_nhtsa_ruckrufe_anzahl": {
    "erst_dokument": "S0014",
@@ -1868,8 +1886,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261109T133737Z",
-  "zeit_utc": "2026-11-09T15:40Z",
-  "grundreihen_n": 310
+  "lauf_id": "L20261110T225026Z",
+  "zeit_utc": "2026-11-11T01:26Z",
+  "grundreihen_n": 313
  }
 }

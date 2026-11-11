@@ -4586,9 +4586,37 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-10T13:07:15Z",
+ "stand_utc": "2026-11-10T22:51:03Z",
  "dateien_n": 506,
  "vorgemerkt": {
+  "n__neu__ecb_einlagefazilitaet_nutzung_taeglich__einlagefazilitaet.csv.gz": {
+   "erstmals_utc": "2026-11-10T22:50:51Z",
+   "beste_werte": 5738,
+   "frueheste_erste": "1998-12-31",
+   "sichtungen": [
+    {
+     "utc": "2026-11-10T22:50:51Z",
+     "lauf_id": "L20261110T225026Z",
+     "werte": 5738,
+     "erste": "1998-12-31",
+     "sha_inhalt": "2a255e9f350e9b63402f3a3e40900e35003efc11b7a4f661eb8e16a5f2715409"
+    }
+   ]
+  },
+  "n__neu__ecb_einlagefazilitaet_nutzung_taeglich__girokonten.csv.gz": {
+   "erstmals_utc": "2026-11-10T22:50:51Z",
+   "beste_werte": 5738,
+   "frueheste_erste": "1998-12-31",
+   "sichtungen": [
+    {
+     "utc": "2026-11-10T22:50:51Z",
+     "lauf_id": "L20261110T225026Z",
+     "werte": 5738,
+     "erste": "1998-12-31",
+     "sha_inhalt": "325053bc636c1df6356d87014e3017edf6b190c3f8902e54044a941a3b2fffcd"
+    }
+   ]
+  },
   "n__neu__fred_aktienvol_vxn_rvx_vxd__rvx.csv.gz": {
    "erstmals_utc": "2026-11-09T13:38:00Z",
    "beste_werte": 4278,
@@ -4649,6 +4677,20 @@
      "werte": 5009,
      "erste": "2001-02-02",
      "sha_inhalt": "4170ce8b23d86d19eff85b6f082f6e0dc2ab833d761c68db704148231fd4408a"
+    }
+   ]
+  },
+  "n__neu__nasdaq_regsho_schwellenliste_dichte__anzahl.csv.gz": {
+   "erstmals_utc": "2026-11-10T22:50:56Z",
+   "beste_werte": 3777,
+   "frueheste_erste": "2006-01-03",
+   "sichtungen": [
+    {
+     "utc": "2026-11-10T22:50:56Z",
+     "lauf_id": "L20261110T225026Z",
+     "werte": 3777,
+     "erste": "2006-01-03",
+     "sha_inhalt": "53aab17973225834292eedaaa240adcc511c8d6b6cca5a2bb9bf7571135ae7c8"
     }
    ]
   }
