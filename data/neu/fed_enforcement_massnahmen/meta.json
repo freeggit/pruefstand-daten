@@ -1,0 +1,20 @@
+{
+  "institutionen": {
+    "beschreibung": "Fed-Aufsichtsmassnahmen gegen Banken und Bankholdings (Written Agreement, Cease and Desist, Civil Money Penalty, PCA u.a.) je Bekanntgabetag",
+    "einheit": "Anzahl Massnahmen",
+    "publikation": "taeglich (jede Massnahme wird mit einer datierten Pressemitteilung auf federalreserve.gov bekanntgegeben, Datum steht in der URL; Quelle: federalreserve.gov/supervisionreg/enforcementactions.htm)",
+    "quelle_url": "https://www.federalreserve.gov/supervisionreg/files/enforcementactions.csv",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Listeneintraege je Datum der Pressemitteilung (aus URL); Kalendertage ohne Eintrag = 0; Eintraege ohne belegtes Bekanntgabedatum weggelassen",
+    "verfuegbar_nach_tagen": 0
+  },
+  "personen": {
+    "beschreibung": "Fed-Aufsichtsmassnahmen gegen Einzelpersonen (Prohibition, Section 19 Letter u.a.) je Bekanntgabetag",
+    "einheit": "Anzahl Massnahmen",
+    "publikation": "taeglich (jede Massnahme wird mit einer datierten Pressemitteilung auf federalreserve.gov bekanntgegeben, Datum steht in der URL; Quelle: federalreserve.gov/supervisionreg/enforcementactions.htm)",
+    "quelle_url": "https://www.federalreserve.gov/supervisionreg/files/enforcementactions.csv",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Listeneintraege je Datum der Pressemitteilung (aus URL); Kalendertage ohne Eintrag = 0; Eintraege ohne belegtes Bekanntgabedatum weggelassen",
+    "verfuegbar_nach_tagen": 0
+  }
+}

@@ -4897,5 +4897,42 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-11T04:19Z",
     "geprueft_utc": "2026-11-11T04:19Z"
+  },
+  {
+    "id": "fed_enforcement_massnahmen",
+    "name": "Federal Reserve Board: Aufsichtsmassnahmen (Enforcement Actions) je Bekanntgabetag",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/enforcementactions.csv",
+    "domain": "www.federalreserve.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Haeufen sich Fed-Massnahmen gegen Banken (Written Agreements, Cease-and-Desist, Strafzahlungen), signalisiert das steigenden Aufsichtsdruck und Problemfaelle im Bankensektor, was kurzfristig (1 bis 20 Handelstage) Finanzwerte (XLF) gegenueber dem Weltindex belasten kann; Massnahmen gegen Grossbanken sind zudem kursrelevante Einzelmeldungen.",
+    "reihen": [
+      {
+        "reihe": "institutionen",
+        "zeilen": 10907,
+        "erste": "1997-01-01",
+        "letzte": "2026-11-11",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.869,
+        "min": 0.0,
+        "max": 12.0,
+        "status": "aktiv"
+      },
+      {
+        "reihe": "personen",
+        "zeilen": 10907,
+        "erste": "1997-01-01",
+        "letzte": "2026-11-11",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.887,
+        "min": 0.0,
+        "max": 19.0,
+        "status": "aktiv"
+      }
+    ],
+    "aufgenommen_utc": "2026-11-11T08:17Z",
+    "geprueft_utc": "2026-11-11T08:17Z",
+    "grund": "Eigene Recherche 2026-11-11T08:17Z (Zusatz 6 Punkt 5, Firmenereignisse). K1 ok (Tageszaehlung, Median 1 Tag, 0 an Tagen ohne Bekanntgabe). K2 ok (ab 1997-01-01, 10907 Zeilen; davor fehlen die URL-Daten der Pressemitteilungen weitgehend, darum nicht frueher; nicht fuer Familie Langzeit). K3 ok (oeffentliche CSV ohne Login/Schluessel, US-Bundesbehoerde, gemeinfrei). K4: Datum = Datum der Pressemitteilung aus der verlinkten URL, nicht Effective Date (liegt median 2 Tage, 90%-Quantil 12 Tage vorher); 612 von 2898 Eintraegen weggelassen (528 ohne URL, v.a. 1989-1998; 53 mit URL mehr als 60 Tage vom Wirksamkeitsdatum = Link auf spaetere Aufhebung, Bekanntgabetag unbelegt; Rest vor 1997). Liste kann nachtraeglich ergaenzt werden; Ereignisse werden nur mit belegtem Bekanntgabedatum gezaehlt, nie rueckdatiert. K5 ok (Liste laufend, letzte Bekanntgabe 2026-10-08, Reihe bis heute). K6 neu (fedregister_bankaufsicht zaehlt Federal-Register-Regeln, nicht Einzelmassnahmen; fdic_bankausfaelle zaehlt Schliessungen). K7 ok (0.5 MB, unter 1 s). Gleiche Folgewerte 87%/89% (typisch fuer seltene Ereignisse, wie fdic_bankausfaelle), Min 0, Max 12/19 plausibel (2009-2011 Krisenwellen). publikation taeglich, verfuegbar_nach_tagen 0. Zusatz 3: zwei Reihen, verschiedene Adressaten (Institutionen vs. Personen). Paarvorschlag fuer Reto: keiner. Zusatznotiz: OCC-Massnahmensuche apps.occ.gov/EASearch leitet derzeit auf occ.treas.gov um (nicht weiter geprueft)."
   }
 ]
