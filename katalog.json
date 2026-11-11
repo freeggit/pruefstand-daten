@@ -3373,15 +3373,18 @@
   {
     "id": "ecb_ratssitzungen_termine",
     "name": "EZB-Ratssitzungstage und Pressekonferenzen",
-    "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+    "url": "https://www.ecb.europa.eu/press/govcdec/mopo/<JAHR>/html/index_include.en.html",
     "domain": "www.ecb.europa.eu",
     "bereich": "Kalender",
-    "status": "fehler",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Zinsentscheide und Pressekonferenzen der EZB bewegen Euro-Anleihen und Euro-Laenderaktien (Deutschland, Frankreich) kurzfristig gegenueber dem Weltindex.",
-    "grund": "Test 2026-10-09T12:50Z: Kalenderseite der EZB ist skriptgesteuert ohne Daten, Jahresseiten /press/govcdec/mopo/<J>/ leiten auf eine Gesamtseite um (404/301); keine maschinenlesbare Terminhistorie ab 1999 gefunden. Naechster Lauf: Pressemitteilungs-Archiv pr/date pruefen. | Amtlicher Kalender ab 1999, deterministisch; ergaenzt leitzins_aenderungstage um alle Sitzungstage, auch ohne Zinsaenderung.",
+    "grund": "Lauf 2026-11-11T04:19Z: Jahreslisten index_include.en.html (Unterstrich) maschinenlesbar gefunden, 1999-2026 je HTTP 200. Ereignistag = isoDate der Pressemitteilung 'Monetary policy decisions'/'Combined monetary policy decisions and statement' (Tag der Bekanntgabe). Ausserordentliche Beschluesse 2001-09-17 und 2008-10-08 ausgeschlossen (Zusatz 5, nur im Voraus terminierte Sitzungen); Jan/Feb 1999 fehlen in der EZB-Liste, nicht ergaenzt. Pruefung: 10115 Zeilen, erste 1999-03-04, letzte 2026-11-11, Median-Abstand 1 Tag, 318 Ereignistage (1999: 20, 2000/2001: 24, 2002-2014: 12, ab 2015: 8), Anteil gleicher Folgewerte 93.7% (bei 0/1-Ereignisreihe erwartet), Min 0 Max 1. K1-K7 erfuellt, K6: leitzins_aenderungstage:ezb erfasst nur Aenderungstage, hier alle Sitzungen. verfuegbar_nach_tagen 0, publikation taeglich (Termine im Voraus im EZB-Kalender). Vorschlag Paar fuer Reto: keiner. | Test 2026-10-09T12:50Z: Kalenderseite der EZB ist skriptgesteuert ohne Daten, Jahresseiten /press/govcdec/mopo/<J>/ leiten auf eine Gesamtseite um (404/301); keine maschinenlesbare Terminhistorie ab 1999 gefunden. Naechster Lauf: Pressemitteilungs-Archiv pr/date pruefen. | Amtlicher Kalender ab 1999, deterministisch; ergaenzt leitzins_aenderungstage um alle Sitzungstage, auch ohne Zinsaenderung.",
     "ergaenzt_utc": "2026-10-09T10:00Z",
-    "geprueft_utc": "2026-10-09T12:50Z"
+    "geprueft_utc": "2026-11-11T04:19Z",
+    "reihen": [
+      "sitzung"
+    ]
   },
   {
     "id": "sec_8k_delisting_item301",
@@ -4880,5 +4883,19 @@
     ],
     "aufgenommen_utc": "2026-11-11T00:28Z",
     "geprueft_utc": "2026-11-11T00:28Z"
+  },
+  {
+    "id": "doj_pressemitteilungen_dichte",
+    "name": "US-Justizministerium: Pressemitteilungen je Tag (z.B. Antitrust Division)",
+    "url": "https://www.justice.gov/api/v1/press_releases.json",
+    "domain": "www.justice.gov",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Kartell-, Betrugs- und Korruptionsverfahren gegen Unternehmen (Antitrust Division, FCPA) koennen kurzfristig betroffene Sektoren gegenueber dem Weltindex belasten.",
+    "grund": "K7 verletzt: Test 2026-11-11T04:19Z: API oeffentlich ohne Schluessel (HTTP 200), aber 275865 Pressemitteilungen insgesamt; Filter nach component/topic (parameters[component], parameters[topic]) greifen nicht (Gesamtzahl bleibt gleich). Tageszaehlung je Abteilung waere nur ueber Vollabruf aller Seiten (tausende Anfragen mit Volltext) moeglich, weit ueber 3 Minuten. Ausserdem bereits fedregister_doj_vergleiche aktiv. Eigene Recherche, Zusatz 6 Punkt 5.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-11T04:19Z",
+    "geprueft_utc": "2026-11-11T04:19Z"
   }
 ]

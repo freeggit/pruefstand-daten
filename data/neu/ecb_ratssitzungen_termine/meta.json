@@ -1,0 +1,12 @@
+{
+ "sitzung": {
+  "beschreibung": "1 am Tag einer planmaessigen geldpolitischen EZB-Ratssitzung (Tag der Pressemitteilung 'Monetary policy decisions', auch ohne Zinsaenderung), sonst 0, je Kalendertag ab 1999-03-04. Ausserordentliche Beschluesse (2001-09-17, 2008-10-08) ausgeschlossen; Sitzungen Jan/Feb 1999 fehlen in der EZB-Liste. Bis Okt. 2001 zwei Zinssitzungen je Monat, danach monatlich, ab 2015 sechswoechentlich.",
+  "einheit": "Indikator (0/1)",
+  "publikation": "taeglich (Sitzungstermine veroeffentlicht die EZB im Voraus im Sitzungskalender; Beschluss wird am Sitzungstag 13:45/14:15 MEZ bekanntgegeben)",
+  "quelle_url": "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html",
+  "revidiert": false,
+  "status": "aktiv",
+  "verdichtung": "keine (Ereignistage aus amtlicher EZB-Liste der geldpolitischen Beschluesse)",
+  "verfuegbar_nach_tagen": 0
+ }
+}
