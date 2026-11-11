@@ -1,0 +1,11 @@
+{
+  "untersuchungen": {
+    "beschreibung": "Taegliche Anzahl neu eroeffneter NHTSA-ODI-Defektuntersuchungen (PE, EA, RQ, AQ u.a., ohne Defekt-Petitionen DP), je Aktionsnummer einmal am Eroeffnungsdatum ODATE gezaehlt; 0 an Tagen ohne Eroeffnung; ab 1996.",
+    "einheit": "Anzahl eroeffneter Untersuchungen",
+    "publikation": "woechentlich: die ODI veroeffentlicht Eroeffnungsberichte (Opening Resume) auf nhtsa.gov gesammelt, Eroeffnungstage haeufen sich auf Freitage (z.B. 2026-10-09, -10-23, -10-30, -11-06) und standen am 2026-11-11 bereits im Flat File; ein maschinenlesbares Veroeffentlichungsdatum fehlt, darum konservativ 7 Tage",
+    "quelle_url": "https://static.nhtsa.gov/odi/ffdd/inv/FLAT_INV.zip",
+    "revidiert": false,
+    "verdichtung": "Zaehlung verschiedener NHTSA ACTION NUMBER je Kalendertag (ODATE)",
+    "verfuegbar_nach_tagen": 7
+  }
+}

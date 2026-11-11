@@ -4941,11 +4941,12 @@
     "url": "https://data.texas.gov/resource/8w4r-7h9n.json",
     "domain": "data.texas.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Häufen sich angekündigte Massenentlassungen grosser Arbeitgeber, signalisiert das Ertragsdruck in Industrie und Handel (XLI, XLY) vor den amtlichen Arbeitsmarktzahlen; WARN-Meldungen laufen den Erstanträgen voraus (Krolikowski und Lunsford 2020, Cleveland Fed).",
-    "grund": "Unabhängige Replikation von ca_warn_entlassungsmeldungen_dichte mit zweitem Bundesstaat. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Unabhängige Replikation von ca_warn_entlassungsmeldungen_dichte mit zweitem Bundesstaat. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Pruefung 2026-11-11T12:20Z: Datensatz 8w4r-7h9n existiert nicht mehr (404); Nachfolger data.texas.gov 8w53-c4f6 (WARN Notices) beginnt erst 2019-01-04 (K2 verletzt, 2368 Meldungen) und endet 2026-06-23, letzte Aktualisierung 2026-07-07 (K5 verletzt). Abgelehnt.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T12:20Z"
   },
   {
     "id": "occ_enforcement_massnahmen",
@@ -4953,11 +4954,12 @@
     "url": "https://apps.occ.gov/EASearch/",
     "domain": "apps.occ.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Monatlich veröffentlichte OCC-Massnahmen (Cease-and-Desist, Bussen) gegen Banken sind kursrelevant für Finanzwerte (XLF) gegenüber dem Weltindex; Strafen wegen Fehlverhalten führen zu deutlichen Abschlägen (Karpoff, Lee und Martin 2008).",
-    "grund": "Unabhängige Aufsichtsbehörde neben fed_enforcement_massnahmen. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Unabhängige Aufsichtsbehörde neben fed_enforcement_massnahmen. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T12:20Z: apps.occ.gov/EASearch (auch /Search/ExportToCSV) leitet mit 200 auf die Startseite www.occ.treas.gov um, keine Suche/kein Export abrufbar; Indexseite enforcement-actions verweist nur auf EASearch. Nicht umgangen; naechster Lauf erneut. Hinweis: die OCC gibt Massnahmen gesammelt einmal im Monat per Pressemitteilung bekannt (\"OCC Announces Enforcement Actions for <Monat>\"), Bekanntgabetag waere also das Datum dieser Monatsmeldung; Reihe haette nur rund 12 Ereignistage je Jahr.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T12:20Z"
   },
   {
     "id": "fdic_enforcement_entscheide",
@@ -5025,11 +5027,25 @@
     "url": "https://static.nhtsa.gov/odi/ffdd/inv/FLAT_INV.zip",
     "domain": "static.nhtsa.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "Eröffnete Untersuchungen gehen Rückrufen voraus und treffen Autohersteller und Zulieferer; Rückrufe und Untersuchungen führen zu negativen Überrenditen (Jarrell und Peltzman 1985), relevant für XLY gegenüber dem Weltindex.",
-    "grund": "Vorstufe zu nhtsa_ruckrufe, eigener Zeitpunkt und eigene Datei; Flat File ohne Login, Historie ab 1970er. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Vorstufe zu nhtsa_ruckrufe, eigener Zeitpunkt und eigene Datei; Flat File ohne Login, Historie ab 1970er. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Pruefung 2026-11-11T12:20Z: K1 ok (Tageszaehlung, Median 1 Tag, 0 an Tagen ohne Eroeffnung). K2 ok (ab 1996-01-01, 11273 Zeilen, 2275 Eroeffnungen; Flat File reicht bis 1972, aber fuer die Zeit vor der Online-ODI-Datenbank ist der Tag der oeffentlichen Bekanntgabe nicht belegt, darum erst ab 1996 und nicht fuer Familie Langzeit; Reto kann entscheiden, ob frueher). K3 ok (static.nhtsa.gov, Flat File ohne Login/Schluessel, US-Bundesbehoerde). K4: Datum = ODATE (Eroeffnung); je Aktionsnummer einmal gezaehlt; Defekt-Petitionen (DP) ausgenommen, da von Dritten eingereicht; Liste wird um neue Verfahren ergaenzt, bestehende Eroeffnungsdaten nicht rueckdatiert. K5 ok (letzte Eroeffnung 2026-11-06, Datei taeglich neu erzeugt, Reihe bis heute). K6 neu (nhtsa_ruckrufe zaehlt Rueckrufkampagnen, fedregister_nhtsa_regeln Regeln). K7 ok (4 MB ZIP, 2.4 s, Reihe 26 kB). Gleiche Folgewerte 75.5% (seltene Ereignisse), Min 0, Max 6 plausibel. publikation woechentlich (Eroeffnungen haeufen sich auf Freitage, kein maschinenlesbares Publikationsdatum), verfuegbar_nach_tagen konservativ 7. Paarvorschlag fuer Reto: keiner.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-11T12:20Z",
+    "reihen": [
+      {
+        "reihe": "untersuchungen",
+        "zeilen": 11273,
+        "erste": "1996-01-01",
+        "letzte": "2026-11-11",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.755,
+        "min": 0.0,
+        "max": 6.0,
+        "status": "aktiv"
+      }
+    ]
   },
   {
     "id": "spc_tornado_historie_1950",
