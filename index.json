@@ -1,5 +1,5 @@
 {
- "kumuliert": 714902,
+ "kumuliert": 720170,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -367,6 +367,7 @@
   "neu_ecb_fx_eurjpy_d5",
   "neu_ecb_fx_eurjpy_stand",
   "neu_ecb_fx_eurjpy_z252",
+  "neu_ecb_ratssitzungen_termine_sitzung_stand",
   "neu_eu_boersenfeiertage_geschlossen_stand",
   "neu_fda_zulassungen_zulassungen_d1",
   "neu_fda_zulassungen_zulassungen_d20",
@@ -379,6 +380,16 @@
   "neu_fdic_bankausfaelle_anzahl_stand",
   "neu_fdic_bankausfaelle_anzahl_z252",
   "neu_fed_beige_book_termine_termine_stand",
+  "neu_fed_enforcement_massnahmen_institutionen_d1",
+  "neu_fed_enforcement_massnahmen_institutionen_d20",
+  "neu_fed_enforcement_massnahmen_institutionen_d5",
+  "neu_fed_enforcement_massnahmen_institutionen_stand",
+  "neu_fed_enforcement_massnahmen_institutionen_z252",
+  "neu_fed_enforcement_massnahmen_personen_d1",
+  "neu_fed_enforcement_massnahmen_personen_d20",
+  "neu_fed_enforcement_massnahmen_personen_d5",
+  "neu_fed_enforcement_massnahmen_personen_stand",
+  "neu_fed_enforcement_massnahmen_personen_z252",
   "neu_fedregister_ams_agrarmarkt_anzahl_d1",
   "neu_fedregister_ams_agrarmarkt_anzahl_d20",
   "neu_fedregister_ams_agrarmarkt_anzahl_d5",
@@ -703,6 +714,16 @@
   "neu_msha_bergbauunfaelle_gesamt_d5",
   "neu_msha_bergbauunfaelle_gesamt_stand",
   "neu_msha_bergbauunfaelle_gesamt_z252",
+  "neu_nasdaq_handelsunterbrechungen_firmen_d1",
+  "neu_nasdaq_handelsunterbrechungen_firmen_d20",
+  "neu_nasdaq_handelsunterbrechungen_firmen_d5",
+  "neu_nasdaq_handelsunterbrechungen_firmen_stand",
+  "neu_nasdaq_handelsunterbrechungen_firmen_z252",
+  "neu_nasdaq_handelsunterbrechungen_volatilitaet_d1",
+  "neu_nasdaq_handelsunterbrechungen_volatilitaet_d20",
+  "neu_nasdaq_handelsunterbrechungen_volatilitaet_d5",
+  "neu_nasdaq_handelsunterbrechungen_volatilitaet_stand",
+  "neu_nasdaq_handelsunterbrechungen_volatilitaet_z252",
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d1",
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d20",
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d5",
@@ -1746,9 +1767,15 @@
    "datei": "suche/S0064.json",
    "kandidaten": 376309,
    "in_db": false
+  },
+  {
+   "nr": 65,
+   "datei": "suche/S0065.json",
+   "kandidaten": 381577,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-11T01:26Z",
+ "letzter_suchlauf_utc": "2026-11-11T14:21Z",
  "pruefung_lernrunde_utc": "2026-11-11T09:35:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2160,11 +2187,19 @@
    "ergebnis_hash": "03cd4525be7ad58b",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261111T121632Z.json",
+   "lauf_id": "L20261111T121632Z",
+   "s_dokument": "suche/S0065.json",
+   "ergebnis_hash": "95fbe79d771c2e50",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-11T01:26Z",
- "letztes_vollarchiv": "suche/S0064_alle.csv.gz",
- "letzter_ergebnis_hash": "03cd4525be7ad58b",
+ "letzter_lauf_utc": "2026-11-11T14:21Z",
+ "letztes_vollarchiv": "suche/S0065_alle.csv.gz",
+ "letzter_ergebnis_hash": "95fbe79d771c2e50",
  "konflikte": [
   {
    "wo": "index",
@@ -4399,10 +4434,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 313,
-  "neu_in_diesem_lauf": 3
+  "grundreihen_n": 318,
+  "neu_in_diesem_lauf": 5
  },
- "letztes_vollarchiv_ergebnis_hash": "03cd4525be7ad58b",
+ "letztes_vollarchiv_ergebnis_hash": "95fbe79d771c2e50",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261110T225026Z",
@@ -4420,7 +4455,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "0fbcf3c23c99dea6",
- "letzter_gueltiger_lauf": "L20261110T225026Z",
- "letzter_entscheidung_hash": "13b196045365150f"
+ "letzter_eingabe_hash": "044367a88a7ece5d",
+ "letzter_gueltiger_lauf": "L20261111T121632Z",
+ "letzter_entscheidung_hash": "c3d7df5a3d1f29c0"
 }

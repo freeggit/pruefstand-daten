@@ -3116,6 +3116,33 @@
    "aufgenommen_utc": "2026-10-28T10:53:36Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fred_aktienvol_vxn_rvx_vxd__rvx.csv.gz": {
+   "datei": "n__neu__fred_aktienvol_vxn_rvx_vxd__rvx.csv.gz@870d35bd29dc8ac0",
+   "sha": "870d35bd29dc8ac0e940327da2a98f27614428bbaf65a562527d1551c0db7f0b",
+   "sha_inhalt": "e9d0d35001ee606a04744bb547315a00e3ca62779079190f6490765cd74f7021",
+   "zeilen": 4278,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-11T12:16:54Z",
+   "lauf_id": "L20261111T121632Z"
+  },
+  "n__neu__fred_aktienvol_vxn_rvx_vxd__vxd.csv.gz": {
+   "datei": "n__neu__fred_aktienvol_vxn_rvx_vxd__vxd.csv.gz@d8101ba5bab30428",
+   "sha": "d8101ba5bab30428369b3eae857567933b3a4344877e2564e05a31d15667860b",
+   "sha_inhalt": "514d8d5d8f1e8172bee16d06984feb09fa90e139bb5d97f5e1dd7a3adb0a242a",
+   "zeilen": 5847,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-11T12:16:54Z",
+   "lauf_id": "L20261111T121632Z"
+  },
+  "n__neu__fred_aktienvol_vxn_rvx_vxd__vxn.csv.gz": {
+   "datei": "n__neu__fred_aktienvol_vxn_rvx_vxd__vxn.csv.gz@4eb6f68e71c5aefd",
+   "sha": "4eb6f68e71c5aefd8669edd4fd9cef95d8efabad4dbf5b860779725fe82309b2",
+   "sha_inhalt": "4170ce8b23d86d19eff85b6f082f6e0dc2ab833d761c68db704148231fd4408a",
+   "zeilen": 5009,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-11T12:16:54Z",
+   "lauf_id": "L20261111T121632Z"
+  },
   "n__neu__fred_brent__brent.csv.gz": {
    "datei": "n__neu__fred_brent__brent.csv.gz@da42070669a994b3",
    "sha": "da42070669a994b3c750035de63dc1dfeb27b01c3cf69dce260b27a54b9e721a",
@@ -4586,8 +4613,8 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-10T22:51:03Z",
- "dateien_n": 506,
+ "stand_utc": "2026-11-11T12:17:02Z",
+ "dateien_n": 509,
  "vorgemerkt": {
   "n__neu__ecb_einlagefazilitaet_nutzung_taeglich__einlagefazilitaet.csv.gz": {
    "erstmals_utc": "2026-11-10T22:50:51Z",
@@ -4617,66 +4644,73 @@
     }
    ]
   },
-  "n__neu__fred_aktienvol_vxn_rvx_vxd__rvx.csv.gz": {
-   "erstmals_utc": "2026-11-09T13:38:00Z",
-   "beste_werte": 4278,
-   "frueheste_erste": "2004-01-02",
+  "n__neu__ecb_ratssitzungen_termine__sitzung.csv.gz": {
+   "erstmals_utc": "2026-11-11T12:16:52Z",
+   "beste_werte": 271,
+   "frueheste_erste": "1999-03-04",
    "sichtungen": [
     {
-     "utc": "2026-11-09T13:38:00Z",
-     "lauf_id": "L20261109T133737Z",
-     "werte": 4278,
-     "erste": "2004-01-02",
-     "sha_inhalt": "e9d0d35001ee606a04744bb547315a00e3ca62779079190f6490765cd74f7021"
-    },
-    {
-     "utc": "2026-11-10T13:07:08Z",
-     "lauf_id": "L20261110T130646Z",
-     "werte": 4278,
-     "erste": "2004-01-02",
-     "sha_inhalt": "e9d0d35001ee606a04744bb547315a00e3ca62779079190f6490765cd74f7021"
+     "utc": "2026-11-11T12:16:52Z",
+     "lauf_id": "L20261111T121632Z",
+     "werte": 271,
+     "erste": "1999-03-04",
+     "sha_inhalt": "b0408b6dd9c1b102caa10e82101bbdd099aa584d472f6a26116d37b587dc4654"
     }
    ]
   },
-  "n__neu__fred_aktienvol_vxn_rvx_vxd__vxd.csv.gz": {
-   "erstmals_utc": "2026-11-09T13:38:00Z",
-   "beste_werte": 5847,
-   "frueheste_erste": "1997-10-07",
+  "n__neu__fed_enforcement_massnahmen__institutionen.csv.gz": {
+   "erstmals_utc": "2026-11-11T12:16:53Z",
+   "beste_werte": 745,
+   "frueheste_erste": "1997-01-01",
    "sichtungen": [
     {
-     "utc": "2026-11-09T13:38:00Z",
-     "lauf_id": "L20261109T133737Z",
-     "werte": 5847,
-     "erste": "1997-10-07",
-     "sha_inhalt": "514d8d5d8f1e8172bee16d06984feb09fa90e139bb5d97f5e1dd7a3adb0a242a"
-    },
-    {
-     "utc": "2026-11-10T13:07:08Z",
-     "lauf_id": "L20261110T130646Z",
-     "werte": 5847,
-     "erste": "1997-10-07",
-     "sha_inhalt": "514d8d5d8f1e8172bee16d06984feb09fa90e139bb5d97f5e1dd7a3adb0a242a"
+     "utc": "2026-11-11T12:16:53Z",
+     "lauf_id": "L20261111T121632Z",
+     "werte": 745,
+     "erste": "1997-01-01",
+     "sha_inhalt": "9d41320f16d8326e088b9a66f9d3be752d81f8858232cd1927eb99a57dbcfb31"
     }
    ]
   },
-  "n__neu__fred_aktienvol_vxn_rvx_vxd__vxn.csv.gz": {
-   "erstmals_utc": "2026-11-09T13:38:00Z",
-   "beste_werte": 5009,
-   "frueheste_erste": "2001-02-02",
+  "n__neu__fed_enforcement_massnahmen__personen.csv.gz": {
+   "erstmals_utc": "2026-11-11T12:16:53Z",
+   "beste_werte": 529,
+   "frueheste_erste": "1997-01-01",
    "sichtungen": [
     {
-     "utc": "2026-11-09T13:38:00Z",
-     "lauf_id": "L20261109T133737Z",
-     "werte": 5009,
-     "erste": "2001-02-02",
-     "sha_inhalt": "4170ce8b23d86d19eff85b6f082f6e0dc2ab833d761c68db704148231fd4408a"
-    },
+     "utc": "2026-11-11T12:16:53Z",
+     "lauf_id": "L20261111T121632Z",
+     "werte": 529,
+     "erste": "1997-01-01",
+     "sha_inhalt": "6d222c54ac474f5eca6894073c2ffbac29804553e760497d9aacbda713791c17"
+    }
+   ]
+  },
+  "n__neu__nasdaq_handelsunterbrechungen__firmen.csv.gz": {
+   "erstmals_utc": "2026-11-11T12:16:56Z",
+   "beste_werte": 3499,
+   "frueheste_erste": "2006-01-03",
+   "sichtungen": [
     {
-     "utc": "2026-11-10T13:07:08Z",
-     "lauf_id": "L20261110T130646Z",
-     "werte": 5009,
-     "erste": "2001-02-02",
-     "sha_inhalt": "4170ce8b23d86d19eff85b6f082f6e0dc2ab833d761c68db704148231fd4408a"
+     "utc": "2026-11-11T12:16:56Z",
+     "lauf_id": "L20261111T121632Z",
+     "werte": 3499,
+     "erste": "2006-01-03",
+     "sha_inhalt": "b73c3e1ee1ae4e3712fc6bd2ee06afd5405c0d5fb56120ba3512e1d969db77b1"
+    }
+   ]
+  },
+  "n__neu__nasdaq_handelsunterbrechungen__volatilitaet.csv.gz": {
+   "erstmals_utc": "2026-11-11T12:16:56Z",
+   "beste_werte": 1907,
+   "frueheste_erste": "2013-04-08",
+   "sichtungen": [
+    {
+     "utc": "2026-11-11T12:16:56Z",
+     "lauf_id": "L20261111T121632Z",
+     "werte": 1907,
+     "erste": "2013-04-08",
+     "sha_inhalt": "af8146d49a9de2eabe4cec03582da0f5d0b304541c4ebfd79abb3e68b7579d8b"
     }
    ]
   },
