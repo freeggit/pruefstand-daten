@@ -4613,7 +4613,7 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-11T12:17:02Z",
+ "stand_utc": "2026-11-12T13:24:59Z",
  "dateien_n": 509,
  "vorgemerkt": {
   "n__neu__ecb_einlagefazilitaet_nutzung_taeglich__einlagefazilitaet.csv.gz": {
@@ -4624,6 +4624,13 @@
     {
      "utc": "2026-11-10T22:50:51Z",
      "lauf_id": "L20261110T225026Z",
+     "werte": 5738,
+     "erste": "1998-12-31",
+     "sha_inhalt": "2a255e9f350e9b63402f3a3e40900e35003efc11b7a4f661eb8e16a5f2715409"
+    },
+    {
+     "utc": "2026-11-12T13:24:46Z",
+     "lauf_id": "L20261112T132422Z",
      "werte": 5738,
      "erste": "1998-12-31",
      "sha_inhalt": "2a255e9f350e9b63402f3a3e40900e35003efc11b7a4f661eb8e16a5f2715409"
@@ -4641,6 +4648,13 @@
      "werte": 5738,
      "erste": "1998-12-31",
      "sha_inhalt": "325053bc636c1df6356d87014e3017edf6b190c3f8902e54044a941a3b2fffcd"
+    },
+    {
+     "utc": "2026-11-12T13:24:46Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 5738,
+     "erste": "1998-12-31",
+     "sha_inhalt": "325053bc636c1df6356d87014e3017edf6b190c3f8902e54044a941a3b2fffcd"
     }
    ]
   },
@@ -4655,6 +4669,41 @@
      "werte": 271,
      "erste": "1999-03-04",
      "sha_inhalt": "b0408b6dd9c1b102caa10e82101bbdd099aa584d472f6a26116d37b587dc4654"
+    },
+    {
+     "utc": "2026-11-12T13:24:46Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 271,
+     "erste": "1999-03-04",
+     "sha_inhalt": "b0408b6dd9c1b102caa10e82101bbdd099aa584d472f6a26116d37b587dc4654"
+    }
+   ]
+  },
+  "n__neu__eu_wettbewerbsentscheide__fusionskontrolle.csv.gz": {
+   "erstmals_utc": "2026-11-12T13:24:46Z",
+   "beste_werte": 2354,
+   "frueheste_erste": "1985-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-12T13:24:46Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 2354,
+     "erste": "1985-01-01",
+     "sha_inhalt": "e31ea06de5cfc06ae5cf18bf9e7743ab909e3c098e343716b9553da57cfc13ca"
+    }
+   ]
+  },
+  "n__neu__eu_wettbewerbsentscheide__kartellverfahren.csv.gz": {
+   "erstmals_utc": "2026-11-12T13:24:46Z",
+   "beste_werte": 551,
+   "frueheste_erste": "1985-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-12T13:24:46Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 551,
+     "erste": "1985-01-01",
+     "sha_inhalt": "22640b4c07d05cd25662886d378f9364b89bfdf75e921a2585f593b28ae20f84"
     }
    ]
   },
@@ -4666,6 +4715,13 @@
     {
      "utc": "2026-11-11T12:16:53Z",
      "lauf_id": "L20261111T121632Z",
+     "werte": 745,
+     "erste": "1997-01-01",
+     "sha_inhalt": "9d41320f16d8326e088b9a66f9d3be752d81f8858232cd1927eb99a57dbcfb31"
+    },
+    {
+     "utc": "2026-11-12T13:24:46Z",
+     "lauf_id": "L20261112T132422Z",
      "werte": 745,
      "erste": "1997-01-01",
      "sha_inhalt": "9d41320f16d8326e088b9a66f9d3be752d81f8858232cd1927eb99a57dbcfb31"
@@ -4683,6 +4739,13 @@
      "werte": 529,
      "erste": "1997-01-01",
      "sha_inhalt": "6d222c54ac474f5eca6894073c2ffbac29804553e760497d9aacbda713791c17"
+    },
+    {
+     "utc": "2026-11-12T13:24:46Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 529,
+     "erste": "1997-01-01",
+     "sha_inhalt": "6d222c54ac474f5eca6894073c2ffbac29804553e760497d9aacbda713791c17"
     }
    ]
   },
@@ -4694,6 +4757,13 @@
     {
      "utc": "2026-11-11T12:16:56Z",
      "lauf_id": "L20261111T121632Z",
+     "werte": 3499,
+     "erste": "2006-01-03",
+     "sha_inhalt": "b73c3e1ee1ae4e3712fc6bd2ee06afd5405c0d5fb56120ba3512e1d969db77b1"
+    },
+    {
+     "utc": "2026-11-12T13:24:51Z",
+     "lauf_id": "L20261112T132422Z",
      "werte": 3499,
      "erste": "2006-01-03",
      "sha_inhalt": "b73c3e1ee1ae4e3712fc6bd2ee06afd5405c0d5fb56120ba3512e1d969db77b1"
@@ -4711,6 +4781,13 @@
      "werte": 1907,
      "erste": "2013-04-08",
      "sha_inhalt": "af8146d49a9de2eabe4cec03582da0f5d0b304541c4ebfd79abb3e68b7579d8b"
+    },
+    {
+     "utc": "2026-11-12T13:24:51Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 1907,
+     "erste": "2013-04-08",
+     "sha_inhalt": "af8146d49a9de2eabe4cec03582da0f5d0b304541c4ebfd79abb3e68b7579d8b"
     }
    ]
   },
@@ -4725,6 +4802,83 @@
      "werte": 3777,
      "erste": "2006-01-03",
      "sha_inhalt": "53aab17973225834292eedaaa240adcc511c8d6b6cca5a2bb9bf7571135ae7c8"
+    },
+    {
+     "utc": "2026-11-12T13:24:51Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 3777,
+     "erste": "2006-01-03",
+     "sha_inhalt": "53aab17973225834292eedaaa240adcc511c8d6b6cca5a2bb9bf7571135ae7c8"
+    }
+   ]
+  },
+  "n__neu__nhtsa_beschwerden_taeglich__anzahl_gesamt.csv.gz": {
+   "erstmals_utc": "2026-11-12T13:24:51Z",
+   "beste_werte": 8942,
+   "frueheste_erste": "1995-01-03",
+   "sichtungen": [
+    {
+     "utc": "2026-11-12T13:24:51Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 8942,
+     "erste": "1995-01-03",
+     "sha_inhalt": "9d0b54709f2ae724eaef5a8bc089c92d0fb5d6b7316a2249d24090d9f7c6804f"
+    }
+   ]
+  },
+  "n__neu__nhtsa_beschwerden_taeglich__anzahl_schwer.csv.gz": {
+   "erstmals_utc": "2026-11-12T13:24:51Z",
+   "beste_werte": 8781,
+   "frueheste_erste": "1995-01-03",
+   "sichtungen": [
+    {
+     "utc": "2026-11-12T13:24:51Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 8781,
+     "erste": "1995-01-03",
+     "sha_inhalt": "c1fbcf7ec9ba89f962a94666570a88a9523c4955126b7600f8308d98fa00aebe"
+    }
+   ]
+  },
+  "n__neu__nhtsa_odi_untersuchungen__untersuchungen.csv.gz": {
+   "erstmals_utc": "2026-11-12T13:24:51Z",
+   "beste_werte": 1492,
+   "frueheste_erste": "1996-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-12T13:24:51Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 1492,
+     "erste": "1996-01-01",
+     "sha_inhalt": "5799e54c578aa2c260943c84b9392af3102b73f774997b5fcc2905985cfe20ee"
+    }
+   ]
+  },
+  "n__neu__spc_unwetter_meldungen__tornado_meldungen.csv.gz": {
+   "erstmals_utc": "2026-11-12T13:24:52Z",
+   "beste_werte": 2639,
+   "frueheste_erste": "2005-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-12T13:24:52Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 2639,
+     "erste": "2005-01-01",
+     "sha_inhalt": "ffd9402ea4f9c2491bf84a03ce9f38a94fcf716d0a94f650060f15fd7a975950"
+    }
+   ]
+  },
+  "n__neu__spc_unwetter_meldungen__unwetter_meldungen_gesamt.csv.gz": {
+   "erstmals_utc": "2026-11-12T13:24:52Z",
+   "beste_werte": 4337,
+   "frueheste_erste": "2005-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-12T13:24:52Z",
+     "lauf_id": "L20261112T132422Z",
+     "werte": 4337,
+     "erste": "2005-01-01",
+     "sha_inhalt": "134ae518b4ed13c8289ce9e4064be02346c345c368ac18d2b8a94abc9910bd2e"
     }
    ]
   }

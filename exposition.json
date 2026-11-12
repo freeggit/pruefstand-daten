@@ -289,6 +289,18 @@
    "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
    "beleg": "suche/S0011_alle.csv.gz"
   },
+  "neu_eu_wettbewerbsentscheide_fusionskontrolle": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261112T132422Z",
+   "erst_zeit": "2026-11-12T16:35Z",
+   "beleg": "suche/laeufe/L20261112T132422Z.json"
+  },
+  "neu_eu_wettbewerbsentscheide_kartellverfahren": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261112T132422Z",
+   "erst_zeit": "2026-11-12T16:35Z",
+   "beleg": "suche/laeufe/L20261112T132422Z.json"
+  },
   "neu_fda_ruckrufe_arzneimittel": {
    "erst_dokument": "S0013",
    "erst_lauf": null,
@@ -787,6 +799,24 @@
    "erst_zeit": "2026-11-11T01:26Z",
    "beleg": "suche/laeufe/L20261110T225026Z.json"
   },
+  "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261112T132422Z",
+   "erst_zeit": "2026-11-12T16:35Z",
+   "beleg": "suche/laeufe/L20261112T132422Z.json"
+  },
+  "neu_nhtsa_beschwerden_taeglich_anzahl_schwer": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261112T132422Z",
+   "erst_zeit": "2026-11-12T16:35Z",
+   "beleg": "suche/laeufe/L20261112T132422Z.json"
+  },
+  "neu_nhtsa_odi_untersuchungen_untersuchungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261112T132422Z",
+   "erst_zeit": "2026-11-12T16:35Z",
+   "beleg": "suche/laeufe/L20261112T132422Z.json"
+  },
   "neu_nhtsa_ruckrufe_anzahl": {
    "erst_dokument": "S0014",
    "erst_lauf": null,
@@ -900,6 +930,18 @@
    "erst_lauf": null,
    "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
    "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_spc_unwetter_meldungen_tornado_meldungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261112T132422Z",
+   "erst_zeit": "2026-11-12T16:35Z",
+   "beleg": "suche/laeufe/L20261112T132422Z.json"
+  },
+  "neu_spc_unwetter_meldungen_unwetter_meldungen_gesamt": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261112T132422Z",
+   "erst_zeit": "2026-11-12T16:35Z",
+   "beleg": "suche/laeufe/L20261112T132422Z.json"
   },
   "neu_treasury_auktionen_bid_to_cover": {
    "erst_dokument": "S0009",
@@ -1916,8 +1958,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261111T121632Z",
-  "zeit_utc": "2026-11-11T14:21Z",
-  "grundreihen_n": 318
+  "lauf_id": "L20261112T132422Z",
+  "zeit_utc": "2026-11-12T16:35Z",
+  "grundreihen_n": 325
  }
 }

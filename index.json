@@ -1,5 +1,5 @@
 {
- "kumuliert": 720170,
+ "kumuliert": 732891,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -373,6 +373,16 @@
   "neu_ecb_fx_eurjpy_z252",
   "neu_ecb_ratssitzungen_termine_sitzung_stand",
   "neu_eu_boersenfeiertage_geschlossen_stand",
+  "neu_eu_wettbewerbsentscheide_fusionskontrolle_d1",
+  "neu_eu_wettbewerbsentscheide_fusionskontrolle_d20",
+  "neu_eu_wettbewerbsentscheide_fusionskontrolle_d5",
+  "neu_eu_wettbewerbsentscheide_fusionskontrolle_stand",
+  "neu_eu_wettbewerbsentscheide_fusionskontrolle_z252",
+  "neu_eu_wettbewerbsentscheide_kartellverfahren_d1",
+  "neu_eu_wettbewerbsentscheide_kartellverfahren_d20",
+  "neu_eu_wettbewerbsentscheide_kartellverfahren_d5",
+  "neu_eu_wettbewerbsentscheide_kartellverfahren_stand",
+  "neu_eu_wettbewerbsentscheide_kartellverfahren_z252",
   "neu_fda_zulassungen_zulassungen_d1",
   "neu_fda_zulassungen_zulassungen_d20",
   "neu_fda_zulassungen_zulassungen_d5",
@@ -733,6 +743,21 @@
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d5",
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_stand",
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_z252",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_d1",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_d20",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_d5",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_stand",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_z252",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_schwer_d1",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_schwer_d20",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_schwer_d5",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_schwer_stand",
+  "neu_nhtsa_beschwerden_taeglich_anzahl_schwer_z252",
+  "neu_nhtsa_odi_untersuchungen_untersuchungen_d1",
+  "neu_nhtsa_odi_untersuchungen_untersuchungen_d20",
+  "neu_nhtsa_odi_untersuchungen_untersuchungen_d5",
+  "neu_nhtsa_odi_untersuchungen_untersuchungen_stand",
+  "neu_nhtsa_odi_untersuchungen_untersuchungen_z252",
   "neu_nhtsa_ruckrufe_anzahl_d1",
   "neu_nhtsa_ruckrufe_anzahl_d20",
   "neu_nhtsa_ruckrufe_anzahl_d5",
@@ -808,6 +833,16 @@
   "neu_sp500_index_aenderungen_anzahl_aenderungen_stand",
   "neu_sp500_index_aenderungen_anzahl_aenderungen_z252",
   "neu_sp500_russell_rebalance_termine_russell_reconstitution_stand",
+  "neu_spc_unwetter_meldungen_tornado_meldungen_d1",
+  "neu_spc_unwetter_meldungen_tornado_meldungen_d20",
+  "neu_spc_unwetter_meldungen_tornado_meldungen_d5",
+  "neu_spc_unwetter_meldungen_tornado_meldungen_stand",
+  "neu_spc_unwetter_meldungen_tornado_meldungen_z252",
+  "neu_spc_unwetter_meldungen_unwetter_meldungen_gesamt_d1",
+  "neu_spc_unwetter_meldungen_unwetter_meldungen_gesamt_d20",
+  "neu_spc_unwetter_meldungen_unwetter_meldungen_gesamt_d5",
+  "neu_spc_unwetter_meldungen_unwetter_meldungen_gesamt_stand",
+  "neu_spc_unwetter_meldungen_unwetter_meldungen_gesamt_z252",
   "neu_treasury_auktionen_bid_to_cover_d1",
   "neu_treasury_auktionen_bid_to_cover_d20",
   "neu_treasury_auktionen_bid_to_cover_d5",
@@ -1777,9 +1812,15 @@
    "datei": "suche/S0065.json",
    "kandidaten": 381577,
    "in_db": false
+  },
+  {
+   "nr": 66,
+   "datei": "suche/S0066.json",
+   "kandidaten": 394298,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-11T14:21Z",
+ "letzter_suchlauf_utc": "2026-11-12T16:35Z",
  "pruefung_lernrunde_utc": "2026-11-12T09:55:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2199,11 +2240,19 @@
    "ergebnis_hash": "95fbe79d771c2e50",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261112T132422Z.json",
+   "lauf_id": "L20261112T132422Z",
+   "s_dokument": "suche/S0066.json",
+   "ergebnis_hash": "6fae46c5fed61d96",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-11T14:21Z",
- "letztes_vollarchiv": "suche/S0065_alle.csv.gz",
- "letzter_ergebnis_hash": "95fbe79d771c2e50",
+ "letzter_lauf_utc": "2026-11-12T16:35Z",
+ "letztes_vollarchiv": "suche/S0066_alle.csv.gz",
+ "letzter_ergebnis_hash": "6fae46c5fed61d96",
  "konflikte": [
   {
    "wo": "index",
@@ -4438,10 +4487,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 318,
-  "neu_in_diesem_lauf": 5
+  "grundreihen_n": 325,
+  "neu_in_diesem_lauf": 7
  },
- "letztes_vollarchiv_ergebnis_hash": "95fbe79d771c2e50",
+ "letztes_vollarchiv_ergebnis_hash": "6fae46c5fed61d96",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261110T225026Z",
@@ -4459,7 +4508,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "044367a88a7ece5d",
- "letzter_gueltiger_lauf": "L20261111T121632Z",
- "letzter_entscheidung_hash": "c3d7df5a3d1f29c0"
+ "letzter_eingabe_hash": "c77bb5205c4ffef7",
+ "letzter_gueltiger_lauf": "L20261112T132422Z",
+ "letzter_entscheidung_hash": "2f58314a2c4743c2"
 }
