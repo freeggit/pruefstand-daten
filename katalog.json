@@ -2117,10 +2117,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: HTTP 403 (410 Bytes), nicht umgangen; naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-28T20:15:44Z",
-    "geprueft_utc": "2026-11-10T20:26Z"
+    "geprueft_utc": "2026-11-12T00:25Z"
   },
   {
     "id": "fedregister_ftc_fusionen",
@@ -4592,9 +4592,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut.",
     "status": "fehler",
-    "geprueft_utc": "2026-11-10T20:26Z"
+    "geprueft_utc": "2026-11-12T00:25Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -5058,10 +5058,28 @@
     "url": "https://www.spc.noaa.gov/wcm/data/1950-2023_actual_tornadoes.csv",
     "domain": "www.spc.noaa.gov",
     "bereich": "Natur",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Tornado-Ausbrüche verursachen hohe versicherte Schäden und Netzausfälle; kurzfristig relevant für Versicherer und Finanzwerte (XLF, Familie L ff_money) und Versorger (XLU, ff_utils).",
-    "grund": "Historie vor 1990 (zweite Priorität, Zusatz 6 des Scouts); eine CSV-Datei ohne Login, nutzbar für Familie L bis 2000. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft.",
-    "aufgenommen_utc": "2026-11-11T09:30:00Z"
+    "grund": "Historie vor 1990 (zweite Priorität, Zusatz 6 des Scouts); eine CSV-Datei ohne Login, nutzbar für Familie L bis 2000. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-12T00:25Z: CSV 1950-2024_actual_tornadoes.csv abrufbar (200), aber endgueltige Datenbank endet 2024-12-31 und erscheint jaehrlich mit rund einem Jahr Verzug nach Qualitaetspruefung (K5 letzter Wert >10 Tage, K4 nachtraeglich bereinigt, damals nicht oeffentlich). Ersatz: vorlaeufige Tagesberichte als spc_unwetter_meldungen (ab 2005) aufgenommen.",
+    "aufgenommen_utc": "2026-11-11T09:30:00Z",
+    "geprueft_utc": "2026-11-12T00:25Z"
+  },
+  {
+    "id": "spc_unwetter_meldungen",
+    "name": "NOAA SPC vorlaeufige Unwettermeldungen (Local Storm Reports) je Tag",
+    "url": "https://www.spc.noaa.gov/climo/reports/YYMMDD_rpts.csv",
+    "domain": "www.spc.noaa.gov",
+    "bereich": "Natur",
+    "status": "aktiv",
+    "prioritaet": "normal",
+    "mechanismus": "Tornado- und Unwetterausbrueche verursachen versicherte Schaeden und Netzausfaelle, die am Folgetag bekannt sind; kurzfristig relevant fuer Versicherer/Finanzwerte (XLF) und Versorger (XLU) gegenueber dem Weltindex.",
+    "grund": "Aufgenommen 2026-11-12T00:25Z als Ersatz fuer spc_tornado_historie_1950 (endgueltige DB nicht laufend). Je Berichtstag (12-12 UTC) eine Datei, 200 ohne Login/Schluessel, NOAA-Daten gemeinfrei (K3). Vorlaeufige Meldungen, ungefiltert; werden nach dem Berichtstag nicht mehr geaendert (K4, letzte 3 Tage je Lauf neu geholt). Dateien vor ca. 2004-05 ohne Abschnittskoepfe, darum Beginn 2005-01-01 (K2 erfuellt). Leere Dateien/404 = fehlend, nicht 0. IM AUFBAU in Etappen (Cache, je Lauf ca. 140 s, ~11 Anfragen/s, 4 parallel): Stand 2026-11-12T00:25Z 2075 Tage 2005-01-01..2010-08-12 plus juengste Tage, offen 5910; CSV erst, wenn lueckenlos (ca. 5 weitere Laeufe). Abbrueche bisher nur HTTP 502 (voruebergehend), naechster Lauf setzt fort. Pruefung Teilbestand: Tornado min 0 max 140 (2006-03-12, Ausbruch) Mittel 4.1, Anteil gleicher Folgewerte 42% (viele Nulltage, Zaehldaten, erklaerbar); gesamt min 0 max 872 Mittel 69.8, gleiche Folgewerte 17%. Reihen aktiv: tornado_meldungen, unwetter_meldungen_gesamt. | Nach run_all 2026-11-12T00:45Z: Cache 3432 Tage, offen rund 4550 (ca. 3-4 weitere Laeufe).",
+    "reihen": [
+      "tornado_meldungen",
+      "unwetter_meldungen_gesamt"
+    ],
+    "aufgenommen_utc": "2026-11-12T00:25Z",
+    "geprueft_utc": "2026-11-12T00:25Z"
   }
 ]
