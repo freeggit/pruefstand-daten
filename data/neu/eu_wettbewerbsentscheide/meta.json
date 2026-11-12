@@ -1,0 +1,20 @@
+{
+  "fusionskontrolle": {
+    "beschreibung": "Taegliche Anzahl Pressemitteilungen (IP) der EU-Kommission zu Fusionskontrolle (Freigabe, Auflagen, vertiefte Pruefung, Untersagung, Busse) nach Titel-Schluesselwoertern; ab 1985. Strukturbruch ca. 2013: einfache Freigaben seither nur noch im Midday Express, darum weniger, aber bedeutendere Faelle. 0 = keine Mitteilung.",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich: Pressemitteilungen erscheinen am Tag eventDate im Press Corner (Feld publishDate, z.B. IP/25/2048 eventDate 2025-09-12, publishDate 2025-09-12 11:07 MESZ); Archiv wird nicht nachtraeglich ergaenzt, nur einzelne Korrekturfassungen (CORRECTED) moeglich",
+    "quelle_url": "https://ec.europa.eu/commission/presscorner/api/search?language=en&documenttype=1",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je eventDate (Kalendertag), Titelregel FUSION ohne AUS",
+    "verfuegbar_nach_tagen": 0
+  },
+  "kartellverfahren": {
+    "beschreibung": "Taegliche Anzahl Pressemitteilungen (IP) der EU-Kommission zu Kartell- und Missbrauchsverfahren (Bussen, Beschwerdepunkte, Verpflichtungszusagen, Durchsuchungen) nach Titel-Schluesselwoertern, ohne Fusionsmeldungen; ab 1985. 0 = keine Mitteilung.",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich: Pressemitteilungen erscheinen am Tag eventDate im Press Corner (Feld publishDate, z.B. IP/25/2048 eventDate 2025-09-12, publishDate 2025-09-12 11:07 MESZ); Archiv wird nicht nachtraeglich ergaenzt, nur einzelne Korrekturfassungen (CORRECTED) moeglich",
+    "quelle_url": "https://ec.europa.eu/commission/presscorner/api/search?language=en&documenttype=1",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je eventDate (Kalendertag), Titelregel KARTELL ohne FUSION und AUS",
+    "verfuegbar_nach_tagen": 0
+  }
+}

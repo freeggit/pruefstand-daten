@@ -3296,11 +3296,11 @@
     "domain": "api.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut.",
+    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-08T08:17Z",
-    "geprueft_utc": "2026-11-11T00:28Z",
+    "geprueft_utc": "2026-11-12T04:05Z",
     "prioritaet": "normal"
   },
   {
@@ -4059,13 +4059,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-11T00:28Z"
+    "geprueft_utc": "2026-11-12T04:05Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -5074,12 +5074,29 @@
     "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Tornado- und Unwetterausbrueche verursachen versicherte Schaeden und Netzausfaelle, die am Folgetag bekannt sind; kurzfristig relevant fuer Versicherer/Finanzwerte (XLF) und Versorger (XLU) gegenueber dem Weltindex.",
-    "grund": "Aufgenommen 2026-11-12T00:25Z als Ersatz fuer spc_tornado_historie_1950 (endgueltige DB nicht laufend). Je Berichtstag (12-12 UTC) eine Datei, 200 ohne Login/Schluessel, NOAA-Daten gemeinfrei (K3). Vorlaeufige Meldungen, ungefiltert; werden nach dem Berichtstag nicht mehr geaendert (K4, letzte 3 Tage je Lauf neu geholt). Dateien vor ca. 2004-05 ohne Abschnittskoepfe, darum Beginn 2005-01-01 (K2 erfuellt). Leere Dateien/404 = fehlend, nicht 0. IM AUFBAU in Etappen (Cache, je Lauf ca. 140 s, ~11 Anfragen/s, 4 parallel): Stand 2026-11-12T00:25Z 2075 Tage 2005-01-01..2010-08-12 plus juengste Tage, offen 5910; CSV erst, wenn lueckenlos (ca. 5 weitere Laeufe). Abbrueche bisher nur HTTP 502 (voruebergehend), naechster Lauf setzt fort. Pruefung Teilbestand: Tornado min 0 max 140 (2006-03-12, Ausbruch) Mittel 4.1, Anteil gleicher Folgewerte 42% (viele Nulltage, Zaehldaten, erklaerbar); gesamt min 0 max 872 Mittel 69.8, gleiche Folgewerte 17%. Reihen aktiv: tornado_meldungen, unwetter_meldungen_gesamt. | Nach run_all 2026-11-12T00:45Z: Cache 3432 Tage, offen rund 4550 (ca. 3-4 weitere Laeufe). | Zusatzetappe 2026-11-12T00:50Z: Cache 4709 Tage, offen 3276 (ca. 2-3 weitere Laeufe).",
+    "grund": "Aufgenommen 2026-11-12T00:25Z als Ersatz fuer spc_tornado_historie_1950 (endgueltige DB nicht laufend). Je Berichtstag (12-12 UTC) eine Datei, 200 ohne Login/Schluessel, NOAA-Daten gemeinfrei (K3). Vorlaeufige Meldungen, ungefiltert; werden nach dem Berichtstag nicht mehr geaendert (K4, letzte 3 Tage je Lauf neu geholt). Dateien vor ca. 2004-05 ohne Abschnittskoepfe, darum Beginn 2005-01-01 (K2 erfuellt). Leere Dateien/404 = fehlend, nicht 0. IM AUFBAU in Etappen (Cache, je Lauf ca. 140 s, ~11 Anfragen/s, 4 parallel): Stand 2026-11-12T00:25Z 2075 Tage 2005-01-01..2010-08-12 plus juengste Tage, offen 5910; CSV erst, wenn lueckenlos (ca. 5 weitere Laeufe). Abbrueche bisher nur HTTP 502 (voruebergehend), naechster Lauf setzt fort. Pruefung Teilbestand: Tornado min 0 max 140 (2006-03-12, Ausbruch) Mittel 4.1, Anteil gleicher Folgewerte 42% (viele Nulltage, Zaehldaten, erklaerbar); gesamt min 0 max 872 Mittel 69.8, gleiche Folgewerte 17%. Reihen aktiv: tornado_meldungen, unwetter_meldungen_gesamt. | Nach run_all 2026-11-12T00:45Z: Cache 3432 Tage, offen rund 4550 (ca. 3-4 weitere Laeufe). | Zusatzetappe 2026-11-12T00:50Z: Cache 4709 Tage, offen 3276 (ca. 2-3 weitere Laeufe). | Nach run_all 2026-11-12T04:34Z: Cache 6346 Tage, offen rund 1640 (ca. 1-2 weitere Laeufe); noch keine CSV.",
     "reihen": [
       "tornado_meldungen",
       "unwetter_meldungen_gesamt"
     ],
     "aufgenommen_utc": "2026-11-12T00:25Z",
     "geprueft_utc": "2026-11-12T00:25Z"
+  },
+  {
+    "id": "eu_wettbewerbsentscheide",
+    "name": "EU-Kommission: Pressemitteilungen zu Fusionskontrolle und Kartellverfahren je Tag",
+    "url": "https://ec.europa.eu/commission/presscorner/api/search?language=en&documenttype=1",
+    "domain": "ec.europa.eu",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Kartellbussen, Beschwerdepunkte und Fusionsentscheide der EU-Kommission treffen am Bekanntgabetag einzelne Branchen (Technologie XLK/XLC, Gesundheit XLV, Industrie, Europa EWG) und senken bei Bussen nachweislich die Kurse der Betroffenen (Langus/Motta 2007; Guenster/van Dijk 2016); die Tagesdichte zeigt Regulierungsdruck auf Europa und Grosskonzerne gegenueber dem Weltindex.",
+    "grund": "Neu 2026-11-12T04:15Z (eigene Recherche, Zusatz 6 Punkt 5 Kartellentscheide). K1 taeglich (0/Zaehlung je Kalendertag), K2 ab 1985-01-01 (erste IP 1985-01-04, damit Langzeit-Familie, Beginn vor 1990), 15290 Zeilen; K3 Press-Corner-API ohne Login/Schluessel, Inhalte der Kommission frei weiterverwendbar (Beschluss 2011/833/EU); K4 Archiv nicht revidiert, Datum = eventDate der Veroeffentlichung, verfuegbar 0; K5 letzter Wert 2026-11-11; K6 neu; K7 CSV je ~35 kB, Cache 6 MB, Abruf mit Cache ~20 s (Vollabruf ~5 Min, darum Cache: nur neueste 15 Seiten je Lauf; Cache erstmals 2026-11-12 vollstaendig aus 515 Seiten). Zuordnung per Titel-Schluesselwoertern (Regeln im Skript), Beihilfen/Leitlinien/Konsultationen ausgeschlossen. Pruefung: fusionskontrolle 3596 Mitteilungen an 2502 Tagen, min 0 max 8, Median-Abstand 1, gleiche Folgewerte 74% (Nulltage, Ereigniszaehlung); kartellverfahren 715 an 666 Tagen, min 0 max 4, gleiche Folgewerte 92% (Nulltage). Strukturbruch ~2013: einfache Fusionsfreigaben seither nicht mehr als IP (Fusion 1999: 273, 2016: 47). Keine Sektortrennung moeglich (nur Titel). Reihen aktiv: fusionskontrolle, kartellverfahren.",
+    "reihen": [
+      "fusionskontrolle",
+      "kartellverfahren"
+    ],
+    "aufgenommen_utc": "2026-11-12T04:15Z",
+    "geprueft_utc": "2026-11-12T04:15Z"
   }
 ]
