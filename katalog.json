@@ -4954,12 +4954,12 @@
     "url": "https://apps.occ.gov/EASearch/",
     "domain": "apps.occ.gov",
     "bereich": "Firmenereignisse",
-    "status": "fehler",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Monatlich veröffentlichte OCC-Massnahmen (Cease-and-Desist, Bussen) gegen Banken sind kursrelevant für Finanzwerte (XLF) gegenüber dem Weltindex; Strafen wegen Fehlverhalten führen zu deutlichen Abschlägen (Karpoff, Lee und Martin 2008).",
-    "grund": "Unabhängige Aufsichtsbehörde neben fed_enforcement_massnahmen. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T12:20Z: apps.occ.gov/EASearch (auch /Search/ExportToCSV) leitet mit 200 auf die Startseite www.occ.treas.gov um, keine Suche/kein Export abrufbar; Indexseite enforcement-actions verweist nur auf EASearch. Nicht umgangen; naechster Lauf erneut. Hinweis: die OCC gibt Massnahmen gesammelt einmal im Monat per Pressemitteilung bekannt (\"OCC Announces Enforcement Actions for <Monat>\"), Bekanntgabetag waere also das Datum dieser Monatsmeldung; Reihe haette nur rund 12 Ereignistage je Jahr.",
+    "grund": "Unabhängige Aufsichtsbehörde neben fed_enforcement_massnahmen. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T12:20Z: apps.occ.gov/EASearch (auch /Search/ExportToCSV) leitet mit 200 auf die Startseite www.occ.treas.gov um, keine Suche/kein Export abrufbar; Indexseite enforcement-actions verweist nur auf EASearch. Nicht umgangen; naechster Lauf erneut. Hinweis: die OCC gibt Massnahmen gesammelt einmal im Monat per Pressemitteilung bekannt (\"OCC Announces Enforcement Actions for <Monat>\"), Bekanntgabetag waere also das Datum dieser Monatsmeldung; Reihe haette nur rund 12 Ereignistage je Jahr. | Test 2026-11-12T20:15Z: apps.occ.gov/EASearch/Search/ExportToCSV liefert jetzt CSV (6071 Massnahmen ab 1987, letzte StartDate 13.10.2026). Abgelehnt: StartDate ist das Wirksamkeits-/Unterzeichnungsdatum, die OCC gibt die Massnahmen aber erst gesammelt in der Monatsmeldung (rund 3 bis 6 Wochen später) bekannt; ein Bekanntgabedatum fehlt in der Datei, die Pressemitteilungsseiten auf occ.gov leiten weiterhin auf die Startseite um. Datum nach StartDate wäre Vorwegnahme (Zusatz 6: Datum = Bekanntgabe). Wiederaufnahme nur, falls die Monatsmeldungen mit Datum abrufbar werden.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-11T12:20Z"
+    "geprueft_utc": "2026-11-12T20:15Z"
   },
   {
     "id": "fdic_enforcement_entscheide",
@@ -5161,17 +5161,29 @@
   },
   {
     "id": "nvd_kritische_schwachstellen",
-    "name": "NIST NVD: neu veröffentlichte Schwachstellen mit CVSS ab 9 je Tag",
-    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=JJJJ-MM-TTT00:00:00.000&pubEndDate=...&cvssV3Severity=CRITICAL",
-    "domain": "services.nvd.nist.gov",
+    "name": "NIST NVD: neu veröffentlichte Schwachstellen (CVE) je Tag",
+    "url": "https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-<JAHR>.json.gz",
+    "domain": "nvd.nist.gov",
     "bereich": "Cyber und Technik",
-    "status": "kandidat",
-    "grund": "Neuer Bereich «Cyber und Technik» (Schritt 5: fehlender Bereich). API ohne Login erreichbar (HTTP 200). Daten ab 1999; Veröffentlichungsdatum = Bekanntgabetag. Rate-Limit ohne Schlüssel beachten (5 Abfragen je 30 Sekunden). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "aktiv",
+    "grund": "Neuer Bereich «Cyber und Technik» (Schritt 5: fehlender Bereich). API ohne Login erreichbar (HTTP 200). Daten ab 1999; Veröffentlichungsdatum = Bekanntgabetag. Rate-Limit ohne Schlüssel beachten (5 Abfragen je 30 Sekunden). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Aufnahme 2026-11-12T20:15Z: K1-K7 erfüllt. Abruf über NVD-Jahresdateien (25 Dateien, ca. 75 s) statt API (Rate-Limit). Reihe anzahl_neu = alle neu veröffentlichten CVE je Tag (Feld published) inkl. später zurückgezogener; eine Reihe nur mit CVSS ab 9 (kritisch) wurde NICHT gebildet, weil die NVD Schweregrade oft Wochen nach Veröffentlichung vergibt und ändert (K4, spätes Wissen). Beginn 2006-01-01: Daten vor 2006 stammen aus der Übernahme der Vorgängerdatenbank ICAT/Sammelimporten (z.B. 1114 an einem Tag 2004), kein echter Veröffentlichungstag. Hinweis: Sammelimport am 2017 (max 3123/Tag) und starker Anstieg 2026 (Volumen ca. doppelt 2025) sind Strukturbrüche; verfuegbar_nach_tagen 1 (Zeitzone Zeitstempel). Zeilen 7620, 2006-01-01 bis 2026-11-11, Median-Abstand 1, gleiche Folgewerte 7.1%, Min 0, Max 3123.",
     "mechanismus": "Häufungen kritischer Sicherheitslücken erhöhen kurzfristig Kosten und Haftungsrisiken bei Technologiefirmen und könnten XLK und SMH gegenüber dem Weltindex belasten.",
     "prioritaet": "normal",
-    "reihen": [],
+    "reihen": [
+      {
+        "reihe": "anzahl_neu",
+        "status": "aktiv",
+        "zeilen": 7620,
+        "erste": "2006-01-01",
+        "letzte": "2026-11-11",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.071,
+        "min": 0.0,
+        "max": 3123.0
+      }
+    ],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-12T20:15Z"
   },
   {
     "id": "uk_gazette_insolvenzmeldungen",
@@ -5193,16 +5205,28 @@
   {
     "id": "uscg_nrc_meldungen_oel_chemie",
     "name": "US Coast Guard National Response Center: Meldungen zu Öl- und Chemieunfällen",
-    "url": "https://nrc.uscg.mil/ (Jahresdateien ab 1990 unter FOIAFiles)",
+    "url": "https://nrc.uscg.mil/FOIAFiles/CY<JJ>.xlsx",
     "domain": "nrc.uscg.mil",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
-    "grund": "Ersatz für phmsa_pipeline_vorfaelle (HTTP 403) mit breiterer Abdeckung; Seite erreichbar (HTTP 200). Jahresdateien als xlsx (Standardbibliothek: zipfile+xml). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "aktiv",
+    "grund": "Ersatz für phmsa_pipeline_vorfaelle (HTTP 403) mit breiterer Abdeckung; Seite erreichbar (HTTP 200). Jahresdateien als xlsx (Standardbibliothek: zipfile+xml). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Aufnahme 2026-11-12T20:15Z: K1-K7 erfüllt, Historie ab 1990 (vor 1995, Familie Langzeit). Blatt CALLS, CALLTYPE INC, Datum DATE_TIME_RECEIVED (Eingang beim NRC). Laufende Jahresdatei wird etwa wöchentlich ersetzt (Last-Modified 9.11.2026, Meldungen bis 8.11.) -> publikation woechentlich, verfuegbar_nach_tagen 8. Letzter Eingangstag wird weggelassen (evtl. unvollständig). Zwischenstand je Jahr in cache/<JJJJ>.json mit Last-Modified; erster Vollabruf 128 s, Folgeläufe ca. 10 s. Abgeschlossene Jahresdateien wurden 2024 einmalig neu erstellt (Last-Modified 18.4.2024) - Zählung je Eingangstag sollte davon unberührt sein, revidiert false mit diesem Vorbehalt. Zeilen 13460, 1990-01-01 bis 2026-11-07, Median-Abstand 1, gleiche Folgewerte 1.9%, Min 0, Max 313, nur 1 Tag mit 0.",
     "mechanismus": "Grosse Öl- und Chemieunfälle (Pipelines, Raffinerien, Tanker) stören kurzfristig Angebot und belasten Betreiber, was XLE, XLB und USO gegenüber dem Weltindex bewegen kann.",
     "prioritaet": "normal",
-    "reihen": [],
+    "reihen": [
+      {
+        "reihe": "anzahl_meldungen",
+        "status": "aktiv",
+        "zeilen": 13460,
+        "erste": "1990-01-01",
+        "letzte": "2026-11-07",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.019,
+        "min": 0.0,
+        "max": 313.0
+      }
+    ],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-12T20:15Z"
   },
   {
     "id": "nhtsa_beschwerden_taeglich",

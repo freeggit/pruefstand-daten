@@ -1,0 +1,11 @@
+{
+  "anzahl_neu": {
+    "beschreibung": "Neu in der NIST National Vulnerability Database veroeffentlichte Schwachstellen (CVE) je Veroeffentlichungstag (Feld published), inklusive spaeter zurueckgezogener Eintraege; ohne Schweregrad, da CVSS-Bewertungen nachtraeglich vergeben und geaendert werden",
+    "einheit": "Anzahl CVE-Eintraege",
+    "publikation": "taeglich (die NVD veroeffentlicht neue CVE laufend, Jahresdateien und API werden stuendlich bis taeglich nachgefuehrt; Quelle: nvd.nist.gov/vuln/data-feeds); 1 Tag Puffer wegen Zeitzone des Zeitstempels",
+    "quelle_url": "https://nvd.nist.gov/vuln/data-feeds",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der CVE-Eintraege je Datum von published (Zeitstempel der NVD); Kalendertage ohne Eintrag = 0; laufender Tag weggelassen; Beginn 2006-01-01, da fruehere Daten aus der Uebernahme der Vorgaengerdatenbank stammen",
+    "verfuegbar_nach_tagen": 1
+  }
+}

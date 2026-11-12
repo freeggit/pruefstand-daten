@@ -1,0 +1,11 @@
+{
+  "anzahl_meldungen": {
+    "beschreibung": "Beim National Response Center der US-Kuestenwache eingegangene Vorfallmeldungen (CALLTYPE INC: Freisetzung von Oel, Chemikalien, Gefahrgut; u.a. Pipelines, Raffinerien, Schiffe, Bahn) je Eingangstag",
+    "einheit": "Anzahl Meldungen",
+    "publikation": "woechentlich (die Jahresdatei CY<JJ>.xlsx des laufenden Jahres wird etwa einmal je Woche ersetzt, Last-Modified 9.11.2026 mit Meldungen bis 8.11.2026; Quelle: nrc.uscg.mil, Abschnitt FOIA Files)",
+    "quelle_url": "https://nrc.uscg.mil/",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Meldungen je Datum von DATE_TIME_RECEIVED (Ortszeit Washington); Tage ohne Meldung = 0; Reihe endet am Tag vor dem letzten Eingangstag der aktuellen Jahresdatei (dieser kann unvollstaendig sein)",
+    "verfuegbar_nach_tagen": 8
+  }
+}
