@@ -1350,7 +1350,7 @@
     "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "BoE-Zinsentscheide sind ein eigenstaendiges geldpolitisches Ereignis wie FOMC/EZB (bereits in leitzins_aenderungstage); testet kurzfristige Reaktion GBP-naher Ziele (EWU, GBP-Paare) auf eine dritte grosse Notenbank mit sehr langer Reihe.",
-    "grund": "Oeffentliche Statistical-Interactive-Database ohne Login, taegliche Bank-Rate-Reihe seit 1975 dokumentiert (Aenderungstage weit vor 1990, Zusatz 4 Schwerpunkt). | Geprueft 2026-09-26T12:14:28Z: oeffentlicher CSV-Export der BoE Interactive Statistical Database (Serie IUDBEDR) ohne Login/Schluessel funktioniert; 13077 Zeilen, erste 1975-01-02, letzte 2026-09-24, Median-Abstand 1.0 Kalendertag(e), Anteil gleicher Folgewerte 96.4% (plausibel: Bank Rate aendert sich selten), Wertebereich 0.0-1.0% (plausibel). Alle Kriterien K1-K7 erfuellt. Aktiv als eigenstaendige dritte Notenbank neben FOMC/EZB (leitzins_aenderungstage). | Abruffehler 2026-10-28T08Z: zu wenige Daten, alte Datei bleibt. | Lauf 2026-10-29T00:25Z: Abruf gescheitert (keine/zu wenige Daten), alte Dateien bleiben; Status unveraendert, naechster Lauf erneut.",
+    "grund": "Oeffentliche Statistical-Interactive-Database ohne Login, taegliche Bank-Rate-Reihe seit 1975 dokumentiert (Aenderungstage weit vor 1990, Zusatz 4 Schwerpunkt). | Geprueft 2026-09-26T12:14:28Z: oeffentlicher CSV-Export der BoE Interactive Statistical Database (Serie IUDBEDR) ohne Login/Schluessel funktioniert; 13077 Zeilen, erste 1975-01-02, letzte 2026-09-24, Median-Abstand 1.0 Kalendertag(e), Anteil gleicher Folgewerte 96.4% (plausibel: Bank Rate aendert sich selten), Wertebereich 0.0-1.0% (plausibel). Alle Kriterien K1-K7 erfuellt. Aktiv als eigenstaendige dritte Notenbank neben FOMC/EZB (leitzins_aenderungstage). | Abruffehler 2026-10-28T08Z: zu wenige Daten, alte Datei bleibt. | Lauf 2026-10-29T00:25Z: Abruf gescheitert (keine/zu wenige Daten), alte Dateien bleiben; Status unveraendert, naechster Lauf erneut. | Lauf 2026-11-12T08:24Z: Abruf lieferte 'keine/zu wenige Daten' (auch bei Wiederholung); alte Datei bleibt stehen (letzte 2026-11-10), nächster Lauf erneut.",
     "aufgenommen_utc": "2026-09-26T09:40:47Z",
     "reihen": [
       "aenderungstage"
@@ -5074,7 +5074,7 @@
     "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Tornado- und Unwetterausbrueche verursachen versicherte Schaeden und Netzausfaelle, die am Folgetag bekannt sind; kurzfristig relevant fuer Versicherer/Finanzwerte (XLF) und Versorger (XLU) gegenueber dem Weltindex.",
-    "grund": "Aufgenommen 2026-11-12T00:25Z als Ersatz fuer spc_tornado_historie_1950 (endgueltige DB nicht laufend). Je Berichtstag (12-12 UTC) eine Datei, 200 ohne Login/Schluessel, NOAA-Daten gemeinfrei (K3). Vorlaeufige Meldungen, ungefiltert; werden nach dem Berichtstag nicht mehr geaendert (K4, letzte 3 Tage je Lauf neu geholt). Dateien vor ca. 2004-05 ohne Abschnittskoepfe, darum Beginn 2005-01-01 (K2 erfuellt). Leere Dateien/404 = fehlend, nicht 0. IM AUFBAU in Etappen (Cache, je Lauf ca. 140 s, ~11 Anfragen/s, 4 parallel): Stand 2026-11-12T00:25Z 2075 Tage 2005-01-01..2010-08-12 plus juengste Tage, offen 5910; CSV erst, wenn lueckenlos (ca. 5 weitere Laeufe). Abbrueche bisher nur HTTP 502 (voruebergehend), naechster Lauf setzt fort. Pruefung Teilbestand: Tornado min 0 max 140 (2006-03-12, Ausbruch) Mittel 4.1, Anteil gleicher Folgewerte 42% (viele Nulltage, Zaehldaten, erklaerbar); gesamt min 0 max 872 Mittel 69.8, gleiche Folgewerte 17%. Reihen aktiv: tornado_meldungen, unwetter_meldungen_gesamt. | Nach run_all 2026-11-12T00:45Z: Cache 3432 Tage, offen rund 4550 (ca. 3-4 weitere Laeufe). | Zusatzetappe 2026-11-12T00:50Z: Cache 4709 Tage, offen 3276 (ca. 2-3 weitere Laeufe). | Nach run_all 2026-11-12T04:34Z: Cache 6346 Tage, offen rund 1640 (ca. 1-2 weitere Laeufe); noch keine CSV.",
+    "grund": "Aufgenommen 2026-11-12T00:25Z als Ersatz fuer spc_tornado_historie_1950 (endgueltige DB nicht laufend). Je Berichtstag (12-12 UTC) eine Datei, 200 ohne Login/Schluessel, NOAA-Daten gemeinfrei (K3). Vorlaeufige Meldungen, ungefiltert; werden nach dem Berichtstag nicht mehr geaendert (K4, letzte 3 Tage je Lauf neu geholt). Dateien vor ca. 2004-05 ohne Abschnittskoepfe, darum Beginn 2005-01-01 (K2 erfuellt). Leere Dateien/404 = fehlend, nicht 0. IM AUFBAU in Etappen (Cache, je Lauf ca. 140 s, ~11 Anfragen/s, 4 parallel): Stand 2026-11-12T00:25Z 2075 Tage 2005-01-01..2010-08-12 plus juengste Tage, offen 5910; CSV erst, wenn lueckenlos (ca. 5 weitere Laeufe). Abbrueche bisher nur HTTP 502 (voruebergehend), naechster Lauf setzt fort. Pruefung Teilbestand: Tornado min 0 max 140 (2006-03-12, Ausbruch) Mittel 4.1, Anteil gleicher Folgewerte 42% (viele Nulltage, Zaehldaten, erklaerbar); gesamt min 0 max 872 Mittel 69.8, gleiche Folgewerte 17%. Reihen aktiv: tornado_meldungen, unwetter_meldungen_gesamt. | Nach run_all 2026-11-12T00:45Z: Cache 3432 Tage, offen rund 4550 (ca. 3-4 weitere Laeufe). | Zusatzetappe 2026-11-12T00:50Z: Cache 4709 Tage, offen 3276 (ca. 2-3 weitere Laeufe). | Nach run_all 2026-11-12T04:34Z: Cache 6346 Tage, offen rund 1640 (ca. 1-2 weitere Laeufe); noch keine CSV. | Nach run_all 2026-11-12T08:24Z und Zusatzetappe 08:30Z: Cache 7218 Tage, offen 767 (Abbruch HTTP 502 bei 2024-09-28, vorübergehend); noch keine CSV, ca. 1-2 weitere Läufe.",
     "reihen": [
       "tornado_meldungen",
       "unwetter_meldungen_gesamt"
@@ -5098,5 +5098,35 @@
     ],
     "aufgenommen_utc": "2026-11-12T04:15Z",
     "geprueft_utc": "2026-11-12T04:15Z"
+  },
+  {
+    "id": "uk_cma_faelle",
+    "name": "UK CMA: Fallregister (Fusionen, Kartell, Märkte) über GOV.UK-Such-API",
+    "url": "https://www.gov.uk/api/search.json?filter_format=cma_case",
+    "domain": "www.gov.uk",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "grund": "Eigene Recherche 2026-11-12T08:20Z (Zusatz 6 Punkt 5 Kartellentscheide). API frei (200, ohne Schlüssel), 2594 Fälle. Abgelehnt: kein belastbares Bekanntgabedatum – nur opened_date (Fallbeginn, kann vor der öffentlichen Ankündigung liegen, z.B. Voranmeldung), kein Erstveröffentlichungsdatum im Index (first_published_at leer, public_timestamp = letzte Änderung); 1239 von 2594 Fällen ganz ohne Datum; nur ca. 80-100 datierte Fälle je Jahr (sehr dünn, Strukturbruch 2014 bei Gründung CMA). Rückdatierung aus späterem Wissen wäre nicht auszuschliessen (Zusatz 6). Ersatz: eu_wettbewerbsentscheide ist schon aktiv.",
+    "mechanismus": "Britische Fusions- und Kartellentscheide könnten kurzfristig auf britische Grosskonzerne und die betroffenen Sektoren gegenüber dem Weltindex wirken.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-12T08:20Z",
+    "geprueft_utc": "2026-11-12T08:20Z",
+    "prioritaet": "normal",
+    "herkunft": "eigene Recherche"
+  },
+  {
+    "id": "ema_zulassungsentscheide",
+    "name": "EMA: Zulassungsentscheide Humanarzneimittel (Medicines output, EC-Entscheiddatum)",
+    "url": "https://www.ema.europa.eu/en/medicines/download-medicine-data",
+    "domain": "www.ema.europa.eu",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "grund": "Test 2026-11-12T08:20Z: www.ema.europa.eu liefert HTTP 429 (Seite und xlsx-Bericht) von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Zu prüfen: Datum der EU-Kommissionsentscheidung bzw. CHMP-Stellungnahme als Bekanntgabetag, Historie ab 1995, Datei nur xlsx (Standardbibliothek: zipfile+xml nötig).",
+    "mechanismus": "Europäische Zulassungsentscheide für neue Wirkstoffe ergänzen fda_zulassungen und könnten kurzfristig auf Gesundheit/Biotech (XLV) und Europa gegenüber dem Weltindex wirken.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-12T08:20Z",
+    "geprueft_utc": "2026-11-12T08:20Z",
+    "prioritaet": "hoch",
+    "herkunft": "eigene Recherche"
   }
 ]
