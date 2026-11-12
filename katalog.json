@@ -5135,13 +5135,13 @@
     "url": "https://api.fdic.gov/banks/history?filters=CHANGECODE:223&fields=EFFDATE,PROCDATE,INSTNAME&limit=10000",
     "domain": "api.fdic.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Erste Priorität Firmenereignisse (Zusatz 8) und Historie vor 1990 (Daten ab 1934). api.fdic.gov aus dieser Umgebung erreichbar (HTTP 200, Test 12.11.2026). Bekanntgabetag: PROCDATE prüfen, nicht EFFDATE allein (Frist K5). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "abgelehnt",
+    "grund": "Erste Priorität Firmenereignisse (Zusatz 8) und Historie vor 1990 (Daten ab 1934). api.fdic.gov aus dieser Umgebung erreichbar (HTTP 200, Test 12.11.2026). Bekanntgabetag: PROCDATE prüfen, nicht EFFDATE allein (Frist K5). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Test 2026-11-12T12:35Z: API erreichbar (18386 Fusionen Code 223), aber kein Bekanntgabetag in den Daten: EFFDATE = Vollzug (im Voraus angekündigt, Übernahme Monate früher öffentlich), PROCDATE = interne FDIC-Verarbeitung (Median 23 Tage nach EFFDATE, 90%-Quantil 140 Tage; PROCDATE erst ab 1995-12-15 belegt). Weder Datum bildet den Tag der öffentlichen Bekanntgabe ab (Zusatz 6); zudem letzter PROCDATE 2026-11-01 (11 Tage, K5) und Index nur wöchentlich erneuert. Abgelehnt: Datum nicht punktgenau (K4/Zusatz 6).",
     "mechanismus": "Wellen von Bankfusionen zeigen Konsolidierungsdruck und Übernahmeprämien im Bankensektor und können kurzfristig XLF gegenüber dem Weltindex bewegen.",
     "prioritaet": "hoch",
     "reihen": [],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-12T12:35Z"
   },
   {
     "id": "fed_h2_bankantraege_genehmigungen",
@@ -5177,13 +5177,16 @@
     "url": "https://www.thegazette.co.uk/insolvency/notice/data.feed?categorycode=G205000000&start-publish-date=...&end-publish-date=...",
     "domain": "www.thegazette.co.uk",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Erste Priorität Firmenereignisse (Zusatz 8); erste Firmenereignis-Quelle ausserhalb der USA mit Tagesdatum. Feed erreichbar (HTTP 200). Beginn der Online-Historie prüfen (Ziel vor 2000). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "aktiv",
+    "grund": "Erste Priorität Firmenereignisse (Zusatz 8); erste Firmenereignis-Quelle ausserhalb der USA mit Tagesdatum. Feed erreichbar (HTTP 200). Beginn der Online-Historie prüfen (Ziel vor 2000). Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Test 2026-11-12T12:35Z: Feed liefert je Tag f:total; categorycode=G205000000 liefert 0 (falscher Code), G205010000 = Corporate Insolvency, noticetypes=2450 = Petitions to Wind Up. Historie ab 1998 (1990-1997 einzelne Tage 0). Abfragen langsam (bis 20 s für jüngste Tage); 300 Tage je Lauf (3 parallel, Budget 135 s), Cache cache.json, CSV erst bei lückenlosem Bestand (ca. 17 Läufe). Teilbestand 300 Tage: firmen min 0 max 611 Mittel 164; Anträge min 0 max 143 Mittel 20 (Freitag-Spitzen, Wochenendausgaben klein). Datum = publish-date, verfuegbar_nach_tagen 1. Reihen aktiv: firmen_insolvenz, abwicklungsantraege (Aufbau).",
     "mechanismus": "Gehäufte Firmeninsolvenzen in Grossbritannien zeigen Kreditstress und können kurzfristig britische Aktien (EWU) und Finanzwerte gegenüber dem Weltindex belasten.",
     "prioritaet": "normal",
-    "reihen": [],
+    "reihen": [
+      "firmen_insolvenz",
+      "abwicklungsantraege"
+    ],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-12T12:35Z"
   },
   {
     "id": "uscg_nrc_meldungen_oel_chemie",
@@ -5205,13 +5208,16 @@
     "url": "https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip",
     "domain": "static.nhtsa.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Erste Priorität Firmenereignisse; misst eine frühere Stufe als nhtsa_ruckrufe und nhtsa_odi_untersuchungen (kein Doppel). Datei erreichbar (HTTP 200). Daten ab etwa 1995; Eingangsdatum = Bekanntgabetag prüfen. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "aktiv",
+    "grund": "Erste Priorität Firmenereignisse; misst eine frühere Stufe als nhtsa_ruckrufe und nhtsa_odi_untersuchungen (kein Doppel). Datei erreichbar (HTTP 200). Daten ab etwa 1995; Eingangsdatum = Bekanntgabetag prüfen. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Aufgenommen 2026-11-12T12:35Z: FLAT_CMPL.zip (376 MB, 1,6 GB Text) in 23 s geholt und gezählt. Datum = DATEA (Aufnahme in die öffentliche Datei). anzahl_gesamt: 11634 Tage 1995-01-03 bis 2026-11-09, Median-Abstand 1, min 0 max 5231 (2004-04-22, Sammelaufnahme), Median 173, gleiche Folgewerte 2.8%, Nulltage 4.8%. anzahl_schwer (Unfall/Brand/Verletzte/Tote): gleicher Zeitraum, min 0 max 1046 (2002-05-14), Median 17, gleiche Folgewerte 6.0%. verfuegbar_nach_tagen 3 (Datei vom 12.11. endet mit DATEA 9.11.). Offen: ob später Beschwerden mit älterem DATEA nachgetragen werden (dann revidiert); beim nächsten Lauf Zeilen vergleichen. Reihen aktiv: anzahl_gesamt, anzahl_schwer.",
     "mechanismus": "Sprunghaft steigende Beschwerden kündigen Untersuchungen und Rückrufe an und können kurzfristig Autohersteller und Zulieferer (XLY) gegenüber dem Weltindex belasten.",
     "prioritaet": "normal",
-    "reihen": [],
+    "reihen": [
+      "anzahl_gesamt",
+      "anzahl_schwer"
+    ],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-12T12:35Z"
   },
   {
     "id": "dol_osha_inspektionen_enforcedata",

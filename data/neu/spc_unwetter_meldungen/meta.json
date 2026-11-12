@@ -1,0 +1,22 @@
+{
+ "tornado_meldungen": {
+  "einheit": "Anzahl",
+  "beschreibung": "Anzahl vorlaeufiger Tornado-Meldungen (USA) je SPC-Berichtstag, ungefiltert (Mehrfachmeldungen moeglich)",
+  "quelle_url": "https://www.spc.noaa.gov/climo/reports/YYMMDD_rpts.csv",
+  "verdichtung": "Summe (Zaehlung der Meldungszeilen) je Berichtstag 12 UTC bis 12 UTC",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "status": "aktiv",
+  "publikation": "taeglich: SPC stellt die vorlaeufigen Local Storm Reports laufend am Berichtstag ins Netz (spc.noaa.gov/climo/reports); der Berichtstag endet 12 UTC des Folgetags, darum 1 Tag."
+ },
+ "unwetter_meldungen_gesamt": {
+  "einheit": "Anzahl",
+  "beschreibung": "Anzahl vorlaeufiger Unwetter-Meldungen (Tornado + Wind + Hagel, USA) je SPC-Berichtstag, ungefiltert",
+  "quelle_url": "https://www.spc.noaa.gov/climo/reports/YYMMDD_rpts.csv",
+  "verdichtung": "Summe (Zaehlung der Meldungszeilen) je Berichtstag 12 UTC bis 12 UTC",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "status": "aktiv",
+  "publikation": "taeglich: SPC stellt die vorlaeufigen Local Storm Reports laufend am Berichtstag ins Netz (spc.noaa.gov/climo/reports); der Berichtstag endet 12 UTC des Folgetags, darum 1 Tag."
+ }
+}

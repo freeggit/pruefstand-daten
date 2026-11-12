@@ -1,0 +1,22 @@
+{
+ "anzahl_gesamt": {
+  "einheit": "Anzahl Beschwerden je Tag",
+  "quelle_url": "https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip",
+  "verdichtung": "Summe je Kalendertag (DATEA), 0 an Tagen ohne Aufnahme",
+  "verfuegbar_nach_tagen": 3,
+  "revidiert": false,
+  "publikation": "taeglich: NHTSA erneuert FLAT_CMPL.zip taeglich (Last-Modified der Datei); Datum ist DATEA = Aufnahme in die oeffentliche Beschwerdedatenbank; Datei vom 12.11.2026 endete mit DATEA 9.11., darum 3 Tage",
+  "status": "aktiv",
+  "beschreibung": "Neu in die NHTSA-ODI-Datenbank aufgenommene Verbraucherbeschwerden zu Fahrzeugen und Ausruestung je Tag (alle Hersteller)."
+ },
+ "anzahl_schwer": {
+  "einheit": "Anzahl Beschwerden je Tag",
+  "quelle_url": "https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip",
+  "verdichtung": "Summe je Kalendertag (DATEA), 0 an Tagen ohne Aufnahme",
+  "verfuegbar_nach_tagen": 3,
+  "revidiert": false,
+  "publikation": "taeglich: NHTSA erneuert FLAT_CMPL.zip taeglich (Last-Modified der Datei); Datum ist DATEA = Aufnahme in die oeffentliche Beschwerdedatenbank; Datei vom 12.11.2026 endete mit DATEA 9.11., darum 3 Tage",
+  "status": "aktiv",
+  "beschreibung": "Davon Beschwerden mit Unfall, Brand, Verletzten oder Toten (Felder CRASH, FIRE, INJURED, DEATHS)."
+ }
+}
