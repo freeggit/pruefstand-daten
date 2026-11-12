@@ -1,12 +1,12 @@
 {
- "erzeugt_utc": "2026-11-11T10:47:41Z",
+ "erzeugt_utc": "2026-11-12T10:57:41Z",
  "reihen": {
   "kurse:spy": {
-   "abruf_utc": "2026-11-11T10:47:42Z",
+   "abruf_utc": "2026-11-12T10:57:42Z",
    "datei": "data/kurse/spy_d.csv",
-   "zeilen": 8504,
+   "zeilen": 8505,
    "erste": "1993-01-29",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -14,11 +14,11 @@
    "granularitaet": "1d"
   },
   "kurse:acwi": {
-   "abruf_utc": "2026-11-11T10:47:43Z",
+   "abruf_utc": "2026-11-12T10:57:43Z",
    "datei": "data/kurse/acwi_d.csv",
-   "zeilen": 4686,
+   "zeilen": 4687,
    "erste": "2008-03-28",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -27,11 +27,11 @@
    "luecken_60t": []
   },
   "kurse:efa": {
-   "abruf_utc": "2026-11-11T10:47:44Z",
+   "abruf_utc": "2026-11-12T10:57:45Z",
    "datei": "data/kurse/efa_d.csv",
-   "zeilen": 6339,
+   "zeilen": 6340,
    "erste": "2001-08-27",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -40,11 +40,11 @@
    "luecken_60t": []
   },
   "kurse:ewj": {
-   "abruf_utc": "2026-11-11T10:47:45Z",
+   "abruf_utc": "2026-11-12T10:57:46Z",
    "datei": "data/kurse/ewj_d.csv",
-   "zeilen": 7713,
+   "zeilen": 7714,
    "erste": "1996-03-18",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -53,11 +53,11 @@
    "luecken_60t": []
   },
   "kurse:xlb": {
-   "abruf_utc": "2026-11-11T10:47:46Z",
+   "abruf_utc": "2026-11-12T10:57:47Z",
    "datei": "data/kurse/xlb_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -66,11 +66,11 @@
    "luecken_60t": []
   },
   "kurse:xlc": {
-   "abruf_utc": "2026-11-11T10:47:47Z",
+   "abruf_utc": "2026-11-12T10:57:49Z",
    "datei": "data/kurse/xlc_d.csv",
-   "zeilen": 2111,
+   "zeilen": 2112,
    "erste": "2018-06-19",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -79,11 +79,11 @@
    "luecken_60t": []
   },
   "kurse:xle": {
-   "abruf_utc": "2026-11-11T10:47:48Z",
+   "abruf_utc": "2026-11-12T10:57:50Z",
    "datei": "data/kurse/xle_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -92,11 +92,11 @@
    "luecken_60t": []
   },
   "kurse:xlf": {
-   "abruf_utc": "2026-11-11T10:47:49Z",
+   "abruf_utc": "2026-11-12T10:57:51Z",
    "datei": "data/kurse/xlf_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -105,11 +105,11 @@
    "luecken_60t": []
   },
   "kurse:xli": {
-   "abruf_utc": "2026-11-11T10:47:50Z",
+   "abruf_utc": "2026-11-12T10:57:53Z",
    "datei": "data/kurse/xli_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -118,11 +118,11 @@
    "luecken_60t": []
   },
   "kurse:xlk": {
-   "abruf_utc": "2026-11-11T10:47:51Z",
+   "abruf_utc": "2026-11-12T10:57:54Z",
    "datei": "data/kurse/xlk_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -131,11 +131,11 @@
    "luecken_60t": []
   },
   "kurse:xlp": {
-   "abruf_utc": "2026-11-11T10:47:52Z",
+   "abruf_utc": "2026-11-12T10:57:56Z",
    "datei": "data/kurse/xlp_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -144,11 +144,11 @@
    "luecken_60t": []
   },
   "kurse:xlre": {
-   "abruf_utc": "2026-11-11T10:47:53Z",
+   "abruf_utc": "2026-11-12T10:57:57Z",
    "datei": "data/kurse/xlre_d.csv",
-   "zeilen": 2789,
+   "zeilen": 2790,
    "erste": "2015-10-08",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -157,11 +157,11 @@
    "luecken_60t": []
   },
   "kurse:xlu": {
-   "abruf_utc": "2026-11-11T10:47:53Z",
+   "abruf_utc": "2026-11-12T10:57:58Z",
    "datei": "data/kurse/xlu_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -170,11 +170,11 @@
    "luecken_60t": []
   },
   "kurse:xlv": {
-   "abruf_utc": "2026-11-11T10:47:54Z",
+   "abruf_utc": "2026-11-12T10:58:00Z",
    "datei": "data/kurse/xlv_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -183,11 +183,11 @@
    "luecken_60t": []
   },
   "kurse:xly": {
-   "abruf_utc": "2026-11-11T10:47:56Z",
+   "abruf_utc": "2026-11-12T10:58:01Z",
    "datei": "data/kurse/xly_d.csv",
-   "zeilen": 7014,
+   "zeilen": 7015,
    "erste": "1998-12-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -196,11 +196,11 @@
    "luecken_60t": []
   },
   "kurse:ewl": {
-   "abruf_utc": "2026-11-11T10:47:57Z",
+   "abruf_utc": "2026-11-12T10:58:02Z",
    "datei": "data/kurse/ewl_d.csv",
-   "zeilen": 7713,
+   "zeilen": 7714,
    "erste": "1996-03-18",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -209,11 +209,11 @@
    "luecken_60t": []
   },
   "kurse:ewg": {
-   "abruf_utc": "2026-11-11T10:47:58Z",
+   "abruf_utc": "2026-11-12T10:58:04Z",
    "datei": "data/kurse/ewg_d.csv",
-   "zeilen": 7713,
+   "zeilen": 7714,
    "erste": "1996-03-18",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -222,11 +222,11 @@
    "luecken_60t": []
   },
   "kurse:uso": {
-   "abruf_utc": "2026-11-11T10:47:58Z",
+   "abruf_utc": "2026-11-12T10:58:05Z",
    "datei": "data/kurse/uso_d.csv",
-   "zeilen": 5180,
+   "zeilen": 5181,
    "erste": "2006-04-10",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -235,11 +235,11 @@
    "luecken_60t": []
   },
   "kurse:ung": {
-   "abruf_utc": "2026-11-11T10:47:59Z",
+   "abruf_utc": "2026-11-12T10:58:06Z",
    "datei": "data/kurse/ung_d.csv",
-   "zeilen": 4924,
+   "zeilen": 4925,
    "erste": "2007-04-18",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -248,11 +248,11 @@
    "luecken_60t": []
   },
   "kurse:gld": {
-   "abruf_utc": "2026-11-11T10:48:00Z",
+   "abruf_utc": "2026-11-12T10:58:08Z",
    "datei": "data/kurse/gld_d.csv",
-   "zeilen": 5529,
+   "zeilen": 5530,
    "erste": "2004-11-18",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -261,11 +261,11 @@
    "luecken_60t": []
   },
   "kurse:dba": {
-   "abruf_utc": "2026-11-11T10:48:01Z",
+   "abruf_utc": "2026-11-12T10:58:09Z",
    "datei": "data/kurse/dba_d.csv",
-   "zeilen": 4994,
+   "zeilen": 4995,
    "erste": "2007-01-05",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -274,11 +274,11 @@
    "luecken_60t": []
   },
   "kurse:tlt": {
-   "abruf_utc": "2026-11-11T10:48:02Z",
+   "abruf_utc": "2026-11-12T10:58:10Z",
    "datei": "data/kurse/tlt_d.csv",
-   "zeilen": 6111,
+   "zeilen": 6112,
    "erste": "2002-07-30",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -287,11 +287,11 @@
    "luecken_60t": []
   },
   "kurse:bas.de": {
-   "abruf_utc": "2026-11-11T10:48:04Z",
+   "abruf_utc": "2026-11-12T10:58:12Z",
    "datei": "data/kurse/bas.de_d.csv",
-   "zeilen": 7659,
+   "zeilen": 7660,
    "erste": "1996-12-16",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -299,11 +299,11 @@
    "granularitaet": "1d"
   },
   "kurse:hlag.de": {
-   "abruf_utc": "2026-11-11T10:48:04Z",
+   "abruf_utc": "2026-11-12T10:58:13Z",
    "datei": "data/kurse/hlag.de_d.csv",
-   "zeilen": 2799,
+   "zeilen": 2800,
    "erste": "2015-11-06",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -311,11 +311,11 @@
    "granularitaet": "1d"
   },
   "kurse:knin.sw": {
-   "abruf_utc": "2026-11-11T10:48:05Z",
+   "abruf_utc": "2026-11-12T10:58:14Z",
    "datei": "data/kurse/knin.sw_d.csv",
-   "zeilen": 6717,
+   "zeilen": 6718,
    "erste": "2000-05-22",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -323,11 +323,11 @@
    "granularitaet": "1d"
   },
   "kurse:eem": {
-   "abruf_utc": "2026-11-11T10:48:06Z",
+   "abruf_utc": "2026-11-12T10:58:16Z",
    "datei": "data/kurse/eem_d.csv",
-   "zeilen": 5933,
+   "zeilen": 5934,
    "erste": "2003-04-14",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -336,11 +336,11 @@
    "luecken_60t": []
   },
   "kurse:ewz": {
-   "abruf_utc": "2026-11-11T10:48:07Z",
+   "abruf_utc": "2026-11-12T10:58:17Z",
    "datei": "data/kurse/ewz_d.csv",
-   "zeilen": 6621,
+   "zeilen": 6622,
    "erste": "2000-07-14",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -349,11 +349,11 @@
    "luecken_60t": []
   },
   "kurse:fxi": {
-   "abruf_utc": "2026-11-11T10:48:08Z",
+   "abruf_utc": "2026-11-12T10:58:18Z",
    "datei": "data/kurse/fxi_d.csv",
-   "zeilen": 5558,
+   "zeilen": 5559,
    "erste": "2004-10-08",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -362,11 +362,11 @@
    "luecken_60t": []
   },
   "kurse:smh": {
-   "abruf_utc": "2026-11-11T10:48:09Z",
+   "abruf_utc": "2026-11-12T10:58:20Z",
    "datei": "data/kurse/smh_d.csv",
-   "zeilen": 6649,
+   "zeilen": 6650,
    "erste": "2000-06-05",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -375,11 +375,11 @@
    "luecken_60t": []
   },
   "kurse:ibb": {
-   "abruf_utc": "2026-11-11T10:48:10Z",
+   "abruf_utc": "2026-11-12T10:58:21Z",
    "datei": "data/kurse/ibb_d.csv",
-   "zeilen": 6475,
+   "zeilen": 6476,
    "erste": "2001-02-12",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -388,11 +388,11 @@
    "luecken_60t": []
   },
   "kurse:tip": {
-   "abruf_utc": "2026-11-11T10:48:11Z",
+   "abruf_utc": "2026-11-12T10:58:23Z",
    "datei": "data/kurse/tip_d.csv",
-   "zeilen": 5769,
+   "zeilen": 5770,
    "erste": "2003-12-05",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -401,11 +401,11 @@
    "luecken_60t": []
   },
   "kurse:lqd": {
-   "abruf_utc": "2026-11-11T10:48:12Z",
+   "abruf_utc": "2026-11-12T10:58:24Z",
    "datei": "data/kurse/lqd_d.csv",
-   "zeilen": 6111,
+   "zeilen": 6112,
    "erste": "2002-07-30",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -414,11 +414,11 @@
    "luecken_60t": []
   },
   "kurse:ief": {
-   "abruf_utc": "2026-11-11T10:48:13Z",
+   "abruf_utc": "2026-11-12T10:58:25Z",
    "datei": "data/kurse/ief_d.csv",
-   "zeilen": 6111,
+   "zeilen": 6112,
    "erste": "2002-07-30",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -427,11 +427,11 @@
    "luecken_60t": []
   },
   "kurse:shy": {
-   "abruf_utc": "2026-11-11T10:48:14Z",
+   "abruf_utc": "2026-11-12T10:58:27Z",
    "datei": "data/kurse/shy_d.csv",
-   "zeilen": 6111,
+   "zeilen": 6112,
    "erste": "2002-07-30",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -440,11 +440,11 @@
    "luecken_60t": []
   },
   "kurse:ewu": {
-   "abruf_utc": "2026-11-11T10:48:15Z",
+   "abruf_utc": "2026-11-12T10:58:28Z",
    "datei": "data/kurse/ewu_d.csv",
-   "zeilen": 7713,
+   "zeilen": 7714,
    "erste": "1996-03-18",
-   "letzte": "2026-11-10",
+   "letzte": "2026-11-11",
    "quelle": "yahoo-chart",
    "stooq_fehler": "übersprungen (Stooq sperrt Rechenzentrums-IPs; STOOQ=1 zum Versuchen)",
    "kurzabfrage_ergaenzt": [],
@@ -453,147 +453,147 @@
    "luecken_60t": []
   },
   "fred:T10Y2Y": {
-   "abruf_utc": "2026-11-11T10:48:16Z",
+   "abruf_utc": "2026-11-12T10:58:29Z",
    "datei": "data/fred/T10Y2Y.csv",
    "zeilen": 13161,
    "erste": "1976-06-01",
    "letzte": "2026-11-10"
   },
   "fred:BAA10Y": {
-   "abruf_utc": "2026-11-11T10:48:17Z",
+   "abruf_utc": "2026-11-12T10:58:31Z",
    "datei": "data/fred/BAA10Y.csv",
    "zeilen": 10658,
    "erste": "1986-01-02",
    "letzte": "2026-11-09"
   },
   "fred:DGS10": {
-   "abruf_utc": "2026-11-11T10:48:18Z",
+   "abruf_utc": "2026-11-12T10:58:32Z",
    "datei": "data/fred/DGS10.csv",
    "zeilen": 16920,
    "erste": "1962-01-02",
    "letzte": "2026-11-09"
   },
   "fred:VIXCLS": {
-   "abruf_utc": "2026-11-11T10:48:19Z",
+   "abruf_utc": "2026-11-12T10:58:33Z",
    "datei": "data/fred/VIXCLS.csv",
-   "zeilen": 9615,
+   "zeilen": 9616,
    "erste": "1990-01-02",
-   "letzte": "2026-11-09"
+   "letzte": "2026-11-10"
   },
   "fred:ICSA": {
-   "abruf_utc": "2026-11-11T10:48:20Z",
+   "abruf_utc": "2026-11-12T10:58:34Z",
    "datei": "data/fred/ICSA.csv",
    "zeilen": 3122,
    "erste": "1967-01-07",
    "letzte": "2026-10-31"
   },
   "fred:WALCL": {
-   "abruf_utc": "2026-11-11T10:48:22Z",
+   "abruf_utc": "2026-11-12T10:58:35Z",
    "datei": "data/fred/WALCL.csv",
    "zeilen": 1247,
    "erste": "2002-12-18",
    "letzte": "2026-11-04"
   },
   "fred:WEI": {
-   "abruf_utc": "2026-11-11T10:48:23Z",
+   "abruf_utc": "2026-11-12T10:58:37Z",
    "datei": "data/fred/WEI.csv",
    "zeilen": 983,
    "erste": "2008-01-05",
    "letzte": "2026-10-31"
   },
   "fred:SP500": {
-   "abruf_utc": "2026-11-11T10:48:24Z",
+   "abruf_utc": "2026-11-12T10:58:38Z",
    "datei": "data/fred/SP500.csv",
    "zeilen": 2608,
    "erste": "2016-11-11",
    "letzte": "2026-11-10"
   },
   "fred:DCOILWTICO": {
-   "abruf_utc": "2026-11-11T10:48:25Z",
+   "abruf_utc": "2026-11-12T10:58:39Z",
    "datei": "data/fred/DCOILWTICO.csv",
    "zeilen": 10654,
    "erste": "1986-01-02",
    "letzte": "2026-11-03"
   },
   "fred:DHHNGSP": {
-   "abruf_utc": "2026-11-11T10:48:26Z",
+   "abruf_utc": "2026-11-12T10:58:40Z",
    "datei": "data/fred/DHHNGSP.csv",
    "zeilen": 7781,
    "erste": "1997-01-07",
    "letzte": "2026-11-03"
   },
   "fred:DEXSZUS": {
-   "abruf_utc": "2026-11-11T10:48:27Z",
+   "abruf_utc": "2026-11-12T10:58:42Z",
    "datei": "data/fred/DEXSZUS.csv",
    "zeilen": 14570,
    "erste": "1971-01-04",
    "letzte": "2026-11-06"
   },
   "fred:BAMLH0A0HYM2": {
-   "abruf_utc": "2026-11-11T10:48:28Z",
+   "abruf_utc": "2026-11-12T10:58:43Z",
    "datei": "data/fred/BAMLH0A0HYM2.csv",
    "zeilen": 792,
    "erste": "2023-11-13",
    "letzte": "2026-11-09"
   },
   "fred:T10YIE": {
-   "abruf_utc": "2026-11-11T10:48:29Z",
+   "abruf_utc": "2026-11-12T10:58:44Z",
    "datei": "data/fred/T10YIE.csv",
    "zeilen": 6224,
    "erste": "2003-01-02",
    "letzte": "2026-11-10"
   },
   "fred:USEPUINDXD": {
-   "abruf_utc": "2026-11-11T10:48:30Z",
+   "abruf_utc": "2026-11-12T10:58:45Z",
    "datei": "data/fred/USEPUINDXD.csv",
-   "zeilen": 15288,
+   "zeilen": 15289,
    "erste": "1985-01-01",
-   "letzte": "2026-11-09"
+   "letzte": "2026-11-10"
   },
   "fred:DTWEXBGS": {
-   "abruf_utc": "2026-11-11T10:48:31Z",
+   "abruf_utc": "2026-11-12T10:58:47Z",
    "datei": "data/fred/DTWEXBGS.csv",
    "zeilen": 5440,
    "erste": "2006-01-02",
    "letzte": "2026-11-06"
   },
   "french:F-F_Research_Data_Factors_CSV.zip": {
-   "abruf_utc": "2026-11-11T10:47:41Z",
+   "abruf_utc": "2026-11-12T10:57:41Z",
    "dateien": [
     "F-F_Research_Data_Factors.csv"
    ],
    "bytes": 13078
   },
   "french:F-F_Research_Data_5_Factors_2x3_CSV.zip": {
-   "abruf_utc": "2026-11-11T10:47:41Z",
+   "abruf_utc": "2026-11-12T10:57:41Z",
    "dateien": [
     "F-F_Research_Data_5_Factors_2x3.csv"
    ],
    "bytes": 11971
   },
   "french:12_Industry_Portfolios_CSV.zip": {
-   "abruf_utc": "2026-11-11T10:47:41Z",
+   "abruf_utc": "2026-11-12T10:57:41Z",
    "dateien": [
     "12_Industry_Portfolios.csv"
    ],
    "bytes": 139127
   },
   "french:F-F_Momentum_Factor_CSV.zip": {
-   "abruf_utc": "2026-11-11T10:47:41Z",
+   "abruf_utc": "2026-11-12T10:57:41Z",
    "dateien": [
     "F-F_Momentum_Factor.csv"
    ],
    "bytes": 5603
   },
   "french:12_Industry_Portfolios_daily_CSV.zip": {
-   "abruf_utc": "2026-11-11T10:47:41Z",
+   "abruf_utc": "2026-11-12T10:57:41Z",
    "dateien": [
     "12_Industry_Portfolios_Daily.csv"
    ],
    "bytes": 1094305
   },
   "french:F-F_Research_Data_Factors_daily_CSV.zip": {
-   "abruf_utc": "2026-11-11T10:47:41Z",
+   "abruf_utc": "2026-11-12T10:57:41Z",
    "dateien": [
     "F-F_Research_Data_Factors_daily.csv"
    ],
