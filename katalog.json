@@ -5146,16 +5146,18 @@
   {
     "id": "fed_h2_bankantraege_genehmigungen",
     "name": "Federal Reserve H.2: wöchentliche Entscheide zu Bankanträgen (Übernahmen, Fusionen)",
-    "url": "https://www.federalreserve.gov/releases/h2/ (Archiv je Woche, Muster /releases/h2/JJJJMMTT/)",
+    "url": "https://www.federalreserve.gov/json/ne-press.json",
     "domain": "www.federalreserve.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Unabhängige zweite Quelle zum Mechanismus von fdic_bankfusionen_historie (Aufsicht statt Einlagensicherung). Index-Seite erreichbar (HTTP 200). Archiv ab etwa 1996 zu prüfen. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "aktiv",
+    "grund": "Unabhängige zweite Quelle zum Mechanismus von fdic_bankfusionen_historie (Aufsicht statt Einlagensicherung). Index-Seite erreichbar (HTTP 200). Archiv ab etwa 1996 zu prüfen. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Aufgenommen 2026-11-12T16:50Z: H.2-Wochenseiten nur als HTML ab 2022-01-29 (davor PDF ab 1996, Standardbibliothek ungeeignet); stattdessen Pressemitteilungsliste federalreserve.gov/json/ne-press.json (ab 2006-01-03, 4653 Mitteilungen), Kategorie 'Orders on Banking Applications' = Board-Entscheide, die im H.2 mit 'Announced' stehen. Datum = Mitteilungsdatum (stimmt in allen 464 Fällen mit dem URL-Datum überein), verfuegbar_nach_tagen 0, publikation taeglich (oft 16:00 New York, nach Börsenschluss). anzahl_bekanntgaben: 7619 Tage 2006-01-03 bis 2026-11-12, Median-Abstand 1, min 0 max 3, Summe 464, Nulltage 94.6%, gleiche Folgewerte 89.9% (dünne Ereignisreihe, erwartet). Entscheide unter delegierter Befugnis (Reserve Banks) nicht enthalten. Revision: keine (datierte Mitteilungen). Reihen aktiv: anzahl_bekanntgaben.",
     "mechanismus": "Genehmigte Bankübernahmen werden mit dem H.2-Termin öffentlich und können kurzfristig Bankaktien (XLF) gegenüber dem Weltindex bewegen.",
     "prioritaet": "normal",
-    "reihen": [],
+    "reihen": [
+      "anzahl_bekanntgaben"
+    ],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-12T16:50Z"
   },
   {
     "id": "nvd_kritische_schwachstellen",
@@ -5225,13 +5227,13 @@
     "url": "https://enforcedata.dol.gov/views/data_catalogs.php (OSHA Inspection, Datenkatalog)",
     "domain": "enforcedata.dol.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Ersatzquelle für osha_todesfaelle_meldungen (osha.gov HTTP 403); Server antwortet (HTTP 301). Daten ab 1972, also auch Historie vor 1990. Nur Unfall-Inspektionen (Anlass «Accident») zählen. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "abgelehnt",
+    "grund": "Ersatzquelle für osha_todesfaelle_meldungen (osha.gov HTTP 403); Server antwortet (HTTP 301). Daten ab 1972, also auch Historie vor 1990. Nur Unfall-Inspektionen (Anlass «Accident») zählen. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Test 2026-11-12T16:50Z: K3 verletzt: enforcedata.dol.gov und data.dol.gov liefern nur eine JavaScript-App ohne direkte Dateien; die Daten-API apiprod.dol.gov/v4 verlangt einen API-Schlüssel (HTTP 401 'The API key is either incorrect or missing'). Zudem K4 fraglich: Inspektionsdatensätze werden nachträglich bearbeitet, Eröffnungsdatum ist kein Bekanntgabetag. Nicht weiter verfolgt.",
     "mechanismus": "Häufungen schwerer Arbeitsunfälle und Inspektionen in Industrie und Bau belasten kurzfristig betroffene Branchen (XLI, XLB) gegenüber dem Weltindex.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-12T16:50Z"
   },
   {
     "id": "noaa_ghcn_central_park_wetter",

@@ -1,0 +1,11 @@
+{
+  "anzahl_bekanntgaben": {
+    "beschreibung": "Fed-Board-Entscheide zu Bankantraegen (meist Genehmigung von Uebernahmen und Fusionen durch Bankholdings) je Bekanntgabetag; Pressemitteilungen der Kategorie 'Orders on Banking Applications'",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich (jeder Board-Entscheid wird am Entscheidtag als datierte Pressemitteilung veroeffentlicht, oft 16:00 Uhr New York; der H.2-Wochenbericht nennt dasselbe Datum als 'Announced'; Quelle: federalreserve.gov/newsevents/pressreleases.htm und /releases/h2/)",
+    "quelle_url": "https://www.federalreserve.gov/json/ne-press.json",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Pressemitteilungen je Datum; Kalendertage ohne Mitteilung = 0",
+    "verfuegbar_nach_tagen": 0
+  }
+}
