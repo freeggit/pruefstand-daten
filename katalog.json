@@ -5403,12 +5403,12 @@
     "url": "https://www.accessdata.fda.gov/scripts/opdlisting/oopd/index.cfm",
     "domain": "accessdata.fda.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "mechanismus": "Haeufungen von Orphan-Designationen und -Zulassungen veraendern kurzfristig die Erwartungen an Biotech-Pipelines und koennen IBB/XLV gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank).",
+    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank).",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-13T12:30Z",
     "prioritaet": "hoch"
   },
   {
@@ -5417,12 +5417,12 @@
     "url": "https://lopucki.law.ufl.edu/",
     "domain": "lopucki.law.ufl.edu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "mechanismus": "Insolvenzantraege grosser Firmen erhoehen kurzfristig Kreditrisikopraemien und belasten Banken und Unternehmensanleihen (XLF, LQD) gegenueber dem Weltindex.",
-    "grund": "Lernrunde 2026-11-13: Firmenereignisse; Historie ab 1979 (vor 1990); frei zugaenglich seit Umzug an die University of Florida; Seite HTTP 200. Antragsdatum tagesgenau, Branche (SIC) je Fall.",
+    "grund": "K3 (Lauf 2026-11-13T12:30Z): Nutzungsbedingungen der Case-Table (download_cases_table_terms.php) beschraenken den Zugang auf Abonnenten (Subscribing Division), nur akademische Nutzung, Weitergabeverbot (Non-disclosure); oeffentliche Spiegelung in diesem Repo nicht erlaubt. Die frei sichtbare Spreadsheet-Ansicht (spreadsheet.php, ca. 1200 Faelle ab 1979) faellt unter dieselben Bedingungen. | Vorher: Lernrunde 2026-11-13: Firmenereignisse; Historie ab 1979 (vor 1990); frei zugaenglich seit Umzug an die University of Florida; Seite HTTP 200. Antragsdatum tagesgenau, Branche (SIC) je Fall.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-13T12:30Z",
     "prioritaet": "hoch"
   },
   {
@@ -5459,12 +5459,12 @@
     "url": "https://www.fmcs.gov/resources/documents-and-data/",
     "domain": "fmcs.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "mechanismus": "Streiks und Aussperrungen in Industrie und Autobau unterbrechen kurzfristig Produktion und Gewinne und koennen XLI/XLY gegenueber dem Weltindex belasten.",
-    "grund": "Lernrunde 2026-11-13: Firmenereignisse aggregiert; FMCS veroeffentlicht Datensaetze als Excel ohne Login (HTTP 200). Ersatz fuer bls.gov (Major Work Stoppages), das diese Umgebung sperrt (HTTP 403).",
+    "grund": "K2/K5 (Lauf 2026-11-13T12:30Z): FMCS publiziert nur F-7-Verhandlungsanzeigen (Vertragsablauf-Meldungen) als Excel, fruehestes Jahr FY2018 (Beginn nach 2015, K2 verletzt); Monatsdateien erscheinen erst 4-6 Wochen nach Monatsende (letzte: September-2026, hochgeladen 2026/10), daher K5 nicht erfuellt. Keine Streikliste (Work Stoppages) frei verfuegbar. | Vorher: Lernrunde 2026-11-13: Firmenereignisse aggregiert; FMCS veroeffentlicht Datensaetze als Excel ohne Login (HTTP 200). Ersatz fuer bls.gov (Major Work Stoppages), das diese Umgebung sperrt (HTTP 403).",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-13T12:30Z",
     "prioritaet": "normal"
   },
   {
