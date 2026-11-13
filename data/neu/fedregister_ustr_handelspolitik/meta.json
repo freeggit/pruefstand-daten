@@ -1,0 +1,20 @@
+{
+  "dokumente": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Dokumente des Office of the United States Trade Representative (Bekanntmachungen, Regeln, Anhoerungen), 0 an Tagen ohne USTR-Dokument; Nullen nur bis zum letzten erschienenen Federal-Register-Tag.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bundesarbeitstag; ein Dokument ist an seinem gedruckten Publikationsdatum oeffentlich, Beleg: federalregister.gov/reader-aids)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=trade-representative-office-of-united-states",
+    "revidiert": false,
+    "verdichtung": "Anzahl Dokumente je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "section301": {
+    "beschreibung": "Wie dokumente, eingeschraenkt auf Volltexttreffer \"section 301\" (Untersuchungen, Zollmassnahmen, Ausnahmen nach Section 301 Trade Act 1974).",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bundesarbeitstag; ein Dokument ist an seinem gedruckten Publikationsdatum oeffentlich, Beleg: federalregister.gov/reader-aids)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=trade-representative-office-of-united-states&conditions%5Bterm%5D=%22section+301%22",
+    "revidiert": false,
+    "verdichtung": "Anzahl Dokumente je Kalendertag (Publikationsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

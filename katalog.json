@@ -4970,9 +4970,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Massnahmen gegen kleinere und regionale Banken zeigen Kredit- und Kontrollprobleme im Bankensektor; ihre Häufung kann Finanzwerte (XLF) kurzfristig belasten.",
-    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag.",
+    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-11T20:17Z"
+    "geprueft_utc": "2026-11-13T00:18Z"
   },
   {
     "id": "osha_todesfaelle_meldungen",
@@ -4983,9 +4983,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
-    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich).",
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-11T20:17Z"
+    "geprueft_utc": "2026-11-13T00:18Z"
   },
   {
     "id": "epa_echo_vollzugsfaelle",
@@ -5009,9 +5009,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
-    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut.",
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-11T20:17Z"
+    "geprueft_utc": "2026-11-13T00:18Z"
   },
   {
     "id": "fra_bahnunfaelle_taeglich",
@@ -5286,5 +5286,42 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-12T09:50Z",
     "geprueft_utc": null
+  },
+  {
+    "id": "fedregister_ustr_handelspolitik",
+    "name": "Federal Register: taegliche Anzahl Dokumente des US-Handelsbeauftragten (USTR), gesamt und Section 301",
+    "url": "https://www.federalregister.gov/api/v1/documents.json",
+    "domain": "federalregister.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "normal",
+    "mechanismus": "Bekanntmachungen des USTR (Section-301-Untersuchungen und -Zoelle, Zollausnahmen, Handelsabkommen) veraendern innert 1 bis 20 Handelstagen die Kosten- und Absatzlage importexponierter Sektoren (XLI, XLB, XLK) und exportabhaengiger Laender (EWJ, EWG) gegenueber dem Weltindex, vgl. Ereignisstudien zu den Section-301-Zoellen 2018/19.",
+    "grund": "Eigene Recherche 2026-11-13T00:18Z (Zusatz 6 Punkt 5; alle offenen Firmenereignis-Kandidaten weiter gesperrt). Ergaenzt fedregister_handelsschutz (nur ITA/ITC Antidumping) um die USTR-Handelspolitik; andere Behoerde, keine Dokumentueberschneidung. K1: Tagesreihe, Median 1,0 (Nullen nur bis zum letzten erschienenen Federal-Register-Tag). K2: erster Wert 1994-01-01, 12004 Zeilen (2094 Dokumente an 1649 Tagen; section301: 440 Dokumente an 378 Tagen). K3: oeffentliche API ohne Schluessel. K4: Publikationsdatum wird nicht revidiert. K5: letzter Wert 2026-11-12. K6: neu. K7: Abruf 46 s, Dateien unter 100 KB, inkrementell via fr_inkrementell. Plausibel: Min 0, Max 7; Anteil gleicher Folgewerte 0.765 bzw. 0.942 ueber 20 %, erklaert durch seltene Ereignisse (Nulltage), keine Anomalie. Reihen aktiv: dokumente, section301 (2 Varianten, unter Grenze Zusatz 3). Paarvorschlag fuer Reto: section301 gegen fedregister_handelsschutz:verfuegungen (Weisses Haus vs. Handelsministerium).",
+    "reihen": [
+      {
+        "reihe": "dokumente",
+        "zeilen": 12004,
+        "erste": "1994-01-01",
+        "letzte": "2026-11-12",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.765,
+        "min": 0.0,
+        "max": 7.0,
+        "status": "aktiv"
+      },
+      {
+        "reihe": "section301",
+        "zeilen": 12004,
+        "erste": "1994-01-01",
+        "letzte": "2026-11-12",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.942,
+        "min": 0.0,
+        "max": 7.0,
+        "status": "aktiv"
+      }
+    ],
+    "aufgenommen_utc": "2026-11-13T00:18Z",
+    "geprueft_utc": "2026-11-13T00:18Z"
   }
 ]
