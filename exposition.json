@@ -301,6 +301,12 @@
    "erst_zeit": "2026-11-12T16:35Z",
    "beleg": "suche/laeufe/L20261112T132422Z.json"
   },
+  "neu_fda_generika_zulassungen_generika": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
   "neu_fda_ruckrufe_arzneimittel": {
    "erst_dokument": "S0013",
    "erst_lauf": null,
@@ -348,6 +354,12 @@
    "erst_lauf": "L20261111T121632Z",
    "erst_zeit": "2026-11-11T14:21Z",
    "beleg": "suche/laeufe/L20261111T121632Z.json"
+  },
+  "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
   },
   "neu_fedregister_ams_agrarmarkt_anzahl": {
    "erst_dokument": "S0017",
@@ -547,6 +559,18 @@
    "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
    "beleg": "suche/S0015_alle.csv.gz"
   },
+  "neu_fedregister_ustr_handelspolitik_dokumente": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
+  "neu_fedregister_ustr_handelspolitik_section301": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
   "neu_fema_katastrophenerklaerungen_anzahl": {
    "erst_dokument": "S0016",
    "erst_lauf": null,
@@ -703,6 +727,24 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_fussball_niederlagen_nationalteams_niederlage_che": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
+  "neu_fussball_niederlagen_nationalteams_niederlage_deu": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
+  "neu_fussball_niederlagen_nationalteams_niederlage_jpn": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
   "neu_japan_tankan_veroeffentlichung_tankan_veroeffentlichung": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -858,6 +900,12 @@
    "erst_lauf": null,
    "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
    "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_nvd_kritische_schwachstellen_anzahl_neu": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
   },
   "neu_nyfed_rrp_rrp": {
    "erst_dokument": "S0009",
@@ -1032,6 +1080,12 @@
    "erst_lauf": null,
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_uscg_nrc_meldungen_oel_chemie_anzahl_meldungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261113T124343Z",
+   "erst_zeit": "2026-11-13T15:59Z",
+   "beleg": "suche/laeufe/L20261113T124343Z.json"
   },
   "neu_usda_acreage_grainstocks_termine_acreage": {
    "erst_dokument": null,
@@ -1958,8 +2012,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261112T132422Z",
-  "zeit_utc": "2026-11-12T16:35Z",
-  "grundreihen_n": 325
+  "lauf_id": "L20261113T124343Z",
+  "zeit_utc": "2026-11-13T15:59Z",
+  "grundreihen_n": 334
  }
 }

@@ -1,5 +1,5 @@
 {
- "kumuliert": 732891,
+ "kumuliert": 744734,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -387,6 +387,11 @@
   "neu_eu_wettbewerbsentscheide_kartellverfahren_d5",
   "neu_eu_wettbewerbsentscheide_kartellverfahren_stand",
   "neu_eu_wettbewerbsentscheide_kartellverfahren_z252",
+  "neu_fda_generika_zulassungen_generika_d1",
+  "neu_fda_generika_zulassungen_generika_d20",
+  "neu_fda_generika_zulassungen_generika_d5",
+  "neu_fda_generika_zulassungen_generika_stand",
+  "neu_fda_generika_zulassungen_generika_z252",
   "neu_fda_zulassungen_zulassungen_d1",
   "neu_fda_zulassungen_zulassungen_d20",
   "neu_fda_zulassungen_zulassungen_d5",
@@ -408,6 +413,11 @@
   "neu_fed_enforcement_massnahmen_personen_d5",
   "neu_fed_enforcement_massnahmen_personen_stand",
   "neu_fed_enforcement_massnahmen_personen_z252",
+  "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_d1",
+  "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_d20",
+  "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_d5",
+  "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_stand",
+  "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_z252",
   "neu_fedregister_ams_agrarmarkt_anzahl_d1",
   "neu_fedregister_ams_agrarmarkt_anzahl_d20",
   "neu_fedregister_ams_agrarmarkt_anzahl_d5",
@@ -573,6 +583,16 @@
   "neu_fedregister_usda_regeln_anzahl_d5",
   "neu_fedregister_usda_regeln_anzahl_stand",
   "neu_fedregister_usda_regeln_anzahl_z252",
+  "neu_fedregister_ustr_handelspolitik_dokumente_d1",
+  "neu_fedregister_ustr_handelspolitik_dokumente_d20",
+  "neu_fedregister_ustr_handelspolitik_dokumente_d5",
+  "neu_fedregister_ustr_handelspolitik_dokumente_stand",
+  "neu_fedregister_ustr_handelspolitik_dokumente_z252",
+  "neu_fedregister_ustr_handelspolitik_section301_d1",
+  "neu_fedregister_ustr_handelspolitik_section301_d20",
+  "neu_fedregister_ustr_handelspolitik_section301_d5",
+  "neu_fedregister_ustr_handelspolitik_section301_stand",
+  "neu_fedregister_ustr_handelspolitik_section301_z252",
   "neu_fema_katastrophenerklaerungen_anzahl_d1",
   "neu_fema_katastrophenerklaerungen_anzahl_d20",
   "neu_fema_katastrophenerklaerungen_anzahl_d5",
@@ -699,6 +719,9 @@
   "neu_fred_usdjpy_usdjpy_d5",
   "neu_fred_usdjpy_usdjpy_stand",
   "neu_fred_usdjpy_usdjpy_z252",
+  "neu_fussball_niederlagen_nationalteams_niederlage_che_stand",
+  "neu_fussball_niederlagen_nationalteams_niederlage_deu_stand",
+  "neu_fussball_niederlagen_nationalteams_niederlage_jpn_stand",
   "neu_japan_tankan_veroeffentlichung_tankan_veroeffentlichung_stand",
   "neu_kalender_ereignisse_fomc_sitzung_stand",
   "neu_kalender_ereignisse_opex_verfall_stand",
@@ -793,6 +816,11 @@
   "neu_ntsb_luftfahrtunfaelle_gesamt_d5",
   "neu_ntsb_luftfahrtunfaelle_gesamt_stand",
   "neu_ntsb_luftfahrtunfaelle_gesamt_z252",
+  "neu_nvd_kritische_schwachstellen_anzahl_neu_d1",
+  "neu_nvd_kritische_schwachstellen_anzahl_neu_d20",
+  "neu_nvd_kritische_schwachstellen_anzahl_neu_d5",
+  "neu_nvd_kritische_schwachstellen_anzahl_neu_stand",
+  "neu_nvd_kritische_schwachstellen_anzahl_neu_z252",
   "neu_nyfed_rrp_rrp_d1",
   "neu_nyfed_rrp_rrp_d20",
   "neu_nyfed_rrp_rrp_d5",
@@ -886,6 +914,11 @@
   "neu_us_sommerzeit_wechsel_beginn_stand",
   "neu_us_sommerzeit_wechsel_ende_stand",
   "neu_usa_wahltag_wahltag_stand",
+  "neu_uscg_nrc_meldungen_oel_chemie_anzahl_meldungen_d1",
+  "neu_uscg_nrc_meldungen_oel_chemie_anzahl_meldungen_d20",
+  "neu_uscg_nrc_meldungen_oel_chemie_anzahl_meldungen_d5",
+  "neu_uscg_nrc_meldungen_oel_chemie_anzahl_meldungen_stand",
+  "neu_uscg_nrc_meldungen_oel_chemie_anzahl_meldungen_z252",
   "neu_usda_acreage_grainstocks_termine_acreage_stand",
   "neu_usda_acreage_grainstocks_termine_grain_stocks_stand",
   "neu_usda_hogs_pigs_termine_hogs_pigs_stand",
@@ -1822,9 +1855,15 @@
    "datei": "suche/S0066.json",
    "kandidaten": 394298,
    "in_db": false
+  },
+  {
+   "nr": 67,
+   "datei": "suche/S0067.json",
+   "kandidaten": 406141,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-12T16:35Z",
+ "letzter_suchlauf_utc": "2026-11-13T15:59Z",
  "pruefung_lernrunde_utc": "2026-11-13T09:55:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2252,11 +2291,19 @@
    "ergebnis_hash": "6fae46c5fed61d96",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261113T124343Z.json",
+   "lauf_id": "L20261113T124343Z",
+   "s_dokument": "suche/S0067.json",
+   "ergebnis_hash": "548160ffb214d4d9",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-12T16:35Z",
- "letztes_vollarchiv": "suche/S0066_alle.csv.gz",
- "letzter_ergebnis_hash": "6fae46c5fed61d96",
+ "letzter_lauf_utc": "2026-11-13T15:59Z",
+ "letztes_vollarchiv": "suche/S0067_alle.csv.gz",
+ "letzter_ergebnis_hash": "548160ffb214d4d9",
  "konflikte": [
   {
    "wo": "index",
@@ -4491,10 +4538,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 325,
-  "neu_in_diesem_lauf": 7
+  "grundreihen_n": 334,
+  "neu_in_diesem_lauf": 9
  },
- "letztes_vollarchiv_ergebnis_hash": "6fae46c5fed61d96",
+ "letztes_vollarchiv_ergebnis_hash": "548160ffb214d4d9",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261110T225026Z",
@@ -4512,7 +4559,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "c77bb5205c4ffef7",
- "letzter_gueltiger_lauf": "L20261112T132422Z",
- "letzter_entscheidung_hash": "2f58314a2c4743c2"
+ "letzter_eingabe_hash": "089e8174345f59f8",
+ "letzter_gueltiger_lauf": "L20261113T124343Z",
+ "letzter_entscheidung_hash": "b85c4fd53e4328b3"
 }
