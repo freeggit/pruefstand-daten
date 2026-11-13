@@ -1,0 +1,11 @@
+{
+  "konsultationen": {
+    "beschreibung": "Anzahl neuer WTO-Streitfaelle (Konsultationsgesuche DS1 ff.) je Tag des Gesuchs des ersten Klaegers, 0 an Tagen ohne Gesuch; Datum aus der Fallseite der WTO.",
+    "einheit": "Anzahl neue Streitfaelle",
+    "publikation": "verzoegert: das Gesuch wird von der WTO als WT/DS-Dokument und Fallseite meist wenige Tage nach dem Gesuchsdatum veroeffentlicht (Regel Art. 4.4 DSU: Notifikation an das DSB); konservativ 5 Tage.",
+    "quelle_url": "https://www.wto.org/english/tratop_e/dispu_e/dispu_status_e.htm",
+    "revidiert": false,
+    "verdichtung": "Anzahl Faelle je Kalendertag (Datum des Konsultationsgesuchs)",
+    "verfuegbar_nach_tagen": 5
+  }
+}

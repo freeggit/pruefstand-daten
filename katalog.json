@@ -5473,12 +5473,12 @@
     "url": "https://www.cms.gov/medicare-coverage-database/downloads/downloads.aspx",
     "domain": "cms.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "mechanismus": "Medicare-Deckungsentscheide bestimmen den Absatz von Medizinprodukten und Therapien und koennen XLV/IBB kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: Firmenereignisse (Gesundheit); Download als CSV/Access ohne Login (HTTP 200); Entscheidungsdaten ab 1990er-Jahren. Kein Doppel zu fedregister_cms_medicare (Federal-Register-Dokumente, nicht Deckungsentscheide).",
+    "grund": "Lernrunde 2026-11-13: Firmenereignisse (Gesundheit); Download als CSV/Access ohne Login (HTTP 200); Entscheidungsdaten ab 1990er-Jahren. Kein Doppel zu fedregister_cms_medicare (Federal-Register-Dokumente, nicht Deckungsentscheide). | Lauf 2026-11-13T16:50Z: abgelehnt (K4/Datum). ncd.zip (HTTP 200) enthaelt nur ca. 357 NCD-Versionen mit Wirksamkeitsdatum (NCD_efctv_dt, teils rueckwirkend, z.B. 1966) und Transmittal-Datum, nicht den Tag der oeffentlichen Bekanntgabe; Entscheidungsmemos (NCA) nicht als Datei abrufbar (nca.zip HTTP 404). Tabelle ist Momentaufnahme der aktuellen Versionen (frueheres Wissen nicht rekonstruierbar), zudem nur 1 bis 7 Ereignisse je Jahr.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-13T16:50Z",
     "prioritaet": "normal"
   },
   {
@@ -5487,12 +5487,12 @@
     "url": "https://www.supremecourt.gov/opinions/slipopinions.aspx",
     "domain": "supremecourt.gov",
     "bereich": "Justiz",
-    "status": "kandidat",
+    "status": "fehler",
     "mechanismus": "Urteile zu Regulierung (Gesundheit, Energie, Umwelt, Banken) kommen an vorab angekuendigten Tagen und koennen die betroffenen Sektoren (XLV, XLE, XLF) kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990).",
+    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-13T16:50Z",
     "prioritaet": "normal"
   },
   {
@@ -5501,12 +5501,14 @@
     "url": "https://www.wto.org/english/tratop_e/dispu_e/dispu_status_e.htm",
     "domain": "wto.org",
     "bereich": "Handelspolitik",
-    "status": "kandidat",
+    "status": "aktiv",
     "mechanismus": "Neue Handelsstreitigkeiten und Panel-Entscheide aendern kurzfristig Zollerwartungen und koennen Exportlaender (FXI, EWJ, EWG, EEM) gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: Handelspolitik; Fallliste DS1 ff. ab 1995 mit Datum des Konsultationsgesuchs (HTTP 200). Kein Doppel zu fedregister_ustr_handelspolitik (US-Sicht) und usitc_handelsschutz_verfuegungen.",
-    "reihen": [],
+    "grund": "Lernrunde 2026-11-13: Handelspolitik; Fallliste DS1 ff. ab 1995 mit Datum des Konsultationsgesuchs (HTTP 200). Kein Doppel zu fedregister_ustr_handelspolitik (US-Sicht) und usitc_handelsschutz_verfuegungen. | Lauf 2026-11-13T16:50Z: aufgenommen. Fallseiten DS1-DS646 (HTTP 200), Datum = Tag des Konsultationsgesuchs (erster Klaeger), ein Fall = ein Ereignis. 644 Faelle 1995-01-10 bis 2026-07-27, Reihe 1995-01-01 bis heute, 11640 Zeilen, Median-Abstand 1 Tag, Werte 0..8, 536 Ereignistage (Anteil gleicher Folgewerte hoch, da Ereignisreihe mit 0). Nicht gezaehlt (nichts geschaetzt): DS136 (Seite nennt '9 June 1988', offensichtlicher Tippfehler), DS271 (Datum ohne Jahr). verfuegbar_nach_tagen 5 (Veroeffentlichung WT/DS-Dokument wenige Tage nach Gesuch). Zwischenspeicher faelle.json, nur neue Nummern werden geholt. Hinweis: Haeufigkeit seit 2019 stark gesunken (Strukturbruch Berufungsgremium).",
+    "reihen": [
+      "konsultationen"
+    ],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-13T16:50Z",
     "prioritaet": "normal"
   },
   {
