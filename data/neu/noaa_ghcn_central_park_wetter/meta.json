@@ -1,0 +1,22 @@
+{
+  "niederschlag_mm": {
+    "beschreibung": "Tagesniederschlag in New York Central Park (GHCN-Daily PRCP, Zehntel-mm / 10); Werte mit Qualitaetsflag weggelassen",
+    "einheit": "mm",
+    "publikation": "taeglich, mit Verzoegerung: GHCN-Daily wird von NCEI taeglich nachgefuehrt, die Station Central Park erscheint erfahrungsgemaess 1-3 Tage nach dem Messtag (Beobachtung beim Abruf 2026-11-13: letzter Wert 2026-11-10); Beleg: NCEI GHCN-Daily Dokumentation (Update taeglich)",
+    "quelle_url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries&stations=USW00094728&dataTypes=PRCP&format=csv",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Tageswert der Station, lokaler Beobachtungstag)",
+    "verfuegbar_nach_tagen": 3
+  },
+  "tmax_c": {
+    "beschreibung": "Tageshoechsttemperatur in New York Central Park (GHCN-Daily TMAX, Zehntel-Grad / 10); Werte mit Qualitaetsflag weggelassen",
+    "einheit": "Grad Celsius",
+    "publikation": "taeglich, mit Verzoegerung: GHCN-Daily wird von NCEI taeglich nachgefuehrt, die Station Central Park erscheint erfahrungsgemaess 1-3 Tage nach dem Messtag (Beobachtung beim Abruf 2026-11-13: letzter Wert 2026-11-10); Beleg: NCEI GHCN-Daily Dokumentation (Update taeglich)",
+    "quelle_url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries&stations=USW00094728&dataTypes=TMAX&format=csv",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Tageswert der Station, lokaler Beobachtungstag)",
+    "verfuegbar_nach_tagen": 3
+  }
+}

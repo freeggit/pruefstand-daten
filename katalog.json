@@ -5265,13 +5265,36 @@
     "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries&stations=USW00094728&dataTypes=PRCP,TSUN,ACSH&startDate=1900-01-01&endDate=2020-12-31&format=json",
     "domain": "www.ncei.noaa.gov",
     "bereich": "Stimmung",
-    "status": "kandidat",
-    "grund": "L3: Hirshleifer und Shumway (2003), Saunders (1993). Bekannt: der Effekt ist nach Veröffentlichung schwächer geworden, daher Priorität tief. Historie ab 1869, also vor 1990. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "aktiv",
+    "grund": "L3: Hirshleifer und Shumway (2003), Saunders (1993). Bekannt: der Effekt ist nach Veröffentlichung schwächer geworden, daher Priorität tief. Historie ab 1869, also vor 1990. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Lauf 2026-11-13T20:07Z: aufgenommen. K1-K7 erfuellt (NCEI Access Data Service, ohne Schluessel, HTTP 200, Abruf 3 s). Bewoelkung ACSH nur 1965-1966 und Sonnenschein TSUN/PSUN nur bis 2021-10-15 bzw. 1981 -> K5 verletzt, nicht abgelegt. Abgelegt 2 Reihen (verschiedene Groessen): niederschlag_mm 57657 Zeilen 1869-01-01..2026-11-10, Median-Abstand 1, gleiche Folgewerte 48.5% (Trockentage = 0, erwartet), Min 0.0 Max 210.3 (Rekord 9.10.1903); tmax_c 57616 Zeilen 1869-01-01..2026-11-10, Median-Abstand 1, gleiche Folgewerte 6.2%, Min -16.7 Max 41.1. Werte mit QC-Flag weggelassen. verfuegbar_nach_tagen 3 (beobachtete Nachfuehrung 1-3 Tage), publikation taeglich. Messwerte, revidiert false (QC-Flags koennen nachtraeglich gesetzt werden, Wert selbst nicht geschaetzt). Mechanismus Niederschlag: Regen/Truebung am Boersenplatz als Stimmungsproxy (Hirshleifer/Shumway 2003 nutzen Bewoelkung; Niederschlag ist der fortgeschriebene Ersatz); Temperatur: Cao/Wei 2005.",
     "mechanismus": "Trübes Wetter am Börsenplatz dämpft laut Fachliteratur die Risikobereitschaft der Händler und kann kurzfristig zyklische Sektoren gegenüber defensiven und dem Weltindex bewegen.",
     "prioritaet": "tief",
-    "reihen": [],
+    "reihen": [
+      {
+        "reihe": "niederschlag_mm",
+        "status": "aktiv",
+        "zeilen": 57657,
+        "erste": "1869-01-01",
+        "letzte": "2026-11-10",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.485,
+        "min": 0.0,
+        "max": 210.3
+      },
+      {
+        "reihe": "tmax_c",
+        "status": "aktiv",
+        "zeilen": 57616,
+        "erste": "1869-01-01",
+        "letzte": "2026-11-10",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.062,
+        "min": -16.7,
+        "max": 41.1
+      }
+    ],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-13T20:07Z"
   },
   {
     "id": "fussball_niederlagen_nationalteams",
@@ -5517,12 +5540,12 @@
     "url": "https://www.justice.gov/atr/antitrust-case-filings-alpha",
     "domain": "justice.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "mechanismus": "Kartellverfahren gegen grosse Firmen aendern kurzfristig Erwartungen an Fusionen und Margen in Technologie und Gesundheit; unabhaengige Messung desselben Mechanismus wie EU-Kartellentscheide.",
-    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief.",
+    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-13T20:07Z",
     "prioritaet": "tief"
   }
 ]
