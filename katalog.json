@@ -4592,9 +4592,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut.",
     "status": "fehler",
-    "geprueft_utc": "2026-11-12T00:25Z"
+    "geprueft_utc": "2026-11-13T04:30Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -5019,12 +5019,12 @@
     "url": "https://safetydata.fra.dot.gov/OfficeofSafety/publicsite/on_the_fly_download.aspx",
     "domain": "safetydata.fra.dot.gov",
     "bereich": "Rohstoffe und Logistik",
-    "status": "fehler",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Entgleisungen mit Gefahrgut oder auf Hauptstrecken unterbrechen Güterverkehr und lösen Haftungsrisiken aus; relevant für Industrie (XLI) und Agrar-/Rohstofftransport (DBA).",
-    "grund": "Unfalldaten statt Regeln (unterscheidet sich von fedregister_fra_bahn); Historie ab 1975, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: safetydata.fra.dot.gov antwortet 200, liefert aber nur Fehlerseite «FRA - Unknown Error» (ASP.NET-Formular, kein direkter Download); nächster Lauf erneut. Hinweis: FRA-Unfalldaten erscheinen monatlich mit etwa 2 Monaten Verzug (K5 fraglich).",
+    "grund": "Unfalldaten statt Regeln (unterscheidet sich von fedregister_fra_bahn); Historie ab 1975, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: safetydata.fra.dot.gov antwortet 200, liefert aber nur Fehlerseite «FRA - Unknown Error» (ASP.NET-Formular, kein direkter Download); nächster Lauf erneut. Hinweis: FRA-Unfalldaten erscheinen monatlich mit etwa 2 Monaten Verzug (K5 fraglich). | Test 2026-11-13T04:30Z: Download-Seite weiter «Unknown Error», aber dieselben Daten frei ueber data.transportation.gov (Socrata 85tf-25kj, Public Domain). Abgelehnt K5 und K4: letzter Unfalltag 2026-08-31 (74 Tage alt, monatliche Nachlieferung mit etwa 2 Monaten Verzug); Datum ist Unfalltag, Bekanntgabetag unbekannt, Zaehlungen werden durch Nachmeldungen ergaenzt (revidiert). Historie 1975-01-01 bis 2026-08-31, 225558 Meldungen.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-11T20:17Z"
+    "geprueft_utc": "2026-11-13T04:30Z"
   },
   {
     "id": "nhtsa_odi_untersuchungen",
@@ -5276,16 +5276,50 @@
   {
     "id": "fussball_niederlagen_nationalteams",
     "name": "Ergebnisse von WM und EM der Nationalteams (Niederlagen in K.-o.-Runden)",
-    "url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/ (Jahresdateien); Ersatz: Wikipedia-Turnierseiten",
+    "url": "https://raw.githubusercontent.com/martj42/international_results/master/results.csv",
     "domain": "raw.githubusercontent.com",
     "bereich": "Sport",
-    "status": "kandidat",
-    "grund": "L3: Edmans, Garcia und Norli (2007). Neuer Bereich «Sport». Termine ab 1930; Spieltag = Bekanntgabetag. Bekannt: der Effekt ist nach Veröffentlichung schwächer geworden. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft.",
+    "status": "aktiv",
+    "grund": "L3: Edmans, Garcia und Norli (2007). Neuer Bereich «Sport». Termine ab 1930; Spieltag = Bekanntgabetag. Bekannt: der Effekt ist nach Veröffentlichung schwächer geworden. Vorratsauffüllung Lernrunde 12.11.2026 (Zusatz VORRAT); kein Doppel zu bestehenden Einträgen geprüft. | Test 2026-11-13T04:30Z: aufgenommen. Quelle martj42/international_results (CC0, Originalsammlung aller Laenderspiele ab 1872, kein Spiegel einer gesperrten Quelle); openfootball deckt nicht alle Jahre ab. Reihen niederlage_deu/che/jpn (verschiedene Laender, Zusatz 3 Ausnahme): 1 am Spieltag einer Niederlage an WM/EM (JPN: WM/Asienmeisterschaft), inkl. Penaltyschiessen. K1 Tagesreihe ab 1930-07-13, 35187 Zeilen; Ereignistage DEU 40, CHE 31, JPN 25. K2 ok (Beginn vor 1990, Familie Langzeit). K3 CC0, ohne Login. K4 Ergebnisse unveraendert. K5: letzter Quelltag 2026-10-06, Nullen danach deterministisch, weil bis zur Asienmeisterschaft 2027-01-07 keine Endrunde liegt; das Skript beendet die Reihe vor dem Beginn einer Endrunde, die die Quelle noch nicht abdeckt. K7 Abruf 1 s, Dateien klein. Anteil gleicher Folgewerte >0.99, erklaert durch seltene Ereignistage. Datum = Ortsdatum (Spiele in Amerika enden teils nach Mitternacht UTC).",
     "mechanismus": "Niederlagen der Nationalmannschaft in wichtigen Spielen drücken laut Fachliteratur am Folgetag die Stimmung und die Aktien des betroffenen Landes (EWG, EWU, EWZ, EWL, EWJ) gegenüber dem Weltindex.",
     "prioritaet": "normal",
-    "reihen": [],
+    "reihen": [
+      {
+        "zeilen": 35187,
+        "erste": "1930-07-13",
+        "letzte": "2026-11-12",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.998,
+        "min": 0.0,
+        "max": 1.0,
+        "reihe": "niederlage_deu",
+        "status": "aktiv"
+      },
+      {
+        "zeilen": 35187,
+        "erste": "1930-07-13",
+        "letzte": "2026-11-12",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.998,
+        "min": 0.0,
+        "max": 1.0,
+        "reihe": "niederlage_che",
+        "status": "aktiv"
+      },
+      {
+        "zeilen": 35187,
+        "erste": "1930-07-13",
+        "letzte": "2026-11-12",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.999,
+        "min": 0.0,
+        "max": 1.0,
+        "reihe": "niederlage_jpn",
+        "status": "aktiv"
+      }
+    ],
     "aufgenommen_utc": "2026-11-12T09:50Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-13T04:30Z"
   },
   {
     "id": "fedregister_ustr_handelspolitik",

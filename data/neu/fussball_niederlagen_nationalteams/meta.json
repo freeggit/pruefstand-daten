@@ -1,0 +1,32 @@
+{
+  "niederlage_che": {
+    "beschreibung": "1 an Tagen, an denen Switzerland an einer Endrunde (FIFA World Cup, UEFA Euro) verlor (inkl. Penaltyschiessen), sonst 0; Datum = Ortsdatum des Spiels.",
+    "einheit": "0/1 (1 = Niederlage am Spieltag)",
+    "publikation": "taeglich (Ergebnis ist mit Spielende oeffentlich; Spieltermine im Voraus durch FIFA/UEFA/AFC publiziert)",
+    "quelle_url": "https://raw.githubusercontent.com/martj42/international_results/master/results.csv",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Ereignistag)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "niederlage_deu": {
+    "beschreibung": "1 an Tagen, an denen Germany an einer Endrunde (FIFA World Cup, UEFA Euro) verlor (inkl. Penaltyschiessen), sonst 0; Datum = Ortsdatum des Spiels.",
+    "einheit": "0/1 (1 = Niederlage am Spieltag)",
+    "publikation": "taeglich (Ergebnis ist mit Spielende oeffentlich; Spieltermine im Voraus durch FIFA/UEFA/AFC publiziert)",
+    "quelle_url": "https://raw.githubusercontent.com/martj42/international_results/master/results.csv",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Ereignistag)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "niederlage_jpn": {
+    "beschreibung": "1 an Tagen, an denen Japan an einer Endrunde (AFC Asian Cup, FIFA World Cup) verlor (inkl. Penaltyschiessen), sonst 0; Datum = Ortsdatum des Spiels.",
+    "einheit": "0/1 (1 = Niederlage am Spieltag)",
+    "publikation": "taeglich (Ergebnis ist mit Spielende oeffentlich; Spieltermine im Voraus durch FIFA/UEFA/AFC publiziert)",
+    "quelle_url": "https://raw.githubusercontent.com/martj42/international_results/master/results.csv",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Ereignistag)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
