@@ -1,0 +1,11 @@
+{
+  "generika": {
+    "beschreibung": "Taegliche Anzahl endgueltiger FDA-Zulassungen von Generika in den USA (ANDA, ORIG-Submission mit Status AP, ohne vorlaeufige Zulassungen TA), Datum = FDA-Entscheiddatum (submission_status_date)",
+    "einheit": "Anzahl Generika-Zulassungen",
+    "publikation": "taeglich, mit kurzer Verzoegerung durch den Aktualisierungszyklus von openFDA drugsfda (siehe Feld meta.last_updated der API-Antwort, beobachtet ca. 3-10 Tage)",
+    "quelle_url": "https://api.fda.gov/drug/drugsfda.json",
+    "revidiert": false,
+    "verdichtung": "Summe der ANDA-Erstzulassungen je Kalendertag (submission_status_date)",
+    "verfuegbar_nach_tagen": 10
+  }
+}
