@@ -1,0 +1,20 @@
+{
+  "generika_zulassungen": {
+    "beschreibung": "Taegliche Anzahl kanadischer Erstzulassungen von Generika (Health Canada NOC, Abbreviated New Drug Submission, ohne Admin/Labelling-Only); Datum = NOC-Erteilung",
+    "einheit": "Anzahl Zulassungen",
+    "publikation": "taeglich: Health Canada traegt erteilte NOC laufend in die oeffentliche NOC-Datenbank ein (beobachtet: NOC vom 13.11.2026 im Abruf vom 14.11.2026); Firmen melden kanadische Zulassungen meist am Erteilungstag oder kurz danach",
+    "quelle_url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=en&type=json",
+    "revidiert": false,
+    "verdichtung": "Summe der Erstzulassungen (NOC, ohne Supplements, ohne Tierarzneimittel) je Kalendertag (noc_date)",
+    "verfuegbar_nach_tagen": 2
+  },
+  "nas_zulassungen": {
+    "beschreibung": "Taegliche Anzahl kanadischer Erstzulassungen neuer Wirkstoffe (Health Canada NOC, Klasse New Active Substance/Priority-NAS, Human inkl. Biologika); Datum = NOC-Erteilung",
+    "einheit": "Anzahl Zulassungen",
+    "publikation": "taeglich: Health Canada traegt erteilte NOC laufend in die oeffentliche NOC-Datenbank ein (beobachtet: NOC vom 13.11.2026 im Abruf vom 14.11.2026); Firmen melden kanadische Zulassungen meist am Erteilungstag oder kurz danach",
+    "quelle_url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=en&type=json",
+    "revidiert": false,
+    "verdichtung": "Summe der Erstzulassungen (NOC, ohne Supplements, ohne Tierarzneimittel) je Kalendertag (noc_date)",
+    "verfuegbar_nach_tagen": 2
+  }
+}

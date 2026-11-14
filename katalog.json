@@ -3895,11 +3895,11 @@
     "domain": "www.eia.gov",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.eia.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Revidierte Prognosen zu Ölnachfrage und Förderung verschieben die Preiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-20T10:00:00Z",
-    "geprueft_utc": "2026-11-10T20:26Z",
+    "geprueft_utc": "2026-11-14T08:40Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde"
   },
@@ -3955,11 +3955,11 @@
     "domain": "www.opec.org",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.opec.org weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Revidierte Nachfrage- und Angebotsschätzungen der OPEC verschieben die Ölpreiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-21T10:00:00Z",
-    "geprueft_utc": "2026-11-10T20:26Z",
+    "geprueft_utc": "2026-11-14T08:40Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde"
   },
@@ -4592,9 +4592,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut.",
     "status": "fehler",
-    "geprueft_utc": "2026-11-13T04:30Z"
+    "geprueft_utc": "2026-11-14T08:40Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -5631,5 +5631,38 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-14T00:09Z",
     "geprueft_utc": "2026-11-14T00:09Z"
+  },
+  {
+    "id": "healthcanada_noc_zulassungen",
+    "name": "Health Canada: Notice of Compliance (Zulassungen) je Tag",
+    "url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=en&type=json",
+    "domain": "health-products.canada.ca",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "grund": "Lauf 2026-11-14T08:40Z: eigene Recherche, aufgenommen. API liefert 38322 NOC-Eintraege (1994-01-04 bis 2026-11-13, 22 MB JSON, 1.6 s). K1 taeglich (0 an Tagen ohne Zulassung, bis gestern UTC). K2 nas_zulassungen ab 1994-03-16, 11931 Zeilen, 947 Ereignistage, Summe 1047, Max 3/Tag, gleiche Folgewerte 86% (Ereignis-Zaehlreihe, erwartet), Beginn vor 1995 (Familie Langzeit); generika_zulassungen ab 1995-01-19, 11622 Zeilen, 2224 Ereignistage, Summe 3471, Max 16, gleiche Folgewerte 68%. K3 oeffentliche Health-Canada-API ohne Login/Schluessel (Open Government Licence Canada). K4 Datum = NOC-Erteilung (Bekanntgabe ueber NOC-Datenbank, Firmenmitteilungen meist am selben Tag); Datenbank ist Momentaufnahme, nachtraegliche Eintraege nicht ausgeschlossen (Vorfassungspruefung aktiv); noc_last_update_date ueberall Platzhalter 1111-11-11. K5 letztes Ereignis 2026-11-13. K6 neu (Kanada, ergaenzt fda_zulassungen, ema_zulassungsentscheide, fda_generika_zulassungen). K7 Abruf unter 2 s, Dateien wenige KB. Supplements, Tierarzneimittel, Admin- und Labelling-Only-Faelle ausgeschlossen; NDS gesamt bewusst nicht abgelegt (Redundanz mit NAS). verfuegbar_nach_tagen 2, publikation taeglich.",
+    "mechanismus": "Kanadische Erstzulassungen neuer Wirkstoffe und Generika ergaenzen FDA/EMA als unabhaengiger Regulierer und koennten kurzfristig auf Gesundheit/Pharma (XLV) gegenueber dem Weltindex wirken, Generika-Zulassungen als Margendruck auf Originalhersteller.",
+    "reihen": [
+      "nas_zulassungen",
+      "generika_zulassungen"
+    ],
+    "aufgenommen_utc": "2026-11-14T08:40Z",
+    "geprueft_utc": "2026-11-14T08:40Z",
+    "prioritaet": "hoch",
+    "herkunft": "eigene Recherche"
+  },
+  {
+    "id": "courtlistener_konkursverfahren",
+    "name": "CourtListener/RECAP: Chapter-11-Eroeffnungen je Tag",
+    "url": "https://www.courtlistener.com/api/rest/v4/",
+    "domain": "www.courtlistener.com",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "grund": "Test 2026-11-14T08:40Z: Such- und Docket-API v4 antworten HTTP 401 'Authentication credentials were not provided' - nur mit Konto/Token nutzbar (K3 verletzt). Nicht umgangen.",
+    "mechanismus": "Tageszahl neuer Chapter-11-Verfahren als Mass fuer Kreditstress, kurzfristig relevant fuer Finanzwerte (XLF) und Hochzinsanleihen.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-14T08:40Z",
+    "geprueft_utc": "2026-11-14T08:40Z",
+    "prioritaet": "hoch",
+    "herkunft": "eigene Recherche"
   }
 ]
