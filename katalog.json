@@ -1385,15 +1385,18 @@
   {
     "id": "china_pmi_veroeffentlichung",
     "name": "China Einkaufsmanagerindex (Caixin/NBS), Veroeffentlichungstage",
-    "url": "https://www.caixinglobal.com/pmi/",
-    "domain": "caixinglobal.com",
+    "url": "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/",
+    "domain": "stats.gov.cn",
     "bereich": "Kalender",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "PMI-Ueberraschungen fuer China bewegen kurzfristig China-/EM-nahe Ziele (FXI, EEM) gegenueber dem Weltindex, analog zu us_arbeitsmarkt_termine/us_cpi_termine fuer die USA.",
-    "grund": "Veroeffentlichungskalender oeffentlich (erster Handelstag des Monats), keine Wertreihe noetig, nur Ereignistage wie bei bereits aktiven Kalenderreihen. | Rechercheergebnis 2026-09-27T08:14:53Z: ALFRED (alfred.stlouisfed.org/releases) fuehrt kein China-PMI-Release (nur US-Bundesbehoerden). www.stats.gov.cn (NBS China, amtliche Quelle) ist aus dieser Umgebung erreichbar (HTTP 200), aber die Pressemitteilungs-Uebersichtsseite listet die Meldungen ohne direkt erkennbare PMI-Titel/Daten in der HTML-Startseite (vermutlich weitere Navigationsebene oder JS-Nachladung); eine vollstaendige amtliche Terminliste wurde in diesem Lauf noch nicht gefunden. Bekannt: NBS-Manufacturing-PMI erscheint regelmaessig am letzten Kalendertag des Erhebungsmonats (Verschiebung um Neujahrsfest/Feiertage), aber ohne belegte Terminliste je Einzeltermin keine Reihe angelegt (Zusatz 5: keine Termine erfinden). Status bleibt Kandidat; naechster Schritt: NBS-Pressemitteilungsarchiv tiefer navigieren (z.B. /english/PressRelease/ Unterseiten nach Jahr) oder alternative amtliche Terminuebersicht suchen.",
+    "grund": "Veroeffentlichungskalender oeffentlich (erster Handelstag des Monats), keine Wertreihe noetig, nur Ereignistage wie bei bereits aktiven Kalenderreihen. | Rechercheergebnis 2026-09-27T08:14:53Z: ALFRED (alfred.stlouisfed.org/releases) fuehrt kein China-PMI-Release (nur US-Bundesbehoerden). www.stats.gov.cn (NBS China, amtliche Quelle) ist aus dieser Umgebung erreichbar (HTTP 200), aber die Pressemitteilungs-Uebersichtsseite listet die Meldungen ohne direkt erkennbare PMI-Titel/Daten in der HTML-Startseite (vermutlich weitere Navigationsebene oder JS-Nachladung); eine vollstaendige amtliche Terminliste wurde in diesem Lauf noch nicht gefunden. Bekannt: NBS-Manufacturing-PMI erscheint regelmaessig am letzten Kalendertag des Erhebungsmonats (Verschiebung um Neujahrsfest/Feiertage), aber ohne belegte Terminliste je Einzeltermin keine Reihe angelegt (Zusatz 5: keine Termine erfinden). Status bleibt Kandidat; naechster Schritt: NBS-Pressemitteilungsarchiv tiefer navigieren (z.B. /english/PressRelease/ Unterseiten nach Jahr) oder alternative amtliche Terminuebersicht suchen. | Lauf 2026-11-14T20:11:54Z: AUFGENOMMEN. Beleg: amtliche NBS-Jahreskalender «Regular Press Release Calendar of NBS in JJJJ» 2015-2026 (je Ende Vorjahr publiziert, also im Voraus bekannt; Zusatz 5). Reihe pmi_termin 0/1 je Kalendertag 2015-01-01 bis heute: 4336 Zeilen, Median-Abstand 1 Tag, 145 Termine (2015-2016 jeweils am 1. des Folgemonats, ab Maerz 2017 am letzten Tag des Erhebungsmonats; 2017 daher 13 Termine; Jan/Feb um das Neujahrsfest zusammengelegt), Min 0, Max 1; Anteil gleicher Folgewerte hoch wie bei allen 0/1-Kalenderreihen (erwartet). Wochentag je Termin gegen Kalenderangabe geprueft. Kalender vor 2015 im englischen Archiv nicht vorhanden (K2 knapp erfuellt, Familie Langzeit nicht nutzbar). Freigabe 9:30 Peking = 01:30 UTC, verfuegbar_nach_tagen 0. Termine sind laut NBS vorlaeufig; nachtraegliche Verschiebungen nicht erfasst. Caixin-PMI nicht enthalten (kein amtlicher Kalender). K1-K7 erfuellt.",
     "aufgenommen_utc": "2026-09-26T09:40:47Z",
-    "geprueft_utc": "2026-09-27T08:14:53Z"
+    "geprueft_utc": "2026-11-14T20:11:54Z",
+    "reihen": [
+      "pmi_termin"
+    ]
   },
   {
     "id": "usda_wasde_veroeffentlichung",

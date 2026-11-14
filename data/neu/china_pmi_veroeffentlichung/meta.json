@@ -1,0 +1,11 @@
+{
+  "pmi_termin": {
+    "beschreibung": "1 am Veroeffentlichungstag des offiziellen NBS-Einkaufsmanagerindex China (Industrie; Dienstleistung erscheint am selben Tag), sonst 0, fuer jeden Kalendertag ab 2015-01-01 bis heute. Termine aus den amtlichen Jahreskalendern 'Regular Press Release Calendar of NBS' (je Ende Vorjahr publiziert, also im Voraus bekannt); Veroeffentlichung 9:30 Uhr Peking = 01:30 UTC, vor Handelsbeginn in Europa und den USA. Jahreskalender vor 2015 sind im englischen Archiv nicht vorhanden. Der Kalender nennt die Termine als vorlaeufig; nachtraegliche Verschiebungen sind nicht erfasst.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Termine im Jahreskalender des NBS im Voraus veroeffentlicht, z.B. Kalender 2026 publiziert am 26.12.2025)",
+    "quelle_url": "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe aus amtlichen Jahreskalendern)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
