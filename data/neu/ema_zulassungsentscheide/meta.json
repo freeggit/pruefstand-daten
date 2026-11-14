@@ -1,0 +1,20 @@
+{
+  "zulassungen_biosimilar": {
+    "beschreibung": "Taegliche Anzahl zentraler EU-Erstzulassungen von Biosimilars (EMA, Datum = Zulassungsentscheid der EU-Kommission); Wettbewerbsdruck auf Biologika-Hersteller",
+    "einheit": "Anzahl Zulassungen",
+    "publikation": "taeglich: EU-Kommissionsentscheide werden im Union Register of medicinal products veroeffentlicht und von der EMA im EPAR/Medicines-Bericht (taeglich neu erzeugt, beobachtet Entscheid 12.11.2026 im Bericht vom 13.11.2026) nachgefuehrt; Firmenmitteilungen meist am Entscheidtag",
+    "quelle_url": "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx",
+    "revidiert": false,
+    "verdichtung": "Summe der Erstzulassungen je Kalendertag (Marketing authorisation date)",
+    "verfuegbar_nach_tagen": 2
+  },
+  "zulassungen_neu": {
+    "beschreibung": "Taegliche Anzahl zentraler EU-Erstzulassungen von Humanarzneimitteln ohne Generika und Biosimilars (EMA, Datum = Zulassungsentscheid der EU-Kommission); inkl. spaeter zurueckgezogener Zulassungen",
+    "einheit": "Anzahl Zulassungen",
+    "publikation": "taeglich: EU-Kommissionsentscheide werden im Union Register of medicinal products veroeffentlicht und von der EMA im EPAR/Medicines-Bericht (taeglich neu erzeugt, beobachtet Entscheid 12.11.2026 im Bericht vom 13.11.2026) nachgefuehrt; Firmenmitteilungen meist am Entscheidtag",
+    "quelle_url": "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx",
+    "revidiert": false,
+    "verdichtung": "Summe der Erstzulassungen je Kalendertag (Marketing authorisation date)",
+    "verfuegbar_nach_tagen": 2
+  }
+}

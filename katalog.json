@@ -2117,10 +2117,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: HTTP 403 (410 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T08:15Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: HTTP 403 (410 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T08:15Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T04:20Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-28T20:15:44Z",
-    "geprueft_utc": "2026-11-13T08:15Z"
+    "geprueft_utc": "2026-11-14T04:20Z"
   },
   {
     "id": "fedregister_ftc_fusionen",
@@ -5120,12 +5120,15 @@
     "url": "https://www.ema.europa.eu/en/medicines/download-medicine-data",
     "domain": "www.ema.europa.eu",
     "bereich": "Firmenereignisse",
-    "status": "fehler",
-    "grund": "Test 2026-11-12T08:20Z: www.ema.europa.eu liefert HTTP 429 (Seite und xlsx-Bericht) von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Zu prüfen: Datum der EU-Kommissionsentscheidung bzw. CHMP-Stellungnahme als Bekanntgabetag, Historie ab 1995, Datei nur xlsx (Standardbibliothek: zipfile+xml nötig). | Erneut 2026-11-13T08:15Z: Seite download-medicine-data 200, aber xlsx-Bericht medicines-output-medicines-report_en.xlsx weiterhin HTTP 429; nicht umgangen, naechster Lauf erneut.",
+    "status": "aktiv",
+    "grund": "Test 2026-11-12T08:20Z: www.ema.europa.eu liefert HTTP 429 (Seite und xlsx-Bericht) von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Zu prüfen: Datum der EU-Kommissionsentscheidung bzw. CHMP-Stellungnahme als Bekanntgabetag, Historie ab 1995, Datei nur xlsx (Standardbibliothek: zipfile+xml nötig). | Erneut 2026-11-13T08:15Z: Seite download-medicine-data 200, aber xlsx-Bericht medicines-output-medicines-report_en.xlsx weiterhin HTTP 429; nicht umgangen, naechster Lauf erneut. | Lauf 2026-11-14T04:20Z: xlsx-Bericht wieder HTTP 200 (907 KB, 2765 Zeilen, erzeugt 13/11/2026 18:00). Aufgenommen. K1 taeglich (0 an Tagen ohne Entscheid, bis Erzeugungstag). K2 zulassungen_neu ab 1995-10-20, 11348 Zeilen, 944 Ereignistage, Summe 1483, Max 9/Tag; zulassungen_biosimilar ab 2006-04-12, 7521 Zeilen, nur 114 Ereignistage (Summe 173, Max 9) - duenn. K3 oeffentlicher Download ohne Login. K4 Datum = Zulassungsentscheid EU-Kommission (Bekanntgabe Union Register/EPAR, Firmenmitteilung meist am Entscheidtag), zurueckgezogene/erloschene Zulassungen bleiben mit Originaldatum; Bericht ist Momentaufnahme des Registers, nachtraegliche Ergaenzungen alter Eintraege nicht ausgeschlossen (Vorfassungspruefung aktiv). K5 letzter Ereignistag 2026-11-12. K6 neu (EU, ergaenzt fda_zulassungen). K7 1 s, wenige KB. Anteil gleicher Folgewerte 85 bzw. 97 Prozent (Ereignis-Zaehlreihe, erwartet). Generika ausgeschlossen; CHMP-Stellungnahmedatum vor 2012 lueckenhaft, darum nicht verwendet. verfuegbar_nach_tagen 2, publikation taeglich. Paarvorschlag fuer Reto: ema_zulassungsentscheide:zulassungen_neu minus fda_zulassungen:zulassungen (EU- vs US-Zulassungsdichte, Mechanismus XLV Europa vs USA).",
     "mechanismus": "Europäische Zulassungsentscheide für neue Wirkstoffe ergänzen fda_zulassungen und könnten kurzfristig auf Gesundheit/Biotech (XLV) und Europa gegenüber dem Weltindex wirken.",
-    "reihen": [],
+    "reihen": [
+      "zulassungen_neu",
+      "zulassungen_biosimilar"
+    ],
     "aufgenommen_utc": "2026-11-12T08:20Z",
-    "geprueft_utc": "2026-11-13T08:15Z",
+    "geprueft_utc": "2026-11-14T04:20Z",
     "prioritaet": "hoch",
     "herkunft": "eigene Recherche"
   },
@@ -5428,10 +5431,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Haeufungen von Orphan-Designationen und -Zulassungen veraendern kurzfristig die Erwartungen an Biotech-Pipelines und koennen IBB/XLV gegenueber dem Weltindex bewegen.",
-    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank).",
+    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-13T12:30Z",
+    "geprueft_utc": "2026-11-14T04:20Z",
     "prioritaet": "hoch"
   },
   {
@@ -5512,10 +5515,10 @@
     "bereich": "Justiz",
     "status": "fehler",
     "mechanismus": "Urteile zu Regulierung (Gesundheit, Energie, Umwelt, Banken) kommen an vorab angekuendigten Tagen und koennen die betroffenen Sektoren (XLV, XLE, XLF) kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen.",
+    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen. | Erneut 2026-11-14T04:20Z: scdb.la.psu.edu Datendatei HTTP 403, nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-13T16:50Z",
+    "geprueft_utc": "2026-11-14T04:20Z",
     "prioritaet": "normal"
   },
   {
