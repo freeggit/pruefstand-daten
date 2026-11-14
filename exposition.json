@@ -199,6 +199,12 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_ca_ag_datenlecks_meldungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
+  },
   "neu_cboe_skew_skew": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -282,6 +288,18 @@
    "erst_lauf": "L20261111T121632Z",
    "erst_zeit": "2026-11-11T14:21Z",
    "beleg": "suche/laeufe/L20261111T121632Z.json"
+  },
+  "neu_ema_zulassungsentscheide_zulassungen_biosimilar": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
+  },
+  "neu_ema_zulassungsentscheide_zulassungen_neu": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
   },
   "neu_eu_boersenfeiertage_geschlossen": {
    "erst_dokument": "S0011",
@@ -745,6 +763,18 @@
    "erst_zeit": "2026-11-13T15:59Z",
    "beleg": "suche/laeufe/L20261113T124343Z.json"
   },
+  "neu_healthcanada_noc_zulassungen_generika_zulassungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
+  },
+  "neu_healthcanada_noc_zulassungen_nas_zulassungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
+  },
   "neu_japan_tankan_veroeffentlichung_tankan_veroeffentlichung": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -882,6 +912,18 @@
    "erst_lauf": "L20261007T180559Z",
    "erst_zeit": "2026-10-07T20:47Z",
    "beleg": "suche/laeufe/L20261007T180559Z.json"
+  },
+  "neu_noaa_ghcn_central_park_wetter_niederschlag_mm": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
+  },
+  "neu_noaa_ghcn_central_park_wetter_tmax_c": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
   },
   "neu_norges_bank_leitzins_entscheidtage_aenderungstage": {
    "erst_dokument": null,
@@ -1206,6 +1248,12 @@
    "erst_lauf": null,
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_wto_streitfaelle_konsultationen_konsultationen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261114T115120Z",
+   "erst_zeit": "2026-11-14T13:46Z",
+   "beleg": "suche/laeufe/L20261114T115120Z.json"
   },
   "paar_kurz_ch_us": {
    "erst_dokument": "S0009",
@@ -2012,8 +2060,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261113T124343Z",
-  "zeit_utc": "2026-11-13T15:59Z",
-  "grundreihen_n": 334
+  "lauf_id": "L20261114T115120Z",
+  "zeit_utc": "2026-11-14T13:46Z",
+  "grundreihen_n": 342
  }
 }

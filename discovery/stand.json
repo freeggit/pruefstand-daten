@@ -2792,6 +2792,24 @@
    "aufgenommen_utc": "2026-10-28T10:53:34Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__eu_wettbewerbsentscheide__fusionskontrolle.csv.gz": {
+   "datei": "n__neu__eu_wettbewerbsentscheide__fusionskontrolle.csv.gz@a3424447ce457586",
+   "sha": "a3424447ce457586bd8eff9b17794d754fecd4e2305d08173da1e1573f839ad5",
+   "sha_inhalt": "e31ea06de5cfc06ae5cf18bf9e7743ab909e3c098e343716b9553da57cfc13ca",
+   "zeilen": 13149,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-14T11:51:42Z",
+   "lauf_id": "L20261114T115120Z"
+  },
+  "n__neu__eu_wettbewerbsentscheide__kartellverfahren.csv.gz": {
+   "datei": "n__neu__eu_wettbewerbsentscheide__kartellverfahren.csv.gz@8753c0507869af06",
+   "sha": "8753c0507869af063825acc2911ffc607297dbe42ebd56342d908ccb0dd8cc18",
+   "sha_inhalt": "22640b4c07d05cd25662886d378f9364b89bfdf75e921a2585f593b28ae20f84",
+   "zeilen": 13149,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-14T11:51:42Z",
+   "lauf_id": "L20261114T115120Z"
+  },
   "n__neu__fda_zulassungen__zulassungen.csv.gz": {
    "datei": "n__neu__fda_zulassungen__zulassungen.csv.gz@2de836a300e801e2",
    "sha": "2de836a300e801e28140270d65f7ed2e817cef3bc69925b65fef20d197672833",
@@ -3512,6 +3530,33 @@
    "aufgenommen_utc": "2026-11-13T12:44:13Z",
    "lauf_id": "L20261113T124343Z"
   },
+  "n__neu__nhtsa_beschwerden_taeglich__anzahl_gesamt.csv.gz": {
+   "datei": "n__neu__nhtsa_beschwerden_taeglich__anzahl_gesamt.csv.gz@8cfe0bafcf733916",
+   "sha": "8cfe0bafcf733916af7a0747ca2e86e70e33c5243f7b5b72836ef36225de2d72",
+   "sha_inhalt": "9d0b54709f2ae724eaef5a8bc089c92d0fb5d6b7316a2249d24090d9f7c6804f",
+   "zeilen": 9495,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-14T11:51:46Z",
+   "lauf_id": "L20261114T115120Z"
+  },
+  "n__neu__nhtsa_beschwerden_taeglich__anzahl_schwer.csv.gz": {
+   "datei": "n__neu__nhtsa_beschwerden_taeglich__anzahl_schwer.csv.gz@603d14e6662a0ceb",
+   "sha": "603d14e6662a0ceb9a7ff47b5c73a0099e441488c4b1b059105e3a7dd6dbc749",
+   "sha_inhalt": "c1fbcf7ec9ba89f962a94666570a88a9523c4955126b7600f8308d98fa00aebe",
+   "zeilen": 9495,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-14T11:51:46Z",
+   "lauf_id": "L20261114T115120Z"
+  },
+  "n__neu__nhtsa_odi_untersuchungen__untersuchungen.csv.gz": {
+   "datei": "n__neu__nhtsa_odi_untersuchungen__untersuchungen.csv.gz@5d30ddfdf71b4d83",
+   "sha": "5d30ddfdf71b4d8322e3883505b824684f9348808b9cb15ca29e04a383f3a1d0",
+   "sha_inhalt": "5799e54c578aa2c260943c84b9392af3102b73f774997b5fcc2905985cfe20ee",
+   "zeilen": 9132,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-14T11:51:46Z",
+   "lauf_id": "L20261114T115120Z"
+  },
   "n__neu__nhtsa_ruckrufe__anzahl.csv.gz": {
    "datei": "n__neu__nhtsa_ruckrufe__anzahl.csv.gz@30067fe303ed2965",
    "sha": "30067fe303ed2965e8b1f3d39bbac23fcf31903e0cc4a4f5d509e5faa669a500",
@@ -3682,6 +3727,24 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:39Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__spc_unwetter_meldungen__tornado_meldungen.csv.gz": {
+   "datei": "n__neu__spc_unwetter_meldungen__tornado_meldungen.csv.gz@3211e876336c97da",
+   "sha": "3211e876336c97daee760b0c14d896747b56080bf85bfdae9cc1a2232f44b02d",
+   "sha_inhalt": "ffd9402ea4f9c2491bf84a03ce9f38a94fcf716d0a94f650060f15fd7a975950",
+   "zeilen": 5844,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-14T11:51:48Z",
+   "lauf_id": "L20261114T115120Z"
+  },
+  "n__neu__spc_unwetter_meldungen__unwetter_meldungen_gesamt.csv.gz": {
+   "datei": "n__neu__spc_unwetter_meldungen__unwetter_meldungen_gesamt.csv.gz@381979ddcb1a42c5",
+   "sha": "381979ddcb1a42c55bacf9bfc628e1dcb5ac5555273c2140af0ed18bbb3f2004",
+   "sha_inhalt": "134ae518b4ed13c8289ce9e4064be02346c345c368ac18d2b8a94abc9910bd2e",
+   "zeilen": 5844,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-14T11:51:48Z",
+   "lauf_id": "L20261114T115120Z"
   },
   "n__neu__treasury_auktionen__bid_to_cover.csv.gz": {
    "datei": "n__neu__treasury_auktionen__bid_to_cover.csv.gz@b93b7d4c94b7b0a9",
@@ -4685,48 +4748,48 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-13T12:44:21Z",
- "dateien_n": 517,
+ "stand_utc": "2026-11-14T11:51:52Z",
+ "dateien_n": 524,
  "vorgemerkt": {
-  "n__neu__eu_wettbewerbsentscheide__fusionskontrolle.csv.gz": {
-   "erstmals_utc": "2026-11-12T13:24:46Z",
-   "beste_werte": 2354,
-   "frueheste_erste": "1985-01-01",
+  "n__neu__ca_ag_datenlecks__meldungen.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:41Z",
+   "beste_werte": 1313,
+   "frueheste_erste": "2012-01-20",
    "sichtungen": [
     {
-     "utc": "2026-11-12T13:24:46Z",
-     "lauf_id": "L20261112T132422Z",
-     "werte": 2354,
-     "erste": "1985-01-01",
-     "sha_inhalt": "e31ea06de5cfc06ae5cf18bf9e7743ab909e3c098e343716b9553da57cfc13ca"
-    },
-    {
-     "utc": "2026-11-13T12:44:07Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 2354,
-     "erste": "1985-01-01",
-     "sha_inhalt": "e31ea06de5cfc06ae5cf18bf9e7743ab909e3c098e343716b9553da57cfc13ca"
+     "utc": "2026-11-14T11:51:41Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 1313,
+     "erste": "2012-01-20",
+     "sha_inhalt": "7716df8d63905af8dfd8a4a4ee8a4b249f0af82b74a8629867f465d02eea7346"
     }
    ]
   },
-  "n__neu__eu_wettbewerbsentscheide__kartellverfahren.csv.gz": {
-   "erstmals_utc": "2026-11-12T13:24:46Z",
-   "beste_werte": 551,
-   "frueheste_erste": "1985-01-01",
+  "n__neu__ema_zulassungsentscheide__zulassungen_biosimilar.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:41Z",
+   "beste_werte": 55,
+   "frueheste_erste": "2006-04-12",
    "sichtungen": [
     {
-     "utc": "2026-11-12T13:24:46Z",
-     "lauf_id": "L20261112T132422Z",
-     "werte": 551,
-     "erste": "1985-01-01",
-     "sha_inhalt": "22640b4c07d05cd25662886d378f9364b89bfdf75e921a2585f593b28ae20f84"
-    },
+     "utc": "2026-11-14T11:51:41Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 55,
+     "erste": "2006-04-12",
+     "sha_inhalt": "3ce4849ac266529997fb2b2251a50dcb8c4eb90952eea7d501d5287beefc3cdf"
+    }
+   ]
+  },
+  "n__neu__ema_zulassungsentscheide__zulassungen_neu.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:41Z",
+   "beste_werte": 753,
+   "frueheste_erste": "1995-10-20",
+   "sichtungen": [
     {
-     "utc": "2026-11-13T12:44:08Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 551,
-     "erste": "1985-01-01",
-     "sha_inhalt": "22640b4c07d05cd25662886d378f9364b89bfdf75e921a2585f593b28ae20f84"
+     "utc": "2026-11-14T11:51:41Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 753,
+     "erste": "1995-10-20",
+     "sha_inhalt": "a7cf820784ce041a89775bc95b429c7d8988601b70f2eee72c6cd5da1d75f14b"
     }
    ]
   },
@@ -4738,6 +4801,13 @@
     {
      "utc": "2026-11-13T12:44:08Z",
      "lauf_id": "L20261113T124343Z",
+     "werte": 6222,
+     "erste": "1946-02-18",
+     "sha_inhalt": "6c3ef9936b0a76c3bb6ddc36efade83b5ed6a6877153315f40a4b21d1eaaf4be"
+    },
+    {
+     "utc": "2026-11-14T11:51:42Z",
+     "lauf_id": "L20261114T115120Z",
      "werte": 6222,
      "erste": "1946-02-18",
      "sha_inhalt": "6c3ef9936b0a76c3bb6ddc36efade83b5ed6a6877153315f40a4b21d1eaaf4be"
@@ -4755,6 +4825,13 @@
      "werte": 320,
      "erste": "2006-01-03",
      "sha_inhalt": "f135ebbdc01e42070e6907e20477870d0a19b26fb560eef8e36bf25d628f0cfa"
+    },
+    {
+     "utc": "2026-11-14T11:51:42Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 320,
+     "erste": "2006-01-03",
+     "sha_inhalt": "f135ebbdc01e42070e6907e20477870d0a19b26fb560eef8e36bf25d628f0cfa"
     }
    ]
   },
@@ -4766,6 +4843,13 @@
     {
      "utc": "2026-11-13T12:44:10Z",
      "lauf_id": "L20261113T124343Z",
+     "werte": 1420,
+     "erste": "1994-01-01",
+     "sha_inhalt": "8b901431a5a6db5620b4c188c9cccf199aa0b8a3c08e5351324bfa7f6171920b"
+    },
+    {
+     "utc": "2026-11-14T11:51:43Z",
+     "lauf_id": "L20261114T115120Z",
      "werte": 1420,
      "erste": "1994-01-01",
      "sha_inhalt": "8b901431a5a6db5620b4c188c9cccf199aa0b8a3c08e5351324bfa7f6171920b"
@@ -4783,6 +4867,13 @@
      "werte": 294,
      "erste": "1994-01-01",
      "sha_inhalt": "da3df5d4b07fd839c775658d5897898f8911a2a1e91d901bad838c038234d885"
+    },
+    {
+     "utc": "2026-11-14T11:51:44Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 294,
+     "erste": "1994-01-01",
+     "sha_inhalt": "da3df5d4b07fd839c775658d5897898f8911a2a1e91d901bad838c038234d885"
     }
    ]
   },
@@ -4794,6 +4885,13 @@
     {
      "utc": "2026-11-13T12:44:12Z",
      "lauf_id": "L20261113T124343Z",
+     "werte": 25,
+     "erste": "1930-07-13",
+     "sha_inhalt": "384bcf396ecc428f35584fa08638e8ded12cb1c83a0ee228b13a7f9028737e48"
+    },
+    {
+     "utc": "2026-11-14T11:51:45Z",
+     "lauf_id": "L20261114T115120Z",
      "werte": 25,
      "erste": "1930-07-13",
      "sha_inhalt": "384bcf396ecc428f35584fa08638e8ded12cb1c83a0ee228b13a7f9028737e48"
@@ -4811,6 +4909,13 @@
      "werte": 34,
      "erste": "1930-07-13",
      "sha_inhalt": "fff4fac20a39ac6d121cfeb86f6744efa8b9bc2ce272c2f5a1973a6b2c24d4c4"
+    },
+    {
+     "utc": "2026-11-14T11:51:45Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 34,
+     "erste": "1930-07-13",
+     "sha_inhalt": "fff4fac20a39ac6d121cfeb86f6744efa8b9bc2ce272c2f5a1973a6b2c24d4c4"
     }
    ]
   },
@@ -4825,69 +4930,69 @@
      "werte": 20,
      "erste": "1930-07-13",
      "sha_inhalt": "e0c8ca0c94f1e991169a27d5e44080ef7a7a250d6720efe8b99ca5e144dcab9a"
+    },
+    {
+     "utc": "2026-11-14T11:51:45Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 20,
+     "erste": "1930-07-13",
+     "sha_inhalt": "e0c8ca0c94f1e991169a27d5e44080ef7a7a250d6720efe8b99ca5e144dcab9a"
     }
    ]
   },
-  "n__neu__nhtsa_beschwerden_taeglich__anzahl_gesamt.csv.gz": {
-   "erstmals_utc": "2026-11-12T13:24:51Z",
-   "beste_werte": 8942,
-   "frueheste_erste": "1995-01-03",
+  "n__neu__healthcanada_noc_zulassungen__generika_zulassungen.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:45Z",
+   "beste_werte": 1657,
+   "frueheste_erste": "1995-01-19",
    "sichtungen": [
     {
-     "utc": "2026-11-12T13:24:51Z",
-     "lauf_id": "L20261112T132422Z",
-     "werte": 8942,
-     "erste": "1995-01-03",
-     "sha_inhalt": "9d0b54709f2ae724eaef5a8bc089c92d0fb5d6b7316a2249d24090d9f7c6804f"
-    },
-    {
-     "utc": "2026-11-13T12:44:13Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 8942,
-     "erste": "1995-01-03",
-     "sha_inhalt": "9d0b54709f2ae724eaef5a8bc089c92d0fb5d6b7316a2249d24090d9f7c6804f"
+     "utc": "2026-11-14T11:51:45Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 1657,
+     "erste": "1995-01-19",
+     "sha_inhalt": "886ad36d2d0a55155f975bc47a6c32361528349319c6bcfbf656b05b0dba4bf7"
     }
    ]
   },
-  "n__neu__nhtsa_beschwerden_taeglich__anzahl_schwer.csv.gz": {
-   "erstmals_utc": "2026-11-12T13:24:51Z",
-   "beste_werte": 8781,
-   "frueheste_erste": "1995-01-03",
+  "n__neu__healthcanada_noc_zulassungen__nas_zulassungen.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:45Z",
+   "beste_werte": 723,
+   "frueheste_erste": "1994-03-16",
    "sichtungen": [
     {
-     "utc": "2026-11-12T13:24:51Z",
-     "lauf_id": "L20261112T132422Z",
-     "werte": 8781,
-     "erste": "1995-01-03",
-     "sha_inhalt": "c1fbcf7ec9ba89f962a94666570a88a9523c4955126b7600f8308d98fa00aebe"
-    },
-    {
-     "utc": "2026-11-13T12:44:13Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 8781,
-     "erste": "1995-01-03",
-     "sha_inhalt": "c1fbcf7ec9ba89f962a94666570a88a9523c4955126b7600f8308d98fa00aebe"
+     "utc": "2026-11-14T11:51:45Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 723,
+     "erste": "1994-03-16",
+     "sha_inhalt": "3dcb6c8ac218264b50266bfeb9de25481ef7987a318a8109edefccdb5c0a409d"
     }
    ]
   },
-  "n__neu__nhtsa_odi_untersuchungen__untersuchungen.csv.gz": {
-   "erstmals_utc": "2026-11-12T13:24:51Z",
-   "beste_werte": 1492,
-   "frueheste_erste": "1996-01-01",
+  "n__neu__noaa_ghcn_central_park_wetter__niederschlag_mm.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:47Z",
+   "beste_werte": 18423,
+   "frueheste_erste": "1869-01-01",
    "sichtungen": [
     {
-     "utc": "2026-11-12T13:24:51Z",
-     "lauf_id": "L20261112T132422Z",
-     "werte": 1492,
-     "erste": "1996-01-01",
-     "sha_inhalt": "5799e54c578aa2c260943c84b9392af3102b73f774997b5fcc2905985cfe20ee"
-    },
+     "utc": "2026-11-14T11:51:47Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 18423,
+     "erste": "1869-01-01",
+     "sha_inhalt": "7a28ad55191864e1db0af14a514b30b2e789eac25f187086a6674c32ecde2161"
+    }
+   ]
+  },
+  "n__neu__noaa_ghcn_central_park_wetter__tmax_c.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:47Z",
+   "beste_werte": 54977,
+   "frueheste_erste": "1869-01-01",
+   "sichtungen": [
     {
-     "utc": "2026-11-13T12:44:13Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 1492,
-     "erste": "1996-01-01",
-     "sha_inhalt": "5799e54c578aa2c260943c84b9392af3102b73f774997b5fcc2905985cfe20ee"
+     "utc": "2026-11-14T11:51:47Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 54977,
+     "erste": "1869-01-01",
+     "sha_inhalt": "adaa06de5d90a398d248e5fcd637a8df722b7bf6ec53e603f3fae883c1de5ba2"
     }
    ]
   },
@@ -4902,48 +5007,13 @@
      "werte": 4375,
      "erste": "2006-01-01",
      "sha_inhalt": "cb7651105fd698e7cf689ff247b50df84cfff69b8e627fb75e1c7036df746f49"
-    }
-   ]
-  },
-  "n__neu__spc_unwetter_meldungen__tornado_meldungen.csv.gz": {
-   "erstmals_utc": "2026-11-12T13:24:52Z",
-   "beste_werte": 2639,
-   "frueheste_erste": "2005-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-12T13:24:52Z",
-     "lauf_id": "L20261112T132422Z",
-     "werte": 2639,
-     "erste": "2005-01-01",
-     "sha_inhalt": "ffd9402ea4f9c2491bf84a03ce9f38a94fcf716d0a94f650060f15fd7a975950"
     },
     {
-     "utc": "2026-11-13T12:44:15Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 2639,
-     "erste": "2005-01-01",
-     "sha_inhalt": "ffd9402ea4f9c2491bf84a03ce9f38a94fcf716d0a94f650060f15fd7a975950"
-    }
-   ]
-  },
-  "n__neu__spc_unwetter_meldungen__unwetter_meldungen_gesamt.csv.gz": {
-   "erstmals_utc": "2026-11-12T13:24:52Z",
-   "beste_werte": 4337,
-   "frueheste_erste": "2005-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-12T13:24:52Z",
-     "lauf_id": "L20261112T132422Z",
-     "werte": 4337,
-     "erste": "2005-01-01",
-     "sha_inhalt": "134ae518b4ed13c8289ce9e4064be02346c345c368ac18d2b8a94abc9910bd2e"
-    },
-    {
-     "utc": "2026-11-13T12:44:15Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 4337,
-     "erste": "2005-01-01",
-     "sha_inhalt": "134ae518b4ed13c8289ce9e4064be02346c345c368ac18d2b8a94abc9910bd2e"
+     "utc": "2026-11-14T11:51:47Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 4375,
+     "erste": "2006-01-01",
+     "sha_inhalt": "cb7651105fd698e7cf689ff247b50df84cfff69b8e627fb75e1c7036df746f49"
     }
    ]
   },
@@ -4958,6 +5028,27 @@
      "werte": 11322,
      "erste": "1990-01-01",
      "sha_inhalt": "f693a3cec739a830b02320408d784d626e5aaee5972aa400caf3e22d83f76ebc"
+    },
+    {
+     "utc": "2026-11-14T11:51:49Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 11322,
+     "erste": "1990-01-01",
+     "sha_inhalt": "f693a3cec739a830b02320408d784d626e5aaee5972aa400caf3e22d83f76ebc"
+    }
+   ]
+  },
+  "n__neu__wto_streitfaelle_konsultationen__konsultationen.csv.gz": {
+   "erstmals_utc": "2026-11-14T11:51:49Z",
+   "beste_werte": 490,
+   "frueheste_erste": "1995-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-14T11:51:49Z",
+     "lauf_id": "L20261114T115120Z",
+     "werte": 490,
+     "erste": "1995-01-01",
+     "sha_inhalt": "18d634a2252f49017e056c6f251c4875fa37ff1b30f6eb8191eb0472e4d5dbef"
     }
    ]
   }

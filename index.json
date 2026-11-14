@@ -1,5 +1,5 @@
 {
- "kumuliert": 744734,
+ "kumuliert": 759186,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -318,6 +318,11 @@
   "neu_bundesbank_umlauf_bund2y_d5",
   "neu_bundesbank_umlauf_bund2y_stand",
   "neu_bundesbank_umlauf_bund2y_z252",
+  "neu_ca_ag_datenlecks_meldungen_d1",
+  "neu_ca_ag_datenlecks_meldungen_d20",
+  "neu_ca_ag_datenlecks_meldungen_d5",
+  "neu_ca_ag_datenlecks_meldungen_stand",
+  "neu_ca_ag_datenlecks_meldungen_z252",
   "neu_cboe_skew_skew_d1",
   "neu_cboe_skew_skew_d20",
   "neu_cboe_skew_skew_d5",
@@ -380,6 +385,16 @@
   "neu_ecb_fx_eurjpy_stand",
   "neu_ecb_fx_eurjpy_z252",
   "neu_ecb_ratssitzungen_termine_sitzung_stand",
+  "neu_ema_zulassungsentscheide_zulassungen_biosimilar_d1",
+  "neu_ema_zulassungsentscheide_zulassungen_biosimilar_d20",
+  "neu_ema_zulassungsentscheide_zulassungen_biosimilar_d5",
+  "neu_ema_zulassungsentscheide_zulassungen_biosimilar_stand",
+  "neu_ema_zulassungsentscheide_zulassungen_biosimilar_z252",
+  "neu_ema_zulassungsentscheide_zulassungen_neu_d1",
+  "neu_ema_zulassungsentscheide_zulassungen_neu_d20",
+  "neu_ema_zulassungsentscheide_zulassungen_neu_d5",
+  "neu_ema_zulassungsentscheide_zulassungen_neu_stand",
+  "neu_ema_zulassungsentscheide_zulassungen_neu_z252",
   "neu_eu_boersenfeiertage_geschlossen_stand",
   "neu_eu_wettbewerbsentscheide_fusionskontrolle_d1",
   "neu_eu_wettbewerbsentscheide_fusionskontrolle_d20",
@@ -726,6 +741,16 @@
   "neu_fussball_niederlagen_nationalteams_niederlage_che_stand",
   "neu_fussball_niederlagen_nationalteams_niederlage_deu_stand",
   "neu_fussball_niederlagen_nationalteams_niederlage_jpn_stand",
+  "neu_healthcanada_noc_zulassungen_generika_zulassungen_d1",
+  "neu_healthcanada_noc_zulassungen_generika_zulassungen_d20",
+  "neu_healthcanada_noc_zulassungen_generika_zulassungen_d5",
+  "neu_healthcanada_noc_zulassungen_generika_zulassungen_stand",
+  "neu_healthcanada_noc_zulassungen_generika_zulassungen_z252",
+  "neu_healthcanada_noc_zulassungen_nas_zulassungen_d1",
+  "neu_healthcanada_noc_zulassungen_nas_zulassungen_d20",
+  "neu_healthcanada_noc_zulassungen_nas_zulassungen_d5",
+  "neu_healthcanada_noc_zulassungen_nas_zulassungen_stand",
+  "neu_healthcanada_noc_zulassungen_nas_zulassungen_z252",
   "neu_japan_tankan_veroeffentlichung_tankan_veroeffentlichung_stand",
   "neu_kalender_ereignisse_fomc_sitzung_stand",
   "neu_kalender_ereignisse_opex_verfall_stand",
@@ -809,6 +834,16 @@
   "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_d5",
   "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_stand",
   "neu_noaa_cpc_heizgradtage_taeglich_hdd_conus_z252",
+  "neu_noaa_ghcn_central_park_wetter_niederschlag_mm_d1",
+  "neu_noaa_ghcn_central_park_wetter_niederschlag_mm_d20",
+  "neu_noaa_ghcn_central_park_wetter_niederschlag_mm_d5",
+  "neu_noaa_ghcn_central_park_wetter_niederschlag_mm_stand",
+  "neu_noaa_ghcn_central_park_wetter_niederschlag_mm_z252",
+  "neu_noaa_ghcn_central_park_wetter_tmax_c_d1",
+  "neu_noaa_ghcn_central_park_wetter_tmax_c_d20",
+  "neu_noaa_ghcn_central_park_wetter_tmax_c_d5",
+  "neu_noaa_ghcn_central_park_wetter_tmax_c_stand",
+  "neu_noaa_ghcn_central_park_wetter_tmax_c_z252",
   "neu_norges_bank_leitzins_entscheidtage_aenderungstage_stand",
   "neu_ntsb_luftfahrtunfaelle_fatal_d1",
   "neu_ntsb_luftfahrtunfaelle_fatal_d20",
@@ -1003,6 +1038,11 @@
   "neu_wikipedia_weitere_zinssatz_en_z252",
   "neu_wikipedia_weitere_zinssatz_stand",
   "neu_wikipedia_weitere_zinssatz_z252",
+  "neu_wto_streitfaelle_konsultationen_konsultationen_d1",
+  "neu_wto_streitfaelle_konsultationen_konsultationen_d20",
+  "neu_wto_streitfaelle_konsultationen_konsultationen_d5",
+  "neu_wto_streitfaelle_konsultationen_konsultationen_stand",
+  "neu_wto_streitfaelle_konsultationen_konsultationen_z252",
   "paar_kurz_ch_us_d1",
   "paar_kurz_ch_us_d20",
   "paar_kurz_ch_us_d5",
@@ -1865,9 +1905,15 @@
    "datei": "suche/S0067.json",
    "kandidaten": 406141,
    "in_db": false
+  },
+  {
+   "nr": 68,
+   "datei": "suche/S0068.json",
+   "kandidaten": 420593,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-13T15:59Z",
+ "letzter_suchlauf_utc": "2026-11-14T13:46Z",
  "pruefung_lernrunde_utc": "2026-11-14T10:10:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2303,11 +2349,19 @@
    "ergebnis_hash": "548160ffb214d4d9",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261114T115120Z.json",
+   "lauf_id": "L20261114T115120Z",
+   "s_dokument": "suche/S0068.json",
+   "ergebnis_hash": "4e43c74e175bb906",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-13T15:59Z",
- "letztes_vollarchiv": "suche/S0067_alle.csv.gz",
- "letzter_ergebnis_hash": "548160ffb214d4d9",
+ "letzter_lauf_utc": "2026-11-14T13:46Z",
+ "letztes_vollarchiv": "suche/S0068_alle.csv.gz",
+ "letzter_ergebnis_hash": "4e43c74e175bb906",
  "konflikte": [
   {
    "wo": "index",
@@ -4542,10 +4596,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 334,
-  "neu_in_diesem_lauf": 9
+  "grundreihen_n": 342,
+  "neu_in_diesem_lauf": 8
  },
- "letztes_vollarchiv_ergebnis_hash": "548160ffb214d4d9",
+ "letztes_vollarchiv_ergebnis_hash": "4e43c74e175bb906",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261110T225026Z",
@@ -4563,7 +4617,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "089e8174345f59f8",
- "letzter_gueltiger_lauf": "L20261113T124343Z",
- "letzter_entscheidung_hash": "b85c4fd53e4328b3"
+ "letzter_eingabe_hash": "2006c92a3d4cd554",
+ "letzter_gueltiger_lauf": "L20261114T115120Z",
+ "letzter_entscheidung_hash": "d94c1ec8489665b3"
 }
