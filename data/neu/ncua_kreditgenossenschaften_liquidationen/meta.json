@@ -1,0 +1,20 @@
+{
+  "schliessungen": {
+    "beschreibung": "Taegliche Anzahl Liquidationen (unfreiwillig und freiwillig) und Fusionen mit NCUA-Unterstuetzung von US-Kreditgenossenschaften, Datum = Datum der Massnahme laut NCUA, 0 an Tagen ohne Fall; ab 2009",
+    "einheit": "Anzahl Faelle",
+    "publikation": "taeglich: die NCUA gibt Liquidationen, Zwangsverwaltungen und unterstuetzte Fusionen am Tag der Massnahme per Pressemitteilung bekannt (Tabelle verlinkt je Fall die Pressemitteilung, ncua.gov/newsroom); konservativ 1 Tag angesetzt",
+    "quelle_url": "https://ncua.gov/support-services/conservatorships-liquidations",
+    "revidiert": false,
+    "verdichtung": "Anzahl Faelle je Kalendertag",
+    "verfuegbar_nach_tagen": 1
+  },
+  "zwangsverwaltungen": {
+    "beschreibung": "Taegliche Anzahl Unterstellungen von US-Kreditgenossenschaften unter Zwangsverwaltung (Conservatorship) durch die NCUA, Datum = Datum der Massnahme, 0 an Tagen ohne Fall; ab 2009",
+    "einheit": "Anzahl Faelle",
+    "publikation": "taeglich: die NCUA gibt Liquidationen, Zwangsverwaltungen und unterstuetzte Fusionen am Tag der Massnahme per Pressemitteilung bekannt (Tabelle verlinkt je Fall die Pressemitteilung, ncua.gov/newsroom); konservativ 1 Tag angesetzt",
+    "quelle_url": "https://ncua.gov/support-services/conservatorships-liquidations",
+    "revidiert": false,
+    "verdichtung": "Anzahl Faelle je Kalendertag",
+    "verfuegbar_nach_tagen": 1
+  }
+}
