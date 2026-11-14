@@ -3296,11 +3296,11 @@
     "domain": "api.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut.",
     "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-08T08:17Z",
-    "geprueft_utc": "2026-11-12T04:05Z",
+    "geprueft_utc": "2026-11-14T00:08Z",
     "prioritaet": "normal"
   },
   {
@@ -4059,13 +4059,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut.",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-12T04:05Z"
+    "geprueft_utc": "2026-11-14T00:08Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -4970,9 +4970,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Massnahmen gegen kleinere und regionale Banken zeigen Kredit- und Kontrollprobleme im Bankensektor; ihre Häufung kann Finanzwerte (XLF) kurzfristig belasten.",
-    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-13T00:18Z"
+    "geprueft_utc": "2026-11-14T00:08Z"
   },
   {
     "id": "osha_todesfaelle_meldungen",
@@ -4983,9 +4983,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
-    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-13T00:18Z"
+    "geprueft_utc": "2026-11-14T00:08Z"
   },
   {
     "id": "epa_echo_vollzugsfaelle",
@@ -5009,9 +5009,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
-    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-13T00:18Z"
+    "geprueft_utc": "2026-11-14T00:08Z"
   },
   {
     "id": "fra_bahnunfaelle_taeglich",
@@ -5547,5 +5547,86 @@
     "aufgenommen_utc": "2026-11-13T09:50Z",
     "geprueft_utc": "2026-11-13T20:07Z",
     "prioritaet": "tief"
+  },
+  {
+    "id": "ca_ag_datenlecks",
+    "name": "Kalifornien Attorney General: gemeldete Datenlecks je Meldetag",
+    "url": "https://oag.ca.gov/privacy/databreach/list-export",
+    "domain": "oag.ca.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Haeufungen oeffentlich gemeldeter Datenlecks (meist Gesundheits-, Finanz- und Technologiefirmen) erhoehen kurzfristig wahrgenommenes Cyber- und Haftungsrisiko und koennen so ueber 1 bis 20 Handelstage XLV, XLF oder XLK gegenueber dem Weltindex bewegen.",
+    "grund": "Zusatz 6 Punkt 5 (Firmenereignisse aus eigener Recherche). K1: nullgefuellte Tagesreihe, Median-Abstand 1 Tag. K2: erster Wert 2012-01-20, 5412 Zeilen (5440 Meldungen). K3: amtliche CSV oag.ca.gov ohne Login/Schluessel, oeffentliche Behoerdenliste. K4: Datum = Reported Date (Meldung an den AG/Aufnahme in die Liste), keine Wirtschaftsstatistik; Restrisiko vereinzelt nachtraeglich eingestellter Meldungen, darum verfuegbar_nach_tagen 2. K5: letzter Wert 2026-11-13. K6: neu (hibp_datenlecks abgelehnt K3, andere Quelle). K7: 14 KB, Abruf 2 s. Plausibilitaet: 130-640 Meldungen/Jahr, steigend; Max 20/Tag, Min 0; Anteil gleicher Folgewerte 0.384 durch Nulltage (Wochenenden: nur 99 Meldungen an Sa/So) erklaert. Kein Sektorfeld in der Liste, darum nur Gesamtzahl. Paarvorschlag fuer Reto: keiner.",
+    "reihen": [
+      {
+        "reihe": "meldungen",
+        "zeilen": 5412,
+        "erste": "2012-01-20",
+        "letzte": "2026-11-13",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.384,
+        "min": 0.0,
+        "max": 20.0
+      }
+    ],
+    "aufgenommen_utc": "2026-11-14T00:08Z",
+    "geprueft_utc": "2026-11-14T00:08Z"
+  },
+  {
+    "id": "rasff_lebensmittelwarnungen",
+    "name": "EU RASFF Window: Lebensmittel- und Futtermittelwarnungen je Tag",
+    "url": "https://webgate.ec.europa.eu/rasff-window/screen/search",
+    "domain": "webgate.ec.europa.eu",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Haeufungen von EU-Schnellwarnungen zu Lebensmitteln koennten Basiskonsum (XLP) und Agrarrohstoffe (DBA) kurzfristig belasten.",
+    "grund": "K2: Test 2026-11-14T00:08Z: oeffentliche Such-API (POST .../backend/public/notification/search/consolidated/) erreichbar, enthaelt aber nur 33448 Meldungen, durchgehend erst ab Januar 2020 (Seiten 330-335 nur vereinzelte Altfaelle 2012/2014). Erster durchgehender Wert nach 31.12.2015.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-14T00:08Z",
+    "geprueft_utc": "2026-11-14T00:08Z"
+  },
+  {
+    "id": "fda_maude_geraetemeldungen",
+    "name": "openFDA MAUDE: Meldungen zu Medizinprodukte-Zwischenfaellen je Eingangstag",
+    "url": "https://api.fda.gov/device/event.json?count=date_received",
+    "domain": "api.fda.gov",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Spitzen bei Zwischenfallmeldungen zu Medizinprodukten koennten Medtech-Werte im Gesundheitssektor (XLV) kurzfristig belasten.",
+    "grund": "K4/K5: Test 2026-11-14T00:08Z: Zaehlung je date_received abrufbar (ab 1991), aber meta.last_updated 2026-11-04, letzter Wert 2026-10-30 (15 Tage alt, K5). Meldungen werden in Sammellieferungen nachgetragen, Tageszahlen fuer vergangene Eingangstage steigen nachtraeglich (K4); Grossteil Routine-Sammelmeldungen der Hersteller.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-14T00:08Z",
+    "geprueft_utc": "2026-11-14T00:08Z"
+  },
+  {
+    "id": "bls_arbeitskampf_streiks",
+    "name": "BLS Major Work Stoppages: Beginn grosser Streiks (ab 1000 Beschaeftigte)",
+    "url": "https://www.bls.gov/web/wkstp/monthly-listing.htm",
+    "domain": "www.bls.gov",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "normal",
+    "mechanismus": "Beginn grosser Streiks unterbricht Produktion und Lieferketten in Industrie, Autobau und Gesundheit und kann XLI, XLY oder XLV kurzfristig gegenueber dem Weltindex belasten.",
+    "grund": "Test 2026-11-14T00:08Z: www.bls.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Hinweis fuer spaeter: BLS publiziert monatlich (verfuegbar_nach_tagen verzoegert, Datum der Monatsmeldung), Liste ab 1993; weniger als 500 Ereignisse wahrscheinlich (K2 fraglich).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-14T00:08Z",
+    "geprueft_utc": "2026-11-14T00:08Z"
+  },
+  {
+    "id": "noaa_incidentnews_oelunfaelle",
+    "name": "NOAA IncidentNews: Oel- und Chemieunfaelle mit NOAA-Einsatz je Tag",
+    "url": "https://incidentnews.noaa.gov/raw/incidents.csv",
+    "domain": "incidentnews.noaa.gov",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Groessere Oel- und Chemieunfaelle an Kuesten und Wasserwegen unterbrechen Transport und Raffinerien und koennten XLE und USO kurzfristig bewegen.",
+    "grund": "K4: Test 2026-11-14T00:09Z: CSV frei abrufbar (4952 Vorfaelle, ab 1957, dicht erst ab 1984, ca. 150/Jahr, letzter 2026-10-31). Einziges Datum ist open_date = Vorfalltag, kein Veroeffentlichungsdatum; Liste wird nachtraeglich ergaenzt (Altfaelle 1957-1983 sichtbar rueckwirkend erfasst), Ereignisse waeren aus spaeterem Wissen rueckdatiert. Zudem inhaltlich nahe an aktiver Reihe uscg_nrc_meldungen_oel_chemie.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-14T00:09Z",
+    "geprueft_utc": "2026-11-14T00:09Z"
   }
 ]

@@ -1,0 +1,11 @@
+{
+  "meldungen": {
+    "beschreibung": "Anzahl der beim Attorney General von Kalifornien eingereichten und veroeffentlichten Datenleck-Meldungen (Pflicht ab 500 betroffenen Kaliforniern, Cal. Civ. Code 1798.29/1798.82) je Kalendertag. Datum = 'Reported Date' der Liste (Tag der Meldung an den AG und Aufnahme in die oeffentliche Liste), nicht der Tag des Lecks; 0 an Tagen ohne Meldung. Betroffen sind Firmen aller Sektoren, besonders Gesundheit und Finanz -- Mechanismus Cyberrisiko (XLV, XLF, XLK).",
+    "einheit": "Anzahl Meldungen",
+    "publikation": "taeglich: Die Liste oag.ca.gov/privacy/databreach/list wird laufend ergaenzt; im Abruf 2026-11-14T00Z waren bereits Meldungen mit Reported Date 2026-11-13 enthalten. Vereinzelt nachtraeglich eingestellte Meldungen mit frueherem Datum moeglich, darum Puffer 2 Tage.",
+    "quelle_url": "https://oag.ca.gov/privacy/databreach/list",
+    "revidiert": false,
+    "verdichtung": "Anzahl Meldungen je Kalendertag (Reported Date)",
+    "verfuegbar_nach_tagen": 2
+  }
+}
