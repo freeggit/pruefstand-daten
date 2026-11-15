@@ -5842,13 +5842,13 @@
     "url": "https://www.cdc.gov/han/php/notices/index.html",
     "domain": "www.cdc.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "CDC-Warnungen zu Ausbrüchen, Arzneimittelengpässen und verunreinigten Produkten kündigen Nachfrage nach Tests, Impfstoffen und Arzneien an und können Gesundheitswerte (XLV) kurzfristig bewegen.",
-    "grund": "Gefunden im Lauf 2026-11-15T00:10Z: Seite erreichbar (HTTP 200), die Liste wird aber per Skript nachgeladen (statisches HTML enthält nur die Daten von 2025). Archiv seit 2001 noch zu suchen; dünne Ereignisreihe (rund 20 bis 40 je Jahr). Nach dem Wegfall von who_ausbruchsmeldungen der Ersatz für den Bereich Ausbrüche. | Lauf 2026-11-15T04:15Z: Liste kommt aus /han/php/modules/han-archive.static.json (Solr-Antwort), enthaelt aber nur 38 Meldungen ab 2023 und als Datum 'last reviewed'/'article date' (nicht sicher der Ausgabetag). Aeltere Meldungen nur als Einzelseiten han00001..han00523; K2/K4 offen, Aufbau in Etappen noetig. Bleibt kandidat.",
+    "grund": "Gefunden im Lauf 2026-11-15T00:10Z: Seite erreichbar (HTTP 200), die Liste wird aber per Skript nachgeladen (statisches HTML enthält nur die Daten von 2025). Archiv seit 2001 noch zu suchen; dünne Ereignisreihe (rund 20 bis 40 je Jahr). Nach dem Wegfall von who_ausbruchsmeldungen der Ersatz für den Bereich Ausbrüche. | Lauf 2026-11-15T04:15Z: Liste kommt aus /han/php/modules/han-archive.static.json (Solr-Antwort), enthaelt aber nur 38 Meldungen ab 2023 und als Datum 'last reviewed'/'article date' (nicht sicher der Ausgabetag). Aeltere Meldungen nur als Einzelseiten han00001..han00523; K2/K4 offen, Aufbau in Etappen noetig. Bleibt kandidat. | Lauf 2026-11-15T20:55Z: abgelehnt K2. Einzelseiten emergency.cdc.gov/han/han000NN.asp und /han/<jahr>/ leiten alle auf die allgemeine Seite cdc.gov/emergency/index.html um (geprueft han00001, han00100, han00500); www.cdc.gov/han/<jahr>/han00500.html 404; Jahresarchiv /han/php/archive/<jahr>.html 404. Abrufbar bleiben nur 38 Meldungen ab 2023 (han-archive.static.json). archive.cdc.gov ist nur per Skript bedienbar. Historie vor 2016 damit nicht frei abrufbar.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-15T00:10Z",
-    "geprueft_utc": "2026-11-15T04:15Z"
+    "geprueft_utc": "2026-11-15T20:55Z"
   },
   {
     "id": "cftc_pressemitteilungen",
@@ -6035,11 +6035,12 @@
     "url": "https://ndc.ops.usace.army.mil/ords/f?p=108:1",
     "domain": "ndc.ops.usace.army.mil",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Gesperrte Schleusen stoppen den Transport von Getreide, Kohle und Chemie auf dem Fluss und können DBA und XLB gegenüber dem Weltindex kurzfristig bewegen.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Lock Performance Monitoring System, Abfrageseite HTTP 200; Daten ab etwa 1993. Ergänzt usgs_mississippi und usgs_ohio (Pegel) um tatsächliche Sperren.",
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Lock Performance Monitoring System, Abfrageseite HTTP 200; Daten ab etwa 1993. Ergänzt usgs_mississippi und usgs_ohio (Pegel) um tatsächliche Sperren. | Lauf 2026-11-15T20:55Z: abgelehnt K1/K2. Corps Locks (LPMS, Release 2.1.1) bietet Tagesdaten nur als Lock Status Report der letzten 30 Tage; die Stillstaende gibt es nur als Annual Lock Unavailability Report (Jahressummen 2016-2025). Seite 'Data Web Services' leitet auf die Startseite um, keine offene Schnittstelle mit Historie gefunden. Keine Tagesreihe ab 2015.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-15T20:55Z"
   }
 ]
