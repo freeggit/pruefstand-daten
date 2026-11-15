@@ -3299,11 +3299,11 @@
     "domain": "api.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut.",
+    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-08T08:17Z",
-    "geprueft_utc": "2026-11-14T00:08Z",
+    "geprueft_utc": "2026-11-15T12:15Z",
     "prioritaet": "normal"
   },
   {
@@ -4062,13 +4062,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-14T00:08Z"
+    "geprueft_utc": "2026-11-15T12:15Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -4595,9 +4595,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
     "status": "fehler",
-    "geprueft_utc": "2026-11-14T08:40Z"
+    "geprueft_utc": "2026-11-15T12:15Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -5912,38 +5912,64 @@
     "url": "https://securities.stanford.edu/filings.html",
     "domain": "securities.stanford.edu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Sammelklagen wegen Kursbetrugs häufen sich in Sektoren mit Bilanz- oder Produktproblemen; eine Häufung neuer Klagen kündigt Rechtsrisiken und Abschläge für den Sektor (z.B. XLK, IBB, XLF) gegenüber dem Weltindex an.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Firmenereignisse aggregiert, Beginn 1996 (vor 2015). Fachliteratur: Kursreaktion um Klageeinreichung (Ferris/Pritchard 2001, Gande/Lewis 2009). Aus dieser Umgebung HTTP 403; Abruf ggf. nur über GitHub Action (siehe Vorschlag Behördenquellen).",
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Firmenereignisse aggregiert, Beginn 1996 (vor 2015). Fachliteratur: Kursreaktion um Klageeinreichung (Ferris/Pritchard 2001, Gande/Lewis 2009). Aus dieser Umgebung HTTP 403; Abruf ggf. nur über GitHub Action (siehe Vorschlag Behördenquellen). | Test 2026-11-15T12:15Z: securities.stanford.edu/filings.html liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-15T12:15Z"
   },
   {
     "id": "uk_dvsa_fahrzeugrueckrufe",
     "name": "UK DVSA: Fahrzeugrückrufe je Starttag (ab 1992)",
-    "url": "https://www.check-vehicle-recalls.service.gov.uk/",
+    "url": "https://www.check-vehicle-recalls.service.gov.uk/documents/RecallsFile.csv",
     "domain": "www.check-vehicle-recalls.service.gov.uk",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Häufungen von Fahrzeugrückrufen belasten Autohersteller und Zulieferer über Kosten und Ruf; eine von der NHTSA unabhängige Quelle zeigt, ob der Effekt auf Konsumgüter (ff_durbl, EWG, EWJ) über Länder hinweg besteht.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Unabhängige Replikationsquelle zu nhtsa_ruckrufe (Regel L1-Geist: anderer Staat, andere Meldestelle). Startseite HTTP 200; Gesamtdatei als CSV über den Download-Link der Seite (Pfad noch zu bestimmen). Datum 'Launch Date' prüfen (K2).",
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Unabhängige Replikationsquelle zu nhtsa_ruckrufe (Regel L1-Geist: anderer Staat, andere Meldestelle). Startseite HTTP 200; Gesamtdatei als CSV über den Download-Link der Seite (Pfad noch zu bestimmen). Datum 'Launch Date' prüfen (K2). | Test 2026-11-15T12:15Z: Gesamtdatei RecallsFile.csv erreichbar (HTTP 200, 7.8 MB, 17873 Zeilen, 9027 Kampagnen, Launch Date ab 1992-01-09, letzte 2026-11-09). Abgelehnt K4: kein Veroeffentlichungsdatum; 'Launch Date' ist der Start der Herstelleraktion, nicht der Tag der Bekanntgabe. Die Liste wird nachtraeglich ergaenzt: Rueckrufnummern fehlen in der laufenden Folge (R/2026 bis 423 vergeben, 347 vorhanden) und Launch Dates liegen teils Monate nach der Nummernvergabe (z.B. R/2025/553 mit Launch 2026-06-12) bzw. davor (R/2024/513: Launch 2024-11-06, Nummer Ende Dezember). Wie transportcanada_fahrzeugrueckrufe: punktgenauer Stand nicht rekonstruierbar. Historie nicht abgelegt.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-15T12:15Z"
   },
   {
     "id": "japan_mlit_fahrzeugrueckrufe",
     "name": "Japan MLIT: Fahrzeugrückruf-Meldungen je Tag",
-    "url": "https://www.mlit.go.jp/jidosha/carinf/rcl/index.html",
+    "url": "https://www.mlit.go.jp/jidosha/recall.html",
     "domain": "www.mlit.go.jp",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Rückrufe japanischer Hersteller treffen einen grossen Teil des japanischen Aktienindex (Autos) und können EWJ gegenüber dem Weltindex kurzfristig belasten.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Zweite unabhängige Replikation zu nhtsa_ruckrufe. Seite HTTP 200; Meldungen als Pressemitteilungen (Japanisch), Archiv nach Jahr. Beginn des Archivs prüfen (Ziel vor 2015).",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Zweite unabhängige Replikation zu nhtsa_ruckrufe. Seite HTTP 200; Meldungen als Pressemitteilungen (Japanisch), Archiv nach Jahr. Beginn des Archivs prüfen (Ziel vor 2015). | Lauf 2026-11-15T12:15Z: K1-K7 erfuellt. Jahresseiten recall_<Jahr>.html ab 2001 (平成13年) bis laufendes Jahr, je Tag datierte Pressemitteilungen (報道発表) zu Rueckrufanzeigen; Datum = Tag der Bekanntgabe, keine Rueckdatierung (additive, datierte Pressemitteilungen; Korrekturen erscheinen als neue Mitteilung am Korrekturtag). rueckruf_meldungen: 9449 Tage 2001-01-01 bis gestern, 6414 Mitteilungen an 2903 Tagen, max 16/Tag, letzte Meldung 2026-11-12; Anteil gleicher Folgewerte 0.548 = Nulltage einer Zaehlreihe, nicht verdaechtig. Wochentagsmuster plausibel (Do am haeufigsten, kaum Wochenende). Pruefung Parser: Zahl gezaehlter Links = Zahl Pressemitteilungs-Links je Jahresseite (alle 26 Jahre gleich), trotz teils defektem HTML (fehlende </td>, </tr>). kaizen_meldungen (改善対策, rund 15 je Jahr, 441 Ereignistage) abgelegt, aber status ruhend: zu duenn und Variante derselben Groesse (Zusatz 3). Aktiv: rueckruf_meldungen; ruhend: kaizen_meldungen. verfuegbar_nach_tagen 1 (konservativ; Mitteilung am japanischen Nachmittag des Tages d). Paarvorschlag fuer Reto: japan_mlit_fahrzeugrueckrufe:rueckruf_meldungen mit nhtsa_ruckrufe:anzahl (gleiche Groesse, zwei Staaten).",
+    "reihen": [
+      {
+        "reihe": "rueckruf_meldungen",
+        "zeilen": 9449,
+        "erste": "2001-01-01",
+        "letzte": "2026-11-14",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.548,
+        "min": 0.0,
+        "max": 16.0,
+        "status": "aktiv"
+      },
+      {
+        "reihe": "kaizen_meldungen",
+        "zeilen": 9449,
+        "erste": "2001-01-01",
+        "letzte": "2026-11-14",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.912,
+        "min": 0.0,
+        "max": 3.0,
+        "status": "ruhend"
+      }
+    ],
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-15T12:15Z"
   },
   {
     "id": "bsee_offshore_vorfaelle",
@@ -5951,12 +5977,13 @@
     "url": "https://www.bsee.gov/stats-facts/offshore-incident-statistics",
     "domain": "www.bsee.gov",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Unfälle und Austritte auf Förderplattformen bedeuten Förderausfälle und Haftungsrisiken für Öl- und Gasfirmen; Häufungen können XLE und USO gegenüber dem Weltindex kurzfristig bewegen.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Seite HTTP 200; Statistik ab 2007, Einzelvorfälle über data.bsee.gov (Abfrageseite verschoben, neuen Pfad suchen). Ergänzt noaa_incidentnews_oelunfaelle (Meer) um die Förderung.",
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Seite HTTP 200; Statistik ab 2007, Einzelvorfälle über data.bsee.gov (Abfrageseite verschoben, neuen Pfad suchen). Ergänzt noaa_incidentnews_oelunfaelle (Meer) um die Förderung. | Test 2026-11-15T12:15Z: Seite HTTP 200; Vorfallsdaten nur als Jahres-Excel (CY 2024 erst im April 2026 publiziert, CY 2023 im Oktober 2024), aeltere Jahre nur als PDF. Abgelehnt K5 (letzter Wert weit ueber 10 Tage alt, Publikation 12 bis 18 Monate nach Jahresende) und K4 (Ereignisdatum statt Bekanntgabedatum, nachtraeglich bereinigte Jahreslisten).",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-15T12:15Z"
   },
   {
     "id": "csb_chemieunfaelle_untersuchungen",

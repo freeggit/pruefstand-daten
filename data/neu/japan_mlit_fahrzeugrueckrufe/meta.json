@@ -1,0 +1,22 @@
+{
+  "kaizen_meldungen": {
+    "beschreibung": "Anzahl MLIT-Pressemitteilungen zu Verbesserungsmassnahmen (改善対策の届出, Maengel ausserhalb der Sicherheitsnormen) je Tag der Bekanntgabe, 0 an Tagen ohne Meldung.",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich: MLIT veroeffentlicht jede Anzeige als datierte Pressemitteilung (報道発表) am Tag der Bekanntgabe; die Jahresseite listet sie unter diesem Tag. Tag d endet in Japan vor Handelsbeginn in Europa/USA; konservativ verfuegbar_nach_tagen 1.",
+    "quelle_url": "https://www.mlit.go.jp/jidosha/recall.html",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "Anzahl verlinkter Pressemitteilungen je Kalendertag (Spalte Kaizen)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "rueckruf_meldungen": {
+    "beschreibung": "Anzahl MLIT-Pressemitteilungen zu Rueckrufanzeigen (リコールの届出) fuer Strassenfahrzeuge in Japan je Tag der Bekanntgabe, 0 an Tagen ohne Meldung. Mechanismus: Rueckrufhaeufungen japanischer Hersteller (Autos gewichtig im japanischen Index) koennen EWJ belasten.",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich: MLIT veroeffentlicht jede Anzeige als datierte Pressemitteilung (報道発表) am Tag der Bekanntgabe; die Jahresseite listet sie unter diesem Tag. Tag d endet in Japan vor Handelsbeginn in Europa/USA; konservativ verfuegbar_nach_tagen 1.",
+    "quelle_url": "https://www.mlit.go.jp/jidosha/recall.html",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "Anzahl verlinkter Pressemitteilungen je Kalendertag (Spalte Rueckruf)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
