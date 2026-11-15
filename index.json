@@ -1,5 +1,5 @@
 {
- "kumuliert": 759186,
+ "kumuliert": 767424,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -348,6 +348,17 @@
   "neu_cboe_vvix_vvix_stand",
   "neu_cboe_vvix_vvix_z252",
   "neu_census_einzelhandelsumsaetze_termine_termine_stand",
+  "neu_cftc_pressemitteilungen_gesamt_d1",
+  "neu_cftc_pressemitteilungen_gesamt_d20",
+  "neu_cftc_pressemitteilungen_gesamt_d5",
+  "neu_cftc_pressemitteilungen_gesamt_stand",
+  "neu_cftc_pressemitteilungen_gesamt_z252",
+  "neu_cftc_pressemitteilungen_vollzug_d1",
+  "neu_cftc_pressemitteilungen_vollzug_d20",
+  "neu_cftc_pressemitteilungen_vollzug_d5",
+  "neu_cftc_pressemitteilungen_vollzug_stand",
+  "neu_cftc_pressemitteilungen_vollzug_z252",
+  "neu_china_pmi_veroeffentlichung_pmi_termin_stand",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d1",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d20",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d5",
@@ -441,6 +452,11 @@
   "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_d5",
   "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_stand",
   "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_z252",
+  "neu_fed_pressemitteilungen_regulierung_regulierung_d1",
+  "neu_fed_pressemitteilungen_regulierung_regulierung_d20",
+  "neu_fed_pressemitteilungen_regulierung_regulierung_d5",
+  "neu_fed_pressemitteilungen_regulierung_regulierung_stand",
+  "neu_fed_pressemitteilungen_regulierung_regulierung_z252",
   "neu_fedregister_ams_agrarmarkt_anzahl_d1",
   "neu_fedregister_ams_agrarmarkt_anzahl_d20",
   "neu_fedregister_ams_agrarmarkt_anzahl_d5",
@@ -803,6 +819,16 @@
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_d5",
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_stand",
   "neu_nasdaq_regsho_schwellenliste_dichte_anzahl_z252",
+  "neu_ncua_kreditgenossenschaften_liquidationen_schliessungen_d1",
+  "neu_ncua_kreditgenossenschaften_liquidationen_schliessungen_d20",
+  "neu_ncua_kreditgenossenschaften_liquidationen_schliessungen_d5",
+  "neu_ncua_kreditgenossenschaften_liquidationen_schliessungen_stand",
+  "neu_ncua_kreditgenossenschaften_liquidationen_schliessungen_z252",
+  "neu_ncua_kreditgenossenschaften_liquidationen_zwangsverwaltungen_d1",
+  "neu_ncua_kreditgenossenschaften_liquidationen_zwangsverwaltungen_d20",
+  "neu_ncua_kreditgenossenschaften_liquidationen_zwangsverwaltungen_d5",
+  "neu_ncua_kreditgenossenschaften_liquidationen_zwangsverwaltungen_stand",
+  "neu_ncua_kreditgenossenschaften_liquidationen_zwangsverwaltungen_z252",
   "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_d1",
   "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_d20",
   "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt_d5",
@@ -1915,9 +1941,15 @@
    "datei": "suche/S0068.json",
    "kandidaten": 420593,
    "in_db": false
+  },
+  {
+   "nr": 69,
+   "datei": "suche/S0069.json",
+   "kandidaten": 428831,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-14T13:46Z",
+ "letzter_suchlauf_utc": "2026-11-15T14:03Z",
  "pruefung_lernrunde_utc": "2026-11-15T09:55:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2361,11 +2393,19 @@
    "ergebnis_hash": "4e43c74e175bb906",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261115T122117Z.json",
+   "lauf_id": "L20261115T122117Z",
+   "s_dokument": "suche/S0069.json",
+   "ergebnis_hash": "e6f6737262d79b1c",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-14T13:46Z",
- "letztes_vollarchiv": "suche/S0068_alle.csv.gz",
- "letzter_ergebnis_hash": "4e43c74e175bb906",
+ "letzter_lauf_utc": "2026-11-15T14:03Z",
+ "letztes_vollarchiv": "suche/S0069_alle.csv.gz",
+ "letzter_ergebnis_hash": "e6f6737262d79b1c",
  "konflikte": [
   {
    "wo": "index",
@@ -4600,10 +4640,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 342,
-  "neu_in_diesem_lauf": 8
+  "grundreihen_n": 348,
+  "neu_in_diesem_lauf": 6
  },
- "letztes_vollarchiv_ergebnis_hash": "4e43c74e175bb906",
+ "letztes_vollarchiv_ergebnis_hash": "e6f6737262d79b1c",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261110T225026Z",
@@ -4621,7 +4661,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "2006c92a3d4cd554",
- "letzter_gueltiger_lauf": "L20261114T115120Z",
- "letzter_entscheidung_hash": "d94c1ec8489665b3"
+ "letzter_eingabe_hash": "7a0e9486fbcca424",
+ "letzter_gueltiger_lauf": "L20261115T122117Z",
+ "letzter_entscheidung_hash": "a33d2f3bed43c724"
 }

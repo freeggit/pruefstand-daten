@@ -2810,6 +2810,15 @@
    "aufgenommen_utc": "2026-11-14T11:51:42Z",
    "lauf_id": "L20261114T115120Z"
   },
+  "n__neu__fda_generika_zulassungen__generika.csv.gz": {
+   "datei": "n__neu__fda_generika_zulassungen__generika.csv.gz@aa8b89a53dcca7b6",
+   "sha": "aa8b89a53dcca7b62755a2029b04c3574ac162c5fb8f147f9bb79a356d050394",
+   "sha_inhalt": "6c3ef9936b0a76c3bb6ddc36efade83b5ed6a6877153315f40a4b21d1eaaf4be",
+   "zeilen": 27346,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:33Z",
+   "lauf_id": "L20261115T122117Z"
+  },
   "n__neu__fda_zulassungen__zulassungen.csv.gz": {
    "datei": "n__neu__fda_zulassungen__zulassungen.csv.gz@2de836a300e801e2",
    "sha": "2de836a300e801e28140270d65f7ed2e817cef3bc69925b65fef20d197672833",
@@ -2854,6 +2863,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-11-13T12:44:08Z",
    "lauf_id": "L20261113T124343Z"
+  },
+  "n__neu__fed_h2_bankantraege_genehmigungen__anzahl_bekanntgaben.csv.gz": {
+   "datei": "n__neu__fed_h2_bankantraege_genehmigungen__anzahl_bekanntgaben.csv.gz@075c49f019bf53c0",
+   "sha": "075c49f019bf53c0bc4bbbba03e4b94cfa5ebcad3e104bf276a33c02ab901f13",
+   "sha_inhalt": "f135ebbdc01e42070e6907e20477870d0a19b26fb560eef8e36bf25d628f0cfa",
+   "zeilen": 5477,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:33Z",
+   "lauf_id": "L20261115T122117Z"
   },
   "n__neu__fedregister_ams_agrarmarkt__anzahl.csv.gz": {
    "datei": "n__neu__fedregister_ams_agrarmarkt__anzahl.csv.gz@d5832a9f66822f53",
@@ -3152,6 +3170,24 @@
    "aufgenommen_utc": "2026-10-28T10:53:36Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fedregister_ustr_handelspolitik__dokumente.csv.gz": {
+   "datei": "n__neu__fedregister_ustr_handelspolitik__dokumente.csv.gz@f9186e00f837ac07",
+   "sha": "f9186e00f837ac0741573efe3773c002b9194ecef9b54681217ea0113c7647f0",
+   "sha_inhalt": "8b901431a5a6db5620b4c188c9cccf199aa0b8a3c08e5351324bfa7f6171920b",
+   "zeilen": 9862,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:34Z",
+   "lauf_id": "L20261115T122117Z"
+  },
+  "n__neu__fedregister_ustr_handelspolitik__section301.csv.gz": {
+   "datei": "n__neu__fedregister_ustr_handelspolitik__section301.csv.gz@fde97805c9b26b7b",
+   "sha": "fde97805c9b26b7be23ef32630a89886a3f1e6ccfafacf124ca4306ed401153f",
+   "sha_inhalt": "da3df5d4b07fd839c775658d5897898f8911a2a1e91d901bad838c038234d885",
+   "zeilen": 9862,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:34Z",
+   "lauf_id": "L20261115T122117Z"
+  },
   "n__neu__fema_katastrophenerklaerungen__anzahl.csv.gz": {
    "datei": "n__neu__fema_katastrophenerklaerungen__anzahl.csv.gz@d1c5a72c9e8be0cb",
    "sha": "d1c5a72c9e8be0cbdf814566ab8d5928d69bab3cef3d19110e2651afc2e1dbc4",
@@ -3386,6 +3422,33 @@
    "aufgenommen_utc": "2026-10-28T10:53:37Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fussball_niederlagen_nationalteams__niederlage_che.csv.gz": {
+   "datei": "n__neu__fussball_niederlagen_nationalteams__niederlage_che.csv.gz@43332deeeb119217",
+   "sha": "43332deeeb119217136363e1cd5c62a35f7bd196fc01099da966d34bfe0480e9",
+   "sha_inhalt": "384bcf396ecc428f35584fa08638e8ded12cb1c83a0ee228b13a7f9028737e48",
+   "zeilen": 33045,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:35Z",
+   "lauf_id": "L20261115T122117Z"
+  },
+  "n__neu__fussball_niederlagen_nationalteams__niederlage_deu.csv.gz": {
+   "datei": "n__neu__fussball_niederlagen_nationalteams__niederlage_deu.csv.gz@5f90c6d6fc50f108",
+   "sha": "5f90c6d6fc50f108e4986451acffe8b1fc35973901ff8918999c6209a89b1b89",
+   "sha_inhalt": "fff4fac20a39ac6d121cfeb86f6744efa8b9bc2ce272c2f5a1973a6b2c24d4c4",
+   "zeilen": 33045,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:36Z",
+   "lauf_id": "L20261115T122117Z"
+  },
+  "n__neu__fussball_niederlagen_nationalteams__niederlage_jpn.csv.gz": {
+   "datei": "n__neu__fussball_niederlagen_nationalteams__niederlage_jpn.csv.gz@74b6e02e6b3679c9",
+   "sha": "74b6e02e6b3679c9ea13fd78601b3a416147c1fea52a81e0c315f8a85685aef6",
+   "sha_inhalt": "e0c8ca0c94f1e991169a27d5e44080ef7a7a250d6720efe8b99ca5e144dcab9a",
+   "zeilen": 33045,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:36Z",
+   "lauf_id": "L20261115T122117Z"
+  },
   "n__neu__japan_tankan_veroeffentlichung__tankan_veroeffentlichung.csv.gz": {
    "datei": "n__neu__japan_tankan_veroeffentlichung__tankan_veroeffentlichung.csv.gz@c7d77fd88adf4423",
    "sha": "c7d77fd88adf442384b348ee4a722cf9dcb5c2a34edf26b7f6bf552248ff6f24",
@@ -3619,6 +3682,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:38Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__nvd_kritische_schwachstellen__anzahl_neu.csv.gz": {
+   "datei": "n__neu__nvd_kritische_schwachstellen__anzahl_neu.csv.gz@05bdcd8938e69f42",
+   "sha": "05bdcd8938e69f42dfe8a0990f387d7b32fecc3b49c74a960348f81675cc3fd0",
+   "sha_inhalt": "cb7651105fd698e7cf689ff247b50df84cfff69b8e627fb75e1c7036df746f49",
+   "zeilen": 5479,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:37Z",
+   "lauf_id": "L20261115T122117Z"
   },
   "n__neu__nyfed_rrp__rrp.csv.gz": {
    "datei": "n__neu__nyfed_rrp__rrp.csv.gz@482ed4879dd167ce",
@@ -3880,6 +3952,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:40Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__uscg_nrc_meldungen_oel_chemie__anzahl_meldungen.csv.gz": {
+   "datei": "n__neu__uscg_nrc_meldungen_oel_chemie__anzahl_meldungen.csv.gz@a342e18ab21613a8",
+   "sha": "a342e18ab21613a8d3466c3e6445542ae80893e603b943ec7bf762dfed5b9507",
+   "sha_inhalt": "f693a3cec739a830b02320408d784d626e5aaee5972aa400caf3e22d83f76ebc",
+   "zeilen": 11323,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-15T12:21:38Z",
+   "lauf_id": "L20261115T122117Z"
   },
   "n__neu__usda_acreage_grainstocks_termine__acreage.csv.gz": {
    "datei": "n__neu__usda_acreage_grainstocks_termine__acreage.csv.gz@98d9d65f8671dd4a",
@@ -4748,8 +4829,8 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-14T11:51:52Z",
- "dateien_n": 524,
+ "stand_utc": "2026-11-15T12:21:42Z",
+ "dateien_n": 533,
  "vorgemerkt": {
   "n__neu__ca_ag_datenlecks__meldungen.csv.gz": {
    "erstmals_utc": "2026-11-14T11:51:41Z",
@@ -4762,6 +4843,55 @@
      "werte": 1313,
      "erste": "2012-01-20",
      "sha_inhalt": "7716df8d63905af8dfd8a4a4ee8a4b249f0af82b74a8629867f465d02eea7346"
+    },
+    {
+     "utc": "2026-11-15T12:21:32Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 1313,
+     "erste": "2012-01-20",
+     "sha_inhalt": "7716df8d63905af8dfd8a4a4ee8a4b249f0af82b74a8629867f465d02eea7346"
+    }
+   ]
+  },
+  "n__neu__cftc_pressemitteilungen__gesamt.csv.gz": {
+   "erstmals_utc": "2026-11-15T12:21:32Z",
+   "beste_werte": 2887,
+   "frueheste_erste": "1995-07-26",
+   "sichtungen": [
+    {
+     "utc": "2026-11-15T12:21:32Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 2887,
+     "erste": "1995-07-26",
+     "sha_inhalt": "dd53354f9e3cc2218d584cee06a5466f00a72d03dc441eece24fc4376f1849dc"
+    }
+   ]
+  },
+  "n__neu__cftc_pressemitteilungen__vollzug.csv.gz": {
+   "erstmals_utc": "2026-11-15T12:21:32Z",
+   "beste_werte": 1641,
+   "frueheste_erste": "1995-07-26",
+   "sichtungen": [
+    {
+     "utc": "2026-11-15T12:21:32Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 1641,
+     "erste": "1995-07-26",
+     "sha_inhalt": "d87adc64c667be36ded9b34affe9768b265b4aa50ca586e33d521ad75ce305e5"
+    }
+   ]
+  },
+  "n__neu__china_pmi_veroeffentlichung__pmi_termin.csv.gz": {
+   "erstmals_utc": "2026-11-15T12:21:32Z",
+   "beste_werte": 73,
+   "frueheste_erste": "2015-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-15T12:21:32Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 73,
+     "erste": "2015-01-01",
+     "sha_inhalt": "026587b6c1e6c07d87bec5165f605d8701ba49d230bfd63975358a22553af21e"
     }
    ]
   },
@@ -4773,6 +4903,13 @@
     {
      "utc": "2026-11-14T11:51:41Z",
      "lauf_id": "L20261114T115120Z",
+     "werte": 55,
+     "erste": "2006-04-12",
+     "sha_inhalt": "3ce4849ac266529997fb2b2251a50dcb8c4eb90952eea7d501d5287beefc3cdf"
+    },
+    {
+     "utc": "2026-11-15T12:21:33Z",
+     "lauf_id": "L20261115T122117Z",
      "werte": 55,
      "erste": "2006-04-12",
      "sha_inhalt": "3ce4849ac266529997fb2b2251a50dcb8c4eb90952eea7d501d5287beefc3cdf"
@@ -4790,153 +4927,27 @@
      "werte": 753,
      "erste": "1995-10-20",
      "sha_inhalt": "a7cf820784ce041a89775bc95b429c7d8988601b70f2eee72c6cd5da1d75f14b"
+    },
+    {
+     "utc": "2026-11-15T12:21:33Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 753,
+     "erste": "1995-10-20",
+     "sha_inhalt": "a7cf820784ce041a89775bc95b429c7d8988601b70f2eee72c6cd5da1d75f14b"
     }
    ]
   },
-  "n__neu__fda_generika_zulassungen__generika.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:08Z",
-   "beste_werte": 6222,
-   "frueheste_erste": "1946-02-18",
+  "n__neu__fed_pressemitteilungen_regulierung__regulierung.csv.gz": {
+   "erstmals_utc": "2026-11-15T12:21:33Z",
+   "beste_werte": 748,
+   "frueheste_erste": "2006-01-10",
    "sichtungen": [
     {
-     "utc": "2026-11-13T12:44:08Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 6222,
-     "erste": "1946-02-18",
-     "sha_inhalt": "6c3ef9936b0a76c3bb6ddc36efade83b5ed6a6877153315f40a4b21d1eaaf4be"
-    },
-    {
-     "utc": "2026-11-14T11:51:42Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 6222,
-     "erste": "1946-02-18",
-     "sha_inhalt": "6c3ef9936b0a76c3bb6ddc36efade83b5ed6a6877153315f40a4b21d1eaaf4be"
-    }
-   ]
-  },
-  "n__neu__fed_h2_bankantraege_genehmigungen__anzahl_bekanntgaben.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:08Z",
-   "beste_werte": 320,
-   "frueheste_erste": "2006-01-03",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:08Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 320,
-     "erste": "2006-01-03",
-     "sha_inhalt": "f135ebbdc01e42070e6907e20477870d0a19b26fb560eef8e36bf25d628f0cfa"
-    },
-    {
-     "utc": "2026-11-14T11:51:42Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 320,
-     "erste": "2006-01-03",
-     "sha_inhalt": "f135ebbdc01e42070e6907e20477870d0a19b26fb560eef8e36bf25d628f0cfa"
-    }
-   ]
-  },
-  "n__neu__fedregister_ustr_handelspolitik__dokumente.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:10Z",
-   "beste_werte": 1420,
-   "frueheste_erste": "1994-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:10Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 1420,
-     "erste": "1994-01-01",
-     "sha_inhalt": "8b901431a5a6db5620b4c188c9cccf199aa0b8a3c08e5351324bfa7f6171920b"
-    },
-    {
-     "utc": "2026-11-14T11:51:43Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 1420,
-     "erste": "1994-01-01",
-     "sha_inhalt": "8b901431a5a6db5620b4c188c9cccf199aa0b8a3c08e5351324bfa7f6171920b"
-    }
-   ]
-  },
-  "n__neu__fedregister_ustr_handelspolitik__section301.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:10Z",
-   "beste_werte": 294,
-   "frueheste_erste": "1994-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:10Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 294,
-     "erste": "1994-01-01",
-     "sha_inhalt": "da3df5d4b07fd839c775658d5897898f8911a2a1e91d901bad838c038234d885"
-    },
-    {
-     "utc": "2026-11-14T11:51:44Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 294,
-     "erste": "1994-01-01",
-     "sha_inhalt": "da3df5d4b07fd839c775658d5897898f8911a2a1e91d901bad838c038234d885"
-    }
-   ]
-  },
-  "n__neu__fussball_niederlagen_nationalteams__niederlage_che.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:12Z",
-   "beste_werte": 25,
-   "frueheste_erste": "1930-07-13",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:12Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 25,
-     "erste": "1930-07-13",
-     "sha_inhalt": "384bcf396ecc428f35584fa08638e8ded12cb1c83a0ee228b13a7f9028737e48"
-    },
-    {
-     "utc": "2026-11-14T11:51:45Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 25,
-     "erste": "1930-07-13",
-     "sha_inhalt": "384bcf396ecc428f35584fa08638e8ded12cb1c83a0ee228b13a7f9028737e48"
-    }
-   ]
-  },
-  "n__neu__fussball_niederlagen_nationalteams__niederlage_deu.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:12Z",
-   "beste_werte": 34,
-   "frueheste_erste": "1930-07-13",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:12Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 34,
-     "erste": "1930-07-13",
-     "sha_inhalt": "fff4fac20a39ac6d121cfeb86f6744efa8b9bc2ce272c2f5a1973a6b2c24d4c4"
-    },
-    {
-     "utc": "2026-11-14T11:51:45Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 34,
-     "erste": "1930-07-13",
-     "sha_inhalt": "fff4fac20a39ac6d121cfeb86f6744efa8b9bc2ce272c2f5a1973a6b2c24d4c4"
-    }
-   ]
-  },
-  "n__neu__fussball_niederlagen_nationalteams__niederlage_jpn.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:12Z",
-   "beste_werte": 20,
-   "frueheste_erste": "1930-07-13",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:12Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 20,
-     "erste": "1930-07-13",
-     "sha_inhalt": "e0c8ca0c94f1e991169a27d5e44080ef7a7a250d6720efe8b99ca5e144dcab9a"
-    },
-    {
-     "utc": "2026-11-14T11:51:45Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 20,
-     "erste": "1930-07-13",
-     "sha_inhalt": "e0c8ca0c94f1e991169a27d5e44080ef7a7a250d6720efe8b99ca5e144dcab9a"
+     "utc": "2026-11-15T12:21:33Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 748,
+     "erste": "2006-01-10",
+     "sha_inhalt": "5a3fc6456c584342f9f07f34dfd177610ddf7929dbc25f7078967fa59d927e1b"
     }
    ]
   },
@@ -4948,6 +4959,13 @@
     {
      "utc": "2026-11-14T11:51:45Z",
      "lauf_id": "L20261114T115120Z",
+     "werte": 1657,
+     "erste": "1995-01-19",
+     "sha_inhalt": "886ad36d2d0a55155f975bc47a6c32361528349319c6bcfbf656b05b0dba4bf7"
+    },
+    {
+     "utc": "2026-11-15T12:21:36Z",
+     "lauf_id": "L20261115T122117Z",
      "werte": 1657,
      "erste": "1995-01-19",
      "sha_inhalt": "886ad36d2d0a55155f975bc47a6c32361528349319c6bcfbf656b05b0dba4bf7"
@@ -4965,6 +4983,41 @@
      "werte": 723,
      "erste": "1994-03-16",
      "sha_inhalt": "3dcb6c8ac218264b50266bfeb9de25481ef7987a318a8109edefccdb5c0a409d"
+    },
+    {
+     "utc": "2026-11-15T12:21:36Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 723,
+     "erste": "1994-03-16",
+     "sha_inhalt": "3dcb6c8ac218264b50266bfeb9de25481ef7987a318a8109edefccdb5c0a409d"
+    }
+   ]
+  },
+  "n__neu__ncua_kreditgenossenschaften_liquidationen__schliessungen.csv.gz": {
+   "erstmals_utc": "2026-11-15T12:21:36Z",
+   "beste_werte": 164,
+   "frueheste_erste": "2009-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-15T12:21:36Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 164,
+     "erste": "2009-01-01",
+     "sha_inhalt": "81b76fa11ac7a01fef5be7ed4495d0fe4c26ae6d3c2012d9b5fe9e92128af564"
+    }
+   ]
+  },
+  "n__neu__ncua_kreditgenossenschaften_liquidationen__zwangsverwaltungen.csv.gz": {
+   "erstmals_utc": "2026-11-15T12:21:36Z",
+   "beste_werte": 47,
+   "frueheste_erste": "2009-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-15T12:21:36Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 47,
+     "erste": "2009-01-01",
+     "sha_inhalt": "0cf728a4f099e493b6bab14a2205a1eaf74e4581016189339d922b352fe34330"
     }
    ]
   },
@@ -4976,6 +5029,13 @@
     {
      "utc": "2026-11-14T11:51:47Z",
      "lauf_id": "L20261114T115120Z",
+     "werte": 18423,
+     "erste": "1869-01-01",
+     "sha_inhalt": "7a28ad55191864e1db0af14a514b30b2e789eac25f187086a6674c32ecde2161"
+    },
+    {
+     "utc": "2026-11-15T12:21:37Z",
+     "lauf_id": "L20261115T122117Z",
      "werte": 18423,
      "erste": "1869-01-01",
      "sha_inhalt": "7a28ad55191864e1db0af14a514b30b2e789eac25f187086a6674c32ecde2161"
@@ -4993,48 +5053,13 @@
      "werte": 54977,
      "erste": "1869-01-01",
      "sha_inhalt": "adaa06de5d90a398d248e5fcd637a8df722b7bf6ec53e603f3fae883c1de5ba2"
-    }
-   ]
-  },
-  "n__neu__nvd_kritische_schwachstellen__anzahl_neu.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:14Z",
-   "beste_werte": 4375,
-   "frueheste_erste": "2006-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:14Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 4375,
-     "erste": "2006-01-01",
-     "sha_inhalt": "cb7651105fd698e7cf689ff247b50df84cfff69b8e627fb75e1c7036df746f49"
     },
     {
-     "utc": "2026-11-14T11:51:47Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 4375,
-     "erste": "2006-01-01",
-     "sha_inhalt": "cb7651105fd698e7cf689ff247b50df84cfff69b8e627fb75e1c7036df746f49"
-    }
-   ]
-  },
-  "n__neu__uscg_nrc_meldungen_oel_chemie__anzahl_meldungen.csv.gz": {
-   "erstmals_utc": "2026-11-13T12:44:16Z",
-   "beste_werte": 11322,
-   "frueheste_erste": "1990-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-13T12:44:16Z",
-     "lauf_id": "L20261113T124343Z",
-     "werte": 11322,
-     "erste": "1990-01-01",
-     "sha_inhalt": "f693a3cec739a830b02320408d784d626e5aaee5972aa400caf3e22d83f76ebc"
-    },
-    {
-     "utc": "2026-11-14T11:51:49Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 11322,
-     "erste": "1990-01-01",
-     "sha_inhalt": "f693a3cec739a830b02320408d784d626e5aaee5972aa400caf3e22d83f76ebc"
+     "utc": "2026-11-15T12:21:37Z",
+     "lauf_id": "L20261115T122117Z",
+     "werte": 54977,
+     "erste": "1869-01-01",
+     "sha_inhalt": "adaa06de5d90a398d248e5fcd637a8df722b7bf6ec53e603f3fae883c1de5ba2"
     }
    ]
   },
@@ -5046,6 +5071,13 @@
     {
      "utc": "2026-11-14T11:51:49Z",
      "lauf_id": "L20261114T115120Z",
+     "werte": 490,
+     "erste": "1995-01-01",
+     "sha_inhalt": "18d634a2252f49017e056c6f251c4875fa37ff1b30f6eb8191eb0472e4d5dbef"
+    },
+    {
+     "utc": "2026-11-15T12:21:39Z",
+     "lauf_id": "L20261115T122117Z",
      "werte": 490,
      "erste": "1995-01-01",
      "sha_inhalt": "18d634a2252f49017e056c6f251c4875fa37ff1b30f6eb8191eb0472e4d5dbef"

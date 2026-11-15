@@ -235,6 +235,24 @@
    "erst_zeit": "2026-10-18T07:16Z",
    "beleg": "suche/laeufe/L20261018T051407Z.json"
   },
+  "neu_cftc_pressemitteilungen_gesamt": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261115T122117Z",
+   "erst_zeit": "2026-11-15T14:03Z",
+   "beleg": "suche/laeufe/L20261115T122117Z.json"
+  },
+  "neu_cftc_pressemitteilungen_vollzug": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261115T122117Z",
+   "erst_zeit": "2026-11-15T14:03Z",
+   "beleg": "suche/laeufe/L20261115T122117Z.json"
+  },
+  "neu_china_pmi_veroeffentlichung_pmi_termin": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261115T122117Z",
+   "erst_zeit": "2026-11-15T14:03Z",
+   "beleg": "suche/laeufe/L20261115T122117Z.json"
+  },
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie": {
    "erst_dokument": "S0018",
    "erst_lauf": null,
@@ -378,6 +396,12 @@
    "erst_lauf": "L20261113T124343Z",
    "erst_zeit": "2026-11-13T15:59Z",
    "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
+  "neu_fed_pressemitteilungen_regulierung_regulierung": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261115T122117Z",
+   "erst_zeit": "2026-11-15T14:03Z",
+   "beleg": "suche/laeufe/L20261115T122117Z.json"
   },
   "neu_fedregister_ams_agrarmarkt_anzahl": {
    "erst_dokument": "S0017",
@@ -870,6 +894,18 @@
    "erst_lauf": "L20261110T225026Z",
    "erst_zeit": "2026-11-11T01:26Z",
    "beleg": "suche/laeufe/L20261110T225026Z.json"
+  },
+  "neu_ncua_kreditgenossenschaften_liquidationen_schliessungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261115T122117Z",
+   "erst_zeit": "2026-11-15T14:03Z",
+   "beleg": "suche/laeufe/L20261115T122117Z.json"
+  },
+  "neu_ncua_kreditgenossenschaften_liquidationen_zwangsverwaltungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261115T122117Z",
+   "erst_zeit": "2026-11-15T14:03Z",
+   "beleg": "suche/laeufe/L20261115T122117Z.json"
   },
   "neu_nhtsa_beschwerden_taeglich_anzahl_gesamt": {
    "erst_dokument": null,
@@ -2060,8 +2096,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261114T115120Z",
-  "zeit_utc": "2026-11-14T13:46Z",
-  "grundreihen_n": 342
+  "lauf_id": "L20261115T122117Z",
+  "zeit_utc": "2026-11-15T14:03Z",
+  "grundreihen_n": 348
  }
 }
