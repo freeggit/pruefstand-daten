@@ -1,0 +1,11 @@
+{
+  "regulierung": {
+    "beschreibung": "Fed-Pressemitteilungen «Banking and Consumer Regulatory Policy» (Kapitalregeln, Stresstests, Aufsichtsleitlinien, Verbraucherschutzregeln) je Veroeffentlichungstag (US-Ostzeit)",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich (jede Mitteilung erscheint mit Datum und Uhrzeit auf federalreserve.gov/newsevents/pressreleases.htm; Quelle: Feld 'd' in ne-press.json)",
+    "quelle_url": "https://www.federalreserve.gov/json/ne-press.json",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Mitteilungen je Kalendertag der Veroeffentlichung (US-Ostzeit); Tage ohne Mitteilung = 0",
+    "verfuegbar_nach_tagen": 1
+  }
+}
