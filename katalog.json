@@ -4973,9 +4973,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Massnahmen gegen kleinere und regionale Banken zeigen Kredit- und Kontrollprobleme im Bankensektor; ihre Häufung kann Finanzwerte (XLF) kurzfristig belasten.",
-    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut.",
+    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-14T00:08Z"
+    "geprueft_utc": "2026-11-15T00:10Z"
   },
   {
     "id": "osha_todesfaelle_meldungen",
@@ -4986,9 +4986,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
-    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-14T00:08Z"
+    "geprueft_utc": "2026-11-15T00:10Z"
   },
   {
     "id": "epa_echo_vollzugsfaelle",
@@ -5012,9 +5012,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
-    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-14T00:08Z"
+    "geprueft_utc": "2026-11-15T00:10Z"
   },
   {
     "id": "fra_bahnunfaelle_taeglich",
@@ -5434,10 +5434,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Haeufungen von Orphan-Designationen und -Zulassungen veraendern kurzfristig die Erwartungen an Biotech-Pipelines und koennen IBB/XLV gegenueber dem Weltindex bewegen.",
-    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen.",
+    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen. | Test 2026-11-15T00:10Z: accessdata.fda.gov leitet weiterhin um (HTTP 302, Missbrauchserkennung); Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-14T04:20Z",
+    "geprueft_utc": "2026-11-15T00:10Z",
     "prioritaet": "hoch"
   },
   {
@@ -5518,10 +5518,10 @@
     "bereich": "Justiz",
     "status": "fehler",
     "mechanismus": "Urteile zu Regulierung (Gesundheit, Energie, Umwelt, Banken) kommen an vorab angekuendigten Tagen und koennen die betroffenen Sektoren (XLV, XLE, XLF) kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen. | Erneut 2026-11-14T04:20Z: scdb.la.psu.edu Datendatei HTTP 403, nicht umgangen.",
+    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen. | Erneut 2026-11-14T04:20Z: scdb.la.psu.edu Datendatei HTTP 403, nicht umgangen. | Test 2026-11-15T00:10Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-14T04:20Z",
+    "geprueft_utc": "2026-11-15T00:10Z",
     "prioritaet": "normal"
   },
   {
@@ -5548,10 +5548,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Kartellverfahren gegen grosse Firmen aendern kurzfristig Erwartungen an Fusionen und Margen in Technologie und Gesundheit; unabhaengige Messung desselben Mechanismus wie EU-Kartellentscheide.",
-    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar.",
+    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-13T20:07Z",
+    "geprueft_utc": "2026-11-15T00:10Z",
     "prioritaet": "tief"
   },
   {
@@ -5616,10 +5616,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Beginn grosser Streiks unterbricht Produktion und Lieferketten in Industrie, Autobau und Gesundheit und kann XLI, XLY oder XLV kurzfristig gegenueber dem Weltindex belasten.",
-    "grund": "Test 2026-11-14T00:08Z: www.bls.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Hinweis fuer spaeter: BLS publiziert monatlich (verfuegbar_nach_tagen verzoegert, Datum der Monatsmeldung), Liste ab 1993; weniger als 500 Ereignisse wahrscheinlich (K2 fraglich).",
+    "grund": "Test 2026-11-14T00:08Z: www.bls.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Hinweis fuer spaeter: BLS publiziert monatlich (verfuegbar_nach_tagen verzoegert, Datum der Monatsmeldung), Liste ab 1993; weniger als 500 Ereignisse wahrscheinlich (K2 fraglich). | Test 2026-11-15T00:10Z: www.bls.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-14T00:08Z",
-    "geprueft_utc": "2026-11-14T00:08Z"
+    "geprueft_utc": "2026-11-15T00:10Z"
   },
   {
     "id": "noaa_incidentnews_oelunfaelle",
@@ -5795,5 +5795,47 @@
     "geprueft_utc": null,
     "prioritaet": "tief",
     "herkunft": "Lernrunde"
+  },
+  {
+    "id": "transportcanada_fahrzeugrueckrufe",
+    "name": "Transport Canada: Fahrzeugrückrufe je Rückruftag (Vehicle Recalls Database)",
+    "url": "https://open.canada.ca/data/dataset/1ec92326-47ef-4110-b7ca-959fab03f96d",
+    "domain": "opendatatc.tc.canada.ca",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Rückrufe derselben grossen Autohersteller in Kanada sind ein von der NHTSA unabhängig erhobenes Qualitäts- und Kostensignal für den Automobilsektor (XLY, EWG über deutsche Hersteller).",
+    "grund": "Lauf 2026-11-15T00:10Z: Datei offen (open.canada.ca, Open Government Licence, ohne Login; vrdb_full_monthly.csv 204 MB in 5 s, 18044 Rückrufnummern ab 1975-01-01, also K2/K3/K7 erfüllt). Abgelehnt wegen K4/K5: Die Datei hat nur RECALL_DATE_DTE (Rückrufdatum) und LAST_UPDATE_DATE, kein Veröffentlichungsdatum. Die Liste wird nachträglich ergänzt: in vrdb_60days_daily.csv liegt der Verzug LAST_UPDATE minus RECALL_DATE für Rückrufe ab 15.9.2026 im Median bei 10 Tagen (Gesamtbestand: Median 12, 90%-Quantil 62 Tage); November 2026 zählt erst 1 Eintrag gegen rund 55 im Oktober, und die Vollversion endet beim 2026-10-22. Tageszählungen nach Rückrufdatum würden also rückwirkend aufgefüllt; ein ehrliches verfuegbar_nach_tagen von 60 oder mehr verletzt K5. Historie nicht abgelegt. Hinweis: hängt mit nhtsa_ruckrufe zusammen (dieselben Hersteller).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-15T00:10Z",
+    "geprueft_utc": "2026-11-15T00:10Z"
+  },
+  {
+    "id": "fed_pressemitteilungen_regulierung",
+    "name": "Federal Reserve Board: Pressemitteilungen «Banking and Consumer Regulatory Policy» je Tag",
+    "url": "https://www.federalreserve.gov/json/ne-press.json",
+    "domain": "www.federalreserve.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Gehäufte Regulierungsmitteilungen der Fed (Kapitalregeln, Stresstests, Aufsichtsleitlinien) ändern kurzfristig die Erwartungen an Kapitalkosten und Ausschüttungen der Banken (XLF).",
+    "grund": "Gefunden im Lauf 2026-11-15T00:10Z: JSON ohne Schlüssel (HTTP 200), 4655 Mitteilungen ab 2006 mit Uhrzeit und Kategorie (Enforcement Actions 1337, Banking and Consumer Regulatory Policy 1104, Monetary Policy 1077, Other 673, Orders on Banking Applications 464). K2 fraglich: Beginn 2006 statt spätestens 2015 ist erfüllt, aber nur rund 50 bis 100 Regulierungsmitteilungen je Jahr, also dünne Ereignisreihe. Enforcement und Orders sind durch fed_enforcement_massnahmen und fed_h2_bankantraege_genehmigungen schon gedeckt (K6); Überschneidung mit fedregister_bankaufsicht prüfen. Darum tief.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-15T00:10Z",
+    "geprueft_utc": "2026-11-15T00:10Z"
+  },
+  {
+    "id": "cdc_han_gesundheitswarnungen",
+    "name": "CDC Health Alert Network: Gesundheitswarnungen (Advisories, Updates) je Tag",
+    "url": "https://www.cdc.gov/han/php/notices/index.html",
+    "domain": "www.cdc.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "CDC-Warnungen zu Ausbrüchen, Arzneimittelengpässen und verunreinigten Produkten kündigen Nachfrage nach Tests, Impfstoffen und Arzneien an und können Gesundheitswerte (XLV) kurzfristig bewegen.",
+    "grund": "Gefunden im Lauf 2026-11-15T00:10Z: Seite erreichbar (HTTP 200), die Liste wird aber per Skript nachgeladen (statisches HTML enthält nur die Daten von 2025). Archiv seit 2001 noch zu suchen; dünne Ereignisreihe (rund 20 bis 40 je Jahr). Nach dem Wegfall von who_ausbruchsmeldungen der Ersatz für den Bereich Ausbrüche.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-15T00:10Z",
+    "geprueft_utc": "2026-11-15T00:10Z"
   }
 ]
