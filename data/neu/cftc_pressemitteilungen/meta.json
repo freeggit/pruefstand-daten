@@ -1,0 +1,20 @@
+{
+  "gesamt": {
+    "beschreibung": "Alle CFTC-Pressemitteilungen (Vollzug, Regeln, Personal, Marktaufsicht) je Veroeffentlichungstag",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich (jede Mitteilung erscheint mit Datum auf cftc.gov/PressRoom/PressReleases; Datum = Veroeffentlichungstag laut Liste, US-Ostzeit)",
+    "quelle_url": "https://www.cftc.gov/PressRoom/PressReleases",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Mitteilungen je Kalendertag der Veroeffentlichung (US-Ostzeit); Tage ohne Mitteilung = 0",
+    "verfuegbar_nach_tagen": 1
+  },
+  "vollzug": {
+    "beschreibung": "CFTC-Pressemitteilungen vom Typ Enforcement (Klagen, Vergleiche, Bussen gegen Marktteilnehmer) je Veroeffentlichungstag",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich (jede Mitteilung erscheint mit Datum auf cftc.gov/PressRoom/PressReleases; Datum = Veroeffentlichungstag laut Liste, US-Ostzeit)",
+    "quelle_url": "https://www.cftc.gov/PressRoom/PressReleases?field_press_release_types_value=Enforcement",
+    "revidiert": false,
+    "verdichtung": "Zaehlung der Mitteilungen je Kalendertag der Veroeffentlichung (US-Ostzeit); Tage ohne Mitteilung = 0",
+    "verfuegbar_nach_tagen": 1
+  }
+}

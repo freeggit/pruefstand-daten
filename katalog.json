@@ -5849,5 +5849,61 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-15T00:10Z",
     "geprueft_utc": "2026-11-15T04:15Z"
+  },
+  {
+    "id": "cftc_pressemitteilungen",
+    "name": "CFTC-Pressemitteilungen (Vollzug und gesamt) je Tag",
+    "url": "https://www.cftc.gov/PressRoom/PressReleases",
+    "domain": "cftc.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Vollzugsmassnahmen der Terminmarktaufsicht (Klagen, Vergleiche, Bussen gegen Banken, Händler, Krypto- und Rohstoffhändler) häufen sich in Phasen von Marktmissbrauch und Stress und können Finanzwerte (XLF) sowie Rohstoff-ETF (USO, GLD) gegenüber dem Weltindex kurzfristig belasten.",
+    "grund": "Eigene Recherche Lauf 2026-11-15T08:05Z, Zusatz 6 Punkt 5 (Kartell-/Aufsichtsentscheide). K1 täglich (Nullfüllung, Ereigniszählung). K2 ab 1995-07-26, 11436 Zeilen (gesamt 5476 Mitteilungen, davon 2611 Typ Enforcement). K3 offen, ohne Login/Schlüssel; robots.txt erlaubt User-agent * (Content-Signal ai-train=no, hier nur Zählung, kein Training). K4 Veröffentlichungsdatum laut Liste, nicht revidiert; Hinweis: Typ «Enforcement» fehlt für 1998 ganz (0 statt ~60, gesamt 131) und ist vor 1999 lückenhaft, also Strukturbruch der Reihe vollzug vor 1999; für die Langzeitfamilie (Beginn vor 1995) ohnehin nicht relevant. K5 letzter Eintrag 2026-11-13 (gesamt), 2026-11-09 (vollzug), Reihe bis heute fortgeschrieben. K6 neu (fedregister_cftc_regeln zählt nur Federal-Register-Regeln, nicht Vollzug). K7 je Reihe ca. 28 KB, Abruf 83 s (219 Seiten). Prüfung: vollzug Min 0 Max 15, gleiche Folgewerte 73% (dünne Ereignisreihe, erwartet); gesamt Min 0 Max 15, gleiche Folgewerte 56%. Datum = Bekanntgabetag (US-Ostzeit), verfuegbar_nach_tagen 1 (konservativ, Mitteilungen auch nach Börsenschluss). Paar-Vorschlag für Reto: keiner.",
+    "reihen": [
+      "vollzug",
+      "gesamt"
+    ],
+    "reihen_aktiv": [
+      "vollzug",
+      "gesamt"
+    ],
+    "reihen_ruhend": [],
+    "aufgenommen_utc": "2026-11-15T08:20Z",
+    "geprueft_utc": "2026-11-15T08:20Z",
+    "pruefung": {
+      "vollzug": {
+        "zeilen": 11436,
+        "erste": "1995-07-26",
+        "letzte": "2026-11-15",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.731,
+        "min": 0,
+        "max": 15
+      },
+      "gesamt": {
+        "zeilen": 11436,
+        "erste": "1995-07-26",
+        "letzte": "2026-11-15",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.563,
+        "min": 0,
+        "max": 15
+      }
+    }
+  },
+  {
+    "id": "ftc_pressemitteilungen",
+    "name": "FTC-Pressemitteilungen (Kartell- und Verbraucherschutzfälle) je Tag",
+    "url": "https://www.ftc.gov/news-events/news/press-releases",
+    "domain": "ftc.gov",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "normal",
+    "mechanismus": "Kartell- und Verbraucherschutzverfahren der FTC gegen Grosskonzerne (Technologie, Gesundheit, Handel) können XLK, XLC, XLV und XLY gegenüber dem Weltindex kurzfristig belasten.",
+    "grund": "Eigene Recherche Lauf 2026-11-15T08:05Z. Test 2026-11-15T08:20Z: www.ftc.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: fedregister_ftc_fusionen deckt nur Federal-Register-Fusionsmitteilungen ab.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-15T08:20Z",
+    "geprueft_utc": "2026-11-15T08:20Z"
   }
 ]
