@@ -5991,12 +5991,13 @@
     "url": "https://www.csb.gov/investigations/",
     "domain": "www.csb.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Explosionen in Raffinerien und Chemieanlagen verknappen Kapazität und lösen Haftung aus; das kann XLB und XLE gegenüber dem Weltindex kurzfristig bewegen.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Seite HTTP 200. Dünne Reihe (rund 10 bis 20 Ereignisse je Jahr), darum tief. Ereignisdatum, nicht Berichtsdatum verwenden (K2).",
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Seite HTTP 200. Dünne Reihe (rund 10 bis 20 Ereignisse je Jahr), darum tief. Ereignisdatum, nicht Berichtsdatum verwenden (K2). | Lauf 2026-11-15T16:30Z: abgelehnt (K4, nachträgliche Auswahl). Liste https://www.csb.gov/investigations/ (abgeschlossen und laufend, je Fall 'Accident Occurred On') ist erreichbar (HTTP 200), aber ein Unfall kommt erst in die Liste, wenn das CSB Tage bis Wochen später eine Untersuchung eröffnet (Beispiel Accurate Energetic Systems: Unfall 10.10.2025, Untersuchung eröffnet 27.10.2025, 17 Tage). Das Eröffnungsdatum ist nicht maschinenlesbar je Fall angegeben; eine Reihe nach Unfalltag würde mit späterem Wissen rückdatieren. Abgebrochene Untersuchungen fehlen zudem in der Liste (nachträglich bereinigt). Gleiche Lage wie transportcanada_fahrzeugrueckrufe.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-15T16:30Z"
   },
   {
     "id": "fed_reden_dichte",
@@ -6004,12 +6005,16 @@
     "url": "https://www.federalreserve.gov/json/ne-speeches.json",
     "domain": "www.federalreserve.gov",
     "bereich": "Staat und Geldmarkt",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "tief",
     "mechanismus": "Viele Reden von Fed-Mitgliedern in kurzer Zeit kündigen oft einen Kurswechsel an und können Zinsen und damit TLT, XLF und XLU gegenüber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). JSON HTTP 200 mit 1353 Reden ab 2017; ältere Jahre über /newsevents/speech/<JJJJ>speech.htm und /boarddocs/speeches/<JJJJ>/ (HTTP 200). Fachliteratur: Fed-Kommunikation und Renditen (Lucca/Moench 2015, Neuhierl/Weber 2019). Bereich Geldmarkt ist nach L2 erschöpft, darum tief.",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). JSON HTTP 200 mit 1353 Reden ab 2017; ältere Jahre über /newsevents/speech/<JJJJ>speech.htm und /boarddocs/speeches/<JJJJ>/ (HTTP 200). Fachliteratur: Fed-Kommunikation und Renditen (Lucca/Moench 2015, Neuhierl/Weber 2019). Bereich Geldmarkt ist nach L2 erschöpft, darum tief. | Lauf 2026-11-15T16:30Z: aufgenommen. ne-speeches.json reicht tatsächlich bis 2006 zurück (1353 Reden), 1996-2005 aus den Jahresseiten /newsevents/speech/<JJJJ>speech.htm (HTTP 200; 2006-2016 leiten auf JSON um). Prüfung anzahl: 11113 Zeilen, erste 1996-06-13, letzte 2026-11-15, Median-Abstand 1 Tag, Summe 1996 Reden, Min 0, Max 5, Anteil gleicher Folgewerte 76.6% (Ereigniszählung mit vielen Nulltagen, erwartet). vorsitz: 11113 Zeilen, gleiche Daten, Summe 476, Max 3, gleiche Folgewerte 92.1%. Jahreszahlen 1997-2026 zwischen 37 und 87 Reden plausibel; 1996 nur ab Juni (Beginn Online-Archiv). Datum = Tag der Rede, verfuegbar_nach_tagen 0 (Rede am selben Tag veröffentlicht, im Voraus im Wochenkalender angekündigt). Nur Board-Mitglieder, keine Regionalbank-Präsidenten, keine Testimony. Abruf rund 6 s. Reihen aktiv: anzahl, vorsitz (verschiedene Grössen: alle Board-Reden gegenüber nur Vorsitz). Kein Beginn vor 1995 (Familie Langzeit nicht nutzbar). Paarvorschlag für Reto: keiner.",
+    "reihen": [
+      "anzahl",
+      "vorsitz"
+    ],
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-15T16:30Z"
   },
   {
     "id": "us_shutdown_tage",

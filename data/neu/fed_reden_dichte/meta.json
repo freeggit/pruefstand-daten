@@ -1,0 +1,20 @@
+{
+  "anzahl": {
+    "beschreibung": "Taegliche Anzahl Reden von Mitgliedern des Federal Reserve Board (Vorsitz, Vize, Gouverneure), Datum = Tag der Rede (US-Ostzeit), 0 an Tagen ohne Rede; ab Juni 1996 (Beginn des Online-Archivs), ohne Anhoerungen (Testimony) und ohne Reden der Regionalbank-Praesidenten",
+    "einheit": "Anzahl Reden",
+    "publikation": "taeglich: Reden der Board-Mitglieder werden am Tag der Rede auf federalreserve.gov/newsevents/speeches.htm veroeffentlicht und im Voraus im Wochenkalender angekuendigt (federalreserve.gov/newsevents/calendar.htm)",
+    "quelle_url": "https://www.federalreserve.gov/newsevents/speeches.htm",
+    "revidiert": false,
+    "verdichtung": "Anzahl Reden je Kalendertag",
+    "verfuegbar_nach_tagen": 0
+  },
+  "vorsitz": {
+    "beschreibung": "Taegliche Anzahl Reden des Fed-Vorsitzenden (Sprecher beginnt mit 'Chair'), Datum = Tag der Rede, 0 an Tagen ohne Rede; ab 1996",
+    "einheit": "Anzahl Reden",
+    "publikation": "taeglich: Reden der Board-Mitglieder werden am Tag der Rede auf federalreserve.gov/newsevents/speeches.htm veroeffentlicht und im Voraus im Wochenkalender angekuendigt (federalreserve.gov/newsevents/calendar.htm)",
+    "quelle_url": "https://www.federalreserve.gov/newsevents/speeches.htm",
+    "revidiert": false,
+    "verdichtung": "Anzahl Reden je Kalendertag",
+    "verfuegbar_nach_tagen": 0
+  }
+}
