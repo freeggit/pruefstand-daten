@@ -1,0 +1,12 @@
+{
+  "gegenstimmen": {
+    "beschreibung": "Zahl der FOMC-Mitglieder, die laut Statement gegen den geldpolitischen Beschluss stimmten, am Tag der Veroeffentlichung des Statements (14 Uhr Washington, seit Maerz 2002 mit Namensliste der Abstimmung, ab Juni 2026 nur noch als Stimmenverhaeltnis 'by a 12 - 0 vote', dann Gegenstimmen = zweite Zahl); 0 an allen anderen Tagen, auch an Statement-Tagen ohne Gegenstimme. Alle auf federalreserve.gov gelisteten Statements, auch ausserordentliche Sitzungen (Inhalt wird am selben Tag publiziert). Begruendungstexte je Statement in statements.json.",
+    "einheit": "Anzahl Gegenstimmen (0 an Tagen ohne Statement)",
+    "publikation": "taeglich (Stimmenliste steht im Statement, das am Entscheidtag um 14 Uhr Washingtoner Zeit veroeffentlicht wird; Quelle: federalreserve.gov Pressemitteilungen monetary<datum>a.htm)",
+    "quelle_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Ereignisreihe, eine Zeile je Kalendertag)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

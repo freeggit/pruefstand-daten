@@ -6272,23 +6272,39 @@
     "url": "https://www.spglobal.com/ratings/en/research-insights/special-reports/sovereign-ratings-history (jährlicher PDF-Bericht; Gegenprobe fitchratings.com Sovereign Rating History)",
     "domain": "spglobal.com",
     "bereich": "Staat",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Herabstufungen eines Landes verteuern dessen Finanzierung und lösen Verkäufe regelgebundener Anleger aus; Länder-ETF (EWZ, EWJ, EWG, EEM) fallen kurzfristig gegenüber dem Weltindex (Kaminsky und Schmukler 2002; Brooks, Faff, Hillier, Hillier 2004).",
-    "grund": "Lernrunde 16.11.2026: Literatur zu Kurzfrist-Effekten, Historie vor 1990. spglobal.com antwortet aus dieser Umgebung mit HTTP 403; fitchratings.com mit HTTP 200. L3: veröffentlicht, Effekt seither eher bei Herabstufungen.",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Literatur zu Kurzfrist-Effekten, Historie vor 1990. spglobal.com antwortet aus dieser Umgebung mit HTTP 403; fitchratings.com mit HTTP 200. L3: veröffentlicht, Effekt seither eher bei Herabstufungen. | Lauf 2026-11-16T20:18:24Z: abgelehnt K3. spglobal.com HTTP 403 (Befund, nicht umgangen); fitchratings.com liefert nur eine JavaScript-Huelle ohne Tabelle, Rating-Historien sind lizenzierte Agenturdaten (Weitergabe in Nutzungsbedingungen beider Agenturen nicht erlaubt); keine freie maschinenlesbare Tagesliste.",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "geprueft_utc": "2026-11-16T20:18:24Z"
   },
   {
     "id": "fomc_dissens_historie",
     "name": "FOMC: Zahl der Gegenstimmen je Sitzung mit Tagesdatum, ab 1936",
-    "url": "https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm (Protokolle und Statements; Datensatz Thornton und Wheelock 2014, St. Louis Fed Review)",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
     "domain": "federalreserve.gov",
     "bereich": "Staat und Geldmarkt",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Gegenstimmen zeigen Uneinigkeit über den Zinspfad und kündigen Kurswechsel an; das trifft Laufzeitprämien (TLT, IEF) und Banken (XLF) kurzfristig gegenüber dem Weltindex.",
-    "grund": "Lernrunde 16.11.2026: Historie vor 1990, nicht doppelt zu fomc_protokolle_veroeffentlichungstage (misst Inhalt, nicht Termin). HTTP 200 geprüft. Ereignistag = Tag der Veröffentlichung der Stimmen (ab 1993 Statement, davor Protokoll).",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Historie vor 1990, nicht doppelt zu fomc_protokolle_veroeffentlichungstage (misst Inhalt, nicht Termin). HTTP 200 geprüft. Ereignistag = Tag der Veröffentlichung der Stimmen (ab 1993 Statement, davor Protokoll). | Lauf 2026-11-16T20:18:24Z: aufgenommen. Reihe gegenstimmen = Zahl der Gegenstimmen laut Statement am Statement-Tag (14 Uhr Washington), 0 sonst; Beginn 2002-03-19 = erstes Statement mit Stimmenliste (vorher nur in Protokollen mit Wochen Verzug, darum nicht abgelegt; Vorgeschichte ab 1936 ueber Protokoll-Veroeffentlichungstage waere eine spaetere Etappe). Ab Juni 2026 nennt das Statement nur noch das Stimmenverhaeltnis (by a 9 - 3 vote), Gegenstimmen = zweite Zahl. Gegenprobe gegen bekannte Dissense (2013-06 Bullard+George, 2014-12 Fisher/Kocherlakota/Plosser, 2019-09 drei, 2025-12 Miran/Goolsbee/Schmid) stimmt. Anteil gleicher Folgewerte 98% ist bei Ereignisreihe erwartet. Ausserordentliche Statements (z.B. 2008-01-22, 2020-03-15) enthalten, da Inhalt am selben Tag publik. Paarvorschlag fuer Reto: gegenstimmen gegen TLT-XLF.",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "reihen": [
+      "gegenstimmen"
+    ],
+    "geprueft_utc": "2026-11-16T20:18:24Z",
+    "pruefung": {
+      "zeilen": 9008,
+      "erste": "2002-03-19",
+      "letzte": "2026-11-15",
+      "median_abstand_tage": 1,
+      "anteil_gleiche_folgewerte": 0.983,
+      "min": 0,
+      "max": 4,
+      "statements_mit_stimmen": 202,
+      "tage_mit_gegenstimme": 75
+    }
   },
   {
     "id": "tceq_emissionsereignisse_raffinerien",
