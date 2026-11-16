@@ -2648,6 +2648,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:33Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__ca_ag_datenlecks__meldungen.csv.gz": {
+   "datei": "n__neu__ca_ag_datenlecks__meldungen.csv.gz@705aba2b6a394ba5",
+   "sha": "705aba2b6a394ba57ef67f8aef19d2c6a5c07f025d83a32e2846a5a394d006d1",
+   "sha_inhalt": "7716df8d63905af8dfd8a4a4ee8a4b249f0af82b74a8629867f465d02eea7346",
+   "zeilen": 3269,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:11Z",
+   "lauf_id": "L20261116T132647Z"
+  },
   "n__neu__cboe_skew__skew.csv.gz": {
    "datei": "n__neu__cboe_skew__skew.csv.gz@82e3d6b707bc7b4c",
    "sha": "82e3d6b707bc7b4c9ef500f816fd652388ecbb876ea282d28c0e6c374cbb343a",
@@ -2773,6 +2782,24 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-11-13T12:44:07Z",
    "lauf_id": "L20261113T124343Z"
+  },
+  "n__neu__ema_zulassungsentscheide__zulassungen_biosimilar.csv.gz": {
+   "datei": "n__neu__ema_zulassungsentscheide__zulassungen_biosimilar.csv.gz@5fbed9eb3dd36894",
+   "sha": "5fbed9eb3dd36894014c28b0542e7edb3d69d52613b7e0db98421702d9e7e387",
+   "sha_inhalt": "3ce4849ac266529997fb2b2251a50dcb8c4eb90952eea7d501d5287beefc3cdf",
+   "zeilen": 5378,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:12Z",
+   "lauf_id": "L20261116T132647Z"
+  },
+  "n__neu__ema_zulassungsentscheide__zulassungen_neu.csv.gz": {
+   "datei": "n__neu__ema_zulassungsentscheide__zulassungen_neu.csv.gz@87710d9fd6677de7",
+   "sha": "87710d9fd6677de778ad8e50570e9612386bd77e019dac856b503e1aff56657e",
+   "sha_inhalt": "a7cf820784ce041a89775bc95b429c7d8988601b70f2eee72c6cd5da1d75f14b",
+   "zeilen": 9205,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:12Z",
+   "lauf_id": "L20261116T132647Z"
   },
   "n__neu__eu_boersenfeiertage__geschlossen.csv.gz": {
    "datei": "n__neu__eu_boersenfeiertage__geschlossen.csv.gz@af00f1a0a5964c8d",
@@ -3449,6 +3476,24 @@
    "aufgenommen_utc": "2026-11-15T12:21:36Z",
    "lauf_id": "L20261115T122117Z"
   },
+  "n__neu__healthcanada_noc_zulassungen__generika_zulassungen.csv.gz": {
+   "datei": "n__neu__healthcanada_noc_zulassungen__generika_zulassungen.csv.gz@c3ebfd5f34e9b84a",
+   "sha": "c3ebfd5f34e9b84a695a07e4191833e17e29bd5436e8635e14aee9438acd10a6",
+   "sha_inhalt": "886ad36d2d0a55155f975bc47a6c32361528349319c6bcfbf656b05b0dba4bf7",
+   "zeilen": 9479,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:17Z",
+   "lauf_id": "L20261116T132647Z"
+  },
+  "n__neu__healthcanada_noc_zulassungen__nas_zulassungen.csv.gz": {
+   "datei": "n__neu__healthcanada_noc_zulassungen__nas_zulassungen.csv.gz@c16af3a9b135945f",
+   "sha": "c16af3a9b135945f63b8f34e2e23cc0c95abb3507425b6c9c2bd8dfad88c5032",
+   "sha_inhalt": "3dcb6c8ac218264b50266bfeb9de25481ef7987a318a8109edefccdb5c0a409d",
+   "zeilen": 9788,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:17Z",
+   "lauf_id": "L20261116T132647Z"
+  },
   "n__neu__japan_tankan_veroeffentlichung__tankan_veroeffentlichung.csv.gz": {
    "datei": "n__neu__japan_tankan_veroeffentlichung__tankan_veroeffentlichung.csv.gz@c7d77fd88adf4423",
    "sha": "c7d77fd88adf442384b348ee4a722cf9dcb5c2a34edf26b7f6bf552248ff6f24",
@@ -3655,6 +3700,24 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:38Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__noaa_ghcn_central_park_wetter__niederschlag_mm.csv.gz": {
+   "datei": "n__neu__noaa_ghcn_central_park_wetter__niederschlag_mm.csv.gz@1110e428f47cb722",
+   "sha": "1110e428f47cb7227bd6275133d946802ec051a51b3e8762d4b254b943c540b8",
+   "sha_inhalt": "7a28ad55191864e1db0af14a514b30b2e789eac25f187086a6674c32ecde2161",
+   "zeilen": 55517,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:19Z",
+   "lauf_id": "L20261116T132647Z"
+  },
+  "n__neu__noaa_ghcn_central_park_wetter__tmax_c.csv.gz": {
+   "datei": "n__neu__noaa_ghcn_central_park_wetter__tmax_c.csv.gz@71f8ec7ed176c04d",
+   "sha": "71f8ec7ed176c04dd16f35e3726ff3060e2ddfcaee059769dc08603857ca56a3",
+   "sha_inhalt": "adaa06de5d90a398d248e5fcd637a8df722b7bf6ec53e603f3fae883c1de5ba2",
+   "zeilen": 55476,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:19Z",
+   "lauf_id": "L20261116T132647Z"
   },
   "n__neu__norges_bank_leitzins_entscheidtage__aenderungstage.csv.gz": {
    "datei": "n__neu__norges_bank_leitzins_entscheidtage__aenderungstage.csv.gz@b57bf8f96d6d97d3",
@@ -4147,6 +4210,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:40Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__wto_streitfaelle_konsultationen__konsultationen.csv.gz": {
+   "datei": "n__neu__wto_streitfaelle_konsultationen__konsultationen.csv.gz@8f86e69b0c92ee16",
+   "sha": "8f86e69b0c92ee16db3c07ac418a3ce7c94ec397f84a0de3ec35bd443cc97a13",
+   "sha_inhalt": "18d634a2252f49017e056c6f251c4875fa37ff1b30f6eb8191eb0472e4d5dbef",
+   "zeilen": 9497,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-16T13:27:22Z",
+   "lauf_id": "L20261116T132647Z"
   },
   "sec__edgar_reihen__markt_13d.csv.gz": {
    "datei": "sec__edgar_reihen__markt_13d.csv.gz@c7a9eb58294e79d4",
@@ -4829,30 +4901,9 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-15T12:21:42Z",
- "dateien_n": 533,
+ "stand_utc": "2026-11-16T13:27:26Z",
+ "dateien_n": 541,
  "vorgemerkt": {
-  "n__neu__ca_ag_datenlecks__meldungen.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:41Z",
-   "beste_werte": 1313,
-   "frueheste_erste": "2012-01-20",
-   "sichtungen": [
-    {
-     "utc": "2026-11-14T11:51:41Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 1313,
-     "erste": "2012-01-20",
-     "sha_inhalt": "7716df8d63905af8dfd8a4a4ee8a4b249f0af82b74a8629867f465d02eea7346"
-    },
-    {
-     "utc": "2026-11-15T12:21:32Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 1313,
-     "erste": "2012-01-20",
-     "sha_inhalt": "7716df8d63905af8dfd8a4a4ee8a4b249f0af82b74a8629867f465d02eea7346"
-    }
-   ]
-  },
   "n__neu__cftc_pressemitteilungen__gesamt.csv.gz": {
    "erstmals_utc": "2026-11-15T12:21:32Z",
    "beste_werte": 2887,
@@ -4861,6 +4912,13 @@
     {
      "utc": "2026-11-15T12:21:32Z",
      "lauf_id": "L20261115T122117Z",
+     "werte": 2887,
+     "erste": "1995-07-26",
+     "sha_inhalt": "dd53354f9e3cc2218d584cee06a5466f00a72d03dc441eece24fc4376f1849dc"
+    },
+    {
+     "utc": "2026-11-16T13:27:12Z",
+     "lauf_id": "L20261116T132647Z",
      "werte": 2887,
      "erste": "1995-07-26",
      "sha_inhalt": "dd53354f9e3cc2218d584cee06a5466f00a72d03dc441eece24fc4376f1849dc"
@@ -4878,6 +4936,13 @@
      "werte": 1641,
      "erste": "1995-07-26",
      "sha_inhalt": "d87adc64c667be36ded9b34affe9768b265b4aa50ca586e33d521ad75ce305e5"
+    },
+    {
+     "utc": "2026-11-16T13:27:12Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 1641,
+     "erste": "1995-07-26",
+     "sha_inhalt": "d87adc64c667be36ded9b34affe9768b265b4aa50ca586e33d521ad75ce305e5"
     }
    ]
   },
@@ -4892,48 +4957,27 @@
      "werte": 73,
      "erste": "2015-01-01",
      "sha_inhalt": "026587b6c1e6c07d87bec5165f605d8701ba49d230bfd63975358a22553af21e"
+    },
+    {
+     "utc": "2026-11-16T13:27:12Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 73,
+     "erste": "2015-01-01",
+     "sha_inhalt": "026587b6c1e6c07d87bec5165f605d8701ba49d230bfd63975358a22553af21e"
     }
    ]
   },
-  "n__neu__ema_zulassungsentscheide__zulassungen_biosimilar.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:41Z",
-   "beste_werte": 55,
-   "frueheste_erste": "2006-04-12",
+  "n__neu__dax_indexaenderungen__anzahl_aenderungen.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:12Z",
+   "beste_werte": 44,
+   "frueheste_erste": "1988-07-01",
    "sichtungen": [
     {
-     "utc": "2026-11-14T11:51:41Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 55,
-     "erste": "2006-04-12",
-     "sha_inhalt": "3ce4849ac266529997fb2b2251a50dcb8c4eb90952eea7d501d5287beefc3cdf"
-    },
-    {
-     "utc": "2026-11-15T12:21:33Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 55,
-     "erste": "2006-04-12",
-     "sha_inhalt": "3ce4849ac266529997fb2b2251a50dcb8c4eb90952eea7d501d5287beefc3cdf"
-    }
-   ]
-  },
-  "n__neu__ema_zulassungsentscheide__zulassungen_neu.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:41Z",
-   "beste_werte": 753,
-   "frueheste_erste": "1995-10-20",
-   "sichtungen": [
-    {
-     "utc": "2026-11-14T11:51:41Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 753,
-     "erste": "1995-10-20",
-     "sha_inhalt": "a7cf820784ce041a89775bc95b429c7d8988601b70f2eee72c6cd5da1d75f14b"
-    },
-    {
-     "utc": "2026-11-15T12:21:33Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 753,
-     "erste": "1995-10-20",
-     "sha_inhalt": "a7cf820784ce041a89775bc95b429c7d8988601b70f2eee72c6cd5da1d75f14b"
+     "utc": "2026-11-16T13:27:12Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 44,
+     "erste": "1988-07-01",
+     "sha_inhalt": "cd1b8e681ac9485761d884679c6e26e99573ae7369097824a40ad80bb6398bdc"
     }
    ]
   },
@@ -4948,48 +4992,55 @@
      "werte": 748,
      "erste": "2006-01-10",
      "sha_inhalt": "5a3fc6456c584342f9f07f34dfd177610ddf7929dbc25f7078967fa59d927e1b"
+    },
+    {
+     "utc": "2026-11-16T13:27:13Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 748,
+     "erste": "2006-01-10",
+     "sha_inhalt": "5a3fc6456c584342f9f07f34dfd177610ddf7929dbc25f7078967fa59d927e1b"
     }
    ]
   },
-  "n__neu__healthcanada_noc_zulassungen__generika_zulassungen.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:45Z",
-   "beste_werte": 1657,
-   "frueheste_erste": "1995-01-19",
+  "n__neu__fed_reden_dichte__anzahl.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:13Z",
+   "beste_werte": 1270,
+   "frueheste_erste": "1996-06-13",
    "sichtungen": [
     {
-     "utc": "2026-11-14T11:51:45Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 1657,
-     "erste": "1995-01-19",
-     "sha_inhalt": "886ad36d2d0a55155f975bc47a6c32361528349319c6bcfbf656b05b0dba4bf7"
-    },
-    {
-     "utc": "2026-11-15T12:21:36Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 1657,
-     "erste": "1995-01-19",
-     "sha_inhalt": "886ad36d2d0a55155f975bc47a6c32361528349319c6bcfbf656b05b0dba4bf7"
+     "utc": "2026-11-16T13:27:13Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 1270,
+     "erste": "1996-06-13",
+     "sha_inhalt": "08856cc34dab66bae5b610dae3b06b1e79f0e20f1976847c0685a275f84618db"
     }
    ]
   },
-  "n__neu__healthcanada_noc_zulassungen__nas_zulassungen.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:45Z",
-   "beste_werte": 723,
-   "frueheste_erste": "1994-03-16",
+  "n__neu__fed_reden_dichte__vorsitz.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:13Z",
+   "beste_werte": 424,
+   "frueheste_erste": "1996-06-13",
    "sichtungen": [
     {
-     "utc": "2026-11-14T11:51:45Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 723,
-     "erste": "1994-03-16",
-     "sha_inhalt": "3dcb6c8ac218264b50266bfeb9de25481ef7987a318a8109edefccdb5c0a409d"
-    },
+     "utc": "2026-11-16T13:27:13Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 424,
+     "erste": "1996-06-13",
+     "sha_inhalt": "973a320b717a1698fa6dca5627d4667b754b9bb0a72b86495e70ee20f7a234a5"
+    }
+   ]
+  },
+  "n__neu__japan_mlit_fahrzeugrueckrufe__rueckruf_meldungen.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:17Z",
+   "beste_werte": 2198,
+   "frueheste_erste": "2001-01-01",
+   "sichtungen": [
     {
-     "utc": "2026-11-15T12:21:36Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 723,
-     "erste": "1994-03-16",
-     "sha_inhalt": "3dcb6c8ac218264b50266bfeb9de25481ef7987a318a8109edefccdb5c0a409d"
+     "utc": "2026-11-16T13:27:17Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 2198,
+     "erste": "2001-01-01",
+     "sha_inhalt": "4ba3317ed285611c0f2a3be9b5af90bec0ae9d6a2b97e117b754b71c2b225e6a"
     }
    ]
   },
@@ -5001,6 +5052,13 @@
     {
      "utc": "2026-11-15T12:21:36Z",
      "lauf_id": "L20261115T122117Z",
+     "werte": 164,
+     "erste": "2009-01-01",
+     "sha_inhalt": "81b76fa11ac7a01fef5be7ed4495d0fe4c26ae6d3c2012d9b5fe9e92128af564"
+    },
+    {
+     "utc": "2026-11-16T13:27:18Z",
+     "lauf_id": "L20261116T132647Z",
      "werte": 164,
      "erste": "2009-01-01",
      "sha_inhalt": "81b76fa11ac7a01fef5be7ed4495d0fe4c26ae6d3c2012d9b5fe9e92128af564"
@@ -5018,69 +5076,125 @@
      "werte": 47,
      "erste": "2009-01-01",
      "sha_inhalt": "0cf728a4f099e493b6bab14a2205a1eaf74e4581016189339d922b352fe34330"
+    },
+    {
+     "utc": "2026-11-16T13:27:18Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 47,
+     "erste": "2009-01-01",
+     "sha_inhalt": "0cf728a4f099e493b6bab14a2205a1eaf74e4581016189339d922b352fe34330"
     }
    ]
   },
-  "n__neu__noaa_ghcn_central_park_wetter__niederschlag_mm.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:47Z",
-   "beste_werte": 18423,
-   "frueheste_erste": "1869-01-01",
+  "n__neu__ofac_recent_actions__gesamt.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:19Z",
+   "beste_werte": 1834,
+   "frueheste_erste": "2001-01-10",
    "sichtungen": [
     {
-     "utc": "2026-11-14T11:51:47Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 18423,
-     "erste": "1869-01-01",
-     "sha_inhalt": "7a28ad55191864e1db0af14a514b30b2e789eac25f187086a6674c32ecde2161"
-    },
-    {
-     "utc": "2026-11-15T12:21:37Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 18423,
-     "erste": "1869-01-01",
-     "sha_inhalt": "7a28ad55191864e1db0af14a514b30b2e789eac25f187086a6674c32ecde2161"
+     "utc": "2026-11-16T13:27:19Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 1834,
+     "erste": "2001-01-10",
+     "sha_inhalt": "123d49c8374a64ae26a21126b2bfc7c699ac6178f80e01150d27df5e17f9104c"
     }
    ]
   },
-  "n__neu__noaa_ghcn_central_park_wetter__tmax_c.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:47Z",
-   "beste_werte": 54977,
-   "frueheste_erste": "1869-01-01",
+  "n__neu__ofac_recent_actions__listen_updates.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:19Z",
+   "beste_werte": 1216,
+   "frueheste_erste": "2001-01-10",
    "sichtungen": [
     {
-     "utc": "2026-11-14T11:51:47Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 54977,
-     "erste": "1869-01-01",
-     "sha_inhalt": "adaa06de5d90a398d248e5fcd637a8df722b7bf6ec53e603f3fae883c1de5ba2"
-    },
-    {
-     "utc": "2026-11-15T12:21:37Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 54977,
-     "erste": "1869-01-01",
-     "sha_inhalt": "adaa06de5d90a398d248e5fcd637a8df722b7bf6ec53e603f3fae883c1de5ba2"
+     "utc": "2026-11-16T13:27:19Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 1216,
+     "erste": "2001-01-10",
+     "sha_inhalt": "eaa9e54b20aeeac5362a520e6586c42471b21adf47ce8761b5e406714c2ef762"
     }
    ]
   },
-  "n__neu__wto_streitfaelle_konsultationen__konsultationen.csv.gz": {
-   "erstmals_utc": "2026-11-14T11:51:49Z",
-   "beste_werte": 490,
-   "frueheste_erste": "1995-01-01",
+  "n__neu__ofac_recent_actions__vollzug.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:20Z",
+   "beste_werte": 221,
+   "frueheste_erste": "2001-01-10",
    "sichtungen": [
     {
-     "utc": "2026-11-14T11:51:49Z",
-     "lauf_id": "L20261114T115120Z",
-     "werte": 490,
-     "erste": "1995-01-01",
-     "sha_inhalt": "18d634a2252f49017e056c6f251c4875fa37ff1b30f6eb8191eb0472e4d5dbef"
-    },
+     "utc": "2026-11-16T13:27:20Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 221,
+     "erste": "2001-01-10",
+     "sha_inhalt": "630fbe9a6255212af01e41dabb077537126cf95c3d07207106869b3185f3772c"
+    }
+   ]
+  },
+  "n__neu__ramadan_beginn_ende__aktiv.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:20Z",
+   "beste_werte": 2550,
+   "frueheste_erste": "1937-01-01",
+   "sichtungen": [
     {
-     "utc": "2026-11-15T12:21:39Z",
-     "lauf_id": "L20261115T122117Z",
-     "werte": 490,
-     "erste": "1995-01-01",
-     "sha_inhalt": "18d634a2252f49017e056c6f251c4875fa37ff1b30f6eb8191eb0472e4d5dbef"
+     "utc": "2026-11-16T13:27:20Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 2550,
+     "erste": "1937-01-01",
+     "sha_inhalt": "2028f59c2329b3fedee3ff457085f3021e6969f6b474ff7dd18005295f97e3a4"
+    }
+   ]
+  },
+  "n__neu__ramadan_beginn_ende__beginn.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:20Z",
+   "beste_werte": 86,
+   "frueheste_erste": "1937-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-16T13:27:20Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 86,
+     "erste": "1937-01-01",
+     "sha_inhalt": "4b72417b85ff0f314f363ec9eac6e8622cdcd03ad14df7210c8f7393d1c252d6"
+    }
+   ]
+  },
+  "n__neu__ramadan_beginn_ende__eid.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:20Z",
+   "beste_werte": 86,
+   "frueheste_erste": "1937-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-16T13:27:20Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 86,
+     "erste": "1937-01-01",
+     "sha_inhalt": "e4e17acf48259b810c558c67b0169648e0d755b378b45f1fd918f371b9692ad6"
+    }
+   ]
+  },
+  "n__neu__us_shutdown_tage__aktiv.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:21Z",
+   "beste_werte": 89,
+   "frueheste_erste": "1976-10-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-16T13:27:21Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 89,
+     "erste": "1976-10-01",
+     "sha_inhalt": "c820f036fbaa4a8defc99cba75956e60bb38cd4e19a1df2a8c87141aa33e44a9"
+    }
+   ]
+  },
+  "n__neu__us_shutdown_tage__beginn.csv.gz": {
+   "erstmals_utc": "2026-11-16T13:27:21Z",
+   "beste_werte": 10,
+   "frueheste_erste": "1976-10-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-16T13:27:21Z",
+     "lauf_id": "L20261116T132647Z",
+     "werte": 10,
+     "erste": "1976-10-01",
+     "sha_inhalt": "2e5e75a6d943e4c04d6be715a836132afa361812cf29308edd97c3bee6489cb9"
     }
    ]
   }

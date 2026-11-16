@@ -1,5 +1,5 @@
 {
- "kumuliert": 767424,
+ "kumuliert": 778042,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -378,6 +378,11 @@
   "neu_cpsc_ruckrufe_ruckrufe_d5",
   "neu_cpsc_ruckrufe_ruckrufe_stand",
   "neu_cpsc_ruckrufe_ruckrufe_z252",
+  "neu_dax_indexaenderungen_anzahl_aenderungen_d1",
+  "neu_dax_indexaenderungen_anzahl_aenderungen_d20",
+  "neu_dax_indexaenderungen_anzahl_aenderungen_d5",
+  "neu_dax_indexaenderungen_anzahl_aenderungen_stand",
+  "neu_dax_indexaenderungen_anzahl_aenderungen_z252",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d1",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d20",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d5",
@@ -461,6 +466,16 @@
   "neu_fed_pressemitteilungen_regulierung_regulierung_d5",
   "neu_fed_pressemitteilungen_regulierung_regulierung_stand",
   "neu_fed_pressemitteilungen_regulierung_regulierung_z252",
+  "neu_fed_reden_dichte_anzahl_d1",
+  "neu_fed_reden_dichte_anzahl_d20",
+  "neu_fed_reden_dichte_anzahl_d5",
+  "neu_fed_reden_dichte_anzahl_stand",
+  "neu_fed_reden_dichte_anzahl_z252",
+  "neu_fed_reden_dichte_vorsitz_d1",
+  "neu_fed_reden_dichte_vorsitz_d20",
+  "neu_fed_reden_dichte_vorsitz_d5",
+  "neu_fed_reden_dichte_vorsitz_stand",
+  "neu_fed_reden_dichte_vorsitz_z252",
   "neu_fedregister_ams_agrarmarkt_anzahl_d1",
   "neu_fedregister_ams_agrarmarkt_anzahl_d20",
   "neu_fedregister_ams_agrarmarkt_anzahl_d5",
@@ -775,6 +790,11 @@
   "neu_healthcanada_noc_zulassungen_nas_zulassungen_d5",
   "neu_healthcanada_noc_zulassungen_nas_zulassungen_stand",
   "neu_healthcanada_noc_zulassungen_nas_zulassungen_z252",
+  "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_d1",
+  "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_d20",
+  "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_d5",
+  "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_stand",
+  "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_z252",
   "neu_japan_tankan_veroeffentlichung_tankan_veroeffentlichung_stand",
   "neu_kalender_ereignisse_fomc_sitzung_stand",
   "neu_kalender_ereignisse_opex_verfall_stand",
@@ -909,6 +929,21 @@
   "neu_occ_optionsvolumen_taeglich_index_sonstige_d5",
   "neu_occ_optionsvolumen_taeglich_index_sonstige_stand",
   "neu_occ_optionsvolumen_taeglich_index_sonstige_z252",
+  "neu_ofac_recent_actions_gesamt_d1",
+  "neu_ofac_recent_actions_gesamt_d20",
+  "neu_ofac_recent_actions_gesamt_d5",
+  "neu_ofac_recent_actions_gesamt_stand",
+  "neu_ofac_recent_actions_gesamt_z252",
+  "neu_ofac_recent_actions_listen_updates_d1",
+  "neu_ofac_recent_actions_listen_updates_d20",
+  "neu_ofac_recent_actions_listen_updates_d5",
+  "neu_ofac_recent_actions_listen_updates_stand",
+  "neu_ofac_recent_actions_listen_updates_z252",
+  "neu_ofac_recent_actions_vollzug_d1",
+  "neu_ofac_recent_actions_vollzug_d20",
+  "neu_ofac_recent_actions_vollzug_d5",
+  "neu_ofac_recent_actions_vollzug_stand",
+  "neu_ofac_recent_actions_vollzug_z252",
   "neu_openmeteo_wetter_anbau_mais_guertel_d1",
   "neu_openmeteo_wetter_anbau_mais_guertel_d20",
   "neu_openmeteo_wetter_anbau_mais_guertel_d5",
@@ -925,6 +960,9 @@
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_stand",
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_z252",
   "neu_quartalsende_pensionsrebalancing_quartalsende_stand",
+  "neu_ramadan_beginn_ende_aktiv_stand",
+  "neu_ramadan_beginn_ende_beginn_stand",
+  "neu_ramadan_beginn_ende_eid_stand",
   "neu_rbnz_ocr_entscheidtage_aenderungstage_stand",
   "neu_riksbank_leitzins_entscheidtage_aenderungstage_stand",
   "neu_snb_saron_saron_d1",
@@ -984,6 +1022,8 @@
   "neu_us_bip_bea_veroeffentlichungstage_pce_stand",
   "neu_us_boersenfeiertage_geschlossen_stand",
   "neu_us_cpi_termine_cpi_stand",
+  "neu_us_shutdown_tage_aktiv_stand",
+  "neu_us_shutdown_tage_beginn_stand",
   "neu_us_sommerzeit_wechsel_beginn_stand",
   "neu_us_sommerzeit_wechsel_ende_stand",
   "neu_usa_wahltag_wahltag_stand",
@@ -1951,9 +1991,15 @@
    "datei": "suche/S0069.json",
    "kandidaten": 428831,
    "in_db": false
+  },
+  {
+   "nr": 70,
+   "datei": "suche/S0070.json",
+   "kandidaten": 439449,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-15T14:03Z",
+ "letzter_suchlauf_utc": "2026-11-16T16:27Z",
  "pruefung_lernrunde_utc": "2026-11-16T09:55:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2405,11 +2451,19 @@
    "ergebnis_hash": "e6f6737262d79b1c",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261116T132647Z.json",
+   "lauf_id": "L20261116T132647Z",
+   "s_dokument": "suche/S0070.json",
+   "ergebnis_hash": "768e0cb35f37ffbd",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-15T14:03Z",
- "letztes_vollarchiv": "suche/S0069_alle.csv.gz",
- "letzter_ergebnis_hash": "e6f6737262d79b1c",
+ "letzter_lauf_utc": "2026-11-16T16:27Z",
+ "letztes_vollarchiv": "suche/S0070_alle.csv.gz",
+ "letzter_ergebnis_hash": "768e0cb35f37ffbd",
  "konflikte": [
   {
    "wo": "index",
@@ -4644,20 +4698,20 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 348,
-  "neu_in_diesem_lauf": 6
+  "grundreihen_n": 360,
+  "neu_in_diesem_lauf": 12
  },
- "letztes_vollarchiv_ergebnis_hash": "e6f6737262d79b1c",
+ "letztes_vollarchiv_ergebnis_hash": "768e0cb35f37ffbd",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
-  "lauf_id": "L20261110T225026Z",
-  "zeit_utc": "2026-11-11T02:04:42Z",
-  "eingabe_hash": "7d243b0c71cdc482",
+  "lauf_id": "L20261116T132647Z",
+  "zeit_utc": "2026-11-16T17:12:15Z",
+  "eingabe_hash": "f84bc024cf67d8b1",
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
    "ImageOS": "ubuntu24",
-   "ImageVersion": "20261101.360.1",
+   "ImageVersion": "20261111.370.1",
    "numpy": "2.5.4",
    "pandas": "3.0.6",
    "python-dateutil": "4.0.0",
@@ -4665,7 +4719,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "7a0e9486fbcca424",
- "letzter_gueltiger_lauf": "L20261115T122117Z",
- "letzter_entscheidung_hash": "a33d2f3bed43c724"
+ "letzter_eingabe_hash": "b03bbfb29f076fe0",
+ "letzter_gueltiger_lauf": "L20261116T132647Z",
+ "letzter_entscheidung_hash": "928618e8669923fe"
 }

@@ -271,6 +271,12 @@
    "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
    "beleg": "suche/S0013_alle.csv.gz"
   },
+  "neu_dax_indexaenderungen_anzahl_aenderungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet": {
    "erst_dokument": null,
    "erst_lauf": "L20261110T225026Z",
@@ -402,6 +408,18 @@
    "erst_lauf": "L20261115T122117Z",
    "erst_zeit": "2026-11-15T14:03Z",
    "beleg": "suche/laeufe/L20261115T122117Z.json"
+  },
+  "neu_fed_reden_dichte_anzahl": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_fed_reden_dichte_vorsitz": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
   },
   "neu_fedregister_ams_agrarmarkt_anzahl": {
    "erst_dokument": "S0017",
@@ -799,6 +817,12 @@
    "erst_zeit": "2026-11-14T13:46Z",
    "beleg": "suche/laeufe/L20261114T115120Z.json"
   },
+  "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
   "neu_japan_tankan_veroeffentlichung_tankan_veroeffentlichung": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -1003,6 +1027,24 @@
    "erst_zeit": "2026-11-08T14:31Z",
    "beleg": "suche/laeufe/L20261108T113619Z.json"
   },
+  "neu_ofac_recent_actions_gesamt": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_ofac_recent_actions_listen_updates": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_ofac_recent_actions_vollzug": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
   "neu_openmeteo_wetter_anbau_mais_guertel": {
    "erst_dokument": "S0010",
    "erst_lauf": null,
@@ -1026,6 +1068,24 @@
    "erst_lauf": "L20261004T124314Z",
    "erst_zeit": "4.10.2026, 17:27 (Europe/Zurich)",
    "beleg": "suche/S0022_alle.csv.gz"
+  },
+  "neu_ramadan_beginn_ende_aktiv": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_ramadan_beginn_ende_beginn": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_ramadan_beginn_ende_eid": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
   },
   "neu_rbnz_ocr_entscheidtage_aenderungstage": {
    "erst_dokument": null,
@@ -1140,6 +1200,18 @@
    "erst_lauf": null,
    "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
    "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_us_shutdown_tage_aktiv": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_us_shutdown_tage_beginn": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261116T132647Z",
+   "erst_zeit": "2026-11-16T16:27Z",
+   "beleg": "suche/laeufe/L20261116T132647Z.json"
   },
   "neu_us_sommerzeit_wechsel_beginn": {
    "erst_dokument": null,
@@ -2096,8 +2168,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261115T122117Z",
-  "zeit_utc": "2026-11-15T14:03Z",
-  "grundreihen_n": 348
+  "lauf_id": "L20261116T132647Z",
+  "zeit_utc": "2026-11-16T16:27Z",
+  "grundreihen_n": 360
  }
 }
