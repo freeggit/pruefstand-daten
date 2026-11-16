@@ -1,8 +1,8 @@
 {
- "erzeugt_utc": "2026-11-15T10:44:42Z",
+ "erzeugt_utc": "2026-11-16T11:03:04Z",
  "reihen": {
   "kurse:spy": {
-   "abruf_utc": "2026-11-15T10:44:43Z",
+   "abruf_utc": "2026-11-16T11:03:05Z",
    "datei": "data/kurse/spy_d.csv",
    "zeilen": 8507,
    "erste": "1993-01-29",
@@ -14,7 +14,7 @@
    "granularitaet": "1d"
   },
   "kurse:acwi": {
-   "abruf_utc": "2026-11-15T10:44:43Z",
+   "abruf_utc": "2026-11-16T11:03:06Z",
    "datei": "data/kurse/acwi_d.csv",
    "zeilen": 4689,
    "erste": "2008-03-28",
@@ -27,7 +27,7 @@
    "luecken_60t": []
   },
   "kurse:efa": {
-   "abruf_utc": "2026-11-15T10:44:44Z",
+   "abruf_utc": "2026-11-16T11:03:07Z",
    "datei": "data/kurse/efa_d.csv",
    "zeilen": 6342,
    "erste": "2001-08-27",
@@ -40,7 +40,7 @@
    "luecken_60t": []
   },
   "kurse:ewj": {
-   "abruf_utc": "2026-11-15T10:44:45Z",
+   "abruf_utc": "2026-11-16T11:03:07Z",
    "datei": "data/kurse/ewj_d.csv",
    "zeilen": 7716,
    "erste": "1996-03-18",
@@ -53,7 +53,7 @@
    "luecken_60t": []
   },
   "kurse:xlb": {
-   "abruf_utc": "2026-11-15T10:44:46Z",
+   "abruf_utc": "2026-11-16T11:03:08Z",
    "datei": "data/kurse/xlb_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -66,7 +66,7 @@
    "luecken_60t": []
   },
   "kurse:xlc": {
-   "abruf_utc": "2026-11-15T10:44:47Z",
+   "abruf_utc": "2026-11-16T11:03:09Z",
    "datei": "data/kurse/xlc_d.csv",
    "zeilen": 2114,
    "erste": "2018-06-19",
@@ -79,7 +79,7 @@
    "luecken_60t": []
   },
   "kurse:xle": {
-   "abruf_utc": "2026-11-15T10:44:47Z",
+   "abruf_utc": "2026-11-16T11:03:10Z",
    "datei": "data/kurse/xle_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -92,7 +92,7 @@
    "luecken_60t": []
   },
   "kurse:xlf": {
-   "abruf_utc": "2026-11-15T10:44:48Z",
+   "abruf_utc": "2026-11-16T11:03:11Z",
    "datei": "data/kurse/xlf_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -105,7 +105,7 @@
    "luecken_60t": []
   },
   "kurse:xli": {
-   "abruf_utc": "2026-11-15T10:44:49Z",
+   "abruf_utc": "2026-11-16T11:03:12Z",
    "datei": "data/kurse/xli_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -118,7 +118,7 @@
    "luecken_60t": []
   },
   "kurse:xlk": {
-   "abruf_utc": "2026-11-15T10:44:50Z",
+   "abruf_utc": "2026-11-16T11:03:13Z",
    "datei": "data/kurse/xlk_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -131,7 +131,7 @@
    "luecken_60t": []
   },
   "kurse:xlp": {
-   "abruf_utc": "2026-11-15T10:44:51Z",
+   "abruf_utc": "2026-11-16T11:03:14Z",
    "datei": "data/kurse/xlp_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -144,7 +144,7 @@
    "luecken_60t": []
   },
   "kurse:xlre": {
-   "abruf_utc": "2026-11-15T10:44:51Z",
+   "abruf_utc": "2026-11-16T11:03:15Z",
    "datei": "data/kurse/xlre_d.csv",
    "zeilen": 2792,
    "erste": "2015-10-08",
@@ -157,7 +157,7 @@
    "luecken_60t": []
   },
   "kurse:xlu": {
-   "abruf_utc": "2026-11-15T10:44:52Z",
+   "abruf_utc": "2026-11-16T11:03:16Z",
    "datei": "data/kurse/xlu_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -170,7 +170,7 @@
    "luecken_60t": []
   },
   "kurse:xlv": {
-   "abruf_utc": "2026-11-15T10:44:53Z",
+   "abruf_utc": "2026-11-16T11:03:17Z",
    "datei": "data/kurse/xlv_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -183,7 +183,7 @@
    "luecken_60t": []
   },
   "kurse:xly": {
-   "abruf_utc": "2026-11-15T10:44:54Z",
+   "abruf_utc": "2026-11-16T11:03:17Z",
    "datei": "data/kurse/xly_d.csv",
    "zeilen": 7017,
    "erste": "1998-12-22",
@@ -196,7 +196,7 @@
    "luecken_60t": []
   },
   "kurse:ewl": {
-   "abruf_utc": "2026-11-15T10:44:55Z",
+   "abruf_utc": "2026-11-16T11:03:18Z",
    "datei": "data/kurse/ewl_d.csv",
    "zeilen": 7716,
    "erste": "1996-03-18",
@@ -209,7 +209,7 @@
    "luecken_60t": []
   },
   "kurse:ewg": {
-   "abruf_utc": "2026-11-15T10:44:55Z",
+   "abruf_utc": "2026-11-16T11:03:19Z",
    "datei": "data/kurse/ewg_d.csv",
    "zeilen": 7716,
    "erste": "1996-03-18",
@@ -222,7 +222,7 @@
    "luecken_60t": []
   },
   "kurse:uso": {
-   "abruf_utc": "2026-11-15T10:44:56Z",
+   "abruf_utc": "2026-11-16T11:03:20Z",
    "datei": "data/kurse/uso_d.csv",
    "zeilen": 5183,
    "erste": "2006-04-10",
@@ -235,7 +235,7 @@
    "luecken_60t": []
   },
   "kurse:ung": {
-   "abruf_utc": "2026-11-15T10:44:57Z",
+   "abruf_utc": "2026-11-16T11:03:21Z",
    "datei": "data/kurse/ung_d.csv",
    "zeilen": 4927,
    "erste": "2007-04-18",
@@ -248,7 +248,7 @@
    "luecken_60t": []
   },
   "kurse:gld": {
-   "abruf_utc": "2026-11-15T10:44:58Z",
+   "abruf_utc": "2026-11-16T11:03:22Z",
    "datei": "data/kurse/gld_d.csv",
    "zeilen": 5532,
    "erste": "2004-11-18",
@@ -261,7 +261,7 @@
    "luecken_60t": []
   },
   "kurse:dba": {
-   "abruf_utc": "2026-11-15T10:44:58Z",
+   "abruf_utc": "2026-11-16T11:03:23Z",
    "datei": "data/kurse/dba_d.csv",
    "zeilen": 4997,
    "erste": "2007-01-05",
@@ -274,7 +274,7 @@
    "luecken_60t": []
   },
   "kurse:tlt": {
-   "abruf_utc": "2026-11-15T10:44:59Z",
+   "abruf_utc": "2026-11-16T11:03:23Z",
    "datei": "data/kurse/tlt_d.csv",
    "zeilen": 6114,
    "erste": "2002-07-30",
@@ -287,7 +287,7 @@
    "luecken_60t": []
   },
   "kurse:bas.de": {
-   "abruf_utc": "2026-11-15T10:45:00Z",
+   "abruf_utc": "2026-11-16T11:03:24Z",
    "datei": "data/kurse/bas.de_d.csv",
    "zeilen": 7662,
    "erste": "1996-12-16",
@@ -299,7 +299,7 @@
    "granularitaet": "1d"
   },
   "kurse:hlag.de": {
-   "abruf_utc": "2026-11-15T10:45:01Z",
+   "abruf_utc": "2026-11-16T11:03:25Z",
    "datei": "data/kurse/hlag.de_d.csv",
    "zeilen": 2802,
    "erste": "2015-11-06",
@@ -311,7 +311,7 @@
    "granularitaet": "1d"
   },
   "kurse:knin.sw": {
-   "abruf_utc": "2026-11-15T10:45:01Z",
+   "abruf_utc": "2026-11-16T11:03:26Z",
    "datei": "data/kurse/knin.sw_d.csv",
    "zeilen": 6720,
    "erste": "2000-05-22",
@@ -323,7 +323,7 @@
    "granularitaet": "1d"
   },
   "kurse:eem": {
-   "abruf_utc": "2026-11-15T10:45:02Z",
+   "abruf_utc": "2026-11-16T11:03:27Z",
    "datei": "data/kurse/eem_d.csv",
    "zeilen": 5936,
    "erste": "2003-04-14",
@@ -336,7 +336,7 @@
    "luecken_60t": []
   },
   "kurse:ewz": {
-   "abruf_utc": "2026-11-15T10:45:03Z",
+   "abruf_utc": "2026-11-16T11:03:28Z",
    "datei": "data/kurse/ewz_d.csv",
    "zeilen": 6624,
    "erste": "2000-07-14",
@@ -349,7 +349,7 @@
    "luecken_60t": []
   },
   "kurse:fxi": {
-   "abruf_utc": "2026-11-15T10:45:04Z",
+   "abruf_utc": "2026-11-16T11:03:29Z",
    "datei": "data/kurse/fxi_d.csv",
    "zeilen": 5561,
    "erste": "2004-10-08",
@@ -362,7 +362,7 @@
    "luecken_60t": []
   },
   "kurse:smh": {
-   "abruf_utc": "2026-11-15T10:45:04Z",
+   "abruf_utc": "2026-11-16T11:03:30Z",
    "datei": "data/kurse/smh_d.csv",
    "zeilen": 6652,
    "erste": "2000-06-05",
@@ -375,7 +375,7 @@
    "luecken_60t": []
   },
   "kurse:ibb": {
-   "abruf_utc": "2026-11-15T10:45:05Z",
+   "abruf_utc": "2026-11-16T11:03:31Z",
    "datei": "data/kurse/ibb_d.csv",
    "zeilen": 6478,
    "erste": "2001-02-12",
@@ -388,7 +388,7 @@
    "luecken_60t": []
   },
   "kurse:tip": {
-   "abruf_utc": "2026-11-15T10:45:06Z",
+   "abruf_utc": "2026-11-16T11:03:31Z",
    "datei": "data/kurse/tip_d.csv",
    "zeilen": 5772,
    "erste": "2003-12-05",
@@ -401,7 +401,7 @@
    "luecken_60t": []
   },
   "kurse:lqd": {
-   "abruf_utc": "2026-11-15T10:45:07Z",
+   "abruf_utc": "2026-11-16T11:03:32Z",
    "datei": "data/kurse/lqd_d.csv",
    "zeilen": 6114,
    "erste": "2002-07-30",
@@ -414,7 +414,7 @@
    "luecken_60t": []
   },
   "kurse:ief": {
-   "abruf_utc": "2026-11-15T10:45:08Z",
+   "abruf_utc": "2026-11-16T11:03:33Z",
    "datei": "data/kurse/ief_d.csv",
    "zeilen": 6114,
    "erste": "2002-07-30",
@@ -427,7 +427,7 @@
    "luecken_60t": []
   },
   "kurse:shy": {
-   "abruf_utc": "2026-11-15T10:45:08Z",
+   "abruf_utc": "2026-11-16T11:03:34Z",
    "datei": "data/kurse/shy_d.csv",
    "zeilen": 6114,
    "erste": "2002-07-30",
@@ -440,7 +440,7 @@
    "luecken_60t": []
   },
   "kurse:ewu": {
-   "abruf_utc": "2026-11-15T10:45:09Z",
+   "abruf_utc": "2026-11-16T11:03:35Z",
    "datei": "data/kurse/ewu_d.csv",
    "zeilen": 7716,
    "erste": "1996-03-18",
@@ -453,127 +453,127 @@
    "luecken_60t": []
   },
   "fred:T10Y2Y": {
-   "abruf_utc": "2026-11-15T10:45:10Z",
+   "abruf_utc": "2026-11-16T11:03:36Z",
    "datei": "data/fred/T10Y2Y.csv",
    "zeilen": 13164,
    "erste": "1976-06-01",
    "letzte": "2026-11-13"
   },
   "fred:BAA10Y": {
-   "abruf_utc": "2026-11-15T10:45:11Z",
+   "abruf_utc": "2026-11-16T11:03:37Z",
    "datei": "data/fred/BAA10Y.csv",
    "zeilen": 10661,
    "erste": "1986-01-02",
    "letzte": "2026-11-12"
   },
   "fred:DGS10": {
-   "abruf_utc": "2026-11-15T10:45:12Z",
+   "abruf_utc": "2026-11-16T11:03:38Z",
    "datei": "data/fred/DGS10.csv",
    "zeilen": 16923,
    "erste": "1962-01-02",
    "letzte": "2026-11-12"
   },
   "fred:VIXCLS": {
-   "abruf_utc": "2026-11-15T10:45:13Z",
+   "abruf_utc": "2026-11-16T11:03:39Z",
    "datei": "data/fred/VIXCLS.csv",
    "zeilen": 9618,
    "erste": "1990-01-02",
    "letzte": "2026-11-12"
   },
   "fred:ICSA": {
-   "abruf_utc": "2026-11-15T10:45:14Z",
+   "abruf_utc": "2026-11-16T11:03:40Z",
    "datei": "data/fred/ICSA.csv",
    "zeilen": 3123,
    "erste": "1967-01-07",
    "letzte": "2026-11-07"
   },
   "fred:WALCL": {
-   "abruf_utc": "2026-11-15T10:45:15Z",
+   "abruf_utc": "2026-11-16T11:03:41Z",
    "datei": "data/fred/WALCL.csv",
    "zeilen": 1248,
    "erste": "2002-12-18",
    "letzte": "2026-11-11"
   },
   "fred:WEI": {
-   "abruf_utc": "2026-11-15T10:45:17Z",
+   "abruf_utc": "2026-11-16T11:03:42Z",
    "datei": "data/fred/WEI.csv",
    "zeilen": 984,
    "erste": "2008-01-05",
    "letzte": "2026-11-07"
   },
   "fred:SP500": {
-   "abruf_utc": "2026-11-15T10:45:18Z",
+   "abruf_utc": "2026-11-16T11:03:43Z",
    "datei": "data/fred/SP500.csv",
    "zeilen": 2610,
    "erste": "2016-11-14",
    "letzte": "2026-11-13"
   },
   "fred:DCOILWTICO": {
-   "abruf_utc": "2026-11-15T10:45:19Z",
+   "abruf_utc": "2026-11-16T11:03:44Z",
    "datei": "data/fred/DCOILWTICO.csv",
    "zeilen": 10660,
    "erste": "1986-01-02",
    "letzte": "2026-11-11"
   },
   "fred:DHHNGSP": {
-   "abruf_utc": "2026-11-15T10:45:20Z",
+   "abruf_utc": "2026-11-16T11:03:46Z",
    "datei": "data/fred/DHHNGSP.csv",
    "zeilen": 7787,
    "erste": "1997-01-07",
    "letzte": "2026-11-11"
   },
   "fred:DEXSZUS": {
-   "abruf_utc": "2026-11-15T10:45:21Z",
+   "abruf_utc": "2026-11-16T11:03:48Z",
    "datei": "data/fred/DEXSZUS.csv",
    "zeilen": 14570,
    "erste": "1971-01-04",
    "letzte": "2026-11-06"
   },
   "fred:BAMLH0A0HYM2": {
-   "abruf_utc": "2026-11-15T10:45:22Z",
+   "abruf_utc": "2026-11-16T11:03:49Z",
    "datei": "data/fred/BAMLH0A0HYM2.csv",
    "zeilen": 793,
    "erste": "2023-11-14",
    "letzte": "2026-11-12"
   },
   "fred:T10YIE": {
-   "abruf_utc": "2026-11-15T10:45:23Z",
+   "abruf_utc": "2026-11-16T11:03:50Z",
    "datei": "data/fred/T10YIE.csv",
    "zeilen": 6227,
    "erste": "2003-01-02",
    "letzte": "2026-11-13"
   },
   "fred:USEPUINDXD": {
-   "abruf_utc": "2026-11-15T10:45:24Z",
+   "abruf_utc": "2026-11-16T11:03:51Z",
    "datei": "data/fred/USEPUINDXD.csv",
    "zeilen": 15291,
    "erste": "1985-01-01",
    "letzte": "2026-11-12"
   },
   "fred:DTWEXBGS": {
-   "abruf_utc": "2026-11-15T10:45:25Z",
+   "abruf_utc": "2026-11-16T11:03:52Z",
    "datei": "data/fred/DTWEXBGS.csv",
    "zeilen": 5440,
    "erste": "2006-01-02",
    "letzte": "2026-11-06"
   },
   "french:F-F_Research_Data_Factors_CSV.zip": {
-   "fehler": "<urlopen error [Errno 104] Connection reset by peer>"
+   "fehler": "HTTP Error 404: Not Found"
   },
   "french:F-F_Research_Data_5_Factors_2x3_CSV.zip": {
-   "fehler": "<urlopen error [Errno 104] Connection reset by peer>"
+   "fehler": "HTTP Error 404: Not Found"
   },
   "french:12_Industry_Portfolios_CSV.zip": {
-   "fehler": "<urlopen error [Errno 104] Connection reset by peer>"
+   "fehler": "HTTP Error 404: Not Found"
   },
   "french:F-F_Momentum_Factor_CSV.zip": {
-   "fehler": "<urlopen error [Errno 104] Connection reset by peer>"
+   "fehler": "HTTP Error 404: Not Found"
   },
   "french:12_Industry_Portfolios_daily_CSV.zip": {
-   "fehler": "<urlopen error [Errno 104] Connection reset by peer>"
+   "fehler": "HTTP Error 404: Not Found"
   },
   "french:F-F_Research_Data_Factors_daily_CSV.zip": {
-   "fehler": "<urlopen error [Errno 104] Connection reset by peer>"
+   "fehler": "HTTP Error 404: Not Found"
   }
  }
 }
