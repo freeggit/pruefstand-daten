@@ -4973,9 +4973,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Massnahmen gegen kleinere und regionale Banken zeigen Kredit- und Kontrollprobleme im Bankensektor; ihre Häufung kann Finanzwerte (XLF) kurzfristig belasten.",
-    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: orders.fdic.gov weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-15T00:10Z"
+    "geprueft_utc": "2026-11-16T04:20Z"
   },
   {
     "id": "osha_todesfaelle_meldungen",
@@ -4986,9 +4986,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
-    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-15T00:10Z"
+    "geprueft_utc": "2026-11-16T04:20Z"
   },
   {
     "id": "epa_echo_vollzugsfaelle",
@@ -5012,9 +5012,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
-    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-15T00:10Z"
+    "geprueft_utc": "2026-11-16T04:20Z"
   },
   {
     "id": "fra_bahnunfaelle_taeglich",
@@ -5434,10 +5434,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Haeufungen von Orphan-Designationen und -Zulassungen veraendern kurzfristig die Erwartungen an Biotech-Pipelines und koennen IBB/XLV gegenueber dem Weltindex bewegen.",
-    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen. | Test 2026-11-15T00:10Z: accessdata.fda.gov leitet weiterhin um (HTTP 302, Missbrauchserkennung); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen. | Test 2026-11-15T00:10Z: accessdata.fda.gov leitet weiterhin um (HTTP 302, Missbrauchserkennung); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: accessdata.fda.gov leitet weiterhin auf abuse-detection-apology um (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-15T00:10Z",
+    "geprueft_utc": "2026-11-16T04:20Z",
     "prioritaet": "hoch"
   },
   {
@@ -5518,10 +5518,10 @@
     "bereich": "Justiz",
     "status": "fehler",
     "mechanismus": "Urteile zu Regulierung (Gesundheit, Energie, Umwelt, Banken) kommen an vorab angekuendigten Tagen und koennen die betroffenen Sektoren (XLV, XLE, XLF) kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen. | Erneut 2026-11-14T04:20Z: scdb.la.psu.edu Datendatei HTTP 403, nicht umgangen. | Test 2026-11-15T00:10Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen. | Erneut 2026-11-14T04:20Z: scdb.la.psu.edu Datendatei HTTP 403, nicht umgangen. | Test 2026-11-15T00:10Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: scdb.la.psu.edu weiterhin HTTP 403 (supremecourt.gov 200, allein K2 nicht erfuellt); Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-15T00:10Z",
+    "geprueft_utc": "2026-11-16T04:20Z",
     "prioritaet": "normal"
   },
   {
@@ -6104,5 +6104,65 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-15T09:50Z",
     "geprueft_utc": "2026-11-15T20:55Z"
+  },
+  {
+    "id": "fca_leerverkauf_meldungen",
+    "name": "FCA (UK): Netto-Leerverkaufspositionen, neue Meldungen je Tag",
+    "url": "https://www.fca.org.uk/markets/short-selling/notification-disclosure-net-short-positions",
+    "domain": "www.fca.org.uk",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Haeufung neuer oeffentlicher Leerverkaufspositionen in UK-Aktien zeigt negative Informationen informierter Haendler und koennte UK-Aktien (EWU) bzw. Sektoren gegenueber dem Weltindex kurzfristig belasten.",
+    "grund": "Test 2026-11-16T04:20Z: Seite und Dateien erreichbar (HTTP 200, ohne Login). Aber Regimewechsel (FCA PS26/5): die alten Einzelmeldungen ab 0,5% (short-positions-daily-update.xlsx, ~108000 Zeilen ab 2012) sind am 10.07.2026 eingefroren (K5 verletzt); die neue anonymisierte ANSP-Reihe (Schwelle 0,2%, T+2) beginnt faktisch Juli 2026 (10616 von 10637 historischen Zeilen aus 2026; K2 verletzt). Zusammenfuegen waere ein Strukturbruch (andere Schwelle, aggregiert statt einzeln). Keine Daten abgelegt. Wiedervorlage fruehestens wenn ANSP 500 Werte hat ist wegen K2 (Beginn bis 2015) zwecklos.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-16T04:20Z",
+    "geprueft_utc": "2026-11-16T04:20Z",
+    "herkunft": "eigene Recherche"
+  },
+  {
+    "id": "bundesanzeiger_leerverkaeufe",
+    "name": "Bundesanzeiger: Netto-Leerverkaufspositionen (DE) je Tag",
+    "url": "https://www.bundesanzeiger.de/pub/de/nlp",
+    "domain": "www.bundesanzeiger.de",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Neue oeffentliche Leerverkaufspositionen ab 0,5% in deutschen Aktien zeigen negative Einschaetzung informierter Haendler und koennten EWG gegenueber dem Weltindex kurzfristig belasten.",
+    "grund": "Test 2026-11-16T04:20Z: Seite mit CSV-Export (inkl. historischer Positionen, Formularfeld isHistorical) erreichbar, aber robots.txt sperrt /nlp ausdruecklich fuer alle User-Agents (Disallow: /nlp). Automatischer Abruf damit nicht erlaubt (K3). Nicht umgangen.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-16T04:20Z",
+    "geprueft_utc": "2026-11-16T04:20Z",
+    "herkunft": "eigene Recherche"
+  },
+  {
+    "id": "consob_leerverkaeufe",
+    "name": "Consob (IT): Posizioni nette corte je Tag",
+    "url": "https://www.consob.it/web/area-pubblica/pnc",
+    "domain": "www.consob.it",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "normal",
+    "mechanismus": "Neue oeffentliche Leerverkaufspositionen in italienischen Aktien (v.a. Banken) als Signal informierter Haendler; kurzfristig relevant fuer Finanzwerte Europa (XLF-Gegenstueck, EWI).",
+    "grund": "Test 2026-11-16T04:20Z: Seite /web/area-pubblica/pnc erreichbar (HTTP 200), Datei PncPubbl.xlsx liefert aber eine Radware-Captcha-Seite statt der Datei (Bot-Sperre wie 403); nicht umgangen, naechster Lauf erneut. Hinweis: robots.txt Crawl-delay 3200 s; Datei enthaelt laut Seite aktuelle und spaeter geaenderte Positionen (Historie-Blatt), Beginn Nov. 2012 (EU-SSR 236/2012) - K2 erst nach Pruefung der Historie belegt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-16T04:20Z",
+    "geprueft_utc": "2026-11-16T04:20Z",
+    "herkunft": "eigene Recherche"
+  },
+  {
+    "id": "calfire_waldbraende",
+    "name": "CAL FIRE: neue Waldbrand-Einsaetze je Tag (Kalifornien)",
+    "url": "https://incidents.fire.ca.gov/imapdata/mapdataall.csv",
+    "domain": "incidents.fire.ca.gov",
+    "bereich": "Natur",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Gehaeufte Grossbraende in Kalifornien erhoehen Haftungsrisiken der Versorger (PG&E 2018/19) und koennten XLU gegenueber dem Weltindex kurzfristig belasten.",
+    "grund": "Test 2026-11-16T04:20Z: CSV erreichbar (3933 Einsaetze, ab 2013), aber robots.txt von incidents.fire.ca.gov sperrt alles (Disallow: /), www.fire.ca.gov liefert HTTP 403 (K3). Zudem nur ausgewaehlte groessere Einsaetze gelistet, Liste nachtraeglich ergaenzt (K4 fraglich). Keine Daten abgelegt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-16T04:20Z",
+    "geprueft_utc": "2026-11-16T04:20Z",
+    "herkunft": "eigene Recherche"
   }
 ]
