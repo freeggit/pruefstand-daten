@@ -1,0 +1,11 @@
+{
+  "anzahl_aenderungen": {
+    "beschreibung": "Anzahl der Aenderungen der DAX-Zusammensetzung (Paar ausgeschieden/aufgenommen; bei der Erweiterung auf 40 Werte am 20.09.2021 je Aufnahme eine Zeile) je Wirksamkeitstag, gezaehlt aus der Tabelle 'Zusammensetzungshistorie' des deutschen Wikipedia-Artikels DAX, die das Dokument 'Historical Index Compositions' der Deutschen Boerse/STOXX nachfuehrt. Reihe beginnt mit der Einfuehrung des DAX am 1.7.1988 (erste Aenderung 3.9.1990); 0 an Tagen ohne Aenderung. Community-gepflegte Abschrift: Korrekturen von Abschreibfehlern moeglich, die Ereignisse selbst werden nicht revidiert.",
+    "einheit": "Anzahl Indexaenderungen (Tabellenzeilen) je Tag",
+    "publikation": "taeglich (im Voraus bekannt): Deutsche Boerse/STOXX kuendigt Aenderungen vor der Wirksamkeit an (regulaere Ueberpruefung rund zweieinhalb Wochen vorher, ausserordentliche Aenderungen mit mindestens zwei Handelstagen Vorlauf; Beleg: Guide to the DAX Equity Indices, Abschnitt Index-Anpassungen); der Wikipedia-Eintrag folgt meist am Wirksamkeitstag",
+    "quelle_url": "https://de.wikipedia.org/wiki/DAX#Zusammensetzungshistorie",
+    "revidiert": false,
+    "verdichtung": "Anzahl Tabellenzeilen je Kalendertag (Wirksamkeitstag), 0 an Tagen ohne Eintrag",
+    "verfuegbar_nach_tagen": 0
+  }
+}

@@ -5548,10 +5548,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Kartellverfahren gegen grosse Firmen aendern kurzfristig Erwartungen an Fusionen und Margen in Technologie und Gesundheit; unabhaengige Messung desselben Mechanismus wie EU-Kartellentscheide.",
-    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-15T00:10Z",
+    "geprueft_utc": "2026-11-16T12:10Z",
     "prioritaet": "tief"
   },
   {
@@ -5951,10 +5951,10 @@
     "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Sammelklagen wegen Kursbetrugs häufen sich in Sektoren mit Bilanz- oder Produktproblemen; eine Häufung neuer Klagen kündigt Rechtsrisiken und Abschläge für den Sektor (z.B. XLK, IBB, XLF) gegenüber dem Weltindex an.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Firmenereignisse aggregiert, Beginn 1996 (vor 2015). Fachliteratur: Kursreaktion um Klageeinreichung (Ferris/Pritchard 2001, Gande/Lewis 2009). Aus dieser Umgebung HTTP 403; Abruf ggf. nur über GitHub Action (siehe Vorschlag Behördenquellen). | Test 2026-11-15T12:15Z: securities.stanford.edu/filings.html liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Firmenereignisse aggregiert, Beginn 1996 (vor 2015). Fachliteratur: Kursreaktion um Klageeinreichung (Ferris/Pritchard 2001, Gande/Lewis 2009). Aus dieser Umgebung HTTP 403; Abruf ggf. nur über GitHub Action (siehe Vorschlag Behördenquellen). | Test 2026-11-15T12:15Z: securities.stanford.edu/filings.html liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (HTTP 403); nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-15T09:50Z",
-    "geprueft_utc": "2026-11-15T12:15Z"
+    "geprueft_utc": "2026-11-16T12:10Z"
   },
   {
     "id": "uk_dvsa_fahrzeugrueckrufe",
@@ -6232,11 +6232,12 @@
     "url": "https://en.wikipedia.org/wiki/FTSE_100_Index (Abschnitt Constituent changes; Gegenprobe ftserussell.com Notices)",
     "domain": "en.wikipedia.org",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Indexaufnahmen erzwingen Käufe und Verkäufe der Indexfonds am Stichtag (Shleifer 1986; Chen, Noronha, Singal 2004); die Zahl der Wechsel je Quartalsüberprüfung misst Umschichtungsdruck im britischen Markt (EWU) gegenüber dem Weltindex.",
-    "grund": "Lernrunde 16.11.2026: Firmenereignisse mit Tagesdatum und Historie vor 1990 (Zusatz 8, Zusatz 4). L3: Indexeffekt ist veröffentlicht und seither schwächer. HTTP 200 geprüft. Bekanntgabedatum (nicht Stichtag) als Ereignistag verwenden.",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Firmenereignisse mit Tagesdatum und Historie vor 1990 (Zusatz 8, Zusatz 4). L3: Indexeffekt ist veröffentlicht und seither schwächer. HTTP 200 geprüft. Bekanntgabedatum (nicht Stichtag) als Ereignistag verwenden. | Lauf 2026-11-16T12:10Z: abgelehnt K3. Wikipedia 'FTSE 100 Index' fuehrt Past constituents nur als undatierte Liste (kein Tagesdatum). Die verlinkte amtliche Liste (ftse.com -> lseg.com ftse-100-constituent-history.pdf, Stand Oktober 2026, Aenderungen ab 19.1.1984 mit Wirksamkeitsdatum) ist abrufbar (HTTP 200), verbietet aber laut Disclaimer Vervielfaeltigung und Speicherung in einem Abrufsystem ohne schriftliche Erlaubnis ('Use and distribution of LSEG data requires a licence'). Darum keine Ablage im oeffentlichen Spiegel; nur mit Lizenz von LSEG wieder pruefen.",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "geprueft_utc": "2026-11-16T12:10Z"
   },
   {
     "id": "dax_indexaenderungen",
@@ -6244,11 +6245,26 @@
     "url": "https://de.wikipedia.org/wiki/DAX (Abschnitt Änderungen der Zusammensetzung; Gegenprobe stoxx.com Index-News)",
     "domain": "de.wikipedia.org",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Wie beim FTSE-Indexeffekt lösen DAX-Wechsel Umschichtungen der Indexfonds aus und treffen deutsche Titel (EWG, bas.de) kurzfristig gegenüber dem Weltindex; unabhängige Replikation des Indexeffekts in einem zweiten Markt.",
-    "grund": "Lernrunde 16.11.2026: Firmenereignisse, Historie vor 1990. HTTP 200 geprüft. Nur Wechsel mit belegtem Bekanntgabetag.",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Firmenereignisse, Historie vor 1990. HTTP 200 geprüft. Nur Wechsel mit belegtem Bekanntgabetag. | Lauf %s: aufgenommen. Quelle de.wikipedia.org Spezial:Exportieren/DAX, Tabelle Zusammensetzungshistorie (nachgefuehrt aus Deutsche Boerse/STOXX 'Historical Index Compositions'), ohne Login/Schluessel, Wikipedia-Lizenz CC BY-SA erlaubt Abruf (K3). Datum = Wirksamkeitstag; Bekanntgabe liegt davor (regulaere Ueberpruefung ca. 2.5 Wochen, ausserordentlich mind. 2 Handelstage), darum kein Vorgriff, verfuegbar_nach_tagen 0, publikation 'taeglich (im Voraus bekannt)'. Ein Bekanntgabedatum je Wechsel steht nicht in der Tabelle (nur teils in Einzelnachweisen) und wurde nicht erfunden. Pruefung: 14018 Zeilen 1988-07-01 bis 2026-11-16 (Reihe ab DAX-Einfuehrung 1.7.1988, erste Aenderung 3.9.1990; Historie vor 1990, Zusatz 4), Median-Abstand 1 Tag, 77 Aenderungen an 60 Tagen, Max 10 am 2021-09-20 (Erweiterung auf 40 Werte, plausibel), Anteil gleicher Folgewerte 0.992 (duenne Ereignisreihe, erwartet wie sp500_index_aenderungen). K4: Ereignisse unrevidiert, Abschrift community-gepflegt. K6 neu (kein DAX-Indexwechsel im Spiegel). K7 31 KB, Abruf < 2 s. Hinweis: n klein (60 Ereignistage); L3 Index-Effekt publiziert, vermutlich abgeschwaecht.",
+    "aufgenommen_utc": "2026-11-16T12:10Z",
+    "reihen": [
+      {
+        "reihe": "anzahl_aenderungen",
+        "zeilen": 14018,
+        "erste": "1988-07-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.992,
+        "min": 0.0,
+        "max": 10.0,
+        "ereignistage": 60,
+        "ereignisse": 77
+      }
+    ],
+    "geprueft_utc": "2026-11-16T12:10Z"
   },
   {
     "id": "souveraen_rating_historie",
@@ -6280,11 +6296,12 @@
     "url": "https://www2.tceq.texas.gov/oce/eer/index.cfm (Air Emission Event Reports, Suche nach Anlagentyp und Meldedatum)",
     "domain": "tceq.texas.gov",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Ungeplante Störungen in texanischen Raffinerien (rund ein Viertel der US-Kapazität) verknappen Benzin und Diesel und weiten Crack-Spreads aus; das trifft Energie (XLE, USO) kurzfristig gegenüber dem Weltindex.",
-    "grund": "Lernrunde 16.11.2026: unabhängige Quelle zum Öl-Cluster (Spitzenkandidat DCOILWTICO_d1), L1-Replikation über Angebotsschocks, nicht Variante derselben Daten. HTTP 200 geprüft. Meldedatum, nicht Ereignisbeginn.",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: unabhängige Quelle zum Öl-Cluster (Spitzenkandidat DCOILWTICO_d1), L1-Replikation über Angebotsschocks, nicht Variante derselben Daten. HTTP 200 geprüft. Meldedatum, nicht Ereignisbeginn. | Lauf 2026-11-16T12:10Z: abgelehnt K3. www2.tceq.texas.gov/oce/eer/index.cfm antwortet mit HTTP 401, und www2.tceq.texas.gov/robots.txt verbietet allen Robotern alles ('User-agent: * / Disallow: /'). Abruf nicht erlaubt.",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "geprueft_utc": "2026-11-16T12:10Z"
   },
   {
     "id": "chinesisches_neujahr",
@@ -6316,11 +6333,12 @@
     "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications (Liste nach Jahr)",
     "domain": "fda.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Sicherheitswarnungen zu umsatzstarken Arzneien senken erwartete Umsätze ganzer Wirkstoffklassen und belasten Pharma und Biotech (XLV, IBB) kurzfristig gegenüber dem Weltindex (Dranove und Olsen 1994; Ahmed, Gardella, Nanda 2002).",
-    "grund": "Lernrunde 16.11.2026: Firmenereignisse erste Priorität (Zusatz 8); kein Doppel zu fda_ruckrufe und fda_warning_letters (Hersteller) – hier Wirkstoffwarnungen. HTTP 200 geprüft.",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Firmenereignisse erste Priorität (Zusatz 8); kein Doppel zu fda_ruckrufe und fda_warning_letters (Hersteller) – hier Wirkstoffwarnungen. HTTP 200 geprüft. | Lauf 2026-11-16T12:10Z: abgelehnt K2. Die amtliche Seite fda.gov/drugs/drug-safety-and-availability/drug-safety-communications (HTTP 200) listet nur 44 Mitteilungen ab 14.1.2020; fuer 'Drug Safety Communications published before 2020' verweist die FDA selbst auf web.archive.org = Spiegel Dritter (verboten). Erster Wert damit nach 31.12.2015; zudem kuratierte Auswahl (aeltere Eintraege offenbar entfernt, K4 fraglich).",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "geprueft_utc": "2026-11-16T12:10Z"
   },
   {
     "id": "ritter_ipo_monatszahlen",
@@ -6328,11 +6346,12 @@
     "url": "https://site.warrington.ufl.edu/ritter/ipo-data/ (Excel-Datei IPO counts and first-day returns)",
     "domain": "site.warrington.ufl.edu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Wellen von Börsengängen erhöhen das Angebot an neuen Aktien und fallen mit Überbewertung zusammen (Baker und Wurgler 2000; Ritter 1991); sie treffen Technologie (XLK) und kleine Werte kurzfristig gegenüber dem Weltindex.",
-    "grund": "Lernrunde 16.11.2026: Firmenereignisse aggregiert, Historie vor 1990, Ersatz für nasdaq_ipo_kalender (fehler). HTTP 200 geprüft. Monatswerte: Ereignistag = Veröffentlichung der Datei oder Monatsende plus 20 Handelstage.",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Firmenereignisse aggregiert, Historie vor 1990, Ersatz für nasdaq_ipo_kalender (fehler). HTTP 200 geprüft. Monatswerte: Ereignistag = Veröffentlichung der Datei oder Monatsende plus 20 Handelstage. | Lauf 2026-11-16T12:10Z: abgelehnt K1. Ritter-Datei liefert Monatszahlen (IPO counts je Monat), keine Tageswerte; Median-Abstand rund 30 Tage > 3. Tagesdaten nur ueber kostenpflichtige Datenbanken (SDC).",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "geprueft_utc": "2026-11-16T12:10Z"
   },
   {
     "id": "imf_programmgenehmigungen",
