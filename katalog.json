@@ -2120,10 +2120,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: HTTP 403 (410 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T08:15Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T04:20Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: HTTP 403 (410 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T08:15Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T04:20Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-28T20:15:44Z",
-    "geprueft_utc": "2026-11-15T04:15Z"
+    "geprueft_utc": "2026-11-16T08:45Z"
   },
   {
     "id": "fedregister_ftc_fusionen",
@@ -2212,7 +2212,7 @@
     "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "Neue oder geaenderte US-Sanktionen treffen Energie-, Finanz- und Rohstoffunternehmen der betroffenen Laender und koennen kurzfristig XLE, XLF und Rohstoffe gegenueber dem Weltindex bewegen.",
-    "grund": "Zusatz 6 Prioritaet 5 (Regulatorische Ereignisse). K1 taeglich (Nullfuellung, Median 1 Tag). K2 ab 2010-01-01 (davor im FR sehr lueckenhaft: 3-35 Dokumente/Jahr, Strukturbruch vermieden), 6110 Zeilen, 1240 Ereignistage. K3 offen ohne Schluessel. K4 Publikationsdatum nicht revidiert (Indexierung kann minimal nachtraeglich aendern). K5 letzter Wert 2026-09-23 (6 Tage). K6 neu. K7 Abruf 5 s. Publikation: taeglich, FR-Veroeffentlichungsdatum, verfuegbar_nach_tagen 0. Hinweis: OFAC-Aktionen erscheinen oft zuerst auf treasury.gov, FR-Bekanntmachung folgt spaeter; Datum = FR-Datum, nicht Erstbekanntgabe. Jahressummen steigen 58 (2010) bis 183 (2024). Min 0, Max 7, Anteil gleicher Folgewerte 0.673 (Nullfuellung).",
+    "grund": "Zusatz 6 Prioritaet 5 (Regulatorische Ereignisse). K1 taeglich (Nullfuellung, Median 1 Tag). K2 ab 2010-01-01 (davor im FR sehr lueckenhaft: 3-35 Dokumente/Jahr, Strukturbruch vermieden), 6110 Zeilen, 1240 Ereignistage. K3 offen ohne Schluessel. K4 Publikationsdatum nicht revidiert (Indexierung kann minimal nachtraeglich aendern). K5 letzter Wert 2026-09-23 (6 Tage). K6 neu. K7 Abruf 5 s. Publikation: taeglich, FR-Veroeffentlichungsdatum, verfuegbar_nach_tagen 0. Hinweis: OFAC-Aktionen erscheinen oft zuerst auf treasury.gov, FR-Bekanntmachung folgt spaeter; Datum = FR-Datum, nicht Erstbekanntgabe. Jahressummen steigen 58 (2010) bis 183 (2024). Min 0, Max 7, Anteil gleicher Folgewerte 0.673 (Nullfuellung). | Lauf 2026-11-16T08:45Z: neu aktiv ist ofac_recent_actions (Bekanntgabetag auf ofac.treasury.gov, ab 2001). Vorschlag an Reto: diese FR-Reihe bei Redundanz auf «ruhend» setzen; nicht selbst geändert.",
     "reihen": [
       {
         "reihe": "anzahl",
@@ -3898,11 +3898,11 @@
     "domain": "www.eia.gov",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.eia.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.eia.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut.",
     "mechanismus": "Revidierte Prognosen zu Ölnachfrage und Förderung verschieben die Preiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-20T10:00:00Z",
-    "geprueft_utc": "2026-11-15T04:15Z",
+    "geprueft_utc": "2026-11-16T08:45Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde"
   },
@@ -3943,11 +3943,11 @@
     "domain": "www.zew.de",
     "bereich": "Kalender",
     "status": "fehler",
-    "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler. | Test 2026-10-29T20Z: www.zew.de 200, aber weiterhin keine maschinenlesbare Terminliste (robots: Crawl-delay 15). | Lauf 2026-10-31T20Z: www.zew.de HTTP 200 (wieder erreichbar); maschinenlesbare Terminliste noch nicht gefunden. | Lauf 2026-11-02T16Z: www.zew.de 200, EIA 403, Nasdaq-API keine Verbindung; weiterhin keine maschinenlesbare Terminliste mit Historie, Status bleibt fehler. | Lauf 2026-11-15T04:15Z: www.zew.de HTTP 200; Terminliste mit Historie nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6).",
+    "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler. | Test 2026-10-29T20Z: www.zew.de 200, aber weiterhin keine maschinenlesbare Terminliste (robots: Crawl-delay 15). | Lauf 2026-10-31T20Z: www.zew.de HTTP 200 (wieder erreichbar); maschinenlesbare Terminliste noch nicht gefunden. | Lauf 2026-11-02T16Z: www.zew.de 200, EIA 403, Nasdaq-API keine Verbindung; weiterhin keine maschinenlesbare Terminliste mit Historie, Status bleibt fehler. | Lauf 2026-11-15T04:15Z: www.zew.de HTTP 200; Terminliste mit Historie nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Lauf 2026-11-16T08:45Z: HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6).",
     "mechanismus": "Die Stimmung institutioneller Anleger in Deutschland wirkt kurzfristig auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-21T10:00:00Z",
-    "geprueft_utc": "2026-11-15T04:15Z",
+    "geprueft_utc": "2026-11-16T08:45Z",
     "prioritaet": "tief",
     "herkunft": "Lernrunde"
   },
@@ -3958,11 +3958,11 @@
     "domain": "www.opec.org",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.opec.org weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.opec.org weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut.",
     "mechanismus": "Revidierte Nachfrage- und Angebotsschätzungen der OPEC verschieben die Ölpreiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-21T10:00:00Z",
-    "geprueft_utc": "2026-11-15T04:15Z",
+    "geprueft_utc": "2026-11-16T08:45Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde"
   },
@@ -5616,10 +5616,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Beginn grosser Streiks unterbricht Produktion und Lieferketten in Industrie, Autobau und Gesundheit und kann XLI, XLY oder XLV kurzfristig gegenueber dem Weltindex belasten.",
-    "grund": "Test 2026-11-14T00:08Z: www.bls.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Hinweis fuer spaeter: BLS publiziert monatlich (verfuegbar_nach_tagen verzoegert, Datum der Monatsmeldung), Liste ab 1993; weniger als 500 Ereignisse wahrscheinlich (K2 fraglich). | Test 2026-11-15T00:10Z: www.bls.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut.",
+    "grund": "Test 2026-11-14T00:08Z: www.bls.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Hinweis fuer spaeter: BLS publiziert monatlich (verfuegbar_nach_tagen verzoegert, Datum der Monatsmeldung), Liste ab 1993; weniger als 500 Ereignisse wahrscheinlich (K2 fraglich). | Test 2026-11-15T00:10Z: www.bls.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-14T00:08Z",
-    "geprueft_utc": "2026-11-15T04:15Z"
+    "geprueft_utc": "2026-11-16T08:45Z"
   },
   {
     "id": "noaa_incidentnews_oelunfaelle",
@@ -6163,6 +6163,67 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-16T04:20Z",
     "geprueft_utc": "2026-11-16T04:20Z",
+    "herkunft": "eigene Recherche"
+  },
+  {
+    "id": "cfpb_enforcement_massnahmen",
+    "name": "CFPB Enforcement Actions je Bekanntgabetag",
+    "url": "https://www.consumerfinance.gov/enforcement/actions/",
+    "domain": "www.consumerfinance.gov",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "hoch",
+    "mechanismus": "Vollzugsmassnahmen der Verbraucherfinanzaufsicht gegen Banken, Kreditkarten- und Hypothekenanbieter koennen kurzfristig XLF gegenueber dem Weltindex belasten.",
+    "grund": "Eigene Recherche Lauf 2026-11-16T08:40Z (Zusatz 6, Prioritaet 5). Seite und RSS erreichbar (HTTP 200, robots erlaubt). K5 verletzt: juengste Massnahme im Feed vom 2025-08-21, davor 2025-01-30; die Behoerde schreibt die Liste faktisch nicht mehr fort. Historie nicht abgelegt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-16T08:40Z",
+    "geprueft_utc": "2026-11-16T08:40Z",
+    "herkunft": "eigene Recherche"
+  },
+  {
+    "id": "ofac_recent_actions",
+    "name": "OFAC Recent Actions je Bekanntgabetag (US Treasury)",
+    "url": "https://ofac.treasury.gov/recent-actions",
+    "domain": "ofac.treasury.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Neue Sanktionslisten und Vollzugsvergleiche treffen am Tag der Bekanntgabe Energie-, Rohstoff- und Finanzfirmen der betroffenen Länder und ihre Gegenparteien und können kurzfristig XLE, XLF, USO und Schwellenländer gegenüber dem Weltindex bewegen.",
+    "grund": "Eigene Recherche Lauf 2026-11-16T08:45Z (Zusatz 6, Prioritaet 5). K1 täglich (Zählung, 0 an Tagen ohne Meldung, Median 1 Tag). K2 erster Wert 2001-01-10 (Beginn vor 1995 nein; Familie Langzeit nicht nutzbar), 9441 Zeilen, 3186 Meldungen auf 2722 Tagen. K3 öffentlich, ohne Login/Schlüssel, robots.txt erlaubt /recent-actions. K4 Datum = Bekanntgabetag auf der OFAC-Seite, nicht revidiert (Archiv seit 2001 unverändert; einzelne spätere Nachträge nicht auszuschliessen). K5 letzte Meldung 2026-11-13, Reihe bis Vortag. K6 neu; Überschneidung mit fedregister_ofac_sanktionen (Federal-Register-Veröffentlichung, Tage bis Wochen später, ab 2010, derzeit 403), hier aber echter Bekanntgabetag. K7 Server ~10 s je Seite: Erstaufbau in Etappen (322 Seiten, 4 gleichzeitig), danach Kopfabruf <10 s, cache.json im Ordner. Prüfung gesamt: min 0 max 4, gleiche Folgewerte 61.7% (Nullen einer Ereigniszählung, erwartet); listen_updates: 1931 Meldungen, min 0 max 2, 71.6%; vollzug (Enforcement Actions): 297 Meldungen auf 295 Tagen ab 2003-04-04, min 0 max 2. Jahressummen plausibel (37 im Jahr 2001 bis 192 im Jahr 2024). 3 Reihen, die Verschiedenes messen (alle Meldungen, Listenänderungen, Bussen).",
+    "reihen": [
+      {
+        "reihe": "gesamt",
+        "zeilen": 9441,
+        "erste": "2001-01-10",
+        "letzte": "2026-11-15",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.617,
+        "min": 0.0,
+        "max": 4.0
+      },
+      {
+        "reihe": "listen_updates",
+        "zeilen": 9441,
+        "erste": "2001-01-10",
+        "letzte": "2026-11-15",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.716,
+        "min": 0.0,
+        "max": 2.0
+      },
+      {
+        "reihe": "vollzug",
+        "zeilen": 9441,
+        "erste": "2001-01-10",
+        "letzte": "2026-11-15",
+        "median_abstand_tage": 1.0,
+        "min": 0.0,
+        "max": 2.0,
+        "ereignistage": 295
+      }
+    ],
+    "aufgenommen_utc": "2026-11-16T08:45Z",
+    "geprueft_utc": "2026-11-16T08:45Z",
     "herkunft": "eigene Recherche"
   }
 ]

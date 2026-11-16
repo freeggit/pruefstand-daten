@@ -1,0 +1,29 @@
+{
+ "gesamt": {
+  "einheit": "Anzahl Meldungen",
+  "beschreibung": "OFAC Recent Actions je Bekanntgabetag, alle Kategorien (Sanktionslisten, General Licenses, Verordnungen, Leitfaeden, Sonstiges); 0 = keine Meldung",
+  "quelle_url": "https://ofac.treasury.gov/recent-actions",
+  "verdichtung": "Summe (Zaehlung je Kalendertag)",
+  "verfuegbar_nach_tagen": 0,
+  "publikation": "taeglich: OFAC stellt jede Massnahme am Tag der Bekanntgabe unter Recent Actions (ofac.treasury.gov/recent-actions) mit diesem Datum ein.",
+  "revidiert": false
+ },
+ "vollzug": {
+  "einheit": "Anzahl Meldungen",
+  "beschreibung": "OFAC Recent Actions mit Kategorie Enforcement Actions (Vergleiche und Bussen gegen Unternehmen und Personen wegen Sanktionsverstoessen) je Bekanntgabetag; 0 = keine",
+  "quelle_url": "https://ofac.treasury.gov/recent-actions",
+  "verdichtung": "Summe (Zaehlung je Kalendertag)",
+  "verfuegbar_nach_tagen": 0,
+  "publikation": "taeglich: OFAC stellt jede Massnahme am Tag der Bekanntgabe unter Recent Actions (ofac.treasury.gov/recent-actions) mit diesem Datum ein.",
+  "revidiert": false
+ },
+ "listen_updates": {
+  "einheit": "Anzahl Meldungen",
+  "beschreibung": "OFAC Recent Actions mit Kategorie Sanctions List Updates (Aufnahmen, Streichungen, Aenderungen SDN und weitere Listen) je Bekanntgabetag; 0 = keine",
+  "quelle_url": "https://ofac.treasury.gov/recent-actions",
+  "verdichtung": "Summe (Zaehlung je Kalendertag)",
+  "verfuegbar_nach_tagen": 0,
+  "publikation": "taeglich: OFAC stellt jede Massnahme am Tag der Bekanntgabe unter Recent Actions (ofac.treasury.gov/recent-actions) mit diesem Datum ein.",
+  "revidiert": false
+ }
+}
