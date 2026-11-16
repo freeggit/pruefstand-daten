@@ -1,0 +1,29 @@
+{
+  "aktiv": {
+    "beschreibung": "1 an jedem Tag des Ramadan nach Umm-al-Qura-Kalender, sonst 0; ab 1937-01-01",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Umm-al-Qura-Kalender wird jaehrlich im Voraus von der King Abdulaziz City for Science and Technology veroeffentlicht; Abweichung der tatsaechlichen Mondsichtung um einen Tag moeglich)",
+    "quelle_url": "https://api.aladhan.com/v1/hToG (calendarMethod=UAQ, Umm-al-Qura-Kalender)",
+    "revidiert": false,
+    "verdichtung": "keine (Kalenderdaten auf Kalendertage abgebildet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "beginn": {
+    "beschreibung": "1 am 1. Ramadan nach Umm-al-Qura-Kalender, sonst 0; ab 1937-01-01",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Umm-al-Qura-Kalender wird jaehrlich im Voraus von der King Abdulaziz City for Science and Technology veroeffentlicht; Abweichung der tatsaechlichen Mondsichtung um einen Tag moeglich)",
+    "quelle_url": "https://api.aladhan.com/v1/hToG (calendarMethod=UAQ, Umm-al-Qura-Kalender)",
+    "revidiert": false,
+    "verdichtung": "keine (Kalenderdaten auf Kalendertage abgebildet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "eid": {
+    "beschreibung": "1 am 1. Schawwal (Eid al-Fitr) nach Umm-al-Qura-Kalender, sonst 0; ab 1937-01-01",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Umm-al-Qura-Kalender wird jaehrlich im Voraus von der King Abdulaziz City for Science and Technology veroeffentlicht; Abweichung der tatsaechlichen Mondsichtung um einen Tag moeglich)",
+    "quelle_url": "https://api.aladhan.com/v1/hToG (calendarMethod=UAQ, Umm-al-Qura-Kalender)",
+    "revidiert": false,
+    "verdichtung": "keine (Kalenderdaten auf Kalendertage abgebildet)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

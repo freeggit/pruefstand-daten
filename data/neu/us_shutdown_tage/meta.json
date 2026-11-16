@@ -1,0 +1,20 @@
+{
+  "aktiv": {
+    "beschreibung": "1 an jedem Kalendertag einer laufenden US-Haushaltssperre mit Beurlaubungen, sonst 0; ab 1976-10-01",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Beginn und Dauer einer Haushaltssperre sind am selben Tag oeffentlich: Finanzierung laeuft um Mitternacht aus, OMB weist Behoerden an; Belege je Episode in quellen/us_shutdown_tage.py)",
+    "quelle_url": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States",
+    "revidiert": false,
+    "verdichtung": "keine (Ereignisliste auf Kalendertage abgebildet)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "beginn": {
+    "beschreibung": "1 am ersten Tag einer US-Haushaltssperre mit Beurlaubungen (13 Episoden 1980-2026, inkl. Teilsperren FTC 1980 und DHS 2026), sonst 0; ab 1976-10-01",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Beginn und Dauer einer Haushaltssperre sind am selben Tag oeffentlich: Finanzierung laeuft um Mitternacht aus, OMB weist Behoerden an; Belege je Episode in quellen/us_shutdown_tage.py)",
+    "quelle_url": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States",
+    "revidiert": false,
+    "verdichtung": "keine (Ereignisliste auf Kalendertage abgebildet)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

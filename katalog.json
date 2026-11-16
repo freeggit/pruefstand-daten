@@ -5787,14 +5787,50 @@
     "url": "https://api.aladhan.com/v1/gToH/01-03-1995",
     "domain": "api.aladhan.com",
     "bereich": "Kalender-Ereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "mechanismus": "In muslimischen Ländern steigen im Ramadan Stimmung und Zuversicht; das kann Schwellenländer (EEM) gegenüber dem Weltindex kurzfristig stützen (Białkowski, Etebari, Wisniewski 2012).",
-    "grund": "Lernrunde 2026-11-14: Vorratsauffüllung (Zusatz 1). Fachliteratur; veröffentlichte Anomalie, danach oft schwächer (L3). API erreichbar (HTTP 200); Daten auch rechnerisch ab 1926. Wirkung auf EEM schwach, da muslimische Länder nur ein kleiner Teil sind: tief.",
-    "reihen": [],
+    "grund": "Lernrunde 2026-11-14: Vorratsauffüllung (Zusatz 1). Fachliteratur; veröffentlichte Anomalie, danach oft schwächer (L3). API erreichbar (HTTP 200); Daten auch rechnerisch ab 1926. Wirkung auf EEM schwach, da muslimische Länder nur ein kleiner Teil sind: tief. | Lauf 2026-11-16T00:09Z: aufgenommen. Aladhan-API hToG mit calendarMethod=UAQ (frei, ohne Schluessel), 92 Hijri-Jahre 1356-1447 AH, 184 Anfragen, Abruf 65 s. Reihen beginn (1. Ramadan), aktiv (Ramadan-Tage, 2728), eid (1. Schawwal), 0/1 ab 1937-01-01, 32827 Zeilen, Median-Abstand 1. Stichprobe: 1.9.1447 = 2026-02-18, 1.10.1446 = 2025-03-30 (Eid 2025 in Saudi-Arabien). Vor 1356 AH liefert die API nur Methode MATHEMATICAL, darum Beginn 1937; Skript bricht ab, wenn nicht UAQ. Publikation: Umm-al-Qura-Kalender jaehrlich im Voraus veroeffentlicht (verfuegbar_nach_tagen 0); Ausrufung nach Mondsichtung kann einen Tag abweichen; Regeln des Umm-al-Qura-Kalenders wurden 1420 und 1423 AH geaendert, aeltere Jahre sind Tabellenwerte. Drei Reihen messen Verschiedenes (Eintritt, Dauer, Ende) im Rahmen Zusatz 3.",
+    "reihen": [
+      "beginn",
+      "aktiv",
+      "eid"
+    ],
     "aufgenommen_utc": "2026-11-14T10:00Z",
-    "geprueft_utc": null,
+    "geprueft_utc": "2026-11-16T00:09Z",
     "prioritaet": "tief",
-    "herkunft": "Lernrunde"
+    "herkunft": "Lernrunde",
+    "pruefung": {
+      "beginn": {
+        "zeilen": 32827,
+        "erste": "1937-01-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.9944,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 92
+      },
+      "aktiv": {
+        "zeilen": 32827,
+        "erste": "1937-01-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.9944,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 2728
+      },
+      "eid": {
+        "zeilen": 32827,
+        "erste": "1937-01-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.9944,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 92
+      }
+    }
   },
   {
     "id": "transportcanada_fahrzeugrueckrufe",
@@ -6022,12 +6058,38 @@
     "url": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States",
     "domain": "en.wikipedia.org",
     "bereich": "Staat und Geldmarkt",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "tief",
     "mechanismus": "Haushaltssperren verzögern Staatsaufträge und Zahlungen; das kann Rüstung und Dienstleister (ITA, XLI) sowie kurze Staatsanleihen gegenüber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Seite HTTP 200; Termine auch im CRS-Bericht RS20348. Nur rund 21 Ereignisse, darum tief; Beginn 1976 (Historie vor 1990).",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-15T09:50Z"
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Seite HTTP 200; Termine auch im CRS-Bericht RS20348. Nur rund 21 Ereignisse, darum tief; Beginn 1976 (Historie vor 1990). | Lauf 2026-11-16T00:09Z: aufgenommen. 13 Episoden mit Beurlaubungen 1980-2026 (Wikipedia-Liste «Overview of shutdowns involving furloughs», Tagesdaten aus den Einzelartikeln/Infoboxen; 1981, 1984, 1986 je ein Beurlaubungstag). Reihen beginn (13 Ereignistage) und aktiv (212 Tage), 0/1 ab 1976-10-01, 18309 Zeilen, Median-Abstand 1. K1-K7 erfuellt: Datum = Tag, an dem die Sperre oeffentlich in Kraft trat (verfuegbar_nach_tagen 0, publikation taeglich). Anteil gleicher Folgewerte ~1.0 ist bei 0/1-Ereignisreihen erwartet. K5: Skript prueft bei jedem Lauf die Zeilenzahl der Wikipedia-Liste und meldet Fehler, wenn eine neue Episode nachzutragen ist (nichts automatisch geschaetzt). 1995-96: 22 Kalendertage inkl. 6.1.1996 (Wikipedia zaehlt 21). Einschluss Teilsperren FTC 1980 und DHS 2026 (14.2.-30.4.2026), im meta.json benannt.",
+    "reihen": [
+      "beginn",
+      "aktiv"
+    ],
+    "aufgenommen_utc": "2026-11-15T09:50Z",
+    "geprueft_utc": "2026-11-16T00:09Z",
+    "pruefung": {
+      "beginn": {
+        "zeilen": 18309,
+        "erste": "1976-10-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.9986,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 13
+      },
+      "aktiv": {
+        "zeilen": 18309,
+        "erste": "1976-10-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.9986,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 212
+      }
+    }
   },
   {
     "id": "usace_schleusen_stillstaende",
