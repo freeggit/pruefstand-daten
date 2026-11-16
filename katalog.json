@@ -3299,11 +3299,11 @@
     "domain": "api.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut.",
     "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-08T08:17Z",
-    "geprueft_utc": "2026-11-15T12:15Z",
+    "geprueft_utc": "2026-11-16T16:08Z",
     "prioritaet": "normal"
   },
   {
@@ -4062,13 +4062,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut.",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-15T12:15Z"
+    "geprueft_utc": "2026-11-16T16:08Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -4595,9 +4595,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut.",
     "status": "fehler",
-    "geprueft_utc": "2026-11-15T12:15Z"
+    "geprueft_utc": "2026-11-16T16:08Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -5937,10 +5937,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Kartell- und Verbraucherschutzverfahren der FTC gegen Grosskonzerne (Technologie, Gesundheit, Handel) können XLK, XLC, XLV und XLY gegenüber dem Weltindex kurzfristig belasten.",
-    "grund": "Eigene Recherche Lauf 2026-11-15T08:05Z. Test 2026-11-15T08:20Z: www.ftc.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: fedregister_ftc_fusionen deckt nur Federal-Register-Fusionsmitteilungen ab.",
+    "grund": "Eigene Recherche Lauf 2026-11-15T08:05Z. Test 2026-11-15T08:20Z: www.ftc.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: fedregister_ftc_fusionen deckt nur Federal-Register-Fusionsmitteilungen ab. | Erneut 2026-11-16T16:08Z: www.ftc.gov HTTP 403; nicht umgangen, nächster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-15T08:20Z",
-    "geprueft_utc": "2026-11-15T08:20Z"
+    "geprueft_utc": "2026-11-16T16:08Z"
   },
   {
     "id": "stanford_scac_sammelklagen",
@@ -6309,11 +6309,38 @@
     "url": "https://en.wikipedia.org/wiki/Chinese_New_Year (Datumsliste; Gegenprobe Hong Kong Observatory Kalender hko.gov.hk)",
     "domain": "en.wikipedia.org",
     "bereich": "Kalender-Ereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Vor dem Neujahr ziehen chinesische Haushalte und Firmen Liquidität ab, danach ruht die Produktion eine bis zwei Wochen; das trifft Schwellenländer (EEM) und Industriemetalle kurzfristig gegenüber dem Weltindex (Yuan und Gupta 2014, Lunar New Year Effect).",
-    "grund": "Lernrunde 16.11.2026: Kalender, kein Doppel zu china_golden_week_feiertage (Oktober). HTTP 200 geprüft. Datum im Voraus bekannt, kein Vorausschau-Risiko.",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Kalender, kein Doppel zu china_golden_week_feiertage (Oktober). HTTP 200 geprüft. Datum im Voraus bekannt, kein Vorausschau-Risiko. | 2026-11-16T16:08Z: aufgenommen. HKO-Tabellen (hko.gov.hk/gts) per robots.txt gesperrt, Wikipedia-API 429 (nicht wiederholt); darum astronomisch berechnet (Meeus: Neumond Kap. 49, Sonnenlänge Kap. 25; Regeln Aslaksen 2010 inkl. Schaltmonat, ab 1929 UTC+8, davor Ortszeit Peking). Gegenprobe gegen Wikipedia-Tabelle «Chinese zodiac» 1924-2043: 120 von 120 Jahren gleich (inkl. Schaltfall 2034-02-19). 1901-1923 nur Stichproben (1912, 1914, 1916, 1919, 1920 stimmen). Ereignis ab 1901 deterministisch, Datum Jahre im Voraus amtlich bekannt; verfuegbar_nach_tagen 0. Hinweis K1-K7: K1 täglich 0/1, K2 ab 1901, K3 Berechnung ohne Abruf, K4 nicht revidiert, K5 bis heute, K6 neu (china_golden_week_feiertage betrifft Oktober), K7 klein. Gleiche Folgewerte hoch ist bei 0/1-Ereignisreihen erwartet. Reihen: neujahrstag, laternenfest (beide aktiv, 2 Reihen <= 3).",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "reihen": [
+      "neujahrstag",
+      "laternenfest"
+    ],
+    "geprueft_utc": "2026-11-16T16:08Z",
+    "pruefung": {
+      "neujahrstag": {
+        "zeilen": 45976,
+        "erste": "1901-01-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9945,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 126
+      },
+      "laternenfest": {
+        "zeilen": 45976,
+        "erste": "1901-01-01",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9945,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 126
+      }
+    }
   },
   {
     "id": "ngdc_vulkanausbrueche",
