@@ -4,8 +4,8 @@
    "dateien": [
     "data/hr/pegel/kaub_2026.csv.gz"
    ],
-   "zeilen": 8143,
-   "letzte": "2026-11-16T12:00:00+01:00",
+   "zeilen": 8242,
+   "letzte": "2026-11-17T12:45:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -15,8 +15,8 @@
    "dateien": [
     "data/hr/pegel/maxau_2026.csv.gz"
    ],
-   "zeilen": 8148,
-   "letzte": "2026-11-16T12:00:00+01:00",
+   "zeilen": 8247,
+   "letzte": "2026-11-17T12:45:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -26,8 +26,8 @@
    "dateien": [
     "data/hr/pegel/koeln_2026.csv.gz"
    ],
-   "zeilen": 8145,
-   "letzte": "2026-11-16T12:00:00+01:00",
+   "zeilen": 8244,
+   "letzte": "2026-11-17T12:45:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -37,8 +37,8 @@
    "dateien": [
     "data/hr/pegel/duisburg-ruhrort_2026.csv.gz"
    ],
-   "zeilen": 8149,
-   "letzte": "2026-11-16T12:00:00+01:00",
+   "zeilen": 8248,
+   "letzte": "2026-11-17T12:45:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -74,9 +74,9 @@
     "data/hr/wetter/basel_2025.csv.gz",
     "data/hr/wetter/basel_2026.csv.gz"
    ],
-   "zeilen": 235464,
+   "zeilen": 235488,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-10T23:00:00Z",
+   "letzte": "2026-11-11T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -111,9 +111,9 @@
     "data/hr/wetter/chicago_2025.csv.gz",
     "data/hr/wetter/chicago_2026.csv.gz"
    ],
-   "zeilen": 235464,
+   "zeilen": 235488,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-10T23:00:00Z",
+   "letzte": "2026-11-11T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -148,9 +148,9 @@
     "data/hr/wetter/frankfurt_2025.csv.gz",
     "data/hr/wetter/frankfurt_2026.csv.gz"
    ],
-   "zeilen": 235464,
+   "zeilen": 235488,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-10T23:00:00Z",
+   "letzte": "2026-11-11T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -185,9 +185,9 @@
     "data/hr/wetter/houston_2025.csv.gz",
     "data/hr/wetter/houston_2026.csv.gz"
    ],
-   "zeilen": 235464,
+   "zeilen": 235488,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-10T23:00:00Z",
+   "letzte": "2026-11-11T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -222,9 +222,9 @@
     "data/hr/wetter/kaub_2025.csv.gz",
     "data/hr/wetter/kaub_2026.csv.gz"
    ],
-   "zeilen": 235464,
+   "zeilen": 235488,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-10T23:00:00Z",
+   "letzte": "2026-11-11T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -259,9 +259,9 @@
     "data/hr/wetter/zuerich_2025.csv.gz",
     "data/hr/wetter/zuerich_2026.csv.gz"
    ],
-   "zeilen": 235464,
+   "zeilen": 235488,
    "erste": "2000-01-01T00:00:00Z",
-   "letzte": "2026-11-10T23:00:00Z",
+   "letzte": "2026-11-11T23:00:00Z",
    "aufloesung": "1h",
    "quelle": "open-meteo ERA5",
    "einheiten": "°C, mm, km/h, %"
@@ -270,9 +270,9 @@
    "dateien": [
     "data/hr/wiki/de_inflation.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -280,9 +280,9 @@
    "dateien": [
     "data/hr/wiki/de_niedrigwasser.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -290,9 +290,9 @@
    "dateien": [
     "data/hr/wiki/de_rezession.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -310,9 +310,9 @@
    "dateien": [
     "data/hr/wiki/en_heat_wave.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -320,9 +320,9 @@
    "dateien": [
     "data/hr/wiki/en_inflation.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -330,9 +330,9 @@
    "dateien": [
     "data/hr/wiki/en_nestle.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -340,9 +340,9 @@
    "dateien": [
     "data/hr/wiki/en_novartis.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -350,9 +350,9 @@
    "dateien": [
     "data/hr/wiki/en_nvidia.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -360,9 +360,9 @@
    "dateien": [
     "data/hr/wiki/en_oil_price.csv.gz"
    ],
-   "zeilen": 4155,
+   "zeilen": 4156,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -370,9 +370,9 @@
    "dateien": [
     "data/hr/wiki/en_recession.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -380,9 +380,9 @@
    "dateien": [
     "data/hr/wiki/en_roche.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -390,9 +390,9 @@
    "dateien": [
     "data/hr/wiki/en_stock_market_crash.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -400,9 +400,9 @@
    "dateien": [
     "data/hr/wiki/en_tesla_inc.csv.gz"
    ],
-   "zeilen": 3574,
+   "zeilen": 3575,
    "erste": "2017-02-02",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -410,9 +410,9 @@
    "dateien": [
     "data/hr/wiki/en_ubs.csv.gz"
    ],
-   "zeilen": 4156,
+   "zeilen": 4157,
    "erste": "2015-07-01",
-   "letzte": "2026-11-15",
+   "letzte": "2026-11-16",
    "aufloesung": "1d",
    "quelle": "wikimedia pageviews"
   },
@@ -438,6 +438,6 @@
   "wiki",
   "wetter"
  ],
- "inventur_utc": "2026-11-16T11:09:09Z",
- "erzeugt_utc": "2026-11-16T11:07:20Z"
+ "inventur_utc": "2026-11-17T11:51:23Z",
+ "erzeugt_utc": "2026-11-17T11:48:36Z"
 }
