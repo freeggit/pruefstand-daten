@@ -1,0 +1,12 @@
+{
+  "erklaerung": {
+    "beschreibung": "Reserve Bank of India: Tage, an denen eine geldpolitische Erklaerung veroeffentlicht wurde (Annual/Mid-Term/Quarterly Review, Mid-Quarter Review, Bi-monthly Policy Statement, MPC-Resolution seit Okt. 2016, sowie auf der Seite gelistete ausserordentliche Gouverneurs-Erklaerungen), laut Seite Monetary Policy Statements auf rbi.org.in. Gezaehlt wird nur der Tag mit dem Primaerdokument (Governor-Statement, Resolution, Full Statement), nicht spaetere Transkripte, Protokolle oder Makro-Vorberichte. 0 an allen anderen Tagen. Ausserordentliche Zinsschritte ohne Eintrag auf der Seite (z.B. Okt.-Dez. 2008) fehlen.",
+    "einheit": "0/1 (1 = Tag der Bekanntgabe einer geldpolitischen Erklaerung der RBI)",
+    "publikation": "taeglich (Erklaerung wird am Entscheidtag auf rbi.org.in publiziert, Quelle: RBI Monetary Policy Statements; Termine der regulaeren Sitzungen werden seit 2016 im Voraus als Meeting Schedule veroeffentlicht)",
+    "quelle_url": "https://www.rbi.org.in/Scripts/Annualpolicy.aspx",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Ereignisreihe, eine Zeile je Kalendertag)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
