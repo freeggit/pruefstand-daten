@@ -1,0 +1,11 @@
+{
+  "indikationen": {
+    "beschreibung": "Taegliche Anzahl von FDA-Genehmigungen neuer Indikationen bzw. Wirksamkeitsangaben fuer bereits zugelassene Arzneimittel (NDA/BLA, Supplement mit submission_class_code EFFICACY, Status AP), Datum = FDA-Entscheiddatum (submission_status_date)",
+    "einheit": "Anzahl genehmigte Efficacy-Supplemente",
+    "publikation": "taeglich, mit kurzer Verzoegerung durch den Aktualisierungszyklus von openFDA drugsfda (meta.last_updated, beobachtet ca. 3-10 Tage); Entscheid selbst meist am selben Tag per Firmenmitteilung oeffentlich",
+    "quelle_url": "https://api.fda.gov/drug/drugsfda.json",
+    "revidiert": false,
+    "verdichtung": "Summe der genehmigten Efficacy-Supplemente je Kalendertag (submission_status_date)",
+    "verfuegbar_nach_tagen": 10
+  }
+}

@@ -6407,5 +6407,59 @@
     "mechanismus": "Die Genehmigung eines IWF-Programms senkt das Ausfallrisiko des Landes und löst Zuflüsse aus; Schwellenländer (EEM, EWZ) steigen kurzfristig gegenüber dem Weltindex.",
     "grund": "Lernrunde 16.11.2026: Staat, Historie vor 1990. imf.org antwortet aus dieser Umgebung mit HTTP 403; tief bis ein Abrufweg ohne Sperre gefunden ist.",
     "aufgenommen_utc": "2026-11-16T09:50:00Z"
+  },
+  {
+    "id": "fda_neue_indikationen",
+    "name": "FDA-Genehmigungen neuer Indikationen (Efficacy-Supplemente, openFDA drugsfda)",
+    "url": "https://api.fda.gov/drug/drugsfda.json",
+    "domain": "api.fda.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Neue Indikationen erweitern den Absatzmarkt bereits zugelassener Medikamente grosser Pharma- und Biotechfirmen; eine Haeufung solcher Genehmigungen kann innert 1-20 Handelstagen die relative Rendite von Gesundheit (XLV, IBB) gegenueber dem Weltindex beeinflussen.",
+    "grund": "Eigene Recherche Lauf 2026-11-17T00:08Z (Zusatz 6, FDA). Unterschied zu fda_zulassungen (ORIG NDA/BLA, neue Wirkstoffe) und fda_generika_zulassungen (ANDA): hier SUPPL mit submission_class_code EFFICACY, Status AP, je (Anwendung, Supplementnummer) einmal gezaehlt -> kein Doppel (K6). K1: nullgefuellte Tagesreihe bis meta.last_updated (2026-11-13), Median-Abstand 1. K2: erster Wert 1954-10-21 (Historie vor 1990), 26322 Zeilen; Masse ab ca. 1980, 2012-2025 120-260 je Jahr plausibel. K3: openFDA ohne Login/Schluessel, open.fda.gov/terms. K4: Entscheiddatum wird nicht revidiert. K5: letzter Ereignistag 2026-11-10, Stand 2026-11-13. K7: 3 API-Seiten, 6 s. Pruefung: Min 0, Max 21 (2009-03-13, Sammelentscheid Klassen-Labelaenderung), Anteil gleicher Folgewerte 0.801 (Nulltage an Wochenenden und ruhigen Tagen, wie fda_zulassungen; nicht verdaechtig), 27 Ereignistage an Wochenenden (Altakten). publikation taeglich via openFDA mit ca. 3-10 Tagen Verzug -> verfuegbar_nach_tagen 10 (wie fda_generika_zulassungen). Vorfassungspruefung (vorfassung.pruefe) eingebaut. Reihen aktiv: indikationen.",
+    "reihen": [
+      {
+        "reihe": "indikationen",
+        "zeilen": 26322,
+        "erste": "1954-10-21",
+        "letzte": "2026-11-13",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.801,
+        "min": 0.0,
+        "max": 21.0,
+        "status": "aktiv"
+      }
+    ],
+    "aufgenommen_utc": "2026-11-17T00:08Z",
+    "geprueft_utc": "2026-11-17T00:08Z"
+  },
+  {
+    "id": "nikkei225_indexaenderungen",
+    "name": "Nikkei 225 Indexaenderungen (Aufnahmen/Streichungen)",
+    "url": "https://indexes.nikkei.co.jp/en/nkave/archives/news",
+    "domain": "indexes.nikkei.co.jp",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "tief",
+    "mechanismus": "Ankuendigungen von Aufnahmen und Streichungen im Nikkei 225 loesen indexgebundene Umschichtungen japanischer Aktien aus und koennen EWJ gegenueber dem Weltindex kurzfristig bewegen (analog sp500_index_aenderungen, dax_indexaenderungen).",
+    "grund": "Eigene Recherche Lauf 2026-11-17T00:08Z. Test: indexes.nikkei.co.jp liefert HTTP 403 (Nachrichtenarchiv und Komponentenseite) von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Offen bei Erfolg: ob Ankuendigungsdatum (nicht nur Wirksamkeitsdatum) je Aenderung ab 2015 oder frueher belegt ist.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-17T00:08Z",
+    "geprueft_utc": "2026-11-17T00:08Z"
+  },
+  {
+    "id": "hhs_ocr_gesundheitsdatenlecks",
+    "name": "HHS OCR Breach Portal (Datenlecks im Gesundheitswesen ab 500 Betroffenen)",
+    "url": "https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+    "domain": "ocrportal.hhs.gov",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "tief",
+    "mechanismus": "Grosse Datenlecks bei Spitaelern und Versicherern koennten Gesundheit (XLV) belasten; Mechanismus schwach, da meist nicht boersenkotierte Betreiber.",
+    "grund": "Eigene Recherche Lauf 2026-11-17T00:08Z. Portal erreichbar (HTTP 200 nach Weiterleitung auf breach_frontpage.jsf, JSF-Formular ohne direkten Datei-Link). Abgelehnt K4/Publikation: die Liste nennt nur das Einreichungsdatum der Meldung an OCR, nicht den Tag der oeffentlichen Aufschaltung; Eintraege erscheinen erst nach OCR-Pruefung mit wechselnder Verzoegerung und werden nachgetragen, ein punktgenaues Bekanntgabedatum ist nicht rekonstruierbar. Teilweise abgedeckt durch ca_ag_datenlecks (aktiv).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-17T00:08Z",
+    "geprueft_utc": "2026-11-17T00:08Z"
   }
 ]
