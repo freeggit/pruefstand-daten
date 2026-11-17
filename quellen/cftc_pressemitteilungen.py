@@ -32,7 +32,24 @@ def get(url):
         return r.read().decode("utf-8", "replace")
 
 
-def sammeln(typ):
+def bestand(name):
+    """Bisherige Zaehlung aus der abgelegten Datei (fuer den inkrementellen Abruf)."""
+    f = os.path.join(OUT, name + ".csv.gz")
+    if not os.path.exists(f):
+        return None
+    z = {}
+    with gzip.open(f, "rt") as g:
+        next(g, None)
+        for zeile in g:
+            d, w = zeile.strip().split(",")
+            z[dt.date.fromisoformat(d)] = int(w)
+    return z if len(z) > 3000 else None
+
+
+def sammeln(typ, bis=None):
+    """Liest die Liste seitenweise. Mit bis: Abbruch, sobald eine Seite vollstaendig
+    aelter als bis ist (inkrementeller Abruf, Lernrunde 2026-11-17: Vollabruf ueber
+    rund 300 Seiten lief wiederholt ins Zeitlimit von 180 s)."""
     seen = {}
     for page in range(0, 400):
         url = BASE + "?page=%d" % page
@@ -50,6 +67,11 @@ def sammeln(typ):
             if l.group(1) not in seen:
                 seen[l.group(1)] = d
                 neu += 1
+        if bis is not None and seen and rows:
+            daten = [dt.date(int(m.group(3)), int(m.group(1)), int(m.group(2)))
+                     for m in (DATE.search(r) for r in rows) if m]
+            if daten and max(daten) < bis:
+                break
         if not rows or neu == 0 and page > 0 and not any(DATE.search(r) for r in rows):
             break
         if 'page=%d"' % (page + 1) not in h and "page=%d&" % (page + 1) not in h:
@@ -78,13 +100,21 @@ def main():
     reihen = {"vollzug": "Enforcement", "gesamt": None}
     ergebnisse = {}
     for name, typ in reihen.items():
-        seen = sammeln(typ)
-        if len(seen) < 500:
+        alt = bestand(name)
+        grenze = (max(alt) - dt.timedelta(days=60)) if alt else None
+        seen = sammeln(typ, grenze)
+        if alt is None and len(seen) < 500:
             raise SystemExit("zu wenige Eintraege fuer %s: %d" % (name, len(seen)))
+        if alt is not None and len(seen) < 5:
+            raise SystemExit("zu wenige neue Eintraege fuer %s: %d" % (name, len(seen)))
         z = {}
         for d in seen.values():
-            if d <= heute:
+            if d <= heute and (grenze is None or d >= grenze):
                 z[d] = z.get(d, 0) + 1
+        if alt is not None:
+            for d, w in alt.items():
+                if d < grenze and w:
+                    z[d] = w
         ergebnisse[name] = z
     for name, z in ergebnisse.items():
         schreiben(name, z, heute)
