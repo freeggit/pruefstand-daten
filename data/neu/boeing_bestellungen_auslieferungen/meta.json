@@ -1,0 +1,11 @@
+{
+  "auslieferungen_meldung": {
+    "beschreibung": "Tage, an denen Boeing per Pressemitteilung die Auslieferungszahlen des abgelaufenen Quartals (bzw. Jahres) bekanntgab, laut Datum in der URL des Boeing-Newsrooms; 1 am Veroeffentlichungstag, 0 sonst. Ereignisreihe, nach dem Datum der Bekanntgabe.",
+    "einheit": "0/1 (1 = Veroeffentlichungstag)",
+    "publikation": "taeglich (Pressemitteilung am Tag der Bekanntgabe, Datum Teil der Mitteilungs-URL; Beleg: boeing.mediaroom.com, z.B. 2026-10-13-Boeing-Announces-Third-Quarter-Deliveries)",
+    "quelle_url": "https://boeing.mediaroom.com/news-releases-statements",
+    "revidiert": false,
+    "verdichtung": "keine (Ereignistag aus Mitteilungsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

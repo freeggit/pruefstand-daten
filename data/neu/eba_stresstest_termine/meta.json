@@ -1,0 +1,11 @@
+{
+  "ergebnisse": {
+    "beschreibung": "Tage, an denen EBA (2010: CEBS) die Ergebnisse des EU-weiten Bankenstresstests veroeffentlichte; 1 am Tag, 0 sonst. Termin jeweils Wochen vorher angekuendigt. Veroeffentlichung meist abends (18:00 bzw. 22:00 MESZ) oder am Sonntag (2014).",
+    "einheit": "0/1 (1 = Veroeffentlichungstag)",
+    "publikation": "taeglich (Termin von der EBA vorab per Pressemitteilung angekuendigt, z.B. 21.7.2023 fuer 28.7.2023; Beleg: EBA-Jahresseiten der Stresstests)",
+    "quelle_url": "https://www.eba.europa.eu/risk-and-data-analysis/risk-analysis/eu-wide-stress-testing",
+    "revidiert": false,
+    "verdichtung": "keine (Ereignistag)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

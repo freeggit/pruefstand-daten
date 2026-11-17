@@ -6540,12 +6540,25 @@
     "url": "https://www.eba.europa.eu/risk-and-data-analysis/risk-analysis/eu-wide-stress-testing",
     "domain": "www.eba.europa.eu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Am Tag der Stresstest-Ergebnisse wird die Kapitallage europaeischer Banken neu bewertet; das koennte Euroraum (EWU) und Finanzwerte (XLF) kurzfristig bewegen.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Replikation des Mechanismus von fed_stresstest_ergebnisse_termine mit unabhaengiger Quelle (EU statt USA). Termine 2009 bis heute, rund 2-jaehrlich; wenige Ereignisse, daher normal.",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Replikation des Mechanismus von fed_stresstest_ergebnisse_termine mit unabhaengiger Quelle (EU statt USA). Termine 2009 bis heute, rund 2-jaehrlich; wenige Ereignisse, daher normal. | Scout 2026-11-17T20:13Z: aktiv. Reihe ergebnisse = 1 am Tag der Veroeffentlichung der EU-Stresstest-Ergebnisse (2010 CEBS, ab 2011 EBA), 0 sonst, ab 2010-01-01. 8 Termine: 2010-07-23, 2011-07-15, 2014-10-26 (Sonntag), 2016-07-29 (22:00 MESZ), 2018-11-02, 2021-07-30, 2023-07-28, 2025-08-01 (je 18:00 MESZ). Jeder Termin wird bei jedem Abruf gegen einen Belegtext der EBA-Jahresseite geprueft; Termine wurden jeweils vorab angekuendigt, darum verfuegbar_nach_tagen 0. Hinweis: Veroeffentlichung meist nach Handelsschluss Europa, Wirkung am naechsten Handelstag. Naechste Runde 2027 - Skript bricht ab, sobald ein neuer Ergebnistermin angekuendigt ist, dann Liste ergaenzen. Wenige Ereignisse (8), Replikation zu fed_stresstest_ergebnisse_termine. K1-K7 erfuellt (6165 Zeilen ab 2010).",
+    "reihen": [
+      "ergebnisse"
+    ],
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T20:13Z",
+    "pruefung": {
+      "zeilen": 6165,
+      "erste": "2010-01-01",
+      "letzte": "2026-11-17",
+      "median_abstand_tage": 1.0,
+      "anteil_gleicher_folgewerte": 0.9974,
+      "min": 0.0,
+      "max": 1.0,
+      "ereignistage": 8
+    }
   },
   {
     "id": "djia_indexaenderungen",
@@ -6593,12 +6606,25 @@
     "url": "https://investors.boeing.com/investors/news/default.aspx",
     "domain": "investors.boeing.com",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Boeing ist der groesste US-Industrieexporteur; ueberraschende Auslieferungszahlen treffen Zulieferer und Fluggesellschaften und koennten Industrie (XLI) kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Unternehmenskalender, aggregiert ueber Zulieferkette. Monatsmeldungen ab rund 2000 mit Tagesdatum; HTTP 200 geprueft.",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Unternehmenskalender, aggregiert ueber Zulieferkette. Monatsmeldungen ab rund 2000 mit Tagesdatum; HTTP 200 geprueft. | Scout 2026-11-17T20:13Z: aktiv. Reihe auslieferungen_meldung = 1 am Tag der Boeing-Pressemitteilung zu den Quartals-/Jahresauslieferungen (Datum aus der Mitteilungs-URL im Newsroom boeing.mediaroom.com), 0 sonst, ab 1997-01-06. Monatszahlen erscheinen nur auf der Orders-&-Deliveries-Seite ohne Datumsarchiv, darum nur Quartalsmeldungen (Name der Quelle beibehalten). 118 Tage; im Newsroom fehlen 1998-Q2 (Juli 1998) und 2023-Q4 (Januar 2024) - nicht ergaenzt, nichts geschaetzt. Abruf: chronologische Liste bis vor 2013 (3 Seiten parallel, ~16 s) plus Stichwortsuche fuer 1997-2013. robots.txt investors.boeing.com Allow, mediaroom ohne robots.txt (404). Einzelfirma, Mechanismus XLI. Anteil gleicher Folgewerte ~98 Prozent bei Ereignisreihe erwartet. K1-K7 erfuellt.",
+    "reihen": [
+      "auslieferungen_meldung"
+    ],
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T20:13Z",
+    "pruefung": {
+      "zeilen": 10908,
+      "erste": "1997-01-06",
+      "letzte": "2026-11-17",
+      "median_abstand_tage": 1,
+      "anteil_gleicher_folgewerte": 0.9785,
+      "min": 0.0,
+      "max": 1.0,
+      "ereignistage": 118
+    }
   },
   {
     "id": "us_kongress_sitzungstage",
