@@ -6553,12 +6553,25 @@
     "url": "https://en.wikipedia.org/wiki/Historical_components_of_the_Dow_Jones_Industrial_Average",
     "domain": "en.wikipedia.org",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Aufnahmen und Streichungen im Dow loesen Umschichtungen und Aufmerksamkeit aus (Indexeffekt, Shleifer 1986); gebuendelt nach Sektor der betroffenen Firma koennte das den Sektor gegenueber dem Weltindex kurzfristig bewegen.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Historie vor 1990 (zweite Prioritaet) und Firmenereignis. Unabhaengige Replikation des Indexeffekts neben sp500_index_aenderungen, ftse100_indexaenderungen, dax_indexaenderungen. Datum = Wirksamkeitstag laut Liste; Bekanntgabetag nur teilweise, im Skript kennzeichnen. HTTP 200 geprueft.",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Historie vor 1990 (zweite Prioritaet) und Firmenereignis. Unabhaengige Replikation des Indexeffekts neben sp500_index_aenderungen, ftse100_indexaenderungen, dax_indexaenderungen. Datum = Wirksamkeitstag laut Liste; Bekanntgabetag nur teilweise, im Skript kennzeichnen. HTTP 200 geprueft. | Scout 2026-11-17T16:11Z: aktiv. Reihe aufnahmen = Anzahl Pfeile (Aufnahmen) je Abschnitt des Wikipedia-Artikels, Wirksamkeitstag, 0 sonst, ab 1896-05-26 (Indexstart nicht gezaehlt). 53 Aenderungstage, max 16 (1928-10-01 Erweiterung auf 30). Abschnitte nur mit Namensaenderung (Dolch) zaehlen nicht, z.B. 2017-09-01 DowDuPont, 2005-11-21 AT&T, 2003-01-27. Wirksamkeitstag statt Bekanntgabetag: Bekanntgabe liegt davor (seit 1991 3-14 Tage, Belege im Artikel), damit keine Vorwegnahme; verfuegbar_nach_tagen 0. Anteil gleicher Folgewerte 99.8% ist bei Ereignisreihe erwartet. Kein Sektorsplit (Sektor je Titel nicht im Artikel). K1-K7 erfuellt; K6 neu (eigener Index neben sp500_index_aenderungen).",
+    "reihen": [
+      "aufnahmen"
+    ],
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T16:11Z",
+    "pruefung": {
+      "zeilen": 47657,
+      "erste": "1896-05-26",
+      "letzte": "2026-11-17",
+      "median_abstand_tage": 1,
+      "anteil_gleicher_folgewerte": 0.9978,
+      "min": 0,
+      "max": 16,
+      "ereignistage": 53
+    }
   },
   {
     "id": "smi_indexaenderungen",
@@ -6566,12 +6579,13 @@
     "url": "https://www.six-group.com/en/newsroom/media-releases.html",
     "domain": "www.six-group.com",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Aufnahmen in den SMI erzwingen Kaeufe von Indexfonds in einem kleinen Markt; gehaeufte Aenderungen koennten den Schweizer Markt (EWL) kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Replikation des Indexeffekts mit unabhaengiger Quelle (Schweiz). Medienmitteilungen mit Tagesdatum; HTTP 200 geprueft, Archivtiefe im Skript pruefen.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Replikation des Indexeffekts mit unabhaengiger Quelle (Schweiz). Medienmitteilungen mit Tagesdatum; HTTP 200 geprueft, Archivtiefe im Skript pruefen. | Scout 2026-11-17T16:11Z: abgelehnt K2. Medienmitteilungs-Archiv der SIX (robots.txt erlaubt /en) reicht nur bis 2019 zurueck (450 Mitteilungen 2019-2026, davon rund 12 zu ordentlichen/ausserordentlichen Indexanpassungen); erster Wert nach 31.12.2015.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T16:11Z"
   },
   {
     "id": "boeing_bestellungen_auslieferungen",
@@ -6619,12 +6633,13 @@
     "url": "https://www.energy.gov/ceser/history-spr-releases",
     "domain": "www.energy.gov",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Eine angekuendigte Freigabe der Reserve erhoeht das Angebot; das koennte Oel (USO) und Energiewerte (XLE) kurzfristig gegenueber dem Weltindex senken.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Staatlicher Eingriff in den Rohoelmarkt, unabhaengig von Preisreihen. Wenige Ereignisse (rund 30), daher normal. Historie ab 1985. HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Staatlicher Eingriff in den Rohoelmarkt, unabhaengig von Preisreihen. Wenige Ereignisse (rund 30), daher normal. Historie ab 1985. HTTP 200 geprueft. | Scout 2026-11-17T16:11Z: abgelehnt K4/Bekanntgabetag. Seite (jetzt https://www.energy.gov/hgeo/opr/history-spr-releases, HTTP 200) ist erzaehlender Text in 36 Abschnitten (Notverkaeufe, Testverkaeufe, Exchanges, Mandated Sales); die Mandated Sales FY2017-FY2023 sind nur nach Fiskaljahr ohne Bekanntgabetag gefuehrt, im ganzen Text nur rund 70 Tagesdaten, 2017-2021 kaum welche. Eine Tagesreihe der Bekanntgaben liesse sich nur per Freitext-Heuristik und lueckenhaft bilden. Wieder pruefen, falls DOE eine Liste der Notices of Sale mit Datum fuehrt.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T16:11Z"
   },
   {
     "id": "nber_konjunkturwendepunkte_bekanntgabe",

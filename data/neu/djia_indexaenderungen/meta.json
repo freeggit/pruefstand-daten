@@ -1,0 +1,11 @@
+{
+  "aufnahmen": {
+    "beschreibung": "Anzahl der in den Dow Jones Industrial Average aufgenommenen Titel je Wirksamkeitstag (Abschnitte mit Pfeil im Wikipedia-Artikel der historischen Zusammensetzung), 0 an Tagen ohne Aenderung. Indexeffekt (Shleifer 1986). Datum = Wirksamkeitstag; die Bekanntgabe lag seit 1991 jeweils 3 bis 14 Tage davor (Belege im Artikel), der Tag war also am Datum bereits oeffentlich bekannt.",
+    "einheit": "Anzahl aufgenommener Titel",
+    "publikation": "taeglich (Wirksamkeitstag wird von S&P Dow Jones Indices vorab per Pressemitteilung angekuendigt, z.B. Alphabet 23.6.2026 fuer 29.6.2026; Beleg: Referenzen im Artikel)",
+    "quelle_url": "https://en.wikipedia.org/wiki/Historical_components_of_the_Dow_Jones_Industrial_Average",
+    "revidiert": false,
+    "verdichtung": "Anzahl Pfeile (Aufnahmen) je Abschnitt/Wirksamkeitstag; keine",
+    "verfuegbar_nach_tagen": 0
+  }
+}
