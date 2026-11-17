@@ -1,0 +1,12 @@
+{
+  "frist": {
+    "beschreibung": "1 am Fristtag fuer Form-13F-Meldungen (45 Tage nach Quartalsende: 14.2., 15.5., 14.8., 14.11.; bei Wochenende oder Washington's Birthday naechster Werktag), sonst 0. Quartalsregime ab Release 34-15461 (1979).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Frist aus Rule 13f-1 im Voraus bekannt; Beleg SEC 13F FAQ und Release 34-15461)",
+    "quelle_url": "https://www.sec.gov/files/divisions/investment/13ffaq.htm; https://www.sec.gov/rules/final/34-15461.pdf; Exchange Act Rule 0-3",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (deterministische Kalenderreihe aus der Fristregel)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

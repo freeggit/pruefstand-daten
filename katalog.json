@@ -3486,15 +3486,29 @@
   },
   {
     "id": "sec_13f_einreichungsfristen",
-    "name": "Einreichungsfristen fuer 13F-Positionsmeldungen (45 Tage nach Quartalsende: 15. Feb, 15. Mai, 15. Aug, 15. Nov)",
-    "url": "https://www.sec.gov/divisions/investment/13ffaq",
+    "name": "Einreichungsfristen fuer 13F-Positionsmeldungen (45 Tage nach Quartalsende: 14. Feb, 15. Mai, 14. Aug, 14. Nov; naechster Werktag)",
+    "url": "https://www.sec.gov/files/divisions/investment/13ffaq.htm",
     "domain": "sec.gov",
     "bereich": "Kalender",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "tief",
     "mechanismus": "An den Fristen werden Grossanleger-Positionen oeffentlich; Nachahmer-Zufluesse koennen Sektoren (XLK, XLV) kurzfristig gegenueber dem Weltindex stuetzen.",
-    "grund": "Positionierungs-Offenlegung ohne eigene Datenreihe noetig, nur Regeltermine. Mechanismus schwach, darum tief.",
-    "aufgenommen_utc": "2026-10-14T09:00:00Z"
+    "grund": "Positionierungs-Offenlegung ohne eigene Datenreihe noetig, nur Regeltermine. Mechanismus schwach, darum tief. | Lauf 2026-11-17T04:10Z: aufgenommen. Deterministische Kalenderreihe, kein Abruf bei sec.gov noetig. Regelbeleg: Rule 13f-1 (Release 34-14852, 15.6.1978, jaehrlich), vierteljaehrlich ab Release 34-15461 (5.1.1979, wirksam 5.2.1979); Frist 45 Tage nach Quartalsende (SEC 13F FAQ) = 14.2./15.5./14.8./14.11. (Startliste nannte irrtuemlich 15.2./15.8./15.11.); Wochenende/Bundesfeiertag -> naechster Werktag (Exchange Act Rule 0-3), im Fenster nur Washington's Birthday (3. Montag Feb, ab 1971) relevant. Beginn 1979-03-01, erster Termin 15.5.1979; jaehrliche Frist 14.2.1979 nicht aufgenommen. Pruefung: 17429 Zeilen 1979-03-01..2026-11-17, 191 Fristtage, Median-Abstand 1, Anteil gleicher Folgewerte 97.8% (bei 0/1-Ereignisreihe erwartet), Min 0 Max 1. verfuegbar_nach_tagen 0, publikation taeglich. Aktive Reihen: frist.",
+    "aufgenommen_utc": "2026-10-14T09:00:00Z",
+    "reihen": [
+      "frist"
+    ],
+    "geprueft_utc": "2026-11-17T04:10Z",
+    "pruefung": {
+      "zeilen": 17429,
+      "erste": "1979-03-01",
+      "letzte": "2026-11-17",
+      "median_abstand_tage": 1,
+      "anteil_gleiche_folgewerte": 0.978,
+      "min": 0,
+      "max": 1,
+      "ereignistage": 191
+    }
   },
   {
     "id": "us_bip_bea_veroeffentlichungstage",
@@ -6364,11 +6378,13 @@
     "url": "https://www.ngdc.noaa.gov/hazel/hazard-service/api/v1/volcanoes (JSON, Filter minYear/maxYear)",
     "domain": "ngdc.noaa.gov",
     "bereich": "Natur",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Grosse Ausbrüche sperren Lufträume und kühlen über Schwefelaerosole das Klima; das trifft Luftfahrt und Industrie (XLI) sowie Agrar (DBA) kurzfristig gegenüber dem Weltindex.",
-    "grund": "Lernrunde 16.11.2026: Natur, Historie vor 1990. API mit HTTP 200 geprüft. Tief: wenige grosse Ereignisse, n klein. Aufnahmedatum der Meldung prüfen (nachträgliche Ergänzungen, K4).",
-    "aufgenommen_utc": "2026-11-16T09:50:00Z"
+    "grund": "Lernrunde 16.11.2026: Natur, Historie vor 1990. API mit HTTP 200 geprüft. Tief: wenige grosse Ereignisse, n klein. Aufnahmedatum der Meldung prüfen (nachträgliche Ergänzungen, K4). | Lauf 2026-11-17T04:10Z: abgelehnt (K4, K5). API liefert 530 Einträge 1900-2026, aber nur rund 5 je Jahr (2024-2026: 12), letzter Eintrag 2026-05-07. Die Liste ist eine nachträglich kompilierte Auswahl «significant» nach Todesopfern, Schäden ab 1 Mio USD, VEI ab 6 oder Tsunami; Aufnahme hängt von später bekannten Schadensmeldungen ab, Einträge werden mit Verzug ergänzt (kein Bekanntgabedatum, Datum = Ausbruchstag). Damit weder punktgenau noch laufend; Historie nicht abgelegt.",
+    "aufgenommen_utc": "2026-11-16T09:50:00Z",
+    "geprueft_utc": "2026-11-17T04:10Z",
+    "reihen": []
   },
   {
     "id": "fda_drug_safety_communications",
