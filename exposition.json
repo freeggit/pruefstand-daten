@@ -253,6 +253,18 @@
    "erst_zeit": "2026-11-15T14:03Z",
    "beleg": "suche/laeufe/L20261115T122117Z.json"
   },
+  "neu_chinesisches_neujahr_laternenfest": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261117T135650Z",
+   "erst_zeit": "2026-11-17T15:55Z",
+   "beleg": "suche/laeufe/L20261117T135650Z.json"
+  },
+  "neu_chinesisches_neujahr_neujahrstag": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261117T135650Z",
+   "erst_zeit": "2026-11-17T15:55Z",
+   "beleg": "suche/laeufe/L20261117T135650Z.json"
+  },
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie": {
    "erst_dokument": "S0018",
    "erst_lauf": null,
@@ -348,6 +360,12 @@
    "erst_lauf": "L20261113T124343Z",
    "erst_zeit": "2026-11-13T15:59Z",
    "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
+  "neu_fda_neue_indikationen_indikationen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261117T135650Z",
+   "erst_zeit": "2026-11-17T15:55Z",
+   "beleg": "suche/laeufe/L20261117T135650Z.json"
   },
   "neu_fda_ruckrufe_arzneimittel": {
    "erst_dokument": "S0013",
@@ -643,6 +661,12 @@
    "erst_zeit": "30.9.2026, 20:13 (Europe/Zurich)",
    "beleg": "suche/S0016_alle.csv.gz"
   },
+  "neu_fomc_dissens_historie_gegenstimmen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261117T135650Z",
+   "erst_zeit": "2026-11-17T15:55Z",
+   "beleg": "suche/laeufe/L20261117T135650Z.json"
+  },
   "neu_fomc_protokolle_veroeffentlichungstage_protokolle": {
    "erst_dokument": "S0022",
    "erst_lauf": "L20261004T124314Z",
@@ -816,6 +840,12 @@
    "erst_lauf": "L20261114T115120Z",
    "erst_zeit": "2026-11-14T13:46Z",
    "beleg": "suche/laeufe/L20261114T115120Z.json"
+  },
+  "neu_indien_rbi_repo_entscheide_erklaerung": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261117T135650Z",
+   "erst_zeit": "2026-11-17T15:55Z",
+   "beleg": "suche/laeufe/L20261117T135650Z.json"
   },
   "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen": {
    "erst_dokument": null,
@@ -1098,6 +1128,12 @@
    "erst_lauf": "L20261025T092904Z",
    "erst_zeit": "2026-10-25T12:20Z",
    "beleg": "suche/laeufe/L20261025T092904Z.json"
+  },
+  "neu_sec_13f_einreichungsfristen_frist": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261117T135650Z",
+   "erst_zeit": "2026-11-17T15:55Z",
+   "beleg": "suche/laeufe/L20261117T135650Z.json"
   },
   "neu_snb_saron_saron": {
    "erst_dokument": "S0009",
@@ -2168,8 +2204,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261116T132647Z",
-  "zeit_utc": "2026-11-16T16:27Z",
-  "grundreihen_n": 360
+  "lauf_id": "L20261117T135650Z",
+  "zeit_utc": "2026-11-17T15:55Z",
+  "grundreihen_n": 366
  }
 }

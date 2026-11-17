@@ -1,5 +1,5 @@
 {
- "kumuliert": 778042,
+ "kumuliert": 782275,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -367,6 +367,8 @@
   "neu_cftc_pressemitteilungen_vollzug_stand",
   "neu_cftc_pressemitteilungen_vollzug_z252",
   "neu_china_pmi_veroeffentlichung_pmi_termin_stand",
+  "neu_chinesisches_neujahr_laternenfest_stand",
+  "neu_chinesisches_neujahr_neujahrstag_stand",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d1",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d20",
   "neu_clinicaltrials_ergebnisse_ergebnisse_industrie_d5",
@@ -439,6 +441,11 @@
   "neu_fda_generika_zulassungen_generika_d5",
   "neu_fda_generika_zulassungen_generika_stand",
   "neu_fda_generika_zulassungen_generika_z252",
+  "neu_fda_neue_indikationen_indikationen_d1",
+  "neu_fda_neue_indikationen_indikationen_d20",
+  "neu_fda_neue_indikationen_indikationen_d5",
+  "neu_fda_neue_indikationen_indikationen_stand",
+  "neu_fda_neue_indikationen_indikationen_z252",
   "neu_fda_zulassungen_zulassungen_d1",
   "neu_fda_zulassungen_zulassungen_d20",
   "neu_fda_zulassungen_zulassungen_d5",
@@ -665,6 +672,11 @@
   "neu_fema_katastrophenerklaerungen_anzahl_stuerme_stand",
   "neu_fema_katastrophenerklaerungen_anzahl_stuerme_z252",
   "neu_fema_katastrophenerklaerungen_anzahl_z252",
+  "neu_fomc_dissens_historie_gegenstimmen_d1",
+  "neu_fomc_dissens_historie_gegenstimmen_d20",
+  "neu_fomc_dissens_historie_gegenstimmen_d5",
+  "neu_fomc_dissens_historie_gegenstimmen_stand",
+  "neu_fomc_dissens_historie_gegenstimmen_z252",
   "neu_fomc_protokolle_veroeffentlichungstage_protokolle_stand",
   "neu_fred_aktienvol_vxn_rvx_vxd_rvx_d1",
   "neu_fred_aktienvol_vxn_rvx_vxd_rvx_d20",
@@ -794,6 +806,7 @@
   "neu_healthcanada_noc_zulassungen_nas_zulassungen_d5",
   "neu_healthcanada_noc_zulassungen_nas_zulassungen_stand",
   "neu_healthcanada_noc_zulassungen_nas_zulassungen_z252",
+  "neu_indien_rbi_repo_entscheide_erklaerung_stand",
   "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_d1",
   "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_d20",
   "neu_japan_mlit_fahrzeugrueckrufe_rueckruf_meldungen_d5",
@@ -969,6 +982,7 @@
   "neu_ramadan_beginn_ende_eid_stand",
   "neu_rbnz_ocr_entscheidtage_aenderungstage_stand",
   "neu_riksbank_leitzins_entscheidtage_aenderungstage_stand",
+  "neu_sec_13f_einreichungsfristen_frist_stand",
   "neu_snb_saron_saron_d1",
   "neu_snb_saron_saron_d20",
   "neu_snb_saron_saron_d5",
@@ -2001,9 +2015,15 @@
    "datei": "suche/S0070.json",
    "kandidaten": 439449,
    "in_db": false
+  },
+  {
+   "nr": 71,
+   "datei": "suche/S0071.json",
+   "kandidaten": 443682,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-16T16:27Z",
+ "letzter_suchlauf_utc": "2026-11-17T15:55Z",
  "pruefung_lernrunde_utc": "2026-11-17T09:40:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2463,11 +2483,19 @@
    "ergebnis_hash": "768e0cb35f37ffbd",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261117T135650Z.json",
+   "lauf_id": "L20261117T135650Z",
+   "s_dokument": "suche/S0071.json",
+   "ergebnis_hash": "d472b4a914ab7213",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-16T16:27Z",
- "letztes_vollarchiv": "suche/S0070_alle.csv.gz",
- "letzter_ergebnis_hash": "768e0cb35f37ffbd",
+ "letzter_lauf_utc": "2026-11-17T15:55Z",
+ "letztes_vollarchiv": "suche/S0071_alle.csv.gz",
+ "letzter_ergebnis_hash": "d472b4a914ab7213",
  "konflikte": [
   {
    "wo": "index",
@@ -4702,10 +4730,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 360,
-  "neu_in_diesem_lauf": 12
+  "grundreihen_n": 366,
+  "neu_in_diesem_lauf": 6
  },
- "letztes_vollarchiv_ergebnis_hash": "768e0cb35f37ffbd",
+ "letztes_vollarchiv_ergebnis_hash": "d472b4a914ab7213",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261116T132647Z",
@@ -4723,7 +4751,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "b03bbfb29f076fe0",
- "letzter_gueltiger_lauf": "L20261116T132647Z",
- "letzter_entscheidung_hash": "928618e8669923fe"
+ "letzter_eingabe_hash": "36f813833b330569",
+ "letzter_gueltiger_lauf": "L20261117T135650Z",
+ "letzter_entscheidung_hash": "b166abed6e9e6658"
 }
