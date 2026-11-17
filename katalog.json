@@ -6512,12 +6512,13 @@
     "url": "https://www.bankingsupervision.europa.eu/banking/sanctions/html/index.en.html",
     "domain": "www.bankingsupervision.europa.eu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Gehaeufte Bussen der EZB-Aufsicht gegen grosse Euro-Banken koennten europaeische Banken und damit den Euroraum (EWU, EWG) gegenueber dem Weltindex kurzfristig belasten.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Firmenereignisse erste Prioritaet (Zusatz 6 des Scouts). Unabhaengig von US-Aufsichtsquellen (fed_enforcement_massnahmen, occ_enforcement_massnahmen). Seite ab 2017 mit Tagesdatum der Veroeffentlichung; HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Firmenereignisse erste Prioritaet (Zusatz 6 des Scouts). Unabhaengig von US-Aufsichtsquellen (fed_enforcement_massnahmen, occ_enforcement_massnahmen). Seite ab 2017 mit Tagesdatum der Veroeffentlichung; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: Tabelle https://www.bankingsupervision.europa.eu/outcomes/sanctions-imposed-by-the-ecb/html/index.en.html (HTTP 200, robots.txt erlaubt) enthaelt nur 29 Sanktionen (Entscheide 06.10.2016 bis 2025). Datum muss Tag der Bekanntgabe sein (Zusatz 6): bei 19 Eintraegen aus Dateinamen der Publikation (ssm.JJJJMMTT) ableitbar, bei 10 von 29 (u.a. 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024) fehlt jeder Beleg zum Bekanntgabetag (nur Entscheiddatum). Kein Abruf, keine Ablage. Abgelehnt: K4 (Bekanntgabetag nicht je Ereignis belegt) und zu duenn (rund 3 Ereignisse pro Jahr, erstes Ereignis erst 2016, K2 nur ueber Nulltage).",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T12:30Z"
   },
   {
     "id": "finma_durchsetzung_mitteilungen",
@@ -6525,12 +6526,13 @@
     "url": "https://www.finma.ch/de/durchsetzung/",
     "domain": "www.finma.ch",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Bekanntgaben von FINMA-Verfahren gegen Schweizer Banken und Versicherer koennten den Schweizer Markt (EWL) kurzfristig gegenueber dem Weltindex bewegen, weil Finanzwerte dort ein grosses Gewicht haben.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: www.finma.ch/de/durchsetzung/ und /de/news/ HTTP 200, robots.txt erlaubt. Die News-Liste wird per Skript aus der internen Such-Schnittstelle /de/api/search/getresult nachgeladen; deren Abruf wurde in dieser Umgebung nicht zugelassen (Befund, nicht umgangen). Oeffentliche RSS-Feeds /de/rss/news/ und /de/rss/sanktionen/ reichen nur rund 5 Monate zurueck (erste pubDate 17.06.2026), damit K2 auf dem zulaessigen Weg nicht erfuellt. Keine Ablage. Naechster Lauf: pruefen, ob ein Archiv mit Tagesdatum als statische Seite besteht (z.B. Enforcementberichte je Jahr nennen Verfahren, aber ohne Bekanntgabetag).",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T12:30Z"
   },
   {
     "id": "eba_stresstest_termine",
@@ -6590,12 +6592,13 @@
     "url": "https://history.house.gov/Institution/Session-Dates/All/",
     "domain": "history.house.gov",
     "bereich": "Staat und Geldmarkt",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Laeuft der Kongress, steigt das Gesetzgebungsrisiko fuer regulierte Branchen; Ferguson und Witte (2006) finden hoehere Renditen in Sitzungspausen. Das koennte regulierte Sektoren (XLV, XLF, XLE) gegenueber dem Weltindex verschieben.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Fachliteratur (Congressional Effect). Historie vor 1990: Daten ab 1789, damit auch fuer Familie L (Ken French ab 1926). Veroeffentlicht, daher moeglicherweise abgeschwaecht (L3). HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Fachliteratur (Congressional Effect). Historie vor 1990: Daten ab 1789, damit auch fuer Familie L (Ken French ab 1926). Veroeffentlicht, daher moeglicherweise abgeschwaecht (L3). HTTP 200 geprueft. | Test 2026-11-17T12:30Z: history.house.gov/Institution/Session-Dates/All/ liefert HTTP 200 mit Sitzungsperioden ab 1789 (Beginn und Vertagung je Session, keine einzelnen Sitzungstage). robots.txt von history.house.gov: «User-agent: * Disallow: /» (nur Googlebot erlaubt) -> K3 verletzt, kein Abruf, keine Ablage. Zudem tagen die Kammern seit Jahrzehnten ganzjaehrig (Session 3.1. bis 3.1.), so dass die Reihe ab etwa 1990 kaum noch variiert. Alternative fuer spaeter pruefen: congress.gov braucht Schluessel; Senate.gov Tagesprotokolle (Robots pruefen).",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-17T12:30Z"
   },
   {
     "id": "fed_humphrey_hawkins_anhoerungen",
