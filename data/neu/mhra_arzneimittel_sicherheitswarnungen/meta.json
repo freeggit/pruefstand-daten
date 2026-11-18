@@ -1,0 +1,22 @@
+{
+  "arzneimittel_rueckrufe": {
+    "beschreibung": "Taegliche Anzahl MHRA-Arzneimittelrueckrufe (Medicines Recall Notification, Klasse 1-4) nach Herausgabetag; 0 an Tagen ohne Meldung; ab 2015.",
+    "einheit": "Anzahl Meldungen",
+    "publikation": "taeglich: MHRA gibt Warnungen und Rueckrufe einzeln am Herausgabetag auf GOV.UK heraus (gov.uk/drug-device-alerts, issued_date); in Stichproben 2015-2025 war first_published_at meist gleich issued_date, einzeln bis 4 Tage spaeter, darum konservativ 1 Tag",
+    "quelle_url": "https://www.gov.uk/drug-device-alerts",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "Zaehlung der Meldungen je Kalendertag (issued_date, UK-Ortszeit)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "geraete_warnungen": {
+    "beschreibung": "Taegliche Anzahl MHRA-Sicherheitswarnungen zu Medizinprodukten (Device Safety Information, National Patient Safety Alert) nach Herausgabetag; ohne woechentliche Field-Safety-Notice-Sammellisten; 0 an Tagen ohne Meldung; ab 2015.",
+    "einheit": "Anzahl Meldungen",
+    "publikation": "taeglich: MHRA gibt Warnungen und Rueckrufe einzeln am Herausgabetag auf GOV.UK heraus (gov.uk/drug-device-alerts, issued_date); in Stichproben 2015-2025 war first_published_at meist gleich issued_date, einzeln bis 4 Tage spaeter, darum konservativ 1 Tag",
+    "quelle_url": "https://www.gov.uk/drug-device-alerts",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "Zaehlung der Meldungen je Kalendertag (issued_date, UK-Ortszeit)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

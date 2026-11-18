@@ -6785,12 +6785,38 @@
     "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=medical_safety_alert&count=1000&fields=public_timestamp,title",
     "domain": "www.gov.uk",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "Behoerdliche Sicherheitswarnungen zu Arzneimitteln und Geraeten belasten die betroffenen Hersteller am Bekanntgabetag; eine Haeufung kann Gesundheit und Biotech (XLV, IBB) gegenueber dem Weltindex kurzfristig druecken.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von fda_drug_safety_communications mit unabhaengiger Behoerde (UK). Firmenereignis aggregiert, Tagesdatum, offene API ohne Login. HTTP 200 geprueft.",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von fda_drug_safety_communications mit unabhaengiger Behoerde (UK). Firmenereignis aggregiert, Tagesdatum, offene API ohne Login. HTTP 200 geprueft. | Pruefung 2026-11-18T12:25Z: GOV.UK Search API frei (200, ohne Schluessel), 1468 Meldungen. Datum = issued_date (Herausgabetag; Stichprobe 15 Meldungen ueber Content-API: ab 2015 gleich first_published_at, einmal 4 Tage spaeter, darum verfuegbar_nach_tagen 1); public_timestamp (letzte Aenderung) bewusst nicht verwendet. Gezaehlt nur Einzelmeldungen: medicines-recall-notification (Reihe arzneimittel_rueckrufe) und device-safety-information + national-patient-safety (geraete_warnungen); ausgelassen field-safety-notices (woechentliche Sammellisten) und mhra-safety-round-up (monatlich). Reihe ab 2015-01-01, weil 2003-2014 nur lueckenhaft nach GOV.UK migriert (2013: 48, 2014: 28 Meldungen). K1 ok (Tageszaehlung, 0 an Tagen ohne Meldung), K2 ok (ab 2015-01-01, 4340 Zeilen), K3 ok, K4 ok (Zaehlung, keine zurueckgezogenen Meldungen im Index: filter_is_withdrawn=true liefert 0), K5 ok (letzte Meldung 2026-11-17), K6 ok (fda_drug_safety_communications abgelehnt, kein UK-Pendant im Spiegel), K7 ok (10 kB, 3 s). Rueckrufe je Jahr 2015-2018 rund 20-28, ab 2019 rund 46-65 (Niveauwechsel, vermutlich mehr Klasse-4-Hinweise; Suchmaschine beachten). geraete_warnungen nur 156 Ereignisse in 12 Jahren (7-23 je Jahr) = zu duenn, darum status ruhend. Anteil gleicher Folgewerte 0.80 bzw. 0.94 ist bei seltenen Ereignissen erwartet. Aktiv: arzneimittel_rueckrufe; ruhend: geraete_warnungen (Grund: zu duenn).",
+    "reihen": [
+      {
+        "reihe": "arzneimittel_rueckrufe",
+        "zeilen": 4340,
+        "erste": "2015-01-01",
+        "letzte": "2026-11-18",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.804,
+        "min": 0.0,
+        "max": 2.0,
+        "summe": 532,
+        "status": "aktiv"
+      },
+      {
+        "reihe": "geraete_warnungen",
+        "zeilen": 4340,
+        "erste": "2015-01-01",
+        "letzte": "2026-11-18",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.936,
+        "min": 0.0,
+        "max": 2.0,
+        "summe": 156,
+        "status": "ruhend"
+      }
+    ],
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-18T12:25Z"
   },
   {
     "id": "euro_stoxx50_indexaenderungen",
@@ -6824,12 +6850,13 @@
     "url": "https://static.nhtsa.gov/odi/ffdd/inv/FLAT_INV.zip",
     "domain": "static.nhtsa.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "hoch",
     "mechanismus": "Die Eroeffnung einer Behoerdenuntersuchung kuendigt moegliche Rueckrufe und Haftung an, bevor ein Rueckruf feststeht; eine Haeufung kann Konsumgueter und Autohersteller (XLY, ff_durbl) kurzfristig belasten.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Neues Firmenereignis vor dem Rueckruf (nhtsa_ruckrufe misst das spaetere Ereignis). Historie vor 1990 fuer Familie L (ff_durbl). Offene Datei ohne Login, HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Neues Firmenereignis vor dem Rueckruf (nhtsa_ruckrufe misst das spaetere Ereignis). Historie vor 1990 fuer Familie L (ff_durbl). Offene Datei ohne Login, HTTP 200 geprueft. | Pruefung 2026-11-18T12:25Z: abgelehnt K6 (Doppel). Dieselbe Datei FLAT_INV.zip und dieselbe Groesse (Eroeffnung PE/EA/RQ je ODATE) liegen schon als nhtsa_odi_untersuchungen:untersuchungen (aktiv seit 2026-11-11, ab 1996) im Bestand; Familie Langzeit dort bewusst nicht vor 1996, weil der Bekanntgabetag vor der Online-ODI-Datenbank nicht belegt ist.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-18T12:25Z"
   },
   {
     "id": "epa_echo_vergleiche_bundesgerichte",
