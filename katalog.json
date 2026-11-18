@@ -6824,12 +6824,13 @@
     "url": "https://en.wikipedia.org/wiki/EURO_STOXX_50 (Abschnitt Aenderungen; Gegenprobe STOXX-Pressemitteilungen stoxx.com)",
     "domain": "en.wikipedia.org",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Indexaenderungen erzwingen Umschichtungen der Indexfonds zwischen Bekanntgabe und Stichtag; Nachfragedruck in grossen Euro-Titeln kann EWU und EWG gegenueber dem Weltindex kurzfristig verschieben.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft. | Scout 2026-11-18T20:35Z: fehler. Wikipedia EN/DE/FR/ES/IT fuehren keine Aenderungsliste des EURO STOXX 50 (nur aktuelle Zusammensetzung), damit keine offene Ersatzquelle; amtliches Archiv stoxx.com/news-archive antwortet HTTP 403 (Befund, nicht umgangen). Naechster Lauf erneut; ohne zugaengliches STOXX-Archiv spaeter abzulehnen (K3).",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-18T20:35Z"
   },
   {
     "id": "hang_seng_indexaenderungen",
@@ -6837,12 +6838,13 @@
     "url": "https://www.hsi.com.hk/eng (Index Notices / Index Review; Gegenprobe en.wikipedia.org/wiki/Hang_Seng_Index)",
     "domain": "www.hsi.com.hk",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Die Bekanntgabe der Hang-Seng-Indexpruefung loest Umschichtungen von Indexfonds und Southbound-Fluessen aus; das kann FXI gegenueber dem Weltindex in den Tagen bis zum Stichtag bewegen.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation des Indexeffekts in Asien (Nikkei-Quelle scheitert mit HTTP 403). HTTP 200 geprueft (Startseite).",
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation des Indexeffekts in Asien (Nikkei-Quelle scheitert mit HTTP 403). HTTP 200 geprueft (Startseite). | Scout 2026-11-18T20:35Z: abgelehnt K2. hsi.com.hk (robots.txt erlaubt alles) listet Notices/Press Releases als content/dam-Pfade mit Zeitstempel; 604 Eintraege, davon 597 ab 2021 (vereinzelt 2011-2020, keine Indexpruefungen); erster brauchbarer Wert nach 31.12.2015. Wikipedia Hang_Seng_Index ohne Aenderungsliste.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-18T20:35Z"
   },
   {
     "id": "nhtsa_maengeluntersuchungen_eroeffnung",
