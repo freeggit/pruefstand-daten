@@ -1,0 +1,20 @@
+{
+  "genehmigungen": {
+    "beschreibung": "Taegliche Anzahl Pressemitteilungen (IP) der EU-Kommission, die staatliche Beihilfen genehmigen (Beihilferegelungen, Einzelbeihilfen, Bankenrettungen und Rekapitalisierungen), nach Titel-Schluesselwoertern; ab 1985. Spitzen 2008-2009 (Bankenkrise), 2020-2022 (Covid- und Energiekrisenhilfen). 0 = keine Mitteilung.",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich: Pressemitteilungen erscheinen am Tag eventDate im Press Corner (Feld publishDate am selben Tag, z.B. IP/26/2457 eventDate 2026-11-17); Archiv wird nicht nachtraeglich ergaenzt, nur einzelne Korrekturfassungen (CORRECTED) moeglich",
+    "quelle_url": "https://ec.europa.eu/commission/presscorner/api/search?language=en&documenttype=1",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je eventDate (Kalendertag), Titelregel SA und POS ohne AUS und NEG",
+    "verfuegbar_nach_tagen": 0
+  },
+  "pruefungen": {
+    "beschreibung": "Taegliche Anzahl Pressemitteilungen (IP) der EU-Kommission zu Beihilfe-Pruefungen mit Risiko fuer Empfaenger (Eroeffnung vertiefter Pruefung, Negativentscheid, Rueckforderung, Verweis an den Gerichtshof, z.B. Steuervorbescheide), nach Titel-Schluesselwoertern; ab 1985. 0 = keine Mitteilung.",
+    "einheit": "Anzahl Pressemitteilungen",
+    "publikation": "taeglich: Pressemitteilungen erscheinen am Tag eventDate im Press Corner (Feld publishDate am selben Tag, z.B. IP/26/2457 eventDate 2026-11-17); Archiv wird nicht nachtraeglich ergaenzt, nur einzelne Korrekturfassungen (CORRECTED) moeglich",
+    "quelle_url": "https://ec.europa.eu/commission/presscorner/api/search?language=en&documenttype=1",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je eventDate (Kalendertag), Titelregel SA und NEG ohne AUS",
+    "verfuegbar_nach_tagen": 0
+  }
+}

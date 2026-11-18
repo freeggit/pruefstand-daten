@@ -6864,25 +6864,30 @@
     "url": "https://echodata.epa.gov/echo/case_rest_services.get_cases?output=JSON&p_case_category=JDC",
     "domain": "echodata.epa.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Grosse Umweltvergleiche bringen Bussen und Auflagen fuer Energie-, Chemie- und Versorgerfirmen; eine Haeufung kann XLE, XLB und XLU gegenueber dem Weltindex kurzfristig belasten.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Neues Firmenereignis aggregiert (Justiz und Umwelt), offene REST-API ohne Login. HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Neues Firmenereignis aggregiert (Justiz und Umwelt), offene REST-API ohne Login. HTTP 200 geprueft. | Test 2026-11-18T16:20Z: REST-API antwortet (HTTP 200, 15806 JDC-Faelle). Abgelehnt K4: dieselbe ICIS-FE&C-Datenbank wie epa_echo_vollzugsfaelle (dort 2026-11-11 geprueft, auch die Justizfaelle faelle_justiz): Abschluss-/Entscheiddaten werden rueckwirkend nachgetragen (Median 8 Tage, 18-33% der Faelle ueber 30 Tage spaeter erfasst), das Datum ist nicht der Tag oeffentlicher Bekanntgabe. Keine Daten abgelegt. Idee fuer spaeter: DOJ-Bekanntmachungen 'Notice of Lodging of Proposed Consent Decree' im Federal Register tragen das Publikationsdatum (fedregister zurzeit 403).",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-18T16:22Z"
   },
   {
     "id": "eu_beihilfe_entscheide",
     "name": "EU-Kommission: Entscheide zu staatlichen Beihilfen (State Aid, SA-Faelle) mit Entscheiddatum",
-    "url": "https://competition-cases.ec.europa.eu/search?caseInstrument=SA",
-    "domain": "competition-cases.ec.europa.eu",
+    "url": "https://ec.europa.eu/commission/presscorner/api/search?language=en&documenttype=1",
+    "domain": "ec.europa.eu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Beihilfeentscheide (Genehmigung von Bankenrettungen, Rueckforderungen bei Steuervorteilen) aendern Kapitalbedarf und Steuerlast der Empfaenger; Haeufungen koennen europaeische Finanzwerte und EWU kurzfristig bewegen.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Ergaenzt eu_wettbewerbsentscheide (nur Fusion und Kartell) um das Instrument Beihilfe; unabhaengige Fallart. HTTP 200 geprueft.",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Ergaenzt eu_wettbewerbsentscheide (nur Fusion und Kartell) um das Instrument Beihilfe; unabhaengige Fallart. HTTP 200 geprueft. | Aufgenommen 2026-11-18T16:22Z: Quelle statt competition-cases.ec.europa.eu (Fallregister, Entscheiddatum nicht Bekanntgabetag) die Press-Corner-API wie eu_wettbewerbsentscheide, dort sind Beihilfen ausgeschlossen, also kein Doppel (K6). K1 taeglich (Zaehlung je Kalendertag, 0 = keine Mitteilung); K2 ab 1985-01-01 (erste Beihilfe-IP 1986), 15296 Zeilen, Langzeit-Familie; K3 ohne Login/Schluessel, Inhalte frei weiterverwendbar (Beschluss 2011/833/EU); K4 Datum = eventDate der Veroeffentlichung, Archiv nicht nachgetragen, verfuegbar 0; K5 letzter Wert 2026-11-17; K7 CSV je ~35 kB, eigener Cache 6 MB (erstmals aus dem vollstaendigen Cache derselben API kopiert), Abruf 21 s. Pruefung: genehmigungen 15296 Zeilen 1985-01-01..2026-11-17, Median-Abstand 1, gleiche Folgewerte 85.8% (strukturell: seltene Ereignisse, 1275 Tage mit Meldung), Min 0 Max 10, Summe 1988; pruefungen 15296 Zeilen, Median-Abstand 1, gleiche Folgewerte 92.5% (strukturell, 625 Tage mit Meldung, 460 davon vor 2016), Min 0 Max 6, Summe 868. Zuordnung per Titelregeln im Skript (Stichprobe von je 8 Titeln korrekt). Zwei Reihen, die Verschiedenes messen (Genehmigung = Entlastung, Pruefung/Rueckforderung = Belastung der Empfaenger). Paarvorschlag fuer Reto: keiner.",
+    "reihen": [
+      "genehmigungen",
+      "pruefungen"
+    ],
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-18T16:22Z"
   },
   {
     "id": "b3_ibovespa_rebalancing_termine",
