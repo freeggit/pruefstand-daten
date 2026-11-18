@@ -1,5 +1,5 @@
 {
- "kumuliert": 782275,
+ "kumuliert": 787044,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -318,6 +318,7 @@
   "neu_boe_sonia_sonia_d5",
   "neu_boe_sonia_sonia_stand",
   "neu_boe_sonia_sonia_z252",
+  "neu_boeing_bestellungen_auslieferungen_auslieferungen_meldung_stand",
   "neu_boj_call_rate_call_rate_d1",
   "neu_boj_call_rate_call_rate_d20",
   "neu_boj_call_rate_call_rate_d5",
@@ -383,6 +384,16 @@
   "neu_clinicaltrials_ergebnisse_ergebnisse_phase3_d5",
   "neu_clinicaltrials_ergebnisse_ergebnisse_phase3_stand",
   "neu_clinicaltrials_ergebnisse_ergebnisse_phase3_z252",
+  "neu_consob_leerverkaeufe_meldungen_d1",
+  "neu_consob_leerverkaeufe_meldungen_d20",
+  "neu_consob_leerverkaeufe_meldungen_d5",
+  "neu_consob_leerverkaeufe_meldungen_stand",
+  "neu_consob_leerverkaeufe_meldungen_z252",
+  "neu_consob_leerverkaeufe_neue_positionen_d1",
+  "neu_consob_leerverkaeufe_neue_positionen_d20",
+  "neu_consob_leerverkaeufe_neue_positionen_d5",
+  "neu_consob_leerverkaeufe_neue_positionen_stand",
+  "neu_consob_leerverkaeufe_neue_positionen_z252",
   "neu_cpsc_ruckrufe_ruckrufe_d1",
   "neu_cpsc_ruckrufe_ruckrufe_d20",
   "neu_cpsc_ruckrufe_ruckrufe_d5",
@@ -393,6 +404,12 @@
   "neu_dax_indexaenderungen_anzahl_aenderungen_d5",
   "neu_dax_indexaenderungen_anzahl_aenderungen_stand",
   "neu_dax_indexaenderungen_anzahl_aenderungen_z252",
+  "neu_djia_indexaenderungen_aufnahmen_d1",
+  "neu_djia_indexaenderungen_aufnahmen_d20",
+  "neu_djia_indexaenderungen_aufnahmen_d5",
+  "neu_djia_indexaenderungen_aufnahmen_stand",
+  "neu_djia_indexaenderungen_aufnahmen_z252",
+  "neu_eba_stresstest_termine_ergebnisse_stand",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d1",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d20",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d5",
@@ -476,6 +493,7 @@
   "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_d5",
   "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_stand",
   "neu_fed_h2_bankantraege_genehmigungen_anzahl_bekanntgaben_z252",
+  "neu_fed_humphrey_hawkins_anhoerungen_erste_anhoerung_stand",
   "neu_fed_pressemitteilungen_regulierung_regulierung_d1",
   "neu_fed_pressemitteilungen_regulierung_regulierung_d20",
   "neu_fed_pressemitteilungen_regulierung_regulierung_d5",
@@ -822,6 +840,11 @@
   "neu_kalender_ereignisse_ustax_stand",
   "neu_leitzins_aenderungstage_ezb_stand",
   "neu_leitzins_aenderungstage_fomc_stand",
+  "neu_mhra_arzneimittel_sicherheitswarnungen_arzneimittel_rueckrufe_d1",
+  "neu_mhra_arzneimittel_sicherheitswarnungen_arzneimittel_rueckrufe_d20",
+  "neu_mhra_arzneimittel_sicherheitswarnungen_arzneimittel_rueckrufe_d5",
+  "neu_mhra_arzneimittel_sicherheitswarnungen_arzneimittel_rueckrufe_stand",
+  "neu_mhra_arzneimittel_sicherheitswarnungen_arzneimittel_rueckrufe_z252",
   "neu_mof_jgb_zinsen_kurz_d1",
   "neu_mof_jgb_zinsen_kurz_d20",
   "neu_mof_jgb_zinsen_kurz_d5",
@@ -2025,9 +2048,15 @@
    "datei": "suche/S0071.json",
    "kandidaten": 443682,
    "in_db": false
+  },
+  {
+   "nr": 72,
+   "datei": "suche/S0072.json",
+   "kandidaten": 448451,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-17T15:55Z",
+ "letzter_suchlauf_utc": "2026-11-18T16:01Z",
  "pruefung_lernrunde_utc": "2026-11-18T09:50:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2495,11 +2524,19 @@
    "ergebnis_hash": "d472b4a914ab7213",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261118T133228Z.json",
+   "lauf_id": "L20261118T133228Z",
+   "s_dokument": "suche/S0072.json",
+   "ergebnis_hash": "05799f64ced1245b",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-17T15:55Z",
- "letztes_vollarchiv": "suche/S0071_alle.csv.gz",
- "letzter_ergebnis_hash": "d472b4a914ab7213",
+ "letzter_lauf_utc": "2026-11-18T16:01Z",
+ "letztes_vollarchiv": "suche/S0072_alle.csv.gz",
+ "letzter_ergebnis_hash": "05799f64ced1245b",
  "konflikte": [
   {
    "wo": "index",
@@ -4734,10 +4771,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 366,
-  "neu_in_diesem_lauf": 6
+  "grundreihen_n": 373,
+  "neu_in_diesem_lauf": 7
  },
- "letztes_vollarchiv_ergebnis_hash": "d472b4a914ab7213",
+ "letztes_vollarchiv_ergebnis_hash": "05799f64ced1245b",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261116T132647Z",
@@ -4755,7 +4792,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "36f813833b330569",
- "letzter_gueltiger_lauf": "L20261117T135650Z",
- "letzter_entscheidung_hash": "b166abed6e9e6658"
+ "letzter_eingabe_hash": "b2bf2a738dd05539",
+ "letzter_gueltiger_lauf": "L20261118T133228Z",
+ "letzter_entscheidung_hash": "29394c251a56bda3"
 }

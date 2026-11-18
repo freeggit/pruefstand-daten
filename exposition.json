@@ -175,6 +175,12 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_boeing_bestellungen_auslieferungen_auslieferungen_meldung": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261118T133228Z",
+   "erst_zeit": "2026-11-18T16:01Z",
+   "beleg": "suche/laeufe/L20261118T133228Z.json"
+  },
   "neu_boj_call_rate_call_rate": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -277,6 +283,18 @@
    "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
    "beleg": "suche/S0018_alle.csv.gz"
   },
+  "neu_consob_leerverkaeufe_meldungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261118T133228Z",
+   "erst_zeit": "2026-11-18T16:01Z",
+   "beleg": "suche/laeufe/L20261118T133228Z.json"
+  },
+  "neu_consob_leerverkaeufe_neue_positionen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261118T133228Z",
+   "erst_zeit": "2026-11-18T16:01Z",
+   "beleg": "suche/laeufe/L20261118T133228Z.json"
+  },
   "neu_cpsc_ruckrufe_ruckrufe": {
    "erst_dokument": "S0013",
    "erst_lauf": null,
@@ -288,6 +306,18 @@
    "erst_lauf": "L20261116T132647Z",
    "erst_zeit": "2026-11-16T16:27Z",
    "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_djia_indexaenderungen_aufnahmen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261118T133228Z",
+   "erst_zeit": "2026-11-18T16:01Z",
+   "beleg": "suche/laeufe/L20261118T133228Z.json"
+  },
+  "neu_eba_stresstest_termine_ergebnisse": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261118T133228Z",
+   "erst_zeit": "2026-11-18T16:01Z",
+   "beleg": "suche/laeufe/L20261118T133228Z.json"
   },
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet": {
    "erst_dokument": null,
@@ -420,6 +450,12 @@
    "erst_lauf": "L20261113T124343Z",
    "erst_zeit": "2026-11-13T15:59Z",
    "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
+  "neu_fed_humphrey_hawkins_anhoerungen_erste_anhoerung": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261118T133228Z",
+   "erst_zeit": "2026-11-18T16:01Z",
+   "beleg": "suche/laeufe/L20261118T133228Z.json"
   },
   "neu_fed_pressemitteilungen_regulierung_regulierung": {
    "erst_dokument": null,
@@ -888,6 +924,12 @@
    "erst_lauf": null,
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_mhra_arzneimittel_sicherheitswarnungen_arzneimittel_rueckrufe": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261118T133228Z",
+   "erst_zeit": "2026-11-18T16:01Z",
+   "beleg": "suche/laeufe/L20261118T133228Z.json"
   },
   "neu_mof_jgb_zinsen_kurz": {
    "erst_dokument": "S0009",
@@ -2204,8 +2246,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261117T135650Z",
-  "zeit_utc": "2026-11-17T15:55Z",
-  "grundreihen_n": 366
+  "lauf_id": "L20261118T133228Z",
+  "zeit_utc": "2026-11-18T16:01Z",
+  "grundreihen_n": 373
  }
 }
