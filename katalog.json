@@ -4090,13 +4090,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-16T16:08Z"
+    "geprueft_utc": "2026-11-18T04:25Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -4623,9 +4623,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
     "status": "fehler",
-    "geprueft_utc": "2026-11-16T16:08Z"
+    "geprueft_utc": "2026-11-18T04:25Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -5576,10 +5576,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Kartellverfahren gegen grosse Firmen aendern kurzfristig Erwartungen an Fusionen und Margen in Technologie und Gesundheit; unabhaengige Messung desselben Mechanismus wie EU-Kartellentscheide.",
-    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T04:25Z: weiter Bot-Pruefseite (bm-verify, 2.3 KB); nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-16T12:10Z",
+    "geprueft_utc": "2026-11-18T04:25Z",
     "prioritaet": "tief"
   },
   {
@@ -6169,14 +6169,39 @@
     "url": "https://www.consob.it/web/area-pubblica/pnc",
     "domain": "www.consob.it",
     "bereich": "Firmenereignisse",
-    "status": "fehler",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Neue oeffentliche Leerverkaufspositionen in italienischen Aktien (v.a. Banken) als Signal informierter Haendler; kurzfristig relevant fuer Finanzwerte Europa (XLF-Gegenstueck, EWI).",
-    "grund": "Test 2026-11-16T04:20Z: Seite /web/area-pubblica/pnc erreichbar (HTTP 200), Datei PncPubbl.xlsx liefert aber eine Radware-Captcha-Seite statt der Datei (Bot-Sperre wie 403); nicht umgangen, naechster Lauf erneut. Hinweis: robots.txt Crawl-delay 3200 s; Datei enthaelt laut Seite aktuelle und spaeter geaenderte Positionen (Historie-Blatt), Beginn Nov. 2012 (EU-SSR 236/2012) - K2 erst nach Pruefung der Historie belegt. | Test 2026-11-17T08:17Z: Seite HTTP 200, Datei nicht erneut geprueft (Captcha-Befund vom Vorlauf unveraendert angenommen); naechster Lauf erneut.",
-    "reihen": [],
+    "grund": "Test 2026-11-16T04:20Z: Seite /web/area-pubblica/pnc erreichbar (HTTP 200), Datei PncPubbl.xlsx liefert aber eine Radware-Captcha-Seite statt der Datei (Bot-Sperre wie 403); nicht umgangen, naechster Lauf erneut. Hinweis: robots.txt Crawl-delay 3200 s; Datei enthaelt laut Seite aktuelle und spaeter geaenderte Positionen (Historie-Blatt), Beginn Nov. 2012 (EU-SSR 236/2012) - K2 erst nach Pruefung der Historie belegt. | Test 2026-11-17T08:17Z: Seite HTTP 200, Datei nicht erneut geprueft (Captcha-Befund vom Vorlauf unveraendert angenommen); naechster Lauf erneut. | Test 2026-11-18T04:25Z: Datei PncPubbl.xlsx jetzt ohne Captcha abrufbar (HTTP 200, 760 KB xlsx, robots.txt Crawl-delay 3 s, 2 Anfragen je Lauf). Blaetter Correnti+Storiche, 25706 Meldungen, Positionsdatum ab 2012-08-30 (K2 erfuellt), Stand 'Pubb. Data' 17/11/2026, letzte Position 2026-11-16 (K5). K1 Tageszaehlung mit 0 an Tagen ohne Meldung, K4 Einzelmeldungen nicht revidiert (verspaetete Meldungen koennen alten Tag erhoehen, im meta vermerkt), K7 3 s. Anteil gleicher Folgewerte 0.23 bzw. 0.48 durch Nullen an Wochenenden (Ereigniszaehlung, erwartet). Min 0, Max 30 plausibel. Datum = Positionsdatum, Publikation bis 15:30 Folgehandelstag (Art. 9 VO 236/2012), verfuegbar_nach_tagen 4. AKTIV: meldungen, neue_positionen (2 Reihen, Zusatz 3 eingehalten). Paarvorschlag fuer Reto: neue_positionen gegen Banken Italien/Europa (EWI, XLF). | Hinweis 2026-11-18T04:35Z: dritter Abruf binnen 15 min (zweiter run_all-Durchlauf) lieferte wieder die Radware-Captcha-Seite (15 KB HTML); Skript bricht ab, Dateien vom ersten Abruf stehen, Fehler im Manifest. Sperre offenbar ratenabhaengig; nicht umgangen. Bleibt aktiv; liefert die Quelle in den naechsten Laeufen dauerhaft Captcha, auf fehler setzen.",
+    "reihen": [
+      "meldungen",
+      "neue_positionen"
+    ],
     "aufgenommen_utc": "2026-11-16T04:20Z",
-    "geprueft_utc": "2026-11-16T04:20Z",
-    "herkunft": "eigene Recherche"
+    "geprueft_utc": "2026-11-18T04:25Z",
+    "herkunft": "eigene Recherche",
+    "pruefung": {
+      "meldungen": {
+        "zeilen": 5192,
+        "erste": "2012-08-30",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.233,
+        "min": 0,
+        "max": 30,
+        "tage_mit_ereignis": 3561
+      },
+      "neue_positionen": {
+        "zeilen": 5192,
+        "erste": "2012-08-30",
+        "letzte": "2026-11-16",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.477,
+        "min": 0,
+        "max": 30,
+        "tage_mit_ereignis": 2097
+      }
+    }
   },
   {
     "id": "calfire_waldbraende",

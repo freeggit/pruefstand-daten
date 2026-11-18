@@ -1,0 +1,20 @@
+{
+  "meldungen": {
+    "beschreibung": "Anzahl oeffentlicher Netto-Leerverkaufsmeldungen in italienischen Aktien je Positionsdatum (Schwellen 0,5 % und je 0,1 % darueber sowie Unterschreiten von 0,5 %), Blaetter Correnti und Storiche, Doppel entfernt",
+    "einheit": "Anzahl Meldungen",
+    "publikation": "taeglich: Meldepflicht bis 15:30 Uhr des folgenden Handelstags nach Positionsdatum, Consob veroeffentlicht die Meldungen danach in PncPubbl.xlsx (Art. 9 Abs. 2 VO (EU) 236/2012; Blatt 'Pubb. Data' nennt den Stand); 4 Tage decken Wochenende und Aktualisierungsstand ab",
+    "quelle_url": "https://www.consob.it/web/area-pubblica/pnc",
+    "revidiert": "nein: Meldungen sind Einzelangaben mit Positionsdatum; neue Meldungen kommen hinzu, alte werden nicht geaendert. Verspaetete Meldungen koennen einen vergangenen Tag nachtraeglich erhoehen.",
+    "verdichtung": "Anzahl Meldungen je Kalendertag (Positionsdatum), 0 an Tagen ohne Meldung",
+    "verfuegbar_nach_tagen": 4
+  },
+  "neue_positionen": {
+    "beschreibung": "Anzahl Meldungen, mit denen ein Halter in einer italienischen Aktie erstmals oder nach Unterschreiten wieder 0,5 % netto leer verkauft ist",
+    "einheit": "Anzahl Meldungen",
+    "publikation": "taeglich: Meldepflicht bis 15:30 Uhr des folgenden Handelstags nach Positionsdatum, Consob veroeffentlicht die Meldungen danach in PncPubbl.xlsx (Art. 9 Abs. 2 VO (EU) 236/2012; Blatt 'Pubb. Data' nennt den Stand); 4 Tage decken Wochenende und Aktualisierungsstand ab",
+    "quelle_url": "https://www.consob.it/web/area-pubblica/pnc",
+    "revidiert": "nein: Meldungen sind Einzelangaben mit Positionsdatum; neue Meldungen kommen hinzu, alte werden nicht geaendert. Verspaetete Meldungen koennen einen vergangenen Tag nachtraeglich erhoehen.",
+    "verdichtung": "Anzahl neuer Positionen je Kalendertag (Positionsdatum), 0 an Tagen ohne",
+    "verfuegbar_nach_tagen": 4
+  }
+}
