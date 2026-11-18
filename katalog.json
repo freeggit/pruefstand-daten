@@ -5001,9 +5001,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Massnahmen gegen kleinere und regionale Banken zeigen Kredit- und Kontrollprobleme im Bankensektor; ihre Häufung kann Finanzwerte (XLF) kurzfristig belasten.",
-    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: orders.fdic.gov weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: orders.fdic.gov weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Dritte Aufsichtsbehörde neben Fed und OCC; deckt state non-member banks ab. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: orders.fdic.gov keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. Hinweis: FDIC veröffentlicht Massnahmen gesammelt einmal monatlich (letzter Freitag) – als Datum dann der Veröffentlichungstag. | Test 2026-11-13T00:18Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: orders.fdic.gov weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: orders.fdic.gov weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: orders.fdic.gov weiterhin keine Verbindung (curl Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-17T08:17Z"
+    "geprueft_utc": "2026-11-18T08:15Z"
   },
   {
     "id": "osha_todesfaelle_meldungen",
@@ -5014,9 +5014,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
-    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-17T08:17Z"
+    "geprueft_utc": "2026-11-18T08:15Z"
   },
   {
     "id": "epa_echo_vollzugsfaelle",
@@ -5040,9 +5040,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
-    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-17T08:17Z"
+    "geprueft_utc": "2026-11-18T08:15Z"
   },
   {
     "id": "fra_bahnunfaelle_taeglich",
@@ -5462,10 +5462,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Haeufungen von Orphan-Designationen und -Zulassungen veraendern kurzfristig die Erwartungen an Biotech-Pipelines und koennen IBB/XLV gegenueber dem Weltindex bewegen.",
-    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen. | Test 2026-11-15T00:10Z: accessdata.fda.gov leitet weiterhin um (HTTP 302, Missbrauchserkennung); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: accessdata.fda.gov leitet weiterhin auf abuse-detection-apology um (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: accessdata.fda.gov weiterhin Umleitung auf abuse-detection-apology (404); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen. | Test 2026-11-15T00:10Z: accessdata.fda.gov leitet weiterhin um (HTTP 302, Missbrauchserkennung); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: accessdata.fda.gov leitet weiterhin auf abuse-detection-apology um (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: accessdata.fda.gov weiterhin Umleitung auf abuse-detection-apology (404); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: accessdata.fda.gov weiterhin Umleitung auf abuse-detection-apology (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-17T08:17Z",
+    "geprueft_utc": "2026-11-18T08:15Z",
     "prioritaet": "hoch"
   },
   {
@@ -6722,5 +6722,61 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-17T10:00Z",
     "geprueft_utc": "2026-11-18T00:25Z"
+  },
+  {
+    "id": "afm_leerverkaeufe",
+    "name": "AFM Niederlande: Register netto shortposities (historie + actueel), Tageszaehlung",
+    "url": "https://www.afm.nl/en/sector/registers/meldingenregisters/netto-shortposities-historie",
+    "domain": "afm.nl",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "hoch",
+    "mechanismus": "Haeufung neuer Leerverkaufspositionen in niederlaendischen Aktien zeigt negative Informationshaendler-Erwartung und koennte EWN kurzfristig gegenueber dem Weltindex belasten (analog consob_leerverkaeufe).",
+    "grund": "Test 2026-11-18T08:15Z: CSV-Export ohne Login (robots.txt erlaubt), 21915 Meldungen ab 2012-11-01 bis 2026-11-16, Skript lief in 2 s (5129 Tage, meldungen min 0 max 39, Anteil gleicher Folgewerte 24 % wegen Wochenenden). Abgelehnt K4: Register ist nicht punktgenau, Emittenten nach Delisting werden rueckwirkend entfernt (0 Treffer fuer Gemalto, Delta Lloyd, Wessanen, Accell, Intertrust, Altice, Unilever N.V., Royal Dutch Shell, die nachweislich leer verkauft waren) = Survivorship, alte Tageszaehlungen sinken nachtraeglich. Gegenprobe consob_leerverkaeufe: dort bleiben delistete Emittenten (Autogrill, Banca Carige, Credito Valtellinese, Cerved, EI Towers) enthalten, also nicht betroffen. Dateien nicht abgelegt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-18T08:15Z",
+    "geprueft_utc": "2026-11-18T08:15Z"
+  },
+  {
+    "id": "afm_substantiele_deelnemingen",
+    "name": "AFM Niederlande: Register substantiele deelnemingen (Stimmrechtsmeldungen), Tageszaehlung",
+    "url": "https://www.afm.nl/en/sector/registers/meldingenregisters/substantiele-deelnemingen",
+    "domain": "afm.nl",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Aufbau grosser Beteiligungen (Aktivisten, Uebernahmeinteresse) in niederlaendischen Firmen zeigt Nachfrage und koennte EWN kurzfristig gegenueber dem Weltindex stuetzen.",
+    "grund": "Test 2026-11-18T08:15Z: CSV-Export ohne Login, 308798 Zeilen (23200 Meldungen nach Datum/Emittent/Melder) ab 2006-11-01, Abruf 29 s. Abgelehnt K4: wie afm_leerverkaeufe fehlen delistete Emittenten rueckwirkend (Nutreco, Ziggo, Gemalto, Corio, TNT, Royal Dutch Shell, Unilever N.V.); fruehe Jahre nur rund 200 Meldungen je Jahr = Survivorship. Zudem Datum = Tag der Meldepflicht, nicht der Veroeffentlichung.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-18T08:15Z",
+    "geprueft_utc": "2026-11-18T08:15Z"
+  },
+  {
+    "id": "afm_mar19_leidinggevenden",
+    "name": "AFM Niederlande: Register transacties leidinggevenden (MAR Art. 19, Directors Dealings)",
+    "url": "https://www.afm.nl/en/sector/registers/meldingenregisters/transacties-leidinggevenden-mar19-",
+    "domain": "afm.nl",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Haeufung von Eigengeschaeften der Fuehrungskraefte koennte Informationsvorsprung zu niederlaendischen Firmen (EWN) anzeigen.",
+    "grund": "Test 2026-11-18T08:15Z: CSV/XML-Export ohne Login, 9607 Meldungen ab 2005-12-31. Abgelehnt: Export enthaelt weder Kauf/Verkauf noch Betrag (nur Transaktionsdatum, Emittent, Person, Funktion), Datum = Transaktionsdatum statt Veroeffentlichung (Meldefrist 3 Geschaeftstage), und vor 2016 nur 1 bis 112 Meldungen je Jahr (Bestand lueckenhaft, vermutlich Survivorship wie die anderen AFM-Register). Ohne Richtung kein klarer Mechanismus.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-18T08:15Z",
+    "geprueft_utc": "2026-11-18T08:15Z"
+  },
+  {
+    "id": "bafin_directors_dealings",
+    "name": "BaFin Datenbank Eigengeschaefte von Fuehrungskraeften (Directors Dealings)",
+    "url": "https://portal.mvp.bafin.de/database/DealingsInfo/sucheForm.do",
+    "domain": "portal.mvp.bafin.de",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Insiderkaeufe deutscher Fuehrungskraefte zeigen Informationsvorsprung und koennten EWG kurzfristig gegenueber dem Weltindex bewegen.",
+    "grund": "Test 2026-11-18T08:15Z: Suchmaske erreichbar (HTTP 200, Gesamtzeitraum waehlbar), aber robots.txt von portal.mvp.bafin.de verbietet jeden automatischen Abruf (User-agent: * Disallow: /) = K3 nicht erfuellt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-18T08:15Z",
+    "geprueft_utc": "2026-11-18T08:15Z"
   }
 ]
