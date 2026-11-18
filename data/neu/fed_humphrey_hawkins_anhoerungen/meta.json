@@ -1,0 +1,12 @@
+{
+ "erste_anhoerung": {
+  "einheit": "0/1",
+  "beschreibung": "1 = erster Anhoerungstag des Fed-Vorsitzes zum halbjaehrlichen Monetary Policy Report im US-Kongress (Senat oder Repraesentantenhaus), sonst 0; ab 1996-03-01",
+  "quelle_url": "https://www.federalreserve.gov/monetarypolicy/publications/mpr_default.htm",
+  "verdichtung": "keine (Ereignistag)",
+  "verfuegbar_nach_tagen": 0,
+  "revidiert": false,
+  "publikation": "taeglich: Testimony wird am Anhoerungstag auf federalreserve.gov veroeffentlicht; der Anhoerungstermin wird vom Kongressausschuss vorab angekuendigt",
+  "status": "aktiv"
+ }
+}
