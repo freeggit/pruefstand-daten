@@ -7034,13 +7034,13 @@
     "url": "https://www.boj.or.jp/en/statistics/boj/index.htm",
     "domain": "www.boj.or.jp",
     "bereich": "Staat und Geldmarkt",
-    "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Fachliteratur: Barbon und Gianinazzi (2019, Review of Asset Pricing Studies), Harada und Okimoto (2021). Veröffentlicht, Programm im März 2024 beendet; Historie 2010 bis 2020 nutzbar. URL-Idee: Unterseite «Purchases of ETFs and J-REITs» (Kauftage und Beträge, Tagesdatum, Veröffentlichung am selben Abend). Pfad der Unterseite noch suchen; Statistikseite HTTP 200.",
+    "status": "abgelehnt",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Fachliteratur: Barbon und Gianinazzi (2019, Review of Asset Pricing Studies), Harada und Okimoto (2021). Veröffentlicht, Programm im März 2024 beendet; Historie 2010 bis 2020 nutzbar. URL-Idee: Unterseite «Purchases of ETFs and J-REITs» (Kauftage und Beträge, Tagesdatum, Veröffentlichung am selben Abend). Pfad der Unterseite noch suchen; Statistikseite HTTP 200. | Lauf 2026-11-19T12:30Z: K5 nicht erfuellt. BoJ fuehrt die Reihe «Purchases of ETFs and J-REITs (Discontinued on March 19, 2024)» nur noch als Archiv (https://www.boj.or.jp/en/statistics/boj/fm/ope/etf/pastetfreit.zip); keine Fortschreibung. Historie nicht abgelegt. Vorschlag an Reto: falls eine 0/1-Reihe mit belegtem Programmende (Beschluss 19.3.2024, danach 0) zulaessig ist, als Ausnahme freigeben.",
     "mechanismus": "Die BoJ kaufte ETFs vor allem an Tagen, an denen der TOPIX am Vormittag um mehr als 0.5% fiel; diese Käufe stützten japanische Aktien (EWJ) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-19T12:30Z"
   },
   {
     "id": "fda_import_alerts",
@@ -7048,13 +7048,13 @@
     "url": "https://www.accessdata.fda.gov/cms_ia/ialist.html",
     "domain": "www.accessdata.fda.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Firmenereignis-Typ, kein Doppel zu fda_warning_letters (andere Massnahme). Liste offen, HTTP 200; Datum je Alert «Date Published» bzw. «Last Updated» prüfen (K4).",
+    "status": "fehler",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Firmenereignis-Typ, kein Doppel zu fda_warning_letters (andere Massnahme). Liste offen, HTTP 200; Datum je Alert «Date Published» bzw. «Last Updated» prüfen (K4). | Lauf 2026-11-19T12:30Z: www.accessdata.fda.gov/cms_ia/ialist.html leitet auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung), wie bei fda_orphan_designationen. Sperre nicht umgangen (Befund), naechster Lauf erneut.",
     "mechanismus": "Einfuhrsperren gegen Arzneimittel- und Lebensmittelwerke (oft Indien, China) unterbrechen Lieferketten von Pharma und Nahrung und können XLV, IBB und DBA kurzfristig gegenüber dem Weltindex bewegen.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-19T12:30Z"
   },
   {
     "id": "swissmedic_neuzulassungen",
@@ -7062,13 +7062,13 @@
     "url": "https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/authorisations/new-medicines.html",
     "domain": "www.swissmedic.ch",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Behörde zu fda_zulassungen und ema_zulassungsentscheide. Seite HTTP 200; Liste als Excel mit Zulassungsdatum prüfen; Historie vermutlich ab 2010er (K2 prüfen).",
+    "status": "abgelehnt",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Behörde zu fda_zulassungen und ema_zulassungsentscheide. Seite HTTP 200; Liste als Excel mit Zulassungsdatum prüfen; Historie vermutlich ab 2010er (K2 prüfen). | Lauf 2026-11-19T12:30Z: K2 nicht erfuellt. Seite «Neu zugelassene Humanarzneimittel» fuehrt rollierend nur rund 20 Monate (erster Eintrag 14.02.2025, 71 Daten), kein Archiv mit Tagesdatum gefunden. Alternative (Präparateliste mit Erstzulassungsdatum) ist ein Monatsabzug, Veroeffentlichungstag nicht belegt (K4).",
     "mechanismus": "Zulassungen in der Schweiz betreffen oft Roche und Novartis, die den Schweizer Index stark gewichten; Häufungen können EWL und XLV kurzfristig gegenüber dem Weltindex bewegen.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-19T12:30Z"
   },
   {
     "id": "pmda_japan_zulassungen",
@@ -7076,13 +7076,13 @@
     "url": "https://www.pmda.go.jp/english/review-services/reviews/approved-information/drugs/0001.html",
     "domain": "www.pmda.go.jp",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Behörde, Zielmarkt Japan. Englische Liste HTTP 200, Genehmigungstage gebündelt (wenige Tage je Jahr), Historie ab 2004 prüfen.",
+    "status": "abgelehnt",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Behörde, Zielmarkt Japan. Englische Liste HTTP 200, Genehmigungstage gebündelt (wenige Tage je Jahr), Historie ab 2004 prüfen. | Lauf 2026-11-19T12:30Z: K5 und Format. «List of Approved Products» ist ein einziges PDF (April 2004 bis Februar 2026, /files/000281190.pdf), nur periodisch nachgefuehrt (letzter Wert > 10 Tage) und ohne Standardbibliothek nicht lesbar; die Seite 0001.html listet nur uebersetzte Review-Reports (Teilmenge).",
     "mechanismus": "Genehmigungen in Japan betreffen japanische Pharmafirmen (Takeda, Daiichi, Astellas) und können EWJ und XLV kurzfristig gegenüber dem Weltindex bewegen.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-19T12:30Z"
   },
   {
     "id": "accc_produktrueckrufe_australien",
@@ -7091,12 +7091,12 @@
     "domain": "www.productsafety.gov.au",
     "bereich": "Firmenereignisse",
     "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Replikation von cpsc_ruckrufe (S0072: sprung_auf -> ff_durbl 1 Tag, t 3.71 unter Hürde 4.41; Regel L1). Unabhängige Behörde, gleicher Mechanismus. Seite HTTP 200; Rückrufdatum je Eintrag, Historie prüfen.",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Replikation von cpsc_ruckrufe (S0072: sprung_auf -> ff_durbl 1 Tag, t 3.71 unter Hürde 4.41; Regel L1). Unabhängige Behörde, gleicher Mechanismus. Seite HTTP 200; Rückrufdatum je Eintrag, Historie prüfen. | Lauf 2026-11-19T12:30Z: /recalls HTTP 200, 8278 Eintraege auf 332 Seiten, Liste wird aber per Drupal-AJAX nachgeladen («Loading content…»), im HTML keine Eintraege/Daten; Facetten-URLs sind laut robots.txt gesperrt. Naechster Schritt: Views-AJAX-Endpunkt oder Detailseiten (/search-product-recalls/...) mit Datum pruefen; 332 Seiten passen knapp in 180 s, sonst in Etappen.",
     "mechanismus": "Rückrufe von Fahrzeugen, Geräten und Konsumgütern treffen globale Hersteller langlebiger Güter und können Konsum- und Industriewerte (XLY, ff_durbl) kurzfristig gegenüber dem Weltindex belasten.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-19T12:30Z"
   },
   {
     "id": "tga_australien_arzneimittel_rueckrufe",
