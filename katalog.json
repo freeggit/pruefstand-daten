@@ -6897,12 +6897,47 @@
     "url": "https://www.b3.com.br/en_us/market-data-and-indices/indices/broad-indices/ibovespa.htm",
     "domain": "www.b3.com.br",
     "bereich": "Kalender-Ereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "An den Neugewichtungsterminen des Ibovespa schichten Indexfonds um; der Nachfragedruck kann EWZ gegenueber dem Weltindex rund um den Stichtag kurzfristig verschieben.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_russell_rebalance_termine und msci_index_review_termine in einem Schwellenland mit eigenem Ziel (EWZ). Termine nach Regelwerk ableitbar. HTTP 200 geprueft.",
-    "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "grund": "Alle Kriterien erfuellt (Lauf 2026-11-19T00:12Z). Deterministische 0/1-Kalenderreihe nach B3-Regelwerk, kein externer Abruf: Vier-Monats-Zyklen Jan/Mai/Sep; Stichtag bis Mai 2011 erster Handelstag, ab Sep 2011 erster Montag bzw. naechster Handelstag (BM&FBOVESPA-Mitteilung 2011, B3 Record of Changes to Index Methodologies, Mondo Visione 2011: Carteira gueltig ab 5.9.2011). Vorschauen: 1. erster Handelstag Dez/Apr/Aug, 3. letzter Handelstag dieses Monats (Abgleich Zyklus Sep-Dez 2026: Vorschauen 3.8., 17.8., 31.8.2026, Stichtag 8.9.2026, da 7.9. Feiertag - alle getroffen). 2. Vorschau nicht abgelegt (Zusatz 3, hoechstens 3 Reihen). Beginn 2011-01-01 (fruehere Regel nicht belegt, nichts erfunden), 47-48 Ereignistage je Reihe, verfuegbar_nach_tagen 0. Anteil gleicher Folgewerte ~99% ist bei 0/1-Ereignisreihen erwartet. Einschraenkung: B3-Feiertage nach Bundesregel nachgebildet (Karneval, Karfreitag, Fronleichnam, 20.11. ab 2024, 24.12., letzter Werktag des Jahres); Sonderschliessungen nicht erfasst. | Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_russell_rebalance_termine und msci_index_review_termine in einem Schwellenland mit eigenem Ziel (EWZ). Termine nach Regelwerk ableitbar. HTTP 200 geprueft.",
+    "reihen": [
+      {
+        "reihe": "stichtag",
+        "zeilen": 5802,
+        "erste": "2011-01-01",
+        "letzte": "2026-11-19",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9835,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 48
+      },
+      {
+        "reihe": "erste_vorschau",
+        "zeilen": 5802,
+        "erste": "2011-01-01",
+        "letzte": "2026-11-19",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9838,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 47
+      },
+      {
+        "reihe": "letzte_vorschau",
+        "zeilen": 5802,
+        "erste": "2011-01-01",
+        "letzte": "2026-11-19",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.9838,
+        "min": 0.0,
+        "max": 1.0,
+        "ereignistage": 47
+      }
+    ],
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-19T00:12Z"
   },
   {
     "id": "romer_geldpolitik_schocks",
@@ -6910,12 +6945,13 @@
     "url": "https://eml.berkeley.edu/~dromer/ (Datensaetze zu Romer und Romer 1989 und 2004)",
     "domain": "eml.berkeley.edu",
     "bereich": "Staat und Geldmarkt",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Narrativ bestimmte Tage, an denen die Fed bewusst zur Inflationsbekaempfung straffte, sind unerwartete Zinsschocks; sie koennen Anleihen (TLT, IEF) und zinssensitive Sektoren (ff_utils, ff_money) kurzfristig bewegen.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Fachliteratur (Romer und Romer 1989, AER 2004), veroeffentlicht, daher evtl. abgeschwaecht. Historie vor 1990 fuer Familie L. HTTP 200 geprueft.",
+    "grund": "K5 und Vorwissen: abgeschlossener Forschungsdatensatz (Romer und Romer 1989/2004, Schocktage bis etwa 1996, nicht fortgeschrieben); Einstufung als Schock erfolgte nachtraeglich aus spaeter veroeffentlichten FOMC-Protokollen, also aus spaeterem Wissen - widerspricht 'Ereignisse nie aus spaeterem Wissen rueckdatieren'. Die Sitzungstage selbst liegen schon in kalender_ereignisse:fomc_sitzung und leitzins_aenderungstage:fomc (K6). (Lauf 2026-11-19T00:12Z) | Lernrunde 2026-11-18 (Vorrat auf 15). Fachliteratur (Romer und Romer 1989, AER 2004), veroeffentlicht, daher evtl. abgeschwaecht. Historie vor 1990 fuer Familie L. HTTP 200 geprueft.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-19T00:12Z"
   },
   {
     "id": "romer_steuergesetze_unterzeichnung",
@@ -6923,12 +6959,13 @@
     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.100.3.763 (Datenanhang, frei)",
     "domain": "www.aeaweb.org",
     "bereich": "Staat",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Unterzeichnung und Ankuendigung grosser Steueraenderungen veraendern Gewinne nach Steuern je Branche (Abschreibungen, Unternehmenssteuer); das kann US-Sektoren (ff_manuf, ff_money, XLF) gegenueber dem Weltindex kurzfristig verschieben.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Fachliteratur (Romer und Romer 2010, AER), veroeffentlicht. Historie vor 1990 fuer Familie L. HTTP 200 geprueft.",
+    "grund": "K5 und Vorwissen: abgeschlossener Datensatz (Romer und Romer 2010, Gesetze 1945-2007, nicht fortgeschrieben); Klassifikation exogen/endogen nachtraeglich; nur rund 50 Ereignistage. Unterzeichnungstage allein waeren zwar damals oeffentlich, aber ohne laufende Fortschreibung K5 nicht erfuellt. (Lauf 2026-11-19T00:12Z) | Lernrunde 2026-11-18 (Vorrat auf 15). Fachliteratur (Romer und Romer 2010, AER), veroeffentlicht. Historie vor 1990 fuer Familie L. HTTP 200 geprueft.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-18T09:45Z"
+    "aufgenommen_utc": "2026-11-18T09:45Z",
+    "geprueft_utc": "2026-11-19T00:12Z"
   },
   {
     "id": "bis_zentralbankreden_dichte",

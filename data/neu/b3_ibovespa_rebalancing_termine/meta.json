@@ -1,0 +1,29 @@
+{
+  "stichtag": {
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.b3.com.br/en_us/market-data-and-indices/indices/broad-indices/ibovespa.htm",
+    "verdichtung": "keine (deterministische Kalenderreihe nach B3-Regelwerk, kein externer Abruf)",
+    "verfuegbar_nach_tagen": 0,
+    "revidiert": false,
+    "publikation": "taeglich (Termine nach veroeffentlichtem B3-Indexregelwerk im Voraus bekannt; Regelwechsel Stichtag erster Montag ab September 2011, BM&FBOVESPA-Mitteilung 2011)",
+    "beschreibung": "1 am ersten Gueltigkeitstag der neuen Ibovespa-Carteira (Jan/Mai/Sep; bis Mai 2011 erster Handelstag, ab Sep 2011 erster Montag bzw. naechster Handelstag), sonst 0, ab 2011-01-01."
+  },
+  "erste_vorschau": {
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.b3.com.br/en_us/market-data-and-indices/indices/broad-indices/ibovespa.htm",
+    "verdichtung": "keine (deterministische Kalenderreihe nach B3-Regelwerk, kein externer Abruf)",
+    "verfuegbar_nach_tagen": 0,
+    "revidiert": false,
+    "publikation": "taeglich (Termine nach veroeffentlichtem B3-Indexregelwerk im Voraus bekannt; Regelwechsel Stichtag erster Montag ab September 2011, BM&FBOVESPA-Mitteilung 2011)",
+    "beschreibung": "1 am Tag der ersten Vorschau (erster Handelstag im Dezember/April/August), sonst 0, ab 2011-01-01."
+  },
+  "letzte_vorschau": {
+    "einheit": "Indikator (0/1)",
+    "quelle_url": "https://www.b3.com.br/en_us/market-data-and-indices/indices/broad-indices/ibovespa.htm",
+    "verdichtung": "keine (deterministische Kalenderreihe nach B3-Regelwerk, kein externer Abruf)",
+    "verfuegbar_nach_tagen": 0,
+    "revidiert": false,
+    "publikation": "taeglich (Termine nach veroeffentlichtem B3-Indexregelwerk im Voraus bekannt; Regelwechsel Stichtag erster Montag ab September 2011, BM&FBOVESPA-Mitteilung 2011)",
+    "beschreibung": "1 am Tag der dritten und letzten Vorschau = letzter Handelstag im Dezember/April/August, sonst 0, ab 2011-01-01."
+  }
+}
