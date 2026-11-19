@@ -1,0 +1,20 @@
+{
+  "anzahl_ads": {
+    "beschreibung": "Von der EASA ausgegebene Airworthiness Directives (inkl. Revisionen und Notfall-ADs) je Ausgabetag; ohne gespiegelte ADs anderer Behoerden",
+    "einheit": "Anzahl ADs",
+    "publikation": "taeglich (EASA veroeffentlicht jede AD am Ausgabetag im Safety Publications Tool; Issue Date = Veroeffentlichung, Effective Date meist 14 Tage spaeter; Notfall-ADs wirksam am Ausgabetag; Quelle: ad.easa.europa.eu, EASA AD FAQ)",
+    "quelle_url": "https://ad.easa.europa.eu/",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je Issue Date (Nummern JJJJ-NNNN[Rn][-E]); Kalendertage ohne AD = 0; Abschluss vor heute",
+    "verfuegbar_nach_tagen": 0
+  },
+  "notfall_ads": {
+    "beschreibung": "Von der EASA ausgegebene Emergency Airworthiness Directives (Klasse EAD bzw. Nummer -E) je Ausgabetag",
+    "einheit": "Anzahl Notfall-ADs",
+    "publikation": "taeglich (EASA veroeffentlicht jede AD am Ausgabetag im Safety Publications Tool; Issue Date = Veroeffentlichung, Effective Date meist 14 Tage spaeter; Notfall-ADs wirksam am Ausgabetag; Quelle: ad.easa.europa.eu, EASA AD FAQ)",
+    "quelle_url": "https://ad.easa.europa.eu/",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je Issue Date; Kalendertage ohne Notfall-AD = 0; Abschluss vor heute",
+    "verfuegbar_nach_tagen": 0
+  }
+}
