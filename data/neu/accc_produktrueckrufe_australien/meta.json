@@ -1,0 +1,11 @@
+{
+  "anzahl_rueckrufe": {
+    "beschreibung": "Taegliche Anzahl der von der australischen Wettbewerbs- und Verbraucherbehoerde ACCC auf productsafety.gov.au veroeffentlichten Produktrueckrufe ab 2003 (vorher lueckenhafter Altbestand; alle Kategorien: Fahrzeuge, Elektrogeraete, Spielzeug, Lebensmittel u.a.), Datum = Veroeffentlichungsdatum (published date, australische Ortszeit), 0 an Tagen ohne Rueckruf. Zaehlung je Rueckruf-Detailseite (eindeutige URL). Mechanismus: Rueckrufe globaler Hersteller langlebiger Gueter (XLY, ff_durbl); Replikation von cpsc_ruckrufe.",
+    "einheit": "Anzahl Rueckrufe",
+    "publikation": "taeglich: Rueckrufe erscheinen am Veroeffentlichungstag in der Rueckrufliste von productsafety.gov.au (beobachtet 19.11.2026: juengster Eintrag 18.11.2026); australischer Tag liegt vor dem US-Handelstag, 1 Tag Sicherheitsabstand",
+    "quelle_url": "https://www.productsafety.gov.au/recalls",
+    "revidiert": false,
+    "verdichtung": "Anzahl Rueckrufe je Kalendertag (Veroeffentlichungsdatum)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

@@ -7090,13 +7090,24 @@
     "url": "https://www.productsafety.gov.au/recalls",
     "domain": "www.productsafety.gov.au",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Replikation von cpsc_ruckrufe (S0072: sprung_auf -> ff_durbl 1 Tag, t 3.71 unter Hürde 4.41; Regel L1). Unabhängige Behörde, gleicher Mechanismus. Seite HTTP 200; Rückrufdatum je Eintrag, Historie prüfen. | Lauf 2026-11-19T12:30Z: /recalls HTTP 200, 8278 Eintraege auf 332 Seiten, Liste wird aber per Drupal-AJAX nachgeladen («Loading content…»), im HTML keine Eintraege/Daten; Facetten-URLs sind laut robots.txt gesperrt. Naechster Schritt: Views-AJAX-Endpunkt oder Detailseiten (/search-product-recalls/...) mit Datum pruefen; 332 Seiten passen knapp in 180 s, sonst in Etappen.",
+    "status": "aktiv",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Replikation von cpsc_ruckrufe (S0072: sprung_auf -> ff_durbl 1 Tag, t 3.71 unter Hürde 4.41; Regel L1). Unabhängige Behörde, gleicher Mechanismus. Seite HTTP 200; Rückrufdatum je Eintrag, Historie prüfen. | Lauf 2026-11-19T12:30Z: /recalls HTTP 200, 8278 Eintraege auf 332 Seiten, Liste wird aber per Drupal-AJAX nachgeladen («Loading content…»), im HTML keine Eintraege/Daten; Facetten-URLs sind laut robots.txt gesperrt. Naechster Schritt: Views-AJAX-Endpunkt oder Detailseiten (/search-product-recalls/...) mit Datum pruefen; 332 Seiten passen knapp in 180 s, sonst in Etappen. | Lauf 2026-11-19T16:30Z: AUFGENOMMEN. Abruf ueber Drupal-Views-Endpunkt /views/ajax (view psa_listing_search, display listing_search_date_range_filter, 100 je Seite, 83 Seiten, 3 parallele Anfragen, ca. 47 s); einzelne Seiten liefert der Server deterministisch leer (z.B. Seite 1 bei 100/Seite), diese werden mit 50/25 je Seite abgedeckt; Vollstaendigkeitspruefung gegen Gesamtzahl der Seite (8278 Rueckrufe, alle gefunden). /views/ajax nicht in robots.txt gesperrt (nur Facetten f[ und /search). K1 Tageszaehlung, 0 an Tagen ohne Rueckruf. K2 ab 2003-01-01 (8724 Zeilen); Bestand 1986-1997 nur 0-4 je Jahr und 1998-2002 Altuebernahme mit Sammeltagen (16.8.2002: 52, 19.8.2002: 30), darum erst ab 2003. K3 oeffentlich ohne Login/Schluessel. K4 Datum = Veroeffentlichungsdatum je Rueckruf; Risiko nachgetragener Altfaelle vermerkt (Zaehlungen koennen durch spaete Eintraege ergaenzt werden), revidiert=false. K5 juengster Rueckruf 2026-11-18. K6 neu (Replikation cpsc_ruckrufe mit unabhaengiger Behoerde). K7 36 KB, 47 s. Plausibel: Summe ab 2003 7390, Max 16/Tag, gleiche Folgewerte 0.430 (Nulltage, erwartet bei seltener Zaehlung). verfuegbar_nach_tagen 1, publikation taeglich. Vorschlag Paar (Reto entscheidet): keines noetig, Replikation ueber Ereignistest.",
     "mechanismus": "Rückrufe von Fahrzeugen, Geräten und Konsumgütern treffen globale Hersteller langlebiger Güter und können Konsum- und Industriewerte (XLY, ff_durbl) kurzfristig gegenüber dem Weltindex belasten.",
     "prioritaet": "normal",
-    "reihen": [],
+    "reihen": [
+      {
+        "reihe": "anzahl_rueckrufe",
+        "zeilen": 8724,
+        "erste": "2003-01-01",
+        "letzte": "2026-11-19",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.43,
+        "min": 0.0,
+        "max": 16.0
+      }
+    ],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": "2026-11-19T12:30Z"
+    "geprueft_utc": "2026-11-19T16:30Z"
   },
   {
     "id": "tga_australien_arzneimittel_rueckrufe",
@@ -7105,12 +7116,12 @@
     "domain": "apps.tga.gov.au",
     "bereich": "Firmenereignisse",
     "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Replikation von fda_ruckrufe (ohne Spitzenwert, daher tief). Bericht HTTP 200; Datumsfeld und Historie prüfen.",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Replikation von fda_ruckrufe (ohne Spitzenwert, daher tief). Bericht HTTP 200; Datumsfeld und Historie prüfen. | Lauf 2026-11-19T16:30Z: arn-report.aspx leitet auf DRAC-Eingabeseite (apps.tga.gov.au/PROD/DRAC/arn-entry.aspx, HTTP 200); Formular (POST arn-report.aspx, Felder cmbProductType, cmbActionType, start-/end-day/month/year) liefert auch mit Sitzungscookie 302 zurueck zur Eingabe -- vermutlich clientseitiges JS/Token. Naechster Schritt: JS der Seite (ajax) auf Datenendpunkt pruefen; Status bleibt kandidat.",
     "mechanismus": "Rückrufe von Arzneimitteln und Medizinprodukten treffen globale Pharma- und Medtech-Hersteller und können XLV kurzfristig gegenüber dem Weltindex belasten.",
     "prioritaet": "tief",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-19T16:30Z"
   },
   {
     "id": "philly_fed_bos_termine",
@@ -7146,13 +7157,13 @@
     "url": "https://www.bundeskartellamt.de/DE/Home/home_node.html",
     "domain": "www.bundeskartellamt.de",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Replikation von eu_wettbewerbsentscheide (S0072: hoch -> EEM 5 Tage, t 3.91 unter Hürde 4.41; Regel L1). Unabhängige nationale Behörde. Startseite HTTP 200, Suchformular HTTP 403 von dieser Umgebung; Pressemitteilungen mit Datum als Ersatz prüfen.",
+    "status": "abgelehnt",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Replikation von eu_wettbewerbsentscheide (S0072: hoch -> EEM 5 Tage, t 3.91 unter Hürde 4.41; Regel L1). Unabhängige nationale Behörde. Startseite HTTP 200, Suchformular HTTP 403 von dieser Umgebung; Pressemitteilungen mit Datum als Ersatz prüfen. | Lauf 2026-11-19T16:30Z: ABGELEHNT K3/K2. Pressemitteilungssuche (/SiteGlobals/Forms/Suche/...) HTTP 403 und laut robots.txt gesperrt (Disallow /SiteGlobals/, Crawl-delay 30 s); RSS-Pfad 404; Sitemap_XML.xml listet nur 794 Pressemitteilungen mit grossen Luecken (2008-2012 keine, 2013-2021 je 0-10) -- keine vollstaendige oeffentliche Tagesliste der Fusionsentscheide mit Historie bis 2015; Detailabruf mit 30 s Abstand sprengt K7.",
     "mechanismus": "Kartellentscheide zu grossen Übernahmen verändern Synergie- und Prämienerwartungen deutscher Konzerne und können EWG kurzfristig gegenüber dem Weltindex bewegen.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-19T16:30Z"
   },
   {
     "id": "cme_margin_aenderungen",
