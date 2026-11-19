@@ -2729,6 +2729,24 @@
    "aufgenommen_utc": "2026-11-17T13:57:11Z",
    "lauf_id": "L20261117T135650Z"
   },
+  "n__neu__chinesisches_neujahr__laternenfest.csv.gz": {
+   "datei": "n__neu__chinesisches_neujahr__laternenfest.csv.gz@0a23fe8e5f57a95f",
+   "sha": "0a23fe8e5f57a95f7306676b3ed30ca74ae195c9466877430980d45b2df63725",
+   "sha_inhalt": "9111b20e3b94a8ba31e1401fef79b6a4da5a79b1849cdac6b3404011479fa2f2",
+   "zeilen": 43830,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-19T14:00:25Z",
+   "lauf_id": "L20261119T140005Z"
+  },
+  "n__neu__chinesisches_neujahr__neujahrstag.csv.gz": {
+   "datei": "n__neu__chinesisches_neujahr__neujahrstag.csv.gz@ade5d744f1a89286",
+   "sha": "ade5d744f1a89286b8a8bb280c12de3467c65113e61657209462efa300e23b25",
+   "sha_inhalt": "c7fc7f44d6c2c028665d35c4ce4c93758ad3a7776cad32e662e89a3d64cb9781",
+   "zeilen": 43830,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-19T14:00:26Z",
+   "lauf_id": "L20261119T140005Z"
+  },
   "n__neu__clinicaltrials_ergebnisse__ergebnisse_industrie.csv.gz": {
    "datei": "n__neu__clinicaltrials_ergebnisse__ergebnisse_industrie.csv.gz@a595eb304f8b7406",
    "sha": "a595eb304f8b7406c35d5c4e2126dc6b36c86b70a5d14f43e4a0c25db94953ec",
@@ -2881,6 +2899,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-11-15T12:21:33Z",
    "lauf_id": "L20261115T122117Z"
+  },
+  "n__neu__fda_neue_indikationen__indikationen.csv.gz": {
+   "datei": "n__neu__fda_neue_indikationen__indikationen.csv.gz@d5f42e0921ae1005",
+   "sha": "d5f42e0921ae1005b2d49c42d761428a7e193cc7b46b359fc1059e6b3f8daebe",
+   "sha_inhalt": "b6868c127916f6e8f811c5e4f1c45348c930af8073b3f4d9a7c4129bad57aa39",
+   "zeilen": 24179,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-19T14:00:27Z",
+   "lauf_id": "L20261119T140005Z"
   },
   "n__neu__fda_zulassungen__zulassungen.csv.gz": {
    "datei": "n__neu__fda_zulassungen__zulassungen.csv.gz@2de836a300e801e2",
@@ -3296,6 +3323,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:36Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fomc_dissens_historie__gegenstimmen.csv.gz": {
+   "datei": "n__neu__fomc_dissens_historie__gegenstimmen.csv.gz@eb44fe5d58e67bd3",
+   "sha": "eb44fe5d58e67bd33a58996567863e2f63d04d53498560dc3129cbd41f5a0d28",
+   "sha_inhalt": "c9cd4e2e5932c8c8909c77370cb02751d9b6aac0477bb41ca086199424e8d82c",
+   "zeilen": 6863,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-19T14:00:29Z",
+   "lauf_id": "L20261119T140005Z"
+  },
   "n__neu__fomc_protokolle_veroeffentlichungstage__protokolle.csv.gz": {
    "datei": "n__neu__fomc_protokolle_veroeffentlichungstage__protokolle.csv.gz@530c17b439ab00c2",
    "sha": "530c17b439ab00c2edc8b4ef0630154e1ccbb88a87ec38be633cd198c191a1f1",
@@ -3556,6 +3592,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-11-16T13:27:17Z",
    "lauf_id": "L20261116T132647Z"
+  },
+  "n__neu__indien_rbi_repo_entscheide__erklaerung.csv.gz": {
+   "datei": "n__neu__indien_rbi_repo_entscheide__erklaerung.csv.gz@d9d5a28e3a859b07",
+   "sha": "d9d5a28e3a859b07924a259551e015302608ff1d0fb37a1f02b1e572eba32e06",
+   "sha_inhalt": "26d2de397791254940b782fe9225b7f154e2360b5ad9dc1bbcbe7d7492d69182",
+   "zeilen": 8283,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-19T14:00:30Z",
+   "lauf_id": "L20261119T140005Z"
   },
   "n__neu__japan_mlit_fahrzeugrueckrufe__rueckruf_meldungen.csv.gz": {
    "datei": "n__neu__japan_mlit_fahrzeugrueckrufe__rueckruf_meldungen.csv.gz@26c49d7990d0b8dd",
@@ -3979,6 +4024,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:39Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__sec_13f_einreichungsfristen__frist.csv.gz": {
+   "datei": "n__neu__sec_13f_einreichungsfristen__frist.csv.gz@8539f678255236e1",
+   "sha": "8539f678255236e1050b2a73a8ec409d4cae3c1cb0ddb9b37acedbc9c7990cdb",
+   "sha_inhalt": "53fe63ac7c37d5dae1f97ae946978b210bd5616f55585848aa4b82aa19030cae",
+   "zeilen": 15282,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-19T14:00:33Z",
+   "lauf_id": "L20261119T140005Z"
   },
   "n__neu__snb_saron__saron.csv.gz": {
    "datei": "n__neu__snb_saron__saron.csv.gz@b796bb59f5a899fa",
@@ -5063,9 +5117,51 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-18T13:33:07Z",
- "dateien_n": 559,
+ "stand_utc": "2026-11-19T14:00:38Z",
+ "dateien_n": 565,
  "vorgemerkt": {
+  "n__neu__b3_ibovespa_rebalancing_termine__erste_vorschau.csv.gz": {
+   "erstmals_utc": "2026-11-19T14:00:25Z",
+   "beste_werte": 30,
+   "frueheste_erste": "2011-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-19T14:00:25Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 30,
+     "erste": "2011-01-01",
+     "sha_inhalt": "05fde7e8748eff1fdbac6977708900a7b49695917dd1c39e08ff59a4fb4d9d19"
+    }
+   ]
+  },
+  "n__neu__b3_ibovespa_rebalancing_termine__letzte_vorschau.csv.gz": {
+   "erstmals_utc": "2026-11-19T14:00:25Z",
+   "beste_werte": 30,
+   "frueheste_erste": "2011-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-19T14:00:25Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 30,
+     "erste": "2011-01-01",
+     "sha_inhalt": "8468311a923f6df19aa28a75d3daa86cdccff6156e21dad20453581527929623"
+    }
+   ]
+  },
+  "n__neu__b3_ibovespa_rebalancing_termine__stichtag.csv.gz": {
+   "erstmals_utc": "2026-11-19T14:00:25Z",
+   "beste_werte": 30,
+   "frueheste_erste": "2011-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-19T14:00:25Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 30,
+     "erste": "2011-01-01",
+     "sha_inhalt": "61deac612f8c2ebdd57bfea883075434a1888d270c0385b797982e06fdb1c219"
+    }
+   ]
+  },
   "n__neu__boeing_bestellungen_auslieferungen__auslieferungen_meldung.csv.gz": {
    "erstmals_utc": "2026-11-18T13:32:53Z",
    "beste_werte": 95,
@@ -5077,48 +5173,13 @@
      "werte": 95,
      "erste": "1997-01-06",
      "sha_inhalt": "3270d7b9c39df5c8dd899957c4761da5564a5a31cb65a31d81844c538ff5d435"
-    }
-   ]
-  },
-  "n__neu__chinesisches_neujahr__laternenfest.csv.gz": {
-   "erstmals_utc": "2026-11-17T13:57:11Z",
-   "beste_werte": 120,
-   "frueheste_erste": "1901-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-17T13:57:11Z",
-     "lauf_id": "L20261117T135650Z",
-     "werte": 120,
-     "erste": "1901-01-01",
-     "sha_inhalt": "9111b20e3b94a8ba31e1401fef79b6a4da5a79b1849cdac6b3404011479fa2f2"
     },
     {
-     "utc": "2026-11-18T13:32:53Z",
-     "lauf_id": "L20261118T133228Z",
-     "werte": 120,
-     "erste": "1901-01-01",
-     "sha_inhalt": "9111b20e3b94a8ba31e1401fef79b6a4da5a79b1849cdac6b3404011479fa2f2"
-    }
-   ]
-  },
-  "n__neu__chinesisches_neujahr__neujahrstag.csv.gz": {
-   "erstmals_utc": "2026-11-17T13:57:11Z",
-   "beste_werte": 120,
-   "frueheste_erste": "1901-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-17T13:57:11Z",
-     "lauf_id": "L20261117T135650Z",
-     "werte": 120,
-     "erste": "1901-01-01",
-     "sha_inhalt": "c7fc7f44d6c2c028665d35c4ce4c93758ad3a7776cad32e662e89a3d64cb9781"
-    },
-    {
-     "utc": "2026-11-18T13:32:53Z",
-     "lauf_id": "L20261118T133228Z",
-     "werte": 120,
-     "erste": "1901-01-01",
-     "sha_inhalt": "c7fc7f44d6c2c028665d35c4ce4c93758ad3a7776cad32e662e89a3d64cb9781"
+     "utc": "2026-11-19T14:00:25Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 95,
+     "erste": "1997-01-06",
+     "sha_inhalt": "3270d7b9c39df5c8dd899957c4761da5564a5a31cb65a31d81844c538ff5d435"
     }
    ]
   },
@@ -5130,6 +5191,13 @@
     {
      "utc": "2026-11-18T13:32:53Z",
      "lauf_id": "L20261118T133228Z",
+     "werte": 2080,
+     "erste": "2012-08-30",
+     "sha_inhalt": "f7fd2f21f24e904af4a0ea8d672b431bc05e775e2f6e7ccc30ba9f13c4dfe2f5"
+    },
+    {
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
      "werte": 2080,
      "erste": "2012-08-30",
      "sha_inhalt": "f7fd2f21f24e904af4a0ea8d672b431bc05e775e2f6e7ccc30ba9f13c4dfe2f5"
@@ -5147,6 +5215,13 @@
      "werte": 1247,
      "erste": "2012-08-30",
      "sha_inhalt": "73d07eb6eb520b886be298188ea506452fe3b300efc78847d6dd415c9a025cb5"
+    },
+    {
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 1247,
+     "erste": "2012-08-30",
+     "sha_inhalt": "73d07eb6eb520b886be298188ea506452fe3b300efc78847d6dd415c9a025cb5"
     }
    ]
   },
@@ -5161,6 +5236,41 @@
      "werte": 50,
      "erste": "1896-05-26",
      "sha_inhalt": "3867e431def29ca682b095b74f05b64c03ba505aed5f077272238ae4ce52535d"
+    },
+    {
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 50,
+     "erste": "1896-05-26",
+     "sha_inhalt": "3867e431def29ca682b095b74f05b64c03ba505aed5f077272238ae4ce52535d"
+    }
+   ]
+  },
+  "n__neu__easa_lufttuechtigkeitsanweisungen__anzahl_ads.csv.gz": {
+   "erstmals_utc": "2026-11-19T14:00:26Z",
+   "beste_werte": 2283,
+   "frueheste_erste": "2004-10-12",
+   "sichtungen": [
+    {
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 2283,
+     "erste": "2004-10-12",
+     "sha_inhalt": "f5fea0e68a7c01f4455e30ad692a05df6799618ab6a2c443b863f1e2b1716ba7"
+    }
+   ]
+  },
+  "n__neu__easa_lufttuechtigkeitsanweisungen__notfall_ads.csv.gz": {
+   "erstmals_utc": "2026-11-19T14:00:26Z",
+   "beste_werte": 440,
+   "frueheste_erste": "2004-10-12",
+   "sichtungen": [
+    {
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 440,
+     "erste": "2004-10-12",
+     "sha_inhalt": "e2e8aaafa3ac29c869bebae81c2f9b771263e3b55b62f69133c4f2afc2fc8c3c"
     }
    ]
   },
@@ -5175,27 +5285,41 @@
      "werte": 5,
      "erste": "2010-01-01",
      "sha_inhalt": "cfe5916f747f7698ea6d0cd23ccd43ee00f791d8618edebe7350dc1ee26fb976"
+    },
+    {
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 5,
+     "erste": "2010-01-01",
+     "sha_inhalt": "cfe5916f747f7698ea6d0cd23ccd43ee00f791d8618edebe7350dc1ee26fb976"
     }
    ]
   },
-  "n__neu__fda_neue_indikationen__indikationen.csv.gz": {
-   "erstmals_utc": "2026-11-17T13:57:12Z",
-   "beste_werte": 2544,
-   "frueheste_erste": "1954-10-21",
+  "n__neu__eu_beihilfe_entscheide__genehmigungen.csv.gz": {
+   "erstmals_utc": "2026-11-19T14:00:26Z",
+   "beste_werte": 918,
+   "frueheste_erste": "1985-01-01",
    "sichtungen": [
     {
-     "utc": "2026-11-17T13:57:12Z",
-     "lauf_id": "L20261117T135650Z",
-     "werte": 2544,
-     "erste": "1954-10-21",
-     "sha_inhalt": "b6868c127916f6e8f811c5e4f1c45348c930af8073b3f4d9a7c4129bad57aa39"
-    },
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 918,
+     "erste": "1985-01-01",
+     "sha_inhalt": "6b09c5a7cd7817fdaaf5d4f2f514f457394f278df83ff898bc64d0d74f00b5ca"
+    }
+   ]
+  },
+  "n__neu__eu_beihilfe_entscheide__pruefungen.csv.gz": {
+   "erstmals_utc": "2026-11-19T14:00:26Z",
+   "beste_werte": 539,
+   "frueheste_erste": "1985-01-01",
+   "sichtungen": [
     {
-     "utc": "2026-11-18T13:32:54Z",
-     "lauf_id": "L20261118T133228Z",
-     "werte": 2544,
-     "erste": "1954-10-21",
-     "sha_inhalt": "b6868c127916f6e8f811c5e4f1c45348c930af8073b3f4d9a7c4129bad57aa39"
+     "utc": "2026-11-19T14:00:26Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 539,
+     "erste": "1985-01-01",
+     "sha_inhalt": "7cedbfa19a69f49eacb557cb0aa6df00845b948c55c5d6c662b49d70eaf0a35a"
     }
    ]
   },
@@ -5210,48 +5334,13 @@
      "werte": 49,
      "erste": "1996-03-01",
      "sha_inhalt": "8fcbc752a79f5c315e4be689b03886584619a31dc6b41a80a48f96a97156bc9d"
-    }
-   ]
-  },
-  "n__neu__fomc_dissens_historie__gegenstimmen.csv.gz": {
-   "erstmals_utc": "2026-11-17T13:57:14Z",
-   "beste_werte": 61,
-   "frueheste_erste": "2002-03-19",
-   "sichtungen": [
-    {
-     "utc": "2026-11-17T13:57:14Z",
-     "lauf_id": "L20261117T135650Z",
-     "werte": 61,
-     "erste": "2002-03-19",
-     "sha_inhalt": "c9cd4e2e5932c8c8909c77370cb02751d9b6aac0477bb41ca086199424e8d82c"
     },
     {
-     "utc": "2026-11-18T13:32:57Z",
-     "lauf_id": "L20261118T133228Z",
-     "werte": 61,
-     "erste": "2002-03-19",
-     "sha_inhalt": "c9cd4e2e5932c8c8909c77370cb02751d9b6aac0477bb41ca086199424e8d82c"
-    }
-   ]
-  },
-  "n__neu__indien_rbi_repo_entscheide__erklaerung.csv.gz": {
-   "erstmals_utc": "2026-11-17T13:57:15Z",
-   "beste_werte": 108,
-   "frueheste_erste": "1998-04-29",
-   "sichtungen": [
-    {
-     "utc": "2026-11-17T13:57:15Z",
-     "lauf_id": "L20261117T135650Z",
-     "werte": 108,
-     "erste": "1998-04-29",
-     "sha_inhalt": "26d2de397791254940b782fe9225b7f154e2360b5ad9dc1bbcbe7d7492d69182"
-    },
-    {
-     "utc": "2026-11-18T13:32:58Z",
-     "lauf_id": "L20261118T133228Z",
-     "werte": 108,
-     "erste": "1998-04-29",
-     "sha_inhalt": "26d2de397791254940b782fe9225b7f154e2360b5ad9dc1bbcbe7d7492d69182"
+     "utc": "2026-11-19T14:00:27Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 49,
+     "erste": "1996-03-01",
+     "sha_inhalt": "8fcbc752a79f5c315e4be689b03886584619a31dc6b41a80a48f96a97156bc9d"
     }
    ]
   },
@@ -5266,27 +5355,13 @@
      "werte": 191,
      "erste": "2015-01-01",
      "sha_inhalt": "c388dd4da2204d4b918f92f2bd6cd8605a6e6aa1f9101370c31ed049d4576b2b"
-    }
-   ]
-  },
-  "n__neu__sec_13f_einreichungsfristen__frist.csv.gz": {
-   "erstmals_utc": "2026-11-17T13:57:18Z",
-   "beste_werte": 167,
-   "frueheste_erste": "1979-03-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-17T13:57:18Z",
-     "lauf_id": "L20261117T135650Z",
-     "werte": 167,
-     "erste": "1979-03-01",
-     "sha_inhalt": "53fe63ac7c37d5dae1f97ae946978b210bd5616f55585848aa4b82aa19030cae"
     },
     {
-     "utc": "2026-11-18T13:33:02Z",
-     "lauf_id": "L20261118T133228Z",
-     "werte": 167,
-     "erste": "1979-03-01",
-     "sha_inhalt": "53fe63ac7c37d5dae1f97ae946978b210bd5616f55585848aa4b82aa19030cae"
+     "utc": "2026-11-19T14:00:30Z",
+     "lauf_id": "L20261119T140005Z",
+     "werte": 191,
+     "erste": "2015-01-01",
+     "sha_inhalt": "c388dd4da2204d4b918f92f2bd6cd8605a6e6aa1f9101370c31ed049d4576b2b"
     }
    ]
   }

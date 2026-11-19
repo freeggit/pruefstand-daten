@@ -1,5 +1,5 @@
 {
- "kumuliert": 787044,
+ "kumuliert": 795209,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -299,6 +299,9 @@
   "idx_zinsanstieg_stand",
   "idx_zinsanstieg_z252",
   "neu_adp_beschaeftigung_termine_adp_stand",
+  "neu_b3_ibovespa_rebalancing_termine_erste_vorschau_stand",
+  "neu_b3_ibovespa_rebalancing_termine_letzte_vorschau_stand",
+  "neu_b3_ibovespa_rebalancing_termine_stichtag_stand",
   "neu_bitcoin_onchain_gebuehren_d1",
   "neu_bitcoin_onchain_gebuehren_d20",
   "neu_bitcoin_onchain_gebuehren_d5",
@@ -413,6 +416,16 @@
   "neu_djia_indexaenderungen_aufnahmen_d5",
   "neu_djia_indexaenderungen_aufnahmen_stand",
   "neu_djia_indexaenderungen_aufnahmen_z252",
+  "neu_easa_lufttuechtigkeitsanweisungen_anzahl_ads_d1",
+  "neu_easa_lufttuechtigkeitsanweisungen_anzahl_ads_d20",
+  "neu_easa_lufttuechtigkeitsanweisungen_anzahl_ads_d5",
+  "neu_easa_lufttuechtigkeitsanweisungen_anzahl_ads_stand",
+  "neu_easa_lufttuechtigkeitsanweisungen_anzahl_ads_z252",
+  "neu_easa_lufttuechtigkeitsanweisungen_notfall_ads_d1",
+  "neu_easa_lufttuechtigkeitsanweisungen_notfall_ads_d20",
+  "neu_easa_lufttuechtigkeitsanweisungen_notfall_ads_d5",
+  "neu_easa_lufttuechtigkeitsanweisungen_notfall_ads_stand",
+  "neu_easa_lufttuechtigkeitsanweisungen_notfall_ads_z252",
   "neu_eba_stresstest_termine_ergebnisse_stand",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d1",
   "neu_ecb_einlagefazilitaet_nutzung_taeglich_einlagefazilitaet_d20",
@@ -450,6 +463,16 @@
   "neu_ema_zulassungsentscheide_zulassungen_neu_d5",
   "neu_ema_zulassungsentscheide_zulassungen_neu_stand",
   "neu_ema_zulassungsentscheide_zulassungen_neu_z252",
+  "neu_eu_beihilfe_entscheide_genehmigungen_d1",
+  "neu_eu_beihilfe_entscheide_genehmigungen_d20",
+  "neu_eu_beihilfe_entscheide_genehmigungen_d5",
+  "neu_eu_beihilfe_entscheide_genehmigungen_stand",
+  "neu_eu_beihilfe_entscheide_genehmigungen_z252",
+  "neu_eu_beihilfe_entscheide_pruefungen_d1",
+  "neu_eu_beihilfe_entscheide_pruefungen_d20",
+  "neu_eu_beihilfe_entscheide_pruefungen_d5",
+  "neu_eu_beihilfe_entscheide_pruefungen_stand",
+  "neu_eu_beihilfe_entscheide_pruefungen_z252",
   "neu_eu_boersenfeiertage_geschlossen_stand",
   "neu_eu_wettbewerbsentscheide_fusionskontrolle_d1",
   "neu_eu_wettbewerbsentscheide_fusionskontrolle_d20",
@@ -2058,9 +2081,15 @@
    "datei": "suche/S0072.json",
    "kandidaten": 448451,
    "in_db": false
+  },
+  {
+   "nr": 73,
+   "datei": "suche/S0073.json",
+   "kandidaten": 456616,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-18T16:01Z",
+ "letzter_suchlauf_utc": "2026-11-19T16:01Z",
  "pruefung_lernrunde_utc": "2026-11-19T09:45:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2536,11 +2565,19 @@
    "ergebnis_hash": "05799f64ced1245b",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261119T140005Z.json",
+   "lauf_id": "L20261119T140005Z",
+   "s_dokument": "suche/S0073.json",
+   "ergebnis_hash": "c440fcd5995e5b4e",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-18T16:01Z",
- "letztes_vollarchiv": "suche/S0072_alle.csv.gz",
- "letzter_ergebnis_hash": "05799f64ced1245b",
+ "letzter_lauf_utc": "2026-11-19T16:01Z",
+ "letztes_vollarchiv": "suche/S0073_alle.csv.gz",
+ "letzter_ergebnis_hash": "c440fcd5995e5b4e",
  "konflikte": [
   {
    "wo": "index",
@@ -4775,10 +4812,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 373,
+  "grundreihen_n": 380,
   "neu_in_diesem_lauf": 7
  },
- "letztes_vollarchiv_ergebnis_hash": "05799f64ced1245b",
+ "letztes_vollarchiv_ergebnis_hash": "c440fcd5995e5b4e",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261116T132647Z",
@@ -4796,7 +4833,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "b2bf2a738dd05539",
- "letzter_gueltiger_lauf": "L20261118T133228Z",
- "letzter_entscheidung_hash": "29394c251a56bda3"
+ "letzter_eingabe_hash": "e40b053ab0794b71",
+ "letzter_gueltiger_lauf": "L20261119T140005Z",
+ "letzter_entscheidung_hash": "96542a2a08437a6d"
 }

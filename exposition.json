@@ -133,6 +133,24 @@
    "erst_zeit": "2026-10-27T12:54Z",
    "beleg": "suche/laeufe/L20261027T100646Z.json"
   },
+  "neu_b3_ibovespa_rebalancing_termine_erste_vorschau": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261119T140005Z",
+   "erst_zeit": "2026-11-19T16:01Z",
+   "beleg": "suche/laeufe/L20261119T140005Z.json"
+  },
+  "neu_b3_ibovespa_rebalancing_termine_letzte_vorschau": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261119T140005Z",
+   "erst_zeit": "2026-11-19T16:01Z",
+   "beleg": "suche/laeufe/L20261119T140005Z.json"
+  },
+  "neu_b3_ibovespa_rebalancing_termine_stichtag": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261119T140005Z",
+   "erst_zeit": "2026-11-19T16:01Z",
+   "beleg": "suche/laeufe/L20261119T140005Z.json"
+  },
   "neu_bitcoin_onchain_gebuehren": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -313,6 +331,18 @@
    "erst_zeit": "2026-11-18T16:01Z",
    "beleg": "suche/laeufe/L20261118T133228Z.json"
   },
+  "neu_easa_lufttuechtigkeitsanweisungen_anzahl_ads": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261119T140005Z",
+   "erst_zeit": "2026-11-19T16:01Z",
+   "beleg": "suche/laeufe/L20261119T140005Z.json"
+  },
+  "neu_easa_lufttuechtigkeitsanweisungen_notfall_ads": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261119T140005Z",
+   "erst_zeit": "2026-11-19T16:01Z",
+   "beleg": "suche/laeufe/L20261119T140005Z.json"
+  },
   "neu_eba_stresstest_termine_ergebnisse": {
    "erst_dokument": null,
    "erst_lauf": "L20261118T133228Z",
@@ -366,6 +396,18 @@
    "erst_lauf": "L20261114T115120Z",
    "erst_zeit": "2026-11-14T13:46Z",
    "beleg": "suche/laeufe/L20261114T115120Z.json"
+  },
+  "neu_eu_beihilfe_entscheide_genehmigungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261119T140005Z",
+   "erst_zeit": "2026-11-19T16:01Z",
+   "beleg": "suche/laeufe/L20261119T140005Z.json"
+  },
+  "neu_eu_beihilfe_entscheide_pruefungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261119T140005Z",
+   "erst_zeit": "2026-11-19T16:01Z",
+   "beleg": "suche/laeufe/L20261119T140005Z.json"
   },
   "neu_eu_boersenfeiertage_geschlossen": {
    "erst_dokument": "S0011",
@@ -2246,8 +2288,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261118T133228Z",
-  "zeit_utc": "2026-11-18T16:01Z",
-  "grundreihen_n": 373
+  "lauf_id": "L20261119T140005Z",
+  "zeit_utc": "2026-11-19T16:01Z",
+  "grundreihen_n": 380
  }
 }
