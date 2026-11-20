@@ -7329,11 +7329,12 @@
     "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
     "domain": "irs.gov",
     "bereich": "Kalender-Ereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "An Steuerterminen fliessen Reserven auf das Treasury-Konto (TGA); die Liquiditätsentnahme verteuert Repo (September 2019) und kann Sektoren mit hoher Finanzierungsabhängigkeit kurzfristig gegenüber dem Weltindex bewegen.",
-    "grund": "Replikation von treasury_tga 5-Tage-Sprung auf -> XLE (L1): unabhängige Quelle (Kalender statt Kontostand) für denselben Liquiditätsmechanismus; regelbasiert berechenbar (Wochenend-Verschiebung), URL HTTP 200. (Lernrunde 2026-11-20)",
-    "aufgenommen_utc": "2026-11-20T09:30:00Z"
+    "grund": "Replikation von treasury_tga 5-Tage-Sprung auf -> XLE (L1): unabhängige Quelle (Kalender statt Kontostand) für denselben Liquiditätsmechanismus; regelbasiert berechenbar (Wochenend-Verschiebung), URL HTTP 200. (Lernrunde 2026-11-20) | Lauf 2026-11-20T20:15Z: abgelehnt (K6, Regel L1): Variante von kalender_ereignisse:ustax (dieselben Steuertermine 15.1./15.4./15.6./15.9./15.12., dort ohne Verschiebung ab 2001) auf denselben Kalenderdaten, keine unabhängige Quelle. Vorschlag an Reto: falls gewünscht ustax selbst um IRS-Wochenend-/Feiertagsverschiebung (IRC §7503) und Historie vor 2001 ergänzen; Entscheid Reto, Skript nicht angefasst.",
+    "aufgenommen_utc": "2026-11-20T09:30:00Z",
+    "geprueft_utc": "2026-11-20T20:15Z"
   },
   {
     "id": "eu_handelsschutz_antidumping",
@@ -7403,11 +7404,12 @@
     "url": "https://patentsview.org/download/data-download-tables",
     "domain": "patentsview.org",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Patenterteilungen lösen messbare Kursreaktionen der Inhaber aus (Kogan/Papanikolaou/Seru/Stoffman, QJE 2017); ungewöhnlich viele Erteilungen in Technik- oder Pharmaklassen könnten XLK, SMH oder IBB kurzfristig gegenüber dem Weltindex bewegen.",
-    "grund": "Firmenereignisse aggregiert, Tagesdatum fest (Dienstag), Menge variiert; grosse Massendateien (mehrere GB), daher tief; Weiterleitung 301 geprüft. (Lernrunde 2026-11-20)",
-    "aufgenommen_utc": "2026-11-20T09:30:00Z"
+    "grund": "Firmenereignisse aggregiert, Tagesdatum fest (Dienstag), Menge variiert; grosse Massendateien (mehrere GB), daher tief; Weiterleitung 301 geprüft. (Lernrunde 2026-11-20) | Lauf 2026-11-20T20:15Z: abgelehnt (K3/K7): bulkdata.uspto.gov keine Verbindung (curl Code 000, Dienst zugunsten des Open Data Portal eingestellt); data.uspto.gov ist eine JavaScript-Anwendung, deren API (wie PatentsView search.patentsview.org, ebenfalls keine Verbindung) einen API-Schlüssel verlangt; Massendateien je Woche zudem weit über K7. Zudem nur dienstags Ereignisse (faktisch wöchentlich, K1 grenzwertig). Keine Ablage.",
+    "aufgenommen_utc": "2026-11-20T09:30:00Z",
+    "geprueft_utc": "2026-11-20T20:15Z"
   },
   {
     "id": "sebi_durchsetzungsentscheide",
