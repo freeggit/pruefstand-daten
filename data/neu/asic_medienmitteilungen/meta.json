@@ -1,0 +1,20 @@
+{
+  "anzahl_durchsetzung": {
+    "beschreibung": "Teilmenge: Mitteilungen mit Durchsetzungsbezug laut Titel (Stichworte ban, penalty, charged, court, sentenced, disqualified, infringement, enforceable undertaking, cancel, convicted, fined, sues, proceedings, suspend, stop order, freeze, wind up, liquidat).",
+    "einheit": "Anzahl Mitteilungen",
+    "publikation": "taeglich: Mitteilungen erscheinen am Veroeffentlichungstag auf asic.gov.au/newsroom/media-releases (Meta displayDate = angezeigtes Erscheinungsdatum); australischer Tag liegt vor dem US-Handelstag, 1 Tag Sicherheitsabstand",
+    "quelle_url": "https://www.asic.gov.au/newsroom/media-releases",
+    "revidiert": false,
+    "verdichtung": "Anzahl Mitteilungen je Kalendertag mit Stichwort im Titel",
+    "verfuegbar_nach_tagen": 1
+  },
+  "anzahl_mitteilungen": {
+    "beschreibung": "Taegliche Anzahl Medienmitteilungen der australischen Finanzmarktaufsicht ASIC ab 2015 (Liste aus der oeffentlichen sitemap.xml, Datum = angezeigtes Veroeffentlichungsdatum displayDate der Mitteilung, australische Ortszeit), 0 an Tagen ohne Mitteilung. Hinweis: von ASIC spaeter entfernte Mitteilungen fehlen (Zaehlung kann nachtraeglich leicht sinken).",
+    "einheit": "Anzahl Mitteilungen",
+    "publikation": "taeglich: Mitteilungen erscheinen am Veroeffentlichungstag auf asic.gov.au/newsroom/media-releases (Meta displayDate = angezeigtes Erscheinungsdatum); australischer Tag liegt vor dem US-Handelstag, 1 Tag Sicherheitsabstand",
+    "quelle_url": "https://www.asic.gov.au/newsroom/media-releases",
+    "revidiert": false,
+    "verdichtung": "Anzahl Mitteilungen je Kalendertag (Veroeffentlichungsdatum)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

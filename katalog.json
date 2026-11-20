@@ -1249,11 +1249,12 @@
     "url": "https://www.blockchain.com/explorer/charts",
     "domain": "blockchain.com",
     "bereich": "Krypto",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Netto-Zufluesse von Bitcoin auf Boersen-Wallets gehen in der On-Chain-Analyse-Literatur haeufig anstehendem Verkaufsdruck voraus; als Kontrast zu den bereits vorhandenen Netzwerk-Aktivitaetsreihen (Hashrate, Gebuehren, Transaktionen) misst dies Anlegerverhalten direkt.",
-    "grund": "Frei zugaengliche Wallet-Cluster-Schaetzungen sind methodisch unsicher und oft nur ueber kostenpflichtige Anbieter (Glassnode/CryptoQuant) verfuegbar; tiefe Prioritaet bis eine kostenlose, dokumentierte Quelle ohne Login gefunden ist.",
-    "aufgenommen_utc": "2026-09-25T09:40:00Z"
+    "grund": "Frei zugaengliche Wallet-Cluster-Schaetzungen sind methodisch unsicher und oft nur ueber kostenpflichtige Anbieter (Glassnode/CryptoQuant) verfuegbar; tiefe Prioritaet bis eine kostenlose, dokumentierte Quelle ohne Login gefunden ist. | Scout 2026-11-20T00:25Z: abgelehnt K3 (und K4): Boersen-Netto-Zufluesse gibt es nur als Wallet-Cluster-Schaetzung kostenpflichtiger Anbieter (Glassnode, CryptoQuant) mit Login/Schluessel; blockchain.com/explorer/charts fuehrt keine solche Reihe, Schaetzungen werden zudem bei neuer Cluster-Zuordnung rueckwirkend revidiert.",
+    "aufgenommen_utc": "2026-09-25T09:40:00Z",
+    "geprueft_utc": "2026-11-20T00:25Z"
   },
   {
     "id": "sp500_index_aenderungen",
@@ -4623,9 +4624,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-20T00:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
     "status": "fehler",
-    "geprueft_utc": "2026-11-18T04:25Z"
+    "geprueft_utc": "2026-11-20T00:25Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -6555,10 +6556,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Bekanntgaben von FINMA-Verfahren gegen Schweizer Banken und Versicherer koennten den Schweizer Markt (EWL) kurzfristig gegenueber dem Weltindex bewegen, weil Finanzwerte dort ein grosses Gewicht haben.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: www.finma.ch/de/durchsetzung/ und /de/news/ HTTP 200, robots.txt erlaubt. Die News-Liste wird per Skript aus der internen Such-Schnittstelle /de/api/search/getresult nachgeladen; deren Abruf wurde in dieser Umgebung nicht zugelassen (Befund, nicht umgangen). Oeffentliche RSS-Feeds /de/rss/news/ und /de/rss/sanktionen/ reichen nur rund 5 Monate zurueck (erste pubDate 17.06.2026), damit K2 auf dem zulaessigen Weg nicht erfuellt. Keine Ablage. Naechster Lauf: pruefen, ob ein Archiv mit Tagesdatum als statische Seite besteht (z.B. Enforcementberichte je Jahr nennen Verfahren, aber ohne Bekanntgabetag).",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: www.finma.ch/de/durchsetzung/ und /de/news/ HTTP 200, robots.txt erlaubt. Die News-Liste wird per Skript aus der internen Such-Schnittstelle /de/api/search/getresult nachgeladen; deren Abruf wurde in dieser Umgebung nicht zugelassen (Befund, nicht umgangen). Oeffentliche RSS-Feeds /de/rss/news/ und /de/rss/sanktionen/ reichen nur rund 5 Monate zurueck (erste pubDate 17.06.2026), damit K2 auf dem zulaessigen Weg nicht erfuellt. Keine Ablage. Naechster Lauf: pruefen, ob ein Archiv mit Tagesdatum als statische Seite besteht (z.B. Enforcementberichte je Jahr nennen Verfahren, aber ohne Bekanntgabetag). | Erneut 2026-11-20T00:25Z: /de/api/search/getresult antwortet auf GET mit HTTP 405 (nur Skript-Abfrage); kein statisches Archiv mit Tagesdatum gefunden, nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-17T10:00Z",
-    "geprueft_utc": "2026-11-17T12:30Z"
+    "geprueft_utc": "2026-11-20T00:25Z"
   },
   {
     "id": "eba_stresstest_termine",
@@ -6827,10 +6828,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Indexaenderungen erzwingen Umschichtungen der Indexfonds zwischen Bekanntgabe und Stichtag; Nachfragedruck in grossen Euro-Titeln kann EWU und EWG gegenueber dem Weltindex kurzfristig verschieben.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft. | Scout 2026-11-18T20:35Z: fehler. Wikipedia EN/DE/FR/ES/IT fuehren keine Aenderungsliste des EURO STOXX 50 (nur aktuelle Zusammensetzung), damit keine offene Ersatzquelle; amtliches Archiv stoxx.com/news-archive antwortet HTTP 403 (Befund, nicht umgangen). Naechster Lauf erneut; ohne zugaengliches STOXX-Archiv spaeter abzulehnen (K3).",
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft. | Scout 2026-11-18T20:35Z: fehler. Wikipedia EN/DE/FR/ES/IT fuehren keine Aenderungsliste des EURO STOXX 50 (nur aktuelle Zusammensetzung), damit keine offene Ersatzquelle; amtliches Archiv stoxx.com/news-archive antwortet HTTP 403 (Befund, nicht umgangen). Naechster Lauf erneut; ohne zugaengliches STOXX-Archiv spaeter abzulehnen (K3). | Erneut 2026-11-20T00:25Z: www.stoxx.com/news-archive HTTP 403 (stoxx.com/news-archive/ 404); nicht umgangen. Weiterhin keine offene Ersatzquelle.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-18T09:45Z",
-    "geprueft_utc": "2026-11-18T20:35Z"
+    "geprueft_utc": "2026-11-20T00:25Z"
   },
   {
     "id": "hang_seng_indexaenderungen",
@@ -7143,13 +7144,13 @@
     "url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
     "domain": "aqs.epa.gov",
     "bereich": "Umwelt und Luftqualität",
-    "status": "kandidat",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Bereich «Umwelt und Luftqualität». Fachliteratur: Heyes, Neidell und Saberian (2016, NBER w22753). Veröffentlicht, Effekt danach evtl. schwächer (L3). Dateien daily_aqi_by_county_<Jahr>.zip offen, HTTP 200; Messwerte werden erst später validiert, Publikationsfrist prüfen (K4).",
+    "status": "fehler",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Bereich «Umwelt und Luftqualität». Fachliteratur: Heyes, Neidell und Saberian (2016, NBER w22753). Veröffentlicht, Effekt danach evtl. schwächer (L3). Dateien daily_aqi_by_county_<Jahr>.zip offen, HTTP 200; Messwerte werden erst später validiert, Publikationsfrist prüfen (K4). | Test 2026-11-20T00:25Z: aqs.epa.gov/aqsweb/airdata (download_files.html und daily_aqi_by_county_2026.zip) liefert HTTP 503 von dieser Umgebung; nicht umgangen, naechster Lauf erneut. Offen bleibt K4/K5 (AirData-Jahresdateien werden nur periodisch nachgefuehrt und validiert).",
     "mechanismus": "Schlechte Luft in Manhattan senkt laut Studien die Risikobereitschaft von Händlern; Tage mit hohem AQI könnten US-Aktien (SPY) kurzfristig gegenüber dem Weltindex belasten.",
     "prioritaet": "tief",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": null
+    "geprueft_utc": "2026-11-20T00:25Z"
   },
   {
     "id": "bundeskartellamt_fusionsentscheide",
@@ -7178,5 +7179,44 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
     "geprueft_utc": "2026-11-19T20:25Z"
+  },
+  {
+    "id": "asic_medienmitteilungen",
+    "name": "ASIC (australische Finanzmarktaufsicht): Medienmitteilungen je Tag, gesamt und mit Durchsetzungsbezug",
+    "url": "https://www.asic.gov.au/newsroom/media-releases",
+    "domain": "www.asic.gov.au",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "normal",
+    "mechanismus": "Tage mit gehaeuften ASIC-Durchsetzungsmeldungen (Klagen, Bussen, Lizenzentzuege gegen Banken, Versicherer und Vermoegensverwalter) koennten den australischen Markt mit hohem Finanzgewicht (EWA) und Finanzwerte (XLF) kurzfristig gegenueber dem Weltindex belasten; Replikation der Aufsichts-Ereignisreihen fed_enforcement_massnahmen und cftc_pressemitteilungen in einem zweiten Land.",
+    "grund": "Eigene Recherche Lauf 2026-11-20T00:10Z (Zusatz 6 Punkt 5, Firmenereignisse). K1 taeglich (0 an Tagen ohne Mitteilung); K2 erster Wert 2015-01-01, 4341 Werte; K3 oeffentlich ohne Login, robots.txt ohne Sperre, Liste aus sitemap.xml; K4 Veroeffentlichungstag fest (displayDate), aber Liste kann durch spaeter entfernte Mitteilungen leicht sinken (vermerkt); K5 letzter Wert 2026-11-19; K6 neu; K7 12 KB je Reihe, Zwischenstand 1,3 MB, Nachlauf nur neue Seiten. Pruefung: dcterms.date.created ist teils CMS-Migrationsdatum (z.B. 21-060MR bis 21-067MR alle 2021-04-23), darum Datum aus displayDate; Jahr stimmt fuer alle 4388 Mitteilungen mit dem Ordnerjahr, 4 an Wochenenden. Abdeckung: Sitemap vor 2015 lueckenhaft (2014: 203 von 347 Nummern), darum Beginn 2015-01-01 (2015: 378 von 410 Nummern, ab 2016 >= 96 %). Anteil gleicher Folgewerte 0.383 bzw. 0.477 ueber 20 %, erklaert durch Nullen an Wochenenden und ruhigen Tagen (Zaehlreihe). Reihen aktiv: anzahl_mitteilungen, anzahl_durchsetzung (Teilmenge nach Titel-Stichworten, 2 Reihen <= 3). Paar-Vorschlag fuer Reto: keiner.",
+    "reihen": [
+      "anzahl_mitteilungen",
+      "anzahl_durchsetzung"
+    ],
+    "pruefung": {
+      "anzahl_mitteilungen": {
+        "zeilen": 4341,
+        "erste": "2015-01-01",
+        "letzte": "2026-11-19",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.383,
+        "min": 0,
+        "max": 8,
+        "summe": 4388
+      },
+      "anzahl_durchsetzung": {
+        "zeilen": 4341,
+        "erste": "2015-01-01",
+        "letzte": "2026-11-19",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.477,
+        "min": 0,
+        "max": 6,
+        "summe": 2618
+      }
+    },
+    "aufgenommen_utc": "2026-11-20T00:25Z",
+    "geprueft_utc": "2026-11-20T00:25Z"
   }
 ]
