@@ -1,5 +1,5 @@
 {
- "kumuliert": 795209,
+ "kumuliert": 807189,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -302,7 +302,22 @@
   "idx_zinsanstieg_d5",
   "idx_zinsanstieg_stand",
   "idx_zinsanstieg_z252",
+  "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe_d1",
+  "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe_d20",
+  "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe_d5",
+  "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe_stand",
+  "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe_z252",
   "neu_adp_beschaeftigung_termine_adp_stand",
+  "neu_asic_medienmitteilungen_anzahl_durchsetzung_d1",
+  "neu_asic_medienmitteilungen_anzahl_durchsetzung_d20",
+  "neu_asic_medienmitteilungen_anzahl_durchsetzung_d5",
+  "neu_asic_medienmitteilungen_anzahl_durchsetzung_stand",
+  "neu_asic_medienmitteilungen_anzahl_durchsetzung_z252",
+  "neu_asic_medienmitteilungen_anzahl_mitteilungen_d1",
+  "neu_asic_medienmitteilungen_anzahl_mitteilungen_d20",
+  "neu_asic_medienmitteilungen_anzahl_mitteilungen_d5",
+  "neu_asic_medienmitteilungen_anzahl_mitteilungen_stand",
+  "neu_asic_medienmitteilungen_anzahl_mitteilungen_z252",
   "neu_b3_ibovespa_rebalancing_termine_erste_vorschau_stand",
   "neu_b3_ibovespa_rebalancing_termine_letzte_vorschau_stand",
   "neu_b3_ibovespa_rebalancing_termine_stichtag_stand",
@@ -395,6 +410,11 @@
   "neu_clinicaltrials_ergebnisse_ergebnisse_phase3_d5",
   "neu_clinicaltrials_ergebnisse_ergebnisse_phase3_stand",
   "neu_clinicaltrials_ergebnisse_ergebnisse_phase3_z252",
+  "neu_clinicaltrials_registrierungen_registrierungen_phase3_industrie_d1",
+  "neu_clinicaltrials_registrierungen_registrierungen_phase3_industrie_d20",
+  "neu_clinicaltrials_registrierungen_registrierungen_phase3_industrie_d5",
+  "neu_clinicaltrials_registrierungen_registrierungen_phase3_industrie_stand",
+  "neu_clinicaltrials_registrierungen_registrierungen_phase3_industrie_z252",
   "neu_consob_leerverkaeufe_meldungen_d1",
   "neu_consob_leerverkaeufe_meldungen_d20",
   "neu_consob_leerverkaeufe_meldungen_d5",
@@ -849,6 +869,21 @@
   "neu_fussball_niederlagen_nationalteams_niederlage_che_stand",
   "neu_fussball_niederlagen_nationalteams_niederlage_deu_stand",
   "neu_fussball_niederlagen_nationalteams_niederlage_jpn_stand",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_act_d1",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_act_d20",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_act_d5",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_act_stand",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_act_z252",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_d1",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_d20",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_d5",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_stand",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat_d1",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat_d20",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat_d5",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat_stand",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat_z252",
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_z252",
   "neu_healthcanada_noc_zulassungen_generika_zulassungen_d1",
   "neu_healthcanada_noc_zulassungen_generika_zulassungen_d20",
   "neu_healthcanada_noc_zulassungen_generika_zulassungen_d5",
@@ -2091,9 +2126,15 @@
    "datei": "suche/S0073.json",
    "kandidaten": 456616,
    "in_db": false
+  },
+  {
+   "nr": 74,
+   "datei": "suche/S0074.json",
+   "kandidaten": 468596,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-19T16:01Z",
+ "letzter_suchlauf_utc": "2026-11-20T16:52Z",
  "pruefung_lernrunde_utc": "2026-11-20T09:45:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2577,11 +2618,19 @@
    "ergebnis_hash": "c440fcd5995e5b4e",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261120T134206Z.json",
+   "lauf_id": "L20261120T134206Z",
+   "s_dokument": "suche/S0074.json",
+   "ergebnis_hash": "adbc18da8bd7e260",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-19T16:01Z",
- "letztes_vollarchiv": "suche/S0073_alle.csv.gz",
- "letzter_ergebnis_hash": "c440fcd5995e5b4e",
+ "letzter_lauf_utc": "2026-11-20T16:52Z",
+ "letztes_vollarchiv": "suche/S0074_alle.csv.gz",
+ "letzter_ergebnis_hash": "adbc18da8bd7e260",
  "konflikte": [
   {
    "wo": "index",
@@ -4816,10 +4865,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 380,
+  "grundreihen_n": 387,
   "neu_in_diesem_lauf": 7
  },
- "letztes_vollarchiv_ergebnis_hash": "c440fcd5995e5b4e",
+ "letztes_vollarchiv_ergebnis_hash": "adbc18da8bd7e260",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261116T132647Z",
@@ -4837,7 +4886,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "e40b053ab0794b71",
- "letzter_gueltiger_lauf": "L20261119T140005Z",
- "letzter_entscheidung_hash": "96542a2a08437a6d"
+ "letzter_eingabe_hash": "02202e1e30f47e5b",
+ "letzter_gueltiger_lauf": "L20261120T134206Z",
+ "letzter_entscheidung_hash": "3dac9db6e62db3db"
 }

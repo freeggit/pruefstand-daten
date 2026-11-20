@@ -127,11 +127,29 @@
    "erst_zeit": "27.9.2026, 12:59 (Europe/Zurich)",
    "beleg": "suche/S0012_alle.csv.gz"
   },
+  "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261120T134206Z",
+   "erst_zeit": "2026-11-20T16:52Z",
+   "beleg": "suche/laeufe/L20261120T134206Z.json"
+  },
   "neu_adp_beschaeftigung_termine_adp": {
    "erst_dokument": null,
    "erst_lauf": "L20261027T100646Z",
    "erst_zeit": "2026-10-27T12:54Z",
    "beleg": "suche/laeufe/L20261027T100646Z.json"
+  },
+  "neu_asic_medienmitteilungen_anzahl_durchsetzung": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261120T134206Z",
+   "erst_zeit": "2026-11-20T16:52Z",
+   "beleg": "suche/laeufe/L20261120T134206Z.json"
+  },
+  "neu_asic_medienmitteilungen_anzahl_mitteilungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261120T134206Z",
+   "erst_zeit": "2026-11-20T16:52Z",
+   "beleg": "suche/laeufe/L20261120T134206Z.json"
   },
   "neu_b3_ibovespa_rebalancing_termine_erste_vorschau": {
    "erst_dokument": null,
@@ -300,6 +318,12 @@
    "erst_lauf": null,
    "erst_zeit": "1.10.2026, 20:28 (Europe/Zurich)",
    "beleg": "suche/S0018_alle.csv.gz"
+  },
+  "neu_clinicaltrials_registrierungen_registrierungen_phase3_industrie": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261120T134206Z",
+   "erst_zeit": "2026-11-20T16:52Z",
+   "beleg": "suche/laeufe/L20261120T134206Z.json"
   },
   "neu_consob_leerverkaeufe_meldungen": {
    "erst_dokument": null,
@@ -906,6 +930,24 @@
    "erst_lauf": "L20261113T124343Z",
    "erst_zeit": "2026-11-13T15:59Z",
    "beleg": "suche/laeufe/L20261113T124343Z.json"
+  },
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261120T134206Z",
+   "erst_zeit": "2026-11-20T16:52Z",
+   "beleg": "suche/laeufe/L20261120T134206Z.json"
+  },
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_act": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261120T134206Z",
+   "erst_zeit": "2026-11-20T16:52Z",
+   "beleg": "suche/laeufe/L20261120T134206Z.json"
+  },
+  "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261120T134206Z",
+   "erst_zeit": "2026-11-20T16:52Z",
+   "beleg": "suche/laeufe/L20261120T134206Z.json"
   },
   "neu_healthcanada_noc_zulassungen_generika_zulassungen": {
    "erst_dokument": null,
@@ -2288,8 +2330,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261119T140005Z",
-  "zeit_utc": "2026-11-19T16:01Z",
-  "grundreihen_n": 380
+  "lauf_id": "L20261120T134206Z",
+  "zeit_utc": "2026-11-20T16:52Z",
+  "grundreihen_n": 387
  }
 }
