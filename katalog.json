@@ -2135,10 +2135,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Rueckrufe bei Fleisch- und Geflügelprodukten belasten Basiskonsum (XLP) einzelner Hersteller kurzfristig.",
-    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: HTTP 403 (410 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T08:15Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T04:20Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-09-28T20:15:44Z: HTTP 403 Access Denied (Akamai) von dieser Umgebung; Sperre nicht umgangen (Befund). Naechster Lauf erneut pruefen. Erneuter Test 2026-09-29T00:17:07Z: weiterhin HTTP 403; nicht umgangen. | Erneut 2026-10-05T20:15Z: HTTP 403, nicht umgangen. Erneut 2026-10-07T08:34Z: weiterhin HTTP 403, nicht umgangen. | Erneut 2026-10-07T16:18Z: HTTP 403, unveraendert, nicht umgangen. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin HTTP 403; nicht umgangen. Erneut 2026-10-19T00:25Z: HTTP 403, unveraendert. | Erneut 2026-10-20T00:27:00Z: HTTP 403, weiterhin gesperrt (nicht umgangen). | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403 (Akamai), nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-11-03T04Z: weiterhin HTTP 403, Sperre nicht umgangen | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403 (Access Denied), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: HTTP 403 (410 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T08:15Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T04:20Z: HTTP 403 (408 Bytes), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-09-28T20:15:44Z",
-    "geprueft_utc": "2026-11-19T04:30Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "fedregister_ftc_fusionen",
@@ -3314,11 +3314,11 @@
     "domain": "api.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin keine Verbindung (curl 000, www.nasdaq.com); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin keine Verbindung (curl 000, www.nasdaq.com); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: api.nasdaq.com keine Verbindung (Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-08T08:17Z",
-    "geprueft_utc": "2026-11-19T04:30Z",
+    "geprueft_utc": "2026-11-20T08:20Z",
     "prioritaet": "normal"
   },
   {
@@ -3927,11 +3927,11 @@
     "domain": "www.eia.gov",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.eia.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-10-21T04:16Z: www.eia.gov/outlooks/steo/archives liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Nächster Lauf erneut. Hinweis: EIA-Termine nicht als Wochenreihe ohne Historiequelle nutzbar. | Test 2026-10-22T08:15Z: weiterhin HTTP 403, nicht umgangen. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Lauf 2026-10-31T20Z: weiterhin HTTP 403, Sperre nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.eia.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: www.eia.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Revidierte Prognosen zu Ölnachfrage und Förderung verschieben die Preiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-20T10:00:00Z",
-    "geprueft_utc": "2026-11-19T04:30Z",
+    "geprueft_utc": "2026-11-20T08:20Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde"
   },
@@ -3987,11 +3987,11 @@
     "domain": "www.opec.org",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.opec.org weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-10-22T00:15Z: www.opec.org liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-10-25T04:15Z: HTTP 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Test 2026-10-28T08Z: weiterhin HTTP 403; nicht umgangen. | Test 2026-10-29T20Z: HTTP 403, nicht umgangen. | Test 2026-10-31T08:15Z: weiterhin HTTP 403; nicht umgangen. | 2026-11-05T04Z: Test: HTTP 403; nicht umgangen | Test 2026-11-08T08:21Z: 403 von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: www.opec.org weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: www.opec.org weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Revidierte Nachfrage- und Angebotsschätzungen der OPEC verschieben die Ölpreiserwartung am Veröffentlichungstag; wirkt auf Energiesektor (XLE) und Rohöl (USO) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-21T10:00:00Z",
-    "geprueft_utc": "2026-11-19T04:30Z",
+    "geprueft_utc": "2026-11-20T08:20Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde"
   },
@@ -4091,13 +4091,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: api.nasdaq.com weiterhin keine Verbindung (000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: api.nasdaq.com weiterhin keine Verbindung (000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: api.nasdaq.com keine Verbindung (Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-19T08:20Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -5015,9 +5015,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Schwere Arbeitsunfälle in Industrie, Bau und Energie führen zu Betriebsunterbrüchen, Bussen und Reputationsschäden; gehäuft können sie Industrie- und Energiewerte (XLI, XLE) kurzfristig belasten (vgl. msha_bergbauunfaelle für den Bergbau).",
-    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: www.osha.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut.",
+    "grund": "Erweitert Unfallereignisse über den Bergbau hinaus; CSV-Download ohne Login. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.osha.gov/severeinjury liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: Severy-Injury-Daten beginnen 2015-01 und werden quartalsweise ergänzt (K5/K4 fraglich). | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: www.osha.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: www.osha.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-19T08:20Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "epa_echo_vollzugsfaelle",
@@ -5041,9 +5041,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Grössere Leitungsunfälle unterbrechen den Transport von Rohöl und Erdgas, verändern regionale Preise und belasten Betreiber; kurzfristig relevant für USO, UNG und XLE.",
-    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: www.phmsa.dot.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorfalldaten statt Regeln (unterscheidet sich von fedregister_phmsa_pipeline); Historie ab 1986, damit auch Historie vor 1990. Vorratsauffüllung Lernrunde 11.11.2026 (Zusatz VORRAT); L3; erste Priorität Firmenereignisse (Zusatz 8); kein Doppel geprüft. | Test 2026-11-11T20:17Z: www.phmsa.dot.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. | Test 2026-11-13T00:18Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T00:10Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: www.phmsa.dot.gov weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: www.phmsa.dot.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-11T09:30:00Z",
-    "geprueft_utc": "2026-11-19T08:20Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "fra_bahnunfaelle_taeglich",
@@ -5547,10 +5547,10 @@
     "bereich": "Justiz",
     "status": "fehler",
     "mechanismus": "Urteile zu Regulierung (Gesundheit, Energie, Umwelt, Banken) kommen an vorab angekuendigten Tagen und koennen die betroffenen Sektoren (XLV, XLE, XLF) kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen. | Erneut 2026-11-14T04:20Z: scdb.la.psu.edu Datendatei HTTP 403, nicht umgangen. | Test 2026-11-15T00:10Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: scdb.la.psu.edu weiterhin HTTP 403 (supremecourt.gov 200, allein K2 nicht erfuellt); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin scdb.la.psu.edu HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin scdb.la.psu.edu 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-13: NEUER BEREICH «Justiz» (fehlte bisher). Slip Opinions mit Datum ab Term 2004 auf supremecourt.gov (HTTP 302/200); fruehere Daten aus dem Supreme Court Database (scdb.la.psu.edu, ab 1946, vor 1990). | Lauf 2026-11-13T16:50Z: supremecourt.gov/opinions/slipopinion/<Term> liefert Urteilslisten mit Datum nur ab Term 19 (Okt. 2019), fruehere Terme leiten auf USReports.aspx um (K2 allein nicht erfuellt). Historie ueber scdb.la.psu.edu/data/ geplant: HTTP 403 von dieser Umgebung, Sperre nicht umgangen (Befund). Naechster Lauf erneut SCDB pruefen. | Erneut 2026-11-14T04:20Z: scdb.la.psu.edu Datendatei HTTP 403, nicht umgangen. | Test 2026-11-15T00:10Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: scdb.la.psu.edu weiterhin HTTP 403 (supremecourt.gov 200, allein K2 nicht erfuellt); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin scdb.la.psu.edu HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin scdb.la.psu.edu 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: scdb.la.psu.edu weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-19T04:30Z",
+    "geprueft_utc": "2026-11-20T08:20Z",
     "prioritaet": "normal"
   },
   {
@@ -5645,10 +5645,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Beginn grosser Streiks unterbricht Produktion und Lieferketten in Industrie, Autobau und Gesundheit und kann XLI, XLY oder XLV kurzfristig gegenueber dem Weltindex belasten.",
-    "grund": "Test 2026-11-14T00:08Z: www.bls.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Hinweis fuer spaeter: BLS publiziert monatlich (verfuegbar_nach_tagen verzoegert, Datum der Monatsmeldung), Liste ab 1993; weniger als 500 Ereignisse wahrscheinlich (K2 fraglich). | Test 2026-11-15T00:10Z: www.bls.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-11-14T00:08Z: www.bls.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Hinweis fuer spaeter: BLS publiziert monatlich (verfuegbar_nach_tagen verzoegert, Datum der Monatsmeldung), Liste ab 1993; weniger als 500 Ereignisse wahrscheinlich (K2 fraglich). | Test 2026-11-15T00:10Z: www.bls.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-15T04:15Z: HTTP 403, nicht umgangen; naechster Lauf erneut. | Lauf 2026-11-16T08:45Z: weiterhin HTTP 403; Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: www.bls.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-14T00:08Z",
-    "geprueft_utc": "2026-11-19T04:30Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "noaa_incidentnews_oelunfaelle",
@@ -5966,10 +5966,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Kartell- und Verbraucherschutzverfahren der FTC gegen Grosskonzerne (Technologie, Gesundheit, Handel) können XLK, XLC, XLV und XLY gegenüber dem Weltindex kurzfristig belasten.",
-    "grund": "Eigene Recherche Lauf 2026-11-15T08:05Z. Test 2026-11-15T08:20Z: www.ftc.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: fedregister_ftc_fusionen deckt nur Federal-Register-Fusionsmitteilungen ab. | Erneut 2026-11-16T16:08Z: www.ftc.gov HTTP 403; nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Eigene Recherche Lauf 2026-11-15T08:05Z. Test 2026-11-15T08:20Z: www.ftc.gov liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), nächster Lauf erneut. Hinweis: fedregister_ftc_fusionen deckt nur Federal-Register-Fusionsmitteilungen ab. | Erneut 2026-11-16T16:08Z: www.ftc.gov HTTP 403; nicht umgangen, nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: www.ftc.gov weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-15T08:20Z",
-    "geprueft_utc": "2026-11-19T04:30Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "stanford_scac_sammelklagen",
@@ -5980,10 +5980,10 @@
     "status": "fehler",
     "prioritaet": "hoch",
     "mechanismus": "Sammelklagen wegen Kursbetrugs häufen sich in Sektoren mit Bilanz- oder Produktproblemen; eine Häufung neuer Klagen kündigt Rechtsrisiken und Abschläge für den Sektor (z.B. XLK, IBB, XLF) gegenüber dem Weltindex an.",
-    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Firmenereignisse aggregiert, Beginn 1996 (vor 2015). Fachliteratur: Kursreaktion um Klageeinreichung (Ferris/Pritchard 2001, Gande/Lewis 2009). Aus dieser Umgebung HTTP 403; Abruf ggf. nur über GitHub Action (siehe Vorschlag Behördenquellen). | Test 2026-11-15T12:15Z: securities.stanford.edu/filings.html liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (HTTP 403); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-15: Vorratsauffüllung (Zusatz 1). Firmenereignisse aggregiert, Beginn 1996 (vor 2015). Fachliteratur: Kursreaktion um Klageeinreichung (Ferris/Pritchard 2001, Gande/Lewis 2009). Aus dieser Umgebung HTTP 403; Abruf ggf. nur über GitHub Action (siehe Vorschlag Behördenquellen). | Test 2026-11-15T12:15Z: securities.stanford.edu/filings.html liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (HTTP 403); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-15T09:50Z",
-    "geprueft_utc": "2026-11-19T04:30Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "uk_dvsa_fahrzeugrueckrufe",
@@ -6500,10 +6500,10 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Ankuendigungen von Aufnahmen und Streichungen im Nikkei 225 loesen indexgebundene Umschichtungen japanischer Aktien aus und koennen EWJ gegenueber dem Weltindex kurzfristig bewegen (analog sp500_index_aenderungen, dax_indexaenderungen).",
-    "grund": "Eigene Recherche Lauf 2026-11-17T00:08Z. Test: indexes.nikkei.co.jp liefert HTTP 403 (Nachrichtenarchiv und Komponentenseite) von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Offen bei Erfolg: ob Ankuendigungsdatum (nicht nur Wirksamkeitsdatum) je Aenderung ab 2015 oder frueher belegt ist. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Eigene Recherche Lauf 2026-11-17T00:08Z. Test: indexes.nikkei.co.jp liefert HTTP 403 (Nachrichtenarchiv und Komponentenseite) von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. Offen bei Erfolg: ob Ankuendigungsdatum (nicht nur Wirksamkeitsdatum) je Aenderung ab 2015 oder frueher belegt ist. | Test 2026-11-18T00:25Z: weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin 403; Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: indexes.nikkei.co.jp weiterhin HTTP 403; Sperre nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-17T00:08Z",
-    "geprueft_utc": "2026-11-19T04:30Z"
+    "geprueft_utc": "2026-11-20T08:20Z"
   },
   {
     "id": "hhs_ocr_gesundheitsdatenlecks",
@@ -7248,5 +7248,35 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-20T04:40Z",
     "geprueft_utc": "2026-11-20T04:40Z"
+  },
+  {
+    "id": "clinicaltrials_registrierungen",
+    "name": "ClinicalTrials.gov: neu registrierte Phase-3-Studien mit Industrie-Sponsor je Tag",
+    "url": "https://clinicaltrials.gov/data-api/api",
+    "domain": "clinicaltrials.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Die Registrierung einer Phase-3-Studie ist die oeffentliche Bekanntgabe einer teuren Spaetphasen-Investition von Pharma- und Biotechfirmen; eine Haeufung zeigt Pipeline-Zuversicht und Informationsfluss im Gesundheitssektor (XLV, IBB) gegenueber dem Weltindex.",
+    "grund": "Eigene Recherche Lauf 2026-11-20T08:20Z (Zusatz 6: Firmenereignisse zuerst; andere Ereignisart als clinicaltrials_ergebnisse: Studienbeginn statt Ergebnis). K1 taeglich (Nullfuellung, Median-Abstand 1), K2 ab 2000-02-25 (9765 Zeilen), K3 offen (API v2 ohne Schluessel/Login), K4 StudyFirstPostDate wird nicht revidiert; Phase und Sponsorklasse vom heutigen Studienstand (koennen nachtraeglich geaendert sein, vermerkt), K5 letzter Wert 2026-11-19, K6 neu, K7 Abruf ca. 22 s, 27 KB. Pruefung: 25116 Studien, Min 0, Max 103 am 2005-09-15, Anteil gleicher Folgewerte 31.7% (Zaehlreihe mit Wochenend-Nullen, 43% Nulltage, kein Datenfehler). Regimewechsel: ICMJE-Registrierungspflicht ab Sept. 2005 (Nachregistrierungen 2005, vor 2005 duenn); sinnvoll ab 2006. Datum = Tag der Erstveroeffentlichung (publikation taeglich), verfuegbar_nach_tagen 1. Eine Reihe. Paar-Vorschlag fuer Reto: keiner.",
+    "reihen": [
+      "registrierungen_phase3_industrie"
+    ],
+    "aufgenommen_utc": "2026-11-20T08:20Z",
+    "geprueft_utc": "2026-11-20T08:20Z"
+  },
+  {
+    "id": "finra_disziplinarmassnahmen",
+    "name": "FINRA Disciplinary Actions Online je Tag",
+    "url": "https://www.finra.org/rules-guidance/oversight-enforcement/finra-disciplinary-actions-online",
+    "domain": "www.finra.org",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "tief",
+    "mechanismus": "Haeufung von Disziplinarmassnahmen gegen Broker-Dealer zeigt Aufsichtsdruck auf Finanzfirmen (XLF) gegenueber dem Weltindex.",
+    "grund": "Eigene Recherche Lauf 2026-11-20T08:20Z: Seite HTTP 200, Liste wird nur per JavaScript geladen (kein Tabelleninhalt im HTML, kein dokumentierter offener Endpunkt); robots.txt sperrt /sites/default/files/fda_documents/. Nicht weiter verfolgt; naechster Lauf allenfalls offenen Endpunkt pruefen. Daneben getestet: FCA Final Notices (www.fca.org.uk Suche HTTP 403, nicht umgangen).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-20T08:20Z",
+    "geprueft_utc": "2026-11-20T08:20Z"
   }
 ]

@@ -1,0 +1,11 @@
+{
+  "registrierungen_phase3_industrie": {
+    "beschreibung": "Neu registrierte Phase-3-Studien (inkl. Phase 2/3) mit Industrie-Sponsor (leadSponsor.class INDUSTRY), die an diesem Tag erstmals auf ClinicalTrials.gov veroeffentlicht wurden (StudyFirstPostDate)",
+    "einheit": "Anzahl Studien",
+    "publikation": "taeglich: ClinicalTrials.gov stellt eine Studie am Tag StudyFirstPostDate oeffentlich (Feld studyFirstPostDateStruct der API v2, Definition 'First Posted'); Abruf am Folgetag",
+    "quelle_url": "https://clinicaltrials.gov/data-api/api",
+    "revidiert": false,
+    "verdichtung": "Summe je Kalendertag (StudyFirstPostDate), Nullen an Tagen ohne Veroeffentlichung",
+    "verfuegbar_nach_tagen": 1
+  }
+}
