@@ -1,0 +1,22 @@
+{
+ "firmen_insolvenz": {
+  "einheit": "Anzahl Meldungen je Tag",
+  "beschreibung": "Amtliche Insolvenzmeldungen zu Firmen (Kategorie Corporate Insolvency) in The Gazette je Veroeffentlichungstag.",
+  "quelle_url": "https://www.thegazette.co.uk/insolvency/notice/data.feed?categorycode=G205010000",
+  "verdichtung": "Anzahl je Kalendertag (publish-date), 0 an Tagen ohne Ausgabe",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "publikation": "taeglich: The Gazette veroeffentlicht Meldungen am publish-date online (Feed sofort abrufbar); Datum = publish-date, Wert am Folgetag vollstaendig",
+  "status": "aktiv"
+ },
+ "abwicklungsantraege": {
+  "einheit": "Anzahl Meldungen je Tag",
+  "beschreibung": "Davon Antraege auf Zwangsabwicklung von Firmen (Petitions to Wind Up, Meldungsart 2450) je Veroeffentlichungstag.",
+  "quelle_url": "https://www.thegazette.co.uk/insolvency/notice/data.feed?noticetypes=2450",
+  "verdichtung": "Anzahl je Kalendertag (publish-date), 0 an Tagen ohne Ausgabe",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "publikation": "taeglich: The Gazette veroeffentlicht Meldungen am publish-date online (Feed sofort abrufbar); Datum = publish-date, Wert am Folgetag vollstaendig",
+  "status": "aktiv"
+ }
+}
