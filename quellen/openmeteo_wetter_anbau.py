@@ -43,11 +43,33 @@ def cutoff_date():
     )
 
 
-def fetch(lat, lon, end_date):
+# Inkrementeller Abruf (Lernrunde 2026-11-20): Open-Meteo gewichtet Anfragen
+# nach Datenmenge; der volle Bereich ab 1940 (rund 31'700 Tage je Region)
+# loeste wiederholt HTTP 429 aus. Liegt eine Datei vor, wird nur ab
+# letztem Datum minus UEBERLAPPUNG_TAGE neu geholt und zusammengefuehrt.
+UEBERLAPPUNG_TAGE = 30
+
+
+def read_existing(path):
+    if not os.path.exists(path):
+        return []
+    rows = []
+    with gzip.open(path, "rt", encoding="utf-8") as f:
+        next(f, None)
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            d, v = line.split(",", 1)
+            rows.append((d, float(v)))
+    return rows
+
+
+def fetch(lat, lon, end_date, start_date=START):
     url = (
         "https://archive-api.open-meteo.com/v1/archive"
         "?latitude=%s&longitude=%s&start_date=%s&end_date=%s"
-        "&daily=precipitation_sum&timezone=UTC" % (lat, lon, START, end_date)
+        "&daily=precipitation_sum&timezone=UTC" % (lat, lon, start_date, end_date)
     )
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     # Retry mit Backoff bei 429 (Rate-Limit auf geteilter IP) und bei
@@ -102,11 +124,23 @@ def main():
     for i, (reihe, info) in enumerate(REGIONEN.items()):
         if i:
             time.sleep(3)
-        payload = fetch(info["lat"], info["lon"], end_date)
-        rows = parse(payload)
-        if not rows:
+        pfad = os.path.join(OUT_DIR, reihe + ".csv.gz")
+        alt = read_existing(pfad)
+        start = START
+        if alt:
+            letzte = datetime.date.fromisoformat(alt[-1][0])
+            start = max(
+                datetime.date.fromisoformat(START),
+                letzte - datetime.timedelta(days=UEBERLAPPUNG_TAGE),
+            ).isoformat()
+        payload = fetch(info["lat"], info["lon"], end_date, start)
+        neu = parse(payload)
+        if not neu and not alt:
             raise SystemExit("keine Daten fuer %s" % reihe)
-        gzip_write(os.path.join(OUT_DIR, reihe + ".csv.gz"), rows)
+        zusammen = dict(alt)
+        zusammen.update(dict(neu))
+        rows = sorted(zusammen.items())
+        gzip_write(pfad, rows)
         meta[reihe] = {
             "einheit": "mm/Tag",
             "beschreibung": info["beschreibung"],
