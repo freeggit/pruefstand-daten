@@ -1717,10 +1717,10 @@
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR3/master.gz"
  },
  "edgar_2026q4": {
-  "abruf_utc": "2026-11-19T11:34:00Z",
-  "bytes": 14414803,
-  "meldungen": 10343,
-  "sha256": "99a2437cb0ee571a9d1ec49fff83135c502663f4ab8052198ba184ad5d2465e1",
+  "abruf_utc": "2026-11-20T11:31:25Z",
+  "bytes": 14771000,
+  "meldungen": 10603,
+  "sha256": "7e52afc4bcc986b033d8f856a4a4f05b17fcbda7e5cbb4bf566e7525fea55132",
   "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR4/master.gz"
  }
 }
