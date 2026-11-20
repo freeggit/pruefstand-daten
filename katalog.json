@@ -7218,5 +7218,35 @@
     },
     "aufgenommen_utc": "2026-11-20T00:25Z",
     "geprueft_utc": "2026-11-20T00:25Z"
+  },
+  {
+    "id": "sfc_hk_durchsetzungsmeldungen",
+    "name": "SFC Hongkong: Enforcement News je Tag",
+    "url": "https://apps.sfc.hk/edistributionWeb/gateway/EN/news-and-announcements/news/enforcement-news/",
+    "domain": "apps.sfc.hk",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "herkunft": "eigene Recherche",
+    "mechanismus": "Häufung von Durchsetzungsmassnahmen der Hongkonger Wertpapieraufsicht kann kurzfristig Abschläge für Hongkong/China-Aktien (EWH, MCHI) und Finanzwerte gegenüber dem Weltindex anzeigen.",
+    "grund": "Test 2026-11-20T04:35Z: Seite HTTP 200, aber reine JavaScript-App; Liste nur über die interne, undokumentierte Such-Schnittstelle des Webfrontends (/api/news/search, POST) erreichbar. Kein dokumentierter offener Datenzugang, Nutzung für automatisierten Abruf nicht belegt (K3 nicht erfüllt); Abruf in dieser Umgebung nicht freigegeben, nicht umgangen.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-20T04:40Z",
+    "geprueft_utc": "2026-11-20T04:40Z"
+  },
+  {
+    "id": "jpx_neuzulassungen_japan",
+    "name": "JPX: Börsenzulassungen (Listing Approval) Japan je Tag",
+    "url": "https://www.jpx.co.jp/english/listing/stocks/new/index.html",
+    "domain": "www.jpx.co.jp",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "herkunft": "eigene Recherche",
+    "mechanismus": "Dichte neuer Börsenzulassungen (Bekanntgabetag der Zulassung) als Mass für Emissionsangebot und Risikobereitschaft in Japan, kurzfristig relevant für EWJ gegenüber dem Weltindex.",
+    "grund": "Test 2026-11-20T04:38Z: Liste mit Zulassungsdatum öffentlich (HTTP 200), aber Archiv nur 00-archives-01 bis -04 (EN und JP), ältester Eintrag Zulassung 2021-12-01; ältere Archivseiten HTTP 404. K2 (Beginn spätestens 2015) nicht erfüllt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-20T04:40Z",
+    "geprueft_utc": "2026-11-20T04:40Z"
   }
 ]
