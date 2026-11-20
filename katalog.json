@@ -7297,11 +7297,17 @@
     "url": "https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls",
     "domain": "matteoiacoviello.com",
     "bereich": "Geopolitik",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "hoch",
     "mechanismus": "Sprünge im geopolitischen Risiko erhöhen kurzfristig Öl-, Gold- und Rüstungsrenditen und senken Schwellenländer gegenüber dem Weltindex (Caldara/Iacoviello, AER 2022).",
-    "grund": "Neuer Bereich «Geopolitik» (fehlte bisher); Fachliteratur mit Mechanismus (L3); Datei HTTP 200 geprüft; täglich ab 1985 deckt Familie S, Monatsreihe ab 1900 Familie L. Veröffentlicht, evtl. abgeschwächt. (Lernrunde 2026-11-20)",
-    "aufgenommen_utc": "2026-11-20T09:30:00Z"
+    "grund": "Neuer Bereich «Geopolitik» (fehlte bisher); Fachliteratur mit Mechanismus (L3); Datei HTTP 200 geprüft; täglich ab 1985 deckt Familie S, Monatsreihe ab 1900 Familie L. Veröffentlicht, evtl. abgeschwächt. (Lernrunde 2026-11-20) | Lauf 2026-11-20T12:10Z: aufgenommen. K1 taeglich (Median-Abstand 1, keine Luecke), K2 ab 1985-01-01 (15294 Werte je Reihe, Beginn vor 1990: Familie Langzeit), K3 offen (Stata-Datei data_gpr_daily_recent.dta ohne Login, Zitierung erbeten; .xls nicht mit Standardbibliothek lesbar), K4 Zaehlindex aus Zeitungsartikeln, kein Statistik-Revisionsprozess; Skript meldet bei jedem Lauf geaenderte Altwerte (Kontrolle), Tag des Datei-Zeitstempels wird weggelassen (unvollstaendig), K5 letzter Wert 2026-11-15 (Datei 16.11.2026; woechentliche Erneuerung, darum verfuegbar_nach_tagen 8, publikation woechentlich), K6 neu (USEPUINDXD misst Wirtschaftspolitik, nicht Geopolitik), K7 3,3 MB Abruf unter 1 s, je Reihe ca. 97 KB. Pruefung: Anteil gleicher Folgewerte 0,01-0,05 %, Min 0 (2 Tage: 1997-10-19, 2025-02-09, Quelle), Max gprd 1045.6 / gprd_act 1627.4 / gprd_threat 809.5 (Golfkrieg/9-11-Grössenordnung, plausibel). Gleitende Mittel und Artikelzahl N10D nicht abgelegt (abgeleitet, Zusatz 3: 3 Reihen). Paar-Vorschlag fuer Reto: keiner.",
+    "aufgenommen_utc": "2026-11-20T09:30:00Z",
+    "reihen": [
+      "gprd",
+      "gprd_act",
+      "gprd_threat"
+    ],
+    "geprueft_utc": "2026-11-20T12:10Z"
   },
   {
     "id": "icb_internationale_krisen_beginn",
@@ -7333,11 +7339,12 @@
     "url": "https://tron.trade.ec.europa.eu/investigations/ongoing",
     "domain": "tron.trade.ec.europa.eu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Einleitung und Verhängung von EU-Antidumpingzöllen (Stahl, Chemie, Solar) verschieben kurzfristig die Erwartungen für Grundstoffe und chinesische Exporteure (XLB, FXI, EEM) gegenüber dem Weltindex.",
-    "grund": "Ergänzt die US-Reihen fedregister_handelsschutz und usitc_handelsschutz_verfuegungen um eine unabhängige Behörde; Liste HTTP 200 geprüft; Historie im Amtsblatt (EUR-Lex) ab 1990er-Jahre. (Lernrunde 2026-11-20)",
-    "aufgenommen_utc": "2026-11-20T09:30:00Z"
+    "grund": "Ergänzt die US-Reihen fedregister_handelsschutz und usitc_handelsschutz_verfuegungen um eine unabhängige Behörde; Liste HTTP 200 geprüft; Historie im Amtsblatt (EUR-Lex) ab 1990er-Jahre. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: tron.trade.ec.europa.eu ist eine Angular-Anwendung, die Liste wird nur per JavaScript geladen (kein Tabelleninhalt im HTML, kein dokumentierter offener Endpunkt). Naechster Versuch: Historie aus EUR-Lex (Amtsblatt Reihe C/L, Einleitungsbekanntmachungen) mit Veroeffentlichungsdatum pruefen.",
+    "aufgenommen_utc": "2026-11-20T09:30:00Z",
+    "geprueft_utc": "2026-11-20T12:10Z"
   },
   {
     "id": "sp_ratinghistorie_17g7",
@@ -7345,11 +7352,12 @@
     "url": "https://disclosure.spglobal.com/ratings/en/regulatory/ratings-history",
     "domain": "disclosure.spglobal.com",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Gehäufte Herabstufungen in einem Sektor (Fallen Angels) erzwingen Verkäufe regelgebundener Anleger und belasten kurzfristig LQD und Sektor-ETF gegenüber dem Weltindex (Ellul/Jotikasthira/Lundblad 2011).",
-    "grund": "Firmenereignisse aggregiert; öffentliche XBRL-Dateien ohne Login (HTTP 301 auf Download-Seite, Ziel prüfen); Tiefe je nach Datei ab 2012, damit 8 Jahre vor dem Siegel. (Lernrunde 2026-11-20)",
-    "aufgenommen_utc": "2026-11-20T09:30:00Z"
+    "grund": "Firmenereignisse aggregiert; öffentliche XBRL-Dateien ohne Login (HTTP 301 auf Download-Seite, Ziel prüfen); Tiefe je nach Datei ab 2012, damit 8 Jahre vor dem Siegel. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: disclosure.spglobal.com liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut.",
+    "aufgenommen_utc": "2026-11-20T09:30:00Z",
+    "geprueft_utc": "2026-11-20T12:10Z"
   },
   {
     "id": "sec_form15_abmeldungen",

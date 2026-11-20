@@ -1,0 +1,29 @@
+{
+  "gprd": {
+    "beschreibung": "Taeglicher Geopolitical Risk Index (Caldara/Iacoviello, AER 2022): Anteil Artikel mit geopolitischen Risikobegriffen in 10 US/UK-Zeitungen, normiert 1985-2019 = 100.",
+    "einheit": "Index (1985-2019 = 100)",
+    "publikation": "woechentlich: die Tagesdatei wird auf matteoiacoviello.com/gpr.htm etwa einmal pro Woche erneuert (Zeitstempel der dta, z.B. 16 Nov 2026); darum verfuegbar_nach_tagen 8 nach Zusatz 5",
+    "quelle_url": "https://www.matteoiacoviello.com/gpr.htm",
+    "revidiert": false,
+    "verdichtung": "keine (Tageswert der Quelle; Artikel des Kalendertags in 10 Zeitungen)",
+    "verfuegbar_nach_tagen": 8
+  },
+  "gprd_act": {
+    "beschreibung": "Teilindex Geopolitical Acts (eingetretene Ereignisse: Krieg begonnen, Anschlag, Eskalation).",
+    "einheit": "Index (1985-2019 = 100)",
+    "publikation": "woechentlich: die Tagesdatei wird auf matteoiacoviello.com/gpr.htm etwa einmal pro Woche erneuert (Zeitstempel der dta, z.B. 16 Nov 2026); darum verfuegbar_nach_tagen 8 nach Zusatz 5",
+    "quelle_url": "https://www.matteoiacoviello.com/gpr.htm",
+    "revidiert": false,
+    "verdichtung": "keine (Tageswert der Quelle; Artikel des Kalendertags in 10 Zeitungen)",
+    "verfuegbar_nach_tagen": 8
+  },
+  "gprd_threat": {
+    "beschreibung": "Teilindex Geopolitical Threats (Drohungen, Kriegsgefahr, nukleare Drohung).",
+    "einheit": "Index (1985-2019 = 100)",
+    "publikation": "woechentlich: die Tagesdatei wird auf matteoiacoviello.com/gpr.htm etwa einmal pro Woche erneuert (Zeitstempel der dta, z.B. 16 Nov 2026); darum verfuegbar_nach_tagen 8 nach Zusatz 5",
+    "quelle_url": "https://www.matteoiacoviello.com/gpr.htm",
+    "revidiert": false,
+    "verdichtung": "keine (Tageswert der Quelle; Artikel des Kalendertags in 10 Zeitungen)",
+    "verfuegbar_nach_tagen": 8
+  }
+}
