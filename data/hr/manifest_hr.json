@@ -4,8 +4,8 @@
    "dateien": [
     "data/hr/pegel/kaub_2026.csv.gz"
    ],
-   "zeilen": 8622,
-   "letzte": "2026-11-21T11:45:00+01:00",
+   "zeilen": 8649,
+   "letzte": "2026-11-21T18:30:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -15,8 +15,8 @@
    "dateien": [
     "data/hr/pegel/maxau_2026.csv.gz"
    ],
-   "zeilen": 8627,
-   "letzte": "2026-11-21T11:45:00+01:00",
+   "zeilen": 8654,
+   "letzte": "2026-11-21T18:30:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -26,8 +26,8 @@
    "dateien": [
     "data/hr/pegel/koeln_2026.csv.gz"
    ],
-   "zeilen": 8624,
-   "letzte": "2026-11-21T11:45:00+01:00",
+   "zeilen": 8651,
+   "letzte": "2026-11-21T18:30:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -37,8 +37,8 @@
    "dateien": [
     "data/hr/pegel/duisburg-ruhrort_2026.csv.gz"
    ],
-   "zeilen": 8628,
-   "letzte": "2026-11-21T11:45:00+01:00",
+   "zeilen": 8655,
+   "letzte": "2026-11-21T18:30:00+01:00",
    "aufloesung": "15min",
    "quelle": "pegelonline.wsv.de",
    "hinweis": "Quelle liefert nur 31 Tage; Historie wächst ab Beginn des Spiegels",
@@ -438,6 +438,6 @@
   "wiki",
   "wetter"
  ],
- "inventur_utc": "2026-11-21T10:58:05Z",
- "erzeugt_utc": "2026-11-21T10:55:54Z"
+ "inventur_utc": "2026-11-21T17:39:56Z",
+ "erzeugt_utc": "2026-11-21T17:38:19Z"
 }
