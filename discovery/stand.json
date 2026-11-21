@@ -2549,6 +2549,33 @@
    "aufgenommen_utc": "2026-10-28T10:53:33Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__b3_ibovespa_rebalancing_termine__erste_vorschau.csv.gz": {
+   "datei": "n__neu__b3_ibovespa_rebalancing_termine__erste_vorschau.csv.gz@0d2fc7d9ddbad8b8",
+   "sha": "0d2fc7d9ddbad8b8da55a5dfaf087dc1a82150d7904c8089f9681319f023798a",
+   "sha_inhalt": "05fde7e8748eff1fdbac6977708900a7b49695917dd1c39e08ff59a4fb4d9d19",
+   "zeilen": 3653,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-21T13:07:52Z",
+   "lauf_id": "L20261121T130737Z"
+  },
+  "n__neu__b3_ibovespa_rebalancing_termine__letzte_vorschau.csv.gz": {
+   "datei": "n__neu__b3_ibovespa_rebalancing_termine__letzte_vorschau.csv.gz@13528cb884ba42a0",
+   "sha": "13528cb884ba42a061d98c8612d9a8d00ff87ee63f53c564bcbccaceef8d6060",
+   "sha_inhalt": "8468311a923f6df19aa28a75d3daa86cdccff6156e21dad20453581527929623",
+   "zeilen": 3653,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-21T13:07:52Z",
+   "lauf_id": "L20261121T130737Z"
+  },
+  "n__neu__b3_ibovespa_rebalancing_termine__stichtag.csv.gz": {
+   "datei": "n__neu__b3_ibovespa_rebalancing_termine__stichtag.csv.gz@3cc787b71fdeed75",
+   "sha": "3cc787b71fdeed75ec5bbb73abf14a2a477d4be6698caf51a9facc101479fe2a",
+   "sha_inhalt": "61deac612f8c2ebdd57bfea883075434a1888d270c0385b797982e06fdb1c219",
+   "zeilen": 3653,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-21T13:07:52Z",
+   "lauf_id": "L20261121T130737Z"
+  },
   "n__neu__bitcoin_onchain__gebuehren.csv.gz": {
    "datei": "n__neu__bitcoin_onchain__gebuehren.csv.gz@d39f7d6565a7a60c",
    "sha": "d39f7d6565a7a60cdf398b57173b5c5e1406f0befbc08f340632684a7a472215",
@@ -2819,6 +2846,24 @@
    "aufgenommen_utc": "2026-11-20T13:42:32Z",
    "lauf_id": "L20261120T134206Z"
   },
+  "n__neu__easa_lufttuechtigkeitsanweisungen__anzahl_ads.csv.gz": {
+   "datei": "n__neu__easa_lufttuechtigkeitsanweisungen__anzahl_ads.csv.gz@db7b668c305538de",
+   "sha": "db7b668c305538de2143fabaa92397ec1b4dd19d3a891de7d3fbcda37d76378d",
+   "sha_inhalt": "f5fea0e68a7c01f4455e30ad692a05df6799618ab6a2c443b863f1e2b1716ba7",
+   "zeilen": 5925,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-21T13:07:52Z",
+   "lauf_id": "L20261121T130737Z"
+  },
+  "n__neu__easa_lufttuechtigkeitsanweisungen__notfall_ads.csv.gz": {
+   "datei": "n__neu__easa_lufttuechtigkeitsanweisungen__notfall_ads.csv.gz@13d5b1bf6bce3bc6",
+   "sha": "13d5b1bf6bce3bc6be4df5c3e7f2aaebed85ab349d45485927dc8cbc833a5d01",
+   "sha_inhalt": "e2e8aaafa3ac29c869bebae81c2f9b771263e3b55b62f69133c4f2afc2fc8c3c",
+   "zeilen": 5925,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-21T13:07:52Z",
+   "lauf_id": "L20261121T130737Z"
+  },
   "n__neu__eba_stresstest_termine__ergebnisse.csv.gz": {
    "datei": "n__neu__eba_stresstest_termine__ergebnisse.csv.gz@5716c8889942f44e",
    "sha": "5716c8889942f44efbaeeb06caa907a0b817e5c0ce8d0e14dfa2feefdae8b3e6",
@@ -2899,6 +2944,24 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-11-16T13:27:12Z",
    "lauf_id": "L20261116T132647Z"
+  },
+  "n__neu__eu_beihilfe_entscheide__genehmigungen.csv.gz": {
+   "datei": "n__neu__eu_beihilfe_entscheide__genehmigungen.csv.gz@0257c2a8b5d1a17a",
+   "sha": "0257c2a8b5d1a17a7ff7ccf3dbb3a8311638b4d5f06a8c426149bf38a728900a",
+   "sha_inhalt": "6b09c5a7cd7817fdaaf5d4f2f514f457394f278df83ff898bc64d0d74f00b5ca",
+   "zeilen": 13149,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-21T13:07:53Z",
+   "lauf_id": "L20261121T130737Z"
+  },
+  "n__neu__eu_beihilfe_entscheide__pruefungen.csv.gz": {
+   "datei": "n__neu__eu_beihilfe_entscheide__pruefungen.csv.gz@3fdca5cac72081b5",
+   "sha": "3fdca5cac72081b5afc6badde3cae6a183509ab403512db2131367e694a3db31",
+   "sha_inhalt": "7cedbfa19a69f49eacb557cb0aa6df00845b948c55c5d6c662b49d70eaf0a35a",
+   "zeilen": 13149,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-21T13:07:53Z",
+   "lauf_id": "L20261121T130737Z"
   },
   "n__neu__eu_boersenfeiertage__geschlossen.csv.gz": {
    "datei": "n__neu__eu_boersenfeiertage__geschlossen.csv.gz@af00f1a0a5964c8d",
@@ -5180,8 +5243,8 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-20T13:42:47Z",
- "dateien_n": 572,
+ "stand_utc": "2026-11-21T13:08:02Z",
+ "dateien_n": 579,
  "vorgemerkt": {
   "n__neu__accc_produktrueckrufe_australien__anzahl_rueckrufe.csv.gz": {
    "erstmals_utc": "2026-11-20T13:42:31Z",
@@ -5194,6 +5257,13 @@
      "werte": 2860,
      "erste": "2003-01-01",
      "sha_inhalt": "5590e90e2295aa2205fe4c20c19d7dc1cf9cebf57cec40943b4969657066d78d"
+    },
+    {
+     "utc": "2026-11-21T13:07:52Z",
+     "lauf_id": "L20261121T130737Z",
+     "werte": 2860,
+     "erste": "2003-01-01",
+     "sha_inhalt": "47c945379d3415f2b73fe334cbbe5c2e58756688bf9d1804a7548bb13ddde14f"
     }
    ]
   },
@@ -5205,6 +5275,13 @@
     {
      "utc": "2026-11-20T13:42:31Z",
      "lauf_id": "L20261120T134206Z",
+     "werte": 810,
+     "erste": "2015-01-01",
+     "sha_inhalt": "70336d0b2458be45bf16be40b06eb7c33a2b762240e82d7e2e0ec5e9e3a28c22"
+    },
+    {
+     "utc": "2026-11-21T13:07:52Z",
+     "lauf_id": "L20261121T130737Z",
      "werte": 810,
      "erste": "2015-01-01",
      "sha_inhalt": "70336d0b2458be45bf16be40b06eb7c33a2b762240e82d7e2e0ec5e9e3a28c22"
@@ -5222,69 +5299,13 @@
      "werte": 1151,
      "erste": "2015-01-01",
      "sha_inhalt": "d2b644acf9ecc272ac575a0934e2037b388868a2427ec96b80a3f0e6e27a52c0"
-    }
-   ]
-  },
-  "n__neu__b3_ibovespa_rebalancing_termine__erste_vorschau.csv.gz": {
-   "erstmals_utc": "2026-11-19T14:00:25Z",
-   "beste_werte": 30,
-   "frueheste_erste": "2011-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-19T14:00:25Z",
-     "lauf_id": "L20261119T140005Z",
-     "werte": 30,
-     "erste": "2011-01-01",
-     "sha_inhalt": "05fde7e8748eff1fdbac6977708900a7b49695917dd1c39e08ff59a4fb4d9d19"
     },
     {
-     "utc": "2026-11-20T13:42:31Z",
-     "lauf_id": "L20261120T134206Z",
-     "werte": 30,
-     "erste": "2011-01-01",
-     "sha_inhalt": "05fde7e8748eff1fdbac6977708900a7b49695917dd1c39e08ff59a4fb4d9d19"
-    }
-   ]
-  },
-  "n__neu__b3_ibovespa_rebalancing_termine__letzte_vorschau.csv.gz": {
-   "erstmals_utc": "2026-11-19T14:00:25Z",
-   "beste_werte": 30,
-   "frueheste_erste": "2011-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-19T14:00:25Z",
-     "lauf_id": "L20261119T140005Z",
-     "werte": 30,
-     "erste": "2011-01-01",
-     "sha_inhalt": "8468311a923f6df19aa28a75d3daa86cdccff6156e21dad20453581527929623"
-    },
-    {
-     "utc": "2026-11-20T13:42:31Z",
-     "lauf_id": "L20261120T134206Z",
-     "werte": 30,
-     "erste": "2011-01-01",
-     "sha_inhalt": "8468311a923f6df19aa28a75d3daa86cdccff6156e21dad20453581527929623"
-    }
-   ]
-  },
-  "n__neu__b3_ibovespa_rebalancing_termine__stichtag.csv.gz": {
-   "erstmals_utc": "2026-11-19T14:00:25Z",
-   "beste_werte": 30,
-   "frueheste_erste": "2011-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-19T14:00:25Z",
-     "lauf_id": "L20261119T140005Z",
-     "werte": 30,
-     "erste": "2011-01-01",
-     "sha_inhalt": "61deac612f8c2ebdd57bfea883075434a1888d270c0385b797982e06fdb1c219"
-    },
-    {
-     "utc": "2026-11-20T13:42:31Z",
-     "lauf_id": "L20261120T134206Z",
-     "werte": 30,
-     "erste": "2011-01-01",
-     "sha_inhalt": "61deac612f8c2ebdd57bfea883075434a1888d270c0385b797982e06fdb1c219"
+     "utc": "2026-11-21T13:07:52Z",
+     "lauf_id": "L20261121T130737Z",
+     "werte": 1151,
+     "erste": "2015-01-01",
+     "sha_inhalt": "d2b644acf9ecc272ac575a0934e2037b388868a2427ec96b80a3f0e6e27a52c0"
     }
    ]
   },
@@ -5299,90 +5320,13 @@
      "werte": 4143,
      "erste": "2000-02-25",
      "sha_inhalt": "115f86f64024b9ab15176aa22b1e7f4d88027cf463f6d2b61e979b284799fdff"
-    }
-   ]
-  },
-  "n__neu__easa_lufttuechtigkeitsanweisungen__anzahl_ads.csv.gz": {
-   "erstmals_utc": "2026-11-19T14:00:26Z",
-   "beste_werte": 2283,
-   "frueheste_erste": "2004-10-12",
-   "sichtungen": [
-    {
-     "utc": "2026-11-19T14:00:26Z",
-     "lauf_id": "L20261119T140005Z",
-     "werte": 2283,
-     "erste": "2004-10-12",
-     "sha_inhalt": "f5fea0e68a7c01f4455e30ad692a05df6799618ab6a2c443b863f1e2b1716ba7"
     },
     {
-     "utc": "2026-11-20T13:42:32Z",
-     "lauf_id": "L20261120T134206Z",
-     "werte": 2283,
-     "erste": "2004-10-12",
-     "sha_inhalt": "f5fea0e68a7c01f4455e30ad692a05df6799618ab6a2c443b863f1e2b1716ba7"
-    }
-   ]
-  },
-  "n__neu__easa_lufttuechtigkeitsanweisungen__notfall_ads.csv.gz": {
-   "erstmals_utc": "2026-11-19T14:00:26Z",
-   "beste_werte": 440,
-   "frueheste_erste": "2004-10-12",
-   "sichtungen": [
-    {
-     "utc": "2026-11-19T14:00:26Z",
-     "lauf_id": "L20261119T140005Z",
-     "werte": 440,
-     "erste": "2004-10-12",
-     "sha_inhalt": "e2e8aaafa3ac29c869bebae81c2f9b771263e3b55b62f69133c4f2afc2fc8c3c"
-    },
-    {
-     "utc": "2026-11-20T13:42:32Z",
-     "lauf_id": "L20261120T134206Z",
-     "werte": 440,
-     "erste": "2004-10-12",
-     "sha_inhalt": "e2e8aaafa3ac29c869bebae81c2f9b771263e3b55b62f69133c4f2afc2fc8c3c"
-    }
-   ]
-  },
-  "n__neu__eu_beihilfe_entscheide__genehmigungen.csv.gz": {
-   "erstmals_utc": "2026-11-19T14:00:26Z",
-   "beste_werte": 918,
-   "frueheste_erste": "1985-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-19T14:00:26Z",
-     "lauf_id": "L20261119T140005Z",
-     "werte": 918,
-     "erste": "1985-01-01",
-     "sha_inhalt": "6b09c5a7cd7817fdaaf5d4f2f514f457394f278df83ff898bc64d0d74f00b5ca"
-    },
-    {
-     "utc": "2026-11-20T13:42:33Z",
-     "lauf_id": "L20261120T134206Z",
-     "werte": 918,
-     "erste": "1985-01-01",
-     "sha_inhalt": "6b09c5a7cd7817fdaaf5d4f2f514f457394f278df83ff898bc64d0d74f00b5ca"
-    }
-   ]
-  },
-  "n__neu__eu_beihilfe_entscheide__pruefungen.csv.gz": {
-   "erstmals_utc": "2026-11-19T14:00:26Z",
-   "beste_werte": 539,
-   "frueheste_erste": "1985-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-19T14:00:26Z",
-     "lauf_id": "L20261119T140005Z",
-     "werte": 539,
-     "erste": "1985-01-01",
-     "sha_inhalt": "7cedbfa19a69f49eacb557cb0aa6df00845b948c55c5d6c662b49d70eaf0a35a"
-    },
-    {
-     "utc": "2026-11-20T13:42:33Z",
-     "lauf_id": "L20261120T134206Z",
-     "werte": 539,
-     "erste": "1985-01-01",
-     "sha_inhalt": "7cedbfa19a69f49eacb557cb0aa6df00845b948c55c5d6c662b49d70eaf0a35a"
+     "utc": "2026-11-21T13:07:52Z",
+     "lauf_id": "L20261121T130737Z",
+     "werte": 4143,
+     "erste": "2000-02-25",
+     "sha_inhalt": "115f86f64024b9ab15176aa22b1e7f4d88027cf463f6d2b61e979b284799fdff"
     }
    ]
   },
@@ -5394,6 +5338,13 @@
     {
      "utc": "2026-11-20T13:42:37Z",
      "lauf_id": "L20261120T134206Z",
+     "werte": 13148,
+     "erste": "1985-01-01",
+     "sha_inhalt": "1a9ecfc3f87bd6527539b1a57d05204dbdc7cd7774d1abb44881593b11a6800a"
+    },
+    {
+     "utc": "2026-11-21T13:07:56Z",
+     "lauf_id": "L20261121T130737Z",
      "werte": 13148,
      "erste": "1985-01-01",
      "sha_inhalt": "1a9ecfc3f87bd6527539b1a57d05204dbdc7cd7774d1abb44881593b11a6800a"
@@ -5411,6 +5362,13 @@
      "werte": 13089,
      "erste": "1985-01-01",
      "sha_inhalt": "f26a4ff453601f80a8d3833254a5a74f7ee9518aac3e9a7aa870a79d1767e9af"
+    },
+    {
+     "utc": "2026-11-21T13:07:56Z",
+     "lauf_id": "L20261121T130737Z",
+     "werte": 13089,
+     "erste": "1985-01-01",
+     "sha_inhalt": "f26a4ff453601f80a8d3833254a5a74f7ee9518aac3e9a7aa870a79d1767e9af"
     }
    ]
   },
@@ -5425,6 +5383,41 @@
      "werte": 13140,
      "erste": "1985-01-01",
      "sha_inhalt": "c93eeaf89ca72825ea3670329c21180e46a2d1be14de55a47774bdeec8a43fb1"
+    },
+    {
+     "utc": "2026-11-21T13:07:56Z",
+     "lauf_id": "L20261121T130737Z",
+     "werte": 13140,
+     "erste": "1985-01-01",
+     "sha_inhalt": "c93eeaf89ca72825ea3670329c21180e46a2d1be14de55a47774bdeec8a43fb1"
+    }
+   ]
+  },
+  "n__neu__uk_gazette_insolvenzmeldungen__abwicklungsantraege.csv.gz": {
+   "erstmals_utc": "2026-11-21T13:07:58Z",
+   "beste_werte": 5794,
+   "frueheste_erste": "1998-01-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-21T13:07:58Z",
+     "lauf_id": "L20261121T130737Z",
+     "werte": 5794,
+     "erste": "1998-01-02",
+     "sha_inhalt": "5e2d1ef1204bbf0048fda159bb4d97efc04834d8f109d2d4a082f021548b3a4f"
+    }
+   ]
+  },
+  "n__neu__uk_gazette_insolvenzmeldungen__firmen_insolvenz.csv.gz": {
+   "erstmals_utc": "2026-11-21T13:07:58Z",
+   "beste_werte": 6006,
+   "frueheste_erste": "1998-01-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-21T13:07:58Z",
+     "lauf_id": "L20261121T130737Z",
+     "werte": 6006,
+     "erste": "1998-01-02",
+     "sha_inhalt": "e4b6d651b07c58ff9aa9d29b1dad9066fddce8435aa78150c8fc882283102804"
     }
    ]
   }

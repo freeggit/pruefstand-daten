@@ -1333,6 +1333,18 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_uk_gazette_insolvenzmeldungen_abwicklungsantraege": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261121T130737Z",
+   "erst_zeit": "2026-11-21T14:57Z",
+   "beleg": "suche/laeufe/L20261121T130737Z.json"
+  },
+  "neu_uk_gazette_insolvenzmeldungen_firmen_insolvenz": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261121T130737Z",
+   "erst_zeit": "2026-11-21T14:57Z",
+   "beleg": "suche/laeufe/L20261121T130737Z.json"
+  },
   "neu_us_arbeitsmarkt_termine_arbeitsmarkt": {
    "erst_dokument": "S0010",
    "erst_lauf": null,
@@ -2330,8 +2342,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261120T134206Z",
-  "zeit_utc": "2026-11-20T16:52Z",
-  "grundreihen_n": 387
+  "lauf_id": "L20261121T130737Z",
+  "zeit_utc": "2026-11-21T14:57Z",
+  "grundreihen_n": 389
  }
 }

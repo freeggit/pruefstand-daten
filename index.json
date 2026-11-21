@@ -1,5 +1,5 @@
 {
- "kumuliert": 807189,
+ "kumuliert": 809327,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -1132,6 +1132,16 @@
   "neu_treasury_yield_curve_kurz_stand",
   "neu_treasury_yield_curve_kurz_z252",
   "neu_turn_of_month_effekt_turn_of_month_stand",
+  "neu_uk_gazette_insolvenzmeldungen_abwicklungsantraege_d1",
+  "neu_uk_gazette_insolvenzmeldungen_abwicklungsantraege_d20",
+  "neu_uk_gazette_insolvenzmeldungen_abwicklungsantraege_d5",
+  "neu_uk_gazette_insolvenzmeldungen_abwicklungsantraege_stand",
+  "neu_uk_gazette_insolvenzmeldungen_abwicklungsantraege_z252",
+  "neu_uk_gazette_insolvenzmeldungen_firmen_insolvenz_d1",
+  "neu_uk_gazette_insolvenzmeldungen_firmen_insolvenz_d20",
+  "neu_uk_gazette_insolvenzmeldungen_firmen_insolvenz_d5",
+  "neu_uk_gazette_insolvenzmeldungen_firmen_insolvenz_stand",
+  "neu_uk_gazette_insolvenzmeldungen_firmen_insolvenz_z252",
   "neu_us_arbeitsmarkt_termine_arbeitsmarkt_stand",
   "neu_us_bip_bea_veroeffentlichungstage_bip_stand",
   "neu_us_bip_bea_veroeffentlichungstage_pce_stand",
@@ -2136,9 +2146,15 @@
    "datei": "suche/S0074.json",
    "kandidaten": 468596,
    "in_db": false
+  },
+  {
+   "nr": 75,
+   "datei": "suche/S0075.json",
+   "kandidaten": 470734,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-20T16:52Z",
+ "letzter_suchlauf_utc": "2026-11-21T14:57Z",
  "pruefung_lernrunde_utc": "2026-11-21T10:30:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2630,11 +2646,19 @@
    "ergebnis_hash": "adbc18da8bd7e260",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261121T130737Z.json",
+   "lauf_id": "L20261121T130737Z",
+   "s_dokument": "suche/S0075.json",
+   "ergebnis_hash": "25779dcb04a590a7",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-20T16:52Z",
- "letztes_vollarchiv": "suche/S0074_alle.csv.gz",
- "letzter_ergebnis_hash": "adbc18da8bd7e260",
+ "letzter_lauf_utc": "2026-11-21T14:57Z",
+ "letztes_vollarchiv": "suche/S0075_alle.csv.gz",
+ "letzter_ergebnis_hash": "25779dcb04a590a7",
  "konflikte": [
   {
    "wo": "index",
@@ -4869,10 +4893,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 387,
-  "neu_in_diesem_lauf": 7
+  "grundreihen_n": 389,
+  "neu_in_diesem_lauf": 2
  },
- "letztes_vollarchiv_ergebnis_hash": "adbc18da8bd7e260",
+ "letztes_vollarchiv_ergebnis_hash": "25779dcb04a590a7",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261116T132647Z",
@@ -4890,7 +4914,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "02202e1e30f47e5b",
- "letzter_gueltiger_lauf": "L20261120T134206Z",
- "letzter_entscheidung_hash": "3dac9db6e62db3db"
+ "letzter_eingabe_hash": "cf4fa0296ad2c698",
+ "letzter_gueltiger_lauf": "L20261121T130737Z",
+ "letzter_entscheidung_hash": "94ade5132e9d0093"
 }
