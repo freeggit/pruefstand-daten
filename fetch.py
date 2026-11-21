@@ -2,7 +2,7 @@
 """Prüfstand-Datenspiegel: holt öffentliche CSV-Reihen und legt sie unter data/ ab.
 Läuft als GitHub Action. Nie schätzen, nie reparieren: was nicht sauber ankommt, wird
 als Fehler im Manifest vermerkt und die alte Datei bleibt stehen."""
-import csv, io, json, os, sys, time, zipfile, urllib.request, urllib.error
+import csv, io, json, os, re, sys, time, zipfile, urllib.request, urllib.error
 from datetime import datetime, timezone
 
 UA = {"User-Agent": "pruefstand-daten/1.0 (GitHub Actions; public research mirror)"}
@@ -40,6 +40,46 @@ def check_csv(raw, expect_first_col="Date", min_rows=10):
         return None, f"nur {len(body)} Datenzeilen"
     return (rows[0], body), None
 
+# Schutz gegen still schrumpfende Dateien (Gegenprüfung gp_2026-11-20_1; Reto 21.11.2026 «fetch kann angepasst werden»).
+# Die neue Datei ersetzt die bisherige nicht, wenn sie (a) später beginnt als die bisherige plus VERSCHIEBUNG_MAX_TAGE oder
+# (b) weniger als ANTEIL_MIN der bisherigen Zeilen bis GRENZE enthält. (b) gilt nicht für Reihen, deren Quelle nur ein
+# wanderndes Fenster liefert (FRED: SP500 die letzten 10 Jahre, ICE BofA die letzten 3 Jahre); dort wandert der Beginn täglich.
+GRENZE = "2020-12-31"
+ANTEIL_MIN = 0.95
+VERSCHIEBUNG_MAX_TAGE = 31
+WANDERNDES_FENSTER = {"fred:SP500", "fred:BAMLH0A0HYM2"}
+ISO_DATUM = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+def bisherige_zeilen(path):
+    """Datenzeilen der bisherigen Datei oder None (fehlt oder nicht lesbar)."""
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            rows = list(csv.reader(f))
+    except Exception:  # noqa
+        return None
+    return [r for r in rows[1:] if r and r[0].strip()]
+
+def verkuerzt(key, alt, neu, date_col=0):
+    """Fehlertext, wenn die neue Datei deutlich kürzer ist als die bisherige; sonst None."""
+    from datetime import date, timedelta
+    if not alt:
+        return None
+    a0, n0 = alt[0][date_col].strip(), neu[0][date_col].strip()
+    try:
+        if date.fromisoformat(n0) > date.fromisoformat(a0) + timedelta(days=VERSCHIEBUNG_MAX_TAGE):
+            return f"verkuerzt: beginnt {n0} statt {a0}; bisherige Datei bleibt"
+    except ValueError:
+        pass
+    if key in WANDERNDES_FENSTER:
+        return None
+    a_n = sum(1 for r in alt if ISO_DATUM.match(r[date_col].strip()) and r[date_col].strip() <= GRENZE)
+    n_n = sum(1 for r in neu if ISO_DATUM.match(r[date_col].strip()) and r[date_col].strip() <= GRENZE)
+    if a_n >= 10 and n_n < ANTEIL_MIN * a_n:
+        return f"verkuerzt: {n_n} statt {a_n} Zeilen bis {GRENZE}; bisherige Datei bleibt"
+    return None
+
 def write_if_ok(path, raw, key, expect_first_col, date_col=0):
     parsed, err = check_csv(raw, expect_first_col)
     entry = {"abruf_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
@@ -50,6 +90,13 @@ def write_if_ok(path, raw, key, expect_first_col, date_col=0):
         print(f"FEHLER {key}: {err}", file=sys.stderr)
         return False
     head, body = parsed
+    v = verkuerzt(key, bisherige_zeilen(path), body, date_col)
+    if v:
+        entry["fehler"] = v
+        entry["datei"] = path
+        manifest["reihen"][key] = entry
+        print(f"FEHLER {key}: {v}", file=sys.stderr)
+        return False
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f); w.writerow(head); w.writerows(body)
