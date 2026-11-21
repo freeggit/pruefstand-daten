@@ -7462,13 +7462,13 @@
     "url": "https://www.fitchratings.com/regulatory-affairs/sec-rule-17g-7",
     "domain": "www.fitchratings.com",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Häufungen von Herabstufungen von Firmen und Banken erhöhen kurzfristig Finanzierungskosten und Zwangsverkäufe von Anleihen (Hand, Holthausen und Leftwich 1992; Kisgen 2006); das kann XLF, LQD und Hochzinsnahe Sektoren gegenüber dem Weltindex belasten.",
-    "grund": "Unabhängige Quelle neben sp_ratinghistorie_17g7 (dort HTTP 403). Test 2026-11-21: Seite HTTP 302 (Weiterleitung, Ziel prüfen; Login nicht verwenden). Datum = Ratingaktion; Tiefe meist ab 2012. Bekannte Anomalie, evtl. abgeschwächt (L3).",
+    "grund": "Unabhängige Quelle neben sp_ratinghistorie_17g7 (dort HTTP 403). Test 2026-11-21: Seite HTTP 302 (Weiterleitung, Ziel prüfen; Login nicht verwenden). Datum = Ratingaktion; Tiefe meist ab 2012. Bekannte Anomalie, evtl. abgeschwächt (L3). | Test 2026-11-21T12:25Z: Weiterleitung auf /redirect/?q=... liefert nur eine JavaScript-Seite (Gatsby), keine direkte Datei-URL. Abgelehnt wegen Publikation (Zusatz 5): SEC-Regel 17g-7(b) erlaubt, jede Ratingaktion erst bis zu 12 Monate spaeter in die Historiendatei aufzunehmen; das Datum der Ratingaktion ist damit nicht der Tag, an dem die Datei sie damals zeigte (verfuegbar_nach_tagen bis 365). Gilt ebenso fuer sp_ratinghistorie_17g7 (Hinweis fuer Reto). Keine Daten abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-21T12:25Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
@@ -7477,13 +7477,13 @@
     "url": "https://www.justice.gov/criminal/criminal-fraud/enforcement-actions",
     "domain": "www.justice.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Bestechungsverfahren gegen Konzerne mit Geschäft in Schwellenländern bringen Strafzahlungen und Reputationsschäden (Karpoff, Lee und Martin 2017); Häufungen könnten EEM, EWZ und XLE kurzfristig gegenüber dem Weltindex belasten.",
-    "grund": "Test 2026-11-21: Seite HTTP 200, Liste öffentlich ohne Login; Historie ab 1977 (zweite Priorität Historie vor 1990). Wenige Fälle je Jahr, darum tief; Datum = Veröffentlichung der Massnahme.",
+    "grund": "Test 2026-11-21: Seite HTTP 200, Liste öffentlich ohne Login; Historie ab 1977 (zweite Priorität Historie vor 1990). Wenige Fälle je Jahr, darum tief; Datum = Veröffentlichung der Massnahme. | Test 2026-11-21T12:25Z: Jahreslisten 1977-2026 HTTP 200 lesbar, aber abgelehnt: K5 (Liste 2026 zuletzt am 19.3.2026 aktualisiert, nur 1 Fall 2026 = Vollzug faktisch ausgesetzt, nicht laufend fortgeschrieben); Datum meist 'Filed' (Gerichtseinreichung, bei versiegelten Anklagen vor der Bekanntgabe = Vorwegnahme), nur teils 'Announced'/'Unsealed'; 2005 nur 7, 2024 43 Datumseintraege - zu wenige Ereignisse (Qualitaet vor Menge). Keine Daten abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-21T12:25Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
