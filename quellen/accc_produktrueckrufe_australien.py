@@ -96,10 +96,17 @@ def main():
                 out += CARD.findall(fetch(sub2, 25))
         return out
 
-    with ThreadPoolExecutor(WORKERS) as ex:
-        for cards in ex.map(cover, range(n_pages)):
-            for url, day in cards:
-                seen.setdefault(url, day)
+    # Neue Rueckrufe waehrend des Abrufs verschieben die Seitengrenzen; dann
+    # fallen einzelne Eintraege durch. Bis zu zwei weitere Durchgaenge werden
+    # vereinigt (Lernrunde 2026-11-21: 8273 von 8280 in 2 Laeufen).
+    for durchgang in range(3):
+        with ThreadPoolExecutor(WORKERS) as ex:
+            for cards in ex.map(cover, range(n_pages)):
+                for url, day in cards:
+                    seen.setdefault(url, day)
+        if len(seen) >= total - 5:
+            break
+        time.sleep(5)
     if len(seen) < total - 5:
         raise RuntimeError("unvollstaendig: %d von %d Rueckrufen" % (len(seen), total))
 
