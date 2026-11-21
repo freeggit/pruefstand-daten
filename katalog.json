@@ -1737,11 +1737,12 @@
     "url": "https://www.cbc.gov.tw/en/",
     "domain": "cbc.gov.tw",
     "bereich": "Geldmarkt",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Taiwanesische Leitzinsentscheide fallen zeitlich oft mit Kommentaren zum globalen Halbleiterzyklus zusammen (Taiwan als zentraler Chip-Fertigungsstandort); ueberraschende Entscheide koennten SMH ueber den Waehrungs-/Kapitalflusskanal kurzfristig gegenueber dem Weltindex bewegen.",
-    "grund": "Amtliche Quelle oeffentlich, aber Mechanismus indirekt/schwaecher belegt als bei grossen Notenbanken; tiefe Prioritaet bis staerkerer Beleg oder erste Pruefung der Terminliste.",
-    "aufgenommen_utc": "2026-09-27T09:41:32Z"
+    "grund": "Amtliche Quelle oeffentlich, aber Mechanismus indirekt/schwaecher belegt als bei grossen Notenbanken; tiefe Prioritaet bis staerkerer Beleg oder erste Pruefung der Terminliste. | Lauf 2026-11-21T04:30Z: Qualitaet vor Menge (Zusatz 2). Die amtliche Tabelle (cbc.gov.tw/tw/lp-640-1.html) nennt Zinsaenderungen erst ab 2001-02-02, rund 40 Aenderungstage. Die englische Seite leitet auf die chinesische Startseite um. Der Mechanismus zu SMH ist indirekt und nicht belegt. Keine Ablage.",
+    "aufgenommen_utc": "2026-09-27T09:41:32Z",
+    "geprueft_utc": "2026-11-21T04:30Z"
   },
   {
     "id": "fed_swaplines_nutzung",
@@ -5577,10 +5578,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Kartellverfahren gegen grosse Firmen aendern kurzfristig Erwartungen an Fusionen und Margen in Technologie und Gesundheit; unabhaengige Messung desselben Mechanismus wie EU-Kartellentscheide.",
-    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T04:25Z: weiter Bot-Pruefseite (bm-verify, 2.3 KB); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: justice.gov/atr/antitrust-case-filings HTTP 404; nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T04:25Z: weiter Bot-Pruefseite (bm-verify, 2.3 KB); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: justice.gov/atr/antitrust-case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: case-filings-alpha liefert weiterhin die Bot-Pruefseite (bm-verify, 2304 Bytes), case-filings HTTP 404; nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-19T08:20Z",
+    "geprueft_utc": "2026-11-21T04:30Z",
     "prioritaet": "tief"
   },
   {
@@ -7174,12 +7175,12 @@
     "domain": "www.cmegroup.com",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Fachliteratur: Hardouvelis und Kim (1995, Journal of Futures Markets); Silber 2011. Clearing-Advisories mit Datum und Kontrakt. Von dieser Umgebung HTTP 403; Abruf evtl. nur über die Action (Vorschlag 1). | Test 2026-11-19T20:25Z: www.cmegroup.com keine Verbindung (curl Code 000) fuer historical-margins.html und notices/clearing.html; nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Fachliteratur: Hardouvelis und Kim (1995, Journal of Futures Markets); Silber 2011. Clearing-Advisories mit Datum und Kontrakt. Von dieser Umgebung HTTP 403; Abruf evtl. nur über die Action (Vorschlag 1). | Test 2026-11-19T20:25Z: www.cmegroup.com keine Verbindung (curl Code 000) fuer historical-margins.html und notices/clearing.html; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: www.cmegroup.com weiterhin ohne Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Erhöhte Einschüsse zwingen gehebelte Händler zum Abbau von Positionen in Öl, Gas und Metallen und können USO, UNG und GLD kurzfristig gegenüber dem Weltindex drücken.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": "2026-11-19T20:25Z"
+    "geprueft_utc": "2026-11-21T04:30Z"
   },
   {
     "id": "asic_medienmitteilungen",
@@ -7393,11 +7394,12 @@
     "url": "https://www.loc.gov/collections/chronicling-america/?q=panic&dates=1907&fo=json",
     "domain": "loc.gov",
     "bereich": "Aufmerksamkeit",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Hohe Zeitungsaufmerksamkeit für Finanzpanik geht mit Liquiditätsabzug und Flucht in sichere Werte einher (Garcia, JF 2013: Zeitungsstimmung sagt Renditen in Rezessionen voraus); für Branchen nach Ken French ab 1926 prüfbar.",
-    "grund": "Historie vor 1990 für Familie L; öffentliche JSON-API ohne Login (Weiterleitung 308 auf loc.gov); tief, da Zählung je Tag aufwendig und Seitendichte schwankt (Normierung nötig). (Lernrunde 2026-11-20)",
-    "aufgenommen_utc": "2026-11-20T09:30:00Z"
+    "grund": "Historie vor 1990 für Familie L; öffentliche JSON-API ohne Login (Weiterleitung 308 auf loc.gov); tief, da Zählung je Tag aufwendig und Seitendichte schwankt (Normierung nötig). (Lernrunde 2026-11-20) | Lauf 2026-11-21T04:30Z: K5 verletzt. Die Sammlung Chronicling America endet 1963 und wird nicht taeglich fortgeschrieben (letzter Wert ueber 60 Jahre alt). Keine Ablage. Hinweis: Fuer Familie L nur als ruhendes Langzeitarchiv denkbar, das verlangt eine Regelaenderung durch Reto.",
+    "aufgenommen_utc": "2026-11-20T09:30:00Z",
+    "geprueft_utc": "2026-11-21T04:30Z"
   },
   {
     "id": "uspto_patenterteilungen_woechentlich",
@@ -7424,5 +7426,19 @@
     "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen.",
     "aufgenommen_utc": "2026-11-20T09:30:00Z",
     "geprueft_utc": "2026-11-21T00:15Z"
+  },
+  {
+    "id": "boc_leitzins_aenderungstage",
+    "name": "Bank of Canada: Aenderungstage des Zielsatzes fuer Tagesgeld (Valet B114039/V39079)",
+    "url": "https://www.bankofcanada.ca/valet/observations/B114039/json",
+    "domain": "bankofcanada.ca",
+    "bereich": "Geldmarkt",
+    "status": "abgelehnt",
+    "mechanismus": "Zinsentscheide der Bank of Canada bewegen CAD und kanadische Banken und Energiewerte gegenueber dem Weltindex.",
+    "grund": "Eigene Recherche Lauf 2026-11-21T04:30Z, analog riksbank/norges_bank. Valet ist offen und ohne Schluessel. Die taegliche Zielsatz-Reihe beginnt aber erst 2009-04-21 und enthaelt nur 33 Aenderungen (B114039: 35 Stufenwerte bis 2026-10-29). Vor 2009 gibt es nur den monatlichen Bank Rate (V122530, ab 1950), daraus lassen sich keine Tagesdaten ableiten. Ablehnung wegen Qualitaet vor Menge (zu wenige Ereignisse), Historie vor 1990 fehlt. Bereits frueher abgelehnt: boc_overnight (Niveau-Reihe). Keine Ablage.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-21T04:30Z",
+    "geprueft_utc": "2026-11-21T04:30Z",
+    "prioritaet": "tief"
   }
 ]
