@@ -7440,5 +7440,20 @@
     "aufgenommen_utc": "2026-11-21T04:30Z",
     "geprueft_utc": "2026-11-21T04:30Z",
     "prioritaet": "tief"
+  },
+  {
+    "id": "nlrb_gewerkschaftswahlen",
+    "name": "NLRB: Ergebnisse von Gewerkschaftswahlen (Tally Issued Date) je Tag",
+    "url": "https://www.nlrb.gov/reports/graphs-data/recent-election-results",
+    "domain": "www.nlrb.gov",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "normal",
+    "mechanismus": "Erfolgreiche Gewerkschaftswahlen erhöhen erwartete Lohnkosten der betroffenen Firmen (Lee und Mas 2012, QJE: negative Kursreaktion um NLRB-Wahlen); eine Häufung von Wahlerfolgen kann arbeitsintensive Sektoren (XLY, XLI) kurzfristig gegenüber dem Weltindex belasten.",
+    "grund": "Eigene Recherche Lauf 2026-11-21T08Z. Seite HTTP 200, Tabelle nur per JavaScript; robots.txt sperrt /search/ (Fallsuche, daher nicht verwendet). Öffentlicher Knopf «Download CSV» startet einen serverseitigen Export (/nlrb-downloads/start-download/recent_election_results/..., Antwort 200), der Export blieb aber in zwei Versuchen bei total 0 / finished 0 stehen; Datei 404. Historie (Beginn) noch unbekannt. Datum wäre das Tally-Issued-Datum (Tag der Bekanntgabe), Zählung revidierbar falls Nachzählungen. Nächster Lauf erneut.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-21T08:10Z",
+    "geprueft_utc": "2026-11-21T08:10Z",
+    "herkunft": "eigene Recherche"
   }
 ]
