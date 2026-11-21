@@ -6700,15 +6700,16 @@
   {
     "id": "nber_konjunkturwendepunkte_bekanntgabe",
     "name": "NBER: Bekanntgabetage von Konjunkturhoch- und -tiefpunkten ab 1979",
-    "url": "https://www.nber.org/research/business-cycle-dating",
+    "url": "https://www.nber.org/research/business-cycle-dating/business-cycle-dating-committee-announcements",
     "domain": "www.nber.org",
     "bereich": "Staat und Geldmarkt",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Die offizielle Feststellung einer Rezession oder Erholung koennte zyklische gegen defensive Sektoren (XLY gegen XLP) kurzfristig verschieben, falls sie fuer Anleger neu ist.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Historie vor 1990. Sehr wenige Ereignisse (rund 20) und meist erwartet, daher tief. HTTP 200 geprueft.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Historie vor 1990. Sehr wenige Ereignisse (rund 20) und meist erwartet, daher tief. HTTP 200 geprueft. | Lauf 2026-11-21T00:15Z: Ankuendigungsseite HTTP 200, nur 19 Bekanntgabetage 1979-2021 (27.7.1979, 25.10.1979, 31.12.1979, 3.6.1980, 8.7.1981, 6.1.1982, 8.7.1983, 21.12.1990, 25.4.1991, 22.12.1992, 26.11.2001, 17.7.2003, 21.10.2003, 7.1.2008, 1.12.2008, 12.4.2010, 20.9.2010, 8.6.2020, 19.7.2021), davon mehrere Zwischenmitteilungen ohne Wendepunkt; Bekanntgaben rueckblickend und meist erwartet. Abgelehnt: Qualitaet vor Menge (Zusatz 2), zu wenige Ereignisse fuer einen Test, Mechanismus schwach.",
     "reihen": [],
-    "aufgenommen_utc": "2026-11-17T10:00Z"
+    "aufgenommen_utc": "2026-11-17T10:00Z",
+    "geprueft_utc": "2026-11-21T00:15Z"
   },
   {
     "id": "uk_takeover_panel_angebotsperioden",
@@ -7414,13 +7415,14 @@
   {
     "id": "sebi_durchsetzungsentscheide",
     "name": "SEBI (Indien) Durchsetzungsentscheide und Anordnungen mit Datum",
-    "url": "https://www.sebi.gov.in/enforcement/orders.html",
+    "url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=2&ssid=9&smid=2",
     "domain": "sebi.gov.in",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Gehäufte Durchsetzungsentscheide der indischen Börsenaufsicht können das Vertrauen ausländischer Anleger in Schwellenländer kurzfristig dämpfen (EEM gegenüber dem Weltindex).",
-    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20)",
-    "aufgenommen_utc": "2026-11-20T09:30:00Z"
+    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen.",
+    "aufgenommen_utc": "2026-11-20T09:30:00Z",
+    "geprueft_utc": "2026-11-21T00:15Z"
   }
 ]
