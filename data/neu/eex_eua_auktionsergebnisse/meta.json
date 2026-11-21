@@ -1,0 +1,20 @@
+{
+  "deckungsquote": {
+    "beschreibung": "Deckungsquote (Cover Ratio) der EUA-Primaerauktionen je Auktionstag an der EEX: Summe Gebotsvolumen / Summe Auktionsvolumen (ohne Luftfahrt EUAA und ETS2)",
+    "einheit": "Verhaeltnis Gebotsvolumen zu Auktionsvolumen",
+    "publikation": "taeglich: Auktionsergebnisse werden laut Auktionsverordnung (EU) 2023/2830 Art. 61 bzw. 1031/2010 Art. 61 spaetestens 15 Minuten nach Schluss des Bieterfensters (Auktion um 11:00 MEZ) auf eex.com veroeffentlicht, also am Auktionstag",
+    "quelle_url": "https://www.eex.com/en/market-data/market-data-hub/environmentals/eex-eua-primary-auction-spot-download",
+    "revidiert": false,
+    "verdichtung": "Summe Gebote / Summe Volumen ueber alle EUA-Auktionen des Kalendertags (Auktionen ohne Gebotsangabe ausgelassen)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "preis": {
+    "beschreibung": "Volumengewichteter Zuschlagspreis der EUA-Primaerauktionen (EU ETS1) je Auktionstag an der EEX (EU-, DE-, PL-Auktionen; ohne Luftfahrt EUAA und ETS2)",
+    "einheit": "EUR je tCO2",
+    "publikation": "taeglich: Auktionsergebnisse werden laut Auktionsverordnung (EU) 2023/2830 Art. 61 bzw. 1031/2010 Art. 61 spaetestens 15 Minuten nach Schluss des Bieterfensters (Auktion um 11:00 MEZ) auf eex.com veroeffentlicht, also am Auktionstag",
+    "quelle_url": "https://www.eex.com/en/market-data/market-data-hub/environmentals/eex-eua-primary-auction-spot-download",
+    "revidiert": false,
+    "verdichtung": "volumengewichtetes Mittel ueber alle EUA-Auktionen des Kalendertags",
+    "verfuegbar_nach_tagen": 0
+  }
+}

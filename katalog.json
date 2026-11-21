@@ -7492,13 +7492,13 @@
     "url": "https://pcaobus.org/oversight/enforcement/enforcement-actions",
     "domain": "pcaobus.org",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Sanktionen gegen Abschlussprüfer wecken Zweifel an der Bilanzqualität geprüfter Firmen (Dee, Lulseged und Zhang 2011); Häufungen könnten Finanzwerte (XLF) kurzfristig gegenüber dem Weltindex belasten.",
-    "grund": "Test 2026-11-21: HTTP 403 von dieser Umgebung (nicht umgangen); Scout prüft erneut. Ab 2005.",
+    "grund": "Test 2026-11-21: HTTP 403 von dieser Umgebung (nicht umgangen); Scout prüft erneut. Ab 2005. | Erneut 2026-11-21T16:15Z: pcaobus.org weiterhin HTTP 403 von dieser Umgebung; nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-21T16:15Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
@@ -7507,13 +7507,13 @@
     "url": "https://registers.esma.europa.eu/publication/searchRegister?core=esma_registers_fitrs_files",
     "domain": "registers.esma.europa.eu",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Häufungen von Handelsaussetzungen zeigen Betrugsfälle, Insolvenzen oder ausstehende Kursmeldungen europäischer Firmen; das kann EWU und EWG kurzfristig gegenüber dem Weltindex belasten.",
-    "grund": "Europäisches Gegenstück zu sec_handelsaussetzungen und nasdaq_handelsunterbrechungen (unabhängige Quelle, kein Doppel). Test 2026-11-21: HTTP 502 (Server), Solr-Schnittstelle öffentlich ohne Login; Scout prüft erneut. Tiefe vermutlich ab 2018 (MiFID II).",
+    "grund": "Europäisches Gegenstück zu sec_handelsaussetzungen und nasdaq_handelsunterbrechungen (unabhängige Quelle, kein Doppel). Test 2026-11-21: HTTP 502 (Server), Solr-Schnittstelle öffentlich ohne Login; Scout prüft erneut. Tiefe vermutlich ab 2018 (MiFID II). | Lauf 2026-11-21T16:15Z: registers.esma.europa.eu Solr wieder erreichbar (HTTP 200), der Kern esma_registers_fitrs_files enthaelt aber nur Transparenzdateien (FITRS), kein Aussetzungsregister. Abgelehnt K2: Das EU-Register der Handelsaussetzungen beruht auf MiFID II (Art. 32/52, gilt ab 3.1.2018); erster Wert damit nach 31.12.2015.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-21T16:15Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
@@ -7579,16 +7579,19 @@
   {
     "id": "eex_eua_auktionsergebnisse",
     "name": "EEX: Ergebnisse der EU-Emissionsrechte-Auktionen (Preis, Deckungsquote) je Auktionstag, ab 2012",
-    "url": "https://www.eex.com/en/markets/environmental-markets/eu-ets-auctions",
+    "url": "https://www.eex.com/en/market-data/market-data-hub/environmentals/eex-eua-primary-auction-spot-download",
     "domain": "www.eex.com",
     "bereich": "Rohstoffe",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "tief",
     "mechanismus": "Schwache Deckung oder Preissprünge in CO2-Auktionen verändern die Kosten von Kohle- und Gaskraftwerken; das kann Versorger (XLU, EWG) und Erdgas (UNG) kurzfristig gegenüber dem Weltindex bewegen.",
-    "grund": "Test 2026-11-21: HTTP 301 (Weiterleitung, Ziel prüfen); Ergebnisdateien öffentlich ohne Login vermutet. Ab 2012, damit 9 Jahre vor dem Siegel.",
-    "reihen": [],
+    "grund": "Test 2026-11-21: HTTP 301 (Weiterleitung, Ziel prüfen); Ergebnisdateien öffentlich ohne Login vermutet. Ab 2012, damit 9 Jahre vor dem Siegel. | Lauf 2026-11-21T16:15Z: aufgenommen. Weiterleitung fuehrt auf die neue Auktionsseite; Download-Seite verlinkt Archiv-ZIP 2012-2025 (xls 2012-2019 via OLE2/BIFF8-Minimalleser, xlsx ab 2020) und laufendes Jahr als xlsx auf public.eex-group.com, ohne Login, robots.txt ohne Sperre; Pflichtveroeffentlichung nach Auktionsverordnung Art. 61. Nur EUA (EU ETS1: Kontrakte EUA, T2PA, T3PA), ohne Luftfahrt (EUAA, EAA2, EAA3) und ETS2. preis: 2937 Zeilen, 2012-01-03 bis 2026-11-20, Median-Abstand 1 Tag (groesste Luecke 46 Tage, Jahreswechsel/Phasenwechsel), gleiche Folgewerte 1.3%, Min 2.70 Max 97.51 EUR/t. deckungsquote: 2910 Zeilen, 2012-06-12 bis 2026-11-20, Median 1 Tag, gleiche Folgewerte 0%, Min 1.01 Max 13.81. K1 ja, K2 ja (vor 2015, >500), K3 ja, K4 Auktionsergebnis wird nicht revidiert, K5 letzter Wert gestern, K6 neu (kein CO2 im Spiegel), K7 3 s, je ~15 KB. Tage ohne Auktion fehlen (nicht aufgefuellt). verfuegbar_nach_tagen 0, publikation taeglich (Ergebnis am Auktionstag um ca. 11:15 MEZ). Paarvorschlag fuer Reto: keiner (Deckungsquote ist bereits ein Verhaeltnis).",
+    "reihen": [
+      "preis",
+      "deckungsquote"
+    ],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-21T16:15Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
