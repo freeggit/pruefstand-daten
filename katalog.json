@@ -3275,9 +3275,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Ankuendigungen zu Emissionsvolumen und Laufzeiten veraendern das erwartete Angebot an Laufzeitpraemie und bewegen kurzfristig Anleihen-ETFs.",
-    "grund": "Test 2026-10-09T12:50Z: aktuelle Seite nennt nur die laufenden Termine; Archivseite ohne datierte Liste (nur Verweis auf Daten 1976-2010). Historie ab 2000 nicht strukturiert abrufbar; Jahrseiten im naechsten Lauf pruefen. | Vier Termine pro Jahr (Februar, Mai, August, November), Historie seit 2000, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse, daher Prioritaet normal.",
+    "grund": "Test 2026-10-09T12:50Z: aktuelle Seite nennt nur die laufenden Termine; Archivseite ohne datierte Liste (nur Verweis auf Daten 1976-2010). Historie ab 2000 nicht strukturiert abrufbar; Jahrseiten im naechsten Lauf pruefen. | Vier Termine pro Jahr (Februar, Mai, August, November), Historie seit 2000, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse, daher Prioritaet normal. | Test 2026-11-22T08:30Z: Seite HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6).",
     "ergaenzt_utc": "2026-10-07T10:00Z",
-    "geprueft_utc": "2026-10-09T12:50Z"
+    "geprueft_utc": "2026-11-22T08:30Z"
   },
   {
     "id": "sec_nt_verspaetungsmeldungen",
@@ -3973,11 +3973,11 @@
     "domain": "www.zew.de",
     "bereich": "Kalender",
     "status": "fehler",
-    "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler. | Test 2026-10-29T20Z: www.zew.de 200, aber weiterhin keine maschinenlesbare Terminliste (robots: Crawl-delay 15). | Lauf 2026-10-31T20Z: www.zew.de HTTP 200 (wieder erreichbar); maschinenlesbare Terminliste noch nicht gefunden. | Lauf 2026-11-02T16Z: www.zew.de 200, EIA 403, Nasdaq-API keine Verbindung; weiterhin keine maschinenlesbare Terminliste mit Historie, Status bleibt fehler. | Lauf 2026-11-15T04:15Z: www.zew.de HTTP 200; Terminliste mit Historie nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Lauf 2026-11-16T08:45Z: HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Lauf 2026-11-19T04:30Z: HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6).",
+    "grund": "Test 2026-10-22T00:15Z: keine Verbindung zu www.zew.de (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: www.zew.de wieder erreichbar (200), aber keine maschinenlesbare Terminliste (Unterseiten 404); Status bleibt fehler. | Test 2026-10-29T20Z: www.zew.de 200, aber weiterhin keine maschinenlesbare Terminliste (robots: Crawl-delay 15). | Lauf 2026-10-31T20Z: www.zew.de HTTP 200 (wieder erreichbar); maschinenlesbare Terminliste noch nicht gefunden. | Lauf 2026-11-02T16Z: www.zew.de 200, EIA 403, Nasdaq-API keine Verbindung; weiterhin keine maschinenlesbare Terminliste mit Historie, Status bleibt fehler. | Lauf 2026-11-15T04:15Z: www.zew.de HTTP 200; Terminliste mit Historie nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Lauf 2026-11-16T08:45Z: HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Lauf 2026-11-19T04:30Z: HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Lauf 2026-11-22T08:30Z: HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6).",
     "mechanismus": "Die Stimmung institutioneller Anleger in Deutschland wirkt kurzfristig auf zyklische deutsche Aktien (EWG) gegenüber dem Weltindex.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-21T10:00:00Z",
-    "geprueft_utc": "2026-11-19T04:30Z",
+    "geprueft_utc": "2026-11-22T08:30Z",
     "prioritaet": "tief",
     "herkunft": "Lernrunde"
   },
@@ -5578,10 +5578,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Kartellverfahren gegen grosse Firmen aendern kurzfristig Erwartungen an Fusionen und Margen in Technologie und Gesundheit; unabhaengige Messung desselben Mechanismus wie EU-Kartellentscheide.",
-    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T04:25Z: weiter Bot-Pruefseite (bm-verify, 2.3 KB); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: justice.gov/atr/antitrust-case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: case-filings-alpha liefert weiterhin die Bot-Pruefseite (bm-verify, 2304 Bytes), case-filings HTTP 404; nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T04:25Z: weiter Bot-Pruefseite (bm-verify, 2.3 KB); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: justice.gov/atr/antitrust-case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: case-filings-alpha liefert weiterhin die Bot-Pruefseite (bm-verify, 2304 Bytes), case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-22T08:30Z: antitrust-case-filings HTTP 404, Liste weiter nicht abrufbar; Status bleibt fehler.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-21T04:30Z",
+    "geprueft_utc": "2026-11-22T08:30Z",
     "prioritaet": "tief"
   },
   {
@@ -7146,13 +7146,13 @@
     "url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
     "domain": "aqs.epa.gov",
     "bereich": "Umwelt und Luftqualität",
-    "status": "fehler",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Bereich «Umwelt und Luftqualität». Fachliteratur: Heyes, Neidell und Saberian (2016, NBER w22753). Veröffentlicht, Effekt danach evtl. schwächer (L3). Dateien daily_aqi_by_county_<Jahr>.zip offen, HTTP 200; Messwerte werden erst später validiert, Publikationsfrist prüfen (K4). | Test 2026-11-20T00:25Z: aqs.epa.gov/aqsweb/airdata (download_files.html und daily_aqi_by_county_2026.zip) liefert HTTP 503 von dieser Umgebung; nicht umgangen, naechster Lauf erneut. Offen bleibt K4/K5 (AirData-Jahresdateien werden nur periodisch nachgefuehrt und validiert).",
+    "status": "abgelehnt",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Bereich «Umwelt und Luftqualität». Fachliteratur: Heyes, Neidell und Saberian (2016, NBER w22753). Veröffentlicht, Effekt danach evtl. schwächer (L3). Dateien daily_aqi_by_county_<Jahr>.zip offen, HTTP 200; Messwerte werden erst später validiert, Publikationsfrist prüfen (K4). | Test 2026-11-20T00:25Z: aqs.epa.gov/aqsweb/airdata (download_files.html und daily_aqi_by_county_2026.zip) liefert HTTP 503 von dieser Umgebung; nicht umgangen, naechster Lauf erneut. Offen bleibt K4/K5 (AirData-Jahresdateien werden nur periodisch nachgefuehrt und validiert). | Lauf 2026-11-22T08:30Z: aqs.epa.gov wieder erreichbar (HTTP 200). Download-Seite: Tagesdateien werden nur 'updated twice per year' (Juni und Dezember) nachgefuehrt; daily_aqi_by_county_2026.zip hat erst 77795 Zeilen (Stand Jahresmitte). Letzter Wert damit Monate alt = K5 verletzt; Publikationsverzug zudem uneinheitlich (K4, Validierung). Keine Ablage.",
     "mechanismus": "Schlechte Luft in Manhattan senkt laut Studien die Risikobereitschaft von Händlern; Tage mit hohem AQI könnten US-Aktien (SPY) kurzfristig gegenüber dem Weltindex belasten.",
     "prioritaet": "tief",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": "2026-11-20T00:25Z"
+    "geprueft_utc": "2026-11-22T08:30Z"
   },
   {
     "id": "bundeskartellamt_fusionsentscheide",
@@ -7175,12 +7175,12 @@
     "domain": "www.cmegroup.com",
     "bereich": "Rohstoffe und Logistik",
     "status": "fehler",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Fachliteratur: Hardouvelis und Kim (1995, Journal of Futures Markets); Silber 2011. Clearing-Advisories mit Datum und Kontrakt. Von dieser Umgebung HTTP 403; Abruf evtl. nur über die Action (Vorschlag 1). | Test 2026-11-19T20:25Z: www.cmegroup.com keine Verbindung (curl Code 000) fuer historical-margins.html und notices/clearing.html; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: www.cmegroup.com weiterhin ohne Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Fachliteratur: Hardouvelis und Kim (1995, Journal of Futures Markets); Silber 2011. Clearing-Advisories mit Datum und Kontrakt. Von dieser Umgebung HTTP 403; Abruf evtl. nur über die Action (Vorschlag 1). | Test 2026-11-19T20:25Z: www.cmegroup.com keine Verbindung (curl Code 000) fuer historical-margins.html und notices/clearing.html; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: www.cmegroup.com weiterhin ohne Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-22T08:30Z: www.cmegroup.com keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut.",
     "mechanismus": "Erhöhte Einschüsse zwingen gehebelte Händler zum Abbau von Positionen in Öl, Gas und Metallen und können USO, UNG und GLD kurzfristig gegenüber dem Weltindex drücken.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": "2026-11-21T04:30Z"
+    "geprueft_utc": "2026-11-22T08:30Z"
   },
   {
     "id": "asic_medienmitteilungen",
@@ -7456,9 +7456,9 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Gehäufte Durchsetzungsentscheide der indischen Börsenaufsicht können das Vertrauen ausländischer Anleger in Schwellenländer kurzfristig dämpfen (EEM gegenüber dem Weltindex).",
-    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen.",
+    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen. | Test 2026-11-22T08:30Z: Listenseite HTTP 200; Seitenwechsel nicht erneut versucht, Entscheid Retos zum Browserweg steht aus.",
     "aufgenommen_utc": "2026-11-20T09:30:00Z",
-    "geprueft_utc": "2026-11-21T00:15Z"
+    "geprueft_utc": "2026-11-22T08:30Z"
   },
   {
     "id": "boc_leitzins_aenderungstage",
@@ -7655,5 +7655,19 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-22T04:25Z",
     "geprueft_utc": "2026-11-22T04:25Z"
+  },
+  {
+    "id": "usda_export_sales_tagesmeldungen",
+    "name": "USDA FAS: taegliche Exportverkaufsmeldungen (Flash Sales ab 100000 t)",
+    "url": "https://www.fas.usda.gov/programs/export-sales-reporting-program",
+    "domain": "fas.usda.gov",
+    "bereich": "Rohstoffe und Logistik",
+    "status": "fehler",
+    "prioritaet": "normal",
+    "mechanismus": "Grosse gemeldete Exportverkaeufe (meist Mais, Soja, Weizen nach China) werden am naechsten Werktag 9 Uhr ET publiziert und bewegen Getreidepreise und damit DBA gegenueber dem Weltindex kurzfristig.",
+    "grund": "Eigene Recherche Lauf 2026-11-22T08:30Z (kein offener Firmenereignis-Kandidat erreichbar). apps.fas.usda.gov/export-sales/dailyrpt.htm und dailyarc.htm HTTP 404, www.fas.usda.gov HTTP 403 von dieser Umgebung (nicht umgangen). Kein Massenarchiv der Tagesmeldungen gefunden; neues Abfragesystem ESRQS (offen seit 26.3.2026) und ESR Data API noch auf Schluesselpflicht und Historie der Tagesmeldungen pruefen. Abgrenzung: usda_export_sales_woechentlich (abgelehnt) ist der Wochenbericht.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-22T08:30Z",
+    "geprueft_utc": "2026-11-22T08:30Z"
   }
 ]
