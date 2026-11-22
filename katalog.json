@@ -7555,13 +7555,13 @@
     "url": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads",
     "domain": "www.philadelphiafed.org",
     "bereich": "Wirtschaft",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Sprünge des täglichen Konjunkturindexes bündeln Überraschungen aus Wochen- und Monatsdaten; Konjunkturüberraschungen bewegen zyklische Sektoren (XLI, XLB) gegenüber defensiven und Anleihen (TLT) kurzfristig.",
-    "grund": "Test 2026-11-21: Seite HTTP 200, xlsx ohne Login. Revidiert: nur Echtzeit-Fassungen (vintages, ab 2008) oder erste Veröffentlichung verwenden, sonst Vorauswissen. Historie ab 1960 (Familie L).",
+    "grund": "K4 und K7 verletzt (Test 2026-11-22): aktuelle Fassung (ADS_Index_Most_Current_Vintage.xlsx) wird bei jeder Veröffentlichung rückwirkend neu geschätzt (K4). Echtzeit-Fassungen nur als ads_all_vintages-zip.zip: 171 MB ZIP mit einem xlsx-Blatt von 1,48 GB XML (1583 Fassungen x 24366 Tage); Abruf und Verarbeitung mit Standardbibliothek je Lauf weit über 3 Minuten (K7). Nichts abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-22T12:15Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
@@ -7718,13 +7718,13 @@
     "url": "https://www.amtsblattportal.ch/api/v1/publications?publicationStates=PUBLISHED&rubrics=KK&publicationDate.start={von}&publicationDate.end={bis} (JSON, ohne Login; hier HTTP 200; Tiefe der Historie prüfen)",
     "domain": "amtsblattportal.ch",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Häufen sich Konkurseröffnungen, schwächt sich die Binnenkonjunktur der Schweiz; das trifft Banken und Binnenwerte und damit EWL gegenüber dem Weltindex.",
-    "grund": "Replikation von uk_gazette_insolvenzmeldungen (gleicher Mechanismus, unabhängige Quelle, anderes Land); Firmenereignisse aggregiert (Zusatz 8). (Lernrunde 2026-11-22)",
+    "grund": "K2 verletzt (Test 2026-11-22): Amtsblattportal-API liefert Rubrik KK erst ab Ende 2019 (2019: 14, 2020: 17 Meldungen, voller Bestand erst ab 2021: 3329); 2005, 2010, 2016-2018 je 0 Treffer. Erster brauchbarer Wert nach 31.12.2015; ältere SHAB-Ausgaben nur als PDF-Archiv. Nichts abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-22T09:50Z",
-    "geprueft_utc": "2026-11-22T09:50Z"
+    "geprueft_utc": "2026-11-22T12:15Z"
   },
   {
     "id": "spdr_gld_goldbestand_taeglich",
@@ -7732,13 +7732,13 @@
     "url": "https://www.spdrgoldshares.com/assets/dynamic/GLD/GLD_US_archive_EN.csv (Weiterleitung 301 prüfen; ohne Login)",
     "domain": "spdrgoldshares.com",
     "bereich": "Rohstoffe",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Grosse Zu- oder Abflüsse im grössten Gold-ETF verlangen physische Käufe oder Verkäufe und zeigen die Nachfrage der Anleger; kurzfristiger Preisdruck auf GLD gegenüber dem Weltindex.",
-    "grund": "Rohstoffe und Logistik (Ideenraum); Bestand wird am Abend publiziert, Verfügbarkeit erst nächster Handelstag ansetzen. Abgrenzung zu us_mint_bullion_verkaeufe (Münzen, monatlich verdichtet). (Lernrunde 2026-11-22)",
+    "grund": "K3 verletzt (Test 2026-11-22): Alte CSV-URL leitet auf Barrenliste-PDF um; Historie nur als xlsx über api.spdrgoldshares.com/api/v1/historical-archive?product=gld (ab 18.11.2004, Spalte 'Tonnes of Gold', taeglich, aktuell bis 19.11.2026). Blatt 'Disclaimer' der Datei: 'Reproduction or redistribution of any of this information is expressly prohibited without prior written consent.' Ein öffentlicher Spiegel wäre Weiterverbreitung; ohne schriftliche Zustimmung nicht ablegen. Nichts abgelegt.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-22T09:50Z",
-    "geprueft_utc": "2026-11-22T09:50Z"
+    "geprueft_utc": "2026-11-22T12:15Z"
   },
   {
     "id": "edgar_logdateien_abrufdichte",
