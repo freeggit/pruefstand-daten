@@ -1,5 +1,5 @@
 {
- "kumuliert": 809327,
+ "kumuliert": 813967,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -485,6 +485,16 @@
   "neu_ecb_fx_eurjpy_stand",
   "neu_ecb_fx_eurjpy_z252",
   "neu_ecb_ratssitzungen_termine_sitzung_stand",
+  "neu_eex_eua_auktionsergebnisse_deckungsquote_d1",
+  "neu_eex_eua_auktionsergebnisse_deckungsquote_d20",
+  "neu_eex_eua_auktionsergebnisse_deckungsquote_d5",
+  "neu_eex_eua_auktionsergebnisse_deckungsquote_stand",
+  "neu_eex_eua_auktionsergebnisse_deckungsquote_z252",
+  "neu_eex_eua_auktionsergebnisse_preis_d1",
+  "neu_eex_eua_auktionsergebnisse_preis_d20",
+  "neu_eex_eua_auktionsergebnisse_preis_d5",
+  "neu_eex_eua_auktionsergebnisse_preis_stand",
+  "neu_eex_eua_auktionsergebnisse_preis_z252",
   "neu_ema_zulassungsentscheide_zulassungen_biosimilar_d1",
   "neu_ema_zulassungsentscheide_zulassungen_biosimilar_d20",
   "neu_ema_zulassungsentscheide_zulassungen_biosimilar_d5",
@@ -506,6 +516,16 @@
   "neu_eu_beihilfe_entscheide_pruefungen_stand",
   "neu_eu_beihilfe_entscheide_pruefungen_z252",
   "neu_eu_boersenfeiertage_geschlossen_stand",
+  "neu_eu_handelsschutz_antidumping_einleitungen_d1",
+  "neu_eu_handelsschutz_antidumping_einleitungen_d20",
+  "neu_eu_handelsschutz_antidumping_einleitungen_d5",
+  "neu_eu_handelsschutz_antidumping_einleitungen_stand",
+  "neu_eu_handelsschutz_antidumping_einleitungen_z252",
+  "neu_eu_handelsschutz_antidumping_massnahmen_d1",
+  "neu_eu_handelsschutz_antidumping_massnahmen_d20",
+  "neu_eu_handelsschutz_antidumping_massnahmen_d5",
+  "neu_eu_handelsschutz_antidumping_massnahmen_stand",
+  "neu_eu_handelsschutz_antidumping_massnahmen_z252",
   "neu_eu_wettbewerbsentscheide_fusionskontrolle_d1",
   "neu_eu_wettbewerbsentscheide_fusionskontrolle_d20",
   "neu_eu_wettbewerbsentscheide_fusionskontrolle_d5",
@@ -2156,9 +2176,15 @@
    "datei": "suche/S0075.json",
    "kandidaten": 470734,
    "in_db": false
+  },
+  {
+   "nr": 76,
+   "datei": "suche/S0076.json",
+   "kandidaten": 475374,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-21T14:57Z",
+ "letzter_suchlauf_utc": "2026-11-22T16:42Z",
  "pruefung_lernrunde_utc": "2026-11-22T10:00:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2658,11 +2684,19 @@
    "ergebnis_hash": "25779dcb04a590a7",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261122T125609Z.json",
+   "lauf_id": "L20261122T125609Z",
+   "s_dokument": "suche/S0076.json",
+   "ergebnis_hash": "d3e2a50a5f824016",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-21T14:57Z",
- "letztes_vollarchiv": "suche/S0075_alle.csv.gz",
- "letzter_ergebnis_hash": "25779dcb04a590a7",
+ "letzter_lauf_utc": "2026-11-22T16:42Z",
+ "letztes_vollarchiv": "suche/S0076_alle.csv.gz",
+ "letzter_ergebnis_hash": "d3e2a50a5f824016",
  "konflikte": [
   {
    "wo": "index",
@@ -4897,10 +4931,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 389,
-  "neu_in_diesem_lauf": 2
+  "grundreihen_n": 393,
+  "neu_in_diesem_lauf": 4
  },
- "letztes_vollarchiv_ergebnis_hash": "25779dcb04a590a7",
+ "letztes_vollarchiv_ergebnis_hash": "d3e2a50a5f824016",
  "pruefungen_bestanden": {
   "pruef_hash": "5f7cfaa3386d98eb",
   "lauf_id": "L20261116T132647Z",
@@ -4918,7 +4952,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "cf4fa0296ad2c698",
- "letzter_gueltiger_lauf": "L20261121T130737Z",
- "letzter_entscheidung_hash": "94ade5132e9d0093"
+ "letzter_eingabe_hash": "6ab83b15af859ac5",
+ "letzter_gueltiger_lauf": "L20261122T125609Z",
+ "letzter_entscheidung_hash": "0098b97c5b5b2c6a"
 }

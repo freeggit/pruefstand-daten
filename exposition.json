@@ -409,6 +409,18 @@
    "erst_zeit": "2026-11-11T14:21Z",
    "beleg": "suche/laeufe/L20261111T121632Z.json"
   },
+  "neu_eex_eua_auktionsergebnisse_deckungsquote": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261122T125609Z",
+   "erst_zeit": "2026-11-22T16:42Z",
+   "beleg": "suche/laeufe/L20261122T125609Z.json"
+  },
+  "neu_eex_eua_auktionsergebnisse_preis": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261122T125609Z",
+   "erst_zeit": "2026-11-22T16:42Z",
+   "beleg": "suche/laeufe/L20261122T125609Z.json"
+  },
   "neu_ema_zulassungsentscheide_zulassungen_biosimilar": {
    "erst_dokument": null,
    "erst_lauf": "L20261114T115120Z",
@@ -438,6 +450,18 @@
    "erst_lauf": null,
    "erst_zeit": "27.9.2026, 07:33 (Europe/Zurich)",
    "beleg": "suche/S0011_alle.csv.gz"
+  },
+  "neu_eu_handelsschutz_antidumping_einleitungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261122T125609Z",
+   "erst_zeit": "2026-11-22T16:42Z",
+   "beleg": "suche/laeufe/L20261122T125609Z.json"
+  },
+  "neu_eu_handelsschutz_antidumping_massnahmen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261122T125609Z",
+   "erst_zeit": "2026-11-22T16:42Z",
+   "beleg": "suche/laeufe/L20261122T125609Z.json"
   },
   "neu_eu_wettbewerbsentscheide_fusionskontrolle": {
    "erst_dokument": null,
@@ -2342,8 +2366,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261121T130737Z",
-  "zeit_utc": "2026-11-21T14:57Z",
-  "grundreihen_n": 389
+  "lauf_id": "L20261122T125609Z",
+  "zeit_utc": "2026-11-22T16:42Z",
+  "grundreihen_n": 393
  }
 }
