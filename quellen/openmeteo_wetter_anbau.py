@@ -75,9 +75,11 @@ def fetch(lat, lon, end_date, start_date=START):
     # Retry mit Backoff bei 429 (Rate-Limit auf geteilter IP) und bei
     # vorübergehenden Netzwerk-/TLS-Zeitüberschreitungen (URLError/Timeout);
     # kein Umgehen einer Sperre, nur Abwarten wie von der API erwartet.
+    # Lernrunde 2026-11-22: Retry-After der API beachten (hoechstens 90 s).
     verzoegerungen = (5, 15, 30)
     letzter_fehler = None
-    for i, wartezeit in enumerate((0,) + verzoegerungen):
+    wartezeit = 0
+    for i in range(len(verzoegerungen) + 1):
         if wartezeit:
             time.sleep(wartezeit)
         try:
@@ -87,8 +89,14 @@ def fetch(lat, lon, end_date, start_date=START):
             letzter_fehler = e
             if e.code != 429:
                 raise
+            wartezeit = verzoegerungen[min(i, len(verzoegerungen) - 1)]
+            try:
+                wartezeit = min(90, max(wartezeit, int(e.headers.get("Retry-After") or 0)))
+            except (TypeError, ValueError):
+                pass
         except urllib.error.URLError as e:
             letzter_fehler = e
+            wartezeit = verzoegerungen[min(i, len(verzoegerungen) - 1)]
     raise letzter_fehler
 
 
@@ -121,26 +129,43 @@ def gzip_write(path, rows):
 def main():
     end_date = cutoff_date().isoformat()
     meta = {}
-    for i, (reihe, info) in enumerate(REGIONEN.items()):
-        if i:
-            time.sleep(3)
+    fehler = []
+    abgerufen = 0
+    for reihe, info in REGIONEN.items():
         pfad = os.path.join(OUT_DIR, reihe + ".csv.gz")
         alt = read_existing(pfad)
         start = START
-        if alt:
-            letzte = datetime.date.fromisoformat(alt[-1][0])
-            start = max(
-                datetime.date.fromisoformat(START),
-                letzte - datetime.timedelta(days=UEBERLAPPUNG_TAGE),
-            ).isoformat()
-        payload = fetch(info["lat"], info["lon"], end_date, start)
-        neu = parse(payload)
+        # Lernrunde 2026-11-22: Der Scout laeuft alle 4 Stunden, ERA5 waechst
+        # nur taeglich. Ist der Bestand schon bis end_date nachgefuehrt, wird
+        # nicht abgefragt (weniger Anfragen, weniger HTTP 429 auf der
+        # geteilten IP). Faellt eine Region aus, bleibt ihr Bestand erhalten
+        # und die anderen Regionen laufen weiter; der Fehler wird am Ende
+        # gemeldet.
+        if alt and alt[-1][0] >= end_date:
+            neu = []
+        else:
+            if alt:
+                letzte = datetime.date.fromisoformat(alt[-1][0])
+                start = max(
+                    datetime.date.fromisoformat(START),
+                    letzte - datetime.timedelta(days=UEBERLAPPUNG_TAGE),
+                ).isoformat()
+            if abgerufen:
+                time.sleep(3)
+            abgerufen += 1
+            try:
+                neu = parse(fetch(info["lat"], info["lon"], end_date, start))
+            except Exception as e:  # noqa: BLE001
+                if not alt:
+                    raise
+                fehler.append("%s: %s" % (reihe, e))
+                neu = []
         if not neu and not alt:
             raise SystemExit("keine Daten fuer %s" % reihe)
-        zusammen = dict(alt)
-        zusammen.update(dict(neu))
-        rows = sorted(zusammen.items())
-        gzip_write(pfad, rows)
+        if neu:
+            zusammen = dict(alt)
+            zusammen.update(dict(neu))
+            gzip_write(pfad, sorted(zusammen.items()))
         meta[reihe] = {
             "einheit": "mm/Tag",
             "beschreibung": info["beschreibung"],
@@ -154,6 +179,8 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(os.path.join(OUT_DIR, "meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=2, sort_keys=True)
+    if fehler:
+        raise RuntimeError("; ".join(fehler))
 
 
 if __name__ == "__main__":
