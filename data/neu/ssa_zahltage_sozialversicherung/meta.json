@@ -1,0 +1,21 @@
+{
+  "zahltag_dritter": {
+    "beschreibung": "1 am Zahltag der Social-Security-Leistungen fuer Bezueger vor Mai 1997 (3. des Monats, bei Wochenende oder Bundesfeiertag am vorangehenden Geschaeftstag), sonst 0, je Kalendertag ab 1997-06-01. Status ruhend: 349 von 354 Zahltagen (98.6%) fallen auf turn_of_month_effekt:turn_of_month (Redundanz).",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Zahltage folgen einer im Voraus veroeffentlichten Regel, 20 CFR 404.1807 / 62 FR 6120; SSA publiziert jaehrlich den Zahlungskalender im Voraus)",
+    "quelle_url": "https://www.govinfo.gov/content/pkg/FR-1997-02-11/html/97-3205.htm",
+    "revidiert": false,
+    "status": "ruhend",
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "zahltag_mittwoch": {
+    "beschreibung": "1 an den Zahltagen fuer Neubezueger ab Mai 1997 (2., 3. und 4. Mittwoch des Monats, bei Bundesfeiertag am vorangehenden Geschaeftstag), sonst 0, je Kalendertag ab 1997-06-01.",
+    "einheit": "Indikator (0/1)",
+    "publikation": "taeglich (Zahltage folgen einer im Voraus veroeffentlichten Regel, 20 CFR 404.1807 / 62 FR 6120; SSA publiziert jaehrlich den Zahlungskalender im Voraus)",
+    "quelle_url": "https://www.govinfo.gov/content/pkg/FR-1997-02-11/html/97-3205.htm",
+    "revidiert": false,
+    "verdichtung": "keine (deterministische Kalenderreihe, kein externer Datenabruf)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

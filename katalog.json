@@ -7585,13 +7585,13 @@
     "url": "https://www.transtats.bts.gov/ONTIME/",
     "domain": "www.transtats.bts.gov",
     "bereich": "Rohstoffe und Logistik",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Massenannullationen (Wetter, IT-Ausfälle, Streiks) senken Treibstoffnachfrage und Airline-Erträge; das kann XLI und Kerosin-nahe Ziele (USO) kurzfristig gegenüber dem Weltindex bewegen.",
-    "grund": "Test 2026-11-21: Seite HTTP 200 ohne Login; Daten monatlich mit rund 60 Tagen Verzug publiziert (echte Publikationsfrist beachten). Historie ab 1987.",
+    "grund": "Test 2026-11-21: Seite HTTP 200 ohne Login; Daten monatlich mit rund 60 Tagen Verzug publiziert (echte Publikationsfrist beachten). Historie ab 1987. | Lauf 2026-11-22T16:20Z: abgelehnt K5 (monatliche Publikation mit rund 60 Tagen Verzug; letzter Wert stets deutlich aelter als 10 Tage).",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-22T16:20Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
@@ -7600,13 +7600,13 @@
     "url": "https://www.usmint.gov/about/production-sales-figures/bullion-sales",
     "domain": "www.usmint.gov",
     "bereich": "Rohstoffe",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "tief",
     "mechanismus": "Sprünge der Münznachfrage zeigen Angstkäufe von Privatanlegern; sie könnten GLD kurzfristig gegenüber dem Weltindex bewegen.",
-    "grund": "Test 2026-11-21: HTTP 403 von dieser Umgebung (nicht umgangen). Monatlich, Publikationsdatum unklar; Machbarkeit zuerst prüfen.",
+    "grund": "Test 2026-11-21: HTTP 403 von dieser Umgebung (nicht umgangen). Monatlich, Publikationsdatum unklar; Machbarkeit zuerst prüfen. | Lauf 2026-11-22T16:20Z: abgelehnt K1 (monatliche Zahlen, keine Tagesreihe); zudem HTTP 403.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T10:30Z",
+    "geprueft_utc": "2026-11-22T16:20Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
@@ -7746,26 +7746,29 @@
     "url": "https://www.sec.gov/about/data/edgar-log-file-data-sets (tägliche ZIP-Dateien; hier 403, über die Action; Robot-Abrufe herausfiltern)",
     "domain": "sec.gov",
     "bereich": "Aufmerksamkeit",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Die Zahl der Abrufe von Firmenberichten misst die Aufmerksamkeit der Anleger (Drake, Roulstone und Thornock 2015); Sprünge nach oben zeigen Unruhe an, die Finanzwerte (XLF) und riskante Sektoren gegenüber dem Weltindex kurzfristig bewegt.",
-    "grund": "Aufmerksamkeit (Ideenraum); unabhängig von wikipedia-Seitenaufrufen. Reihe endet 2017, ganz vor dem Siegel. (Lernrunde 2026-11-22)",
+    "grund": "Aufmerksamkeit (Ideenraum); unabhängig von wikipedia-Seitenaufrufen. Reihe endet 2017, ganz vor dem Siegel. (Lernrunde 2026-11-22) | Lauf 2026-11-22T16:20Z: abgelehnt K5 (Reihe endet 2017, wird nicht fortgeschrieben); zudem EDGAR, nach Zusatz 6 nicht selbst.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-22T09:50Z",
-    "geprueft_utc": "2026-11-22T09:50Z"
+    "geprueft_utc": "2026-11-22T16:20Z"
   },
   {
     "id": "ssa_zahltage_sozialversicherung",
     "name": "US Social Security: Zahltage (3. des Monats, ab Juni 1997 zusätzlich 2./3./4. Mittwoch)",
-    "url": "https://www.ssa.gov/pubs/EN-05-10031-2020.pdf (Kalender aus der Regel berechenbar; Gegenprobe mit SSA-Zahlungskalendern)",
+    "url": "https://www.govinfo.gov/content/pkg/FR-1997-02-11/html/97-3205.htm",
     "domain": "ssa.gov",
     "bereich": "Kalender-Ereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "tief",
     "mechanismus": "An Zahltagen fliessen Milliarden an Haushalte mit hoher Konsumneigung; das stützt kurzfristig Detailhandel und Basiskonsum (XLY, XLP) gegenüber dem Weltindex.",
-    "grund": "Kalender-Ereignisse (Ideenraum); Termine vorab bekannt. Abgrenzung zu turn_of_month und kalender_ereignisse prüfen (3. des Monats liegt nahe am Monatswechsel); daher tief. (Lernrunde 2026-11-22)",
-    "reihen": [],
+    "grund": "Kalender-Ereignisse (Ideenraum); Termine vorab bekannt. Abgrenzung zu turn_of_month und kalender_ereignisse prüfen (3. des Monats liegt nahe am Monatswechsel); daher tief. (Lernrunde 2026-11-22) | Lauf 2026-11-22T16:20Z: aufgenommen. Deterministisch aus der Regel 20 CFR 404.1807 (62 FR 6120, 11.2.1997, FR Doc. 97-3205): 3. des Monats fuer Altbezueger, 2./3./4. Mittwoch fuer Antraege ab 1.5.1997, bei Wochenende/Bundesfeiertag vorangehender Geschaeftstag. Beginn 1997-06-01; 3.-Regel vor 1997 im Beleg nicht datiert, ssa.gov aus dieser Umgebung HTTP 403, darum keine Rueckverlaengerung. zahltag_dritter: zeilen 10767, erste 1997-06-01, letzte 2026-11-22, median_abstand 1, gleiche Folgewerte 93.4% (0/1-Ereignisreihe, erwartet), min 0 max 1, Einsen 354; zahltag_mittwoch: zeilen 10767, erste 1997-06-01, letzte 2026-11-22, median_abstand 1, gleiche Folgewerte 80.3% (0/1-Ereignisreihe, erwartet), min 0 max 1, Einsen 1061. Aktiv: zahltag_mittwoch. Ruhend: zahltag_dritter, Redundanz (349 von 354 Zahltagen = 98.6% liegen auf turn_of_month_effekt:turn_of_month). K1-K7 erfuellt; kein externer Abruf. Executive-Order-Ruhetage nicht modelliert.",
+    "reihen": [
+      "zahltag_dritter",
+      "zahltag_mittwoch"
+    ],
     "aufgenommen_utc": "2026-11-22T09:50Z",
-    "geprueft_utc": "2026-11-22T09:50Z"
+    "geprueft_utc": "2026-11-22T16:20Z"
   }
 ]
