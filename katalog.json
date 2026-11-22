@@ -4092,13 +4092,13 @@
     "domain": "www.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: api.nasdaq.com weiterhin keine Verbindung (000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: api.nasdaq.com keine Verbindung (Code 000); Sperre nicht umgangen, naechster Lauf erneut.",
+    "grund": "Vorrat «kandidat» von 14 auf 15 aufgefüllt (Lernrunde 24.10.2026); L3, kein Doppel; öffentliche Quelle ohne Login; erste Priorität Firmenereignisse mit Tagesdatum. URL-Idee: JSON-Endpunkt api.nasdaq.com/api/calendar/splits?date=JJJJ-MM-TT (Zugriff zu prüfen). | Test 2026-10-24T16:31Z: api.nasdaq.com keine Verbindung (curl Code 000) von dieser Umgebung; nächster Lauf erneut. | Test 2026-10-28T08Z: api.nasdaq.com weiterhin keine Verbindung (curl 000). | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | Test 2026-10-31T08:15Z: weiterhin keine Verbindung (000); nicht umgangen. | Lauf 2026-11-02T16Z: erneut 403 bzw. keine Verbindung; nicht umgangen. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: api.nasdaq.com weiterhin keine Verbindung (000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: api.nasdaq.com keine Verbindung (Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-22T04:25Z: api.nasdaq.com weiter keine Verbindung (curl 000).",
     "mechanismus": "Aktiensplits werden von Firmen mit starkem Kursanstieg angekündigt; aggregierte Dichte je Tag kann Aufmerksamkeit privater Anleger auf Wachstumssektoren (Technologie, Gesundheit) gegenüber dem Weltindex verschieben.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-24T10:00:00Z",
     "prioritaet": "normal",
     "herkunft": "Lernrunde",
-    "geprueft_utc": "2026-11-20T08:20Z"
+    "geprueft_utc": "2026-11-22T04:25Z"
   },
   {
     "id": "bea_bip_pce_termine",
@@ -4625,9 +4625,9 @@
     "bereich": "Firmenereignisse",
     "mechanismus": "Tage mit gehäuften Quartalszahlen bündeln Unsicherheit und Gewinnüberraschungen, das bewegt Sektoren (XLK, XLF) kurzfristig gegenüber dem Weltindex.",
     "prioritaet": "hoch",
-    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-20T00:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Firmenereignisse sind erste Priorität (Zusatz 8). Aggregiert zu Tagesdichte, keine Einzelfirma. Herkunft: Vorratsauffüllung, Lernrunde 03.11.2026; L3. | 2026-11-03T12:27Z: api.nasdaq.com keine Verbindung (curl 000) wie bei den anderen Nasdaq-Quellen; nicht umgangen, nächster Lauf erneut. | 2026-11-05T04Z: Test: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen | Test 2026-11-08T08:21Z: keine Verbindung (000) von dieser Umgebung; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-10T20:26Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-12T00:25Z: api.nasdaq.com keine Verbindung (Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-13T04:30Z: api.nasdaq.com keine Verbindung (HTTP/2 INTERNAL_ERROR, Code 000), nicht umgangen; naechster Lauf erneut. | Erneut 2026-11-14T08:40Z: api.nasdaq.com weiterhin keine Verbindung (curl Code 000/Exit 92); nicht umgangen, naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Erneut 2026-11-18T04:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-20T00:25Z: api.nasdaq.com keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-22T04:25Z: api.nasdaq.com weiter keine Verbindung (curl 000).",
     "status": "fehler",
-    "geprueft_utc": "2026-11-20T00:25Z"
+    "geprueft_utc": "2026-11-22T04:25Z"
   },
   {
     "id": "aar_bahnverkehr_woechentlich",
@@ -5464,10 +5464,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Haeufungen von Orphan-Designationen und -Zulassungen veraendern kurzfristig die Erwartungen an Biotech-Pipelines und koennen IBB/XLV gegenueber dem Weltindex bewegen.",
-    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen. | Test 2026-11-15T00:10Z: accessdata.fda.gov leitet weiterhin um (HTTP 302, Missbrauchserkennung); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: accessdata.fda.gov leitet weiterhin auf abuse-detection-apology um (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: accessdata.fda.gov weiterhin Umleitung auf abuse-detection-apology (404); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: accessdata.fda.gov weiterhin Umleitung auf abuse-detection-apology (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T16:10Z: weiterhin HTTP 302 auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lauf 2026-11-13T12:30Z: accessdata.fda.gov leitet die Abfrage auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung der FDA) = Sperre wie 403; nicht umgangen, naechster Lauf erneut. Vorher: Historie ab 1983, Datum der Designation je Eintrag. | Vorher: Lernrunde 2026-11-13: Firmenereignisse erste Prioritaet (Zusatz 8); Historie ab 1983 (vor 1990, zweite Prioritaet); Datum der Designation je Eintrag, Export als Tabelle; HTTP 302 auf Suchmaske, aus dieser Umgebung erreichbar. Unabhaengig von fda_zulassungen (eigene Datenbank). | Erneut 2026-11-14T04:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre), nicht umgangen. | Test 2026-11-15T00:10Z: accessdata.fda.gov leitet weiterhin um (HTTP 302, Missbrauchserkennung); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T04:20Z: accessdata.fda.gov leitet weiterhin auf abuse-detection-apology um (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-17T08:17Z: accessdata.fda.gov weiterhin Umleitung auf abuse-detection-apology (404); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T08:15Z: accessdata.fda.gov weiterhin Umleitung auf abuse-detection-apology (HTTP 302); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: weiterhin Umleitung auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T16:10Z: weiterhin HTTP 302 auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-22T04:25Z: weiter Umleitung auf abuse-detection-apology (Sperre), nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-20T16:10Z",
+    "geprueft_utc": "2026-11-22T04:25Z",
     "prioritaet": "hoch"
   },
   {
@@ -6557,10 +6557,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Bekanntgaben von FINMA-Verfahren gegen Schweizer Banken und Versicherer koennten den Schweizer Markt (EWL) kurzfristig gegenueber dem Weltindex bewegen, weil Finanzwerte dort ein grosses Gewicht haben.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: www.finma.ch/de/durchsetzung/ und /de/news/ HTTP 200, robots.txt erlaubt. Die News-Liste wird per Skript aus der internen Such-Schnittstelle /de/api/search/getresult nachgeladen; deren Abruf wurde in dieser Umgebung nicht zugelassen (Befund, nicht umgangen). Oeffentliche RSS-Feeds /de/rss/news/ und /de/rss/sanktionen/ reichen nur rund 5 Monate zurueck (erste pubDate 17.06.2026), damit K2 auf dem zulaessigen Weg nicht erfuellt. Keine Ablage. Naechster Lauf: pruefen, ob ein Archiv mit Tagesdatum als statische Seite besteht (z.B. Enforcementberichte je Jahr nennen Verfahren, aber ohne Bekanntgabetag). | Erneut 2026-11-20T00:25Z: /de/api/search/getresult antwortet auf GET mit HTTP 405 (nur Skript-Abfrage); kein statisches Archiv mit Tagesdatum gefunden, nicht umgangen.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: www.finma.ch/de/durchsetzung/ und /de/news/ HTTP 200, robots.txt erlaubt. Die News-Liste wird per Skript aus der internen Such-Schnittstelle /de/api/search/getresult nachgeladen; deren Abruf wurde in dieser Umgebung nicht zugelassen (Befund, nicht umgangen). Oeffentliche RSS-Feeds /de/rss/news/ und /de/rss/sanktionen/ reichen nur rund 5 Monate zurueck (erste pubDate 17.06.2026), damit K2 auf dem zulaessigen Weg nicht erfuellt. Keine Ablage. Naechster Lauf: pruefen, ob ein Archiv mit Tagesdatum als statische Seite besteht (z.B. Enforcementberichte je Jahr nennen Verfahren, aber ohne Bekanntgabetag). | Erneut 2026-11-20T00:25Z: /de/api/search/getresult antwortet auf GET mit HTTP 405 (nur Skript-Abfrage); kein statisches Archiv mit Tagesdatum gefunden, nicht umgangen. | Erneut 2026-11-22T04:25Z: /de/durchsetzung/ nun 301 auf /alles-zur-durchsetzung/; Liste weiter nur ueber Skript-Suche, kein statisches Archiv; nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-17T10:00Z",
-    "geprueft_utc": "2026-11-20T00:25Z"
+    "geprueft_utc": "2026-11-22T04:25Z"
   },
   {
     "id": "eba_stresstest_termine",
@@ -7119,12 +7119,12 @@
     "domain": "apps.tga.gov.au",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Replikation von fda_ruckrufe (ohne Spitzenwert, daher tief). Bericht HTTP 200; Datumsfeld und Historie prüfen. | Lauf 2026-11-19T16:30Z: arn-report.aspx leitet auf DRAC-Eingabeseite (apps.tga.gov.au/PROD/DRAC/arn-entry.aspx, HTTP 200); Formular (POST arn-report.aspx, Felder cmbProductType, cmbActionType, start-/end-day/month/year) liefert auch mit Sitzungscookie 302 zurueck zur Eingabe -- vermutlich clientseitiges JS/Token. Naechster Schritt: JS der Seite (ajax) auf Datenendpunkt pruefen; Status bleibt kandidat. | Lauf 2026-11-19T20:25Z: Bericht erst nach Bestaetigung eines Haftungs- und Urheberrechtshinweises (POST arn-entry.aspx/AgreedToDisclaimer, Hinweis 'Copyright restrictions apply to DRAC'); automatisches Bestaetigen in dieser Umgebung nicht zugelassen. K3 ungeklaert: Reto muss entscheiden, ob die Bestaetigung des Hinweises durch ein Skript zulaessig ist. Keine Ablage.",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Unabhängige Replikation von fda_ruckrufe (ohne Spitzenwert, daher tief). Bericht HTTP 200; Datumsfeld und Historie prüfen. | Lauf 2026-11-19T16:30Z: arn-report.aspx leitet auf DRAC-Eingabeseite (apps.tga.gov.au/PROD/DRAC/arn-entry.aspx, HTTP 200); Formular (POST arn-report.aspx, Felder cmbProductType, cmbActionType, start-/end-day/month/year) liefert auch mit Sitzungscookie 302 zurueck zur Eingabe -- vermutlich clientseitiges JS/Token. Naechster Schritt: JS der Seite (ajax) auf Datenendpunkt pruefen; Status bleibt kandidat. | Lauf 2026-11-19T20:25Z: Bericht erst nach Bestaetigung eines Haftungs- und Urheberrechtshinweises (POST arn-entry.aspx/AgreedToDisclaimer, Hinweis 'Copyright restrictions apply to DRAC'); automatisches Bestaetigen in dieser Umgebung nicht zugelassen. K3 ungeklaert: Reto muss entscheiden, ob die Bestaetigung des Hinweises durch ein Skript zulaessig ist. Keine Ablage. | Erneut 2026-11-22T04:25Z: arn-report.aspx leitet (302) auf arn-entry.aspx (Zustimmungsseite mit Formular); Zustimmung per Skript waere Umgehung, nicht ausgefuehrt.",
     "mechanismus": "Rückrufe von Arzneimitteln und Medizinprodukten treffen globale Pharma- und Medtech-Hersteller und können XLV kurzfristig gegenüber dem Weltindex belasten.",
     "prioritaet": "tief",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": "2026-11-19T20:25Z"
+    "geprueft_utc": "2026-11-22T04:25Z"
   },
   {
     "id": "philly_fed_bos_termine",
@@ -7393,9 +7393,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Gehäufte Herabstufungen in einem Sektor (Fallen Angels) erzwingen Verkäufe regelgebundener Anleger und belasten kurzfristig LQD und Sektor-ETF gegenüber dem Weltindex (Ellul/Jotikasthira/Lundblad 2011).",
-    "grund": "Firmenereignisse aggregiert; öffentliche XBRL-Dateien ohne Login (HTTP 301 auf Download-Seite, Ziel prüfen); Tiefe je nach Datei ab 2012, damit 8 Jahre vor dem Siegel. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: disclosure.spglobal.com liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut.",
+    "grund": "Firmenereignisse aggregiert; öffentliche XBRL-Dateien ohne Login (HTTP 301 auf Download-Seite, Ziel prüfen); Tiefe je nach Datei ab 2012, damit 8 Jahre vor dem Siegel. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: disclosure.spglobal.com liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. | Erneut 2026-11-22T04:25Z: Weiterleitung auf www.spglobal.com, dort HTTP 403; nicht umgangen, naechster Lauf erneut.",
     "aufgenommen_utc": "2026-11-20T09:30:00Z",
-    "geprueft_utc": "2026-11-20T12:10Z"
+    "geprueft_utc": "2026-11-22T04:25Z"
   },
   {
     "id": "sec_form15_abmeldungen",
@@ -7641,5 +7641,19 @@
     "aufgenommen_utc": "2026-11-21T10:30Z",
     "geprueft_utc": "2026-11-21T20:10Z",
     "herkunft": "Lernrunde 2026-11-21"
+  },
+  {
+    "id": "fda_purple_book_biologika",
+    "name": "FDA Purple Book: Lizenzierungen von Biologika und Biosimilars je Tag",
+    "url": "https://purplebooksearch.fda.gov/downloads",
+    "domain": "purplebooksearch.fda.gov",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "normal",
+    "mechanismus": "Zulassungen von Biosimilars bedrohen Umsaetze grosser Biologika-Hersteller und koennten Gesundheit (XLV) gegenueber dem Weltindex in den folgenden Tagen bewegen; ergaenzt fda_zulassungen (CDER) um CBER-Lizenzen.",
+    "grund": "Eigene Recherche 2026-11-22T04:25Z: Download-Seite leitet aus dieser Umgebung auf /apology_objects/abuse-detection-apology.html (HTTP 404, Missbrauchserkennung der FDA) = Sperre; nicht umgangen, naechster Lauf erneut. Offen: Datum der Bekanntgabe (Lizenzdatum vs. Pressemitteilung) und Vollstaendigkeit historischer Eintraege pruefen.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-22T04:25Z",
+    "geprueft_utc": "2026-11-22T04:25Z"
   }
 ]
