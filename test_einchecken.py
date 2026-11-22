@@ -1,4 +1,4 @@
-"""Regressionstests für einchecken.py (Astra-Befund 19, 2.10.2026). Aufruf: python test_einchecken.py
+"""Regressionstests für einchecken.py (Astra-Befund 19, 2.10.2026; Vermerk der Textkonflikte 21.11.2026). Aufruf: python test_einchecken.py
 Prüft das Mischen ohne Netz; der zweite Teil spielt einen echten Rebase-Konflikt in einem Wegwerf-Repo durch."""
 import json, os, subprocess, sys, tempfile
 
@@ -81,6 +81,32 @@ with tempfile.TemporaryDirectory() as tmp:
     assert len(sich) == 1 and g(a, "show", f"origin/claude/lernen:{sich[0]}") == "github\n"
     assert g(a, "show", "origin/claude/lernen:bericht.txt") == "eigen\n"
     print("ok  Rebase: andere Datei – eigener Stand gilt, GitHub-Stand gesichert als", sich[0])
+    k = [x for x in idx.get("konflikte", []) if x.get("wo") == "bericht.txt"]
+    assert len(k) == 1 and k[0]["gesichert_als"] == sich[0] and k[0]["lauf"] == "Test"
+    print("ok  Rebase: Textkonflikt der anderen Datei steht in index.json (konflikte)")
+# 8b (21.11.2026) Nur eine andere Datei im Konflikt, index.json ohne Konflikt: der Vermerk entsteht trotzdem
+with tempfile.TemporaryDirectory() as tmp:
+    fern, a, bdir = (os.path.join(tmp, x) for x in ("fern.git", "a", "b"))
+    subprocess.run(["git", "init", "-q", "--bare", fern], check=True)
+    for d in (a, bdir):
+        subprocess.run(["git", "init", "-q", d], check=True)
+        g(d, "config", "user.name", "t"); g(d, "config", "user.email", "t@t"); g(d, "remote", "add", "origin", fern)
+    json.dump({"suchlaeufe": [{"nr": 1, "datei": "S1"}]}, open(os.path.join(a, "index.json"), "w"), indent=1)
+    open(os.path.join(a, "notiz.txt"), "w").write("basis\n")
+    g(a, "add", "-A"); g(a, "commit", "-qm", "basis"); g(a, "push", "-q", "origin", "HEAD:claude/lernen")
+    g(bdir, "fetch", "-q", "origin", "+claude/lernen:refs/remotes/origin/claude/lernen"); g(bdir, "checkout", "-q", "-b", "arbeit", "origin/claude/lernen")
+    open(os.path.join(a, "notiz.txt"), "w").write("github\n")
+    g(a, "add", "-A"); g(a, "commit", "-qm", "anderer Schreiber"); g(a, "push", "-q", "origin", "HEAD:claude/lernen")
+    open(os.path.join(bdir, "notiz.txt"), "w").write("eigen\n")
+    e.LERNEN = bdir
+    assert e.main() == 0
+    g(a, "fetch", "-q", "origin", "+claude/lernen:refs/remotes/origin/claude/lernen")
+    idx = json.loads(g(a, "show", "origin/claude/lernen:index.json"))
+    sich = [x for x in g(a, "ls-tree", "--name-only", "origin/claude/lernen").split() if x.startswith("notiz.txt.konflikt_")]
+    k = [x for x in idx.get("konflikte", []) if x.get("wo") == "notiz.txt"]
+    assert len(sich) == 1 and len(k) == 1 and k[0]["gesichert_als"] == sich[0]
+    gleich(idx["suchlaeufe"], [{"nr": 1, "datei": "S1"}], "8b: index.json sonst unverändert")
+    print("ok  8b: Konflikt nur in einer anderen Datei steht in index.json (konflikte)")
 # S-Nummer beim Einchecken (V3.12, Schritt 2): zwei Läufe vergeben dieselbe Nummer mit verschiedenem Inhalt
 with tempfile.TemporaryDirectory() as tmp:
     fern, a, bdir = (os.path.join(tmp, x) for x in ("fern.git", "a", "b"))
