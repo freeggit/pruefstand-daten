@@ -6830,10 +6830,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Indexaenderungen erzwingen Umschichtungen der Indexfonds zwischen Bekanntgabe und Stichtag; Nachfragedruck in grossen Euro-Titeln kann EWU und EWG gegenueber dem Weltindex kurzfristig verschieben.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft. | Scout 2026-11-18T20:35Z: fehler. Wikipedia EN/DE/FR/ES/IT fuehren keine Aenderungsliste des EURO STOXX 50 (nur aktuelle Zusammensetzung), damit keine offene Ersatzquelle; amtliches Archiv stoxx.com/news-archive antwortet HTTP 403 (Befund, nicht umgangen). Naechster Lauf erneut; ohne zugaengliches STOXX-Archiv spaeter abzulehnen (K3). | Erneut 2026-11-20T00:25Z: www.stoxx.com/news-archive HTTP 403 (stoxx.com/news-archive/ 404); nicht umgangen. Weiterhin keine offene Ersatzquelle.",
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft. | Scout 2026-11-18T20:35Z: fehler. Wikipedia EN/DE/FR/ES/IT fuehren keine Aenderungsliste des EURO STOXX 50 (nur aktuelle Zusammensetzung), damit keine offene Ersatzquelle; amtliches Archiv stoxx.com/news-archive antwortet HTTP 403 (Befund, nicht umgangen). Naechster Lauf erneut; ohne zugaengliches STOXX-Archiv spaeter abzulehnen (K3). | Erneut 2026-11-20T00:25Z: www.stoxx.com/news-archive HTTP 403 (stoxx.com/news-archive/ 404); nicht umgangen. Weiterhin keine offene Ersatzquelle. | Erneut 2026-11-22T00:14Z: stoxx.com/news-archive weiterhin HTTP 403; nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-18T09:45Z",
-    "geprueft_utc": "2026-11-20T00:25Z"
+    "geprueft_utc": "2026-11-22T00:14Z"
   },
   {
     "id": "hang_seng_indexaenderungen",
@@ -7052,12 +7052,12 @@
     "domain": "www.accessdata.fda.gov",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Firmenereignis-Typ, kein Doppel zu fda_warning_letters (andere Massnahme). Liste offen, HTTP 200; Datum je Alert «Date Published» bzw. «Last Updated» prüfen (K4). | Lauf 2026-11-19T12:30Z: www.accessdata.fda.gov/cms_ia/ialist.html leitet auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung), wie bei fda_orphan_designationen. Sperre nicht umgangen (Befund), naechster Lauf erneut. | Test 2026-11-20T16:10Z: weiterhin HTTP 302 auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Firmenereignis-Typ, kein Doppel zu fda_warning_letters (andere Massnahme). Liste offen, HTTP 200; Datum je Alert «Date Published» bzw. «Last Updated» prüfen (K4). | Lauf 2026-11-19T12:30Z: www.accessdata.fda.gov/cms_ia/ialist.html leitet auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung), wie bei fda_orphan_designationen. Sperre nicht umgangen (Befund), naechster Lauf erneut. | Test 2026-11-20T16:10Z: weiterhin HTTP 302 auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-22T00:14Z: weiterhin HTTP 302 auf abuse-detection-apology; nicht umgangen.",
     "mechanismus": "Einfuhrsperren gegen Arzneimittel- und Lebensmittelwerke (oft Indien, China) unterbrechen Lieferketten von Pharma und Nahrung und können XLV, IBB und DBA kurzfristig gegenüber dem Weltindex bewegen.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": "2026-11-20T16:10Z"
+    "geprueft_utc": "2026-11-22T00:14Z"
   },
   {
     "id": "swissmedic_neuzulassungen",
@@ -7341,15 +7341,48 @@
   {
     "id": "eu_handelsschutz_antidumping",
     "name": "EU-Handelsschutzverfahren (Antidumping, Antisubvention): Einleitungen und Massnahmen mit Datum",
-    "url": "https://tron.trade.ec.europa.eu/investigations/ongoing",
-    "domain": "tron.trade.ec.europa.eu",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql",
+    "domain": "publications.europa.eu",
     "bereich": "Firmenereignisse",
-    "status": "fehler",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Einleitung und Verhängung von EU-Antidumpingzöllen (Stahl, Chemie, Solar) verschieben kurzfristig die Erwartungen für Grundstoffe und chinesische Exporteure (XLB, FXI, EEM) gegenüber dem Weltindex.",
-    "grund": "Ergänzt die US-Reihen fedregister_handelsschutz und usitc_handelsschutz_verfuegungen um eine unabhängige Behörde; Liste HTTP 200 geprüft; Historie im Amtsblatt (EUR-Lex) ab 1990er-Jahre. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: tron.trade.ec.europa.eu ist eine Angular-Anwendung, die Liste wird nur per JavaScript geladen (kein Tabelleninhalt im HTML, kein dokumentierter offener Endpunkt). Naechster Versuch: Historie aus EUR-Lex (Amtsblatt Reihe C/L, Einleitungsbekanntmachungen) mit Veroeffentlichungsdatum pruefen.",
+    "grund": "Ergänzt die US-Reihen fedregister_handelsschutz und usitc_handelsschutz_verfuegungen um eine unabhängige Behörde; Liste HTTP 200 geprüft; Historie im Amtsblatt (EUR-Lex) ab 1990er-Jahre. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: tron.trade.ec.europa.eu ist eine Angular-Anwendung, die Liste wird nur per JavaScript geladen (kein Tabelleninhalt im HTML, kein dokumentierter offener Endpunkt). Naechster Versuch: Historie aus EUR-Lex (Amtsblatt Reihe C/L, Einleitungsbekanntmachungen) mit Veroeffentlichungsdatum pruefen. | Aufgenommen 2026-11-22T00:14Z: Abruf ueber den offenen Cellar-SPARQL-Endpunkt des EU-Amts fuer Veroeffentlichungen (statt der JS-Seite TRON), Titelregeln im Skript, Datum = Veroeffentlichungstag im Amtsblatt (official-journal-act_date_publication bzw. Datum der Amtsblatt-Ausgabe). K1 taeglich (Zaehlung je Kalendertag, 0 = kein Akt, Median-Abstand 1); K2 ab 1980-01-01, 17127 Zeilen (Langzeit-Familie, Beginn vor 1990); K3 offen ohne Login/Schluessel, Weiterverwendung frei (Beschluss 2011/833/EU); K4 Amtsblatt wird nicht revidiert, verfuegbar 0; Werke ohne Veroeffentlichungsdatum (konsolidierte Fassungen, Entwuerfe) werden nicht gezaehlt; Berichtigungen, Aenderungs- und Urteilsumsetzungsakte ausgeschlossen; laufendes und Vorjahr werden je Lauf neu geholt (Metadaten koennen mit Verzug eintreffen). K5 letzter Wert 2026-11-21 (letzte Einleitung 2026-11-17, letzte Massnahme 2026-11-18); K6 neu (ergaenzt fedregister_handelsschutz um die EU); K7 CSV je ~39 kB, Abruf voll ~66 s, mit Jahres-Cache schneller. Pruefung: einleitungen 1240 Akte an 1019 Tagen, Max 11/Tag, gleiche Folgewerte 89%; massnahmen 1102 Akte an 959 Tagen, Max 5/Tag, gleiche Folgewerte 90% (hoher Anteil gleicher Folgewerte wegen vieler Nulltage, bei Ereigniszaehlung erwartet). Jahreszahlen plausibel (Einleitungen 12-53/Jahr, Massnahmen 10-63/Jahr). Paarvorschlag fuer Reto: fedregister_handelsschutz gegen eu_handelsschutz_antidumping:einleitungen (USA gegen EU, Grundstoffe XLB).",
     "aufgenommen_utc": "2026-11-20T09:30:00Z",
-    "geprueft_utc": "2026-11-20T12:10Z"
+    "geprueft_utc": "2026-11-22T00:14Z",
+    "reihen": [
+      "einleitungen",
+      "massnahmen"
+    ],
+    "pruefung": {
+      "einleitungen": {
+        "zeilen": 17127,
+        "erste": "1980-01-01",
+        "letzte": "2026-11-21",
+        "median": 1.0,
+        "gleich": 0.892,
+        "min": 0,
+        "max": 11,
+        "tage": 1019,
+        "summe": 1240
+      },
+      "massnahmen": {
+        "zeilen": 17127,
+        "erste": "1980-01-01",
+        "letzte": "2026-11-21",
+        "median": 1.0,
+        "gleich": 0.896,
+        "min": 0,
+        "max": 5,
+        "tage": 959,
+        "summe": 1102
+      }
+    },
+    "reihen_aktiv": [
+      "einleitungen",
+      "massnahmen"
+    ],
+    "reihen_ruhend": []
   },
   {
     "id": "sp_ratinghistorie_17g7",

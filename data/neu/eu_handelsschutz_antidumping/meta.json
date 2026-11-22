@@ -1,0 +1,20 @@
+{
+  "einleitungen": {
+    "beschreibung": "Taegliche Anzahl Einleitungsbekanntmachungen (Notice of initiation) von EU-Antidumping- und Antisubventionsverfahren einschliesslich Ueberpruefungen im Amtsblatt (Reihe C), ab 1980. 0 = keine.",
+    "einheit": "Anzahl Bekanntmachungen",
+    "publikation": "taeglich: das Amtsblatt der EU erscheint werktags online (EUR-Lex), der Akt ist am Veroeffentlichungstag oeffentlich; Datum = cdm:official-journal-act_date_publication bzw. Datum der Amtsblatt-Ausgabe",
+    "quelle_url": "https://publications.europa.eu/webapi/rdf/sparql",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je Veroeffentlichungstag im Amtsblatt (Titelregel EINL)",
+    "verfuegbar_nach_tagen": 0
+  },
+  "massnahmen": {
+    "beschreibung": "Taegliche Anzahl Verordnungen zur Einfuehrung vorlaeufiger oder endgueltiger Antidumping- bzw. Ausgleichszoelle im Amtsblatt (Reihe L), ohne Aenderungs- und Urteilsumsetzungsakte, ab 1980. 0 = keine.",
+    "einheit": "Anzahl Verordnungen",
+    "publikation": "taeglich: das Amtsblatt der EU erscheint werktags online (EUR-Lex), der Akt ist am Veroeffentlichungstag oeffentlich; Datum = cdm:official-journal-act_date_publication bzw. Datum der Amtsblatt-Ausgabe",
+    "quelle_url": "https://publications.europa.eu/webapi/rdf/sparql",
+    "revidiert": false,
+    "verdichtung": "Zaehlung je Veroeffentlichungstag im Amtsblatt (Titelregel MASS)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
