@@ -5306,7 +5306,7 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-22T12:56:50Z",
+ "stand_utc": "2026-11-22T18:54:08Z",
  "dateien_n": 586,
  "vorgemerkt": {
   "n__neu__eex_eua_auktionsergebnisse__deckungsquote.csv.gz": {
@@ -5362,6 +5362,20 @@
      "werte": 774,
      "erste": "1980-01-01",
      "sha_inhalt": "4433d261c40a9f611b4d9509018cb7c55adf0e389ac50eddf958330d10b2adbb"
+    }
+   ]
+  },
+  "n__neu__ssa_zahltage_sozialversicherung__zahltag_mittwoch.csv.gz": {
+   "erstmals_utc": "2026-11-22T18:54:02Z",
+   "beste_werte": 849,
+   "frueheste_erste": "1997-06-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-22T18:54:02Z",
+     "lauf_id": "L20261122T185328Z",
+     "werte": 849,
+     "erste": "1997-06-01",
+     "sha_inhalt": "ebd9e0d9efa97734ae68684654d9bfae9a38b3d57c27998ebc56236bb197a22a"
     }
    ]
   },

@@ -2692,6 +2692,12 @@
    "ergebnis_hash": "d3e2a50a5f824016",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261122T211728Z.json",
+   "lauf_id": "L20261122T211728Z",
+   "gesamt": "fehlgeschlagen",
+   "importierbar": false
   }
  ],
  "letzter_lauf_utc": "2026-11-22T16:42Z",
@@ -4936,15 +4942,15 @@
  },
  "letztes_vollarchiv_ergebnis_hash": "d3e2a50a5f824016",
  "pruefungen_bestanden": {
-  "pruef_hash": "5f7cfaa3386d98eb",
-  "lauf_id": "L20261116T132647Z",
-  "zeit_utc": "2026-11-16T17:12:15Z",
-  "eingabe_hash": "f84bc024cf67d8b1",
+  "pruef_hash": "f3557dd6a676a619",
+  "lauf_id": "L20261122T211728Z",
+  "zeit_utc": "2026-11-22T21:17:28Z",
+  "eingabe_hash": null,
   "umgebung": {
    "python": "3.12.15",
    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
    "ImageOS": "ubuntu24",
-   "ImageVersion": "20261111.370.1",
+   "ImageVersion": "20261116.376.1",
    "numpy": "2.5.4",
    "pandas": "3.0.6",
    "python-dateutil": "4.0.0",

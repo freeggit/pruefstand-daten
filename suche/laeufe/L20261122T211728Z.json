@@ -1,0 +1,43 @@
+{
+ "lauf_id": "L20261122T211728Z",
+ "github_run_id": "45056107694",
+ "anlass": "push",
+ "beginn_utc": null,
+ "stufen": {
+  "tests": "vollständig",
+  "siegeltest": "vollständig",
+  "suche": "abgebrochen",
+  "analyse": "übersprungen",
+  "familie_v": "übersprungen",
+  "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)"
+ },
+ "ausgaben": null,
+ "hinweis": "Kein Laufeintrag der Suche gefunden: Der Lauf endete vor dem Schreiben eines Ergebnisses.",
+ "ende_utc": "2026-11-22T21:17:28Z",
+ "gesamt": "fehlgeschlagen",
+ "e38": {
+  "importierbar": false,
+  "archiv_passend": false,
+  "pruefungen": {
+   "status": "bestanden in diesem Lauf",
+   "pruef_hash": "f3557dd6a676a619",
+   "umgebung": {
+    "python": "3.12.15",
+    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR",
+    "ImageOS": "ubuntu24",
+    "ImageVersion": "20261116.376.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "python-dateutil": "4.0.0",
+    "tzdata": "2026.6"
+   }
+  },
+  "gruende": [
+   "Suche oder Folgestufe nicht vollständig",
+   "Vollarchiv passt nicht per Ergebnis-Prüfsumme"
+  ],
+  "nachweis_bei_geaenderter_eingabe": null,
+  "finalist_zulaessig": false,
+  "finalist_regel": "Finalist nur mit Prüfungen im selben Lauf oder mit einem Nachweis auf identischer tatsächlicher Eingabe-Prüfsumme (eingabe_hash_lauf); Reto 15.10.2026"
+ }
+}

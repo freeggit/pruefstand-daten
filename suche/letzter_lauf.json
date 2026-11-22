@@ -60,5 +60,18 @@
   "neu_eu_handelsschutz_antidumping_massnahmen_stand",
   "neu_eu_handelsschutz_antidumping_massnahmen_z252"
  ],
- "gesamt": "vollständig"
+ "gesamt": "vollständig",
+ "letzter_versuch": {
+  "lauf_id": "L20261122T211728Z",
+  "gesamt": "fehlgeschlagen",
+  "stufen": {
+   "tests": "vollständig",
+   "siegeltest": "vollständig",
+   "suche": "abgebrochen",
+   "analyse": "übersprungen",
+   "familie_v": "übersprungen",
+   "einchecken": "folgt (Ergebnis siehe Workflow; ein Laufeintrag auf claude/lernen belegt das gelungene Einchecken)"
+  },
+  "zeit_utc": "2026-11-22T21:17Z"
+ }
 }
