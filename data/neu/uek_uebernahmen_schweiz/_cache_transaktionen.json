@@ -1,0 +1,5582 @@
+{
+"0001": {
+"abruf_utc": "2026-11-22T20:13:10Z",
+"datum": "1997-12-17",
+"jahr": 1997,
+"kategorie": "rueckkaeufe"
+},
+"0002": {
+"abruf_utc": "2026-11-22T20:13:09Z",
+"datum": "1998-02-17",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0003": {
+"abruf_utc": "2026-11-22T20:13:09Z",
+"datum": "1998-02-18",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0004": {
+"abruf_utc": "2026-11-22T20:13:09Z",
+"datum": "1998-03-27",
+"jahr": 1998,
+"kategorie": "angebote"
+},
+"0005": {
+"abruf_utc": "2026-11-22T20:13:09Z",
+"datum": "1998-04-16",
+"jahr": 1998,
+"kategorie": "angebote"
+},
+"0006": {
+"abruf_utc": "2026-11-22T20:13:08Z",
+"datum": "1998-04-30",
+"jahr": 1998,
+"kategorie": "angebote"
+},
+"0008": {
+"abruf_utc": "2026-11-22T20:13:08Z",
+"datum": "1998-05-06",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0009": {
+"abruf_utc": "2026-11-22T20:13:08Z",
+"datum": "1998-05-19",
+"jahr": 1998,
+"kategorie": "andere"
+},
+"0010": {
+"abruf_utc": "2026-11-22T20:13:07Z",
+"datum": "1998-05-22",
+"jahr": 1998,
+"kategorie": "andere"
+},
+"0011": {
+"abruf_utc": "2026-11-22T20:13:07Z",
+"datum": "1998-05-27",
+"jahr": 1998,
+"kategorie": "andere"
+},
+"0012": {
+"abruf_utc": "2026-11-22T20:13:07Z",
+"datum": "1998-06-29",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0013": {
+"abruf_utc": "2026-11-22T20:13:06Z",
+"datum": "1997-11-03",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0014": {
+"abruf_utc": "2026-11-22T20:13:06Z",
+"datum": "1998-07-20",
+"jahr": 1998,
+"kategorie": "andere"
+},
+"0015": {
+"abruf_utc": "2026-11-22T20:13:06Z",
+"datum": "1998-09-14",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0016": {
+"abruf_utc": "2026-11-22T20:13:05Z",
+"datum": "1998-10-01",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0017": {
+"abruf_utc": "2026-11-22T20:13:05Z",
+"datum": "1998-10-23",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0018": {
+"abruf_utc": "2026-11-22T20:13:05Z",
+"datum": "1998-12-15",
+"jahr": 1998,
+"kategorie": "andere"
+},
+"0019": {
+"abruf_utc": "2026-11-22T20:13:04Z",
+"datum": "1998-12-17",
+"jahr": 1998,
+"kategorie": "andere"
+},
+"0020": {
+"abruf_utc": "2026-11-22T20:13:04Z",
+"datum": "1998-12-21",
+"jahr": 1998,
+"kategorie": "rueckkaeufe"
+},
+"0021": {
+"abruf_utc": "2026-11-22T20:13:04Z",
+"datum": "1998-12-28",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0022": {
+"abruf_utc": "2026-11-22T20:13:04Z",
+"datum": "1999-01-11",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0023": {
+"abruf_utc": "2026-11-22T20:13:03Z",
+"datum": "1999-01-15",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0024": {
+"abruf_utc": "2026-11-22T20:13:04Z",
+"datum": "1999-02-17",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0025": {
+"abruf_utc": "2026-11-22T20:13:03Z",
+"datum": "1999-02-19",
+"jahr": 1999,
+"kategorie": "andere"
+},
+"0026": {
+"abruf_utc": "2026-11-22T20:13:03Z",
+"datum": "1999-02-23",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0027": {
+"abruf_utc": "2026-11-22T20:13:03Z",
+"datum": "1999-02-25",
+"jahr": 1999,
+"kategorie": "andere"
+},
+"0028": {
+"abruf_utc": "2026-11-22T20:13:02Z",
+"datum": "1999-02-24",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0029": {
+"abruf_utc": "2026-11-22T20:13:02Z",
+"datum": "1999-03-05",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0030": {
+"abruf_utc": "2026-11-22T20:13:02Z",
+"datum": "1999-03-10",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0031": {
+"abruf_utc": "2026-11-22T20:13:01Z",
+"datum": "1999-03-26",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0032": {
+"abruf_utc": "2026-11-22T20:13:01Z",
+"datum": "1999-03-26",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0033": {
+"abruf_utc": "2026-11-22T20:13:01Z",
+"datum": "1999-04-06",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0034": {
+"abruf_utc": "2026-11-22T20:13:00Z",
+"datum": "1999-04-07",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0035": {
+"abruf_utc": "2026-11-22T20:13:00Z",
+"datum": "1999-04-12",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0036": {
+"abruf_utc": "2026-11-22T20:13:00Z",
+"datum": "1999-04-20",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0037": {
+"abruf_utc": "2026-11-22T20:12:59Z",
+"datum": "1999-04-30",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0038": {
+"abruf_utc": "2026-11-22T20:12:59Z",
+"datum": "1999-04-16",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0039": {
+"abruf_utc": "2026-11-22T20:12:59Z",
+"datum": "1999-05-05",
+"jahr": 1999,
+"kategorie": "andere"
+},
+"0040": {
+"abruf_utc": "2026-11-22T20:12:58Z",
+"datum": "1999-05-18",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0041": {
+"abruf_utc": "2026-11-22T20:12:58Z",
+"datum": "1999-05-20",
+"jahr": 1999,
+"kategorie": "andere"
+},
+"0042": {
+"abruf_utc": "2026-11-22T20:12:58Z",
+"datum": "1999-05-27",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0043": {
+"abruf_utc": "2026-11-22T20:12:31Z",
+"datum": "1999-06-18",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0044": {
+"abruf_utc": "2026-11-22T20:12:31Z",
+"datum": "1999-06-21",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0045": {
+"abruf_utc": "2026-11-22T20:12:30Z",
+"datum": "1999-06-25",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0046": {
+"abruf_utc": "2026-11-22T20:12:30Z",
+"datum": "1999-08-04",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0047": {
+"abruf_utc": "2026-11-22T20:12:30Z",
+"datum": "1999-08-06",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0048": {
+"abruf_utc": "2026-11-22T20:12:29Z",
+"datum": "1999-09-08",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0049": {
+"abruf_utc": "2026-11-22T20:12:29Z",
+"datum": "1999-09-21",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0050": {
+"abruf_utc": "2026-11-22T20:12:29Z",
+"datum": "1999-09-30",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0051": {
+"abruf_utc": "2026-11-22T20:12:28Z",
+"datum": "1999-10-07",
+"jahr": 1999,
+"kategorie": "angebote"
+},
+"0052": {
+"abruf_utc": "2026-11-22T20:12:28Z",
+"datum": "1999-08-27",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0053": {
+"abruf_utc": "2026-11-22T20:12:28Z",
+"datum": "1999-12-01",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0054": {
+"abruf_utc": "2026-11-22T20:12:27Z",
+"datum": "1999-12-03",
+"jahr": 1999,
+"kategorie": "rueckkaeufe"
+},
+"0055": {
+"abruf_utc": "2026-11-22T20:12:27Z",
+"datum": "2000-01-31",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0056": {
+"abruf_utc": "2026-11-22T20:12:27Z",
+"datum": "2000-02-23",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0057": {
+"abruf_utc": "2026-11-22T20:12:27Z",
+"datum": "2000-03-27",
+"jahr": 2000,
+"kategorie": "angebote"
+},
+"0058": {
+"abruf_utc": "2026-11-22T20:12:26Z",
+"datum": "2000-04-11",
+"jahr": 2000,
+"kategorie": "angebote"
+},
+"0059": {
+"abruf_utc": "2026-11-22T20:12:26Z",
+"datum": "2000-04-04",
+"jahr": 2000,
+"kategorie": "angebote"
+},
+"0060": {
+"abruf_utc": "2026-11-22T20:12:26Z",
+"datum": "2000-04-28",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0061": {
+"abruf_utc": "2026-11-22T20:12:26Z",
+"datum": "2000-05-15",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0062": {
+"abruf_utc": "2026-11-22T20:12:25Z",
+"datum": "2000-05-19",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0063": {
+"abruf_utc": "2026-11-22T20:12:25Z",
+"datum": "2000-05-29",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0064": {
+"abruf_utc": "2026-11-22T20:12:25Z",
+"datum": "2000-06-08",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0065": {
+"abruf_utc": "2026-11-22T20:12:24Z",
+"datum": "2000-06-27",
+"jahr": 2000,
+"kategorie": "angebote"
+},
+"0066": {
+"abruf_utc": "2026-11-22T20:12:24Z",
+"datum": "2000-07-04",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0067": {
+"abruf_utc": "2026-11-22T20:12:24Z",
+"datum": "2000-06-13",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0068": {
+"abruf_utc": "2026-11-22T20:12:24Z",
+"datum": "2000-06-30",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0069": {
+"abruf_utc": "2026-11-22T20:12:23Z",
+"datum": "2000-07-21",
+"jahr": 2000,
+"kategorie": "angebote"
+},
+"0070": {
+"abruf_utc": "2026-11-22T20:12:23Z",
+"datum": "2000-07-07",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0071": {
+"abruf_utc": "2026-11-22T20:12:23Z",
+"datum": "2000-08-31",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0072": {
+"abruf_utc": "2026-11-22T20:12:22Z",
+"datum": "2000-08-31",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0073": {
+"abruf_utc": "2026-11-22T20:12:22Z",
+"datum": "2000-08-31",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0074": {
+"abruf_utc": "2026-11-22T20:12:22Z",
+"datum": "2000-10-12",
+"jahr": 2000,
+"kategorie": "angebote"
+},
+"0075": {
+"abruf_utc": "2026-11-22T20:12:21Z",
+"datum": "2000-10-13",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0076": {
+"abruf_utc": "2026-11-22T20:12:21Z",
+"datum": "2000-10-13",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0077": {
+"abruf_utc": "2026-11-22T20:12:21Z",
+"datum": "2000-10-27",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0078": {
+"abruf_utc": "2026-11-22T20:12:21Z",
+"datum": "2000-11-13",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0079": {
+"abruf_utc": "2026-11-22T20:12:20Z",
+"datum": "2000-11-21",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0080": {
+"abruf_utc": "2026-11-22T20:12:20Z",
+"datum": "2000-12-08",
+"jahr": 2000,
+"kategorie": "andere"
+},
+"0081": {
+"abruf_utc": "2026-11-22T20:12:20Z",
+"datum": "2000-12-20",
+"jahr": 2000,
+"kategorie": "rueckkaeufe"
+},
+"0082": {
+"abruf_utc": "2026-11-22T20:12:19Z",
+"datum": "2001-02-05",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0083": {
+"abruf_utc": "2026-11-22T20:12:19Z",
+"datum": "2001-02-14",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0084": {
+"abruf_utc": "2026-11-22T20:12:19Z",
+"datum": "2001-02-19",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0085": {
+"abruf_utc": "2026-11-22T20:12:18Z",
+"datum": "2001-03-01",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0086": {
+"abruf_utc": "2026-11-22T20:12:18Z",
+"datum": "2001-03-05",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0087": {
+"abruf_utc": "2026-11-22T20:12:18Z",
+"datum": "2001-03-14",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0088": {
+"abruf_utc": "2026-11-22T20:12:18Z",
+"datum": "2001-02-19",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0089": {
+"abruf_utc": "2026-11-22T20:12:18Z",
+"datum": "2001-03-19",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0090": {
+"abruf_utc": "2026-11-22T20:12:17Z",
+"datum": "2001-03-20",
+"jahr": 2001,
+"kategorie": "andere"
+},
+"0091": {
+"abruf_utc": "2026-11-22T20:12:17Z",
+"datum": "2001-03-21",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0092": {
+"abruf_utc": "2026-11-22T20:12:17Z",
+"datum": "2001-03-30",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0093": {
+"abruf_utc": "2026-11-22T20:12:16Z",
+"datum": "2001-03-28",
+"jahr": 2001,
+"kategorie": "andere"
+},
+"0094": {
+"abruf_utc": "2026-11-22T20:12:16Z",
+"datum": "2001-04-04",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0095": {
+"abruf_utc": "2026-11-22T20:12:16Z",
+"datum": "2001-04-20",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0096": {
+"abruf_utc": "2026-11-22T20:12:15Z",
+"datum": "2001-05-16",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0097": {
+"abruf_utc": "2026-11-22T20:12:15Z",
+"datum": "2001-05-16",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0098": {
+"abruf_utc": "2026-11-22T20:12:15Z",
+"datum": "2001-05-23",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0099": {
+"abruf_utc": "2026-11-22T20:12:14Z",
+"datum": "2001-05-28",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0100": {
+"abruf_utc": "2026-11-22T20:12:14Z",
+"datum": "2001-05-28",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0101": {
+"abruf_utc": "2026-11-22T20:12:14Z",
+"datum": "2001-06-01",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0102": {
+"abruf_utc": "2026-11-22T20:12:14Z",
+"datum": "2001-06-13",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0103": {
+"abruf_utc": "2026-11-22T20:12:13Z",
+"datum": "2001-05-14",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0104": {
+"abruf_utc": "2026-11-22T20:12:13Z",
+"datum": "2001-06-05",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0105": {
+"abruf_utc": "2026-11-22T20:12:13Z",
+"datum": "2001-07-09",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0106": {
+"abruf_utc": "2026-11-22T20:12:12Z",
+"datum": "2001-07-13",
+"jahr": 2001,
+"kategorie": "andere"
+},
+"0107": {
+"abruf_utc": "2026-11-22T20:12:12Z",
+"datum": "2001-06-07",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0108": {
+"abruf_utc": "2026-11-22T20:12:12Z",
+"datum": "2001-08-17",
+"jahr": 2001,
+"kategorie": "andere"
+},
+"0109": {
+"abruf_utc": "2026-11-22T20:12:12Z",
+"datum": "2001-08-22",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0110": {
+"abruf_utc": "2026-11-22T20:12:11Z",
+"datum": "2001-08-31",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0111": {
+"abruf_utc": "2026-11-22T20:12:11Z",
+"datum": "2001-09-12",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0112": {
+"abruf_utc": "2026-11-22T20:12:11Z",
+"datum": "2001-09-24",
+"jahr": 2001,
+"kategorie": "rueckkaeufe"
+},
+"0113": {
+"abruf_utc": "2026-11-22T20:12:11Z",
+"datum": "2001-09-27",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0114": {
+"abruf_utc": "2026-11-22T20:12:10Z",
+"datum": "2001-09-25",
+"jahr": 2001,
+"kategorie": "angebote"
+},
+"0115": {
+"abruf_utc": "2026-11-22T20:12:10Z",
+"datum": "2001-10-26",
+"jahr": 2001,
+"kategorie": "andere"
+},
+"0116": {
+"abruf_utc": "2026-11-22T20:12:10Z",
+"datum": "2002-01-14",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0117": {
+"abruf_utc": "2026-11-22T20:12:09Z",
+"datum": "2001-12-28",
+"jahr": 2002,
+"kategorie": "angebote"
+},
+"0118": {
+"abruf_utc": "2026-11-22T20:12:09Z",
+"datum": "2002-02-01",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0119": {
+"abruf_utc": "2026-11-22T20:12:09Z",
+"datum": "2002-03-01",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0120": {
+"abruf_utc": "2026-11-22T20:12:09Z",
+"datum": "2002-03-06",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0121": {
+"abruf_utc": "2026-11-22T20:12:08Z",
+"datum": "2002-02-22",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0122": {
+"abruf_utc": "2026-11-22T20:12:08Z",
+"datum": "2002-03-11",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0123": {
+"abruf_utc": "2026-11-22T20:12:08Z",
+"datum": "2002-03-15",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0124": {
+"abruf_utc": "2026-11-22T20:12:07Z",
+"datum": "2002-03-26",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0125": {
+"abruf_utc": "2026-11-22T20:12:07Z",
+"datum": "2002-03-27",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0126": {
+"abruf_utc": "2026-11-22T20:12:07Z",
+"datum": "2002-04-15",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0127": {
+"abruf_utc": "2026-11-22T20:12:07Z",
+"datum": "2002-04-15",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0128": {
+"abruf_utc": "2026-11-22T20:12:06Z",
+"datum": "2002-04-15",
+"jahr": 2002,
+"kategorie": "angebote"
+},
+"0129": {
+"abruf_utc": "2026-11-22T20:12:06Z",
+"datum": "2002-04-12",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0130": {
+"abruf_utc": "2026-11-22T20:12:06Z",
+"datum": "2002-05-15",
+"jahr": 2002,
+"kategorie": "angebote"
+},
+"0131": {
+"abruf_utc": "2026-11-22T20:12:05Z",
+"datum": "2002-06-07",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0132": {
+"abruf_utc": "2026-11-22T20:12:05Z",
+"datum": "2002-06-13",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0133": {
+"abruf_utc": "2026-11-22T20:12:05Z",
+"datum": "2002-07-15",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0134": {
+"abruf_utc": "2026-11-22T20:12:04Z",
+"datum": "2002-07-16",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0135": {
+"abruf_utc": "2026-11-22T20:12:04Z",
+"datum": "2002-07-23",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0136": {
+"abruf_utc": "2026-11-22T20:12:04Z",
+"datum": "2002-07-29",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0137": {
+"abruf_utc": "2026-11-22T20:12:04Z",
+"datum": "2002-08-16",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0138": {
+"abruf_utc": "2026-11-22T20:12:03Z",
+"datum": "2002-08-30",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0139": {
+"abruf_utc": "2026-11-22T20:12:03Z",
+"datum": "2002-09-09",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0140": {
+"abruf_utc": "2026-11-22T20:12:03Z",
+"datum": "2002-09-12",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0141": {
+"abruf_utc": "2026-11-22T20:12:03Z",
+"datum": "2002-09-17",
+"jahr": 2002,
+"kategorie": "angebote"
+},
+"0142": {
+"abruf_utc": "2026-11-22T20:12:02Z",
+"datum": "2003-06-30",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0143": {
+"abruf_utc": "2026-11-22T20:12:02Z",
+"datum": "2002-10-03",
+"jahr": 2002,
+"kategorie": "angebote"
+},
+"0144": {
+"abruf_utc": "2026-11-22T20:12:02Z",
+"datum": "2002-10-11",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0145": {
+"abruf_utc": "2026-11-22T20:12:01Z",
+"datum": "2002-09-09",
+"jahr": 2002,
+"kategorie": "angebote"
+},
+"0146": {
+"abruf_utc": "2026-11-22T20:12:01Z",
+"datum": "2002-10-17",
+"jahr": 2002,
+"kategorie": "rueckkaeufe"
+},
+"0147": {
+"abruf_utc": "2026-11-22T20:12:01Z",
+"datum": "2002-10-22",
+"jahr": 2002,
+"kategorie": "angebote"
+},
+"0148": {
+"abruf_utc": "2026-11-22T20:12:01Z",
+"datum": "2002-11-08",
+"jahr": 2002,
+"kategorie": "andere"
+},
+"0149": {
+"abruf_utc": "2026-11-22T20:12:00Z",
+"datum": "2003-01-15",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0150": {
+"abruf_utc": "2026-11-22T20:12:00Z",
+"datum": "2003-01-20",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0151": {
+"abruf_utc": "2026-11-22T20:12:00Z",
+"datum": "2003-02-10",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0152": {
+"abruf_utc": "2026-11-22T20:11:59Z",
+"datum": "2003-02-17",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0154": {
+"abruf_utc": "2026-11-22T20:11:59Z",
+"datum": "2003-03-06",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0155": {
+"abruf_utc": "2026-11-22T20:11:59Z",
+"datum": "2003-03-13",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0156": {
+"abruf_utc": "2026-11-22T20:11:58Z",
+"datum": "2003-03-15",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0157": {
+"abruf_utc": "2026-11-22T20:11:58Z",
+"datum": "2003-03-19",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0158": {
+"abruf_utc": "2026-11-22T20:11:58Z",
+"datum": "2003-03-28",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0159": {
+"abruf_utc": "2026-11-22T20:11:58Z",
+"datum": "2003-03-28",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0160": {
+"abruf_utc": "2026-11-22T20:11:57Z",
+"datum": "2003-03-21",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0161": {
+"abruf_utc": "2026-11-22T20:11:57Z",
+"datum": "2003-04-16",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0162": {
+"abruf_utc": "2026-11-22T20:11:57Z",
+"datum": "2003-04-16",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0163": {
+"abruf_utc": "2026-11-22T20:11:57Z",
+"datum": "2003-05-14",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0164": {
+"abruf_utc": "2026-11-22T20:11:56Z",
+"datum": "2003-05-07",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0165": {
+"abruf_utc": "2026-11-22T20:11:56Z",
+"datum": "2003-06-02",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0166": {
+"abruf_utc": "2026-11-22T20:11:56Z",
+"datum": "2003-06-11",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0167": {
+"abruf_utc": "2026-11-22T20:11:55Z",
+"datum": "2003-06-30",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0168": {
+"abruf_utc": "2026-11-22T20:11:55Z",
+"datum": "2003-05-26",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0169": {
+"abruf_utc": "2026-11-22T20:11:55Z",
+"datum": "2003-07-07",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0170": {
+"abruf_utc": "2026-11-22T20:11:54Z",
+"datum": "2003-06-10",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0171": {
+"abruf_utc": "2026-11-22T20:11:54Z",
+"datum": "2003-07-01",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0172": {
+"abruf_utc": "2026-11-22T20:11:54Z",
+"datum": "2003-07-25",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0173": {
+"abruf_utc": "2026-11-22T20:11:53Z",
+"datum": "2003-08-27",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0174": {
+"abruf_utc": "2026-11-22T20:11:53Z",
+"datum": "2003-08-29",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0175": {
+"abruf_utc": "2026-11-22T20:11:53Z",
+"datum": "2003-09-17",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0176": {
+"abruf_utc": "2026-11-22T20:11:53Z",
+"datum": "2003-09-29",
+"jahr": 2003,
+"kategorie": "rueckkaeufe"
+},
+"0177": {
+"abruf_utc": "2026-11-22T20:11:52Z",
+"datum": "2003-10-17",
+"jahr": 2003,
+"kategorie": "angebote"
+},
+"0178": {
+"abruf_utc": "2026-11-22T20:11:52Z",
+"datum": "2003-10-23",
+"jahr": 2003,
+"kategorie": "andere"
+},
+"0179": {
+"abruf_utc": "2026-11-22T20:11:52Z",
+"datum": "2003-12-12",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0180": {
+"abruf_utc": "2026-11-22T20:11:52Z",
+"datum": "2004-01-19",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0181": {
+"abruf_utc": "2026-11-22T20:11:51Z",
+"datum": "2004-02-25",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0182": {
+"abruf_utc": "2026-11-22T20:11:51Z",
+"datum": "2003-12-22",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0183": {
+"abruf_utc": "2026-11-22T20:11:51Z",
+"datum": "2004-03-02",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0184": {
+"abruf_utc": "2026-11-22T20:11:51Z",
+"datum": "2004-03-03",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0185": {
+"abruf_utc": "2026-11-22T20:11:50Z",
+"datum": "2004-03-08",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0186": {
+"abruf_utc": "2026-11-22T20:11:50Z",
+"datum": "2004-03-16",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0187": {
+"abruf_utc": "2026-11-22T20:11:50Z",
+"datum": "2004-03-26",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0188": {
+"abruf_utc": "2026-11-22T20:11:49Z",
+"datum": "2004-03-31",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0190": {
+"abruf_utc": "2026-11-22T20:11:49Z",
+"datum": "2004-04-23",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0191": {
+"abruf_utc": "2026-11-22T20:11:49Z",
+"datum": "2004-05-03",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0193": {
+"abruf_utc": "2026-11-22T20:11:48Z",
+"datum": "2004-05-13",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0194": {
+"abruf_utc": "2026-11-22T20:11:48Z",
+"datum": "2004-05-18",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0195": {
+"abruf_utc": "2026-11-22T20:11:48Z",
+"datum": "2004-05-21",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0196": {
+"abruf_utc": "2026-11-22T20:11:48Z",
+"datum": "2004-05-11",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0197": {
+"abruf_utc": "2026-11-22T20:11:47Z",
+"datum": "2004-06-02",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0198": {
+"abruf_utc": "2026-11-22T20:11:47Z",
+"datum": "2004-06-04",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0199": {
+"abruf_utc": "2026-11-22T20:11:47Z",
+"datum": "2004-06-23",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0200": {
+"abruf_utc": "2026-11-22T20:11:46Z",
+"datum": "2004-05-28",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0201": {
+"abruf_utc": "2026-11-22T20:11:46Z",
+"datum": "2004-07-01",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0202": {
+"abruf_utc": "2026-11-22T20:11:46Z",
+"datum": "2004-05-11",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0203": {
+"abruf_utc": "2026-11-22T20:11:46Z",
+"datum": "2004-07-07",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0204": {
+"abruf_utc": "2026-11-22T20:11:46Z",
+"datum": "2004-07-20",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0205": {
+"abruf_utc": "2026-11-22T20:11:45Z",
+"datum": "2004-08-09",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0206": {
+"abruf_utc": "2026-11-22T20:11:45Z",
+"datum": "2004-08-23",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0207": {
+"abruf_utc": "2026-11-22T20:11:45Z",
+"datum": "2004-09-06",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0208": {
+"abruf_utc": "2026-11-22T20:11:44Z",
+"datum": "2004-09-10",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0209": {
+"abruf_utc": "2026-11-22T20:11:44Z",
+"datum": "2004-04-15",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0210": {
+"abruf_utc": "2026-11-22T20:11:44Z",
+"datum": "2004-04-15",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0211": {
+"abruf_utc": "2026-11-22T20:11:43Z",
+"datum": "2004-09-30",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0212": {
+"abruf_utc": "2026-11-22T20:11:43Z",
+"datum": "2004-10-11",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0213": {
+"abruf_utc": "2026-11-22T20:11:43Z",
+"datum": "2004-10-11",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0214": {
+"abruf_utc": "2026-11-22T20:11:42Z",
+"datum": "2004-10-11",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0215": {
+"abruf_utc": "2026-11-22T20:11:42Z",
+"datum": "2004-10-13",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0216": {
+"abruf_utc": "2026-11-22T20:11:42Z",
+"datum": "2004-10-25",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0217": {
+"abruf_utc": "2026-11-22T20:11:41Z",
+"datum": "2004-11-11",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0218": {
+"abruf_utc": "2026-11-22T20:11:41Z",
+"datum": "2004-11-24",
+"jahr": 2004,
+"kategorie": "andere"
+},
+"0219": {
+"abruf_utc": "2026-11-22T20:11:41Z",
+"datum": "2004-12-07",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0220": {
+"abruf_utc": "2026-11-22T20:11:41Z",
+"datum": "2004-12-20",
+"jahr": 2004,
+"kategorie": "angebote"
+},
+"0221": {
+"abruf_utc": "2026-11-22T20:11:41Z",
+"datum": "2004-12-22",
+"jahr": 2004,
+"kategorie": "rueckkaeufe"
+},
+"0222": {
+"abruf_utc": "2026-11-22T20:11:40Z",
+"datum": "2005-01-04",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0223": {
+"abruf_utc": "2026-11-22T20:11:40Z",
+"datum": "2005-02-16",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0224": {
+"abruf_utc": "2026-11-22T20:11:40Z",
+"datum": "2005-03-02",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0225": {
+"abruf_utc": "2026-11-22T20:11:40Z",
+"datum": "2005-03-07",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0226": {
+"abruf_utc": "2026-11-22T20:11:39Z",
+"datum": "2005-03-08",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0227": {
+"abruf_utc": "2026-11-22T20:11:39Z",
+"datum": "2005-03-09",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0228": {
+"abruf_utc": "2026-11-22T20:11:39Z",
+"datum": "2005-03-10",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0229": {
+"abruf_utc": "2026-11-22T20:11:38Z",
+"datum": "2005-03-12",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0230": {
+"abruf_utc": "2026-11-22T20:11:38Z",
+"datum": "2005-03-16",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0231": {
+"abruf_utc": "2026-11-22T20:11:38Z",
+"datum": "2005-03-17",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0232": {
+"abruf_utc": "2026-11-22T20:11:37Z",
+"datum": "2005-03-30",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0233": {
+"abruf_utc": "2026-11-22T20:11:37Z",
+"datum": "2005-04-01",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0234": {
+"abruf_utc": "2026-11-22T20:11:37Z",
+"datum": "2005-04-15",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0235": {
+"abruf_utc": "2026-11-22T20:11:36Z",
+"datum": "2005-04-01",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0236": {
+"abruf_utc": "2026-11-22T20:11:36Z",
+"datum": "2005-04-27",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0237": {
+"abruf_utc": "2026-11-22T20:11:36Z",
+"datum": "2005-05-06",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0238": {
+"abruf_utc": "2026-11-22T20:11:35Z",
+"datum": "2005-05-09",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0239": {
+"abruf_utc": "2026-11-22T20:11:35Z",
+"datum": "2005-05-11",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0240": {
+"abruf_utc": "2026-11-22T20:11:35Z",
+"datum": "2005-05-12",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0241": {
+"abruf_utc": "2026-11-22T20:11:35Z",
+"datum": "2005-05-09",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0242": {
+"abruf_utc": "2026-11-22T20:11:34Z",
+"datum": "2005-06-03",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0243": {
+"abruf_utc": "2026-11-22T20:11:35Z",
+"datum": "2005-06-13",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0244": {
+"abruf_utc": "2026-11-22T20:11:34Z",
+"datum": "2005-05-23",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0245": {
+"abruf_utc": "2026-11-22T20:11:34Z",
+"datum": "2005-07-01",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0246": {
+"abruf_utc": "2026-11-22T20:11:34Z",
+"datum": "2005-07-01",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0247": {
+"abruf_utc": "2026-11-22T20:11:33Z",
+"datum": "2005-07-11",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0248": {
+"abruf_utc": "2026-11-22T20:11:33Z",
+"datum": "2005-07-11",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0249": {
+"abruf_utc": "2026-11-22T20:11:33Z",
+"datum": "2005-06-30",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0250": {
+"abruf_utc": "2026-11-22T20:11:32Z",
+"datum": "2005-08-08",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0251": {
+"abruf_utc": "2026-11-22T20:11:32Z",
+"datum": "2005-08-11",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0252": {
+"abruf_utc": "2026-11-22T20:11:32Z",
+"datum": "2005-09-05",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0253": {
+"abruf_utc": "2026-11-22T20:11:31Z",
+"datum": "2005-09-21",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0254": {
+"abruf_utc": "2026-11-22T20:11:31Z",
+"datum": "2005-09-12",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0255": {
+"abruf_utc": "2026-11-22T20:11:31Z",
+"datum": "2005-11-11",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0256": {
+"abruf_utc": "2026-11-22T20:11:30Z",
+"datum": "2005-10-25",
+"jahr": 2005,
+"kategorie": "andere"
+},
+"0257": {
+"abruf_utc": "2026-11-22T20:11:30Z",
+"datum": "2005-11-23",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0258": {
+"abruf_utc": "2026-11-22T20:11:30Z",
+"datum": "2005-11-10",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0259": {
+"abruf_utc": "2026-11-22T20:11:30Z",
+"datum": "2005-11-29",
+"jahr": 2005,
+"kategorie": "rueckkaeufe"
+},
+"0260": {
+"abruf_utc": "2026-11-22T20:11:29Z",
+"datum": "2005-11-30",
+"jahr": 2005,
+"kategorie": "angebote"
+},
+"0261": {
+"abruf_utc": "2026-11-22T20:11:29Z",
+"datum": "2006-01-16",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0262": {
+"abruf_utc": "2026-11-22T20:11:29Z",
+"datum": "2006-01-19",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0263": {
+"abruf_utc": "2026-11-22T20:11:28Z",
+"datum": "2006-01-23",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0264": {
+"abruf_utc": "2026-11-22T20:11:28Z",
+"datum": "2006-01-20",
+"jahr": 2006,
+"kategorie": "andere"
+},
+"0265": {
+"abruf_utc": "2026-11-22T20:11:28Z",
+"datum": "2006-02-13",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0266": {
+"abruf_utc": "2026-11-22T20:11:27Z",
+"datum": "2006-02-23",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0267": {
+"abruf_utc": "2026-11-22T20:11:27Z",
+"datum": "2006-03-08",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0268": {
+"abruf_utc": "2026-11-22T20:11:27Z",
+"datum": "2006-03-13",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0269": {
+"abruf_utc": "2026-11-22T20:11:27Z",
+"datum": "2006-01-30",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0270": {
+"abruf_utc": "2026-11-22T20:11:26Z",
+"datum": "2006-03-24",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0271": {
+"abruf_utc": "2026-11-22T20:11:26Z",
+"datum": "2006-03-28",
+"jahr": 2006,
+"kategorie": "andere"
+},
+"0272": {
+"abruf_utc": "2026-11-22T20:11:26Z",
+"datum": "2006-02-21",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0273": {
+"abruf_utc": "2026-11-22T20:11:26Z",
+"datum": "2006-04-03",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0274": {
+"abruf_utc": "2026-11-22T20:11:25Z",
+"datum": "2006-03-06",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0275": {
+"abruf_utc": "2026-11-22T20:11:25Z",
+"datum": "2006-04-27",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0276": {
+"abruf_utc": "2026-11-22T20:11:25Z",
+"datum": "2006-05-02",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0277": {
+"abruf_utc": "2026-11-22T20:11:24Z",
+"datum": "2006-05-22",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0278": {
+"abruf_utc": "2026-11-22T20:11:24Z",
+"datum": "2006-05-29",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0279": {
+"abruf_utc": "2026-11-22T20:11:24Z",
+"datum": "2006-06-12",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0280": {
+"abruf_utc": "2026-11-22T20:11:23Z",
+"datum": "2006-07-06",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0281": {
+"abruf_utc": "2026-11-22T20:11:23Z",
+"datum": "2006-07-14",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0282": {
+"abruf_utc": "2026-11-22T20:11:23Z",
+"datum": "2006-06-28",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0283": {
+"abruf_utc": "2026-11-22T20:11:23Z",
+"datum": "2006-08-08",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0284": {
+"abruf_utc": "2026-11-22T20:11:22Z",
+"datum": "2006-08-14",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0285": {
+"abruf_utc": "2026-11-22T20:11:22Z",
+"datum": "2006-08-23",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0286": {
+"abruf_utc": "2026-11-22T20:11:22Z",
+"datum": "2006-08-30",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0287": {
+"abruf_utc": "2026-11-22T20:11:21Z",
+"datum": "2006-08-30",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0288": {
+"abruf_utc": "2026-11-22T20:11:21Z",
+"datum": "2006-08-21",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0289": {
+"abruf_utc": "2026-11-22T20:11:21Z",
+"datum": "2006-08-02",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0290": {
+"abruf_utc": "2026-11-22T20:11:21Z",
+"datum": "2006-08-31",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0291": {
+"abruf_utc": "2026-11-22T20:11:20Z",
+"datum": "2006-10-03",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0292": {
+"abruf_utc": "2026-11-22T20:11:20Z",
+"datum": "2006-10-03",
+"jahr": 2006,
+"kategorie": "andere"
+},
+"0293": {
+"abruf_utc": "2026-11-22T20:11:20Z",
+"datum": "2006-09-06",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0294": {
+"abruf_utc": "2026-11-22T20:11:20Z",
+"datum": "2006-09-25",
+"jahr": 2006,
+"kategorie": "andere"
+},
+"0295": {
+"abruf_utc": "2026-11-22T20:11:19Z",
+"datum": "2006-11-08",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0296": {
+"abruf_utc": "2026-11-22T20:11:19Z",
+"datum": "2006-11-08",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0297": {
+"abruf_utc": "2026-11-22T20:11:19Z",
+"datum": "2006-11-14",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0298": {
+"abruf_utc": "2026-11-22T20:11:18Z",
+"datum": "2006-11-10",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0299": {
+"abruf_utc": "2026-11-22T20:11:18Z",
+"datum": "2006-11-23",
+"jahr": 2006,
+"kategorie": "rueckkaeufe"
+},
+"0300": {
+"abruf_utc": "2026-11-22T20:11:18Z",
+"datum": "2006-11-16",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0301": {
+"abruf_utc": "2026-11-22T20:11:17Z",
+"datum": "2006-11-03",
+"jahr": 2006,
+"kategorie": "andere"
+},
+"0302": {
+"abruf_utc": "2026-11-22T20:11:17Z",
+"datum": "2006-11-06",
+"jahr": 2006,
+"kategorie": "angebote"
+},
+"0303": {
+"abruf_utc": "2026-11-22T20:11:17Z",
+"datum": "2007-01-03",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0304": {
+"abruf_utc": "2026-11-22T20:11:16Z",
+"datum": "2007-01-05",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0305": {
+"abruf_utc": "2026-11-22T20:11:16Z",
+"datum": "2007-01-09",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0306": {
+"abruf_utc": "2026-11-22T20:11:16Z",
+"datum": "2007-01-09",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0307": {
+"abruf_utc": "2026-11-22T20:11:16Z",
+"datum": "2007-01-08",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0308": {
+"abruf_utc": "2026-11-22T20:11:15Z",
+"datum": "2007-01-30",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0309": {
+"abruf_utc": "2026-11-22T20:11:15Z",
+"datum": "2007-02-22",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0310": {
+"abruf_utc": "2026-11-22T20:11:15Z",
+"datum": "2007-02-24",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0311": {
+"abruf_utc": "2026-11-22T20:11:15Z",
+"datum": "2007-02-28",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0312": {
+"abruf_utc": "2026-11-22T20:11:14Z",
+"datum": "2007-03-08",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0313": {
+"abruf_utc": "2026-11-22T20:11:14Z",
+"datum": "2007-02-27",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0314": {
+"abruf_utc": "2026-11-22T20:11:14Z",
+"datum": "2007-03-16",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0315": {
+"abruf_utc": "2026-11-22T20:11:14Z",
+"datum": "2007-03-22",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0316": {
+"abruf_utc": "2026-11-22T20:11:13Z",
+"datum": "2007-03-30",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0317": {
+"abruf_utc": "2026-11-22T20:11:13Z",
+"datum": "2007-04-04",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0318": {
+"abruf_utc": "2026-11-22T20:11:13Z",
+"datum": "2007-02-26",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0319": {
+"abruf_utc": "2026-11-22T20:11:12Z",
+"datum": "2007-05-03",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0320": {
+"abruf_utc": "2026-11-22T20:11:12Z",
+"datum": "2007-05-02",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0321": {
+"abruf_utc": "2026-11-22T20:11:12Z",
+"datum": "2007-05-22",
+"jahr": 2007,
+"kategorie": "andere"
+},
+"0322": {
+"abruf_utc": "2026-11-22T20:11:11Z",
+"datum": "2007-06-21",
+"jahr": 2007,
+"kategorie": "andere"
+},
+"0323": {
+"abruf_utc": "2026-11-22T20:11:11Z",
+"datum": "2007-07-24",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0324": {
+"abruf_utc": "2026-11-22T20:11:11Z",
+"datum": "2007-08-08",
+"jahr": 2007,
+"kategorie": "andere"
+},
+"0325": {
+"abruf_utc": "2026-11-22T20:11:10Z",
+"datum": "2007-08-09",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0326": {
+"abruf_utc": "2026-11-22T20:11:10Z",
+"datum": "2007-08-10",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0327": {
+"abruf_utc": "2026-11-22T20:11:10Z",
+"datum": "2007-08-13",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0328": {
+"abruf_utc": "2026-11-22T20:11:10Z",
+"datum": "2007-08-15",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0329": {
+"abruf_utc": "2026-11-22T20:11:09Z",
+"datum": "2007-08-07",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0330": {
+"abruf_utc": "2026-11-22T20:11:09Z",
+"datum": "2007-08-24",
+"jahr": 2007,
+"kategorie": "andere"
+},
+"0331": {
+"abruf_utc": "2026-11-22T20:11:09Z",
+"datum": "2007-08-24",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0332": {
+"abruf_utc": "2026-11-22T20:11:08Z",
+"datum": "2007-09-07",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0333": {
+"abruf_utc": "2026-11-22T20:11:08Z",
+"datum": "2007-09-19",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0334": {
+"abruf_utc": "2026-11-22T20:11:08Z",
+"datum": "2007-09-20",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0335": {
+"abruf_utc": "2026-11-22T20:11:08Z",
+"datum": "2007-10-15",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0336": {
+"abruf_utc": "2026-11-22T20:11:08Z",
+"datum": "2007-09-04",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0337": {
+"abruf_utc": "2026-11-22T20:11:07Z",
+"datum": "2007-11-01",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0338": {
+"abruf_utc": "2026-11-22T20:11:07Z",
+"datum": "2007-11-01",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0339": {
+"abruf_utc": "2026-11-22T20:11:07Z",
+"datum": "2007-11-05",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0340": {
+"abruf_utc": "2026-11-22T20:11:06Z",
+"datum": "2007-11-08",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0341": {
+"abruf_utc": "2026-11-22T20:11:06Z",
+"datum": "2007-10-08",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0342": {
+"abruf_utc": "2026-11-22T20:11:06Z",
+"datum": "2007-11-09",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0343": {
+"abruf_utc": "2026-11-22T20:11:05Z",
+"datum": "2007-11-01",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0344": {
+"abruf_utc": "2026-11-22T20:11:05Z",
+"datum": "2007-11-19",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0345": {
+"abruf_utc": "2026-11-22T20:11:05Z",
+"datum": "2007-12-06",
+"jahr": 2007,
+"kategorie": "andere"
+},
+"0346": {
+"abruf_utc": "2026-11-22T20:11:04Z",
+"datum": "2007-12-10",
+"jahr": 2007,
+"kategorie": "rueckkaeufe"
+},
+"0347": {
+"abruf_utc": "2026-11-22T20:11:04Z",
+"datum": "2007-12-12",
+"jahr": 2007,
+"kategorie": "angebote"
+},
+"0348": {
+"abruf_utc": "2026-11-22T20:11:04Z",
+"datum": "2007-12-28",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0349": {
+"abruf_utc": "2026-11-22T20:11:03Z",
+"datum": "2007-12-20",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0350": {
+"abruf_utc": "2026-11-22T20:11:03Z",
+"datum": "2008-01-21",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0352": {
+"abruf_utc": "2026-11-22T20:11:03Z",
+"datum": "2008-02-07",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0353": {
+"abruf_utc": "2026-11-22T20:11:03Z",
+"datum": "2008-02-20",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0354": {
+"abruf_utc": "2026-11-22T20:11:03Z",
+"datum": "2008-02-25",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0355": {
+"abruf_utc": "2026-11-22T20:11:02Z",
+"datum": "2008-02-25",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0356": {
+"abruf_utc": "2026-11-22T20:11:02Z",
+"datum": "2008-03-12",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0357": {
+"abruf_utc": "2026-11-22T20:11:02Z",
+"datum": "2008-03-27",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0358": {
+"abruf_utc": "2026-11-22T20:11:02Z",
+"datum": "2008-02-29",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0359": {
+"abruf_utc": "2026-11-22T20:11:01Z",
+"datum": "2008-04-07",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0360": {
+"abruf_utc": "2026-11-22T20:11:01Z",
+"datum": "2008-04-17",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0361": {
+"abruf_utc": "2026-11-22T20:11:01Z",
+"datum": "2008-04-17",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0362": {
+"abruf_utc": "2026-11-22T20:11:00Z",
+"datum": "2008-04-16",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0363": {
+"abruf_utc": "2026-11-22T20:11:00Z",
+"datum": "2008-04-24",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0364": {
+"abruf_utc": "2026-11-22T20:11:00Z",
+"datum": "2008-04-30",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0365": {
+"abruf_utc": "2026-11-22T20:10:59Z",
+"datum": "2008-04-08",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0366": {
+"abruf_utc": "2026-11-22T20:10:59Z",
+"datum": "2008-03-27",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0367": {
+"abruf_utc": "2026-11-22T20:10:59Z",
+"datum": "2008-05-09",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0368": {
+"abruf_utc": "2026-11-22T20:10:58Z",
+"datum": "2008-05-16",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0369": {
+"abruf_utc": "2026-11-22T20:10:58Z",
+"datum": "2008-05-23",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0370": {
+"abruf_utc": "2026-11-22T20:10:58Z",
+"datum": "2007-12-19",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0371": {
+"abruf_utc": "2026-11-22T20:10:57Z",
+"datum": "2008-06-05",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0372": {
+"abruf_utc": "2026-11-22T20:10:57Z",
+"datum": "2008-06-06",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0373": {
+"abruf_utc": "2026-11-22T20:10:57Z",
+"datum": "2008-06-11",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0374": {
+"abruf_utc": "2026-11-22T20:10:57Z",
+"datum": "2008-06-24",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0375": {
+"abruf_utc": "2026-11-22T20:10:56Z",
+"datum": "2008-06-20",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0376": {
+"abruf_utc": "2026-11-22T20:10:56Z",
+"datum": "2008-07-07",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0377": {
+"abruf_utc": "2026-11-22T20:10:56Z",
+"datum": "2008-07-29",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0378": {
+"abruf_utc": "2026-11-22T20:10:56Z",
+"datum": "2008-07-10",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0379": {
+"abruf_utc": "2026-11-22T20:10:55Z",
+"datum": "2008-08-08",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0380": {
+"abruf_utc": "2026-11-22T20:10:55Z",
+"datum": "2008-09-10",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0381": {
+"abruf_utc": "2026-11-22T20:10:55Z",
+"datum": "2008-09-24",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0382": {
+"abruf_utc": "2026-11-22T20:10:55Z",
+"datum": "2008-09-15",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0383": {
+"abruf_utc": "2026-11-22T20:10:54Z",
+"datum": "2008-09-29",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0384": {
+"abruf_utc": "2026-11-22T20:10:54Z",
+"datum": "2008-08-26",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0385": {
+"abruf_utc": "2026-11-22T20:10:54Z",
+"datum": "2008-10-06",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0386": {
+"abruf_utc": "2026-11-22T20:10:53Z",
+"datum": "2008-10-13",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0387": {
+"abruf_utc": "2026-11-22T20:10:53Z",
+"datum": "2008-10-15",
+"jahr": 2008,
+"kategorie": "angebote"
+},
+"0388": {
+"abruf_utc": "2026-11-22T20:10:53Z",
+"datum": "2008-10-21",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0389": {
+"abruf_utc": "2026-11-22T20:10:52Z",
+"datum": "2008-10-23",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0390": {
+"abruf_utc": "2026-11-22T20:10:52Z",
+"datum": "2008-10-28",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0391": {
+"abruf_utc": "2026-11-22T20:10:52Z",
+"datum": "2008-11-20",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0392": {
+"abruf_utc": "2026-11-22T20:10:51Z",
+"datum": "2008-12-04",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0393": {
+"abruf_utc": "2026-11-22T20:10:51Z",
+"datum": "2008-12-08",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0394": {
+"abruf_utc": "2026-11-22T20:10:51Z",
+"datum": "2008-11-10",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0395": {
+"abruf_utc": "2026-11-22T20:10:51Z",
+"datum": "2008-07-25",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0396": {
+"abruf_utc": "2026-11-22T20:10:50Z",
+"datum": "2008-07-25",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0397": {
+"abruf_utc": "2026-11-22T20:10:50Z",
+"datum": "2008-07-25",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0398": {
+"abruf_utc": "2026-11-22T20:10:50Z",
+"datum": "2008-12-15",
+"jahr": 2008,
+"kategorie": "rueckkaeufe"
+},
+"0400": {
+"abruf_utc": "2026-11-22T20:10:50Z",
+"datum": "2009-01-07",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0401": {
+"abruf_utc": "2026-11-22T20:10:49Z",
+"datum": "2009-01-21",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0402": {
+"abruf_utc": "2026-11-22T20:10:49Z",
+"datum": "2009-02-13",
+"jahr": 2009,
+"kategorie": "andere"
+},
+"0403": {
+"abruf_utc": "2026-11-22T20:10:49Z",
+"datum": "2009-01-30",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0404": {
+"abruf_utc": "2026-11-22T20:10:48Z",
+"datum": "2009-03-04",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0405": {
+"abruf_utc": "2026-11-22T20:10:48Z",
+"datum": "2009-03-06",
+"jahr": 2009,
+"kategorie": "andere"
+},
+"0406": {
+"abruf_utc": "2026-11-22T20:10:48Z",
+"datum": "2009-03-18",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0407": {
+"abruf_utc": "2026-11-22T20:10:48Z",
+"datum": "2009-03-26",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0408": {
+"abruf_utc": "2026-11-22T20:10:47Z",
+"datum": "2009-04-08",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0409": {
+"abruf_utc": "2026-11-22T20:10:47Z",
+"datum": "2009-04-17",
+"jahr": 2008,
+"kategorie": "andere"
+},
+"0410": {
+"abruf_utc": "2026-11-22T20:10:47Z",
+"datum": "2009-04-30",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0411": {
+"abruf_utc": "2026-11-22T20:10:46Z",
+"datum": "2009-05-13",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0412": {
+"abruf_utc": "2026-11-22T20:10:46Z",
+"datum": "2009-05-29",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0413": {
+"abruf_utc": "2026-11-22T20:10:46Z",
+"datum": "2009-06-02",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0414": {
+"abruf_utc": "2026-11-22T20:10:45Z",
+"datum": "2009-06-04",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0415": {
+"abruf_utc": "2026-11-22T20:10:45Z",
+"datum": "2009-06-02",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0416": {
+"abruf_utc": "2026-11-22T20:10:45Z",
+"datum": "2009-06-02",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0417": {
+"abruf_utc": "2026-11-22T20:10:44Z",
+"datum": "2009-07-06",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0418": {
+"abruf_utc": "2026-11-22T20:10:44Z",
+"datum": "2009-07-07",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0419": {
+"abruf_utc": "2026-11-22T20:10:44Z",
+"datum": "2009-09-11",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0420": {
+"abruf_utc": "2026-11-22T20:10:44Z",
+"datum": "2009-09-07",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0421": {
+"abruf_utc": "2026-11-22T20:10:43Z",
+"datum": "2009-07-22",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0422": {
+"abruf_utc": "2026-11-22T20:10:43Z",
+"datum": "2009-07-23",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0423": {
+"abruf_utc": "2026-11-22T20:10:43Z",
+"datum": "2009-07-25",
+"jahr": 2009,
+"kategorie": "andere"
+},
+"0424": {
+"abruf_utc": "2026-11-22T20:10:42Z",
+"datum": "2009-07-27",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0425": {
+"abruf_utc": "2026-11-22T20:10:42Z",
+"datum": "2009-08-13",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0426": {
+"abruf_utc": "2026-11-22T20:10:42Z",
+"datum": "2009-09-07",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0427": {
+"abruf_utc": "2026-11-22T20:10:41Z",
+"datum": "2009-08-31",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0428": {
+"abruf_utc": "2026-11-22T20:10:41Z",
+"datum": "2009-09-18",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0429": {
+"abruf_utc": "2026-11-22T20:10:41Z",
+"datum": "2009-10-20",
+"jahr": 2009,
+"kategorie": "andere"
+},
+"0430": {
+"abruf_utc": "2026-11-22T20:10:41Z",
+"datum": "2009-11-02",
+"jahr": 2009,
+"kategorie": "angebote"
+},
+"0431": {
+"abruf_utc": "2026-11-22T20:10:40Z",
+"datum": "2009-11-04",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0432": {
+"abruf_utc": "2026-11-22T20:10:40Z",
+"datum": "2009-11-15",
+"jahr": 2009,
+"kategorie": "andere"
+},
+"0433": {
+"abruf_utc": "2026-11-22T20:10:40Z",
+"datum": "2009-11-06",
+"jahr": 2009,
+"kategorie": "rueckkaeufe"
+},
+"0434": {
+"abruf_utc": "2026-11-22T20:10:40Z",
+"datum": "2009-11-18",
+"jahr": 2009,
+"kategorie": "andere"
+},
+"0435": {
+"abruf_utc": "2026-11-22T20:10:39Z",
+"datum": "2009-11-17",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0436": {
+"abruf_utc": "2026-11-22T20:10:39Z",
+"datum": "2010-01-04",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0437": {
+"abruf_utc": "2026-11-22T20:10:39Z",
+"datum": "2010-03-04",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0438": {
+"abruf_utc": "2026-11-22T20:10:38Z",
+"datum": "2010-03-08",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0439": {
+"abruf_utc": "2026-11-22T20:10:38Z",
+"datum": "2010-03-12",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0440": {
+"abruf_utc": "2026-11-22T20:10:38Z",
+"datum": "2010-06-08",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0441": {
+"abruf_utc": "2026-11-22T20:10:38Z",
+"datum": "2010-03-26",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0442": {
+"abruf_utc": "2026-11-22T20:10:37Z",
+"datum": "2010-06-04",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0443": {
+"abruf_utc": "2026-11-22T20:10:37Z",
+"datum": "2010-06-21",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0444": {
+"abruf_utc": "2026-11-22T20:10:37Z",
+"datum": "2010-06-21",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0445": {
+"abruf_utc": "2026-11-22T20:10:36Z",
+"datum": "2010-06-29",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0446": {
+"abruf_utc": "2026-11-22T20:10:36Z",
+"datum": "2010-07-08",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0447": {
+"abruf_utc": "2026-11-22T20:10:36Z",
+"datum": "2010-09-28",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0448": {
+"abruf_utc": "2026-11-22T20:10:35Z",
+"datum": "2010-07-22",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0449": {
+"abruf_utc": "2026-11-22T20:10:35Z",
+"datum": "2010-07-27",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0450": {
+"abruf_utc": "2026-11-22T20:10:35Z",
+"datum": "2010-07-28",
+"jahr": 2010,
+"kategorie": "angebote"
+},
+"0451": {
+"abruf_utc": "2026-11-22T20:10:35Z",
+"datum": "2010-08-10",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0453": {
+"abruf_utc": "2026-11-22T20:10:35Z",
+"datum": "2010-08-24",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0454": {
+"abruf_utc": "2026-11-22T20:10:34Z",
+"datum": "2010-09-01",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0455": {
+"abruf_utc": "2026-11-22T20:10:34Z",
+"datum": "2010-09-25",
+"jahr": 2010,
+"kategorie": "angebote"
+},
+"0456": {
+"abruf_utc": "2026-11-22T20:10:34Z",
+"datum": "2010-10-07",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0457": {
+"abruf_utc": "2026-11-22T20:10:33Z",
+"datum": "2010-10-19",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0458": {
+"abruf_utc": "2026-11-22T20:10:33Z",
+"datum": "2010-11-02",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0459": {
+"abruf_utc": "2026-11-22T20:10:33Z",
+"datum": "2010-11-10",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0460": {
+"abruf_utc": "2026-11-22T20:10:32Z",
+"datum": "2010-11-16",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0461": {
+"abruf_utc": "2026-11-22T20:10:32Z",
+"datum": "2010-11-17",
+"jahr": 2010,
+"kategorie": "rueckkaeufe"
+},
+"0462": {
+"abruf_utc": "2026-11-22T20:10:32Z",
+"datum": "2010-11-30",
+"jahr": 2010,
+"kategorie": "andere"
+},
+"0463": {
+"abruf_utc": "2026-11-22T20:10:32Z",
+"datum": "2010-12-06",
+"jahr": 2010,
+"kategorie": "angebote"
+},
+"0464": {
+"abruf_utc": "2026-11-22T20:10:31Z",
+"datum": "2010-12-14",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0465": {
+"abruf_utc": "2026-11-22T20:10:31Z",
+"datum": "2011-01-04",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0466": {
+"abruf_utc": "2026-11-22T20:10:31Z",
+"datum": "2011-01-16",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0467": {
+"abruf_utc": "2026-11-22T20:10:30Z",
+"datum": "2011-01-17",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0468": {
+"abruf_utc": "2026-11-22T20:10:30Z",
+"datum": "2011-01-20",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0469": {
+"abruf_utc": "2026-11-22T20:10:30Z",
+"datum": "2011-02-17",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0470": {
+"abruf_utc": "2026-11-22T20:10:03Z",
+"datum": "2011-02-23",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0471": {
+"abruf_utc": "2026-11-22T20:10:03Z",
+"datum": "2011-03-18",
+"jahr": 2011,
+"kategorie": "andere"
+},
+"0472": {
+"abruf_utc": "2026-11-22T20:10:03Z",
+"datum": "2011-03-09",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0473": {
+"abruf_utc": "2026-11-22T20:10:02Z",
+"datum": "2011-04-20",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0474": {
+"abruf_utc": "2026-11-22T20:10:02Z",
+"datum": "2011-10-03",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0475": {
+"abruf_utc": "2026-11-22T20:10:02Z",
+"datum": "2011-04-01",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0476": {
+"abruf_utc": "2026-11-22T20:10:01Z",
+"datum": "2011-04-11",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0477": {
+"abruf_utc": "2026-11-22T20:10:01Z",
+"datum": "2011-04-26",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0478": {
+"abruf_utc": "2026-11-22T20:10:01Z",
+"datum": "2011-05-17",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0479": {
+"abruf_utc": "2026-11-22T20:10:01Z",
+"datum": "2011-06-17",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0480": {
+"abruf_utc": "2026-11-22T20:10:00Z",
+"datum": "2011-05-19",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0481": {
+"abruf_utc": "2026-11-22T20:10:00Z",
+"datum": "2011-05-23",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0482": {
+"abruf_utc": "2026-11-22T20:10:00Z",
+"datum": "2011-05-31",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0483": {
+"abruf_utc": "2026-11-22T20:09:59Z",
+"datum": "2011-05-31",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0484": {
+"abruf_utc": "2026-11-22T20:09:59Z",
+"datum": "2011-06-20",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0485": {
+"abruf_utc": "2026-11-22T20:09:59Z",
+"datum": "2011-07-04",
+"jahr": 2011,
+"kategorie": "andere"
+},
+"0486": {
+"abruf_utc": "2026-11-22T20:09:58Z",
+"datum": "2011-07-18",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0487": {
+"abruf_utc": "2026-11-22T20:09:58Z",
+"datum": "2011-08-24",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0488": {
+"abruf_utc": "2026-11-22T20:09:58Z",
+"datum": "2011-09-01",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0489": {
+"abruf_utc": "2026-11-22T20:09:57Z",
+"datum": "2011-09-16",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0490": {
+"abruf_utc": "2026-11-22T20:09:57Z",
+"datum": "2011-10-06",
+"jahr": 2011,
+"kategorie": "andere"
+},
+"0491": {
+"abruf_utc": "2026-11-22T20:09:57Z",
+"datum": "2011-10-05",
+"jahr": 2011,
+"kategorie": "andere"
+},
+"0492": {
+"abruf_utc": "2026-11-22T20:09:56Z",
+"datum": "2011-09-27",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0493": {
+"abruf_utc": "2026-11-22T20:09:56Z",
+"datum": "2011-10-21",
+"jahr": 2011,
+"kategorie": "andere"
+},
+"0494": {
+"abruf_utc": "2026-11-22T20:09:56Z",
+"datum": "2011-03-22",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0495": {
+"abruf_utc": "2026-11-22T20:09:56Z",
+"datum": "2011-11-08",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0496": {
+"abruf_utc": "2026-11-22T20:09:55Z",
+"datum": "2011-11-11",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0497": {
+"abruf_utc": "2026-11-22T20:09:55Z",
+"datum": "2011-12-01",
+"jahr": 2011,
+"kategorie": "andere"
+},
+"0498": {
+"abruf_utc": "2026-11-22T20:09:55Z",
+"datum": "2011-12-05",
+"jahr": 2011,
+"kategorie": "rueckkaeufe"
+},
+"0499": {
+"abruf_utc": "2026-11-22T20:09:55Z",
+"datum": "2011-12-06",
+"jahr": 2011,
+"kategorie": "angebote"
+},
+"0500": {
+"abruf_utc": "2026-11-22T20:09:55Z",
+"datum": "2012-07-31",
+"jahr": 2012,
+"kategorie": "angebote"
+},
+"0501": {
+"abruf_utc": "2026-11-22T20:09:54Z",
+"datum": "2012-04-04",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0502": {
+"abruf_utc": "2026-11-22T20:09:54Z",
+"datum": "2012-01-24",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0504": {
+"abruf_utc": "2026-11-22T20:09:54Z",
+"datum": "2012-03-02",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0505": {
+"abruf_utc": "2026-11-22T20:09:53Z",
+"datum": "2012-03-08",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0506": {
+"abruf_utc": "2026-11-22T20:09:53Z",
+"datum": "2012-12-11",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0507": {
+"abruf_utc": "2026-11-22T20:09:53Z",
+"datum": "2012-03-20",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0508": {
+"abruf_utc": "2026-11-22T20:09:52Z",
+"datum": "2012-04-23",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0509": {
+"abruf_utc": "2026-11-22T20:09:52Z",
+"datum": "2012-04-19",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0510": {
+"abruf_utc": "2026-11-22T20:09:52Z",
+"datum": "2012-05-04",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0511": {
+"abruf_utc": "2026-11-22T20:09:51Z",
+"datum": "2012-05-08",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0512": {
+"abruf_utc": "2026-11-22T20:09:51Z",
+"datum": "2012-05-30",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0513": {
+"abruf_utc": "2026-11-22T20:09:51Z",
+"datum": "2012-06-04",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0514": {
+"abruf_utc": "2026-11-22T20:09:50Z",
+"datum": "2012-06-22",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0515": {
+"abruf_utc": "2026-11-22T20:09:50Z",
+"datum": "2012-06-28",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0516": {
+"abruf_utc": "2026-11-22T20:09:50Z",
+"datum": "2012-07-10",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0517": {
+"abruf_utc": "2026-11-22T20:09:49Z",
+"datum": "2012-09-10",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0518": {
+"abruf_utc": "2026-11-22T20:09:49Z",
+"datum": "2012-10-18",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0519": {
+"abruf_utc": "2026-11-22T20:09:49Z",
+"datum": "2012-11-02",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0520": {
+"abruf_utc": "2026-11-22T20:09:49Z",
+"datum": "2012-11-06",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0521": {
+"abruf_utc": "2026-11-22T20:09:48Z",
+"datum": "2012-11-13",
+"jahr": 2012,
+"kategorie": "andere"
+},
+"0522": {
+"abruf_utc": "2026-11-22T20:09:48Z",
+"datum": "2013-01-31",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0523": {
+"abruf_utc": "2026-11-22T20:09:48Z",
+"datum": "2012-12-03",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0524": {
+"abruf_utc": "2026-11-22T20:09:48Z",
+"datum": "2012-12-18",
+"jahr": 2012,
+"kategorie": "rueckkaeufe"
+},
+"0525": {
+"abruf_utc": "2026-11-22T20:09:47Z",
+"datum": "2013-01-03",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0527": {
+"abruf_utc": "2026-11-22T20:09:47Z",
+"datum": "2013-05-24",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0528": {
+"abruf_utc": "2026-11-22T20:09:47Z",
+"datum": "2013-03-13",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0529": {
+"abruf_utc": "2026-11-22T20:09:47Z",
+"datum": "2013-03-19",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0530": {
+"abruf_utc": "2026-11-22T20:09:46Z",
+"datum": "2013-04-10",
+"jahr": 2013,
+"kategorie": "angebote"
+},
+"0531": {
+"abruf_utc": "2026-11-22T20:09:46Z",
+"datum": "2013-05-03",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0532": {
+"abruf_utc": "2026-11-22T20:09:46Z",
+"datum": "2013-04-29",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0533": {
+"abruf_utc": "2026-11-22T20:09:45Z",
+"datum": "2013-05-17",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0534": {
+"abruf_utc": "2026-11-22T20:09:45Z",
+"datum": "2013-05-15",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0535": {
+"abruf_utc": "2026-11-22T20:09:45Z",
+"datum": "2013-05-31",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0536": {
+"abruf_utc": "2026-11-22T20:09:44Z",
+"datum": "2013-07-25",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0537": {
+"abruf_utc": "2026-11-22T20:09:44Z",
+"datum": "2013-06-06",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0538": {
+"abruf_utc": "2026-11-22T20:09:44Z",
+"datum": "2013-06-18",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0539": {
+"abruf_utc": "2026-11-22T20:09:43Z",
+"datum": "2013-07-05",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0540": {
+"abruf_utc": "2026-11-22T20:09:43Z",
+"datum": "2013-07-01",
+"jahr": 2013,
+"kategorie": "angebote"
+},
+"0541": {
+"abruf_utc": "2026-11-22T20:09:43Z",
+"datum": "2013-07-25",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0542": {
+"abruf_utc": "2026-11-22T20:09:43Z",
+"datum": "2013-08-05",
+"jahr": 2013,
+"kategorie": "angebote"
+},
+"0543": {
+"abruf_utc": "2026-11-22T20:09:42Z",
+"datum": "2013-08-07",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0544": {
+"abruf_utc": "2026-11-22T20:09:42Z",
+"datum": "2013-08-14",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0545": {
+"abruf_utc": "2026-11-22T20:09:42Z",
+"datum": "2013-09-13",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0546": {
+"abruf_utc": "2026-11-22T20:09:42Z",
+"datum": "2013-09-17",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0547": {
+"abruf_utc": "2026-11-22T20:09:42Z",
+"datum": "2013-10-04",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0548": {
+"abruf_utc": "2026-11-22T20:09:41Z",
+"datum": "2013-10-02",
+"jahr": 2013,
+"kategorie": "angebote"
+},
+"0549": {
+"abruf_utc": "2026-11-22T20:09:41Z",
+"datum": "2013-10-09",
+"jahr": 2013,
+"kategorie": "angebote"
+},
+"0550": {
+"abruf_utc": "2026-11-22T20:09:41Z",
+"datum": "2013-10-24",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0551": {
+"abruf_utc": "2026-11-22T20:09:40Z",
+"datum": "2013-11-25",
+"jahr": 2013,
+"kategorie": "angebote"
+},
+"0552": {
+"abruf_utc": "2026-11-22T20:09:40Z",
+"datum": "2013-11-04",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0553": {
+"abruf_utc": "2026-11-22T20:09:40Z",
+"datum": "2013-12-18",
+"jahr": 2013,
+"kategorie": "andere"
+},
+"0554": {
+"abruf_utc": "2026-11-22T20:09:39Z",
+"datum": "2013-12-06",
+"jahr": 2013,
+"kategorie": "rueckkaeufe"
+},
+"0555": {
+"abruf_utc": "2026-11-22T20:09:39Z",
+"datum": "2014-02-11",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0556": {
+"abruf_utc": "2026-11-22T20:09:39Z",
+"datum": "2014-02-25",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0557": {
+"abruf_utc": "2026-11-22T20:09:38Z",
+"datum": "2014-02-26",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0558": {
+"abruf_utc": "2026-11-22T20:09:38Z",
+"datum": "2014-03-26",
+"jahr": 2014,
+"kategorie": "andere"
+},
+"0559": {
+"abruf_utc": "2026-11-22T20:09:38Z",
+"datum": "2014-03-12",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0560": {
+"abruf_utc": "2026-11-22T20:09:37Z",
+"datum": "2014-04-15",
+"jahr": 2014,
+"kategorie": "andere"
+},
+"0561": {
+"abruf_utc": "2026-11-22T20:09:37Z",
+"datum": "2014-04-10",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0562": {
+"abruf_utc": "2026-11-22T20:09:37Z",
+"datum": "2014-04-17",
+"jahr": 2014,
+"kategorie": "andere"
+},
+"0563": {
+"abruf_utc": "2026-11-22T20:09:36Z",
+"datum": "2014-04-25",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0564": {
+"abruf_utc": "2026-11-22T20:09:36Z",
+"datum": "2014-04-28",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0565": {
+"abruf_utc": "2026-11-22T20:09:36Z",
+"datum": "2014-04-29",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0566": {
+"abruf_utc": "2026-11-22T20:09:35Z",
+"datum": "2014-04-30",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0568": {
+"abruf_utc": "2026-11-22T20:09:35Z",
+"datum": "2014-05-15",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0569": {
+"abruf_utc": "2026-11-22T20:09:35Z",
+"datum": "2014-05-16",
+"jahr": 2014,
+"kategorie": "angebote"
+},
+"0570": {
+"abruf_utc": "2026-11-22T20:09:35Z",
+"datum": "2014-05-22",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0571": {
+"abruf_utc": "2026-11-22T20:09:34Z",
+"datum": "2014-06-17",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0572": {
+"abruf_utc": "2026-11-22T20:09:34Z",
+"datum": "2014-09-29",
+"jahr": 2014,
+"kategorie": "angebote"
+},
+"0573": {
+"abruf_utc": "2026-11-22T20:09:34Z",
+"datum": "2014-07-07",
+"jahr": 2014,
+"kategorie": "angebote"
+},
+"0574": {
+"abruf_utc": "2026-11-22T20:09:34Z",
+"datum": "2014-08-13",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0575": {
+"abruf_utc": "2026-11-22T20:09:33Z",
+"datum": "2014-08-25",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0576": {
+"abruf_utc": "2026-11-22T20:09:33Z",
+"datum": "2014-09-15",
+"jahr": 2014,
+"kategorie": "angebote"
+},
+"0577": {
+"abruf_utc": "2026-11-22T20:09:33Z",
+"datum": "2014-09-16",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0578": {
+"abruf_utc": "2026-11-22T20:09:33Z",
+"datum": "2014-09-17",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0579": {
+"abruf_utc": "2026-11-22T20:09:32Z",
+"datum": "2014-09-26",
+"jahr": 2014,
+"kategorie": "andere"
+},
+"0580": {
+"abruf_utc": "2026-11-22T20:09:32Z",
+"datum": "2014-09-25",
+"jahr": 2014,
+"kategorie": "angebote"
+},
+"0581": {
+"abruf_utc": "2026-11-22T20:09:32Z",
+"datum": "2014-10-02",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0582": {
+"abruf_utc": "2026-11-22T20:09:31Z",
+"datum": "2014-11-07",
+"jahr": 2014,
+"kategorie": "andere"
+},
+"0583": {
+"abruf_utc": "2026-11-22T20:09:31Z",
+"datum": "2014-11-03",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0584": {
+"abruf_utc": "2026-11-22T20:09:31Z",
+"datum": "2014-11-03",
+"jahr": 2014,
+"kategorie": "angebote"
+},
+"0585": {
+"abruf_utc": "2026-11-22T20:09:30Z",
+"datum": "2014-11-13",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0586": {
+"abruf_utc": "2026-11-22T20:09:30Z",
+"datum": "2014-12-01",
+"jahr": 2014,
+"kategorie": "rueckkaeufe"
+},
+"0587": {
+"abruf_utc": "2026-11-22T20:09:30Z",
+"datum": "2014-12-30",
+"jahr": 2014,
+"kategorie": "andere"
+},
+"0588": {
+"abruf_utc": "2026-11-22T20:09:29Z",
+"datum": "2015-01-29",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0590": {
+"abruf_utc": "2026-11-22T20:09:29Z",
+"datum": "2015-03-09",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0591": {
+"abruf_utc": "2026-11-22T20:09:29Z",
+"datum": "2015-03-02",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0592": {
+"abruf_utc": "2026-11-22T20:09:29Z",
+"datum": "2015-02-26",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0594": {
+"abruf_utc": "2026-11-22T20:09:28Z",
+"datum": "2015-03-06",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0595": {
+"abruf_utc": "2026-11-22T20:09:28Z",
+"datum": "2015-03-23",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0597": {
+"abruf_utc": "2026-11-22T20:09:28Z",
+"datum": "2015-03-31",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0598": {
+"abruf_utc": "2026-11-22T20:09:28Z",
+"datum": "2015-04-01",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0599": {
+"abruf_utc": "2026-11-22T20:09:27Z",
+"datum": "2015-04-15",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0600": {
+"abruf_utc": "2026-11-22T20:09:27Z",
+"datum": "2015-04-30",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0601": {
+"abruf_utc": "2026-11-22T20:09:27Z",
+"datum": "2015-05-20",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0602": {
+"abruf_utc": "2026-11-22T20:09:27Z",
+"datum": "2015-06-08",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0603": {
+"abruf_utc": "2026-11-22T20:09:26Z",
+"datum": "2015-06-08",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0604": {
+"abruf_utc": "2026-11-22T20:09:26Z",
+"datum": "2015-06-08",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0605": {
+"abruf_utc": "2026-11-22T20:09:26Z",
+"datum": "2015-06-10",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0606": {
+"abruf_utc": "2026-11-22T20:09:25Z",
+"datum": "2015-06-15",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0607": {
+"abruf_utc": "2026-11-22T20:09:25Z",
+"datum": "2015-06-18",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0609": {
+"abruf_utc": "2026-11-22T20:09:25Z",
+"datum": "2015-07-27",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0610": {
+"abruf_utc": "2026-11-22T20:09:24Z",
+"datum": "2015-07-21",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0611": {
+"abruf_utc": "2026-11-22T20:09:24Z",
+"datum": "2015-08-03",
+"jahr": 2015,
+"kategorie": "angebote"
+},
+"0612": {
+"abruf_utc": "2026-11-22T20:09:24Z",
+"datum": "2015-09-07",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0613": {
+"abruf_utc": "2026-11-22T20:09:23Z",
+"datum": "2015-10-13",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0614": {
+"abruf_utc": "2026-11-22T20:09:23Z",
+"datum": "2015-10-13",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0615": {
+"abruf_utc": "2026-11-22T20:09:23Z",
+"datum": "2015-10-15",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0616": {
+"abruf_utc": "2026-11-22T20:09:23Z",
+"datum": "2015-10-16",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0617": {
+"abruf_utc": "2026-11-22T20:09:22Z",
+"datum": "2015-10-30",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0618": {
+"abruf_utc": "2026-11-22T20:09:22Z",
+"datum": "2015-11-11",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0619": {
+"abruf_utc": "2026-11-22T20:09:22Z",
+"datum": "2015-11-11",
+"jahr": 2015,
+"kategorie": "rueckkaeufe"
+},
+"0620": {
+"abruf_utc": "2026-11-22T20:09:22Z",
+"datum": "2015-12-17",
+"jahr": 2015,
+"kategorie": "andere"
+},
+"0621": {
+"abruf_utc": "2026-11-22T20:09:22Z",
+"datum": "2015-12-22",
+"jahr": 2015,
+"kategorie": "angebote"
+},
+"0622": {
+"abruf_utc": "2026-11-22T20:09:21Z",
+"datum": "2016-02-18",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0623": {
+"abruf_utc": "2026-11-22T20:09:21Z",
+"datum": "2016-02-02",
+"jahr": 2016,
+"kategorie": "angebote"
+},
+"0624": {
+"abruf_utc": "2026-11-22T20:09:21Z",
+"datum": "2016-02-03",
+"jahr": 2016,
+"kategorie": "angebote"
+},
+"0625": {
+"abruf_utc": "2026-11-22T20:09:20Z",
+"datum": "2016-02-04",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0626": {
+"abruf_utc": "2026-11-22T20:09:20Z",
+"datum": "2016-02-24",
+"jahr": 2016,
+"kategorie": "andere"
+},
+"0627": {
+"abruf_utc": "2026-11-22T20:09:20Z",
+"datum": "2016-02-22",
+"jahr": 2016,
+"kategorie": "andere"
+},
+"0628": {
+"abruf_utc": "2026-11-22T20:09:19Z",
+"datum": "2016-04-04",
+"jahr": 2016,
+"kategorie": "andere"
+},
+"0629": {
+"abruf_utc": "2026-11-22T20:09:19Z",
+"datum": "2016-04-11",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0630": {
+"abruf_utc": "2026-11-22T20:09:19Z",
+"datum": "2016-04-11",
+"jahr": 2016,
+"kategorie": "angebote"
+},
+"0631": {
+"abruf_utc": "2026-11-22T20:09:18Z",
+"datum": "2016-05-13",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0632": {
+"abruf_utc": "2026-11-22T20:09:18Z",
+"datum": "2016-05-30",
+"jahr": 2016,
+"kategorie": "andere"
+},
+"0633": {
+"abruf_utc": "2026-11-22T20:09:18Z",
+"datum": "2016-06-07",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0634": {
+"abruf_utc": "2026-11-22T20:09:17Z",
+"datum": "2016-06-02",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0635": {
+"abruf_utc": "2026-11-22T20:09:17Z",
+"datum": "2016-06-15",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0636": {
+"abruf_utc": "2026-11-22T20:09:17Z",
+"datum": "2016-07-04",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0637": {
+"abruf_utc": "2026-11-22T20:09:16Z",
+"datum": "2016-08-08",
+"jahr": 2016,
+"kategorie": "angebote"
+},
+"0638": {
+"abruf_utc": "2026-11-22T20:09:16Z",
+"datum": "2016-09-19",
+"jahr": 2016,
+"kategorie": "angebote"
+},
+"0639": {
+"abruf_utc": "2026-11-22T20:09:16Z",
+"datum": "2016-09-15",
+"jahr": 2016,
+"kategorie": "angebote"
+},
+"0640": {
+"abruf_utc": "2026-11-22T20:09:16Z",
+"datum": "2016-10-04",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0641": {
+"abruf_utc": "2026-11-22T20:09:15Z",
+"datum": "2016-10-11",
+"jahr": 2016,
+"kategorie": "andere"
+},
+"0642": {
+"abruf_utc": "2026-11-22T20:09:15Z",
+"datum": "2016-10-20",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0643": {
+"abruf_utc": "2026-11-22T20:09:15Z",
+"datum": "2016-11-02",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0644": {
+"abruf_utc": "2026-11-22T20:09:14Z",
+"datum": "2016-11-03",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0645": {
+"abruf_utc": "2026-11-22T20:09:14Z",
+"datum": "2016-11-22",
+"jahr": 2016,
+"kategorie": "andere"
+},
+"0646": {
+"abruf_utc": "2026-11-22T20:09:14Z",
+"datum": "2016-11-18",
+"jahr": 2016,
+"kategorie": "andere"
+},
+"0647": {
+"abruf_utc": "2026-11-22T20:09:14Z",
+"datum": "2016-11-29",
+"jahr": 2016,
+"kategorie": "rueckkaeufe"
+},
+"0648": {
+"abruf_utc": "2026-11-22T20:09:14Z",
+"datum": "2017-01-06",
+"jahr": 2017,
+"kategorie": "angebote"
+},
+"0649": {
+"abruf_utc": "2026-11-22T20:09:13Z",
+"datum": "2017-01-30",
+"jahr": 2017,
+"kategorie": "andere"
+},
+"0650": {
+"abruf_utc": "2026-11-22T20:09:13Z",
+"datum": "2017-02-17",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0651": {
+"abruf_utc": "2026-11-22T20:09:13Z",
+"datum": "2017-01-24",
+"jahr": 2017,
+"kategorie": "andere"
+},
+"0652": {
+"abruf_utc": "2026-11-22T20:09:12Z",
+"datum": "2017-01-26",
+"jahr": 2017,
+"kategorie": "angebote"
+},
+"0653": {
+"abruf_utc": "2026-11-22T20:09:12Z",
+"datum": "2017-02-24",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0654": {
+"abruf_utc": "2026-11-22T20:09:12Z",
+"datum": "2017-03-20",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0655": {
+"abruf_utc": "2026-11-22T20:09:11Z",
+"datum": "2017-03-21",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0656": {
+"abruf_utc": "2026-11-22T20:09:11Z",
+"datum": "2017-04-03",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0657": {
+"abruf_utc": "2026-11-22T20:09:11Z",
+"datum": "2017-04-26",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0658": {
+"abruf_utc": "2026-11-22T20:09:10Z",
+"datum": "2017-04-27",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0659": {
+"abruf_utc": "2026-11-22T20:09:10Z",
+"datum": "2017-05-02",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0660": {
+"abruf_utc": "2026-11-22T20:09:10Z",
+"datum": "2017-05-02",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0661": {
+"abruf_utc": "2026-11-22T20:09:10Z",
+"datum": "2017-05-12",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0662": {
+"abruf_utc": "2026-11-22T20:09:09Z",
+"datum": "2017-05-19",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0663": {
+"abruf_utc": "2026-11-22T20:09:09Z",
+"datum": "2017-05-30",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0664": {
+"abruf_utc": "2026-11-22T20:09:09Z",
+"datum": "2017-05-31",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0665": {
+"abruf_utc": "2026-11-22T20:09:09Z",
+"datum": "2017-06-02",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0666": {
+"abruf_utc": "2026-11-22T20:09:08Z",
+"datum": "2017-06-22",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0667": {
+"abruf_utc": "2026-11-22T20:09:08Z",
+"datum": "2017-06-29",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0668": {
+"abruf_utc": "2026-11-22T20:09:08Z",
+"datum": "2017-07-03",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0669": {
+"abruf_utc": "2026-11-22T20:09:07Z",
+"datum": "2017-07-20",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0670": {
+"abruf_utc": "2026-11-22T20:09:07Z",
+"datum": "2017-08-29",
+"jahr": 2017,
+"kategorie": "angebote"
+},
+"0671": {
+"abruf_utc": "2026-11-22T20:09:07Z",
+"datum": "2017-09-07",
+"jahr": 2017,
+"kategorie": "andere"
+},
+"0672": {
+"abruf_utc": "2026-11-22T20:09:06Z",
+"datum": "2017-09-11",
+"jahr": 2017,
+"kategorie": "andere"
+},
+"0673": {
+"abruf_utc": "2026-11-22T20:09:06Z",
+"datum": "2018-02-09",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0674": {
+"abruf_utc": "2026-11-22T20:09:06Z",
+"datum": "2017-10-31",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0675": {
+"abruf_utc": "2026-11-22T20:09:05Z",
+"datum": "2017-11-02",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0676": {
+"abruf_utc": "2026-11-22T20:09:05Z",
+"datum": "2017-11-08",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0677": {
+"abruf_utc": "2026-11-22T20:09:05Z",
+"datum": "2017-11-15",
+"jahr": 2017,
+"kategorie": "rueckkaeufe"
+},
+"0678": {
+"abruf_utc": "2026-11-22T20:09:05Z",
+"datum": "2017-12-22",
+"jahr": 2018,
+"kategorie": "angebote"
+},
+"0679": {
+"abruf_utc": "2026-11-22T20:09:04Z",
+"datum": "2018-01-15",
+"jahr": 2018,
+"kategorie": "angebote"
+},
+"0680": {
+"abruf_utc": "2026-11-22T20:09:04Z",
+"datum": "2018-02-16",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0681": {
+"abruf_utc": "2026-11-22T20:09:04Z",
+"datum": "2018-02-28",
+"jahr": 2018,
+"kategorie": "andere"
+},
+"0682": {
+"abruf_utc": "2026-11-22T20:09:03Z",
+"datum": "2018-04-10",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0683": {
+"abruf_utc": "2026-11-22T20:09:03Z",
+"datum": "2018-02-22",
+"jahr": 2018,
+"kategorie": "andere"
+},
+"0684": {
+"abruf_utc": "2026-11-22T20:09:03Z",
+"datum": "2018-03-09",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0685": {
+"abruf_utc": "2026-11-22T20:09:03Z",
+"datum": "2018-03-02",
+"jahr": 2018,
+"kategorie": "angebote"
+},
+"0686": {
+"abruf_utc": "2026-11-22T20:09:02Z",
+"datum": "2018-03-20",
+"jahr": 2018,
+"kategorie": "andere"
+},
+"0687": {
+"abruf_utc": "2026-11-22T20:09:02Z",
+"datum": "2018-03-09",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0688": {
+"abruf_utc": "2026-11-22T20:09:02Z",
+"datum": "2018-03-23",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0689": {
+"abruf_utc": "2026-11-22T20:09:02Z",
+"datum": "2018-04-10",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0690": {
+"abruf_utc": "2026-11-22T20:09:01Z",
+"datum": "2018-05-11",
+"jahr": 2018,
+"kategorie": "andere"
+},
+"0691": {
+"abruf_utc": "2026-11-22T20:09:01Z",
+"datum": "2018-05-04",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0692": {
+"abruf_utc": "2026-11-22T20:09:01Z",
+"datum": "2018-05-11",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0693": {
+"abruf_utc": "2026-11-22T20:09:00Z",
+"datum": "2018-05-09",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0694": {
+"abruf_utc": "2026-11-22T20:09:00Z",
+"datum": "2018-05-23",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0695": {
+"abruf_utc": "2026-11-22T20:09:00Z",
+"datum": "2018-05-22",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0697": {
+"abruf_utc": "2026-11-22T20:08:59Z",
+"datum": "2018-06-06",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0698": {
+"abruf_utc": "2026-11-22T20:08:59Z",
+"datum": "2018-06-19",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0699": {
+"abruf_utc": "2026-11-22T20:08:59Z",
+"datum": "2018-06-20",
+"jahr": 2018,
+"kategorie": "angebote"
+},
+"0700": {
+"abruf_utc": "2026-11-22T20:08:58Z",
+"datum": "2018-06-26",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0701": {
+"abruf_utc": "2026-11-22T20:08:58Z",
+"datum": "2018-07-18",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0702": {
+"abruf_utc": "2026-11-22T20:08:58Z",
+"datum": "2018-07-26",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0703": {
+"abruf_utc": "2026-11-22T20:08:57Z",
+"datum": "2018-08-13",
+"jahr": 2018,
+"kategorie": "andere"
+},
+"0704": {
+"abruf_utc": "2026-11-22T20:08:57Z",
+"datum": "2018-08-23",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0705": {
+"abruf_utc": "2026-11-22T20:08:57Z",
+"datum": "2018-08-23",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0706": {
+"abruf_utc": "2026-11-22T20:08:57Z",
+"datum": "2018-09-25",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0707": {
+"abruf_utc": "2026-11-22T20:08:56Z",
+"datum": "2018-10-05",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0708": {
+"abruf_utc": "2026-11-22T20:08:56Z",
+"datum": "2018-09-24",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0709": {
+"abruf_utc": "2026-11-22T20:08:56Z",
+"datum": "2018-12-03",
+"jahr": 2018,
+"kategorie": "andere"
+},
+"0710": {
+"abruf_utc": "2026-11-22T20:08:55Z",
+"datum": "2018-10-29",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0711": {
+"abruf_utc": "2026-11-22T20:08:56Z",
+"datum": "2018-11-26",
+"jahr": 2018,
+"kategorie": "angebote"
+},
+"0712": {
+"abruf_utc": "2026-11-22T20:08:55Z",
+"datum": "2018-11-13",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0713": {
+"abruf_utc": "2026-11-22T20:08:55Z",
+"datum": "2018-11-29",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0714": {
+"abruf_utc": "2026-11-22T20:08:55Z",
+"datum": "2018-12-03",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0715": {
+"abruf_utc": "2026-11-22T20:08:54Z",
+"datum": "2018-11-29",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0716": {
+"abruf_utc": "2026-11-22T20:08:54Z",
+"datum": "2018-12-27",
+"jahr": 2018,
+"kategorie": "rueckkaeufe"
+},
+"0717": {
+"abruf_utc": "2026-11-22T20:08:54Z",
+"datum": "2019-01-11",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0718": {
+"abruf_utc": "2026-11-22T20:08:53Z",
+"datum": "2019-01-29",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0719": {
+"abruf_utc": "2026-11-22T20:08:53Z",
+"datum": "2019-02-19",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0720": {
+"abruf_utc": "2026-11-22T20:08:53Z",
+"datum": "2019-02-01",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0721": {
+"abruf_utc": "2026-11-22T20:08:52Z",
+"datum": "2019-03-12",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0722": {
+"abruf_utc": "2026-11-22T20:08:52Z",
+"datum": "2019-03-05",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0723": {
+"abruf_utc": "2026-11-22T20:08:52Z",
+"datum": "2019-03-12",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0724": {
+"abruf_utc": "2026-11-22T20:08:51Z",
+"datum": "2019-03-13",
+"jahr": 2019,
+"kategorie": "angebote"
+},
+"0725": {
+"abruf_utc": "2026-11-22T20:08:51Z",
+"datum": "2019-05-07",
+"jahr": 2019,
+"kategorie": "andere"
+},
+"0726": {
+"abruf_utc": "2026-11-22T20:08:51Z",
+"datum": "2019-04-01",
+"jahr": 2019,
+"kategorie": "angebote"
+},
+"0727": {
+"abruf_utc": "2026-11-22T20:08:50Z",
+"datum": "2019-04-11",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0728": {
+"abruf_utc": "2026-11-22T20:08:50Z",
+"datum": "2019-05-03",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0729": {
+"abruf_utc": "2026-11-22T20:08:50Z",
+"datum": "2019-05-22",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0730": {
+"abruf_utc": "2026-11-22T20:08:50Z",
+"datum": "2019-05-29",
+"jahr": 2019,
+"kategorie": "angebote"
+},
+"0731": {
+"abruf_utc": "2026-11-22T20:08:49Z",
+"datum": "2019-05-16",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0732": {
+"abruf_utc": "2026-11-22T20:08:49Z",
+"datum": "2019-06-06",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0733": {
+"abruf_utc": "2026-11-22T20:08:49Z",
+"datum": "2019-12-27",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0734": {
+"abruf_utc": "2026-11-22T20:08:49Z",
+"datum": "2019-05-28",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0735": {
+"abruf_utc": "2026-11-22T20:08:48Z",
+"datum": "2019-05-31",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0736": {
+"abruf_utc": "2026-11-22T20:08:48Z",
+"datum": "2019-06-26",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0737": {
+"abruf_utc": "2026-11-22T20:08:48Z",
+"datum": "2019-07-17",
+"jahr": 2019,
+"kategorie": "andere"
+},
+"0738": {
+"abruf_utc": "2026-11-22T20:08:47Z",
+"datum": "2019-06-27",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0739": {
+"abruf_utc": "2026-11-22T20:08:47Z",
+"datum": "2019-12-27",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0740": {
+"abruf_utc": "2026-11-22T20:08:47Z",
+"datum": "2019-07-08",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0741": {
+"abruf_utc": "2026-11-22T20:08:46Z",
+"datum": "2019-07-29",
+"jahr": 2019,
+"kategorie": "angebote"
+},
+"0742": {
+"abruf_utc": "2026-11-22T20:08:46Z",
+"datum": "2019-07-25",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0743": {
+"abruf_utc": "2026-11-22T20:08:46Z",
+"datum": "2019-08-14",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0744": {
+"abruf_utc": "2026-11-22T20:08:46Z",
+"datum": "2019-11-19",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0745": {
+"abruf_utc": "2026-11-22T20:08:45Z",
+"datum": "2019-10-30",
+"jahr": 2019,
+"kategorie": "andere"
+},
+"0746": {
+"abruf_utc": "2026-11-22T20:08:45Z",
+"datum": "2019-10-21",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0747": {
+"abruf_utc": "2026-11-22T20:08:45Z",
+"datum": "2019-10-22",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0748": {
+"abruf_utc": "2026-11-22T20:08:44Z",
+"datum": "2019-11-07",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0749": {
+"abruf_utc": "2026-11-22T20:08:44Z",
+"datum": "2019-11-05",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0750": {
+"abruf_utc": "2026-11-22T20:08:44Z",
+"datum": "2019-11-25",
+"jahr": 2019,
+"kategorie": "andere"
+},
+"0751": {
+"abruf_utc": "2026-11-22T20:08:43Z",
+"datum": "2019-12-11",
+"jahr": 2019,
+"kategorie": "andere"
+},
+"0752": {
+"abruf_utc": "2026-11-22T20:08:43Z",
+"datum": "2019-11-29",
+"jahr": 2019,
+"kategorie": "angebote"
+},
+"0754": {
+"abruf_utc": "2026-11-22T20:08:43Z",
+"datum": "2019-12-30",
+"jahr": 2019,
+"kategorie": "rueckkaeufe"
+},
+"0755": {
+"abruf_utc": "2026-11-22T20:08:43Z",
+"datum": "2020-01-03",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0756": {
+"abruf_utc": "2026-11-22T20:08:42Z",
+"datum": "2020-03-11",
+"jahr": 2020,
+"kategorie": "angebote"
+},
+"0757": {
+"abruf_utc": "2026-11-22T20:08:42Z",
+"datum": "2020-04-16",
+"jahr": 2020,
+"kategorie": "andere"
+},
+"0758": {
+"abruf_utc": "2026-11-22T20:08:42Z",
+"datum": "2020-02-21",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0759": {
+"abruf_utc": "2026-11-22T20:08:41Z",
+"datum": "2020-02-14",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0760": {
+"abruf_utc": "2026-11-22T20:08:41Z",
+"datum": "2020-02-28",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0761": {
+"abruf_utc": "2026-11-22T20:08:41Z",
+"datum": "2020-03-10",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0762": {
+"abruf_utc": "2026-11-22T20:08:41Z",
+"datum": "2020-06-25",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0763": {
+"abruf_utc": "2026-11-22T20:08:40Z",
+"datum": "2020-04-06",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0764": {
+"abruf_utc": "2026-11-22T20:08:40Z",
+"datum": "2020-04-30",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0765": {
+"abruf_utc": "2026-11-22T20:08:40Z",
+"datum": "2020-07-16",
+"jahr": 2020,
+"kategorie": "andere"
+},
+"0766": {
+"abruf_utc": "2026-11-22T20:08:40Z",
+"datum": "2020-07-24",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0767": {
+"abruf_utc": "2026-11-22T20:08:39Z",
+"datum": "2020-06-24",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0768": {
+"abruf_utc": "2026-11-22T20:08:39Z",
+"datum": "2020-07-02",
+"jahr": 2020,
+"kategorie": "andere"
+},
+"0769": {
+"abruf_utc": "2026-11-22T20:08:39Z",
+"datum": "2020-07-22",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0770": {
+"abruf_utc": "2026-11-22T20:08:38Z",
+"datum": "2020-08-12",
+"jahr": 2020,
+"kategorie": "angebote"
+},
+"0772": {
+"abruf_utc": "2026-11-22T20:08:38Z",
+"datum": "2020-09-16",
+"jahr": 2020,
+"kategorie": "rueckkaeufe"
+},
+"0773": {
+"abruf_utc": "2026-11-22T20:08:38Z",
+"datum": "2021-01-08",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0774": {
+"abruf_utc": "2026-11-22T20:08:37Z",
+"datum": "2021-02-04",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0775": {
+"abruf_utc": "2026-11-22T20:08:37Z",
+"datum": "2021-04-20",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0776": {
+"abruf_utc": "2026-11-22T20:08:37Z",
+"datum": "2021-02-05",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0777": {
+"abruf_utc": "2026-11-22T20:08:37Z",
+"datum": "2021-02-19",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0778": {
+"abruf_utc": "2026-11-22T20:08:36Z",
+"datum": "2021-02-18",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0779": {
+"abruf_utc": "2026-11-22T20:08:36Z",
+"datum": "2021-03-01",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0780": {
+"abruf_utc": "2026-11-22T20:08:36Z",
+"datum": "2021-03-22",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0781": {
+"abruf_utc": "2026-11-22T20:08:36Z",
+"datum": "2021-03-25",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0782": {
+"abruf_utc": "2026-11-22T20:08:35Z",
+"datum": "2021-12-06",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0783": {
+"abruf_utc": "2026-11-22T20:08:35Z",
+"datum": "2021-03-23",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0784": {
+"abruf_utc": "2026-11-22T20:08:35Z",
+"datum": "2021-03-22",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0785": {
+"abruf_utc": "2026-11-22T20:08:34Z",
+"datum": "2021-04-08",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0786": {
+"abruf_utc": "2026-11-22T20:08:34Z",
+"datum": "2021-04-06",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0787": {
+"abruf_utc": "2026-11-22T20:08:34Z",
+"datum": "2021-04-23",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0788": {
+"abruf_utc": "2026-11-22T20:08:33Z",
+"datum": "2021-05-31",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0789": {
+"abruf_utc": "2026-11-22T20:08:33Z",
+"datum": "2021-06-03",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0790": {
+"abruf_utc": "2026-11-22T20:08:33Z",
+"datum": "2021-07-07",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0791": {
+"abruf_utc": "2026-11-22T20:08:33Z",
+"datum": "2021-07-12",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0792": {
+"abruf_utc": "2026-11-22T20:08:32Z",
+"datum": "2021-07-29",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0793": {
+"abruf_utc": "2026-11-22T20:08:32Z",
+"datum": "2021-08-10",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0794": {
+"abruf_utc": "2026-11-22T20:08:32Z",
+"datum": "2021-10-15",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0795": {
+"abruf_utc": "2026-11-22T20:08:31Z",
+"datum": "2021-11-05",
+"jahr": 2021,
+"kategorie": "andere"
+},
+"0796": {
+"abruf_utc": "2026-11-22T20:08:31Z",
+"datum": "2021-10-04",
+"jahr": 2021,
+"kategorie": "angebote"
+},
+"0797": {
+"abruf_utc": "2026-11-22T20:08:31Z",
+"datum": "2021-10-28",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0798": {
+"abruf_utc": "2026-11-22T20:08:30Z",
+"datum": "2021-11-17",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0799": {
+"abruf_utc": "2026-11-22T20:08:31Z",
+"datum": "2021-11-15",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0800": {
+"abruf_utc": "2026-11-22T20:08:30Z",
+"datum": "2021-11-26",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0801": {
+"abruf_utc": "2026-11-22T20:08:29Z",
+"datum": "2021-12-03",
+"jahr": 2021,
+"kategorie": "rueckkaeufe"
+},
+"0802": {
+"abruf_utc": "2026-11-22T20:08:29Z",
+"datum": "2021-12-14",
+"jahr": 2021,
+"kategorie": "angebote"
+},
+"0803": {
+"abruf_utc": "2026-11-22T20:08:29Z",
+"datum": "2022-01-03",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0804": {
+"abruf_utc": "2026-11-22T20:08:29Z",
+"datum": "2022-01-26",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0805": {
+"abruf_utc": "2026-11-22T20:08:28Z",
+"datum": "2022-01-27",
+"jahr": 2022,
+"kategorie": "angebote"
+},
+"0806": {
+"abruf_utc": "2026-11-22T20:08:28Z",
+"datum": "2022-02-18",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0807": {
+"abruf_utc": "2026-11-22T20:08:28Z",
+"datum": "2024-03-13",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0808": {
+"abruf_utc": "2026-11-22T20:08:27Z",
+"datum": "2022-03-10",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0809": {
+"abruf_utc": "2026-11-22T20:08:27Z",
+"datum": "2022-03-01",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0810": {
+"abruf_utc": "2026-11-22T20:08:27Z",
+"datum": "2022-03-11",
+"jahr": 2022,
+"kategorie": "andere"
+},
+"0811": {
+"abruf_utc": "2026-11-22T20:08:27Z",
+"datum": "2022-03-30",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0813": {
+"abruf_utc": "2026-11-22T20:08:27Z",
+"datum": "2022-03-31",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0814": {
+"abruf_utc": "2026-11-22T20:08:26Z",
+"datum": "2022-04-12",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0815": {
+"abruf_utc": "2026-11-22T20:08:26Z",
+"datum": "2022-04-14",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0816": {
+"abruf_utc": "2026-11-22T20:08:26Z",
+"datum": "2022-06-02",
+"jahr": 2022,
+"kategorie": "angebote"
+},
+"0818": {
+"abruf_utc": "2026-11-22T20:08:25Z",
+"datum": "2023-01-05",
+"jahr": 2023,
+"kategorie": "andere"
+},
+"0819": {
+"abruf_utc": "2026-11-22T20:08:25Z",
+"datum": "2022-06-17",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0820": {
+"abruf_utc": "2026-11-22T20:08:25Z",
+"datum": "2022-06-28",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0821": {
+"abruf_utc": "2026-11-22T20:08:24Z",
+"datum": "2022-06-20",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0822": {
+"abruf_utc": "2026-11-22T20:08:24Z",
+"datum": "2022-07-25",
+"jahr": 2022,
+"kategorie": "angebote"
+},
+"0823": {
+"abruf_utc": "2026-11-22T20:08:24Z",
+"datum": "2022-07-05",
+"jahr": 2022,
+"kategorie": "angebote"
+},
+"0824": {
+"abruf_utc": "2026-11-22T20:08:23Z",
+"datum": "2022-07-29",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0825": {
+"abruf_utc": "2026-11-22T20:08:23Z",
+"datum": "2022-07-28",
+"jahr": 2022,
+"kategorie": "andere"
+},
+"0826": {
+"abruf_utc": "2026-11-22T20:08:23Z",
+"datum": "2022-08-19",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0827": {
+"abruf_utc": "2026-11-22T20:08:23Z",
+"datum": "2022-08-19",
+"jahr": 2022,
+"kategorie": "andere"
+},
+"0828": {
+"abruf_utc": "2026-11-22T20:08:22Z",
+"datum": "2022-12-31",
+"jahr": 2022,
+"kategorie": "andere"
+},
+"0829": {
+"abruf_utc": "2026-11-22T20:08:22Z",
+"datum": "2022-08-09",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0831": {
+"abruf_utc": "2026-11-22T20:08:22Z",
+"datum": "2022-10-31",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0833": {
+"abruf_utc": "2026-11-22T20:08:21Z",
+"datum": "2022-12-09",
+"jahr": 2022,
+"kategorie": "andere"
+},
+"0834": {
+"abruf_utc": "2026-11-22T20:08:21Z",
+"datum": "2022-11-11",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0835": {
+"abruf_utc": "2026-11-22T20:08:21Z",
+"datum": "2022-11-18",
+"jahr": 2022,
+"kategorie": "rueckkaeufe"
+},
+"0836": {
+"abruf_utc": "2026-11-22T20:08:20Z",
+"datum": "2023-02-28",
+"jahr": 2023,
+"kategorie": "andere"
+},
+"0837": {
+"abruf_utc": "2026-11-22T20:08:20Z",
+"datum": "2023-05-19",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0838": {
+"abruf_utc": "2026-11-22T20:08:20Z",
+"datum": "2023-03-13",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0840": {
+"abruf_utc": "2026-11-22T20:08:20Z",
+"datum": "2023-03-31",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0841": {
+"abruf_utc": "2026-11-22T20:08:19Z",
+"datum": "2023-03-31",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0842": {
+"abruf_utc": "2026-11-22T20:08:19Z",
+"datum": "2023-03-31",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0843": {
+"abruf_utc": "2026-11-22T20:08:19Z",
+"datum": "2023-08-11",
+"jahr": 2023,
+"kategorie": "angebote"
+},
+"0844": {
+"abruf_utc": "2026-11-22T20:08:18Z",
+"datum": "2023-05-04",
+"jahr": 2023,
+"kategorie": "angebote"
+},
+"0845": {
+"abruf_utc": "2026-11-22T20:08:18Z",
+"datum": "2023-05-19",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0846": {
+"abruf_utc": "2026-11-22T20:08:18Z",
+"datum": "2023-08-11",
+"jahr": 2023,
+"kategorie": "andere"
+},
+"0847": {
+"abruf_utc": "2026-11-22T20:08:17Z",
+"datum": "2023-07-03",
+"jahr": 2023,
+"kategorie": "angebote"
+},
+"0848": {
+"abruf_utc": "2026-11-22T20:08:17Z",
+"datum": "2023-07-27",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0849": {
+"abruf_utc": "2026-11-22T20:08:17Z",
+"datum": "2023-08-17",
+"jahr": 2023,
+"kategorie": "angebote"
+},
+"0850": {
+"abruf_utc": "2026-11-22T20:08:16Z",
+"datum": "2023-12-14",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0851": {
+"abruf_utc": "2026-11-22T20:08:16Z",
+"datum": "2023-08-24",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0852": {
+"abruf_utc": "2026-11-22T20:08:16Z",
+"datum": "2023-08-18",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0853": {
+"abruf_utc": "2026-11-22T20:08:16Z",
+"datum": "2023-05-05",
+"jahr": 2023,
+"kategorie": "angebote"
+},
+"0854": {
+"abruf_utc": "2026-11-22T20:08:15Z",
+"datum": "2023-09-08",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0855": {
+"abruf_utc": "2026-11-22T20:08:15Z",
+"datum": "2023-09-29",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0856": {
+"abruf_utc": "2026-11-22T20:08:15Z",
+"datum": "2023-11-16",
+"jahr": 2023,
+"kategorie": "angebote"
+},
+"0857": {
+"abruf_utc": "2026-11-22T20:08:15Z",
+"datum": "2024-04-18",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0858": {
+"abruf_utc": "2026-11-22T20:08:14Z",
+"datum": "2023-11-02",
+"jahr": 2023,
+"kategorie": "andere"
+},
+"0859": {
+"abruf_utc": "2026-11-22T20:08:14Z",
+"datum": "2023-10-26",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0860": {
+"abruf_utc": "2026-11-22T20:08:14Z",
+"datum": "2023-10-25",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0861": {
+"abruf_utc": "2026-11-22T20:08:13Z",
+"datum": "2023-11-13",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0862": {
+"abruf_utc": "2026-11-22T20:08:13Z",
+"datum": "2023-11-27",
+"jahr": 2023,
+"kategorie": "rueckkaeufe"
+},
+"0863": {
+"abruf_utc": "2026-11-22T20:08:13Z",
+"datum": "2024-03-14",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0864": {
+"abruf_utc": "2026-11-22T20:08:12Z",
+"datum": "2024-02-16",
+"jahr": 2024,
+"kategorie": "angebote"
+},
+"0865": {
+"abruf_utc": "2026-11-22T20:08:12Z",
+"datum": "2024-03-14",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0866": {
+"abruf_utc": "2026-11-22T20:08:12Z",
+"datum": "2024-03-07",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0867": {
+"abruf_utc": "2026-11-22T20:08:11Z",
+"datum": "2024-03-15",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0868": {
+"abruf_utc": "2026-11-22T20:08:11Z",
+"datum": "2024-04-02",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0869": {
+"abruf_utc": "2026-11-22T20:08:11Z",
+"datum": "2024-04-03",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0870": {
+"abruf_utc": "2026-11-22T20:08:11Z",
+"datum": "2024-03-28",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0871": {
+"abruf_utc": "2026-11-22T20:08:10Z",
+"datum": "2024-04-23",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0872": {
+"abruf_utc": "2026-11-22T20:08:10Z",
+"datum": "2024-05-31",
+"jahr": 2024,
+"kategorie": "angebote"
+},
+"0873": {
+"abruf_utc": "2026-11-22T20:08:10Z",
+"datum": "2024-06-07",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0874": {
+"abruf_utc": "2026-11-22T20:08:09Z",
+"datum": "2024-06-14",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0875": {
+"abruf_utc": "2026-11-22T20:08:09Z",
+"datum": "2024-07-31",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0876": {
+"abruf_utc": "2026-11-22T20:08:09Z",
+"datum": "2024-08-07",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0877": {
+"abruf_utc": "2026-11-22T20:08:09Z",
+"datum": "2024-08-27",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0878": {
+"abruf_utc": "2026-11-22T20:08:08Z",
+"datum": "2024-08-07",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0879": {
+"abruf_utc": "2026-11-22T20:08:08Z",
+"datum": "2024-08-30",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0880": {
+"abruf_utc": "2026-11-22T20:08:08Z",
+"datum": "2024-09-23",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0881": {
+"abruf_utc": "2026-11-22T20:08:07Z",
+"datum": "2024-08-21",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0882": {
+"abruf_utc": "2026-11-22T20:08:07Z",
+"datum": "2024-09-03",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0883": {
+"abruf_utc": "2026-11-22T20:08:07Z",
+"datum": "2024-08-21",
+"jahr": 2024,
+"kategorie": "angebote"
+},
+"0884": {
+"abruf_utc": "2026-11-22T20:08:07Z",
+"datum": "2024-09-18",
+"jahr": 2024,
+"kategorie": "angebote"
+},
+"0886": {
+"abruf_utc": "2026-11-22T20:08:06Z",
+"datum": "2024-11-05",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0887": {
+"abruf_utc": "2026-11-22T20:08:06Z",
+"datum": "2024-11-06",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0888": {
+"abruf_utc": "2026-11-22T20:08:06Z",
+"datum": "2024-12-09",
+"jahr": 2024,
+"kategorie": "angebote"
+},
+"0889": {
+"abruf_utc": "2026-11-22T20:08:05Z",
+"datum": "2024-12-17",
+"jahr": 2024,
+"kategorie": "angebote"
+},
+"0890": {
+"abruf_utc": "2026-11-22T20:08:05Z",
+"datum": "2024-11-21",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0891": {
+"abruf_utc": "2026-11-22T20:08:05Z",
+"datum": "2024-12-06",
+"jahr": 2024,
+"kategorie": "rueckkaeufe"
+},
+"0892": {
+"abruf_utc": "2026-11-22T20:08:04Z",
+"datum": "2024-12-10",
+"jahr": 2024,
+"kategorie": "andere"
+},
+"0893": {
+"abruf_utc": "2026-11-22T20:08:04Z",
+"datum": "2024-12-19",
+"jahr": 2024,
+"kategorie": "angebote"
+},
+"0894": {
+"abruf_utc": "2026-11-22T20:16:50Z",
+"datum": "2025-01-24",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0895": {
+"abruf_utc": "2026-11-22T20:16:50Z",
+"datum": "2025-02-07",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0896": {
+"abruf_utc": "2026-11-22T20:16:49Z",
+"datum": "2025-03-06",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0897": {
+"abruf_utc": "2026-11-22T20:16:49Z",
+"datum": "2025-06-30",
+"jahr": 2025,
+"kategorie": "andere"
+},
+"0898": {
+"abruf_utc": "2026-11-22T20:16:49Z",
+"datum": "2025-04-14",
+"jahr": 2025,
+"kategorie": "andere"
+},
+"0899": {
+"abruf_utc": "2026-11-22T20:16:48Z",
+"datum": "2025-03-31",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0901": {
+"abruf_utc": "2026-11-22T20:16:48Z",
+"datum": "2025-04-29",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0902": {
+"abruf_utc": "2026-11-22T20:16:48Z",
+"datum": "2025-04-25",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0904": {
+"abruf_utc": "2026-11-22T20:16:47Z",
+"datum": "2025-05-28",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0905": {
+"abruf_utc": "2026-11-22T20:16:47Z",
+"datum": "2025-06-25",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0906": {
+"abruf_utc": "2026-11-22T20:16:47Z",
+"datum": "2025-07-02",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0907": {
+"abruf_utc": "2026-11-22T20:16:46Z",
+"datum": "2025-07-16",
+"jahr": 2025,
+"kategorie": "andere"
+},
+"0908": {
+"abruf_utc": "2026-11-22T20:16:46Z",
+"datum": "2025-06-30",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0909": {
+"abruf_utc": "2026-11-22T20:16:46Z",
+"datum": "2025-08-18",
+"jahr": 2025,
+"kategorie": "angebote"
+},
+"0910": {
+"abruf_utc": "2026-11-22T20:16:46Z",
+"datum": "2025-08-12",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0911": {
+"abruf_utc": "2026-11-22T20:16:45Z",
+"datum": "2025-09-25",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0912": {
+"abruf_utc": "2026-11-22T20:16:45Z",
+"datum": "2025-08-27",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0913": {
+"abruf_utc": "2026-11-22T20:16:45Z",
+"datum": "2025-09-18",
+"jahr": 2025,
+"kategorie": "angebote"
+},
+"0914": {
+"abruf_utc": "2026-11-22T20:16:44Z",
+"datum": "2025-09-12",
+"jahr": 2025,
+"kategorie": "andere"
+},
+"0915": {
+"abruf_utc": "2026-11-22T20:16:44Z",
+"datum": "2025-10-28",
+"jahr": 2025,
+"kategorie": "andere"
+},
+"0916": {
+"abruf_utc": "2026-11-22T20:16:44Z",
+"datum": "2025-10-22",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0917": {
+"abruf_utc": "2026-11-22T20:16:44Z",
+"datum": "2025-10-28",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0918": {
+"abruf_utc": "2026-11-22T20:16:43Z",
+"datum": "2025-12-18",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0919": {
+"abruf_utc": "2026-11-22T20:16:43Z",
+"datum": "2025-12-10",
+"jahr": 2025,
+"kategorie": "rueckkaeufe"
+},
+"0920": {
+"abruf_utc": "2026-11-22T20:16:43Z",
+"datum": "2025-12-12",
+"jahr": 2025,
+"kategorie": "andere"
+},
+"0921": {
+"abruf_utc": "2026-11-22T20:16:43Z",
+"datum": "2026-02-04",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0922": {
+"abruf_utc": "2026-11-22T20:16:42Z",
+"datum": "2026-02-06",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0923": {
+"abruf_utc": "2026-11-22T20:16:42Z",
+"datum": "2026-03-16",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0924": {
+"abruf_utc": "2026-11-22T20:16:42Z",
+"datum": "2026-03-03",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0925": {
+"abruf_utc": "2026-11-22T20:16:41Z",
+"datum": "2026-09-28",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0926": {
+"abruf_utc": "2026-11-22T20:16:41Z",
+"datum": "2026-03-02",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0927": {
+"abruf_utc": "2026-11-22T20:16:41Z",
+"datum": "2026-03-11",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0928": {
+"abruf_utc": "2026-11-22T20:16:40Z",
+"datum": "2026-03-13",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0930": {
+"abruf_utc": "2026-11-22T20:16:40Z",
+"datum": "2026-04-30",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0931": {
+"abruf_utc": "2026-11-22T20:16:40Z",
+"datum": "2026-04-22",
+"jahr": 2026,
+"kategorie": "andere"
+},
+"0932": {
+"abruf_utc": "2026-11-22T20:16:39Z",
+"datum": "2026-05-26",
+"jahr": 2026,
+"kategorie": "andere"
+},
+"0933": {
+"abruf_utc": "2026-11-22T20:16:39Z",
+"datum": "2026-05-05",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0934": {
+"abruf_utc": "2026-11-22T20:16:39Z",
+"datum": "2026-05-22",
+"jahr": 2026,
+"kategorie": "andere"
+},
+"0935": {
+"abruf_utc": "2026-11-22T20:16:38Z",
+"datum": "2026-05-19",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0936": {
+"abruf_utc": "2026-11-22T20:16:38Z",
+"datum": "2026-05-06",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0937": {
+"abruf_utc": "2026-11-22T20:16:38Z",
+"datum": "2026-05-08",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0938": {
+"abruf_utc": "2026-11-22T20:16:38Z",
+"datum": "2026-05-29",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0939": {
+"abruf_utc": "2026-11-22T20:16:38Z",
+"datum": "2026-05-26",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0940": {
+"abruf_utc": "2026-11-22T20:16:37Z",
+"datum": "2026-06-03",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0941": {
+"abruf_utc": "2026-11-22T20:16:37Z",
+"datum": "2026-06-01",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0942": {
+"abruf_utc": "2026-11-22T20:16:37Z",
+"datum": "2026-06-10",
+"jahr": 2026,
+"kategorie": "angebote"
+},
+"0943": {
+"abruf_utc": "2026-11-22T20:16:36Z",
+"datum": "2026-06-30",
+"jahr": 2026,
+"kategorie": "andere"
+},
+"0944": {
+"abruf_utc": "2026-11-22T20:16:36Z",
+"datum": "2026-08-26",
+"jahr": 2026,
+"kategorie": "andere"
+},
+"0945": {
+"abruf_utc": "2026-11-22T20:16:36Z",
+"datum": "2026-07-29",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0946": {
+"abruf_utc": "2026-11-22T20:16:35Z",
+"datum": "2026-07-20",
+"jahr": 2026,
+"kategorie": "angebote"
+},
+"0947": {
+"abruf_utc": "2026-11-22T20:16:35Z",
+"datum": "2026-08-03",
+"jahr": 2026,
+"kategorie": "andere"
+},
+"0948": {
+"abruf_utc": "2026-11-22T20:16:35Z",
+"datum": "2026-08-03",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0949": {
+"abruf_utc": "2026-11-22T20:16:35Z",
+"datum": "2026-09-30",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0950": {
+"abruf_utc": "2026-11-22T20:16:34Z",
+"datum": "2026-08-12",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0951": {
+"abruf_utc": "2026-11-22T20:16:34Z",
+"datum": "2026-08-20",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0952": {
+"abruf_utc": "2026-11-22T20:16:34Z",
+"datum": "2026-09-03",
+"jahr": 2026,
+"kategorie": "andere"
+},
+"0953": {
+"abruf_utc": "2026-11-22T20:16:33Z",
+"datum": null,
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0954": {
+"abruf_utc": "2026-11-22T20:16:33Z",
+"datum": "2026-09-30",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+},
+"0956": {
+"abruf_utc": "2026-11-22T20:16:33Z",
+"datum": "2026-11-04",
+"jahr": 2026,
+"kategorie": "angebote"
+},
+"0957": {
+"abruf_utc": "2026-11-22T20:16:33Z",
+"datum": "2026-10-30",
+"jahr": 2026,
+"kategorie": "rueckkaeufe"
+}
+}

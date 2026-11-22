@@ -1,0 +1,20 @@
+{
+  "angebote": {
+    "beschreibung": "UEK Schweiz: Anzahl neu bekanntgegebener oeffentlicher Kaufangebote (freiwillige Angebote und Pflichtangebote) fuer an der SIX kotierte Gesellschaften je Tag",
+    "einheit": "Anzahl Transaktionen",
+    "publikation": "taeglich: Voranmeldungen, Angebotsprospekte und Rueckkaufinserate muessen nach UEV (SR 954.195.1, Art. 5-8 und 18) am Tag der Veroeffentlichung auch der UEK zugestellt werden, die sie auf takeover.ch mit diesem Datum aufschaltet; konservativ 1 Tag",
+    "quelle_url": "https://www.takeover.ch/transactions/all",
+    "revidiert": false,
+    "verdichtung": "Anzahl Transaktionen je Kalendertag (Datum = fruehestes Dokumentdatum der Transaktion auf takeover.ch), 0 an Tagen ohne Ereignis",
+    "verfuegbar_nach_tagen": 1
+  },
+  "rueckkaeufe": {
+    "beschreibung": "UEK Schweiz: Anzahl neu bekanntgegebener Rueckkaufprogramme eigener Beteiligungspapiere (von der UEK freigestellt) je Tag",
+    "einheit": "Anzahl Transaktionen",
+    "publikation": "taeglich: Voranmeldungen, Angebotsprospekte und Rueckkaufinserate muessen nach UEV (SR 954.195.1, Art. 5-8 und 18) am Tag der Veroeffentlichung auch der UEK zugestellt werden, die sie auf takeover.ch mit diesem Datum aufschaltet; konservativ 1 Tag",
+    "quelle_url": "https://www.takeover.ch/transactions/all",
+    "revidiert": false,
+    "verdichtung": "Anzahl Transaktionen je Kalendertag (Datum = fruehestes Dokumentdatum der Transaktion auf takeover.ch), 0 an Tagen ohne Ereignis",
+    "verfuegbar_nach_tagen": 1
+  }
+}
