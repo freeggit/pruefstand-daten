@@ -32,6 +32,10 @@ V3.11 (E28, 4.10.2026, Reto: «ok, gerne freigeben»; Astra-Gutachten 4, Befunde
   Seite ist ein Konflikt: beide Einträge bleiben, der Konflikt wird festgehalten. Bekommt ein Eintrag später erstmals eine
   Nummer, wird er über «datei» wiedererkannt statt verdoppelt.
 - Das Konfliktjournal wird nicht mehr gekürzt.
+
+21.11.2026 (Betriebslauf ohne Verzeichnisliste von claude/lernen; Auftrag Reto 21.11.2026: «einchecken»):
+- Textkonflikte in anderen Dateien stehen zusätzlich in index["konflikte"] (wo, gesichert_als, zeit, lauf). Damit nennt
+  index.json alle Konfliktdateien (.konflikt_ und .verworfen_), und der Betriebslauf braucht keine Verzeichnisliste.
 """
 import json, os, subprocess, sys, time
 
@@ -160,6 +164,7 @@ def konflikte_loesen():
     dateien = [p for p in git("diff", "--name-only", "--diff-filter=U").stdout.split("\n") if p]
     if not dateien:
         return False
+    gesichert = []
     for p in dateien:
         # im Rebase: Stufe 2 = Stand auf GitHub (upstream), Stufe 3 = eigener Commit
         if p.endswith("index.json"):
@@ -175,6 +180,7 @@ def konflikte_loesen():
                 with open(os.path.join(LERNEN, sich), "wb") as f:
                     f.write(t.stdout)
                 git("add", "--", sich)
+                gesichert.append({"wo": p, "art": "Textkonflikt: eigener Stand gilt, Stand von GitHub gesichert", "gesichert_als": sich})
                 print(f"Konflikt in {p}: Stand von GitHub gesichert als {sich}")
             if git("checkout", "--theirs", "--", p, ok=True).returncode == 0:
                 print(f"Konflikt in {p}: eigener Stand übernommen (einziger Schreiber)")
@@ -182,7 +188,26 @@ def konflikte_loesen():
                 git("checkout", "--ours", "--", p)
                 print(f"Konflikt in {p}: Stand von GitHub behalten")
         git("add", "--", p)
+    if gesichert:
+        konflikte_vermerken(gesichert)
     return True
+
+
+def konflikte_vermerken(eintraege):
+    """21.11.2026: Textkonflikte anderer Dateien auch in index["konflikte"] festhalten (nach dem Mischen von index.json)."""
+    ip = os.path.join(LERNEN, "index.json")
+    try:
+        idx = json.load(open(ip, encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    if not isinstance(idx, dict):
+        return
+    zeit = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    alt = idx.get("konflikte") if isinstance(idx.get("konflikte"), list) else []
+    idx["konflikte"] = alt + [dict(x, zeit=zeit, lauf=PRAEFIX) for x in eintraege]
+    with open(ip, "w", encoding="utf-8") as f:
+        json.dump(idx, f, ensure_ascii=False, indent=1)
+    git("add", "--", "index.json")
 
 
 def endurteile_schuetzen():
