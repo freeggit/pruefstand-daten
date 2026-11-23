@@ -1,0 +1,13 @@
+{
+  "layoffs": {
+    "beschreibung": "Hacker News: Anzahl Stories je UTC-Tag mit dem Wort 'layoffs' im Titel (ohne Tippfehlertoleranz), 0 an Tagen ohne Treffer",
+    "einheit": "Anzahl Beitraege pro Tag",
+    "hinweis": "Nachtraeglich geloeschte oder gesperrte Beitraege koennen fehlen (geringe Abweichung gegenueber dem damaligen Stand).",
+    "publikation": "taeglich (Beitraege sind sofort oeffentlich und ueber die Algolia-HN-API minutennah abrufbar; Tag gilt nach Ablauf des UTC-Tages als vollstaendig)",
+    "quelle_url": "https://hn.algolia.com/api/v1/search_by_date?query=layoffs&tags=story&restrictSearchableAttributes=title&typoTolerance=false",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "Summe je UTC-Tag (Zaehlung der Einzelbeitraege)",
+    "verfuegbar_nach_tagen": 1
+  }
+}

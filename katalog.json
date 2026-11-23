@@ -7961,15 +7961,17 @@
   {
     "id": "hackernews_krisenbegriffe",
     "name": "Hacker News (Algolia-API): Beiträge mit Krisenbegriffen je Tag",
-    "url": "https://hn.algolia.com/api/v1/search_by_date?query=recession&tags=story&numericFilters=created_at_i>{von},created_at_i<{bis} (hier HTTP 200; ab 2007)",
+    "url": "https://hn.algolia.com/api/v1/search_by_date",
     "domain": "hn.algolia.com",
     "bereich": "Aufmerksamkeit",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "tief",
     "mechanismus": "Plötzliche Aufmerksamkeit für Begriffe wie «recession» oder «layoffs» in einem Technologieforum geht Stimmungsumschwüngen bei Technologieaktien voraus; kurzfristig schwächer XLK gegenüber dem Weltindex.",
-    "grund": "Aufmerksamkeit (Ideenraum). Unabhängig von wikipedia_weitere (Seitenaufrufe) und edgar_logdateien_abrufdichte (abgelehnt). Tief: Forum klein vor 2010, Begriffsauswahl vorab fest (recession, layoffs, crash). (Lernrunde 2026-11-23)",
-    "reihen": [],
+    "grund": "Aufmerksamkeit (Ideenraum). Unabhängig von wikipedia_weitere (Seitenaufrufe) und edgar_logdateien_abrufdichte (abgelehnt). Tief: Forum klein vor 2010, Begriffsauswahl vorab fest (recession, layoffs, crash). (Lernrunde 2026-11-23) | Lauf 2026-11-23T16:07Z: aufgenommen. Algolia-HN-API ohne Login/Schluessel, HTTP 200; Abfrage je Monat, Titel ohne Tippfehlertoleranz (sonst Treffer wie 'reception'). Reihe layoffs: 7235 Zeilen, 2007-02-01 bis 2026-11-22, Median-Abstand 1, Min 0, Max 32 (2022-11-04), Nulltage 76%, gleiche Folgewerte 69% (ueber 20%, erklaert durch duenne Tageszaehlung mit vielen Nulltagen; Jahressummen plausibel: Spitzen 2020, 2022-2023). Reihe 'recession' verworfen (2012-2017 nur 16-41 Treffer/Jahr, zu duenn); 'crash' verworfen (meist Software-/Unfallbedeutung). Abruf ~20 s, Datei klein (K7). K4: Zaehlung oeffentlicher Beitraege, nachtraeglich geloeschte koennen fehlen (geringe Abweichung, in meta vermerkt). Erster Wert 2007 (vor 2015, K2), aber nicht vor 1995 (Langzeitfamilie nicht nutzbar). verfuegbar_nach_tagen 1, publikation taeglich.",
+    "reihen": [
+      "layoffs"
+    ],
     "aufgenommen_utc": "2026-11-23T09:50Z",
-    "geprueft_utc": "2026-11-23T09:50Z"
+    "geprueft_utc": "2026-11-23T16:07Z"
   }
 ]
