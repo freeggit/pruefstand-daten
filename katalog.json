@@ -7679,10 +7679,10 @@
     "status": "kandidat",
     "prioritaet": "hoch",
     "mechanismus": "An Tagen mit vielen Quartalszahlen fliesst gebündelt Information über die Ertragslage; die Ankündigungsprämie (Savor und Wilson 2016) trifft Sektoren mit hohem Meldeanteil (XLK, XLF) stärker als den Weltindex.",
-    "grund": "Firmenereignisse aggregiert (Zusatz 8, erste Priorität); unabhängige Quelle zum gesperrten nasdaq_earnings_kalender_dichte. Veröffentlichter Effekt, evtl. abgeschwächt (L3). (Lernrunde 2026-11-22)",
+    "grund": "Firmenereignisse aggregiert (Zusatz 8, erste Priorität); unabhängige Quelle zum gesperrten nasdaq_earnings_kalender_dichte. Veröffentlichter Effekt, evtl. abgeschwächt (L3). (Lernrunde 2026-11-22) | Lauf 2026-11-23T00:22Z: nicht selbst versucht (Zusatz 6: EDGAR-Quellen 8-K nur ueber die GitHub Action auf main); bleibt kandidat fuer die Action.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-22T09:50Z",
-    "geprueft_utc": "2026-11-22T09:50Z"
+    "geprueft_utc": "2026-11-23T00:22Z"
   },
   {
     "id": "sec_s4_fusionsregistrierungen",
@@ -7809,5 +7809,19 @@
         "ereignisse": 534
       }
     }
+  },
+  {
+    "id": "ecb_reden_dichte",
+    "name": "EZB: Reden der Direktoriumsmitglieder je Tag (Datensatz all_ECB_speeches.csv)",
+    "url": "https://www.ecb.europa.eu/press/key/shared/data/all_ECB_speeches.csv",
+    "domain": "ecb.europa.eu",
+    "bereich": "Geldmarkt",
+    "status": "abgelehnt",
+    "prioritaet": "tief",
+    "mechanismus": "Dichte der EZB-Kommunikation kann kurzfristig Euro-Anleihen und europaeische Aktien (EWG) gegenueber dem Weltindex bewegen (Replikation von fed_reden_dichte).",
+    "grund": "Lauf 2026-11-23T00:22Z: abgelehnt K5. CSV offen (HTTP 200, 58,7 MB, 3086 Reden ab 1997-02-07), aber letzter Eintrag 2026-10-30 (24 Tage alt): Datensatz wird nur etwa monatlich nachgefuehrt; nach Rededatum wuerden juengste Wochen rueckwirkend ergaenzt (gleiches Problem wie bis_zentralbankreden_dichte). Alternative waere die tagesaktuelle Redenliste auf ecb.europa.eu/press/key; Geldmarkt nach L2 tief, nicht weiter verfolgt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-23T00:22Z",
+    "geprueft_utc": "2026-11-23T00:22Z"
   }
 ]
