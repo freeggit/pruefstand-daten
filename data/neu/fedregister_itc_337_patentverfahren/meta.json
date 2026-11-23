@@ -1,0 +1,11 @@
+{
+  "einleitungen": {
+    "beschreibung": "Taegliche Anzahl Federal-Register-Bekanntmachungen der USITC zur Einleitung von Section-337-Untersuchungen (Titel 'Certain ...; Notice of Investigation/Institution of Investigation'), 0 an Tagen ohne Bekanntmachung.",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bankarbeitstag ab 6 Uhr ET; das Dokument ist an seinem gedruckten Publikationsdatum oeffentlich, Beleg: federalregister.gov/reader-aids)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=international-trade-commission",
+    "revidiert": false,
+    "verdichtung": "Anzahl je Publikationsdatum (Titelfilter)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

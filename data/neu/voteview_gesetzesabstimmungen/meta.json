@@ -1,0 +1,11 @@
+{
+  "abstimmungen": {
+    "beschreibung": "Anzahl namentlicher Abstimmungen (roll calls) in Repraesentantenhaus und Senat je Abstimmungstag laut Voteview, 0 an Tagen ohne Abstimmung (nur bis zum letzten Tag der Datei).",
+    "einheit": "Anzahl namentliche Abstimmungen",
+    "publikation": "taeglich (namentliche Abstimmungen sind live oeffentlich und werden noch am selben Tag auf clerk.house.gov bzw. senate.gov/legislative/votes publiziert; Voteview fuehrt sie mit wenigen Tagen Verzug nach)",
+    "quelle_url": "https://voteview.com/static/data/out/rollcalls/HSall_rollcalls.csv",
+    "revidiert": false,
+    "verdichtung": "Anzahl je Kalendertag (Abstimmungsdatum)",
+    "verfuegbar_nach_tagen": 0
+  }
+}

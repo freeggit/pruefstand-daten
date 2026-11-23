@@ -7914,13 +7914,24 @@
     "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=international-trade-commission&conditions[term]=%22section+337%22+institution (hier HTTP 200; 129 Dokumente bis 2000)",
     "domain": "federalregister.gov",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Section-337-Verfahren drohen mit Einfuhrverboten wegen Patentverletzung, meist gegen Halbleiter, Elektronik und Medizintechnik; Häufungen belasten kurzfristig Technologie (XLK, SOXX) und asiatische Exportländer gegenüber dem Weltindex.",
-    "grund": "Firmenereignisse (Zusatz 8). Abgrenzung zu fedregister_handelsschutz und usitc_handelsschutz_verfuegungen (Antidumping und Ausgleichszölle, nicht Patente): Filter nur auf «section 337». (Lernrunde 2026-11-23)",
-    "reihen": [],
+    "grund": "Aufgenommen 2026-11-23T12:14Z. K1 täglich (Nullen an Tagen ohne Bekanntmachung, Federal Register an US-Bankarbeitstagen). K2 ab 1994-01-01, 12015 Zeilen, 1501 Einleitungen (1994-2000 nur 9-17 je Jahr: Abdeckung der FR-API vor 2000 lückenhaft; ab 2001 30-87 je Jahr, deckt sich mit USITC-Fallzahlen). K3 öffentliche API ohne Schlüssel. K4 Publikationsdatum fest. K5 letzte Einleitung 2026-11-16, Reihe bis heute. K6 neu (fedregister_handelsschutz zählt Antidumping, nicht Section 337). K7 ~28 s, inkrementell (fr_inkrementell). Auswahl über Titel (Certain ...; Notice of Investigation / Institution of); Ausschlussverfügungen (~10/Jahr) bewusst nicht als Reihe (zu selten). Anteil gleicher Folgewerte 0.82 wegen seltener Ereignisse (Nullen), nicht verdächtig. Max 4 plausibel. Aktiv: einleitungen. | Firmenereignisse (Zusatz 8). Abgrenzung zu fedregister_handelsschutz und usitc_handelsschutz_verfuegungen (Antidumping und Ausgleichszölle, nicht Patente): Filter nur auf «section 337». (Lernrunde 2026-11-23)",
+    "reihen": [
+      {
+        "zeilen": 12015,
+        "erste": "1994-01-01",
+        "letzte": "2026-11-23",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.818,
+        "min": 0.0,
+        "max": 4.0,
+        "reihe": "einleitungen"
+      }
+    ],
     "aufgenommen_utc": "2026-11-23T09:50Z",
-    "geprueft_utc": "2026-11-23T09:50Z"
+    "geprueft_utc": "2026-11-23T12:14Z"
   },
   {
     "id": "voteview_gesetzesabstimmungen",
@@ -7928,13 +7939,24 @@
     "url": "https://voteview.com/static/data/out/rollcalls/HSall_rollcalls.csv (hier HTTP 200; ab 1789, Tagesdatum)",
     "domain": "voteview.com",
     "bereich": "Staat",
-    "status": "kandidat",
+    "status": "aktiv",
     "prioritaet": "normal",
     "mechanismus": "Viele Abstimmungen an einem Tag bündeln Gesetzesentscheide über Steuern, Regulierung und Haushalt; das betrifft regulierte Sektoren (Finanzen, Gesundheit, Energie) kurzfristig stärker als den Weltindex.",
-    "grund": "Historie vor 1990 (zweite Priorität). Abgrenzung zu us_kongress_sitzungstage (abgelehnt; Sitzungstage, nicht Abstimmungen). Kongress-Effekt veröffentlicht (Ferguson und Witte 2006), evtl. abgeschwächt (L3). (Lernrunde 2026-11-23)",
-    "reihen": [],
+    "grund": "Aufgenommen 2026-11-23T12:14Z. K1 täglich (Nullen an Tagen ohne Abstimmung, nur bis zum letzten Tag der Datei). K2 ab 1789-05-16, 86751 Zeilen, 113604 Abstimmungen. K3 öffentliche CSV (UCLA Voteview), ohne Login. K4 Abstimmungen sind abgeschlossene Ereignisse; Voteview kann einzelne Nachträge liefern (gering). K5 letzter Wert 2026-11-20 (3 Tage Verzug). K6 neu. K7 30 MB Rohdatei, Abruf 3 s, Datei 0.22 MB. Max 101 am 1854-05-11 (Kansas-Nebraska-Debatte im Haus) plausibel. Anteil gleicher Folgewerte 0.65 wegen Nulltagen (Wochenenden, Pausen). Langzeit-Familie: Beginn vor 1995. Paarvorschlag: keiner. Aktiv: abstimmungen. | Historie vor 1990 (zweite Priorität). Abgrenzung zu us_kongress_sitzungstage (abgelehnt; Sitzungstage, nicht Abstimmungen). Kongress-Effekt veröffentlicht (Ferguson und Witte 2006), evtl. abgeschwächt (L3). (Lernrunde 2026-11-23)",
+    "reihen": [
+      {
+        "zeilen": 86751,
+        "erste": "1789-05-16",
+        "letzte": "2026-11-20",
+        "median_abstand_tage": 1.0,
+        "anteil_gleiche_folgewerte": 0.649,
+        "min": 0.0,
+        "max": 101.0,
+        "reihe": "abstimmungen"
+      }
+    ],
     "aufgenommen_utc": "2026-11-23T09:50Z",
-    "geprueft_utc": "2026-11-23T09:50Z"
+    "geprueft_utc": "2026-11-23T12:14Z"
   },
   {
     "id": "hackernews_krisenbegriffe",
