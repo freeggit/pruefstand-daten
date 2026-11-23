@@ -22,12 +22,56 @@ MONTHS = {
 DATE_PAT = re.compile(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),\s*(\d{4})')
 
 
+RAW_URL = "https://en.wikipedia.org/w/index.php?title=Historical_components_of_the_S%26P_500&action=raw"
+
+
+def _get(url, versuche=3):
+    """Abruf mit Beachtung von HTTP 429 (Retry-After, hoechstens 90 s)."""
+    import time
+    import urllib.error
+    letzter = None
+    for i in range(versuche):
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read().decode("utf-8")
+        except urllib.error.HTTPError as e:
+            letzter = e
+            if e.code != 429 or i == versuche - 1:
+                raise
+            try:
+                warte = int(e.headers.get("Retry-After") or 0)
+            except ValueError:
+                warte = 0
+            time.sleep(min(90, max(15, warte)) * (i + 1))
+    raise letzter
+
+
 def fetch_wikitext():
-    req = urllib.request.Request(EXPORT_URL, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = resp.read().decode("utf-8")
+    # Zuerst Rohtext (action=raw), bei Fehler Special:Export; beide liefern denselben Wikitext.
+    try:
+        text = _get(RAW_URL)
+        if "wikitable" in text:
+            return text
+    except Exception:
+        pass
+    data = _get(EXPORT_URL)
     m = re.search(r'<text[^>]*>(.*)</text>', data, re.S)
     return html.unescape(m.group(1))
+
+
+def bestand_aktuell():
+    """True, wenn die Datei schon bis heute reicht (Lauf heute schon erfolgreich)."""
+    pfad = os.path.join(OUT_DIR, "anzahl_aenderungen.csv.gz")
+    try:
+        with gzip.open(pfad, "rt", encoding="utf-8") as f:
+            letzte = None
+            for zeile in f:
+                letzte = zeile
+        heute = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+        return bool(letzte) and letzte.split(",")[0] >= heute
+    except (OSError, EOFError):
+        return False
 
 
 def parse_change_counts(wikitext):
@@ -72,6 +116,9 @@ def gzip_write(path, rows):
 
 
 def main():
+    if bestand_aktuell():
+        # Tabelle aendert sich hoechstens taeglich; weitere Abfragen am selben Tag erzeugen nur 429.
+        return
     wikitext = fetch_wikitext()
     counts, parsed_rows = parse_change_counts(wikitext)
     if parsed_rows < 300:
