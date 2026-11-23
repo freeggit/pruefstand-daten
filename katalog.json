@@ -6830,10 +6830,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Indexaenderungen erzwingen Umschichtungen der Indexfonds zwischen Bekanntgabe und Stichtag; Nachfragedruck in grossen Euro-Titeln kann EWU und EWG gegenueber dem Weltindex kurzfristig verschieben.",
-    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft. | Scout 2026-11-18T20:35Z: fehler. Wikipedia EN/DE/FR/ES/IT fuehren keine Aenderungsliste des EURO STOXX 50 (nur aktuelle Zusammensetzung), damit keine offene Ersatzquelle; amtliches Archiv stoxx.com/news-archive antwortet HTTP 403 (Befund, nicht umgangen). Naechster Lauf erneut; ohne zugaengliches STOXX-Archiv spaeter abzulehnen (K3). | Erneut 2026-11-20T00:25Z: www.stoxx.com/news-archive HTTP 403 (stoxx.com/news-archive/ 404); nicht umgangen. Weiterhin keine offene Ersatzquelle. | Erneut 2026-11-22T00:14Z: stoxx.com/news-archive weiterhin HTTP 403; nicht umgangen.",
+    "grund": "Lernrunde 2026-11-18 (Vorrat auf 15). Replikation von sp500_index_aenderungen und dax_indexaenderungen in einem dritten Markt. Indexeffekt veroeffentlicht (Shleifer 1986, Harris und Gurel 1986), seither schwaecher. HTTP 200 geprueft. | Scout 2026-11-18T20:35Z: fehler. Wikipedia EN/DE/FR/ES/IT fuehren keine Aenderungsliste des EURO STOXX 50 (nur aktuelle Zusammensetzung), damit keine offene Ersatzquelle; amtliches Archiv stoxx.com/news-archive antwortet HTTP 403 (Befund, nicht umgangen). Naechster Lauf erneut; ohne zugaengliches STOXX-Archiv spaeter abzulehnen (K3). | Erneut 2026-11-20T00:25Z: www.stoxx.com/news-archive HTTP 403 (stoxx.com/news-archive/ 404); nicht umgangen. Weiterhin keine offene Ersatzquelle. | Erneut 2026-11-22T00:14Z: stoxx.com/news-archive weiterhin HTTP 403; nicht umgangen. | Erneut 2026-11-23T04:35Z: stoxx.com/news-archive weiterhin HTTP 403; nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-18T09:45Z",
-    "geprueft_utc": "2026-11-22T00:14Z"
+    "geprueft_utc": "2026-11-23T04:35Z"
   },
   {
     "id": "hang_seng_indexaenderungen",
@@ -7052,12 +7052,12 @@
     "domain": "www.accessdata.fda.gov",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Firmenereignis-Typ, kein Doppel zu fda_warning_letters (andere Massnahme). Liste offen, HTTP 200; Datum je Alert «Date Published» bzw. «Last Updated» prüfen (K4). | Lauf 2026-11-19T12:30Z: www.accessdata.fda.gov/cms_ia/ialist.html leitet auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung), wie bei fda_orphan_designationen. Sperre nicht umgangen (Befund), naechster Lauf erneut. | Test 2026-11-20T16:10Z: weiterhin HTTP 302 auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-22T00:14Z: weiterhin HTTP 302 auf abuse-detection-apology; nicht umgangen.",
+    "grund": "Lernrunde 2026-11-19 (Zusatz Vorrat; Zusatz 8: Firmenereignisse zuerst). Neuer Firmenereignis-Typ, kein Doppel zu fda_warning_letters (andere Massnahme). Liste offen, HTTP 200; Datum je Alert «Date Published» bzw. «Last Updated» prüfen (K4). | Lauf 2026-11-19T12:30Z: www.accessdata.fda.gov/cms_ia/ialist.html leitet auf /apology_objects/abuse-detection-apology.html um (HTTP 404, Missbrauchserkennung), wie bei fda_orphan_designationen. Sperre nicht umgangen (Befund), naechster Lauf erneut. | Test 2026-11-20T16:10Z: weiterhin HTTP 302 auf abuse-detection-apology (Sperre); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-22T00:14Z: weiterhin HTTP 302 auf abuse-detection-apology; nicht umgangen. | Erneut 2026-11-23T04:35Z: weiterhin HTTP 302 auf abuse-detection-apology; nicht umgangen.",
     "mechanismus": "Einfuhrsperren gegen Arzneimittel- und Lebensmittelwerke (oft Indien, China) unterbrechen Lieferketten von Pharma und Nahrung und können XLV, IBB und DBA kurzfristig gegenüber dem Weltindex bewegen.",
     "prioritaet": "normal",
     "reihen": [],
     "aufgenommen_utc": "2026-11-19T10:00Z",
-    "geprueft_utc": "2026-11-22T00:14Z"
+    "geprueft_utc": "2026-11-23T04:35Z"
   },
   {
     "id": "swissmedic_neuzulassungen",
@@ -7480,13 +7480,13 @@
     "url": "https://www.nlrb.gov/reports/graphs-data/recent-election-results",
     "domain": "www.nlrb.gov",
     "bereich": "Firmenereignisse",
-    "status": "fehler",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Erfolgreiche Gewerkschaftswahlen erhöhen erwartete Lohnkosten der betroffenen Firmen (Lee und Mas 2012, QJE: negative Kursreaktion um NLRB-Wahlen); eine Häufung von Wahlerfolgen kann arbeitsintensive Sektoren (XLY, XLI) kurzfristig gegenüber dem Weltindex belasten.",
-    "grund": "Eigene Recherche Lauf 2026-11-21T08Z. Seite HTTP 200, Tabelle nur per JavaScript; robots.txt sperrt /search/ (Fallsuche, daher nicht verwendet). Öffentlicher Knopf «Download CSV» startet einen serverseitigen Export (/nlrb-downloads/start-download/recent_election_results/..., Antwort 200), der Export blieb aber in zwei Versuchen bei total 0 / finished 0 stehen; Datei 404. Historie (Beginn) noch unbekannt. Datum wäre das Tally-Issued-Datum (Tag der Bekanntgabe), Zählung revidierbar falls Nachzählungen. Nächster Lauf erneut.",
+    "grund": "Eigene Recherche Lauf 2026-11-21T08Z. Seite HTTP 200, Tabelle nur per JavaScript; robots.txt sperrt /search/ (Fallsuche, daher nicht verwendet). Öffentlicher Knopf «Download CSV» startet einen serverseitigen Export (/nlrb-downloads/start-download/recent_election_results/..., Antwort 200), der Export blieb aber in zwei Versuchen bei total 0 / finished 0 stehen; Datei 404. Historie (Beginn) noch unbekannt. Datum wäre das Tally-Issued-Datum (Tag der Bekanntgabe), Zählung revidierbar falls Nachzählungen. Nächster Lauf erneut. | Lauf 2026-11-23T04:35Z: abgelehnt (K7, K5). Liste serverseitig seitenweise abrufbar (?number=100&page=N, HTTP 200, 35564 Wahlen, Tally-Issued-Datum ab 2003, dicht ab etwa 2007; robots.txt erlaubt /reports/). Vollabruf braucht 356 Seiten zu je rund 2 s = rund 12 min, ueber K7 (3 min). Neuester Tally auf Seite 1 vom 05.11.2026, also rund 18 Tage Veroeffentlichungsverzug (K5 verletzt, verfuegbar_nach_tagen waere ueber 14). Zudem Faelle ohne Tally-Datum werden mit dem Abrufdatum angezeigt (z.B. 28-RC-196550, eingereicht 2017, Tally 22.11.2026), Datum damit nicht punktgenau (K4). Keine Ablage.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T08:10Z",
-    "geprueft_utc": "2026-11-21T08:10Z",
+    "geprueft_utc": "2026-11-23T04:35Z",
     "herkunft": "eigene Recherche"
   },
   {
@@ -7528,10 +7528,10 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Sanktionen gegen Abschlussprüfer wecken Zweifel an der Bilanzqualität geprüfter Firmen (Dee, Lulseged und Zhang 2011); Häufungen könnten Finanzwerte (XLF) kurzfristig gegenüber dem Weltindex belasten.",
-    "grund": "Test 2026-11-21: HTTP 403 von dieser Umgebung (nicht umgangen); Scout prüft erneut. Ab 2005. | Erneut 2026-11-21T16:15Z: pcaobus.org weiterhin HTTP 403 von dieser Umgebung; nicht umgangen, naechster Lauf erneut.",
+    "grund": "Test 2026-11-21: HTTP 403 von dieser Umgebung (nicht umgangen); Scout prüft erneut. Ab 2005. | Erneut 2026-11-21T16:15Z: pcaobus.org weiterhin HTTP 403 von dieser Umgebung; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-23T04:35Z: pcaobus.org weiterhin HTTP 403; nicht umgangen, naechster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-21T10:30Z",
-    "geprueft_utc": "2026-11-21T16:15Z",
+    "geprueft_utc": "2026-11-23T04:35Z",
     "herkunft": "Lernrunde 2026-11-21"
   },
   {
