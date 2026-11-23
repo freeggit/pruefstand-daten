@@ -721,6 +721,12 @@
    "erst_zeit": "1.10.2026, 09:29 (Europe/Zurich)",
    "beleg": "suche/S0017_alle.csv.gz"
   },
+  "neu_fedregister_itc_337_patentverfahren_einleitungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261123T154353Z",
+   "erst_zeit": "2026-11-23T18:37Z",
+   "beleg": "suche/laeufe/L20261123T154353Z.json"
+  },
   "neu_fedregister_nhtsa_regeln_anzahl": {
    "erst_dokument": "S0016",
    "erst_lauf": null,
@@ -1315,6 +1321,12 @@
    "erst_zeit": "2026-11-12T16:35Z",
    "beleg": "suche/laeufe/L20261112T132422Z.json"
   },
+  "neu_ssa_zahltage_sozialversicherung_zahltag_mittwoch": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261123T154353Z",
+   "erst_zeit": "2026-11-23T18:37Z",
+   "beleg": "suche/laeufe/L20261123T154353Z.json"
+  },
   "neu_treasury_auktionen_bid_to_cover": {
    "erst_dokument": "S0009",
    "erst_lauf": null,
@@ -1356,6 +1368,18 @@
    "erst_lauf": null,
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
+  },
+  "neu_uek_uebernahmen_schweiz_angebote": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261123T154353Z",
+   "erst_zeit": "2026-11-23T18:37Z",
+   "beleg": "suche/laeufe/L20261123T154353Z.json"
+  },
+  "neu_uek_uebernahmen_schweiz_rueckkaeufe": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261123T154353Z",
+   "erst_zeit": "2026-11-23T18:37Z",
+   "beleg": "suche/laeufe/L20261123T154353Z.json"
   },
   "neu_uk_gazette_insolvenzmeldungen_abwicklungsantraege": {
    "erst_dokument": null,
@@ -1470,6 +1494,12 @@
    "erst_lauf": "L20261021T051835Z",
    "erst_zeit": "2026-10-21T07:12Z",
    "beleg": "suche/laeufe/L20261021T051835Z.json"
+  },
+  "neu_voteview_gesetzesabstimmungen_abstimmungen": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261123T154353Z",
+   "erst_zeit": "2026-11-23T18:37Z",
+   "beleg": "suche/laeufe/L20261123T154353Z.json"
   },
   "neu_wikipedia_weitere_duerre": {
    "erst_dokument": "S0009",
@@ -2366,8 +2396,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261122T125609Z",
-  "zeit_utc": "2026-11-22T16:42Z",
-  "grundreihen_n": 393
+  "lauf_id": "L20261123T154353Z",
+  "zeit_utc": "2026-11-23T18:37Z",
+  "grundreihen_n": 398
  }
 }

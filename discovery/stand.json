@@ -4331,6 +4331,24 @@
    "aufgenommen_utc": "2026-10-28T10:53:39Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__uk_gazette_insolvenzmeldungen__abwicklungsantraege.csv.gz": {
+   "datei": "n__neu__uk_gazette_insolvenzmeldungen__abwicklungsantraege.csv.gz@3c8f4262b44ccd05",
+   "sha": "3c8f4262b44ccd05a10da9da756df9bfab8ddb25ef166d3db006eb462c23c381",
+   "sha_inhalt": "5e2d1ef1204bbf0048fda159bb4d97efc04834d8f109d2d4a082f021548b3a4f",
+   "zeilen": 8400,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-23T15:44:32Z",
+   "lauf_id": "L20261123T154353Z"
+  },
+  "n__neu__uk_gazette_insolvenzmeldungen__firmen_insolvenz.csv.gz": {
+   "datei": "n__neu__uk_gazette_insolvenzmeldungen__firmen_insolvenz.csv.gz@4fe02eed8fe13e86",
+   "sha": "4fe02eed8fe13e862c178332ebd15c5026bddc7ad3adc57f2e20721bef206bc4",
+   "sha_inhalt": "e4b6d651b07c58ff9aa9d29b1dad9066fddce8435aa78150c8fc882283102804",
+   "zeilen": 8400,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-23T15:44:32Z",
+   "lauf_id": "L20261123T154353Z"
+  },
   "n__neu__us_arbeitsmarkt_termine__arbeitsmarkt.csv.gz": {
    "datei": "n__neu__us_arbeitsmarkt_termine__arbeitsmarkt.csv.gz@b6f689777fce258a",
    "sha": "b6f689777fce258a253d69fcb95092f63339232474b4dfdeb8b9ac760a278876",
@@ -5306,8 +5324,8 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-22T18:54:08Z",
- "dateien_n": 586,
+ "stand_utc": "2026-11-23T15:44:38Z",
+ "dateien_n": 588,
  "vorgemerkt": {
   "n__neu__eex_eua_auktionsergebnisse__deckungsquote.csv.gz": {
    "erstmals_utc": "2026-11-22T12:56:34Z",
@@ -5317,6 +5335,13 @@
     {
      "utc": "2026-11-22T12:56:34Z",
      "lauf_id": "L20261122T125609Z",
+     "werte": 1633,
+     "erste": "2012-06-12",
+     "sha_inhalt": "78624fa0d946679fc80813497748df63fe03a6f6a308752f527caacfceddb92d"
+    },
+    {
+     "utc": "2026-11-23T15:44:22Z",
+     "lauf_id": "L20261123T154353Z",
      "werte": 1633,
      "erste": "2012-06-12",
      "sha_inhalt": "78624fa0d946679fc80813497748df63fe03a6f6a308752f527caacfceddb92d"
@@ -5334,6 +5359,13 @@
      "werte": 1660,
      "erste": "2012-01-03",
      "sha_inhalt": "d1ed5497e89fef620db949563b107d6325f94739df9719d30d5299f5ad06cd96"
+    },
+    {
+     "utc": "2026-11-23T15:44:22Z",
+     "lauf_id": "L20261123T154353Z",
+     "werte": 1660,
+     "erste": "2012-01-03",
+     "sha_inhalt": "d1ed5497e89fef620db949563b107d6325f94739df9719d30d5299f5ad06cd96"
     }
    ]
   },
@@ -5345,6 +5377,13 @@
     {
      "utc": "2026-11-22T12:56:34Z",
      "lauf_id": "L20261122T125609Z",
+     "werte": 859,
+     "erste": "1980-01-01",
+     "sha_inhalt": "bfa3e38f2cdce980773882cf3d936dbf08e00a3aa6d6064b585acccc9e2ea861"
+    },
+    {
+     "utc": "2026-11-23T15:44:22Z",
+     "lauf_id": "L20261123T154353Z",
      "werte": 859,
      "erste": "1980-01-01",
      "sha_inhalt": "bfa3e38f2cdce980773882cf3d936dbf08e00a3aa6d6064b585acccc9e2ea861"
@@ -5362,6 +5401,27 @@
      "werte": 774,
      "erste": "1980-01-01",
      "sha_inhalt": "4433d261c40a9f611b4d9509018cb7c55adf0e389ac50eddf958330d10b2adbb"
+    },
+    {
+     "utc": "2026-11-23T15:44:23Z",
+     "lauf_id": "L20261123T154353Z",
+     "werte": 774,
+     "erste": "1980-01-01",
+     "sha_inhalt": "4433d261c40a9f611b4d9509018cb7c55adf0e389ac50eddf958330d10b2adbb"
+    }
+   ]
+  },
+  "n__neu__fedregister_itc_337_patentverfahren__einleitungen.csv.gz": {
+   "erstmals_utc": "2026-11-23T15:44:25Z",
+   "beste_werte": 911,
+   "frueheste_erste": "1994-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-23T15:44:25Z",
+     "lauf_id": "L20261123T154353Z",
+     "werte": 911,
+     "erste": "1994-01-01",
+     "sha_inhalt": "79d559ae9c190e6ec0944a80917e422903a0736f88c95e44fb66c96233415ad5"
     }
    ]
   },
@@ -5376,48 +5436,55 @@
      "werte": 849,
      "erste": "1997-06-01",
      "sha_inhalt": "ebd9e0d9efa97734ae68684654d9bfae9a38b3d57c27998ebc56236bb197a22a"
+    },
+    {
+     "utc": "2026-11-23T15:44:31Z",
+     "lauf_id": "L20261123T154353Z",
+     "werte": 849,
+     "erste": "1997-06-01",
+     "sha_inhalt": "ebd9e0d9efa97734ae68684654d9bfae9a38b3d57c27998ebc56236bb197a22a"
     }
    ]
   },
-  "n__neu__uk_gazette_insolvenzmeldungen__abwicklungsantraege.csv.gz": {
-   "erstmals_utc": "2026-11-21T13:07:58Z",
-   "beste_werte": 5794,
-   "frueheste_erste": "1998-01-02",
+  "n__neu__uek_uebernahmen_schweiz__angebote.csv.gz": {
+   "erstmals_utc": "2026-11-23T15:44:32Z",
+   "beste_werte": 164,
+   "frueheste_erste": "1997-11-03",
    "sichtungen": [
     {
-     "utc": "2026-11-21T13:07:58Z",
-     "lauf_id": "L20261121T130737Z",
-     "werte": 5794,
-     "erste": "1998-01-02",
-     "sha_inhalt": "5e2d1ef1204bbf0048fda159bb4d97efc04834d8f109d2d4a082f021548b3a4f"
-    },
-    {
-     "utc": "2026-11-22T12:56:44Z",
-     "lauf_id": "L20261122T125609Z",
-     "werte": 5794,
-     "erste": "1998-01-02",
-     "sha_inhalt": "5e2d1ef1204bbf0048fda159bb4d97efc04834d8f109d2d4a082f021548b3a4f"
+     "utc": "2026-11-23T15:44:32Z",
+     "lauf_id": "L20261123T154353Z",
+     "werte": 164,
+     "erste": "1997-11-03",
+     "sha_inhalt": "1ce9fb6785acc2ad10593cdfd832209d2da6a175ac8304f3182d5425bb6dc1f2"
     }
    ]
   },
-  "n__neu__uk_gazette_insolvenzmeldungen__firmen_insolvenz.csv.gz": {
-   "erstmals_utc": "2026-11-21T13:07:58Z",
-   "beste_werte": 6006,
-   "frueheste_erste": "1998-01-02",
+  "n__neu__uek_uebernahmen_schweiz__rueckkaeufe.csv.gz": {
+   "erstmals_utc": "2026-11-23T15:44:32Z",
+   "beste_werte": 397,
+   "frueheste_erste": "1997-11-03",
    "sichtungen": [
     {
-     "utc": "2026-11-21T13:07:58Z",
-     "lauf_id": "L20261121T130737Z",
-     "werte": 6006,
-     "erste": "1998-01-02",
-     "sha_inhalt": "e4b6d651b07c58ff9aa9d29b1dad9066fddce8435aa78150c8fc882283102804"
-    },
+     "utc": "2026-11-23T15:44:32Z",
+     "lauf_id": "L20261123T154353Z",
+     "werte": 397,
+     "erste": "1997-11-03",
+     "sha_inhalt": "13b89ba4dae7e18167d71e240b6e4f130886ecbdb57a5bb695745007504bf16e"
+    }
+   ]
+  },
+  "n__neu__voteview_gesetzesabstimmungen__abstimmungen.csv.gz": {
+   "erstmals_utc": "2026-11-23T15:44:33Z",
+   "beste_werte": 23426,
+   "frueheste_erste": "1789-05-16",
+   "sichtungen": [
     {
-     "utc": "2026-11-22T12:56:44Z",
-     "lauf_id": "L20261122T125609Z",
-     "werte": 6006,
-     "erste": "1998-01-02",
-     "sha_inhalt": "e4b6d651b07c58ff9aa9d29b1dad9066fddce8435aa78150c8fc882283102804"
+     "utc": "2026-11-23T15:44:33Z",
+     "lauf_id": "L20261123T154353Z",
+     "werte": 23426,
+     "erste": "1789-05-16",
+     "sha_inhalt": "81aed0cbbfd4aebae2958796d94c57e453ff03952f42bbcfb2f7c103f6731846"
     }
    ]
   }
