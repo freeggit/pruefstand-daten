@@ -1,0 +1,11 @@
+{
+  "anzahl": {
+    "beschreibung": "Taegliche Anzahl im Federal Register veroeffentlichter Proklamationen des US-Praesidenten, deren Volltext 'imports' oder 'tariff' enthaelt (Zoelle, Importbeschraenkungen, Zolltarif, Handelspraeferenzen), ohne Gedenk- und Feiertagsproklamationen (Titel endet auf Jahreszahl); 0 an Tagen ohne solche Proklamation; Beginn 1994-01-01, Ende am letzten Federal-Register-Tag.",
+    "einheit": "Anzahl Proklamationen",
+    "publikation": "taeglich (Federal Register erscheint an jedem US-Bundesarbeitstag; Proklamation gilt spaetestens am gedruckten Publikationsdatum als oeffentlich, meist einige Tage nach Unterzeichnung und Mitteilung des Weissen Hauses)",
+    "quelle_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bpresidential_document_type%5D%5B%5D=proclamation&conditions%5Bterm%5D=imports",
+    "revidiert": false,
+    "verdichtung": "Anzahl verschiedener Dokumente je Kalendertag (Publikationsdatum), Vereinigung der Volltextsuchen 'imports' und 'tariff'",
+    "verfuegbar_nach_tagen": 0
+  }
+}

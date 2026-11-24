@@ -8030,5 +8030,21 @@
       "min": 0,
       "max": 59
     }
+  },
+  {
+    "id": "fedregister_proklamationen_handel",
+    "name": "Federal Register: Proklamationen des US-Praesidenten zu Handel und Zoellen je Tag",
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[presidential_document_type][]=proclamation&conditions[term]=imports|tariff",
+    "domain": "federalregister.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Handelsproklamationen (Section-232/201-Zoelle auf Stahl, Aluminium, Kupfer, Halbleiter, Solar; Zolltarif- und Praeferenzaenderungen) treffen einzelne Branchen (XLB, XLI, XLY) und Exportlaender (EWJ, EWG) direkt und koennen sie in den folgenden 1 bis 20 Handelstagen gegenueber dem Weltindex bewegen.",
+    "grund": "Eigene Recherche Lauf 2026-11-24T08:20Z (Zusatz 6 Punkt 5; alle offenen Firmenereignis-Kandidaten gesperrt oder nur ueber die SEC-Action). Abgrenzung: fedregister_executive_orders zaehlt nur Executive Orders, fedregister_ustr_handelspolitik nur USTR-Bekanntmachungen; Proklamationen (Rechtsform der Section-232-Zoelle) fehlten. Federal-Register-API offen ohne Schluessel (HTTP 200). Auswahl: Proklamationen mit Volltext 'imports' oder 'tariff', ohne Gedenk-/Feiertagsproklamationen (Titel endet auf Jahreszahl; Stichprobe 2015 und 2026 geprueft). Datum = Publikationsdatum im Federal Register (konservativ, Unterzeichnung meist einige Tage frueher), verfuegbar_nach_tagen 0. Inkrementell: abgeschlossene Jahre aus _dokumente.json, abgefragt nur Vorjahr und laufendes Jahr (fr_inkrementell, Pause 0,5 s). Pruefung: 12015 Zeilen 1994-01-01 bis 2026-11-23, Median-Abstand 1 Tag, 254 Proklamationen an 219 Tagen (3 bis 23 je Jahr, 2025/2026 gehaeuft), min 0, max 5; Anteil gleicher Folgewerte 96,5 % (seltene Ereignisse, Nullen an Tagen ohne Proklamation, kein Fehler). Abruf erstmals 55 s, K7 erfuellt. Nicht revidiert; Volltextindex der API koennte sich nachtraeglich aendern (vermerkt). Vorschlag Paar (Entscheid Reto): keines.",
+    "reihen": [
+      "anzahl"
+    ],
+    "aufgenommen_utc": "2026-11-24T08:20Z",
+    "geprueft_utc": "2026-11-24T08:20Z"
   }
 ]
