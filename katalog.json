@@ -8046,5 +8046,61 @@
     ],
     "aufgenommen_utc": "2026-11-24T08:20Z",
     "geprueft_utc": "2026-11-24T08:20Z"
+  },
+  {
+    "id": "sec_8k_item401_pruferwechsel",
+    "name": "SEC EDGAR Volltextsuche: 8-K mit Item 4.01 (Wechsel des Abschlussprüfers) je Tag",
+    "url": "https://efts.sec.gov/LATEST/search-index?q=%22Item%204.01%22&forms=8-K&dateRange=custom&startdt={von}&enddt={bis} (über die SEC-Action auf main; Volltext ab 2001)",
+    "domain": "efts.sec.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Prüferwechsel, vor allem Rücktritte des Prüfers, signalisieren Bilanzrisiken; gehäufte Wechsel in einem Sektor (z.B. XLF, XLK) können ihn in den folgenden 1 bis 20 Handelstagen gegenüber dem Weltindex belasten.",
+    "grund": "Lernrunde 2026-11-24, Vorrat (Zusatz 1), Firmenereignisse erste Priorität (Zusatz 8). Abgrenzung zu sec_8k_bilanzkorrektur_item402 und sec_8k_nichtverlass_item402 (Item 4.02, nicht 4.01). Marktreaktion auf Prüferrücktritte veröffentlicht (Whisenant, Sankaraguruswamy, Raghunandan 2003), evtl. abgeschwächt (L3).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-24T10:30Z",
+    "geprueft_utc": "2026-11-24T10:30Z"
+  },
+  {
+    "id": "sec_8k_item201_uebernahmen_abschluss",
+    "name": "SEC EDGAR Volltextsuche: 8-K mit Item 2.01 (Abschluss von Übernahmen und Verkäufen) je Tag",
+    "url": "https://efts.sec.gov/LATEST/search-index?q=%22Item%202.01%22&forms=8-K&dateRange=custom&startdt={von}&enddt={bis} (über die SEC-Action auf main)",
+    "domain": "efts.sec.gov",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Beim Vollzug von Übernahmen fliesst Bargeld an die Aktionäre der Zielfirmen und Indexfonds müssen umschichten; Häufungen in einem Sektor können diesen kurzfristig gegenüber dem Weltindex bewegen.",
+    "grund": "Lernrunde 2026-11-24, Vorrat. Abgrenzung: sec_s4_fusionsregistrierungen (Ankündigung/Registrierung) und sec_sc_to_uebernahmeangebote (Angebote) messen frühere Schritte; Item 2.01 misst den Vollzug. Reinvestitionsdruck nach Barübernahmen ist in der Literatur beschrieben, evtl. abgeschwächt (L3).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-24T10:30Z",
+    "geprueft_utc": "2026-11-24T10:30Z"
+  },
+  {
+    "id": "nasdaq_exdividenden_kalender_dichte",
+    "name": "Nasdaq Dividendenkalender: Anzahl Ex-Dividenden-Tage je Handelstag",
+    "url": "https://api.nasdaq.com/api/calendar/dividends?date={JJJJ-MM-TT} (Idee; Erreichbarkeit, Historie und Nutzungsbedingungen prüft der Scout; Ersatz: Ex-Daten aus SEC-Formularen)",
+    "domain": "nasdaq.com",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Dividendenjäger kaufen vor dem Ex-Tag und verkaufen danach; gehäufte Ex-Tage in dividendenstarken Sektoren (XLU, XLRE, XLP) erzeugen kurzfristigen Nachfragedruck gegenüber dem Weltindex.",
+    "grund": "Lernrunde 2026-11-24, Vorrat, Firmenereignisse (Unternehmenskalender). Abgrenzung zu dividendenerhoehungen_sp500_dichte (Erhöhungen, nicht Ex-Tage). Dividendenmonat-Prämie veröffentlicht (Hartzmark und Solomon 2013), evtl. abgeschwächt (L3).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-24T10:30Z",
+    "geprueft_utc": "2026-11-24T10:30Z"
+  },
+  {
+    "id": "us_praesidenten_reden_dichte",
+    "name": "American Presidency Project: Anzahl Reden und Erklärungen des US-Präsidenten je Tag",
+    "url": "https://www.presidency.ucsb.edu/advanced-search (Idee; Suche nach Datum und Kategorie, Historie ab 1789; Erreichbarkeit prüft der Scout)",
+    "domain": "presidency.ucsb.edu",
+    "bereich": "Staat",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Viele Reden und Erklärungen bündeln politische Ankündigungen (Zölle, Steuern, Militär); das erhöht kurzfristig die Unsicherheit für betroffene Sektoren und Anleihen gegenüber dem Weltindex.",
+    "grund": "Lernrunde 2026-11-24, Vorrat, Historie vor 1990 (zweite Priorität, Zusatz 6 des Scouts). Abgrenzung zu fedregister_executive_orders und fedregister_proklamationen_handel (nur Rechtsakte ab 1994) und zu twitter_unsicherheit (ab 2011). Politische Unsicherheit als Preisfaktor veröffentlicht (Pastor und Veronesi 2013), evtl. abgeschwächt (L3).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-24T10:30Z",
+    "geprueft_utc": "2026-11-24T10:30Z"
   }
 ]

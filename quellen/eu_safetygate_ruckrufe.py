@@ -19,6 +19,7 @@ OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "neu", ID)
 # K7 (3 Minuten) verletzen. Darum ab 2015-12-31.
 FIRST_ALLOWED = datetime.date(2015, 12, 31)
 WORKERS = 10
+NACHHOLEN_TAGE = 28
 
 
 def fetch(url, tries=3):
@@ -73,6 +74,29 @@ def main():
 
     weeks.sort()
 
+    # Inkrementell (Lernrunde 2026-11-24): Der volle Abruf aller ~570
+    # Wochenberichte lief wiederholt ins Zeitlimit. Bestehende Werte werden
+    # uebernommen; neu abgerufen werden nur Wochen ab NACHHOLEN_TAGE vor dem
+    # letzten bekannten Bericht (faengt Nachtraege ab). Fehlt die Datei, wird
+    # wie bisher alles geholt.
+    old_counts = {}
+    old_path = os.path.join(OUT_DIR, "meldungen.csv.gz")
+    if os.path.exists(old_path) and not os.environ.get("SAFETYGATE_VOLL"):
+        with gzip.open(old_path, "rt", encoding="utf-8") as f:
+            next(f, None)
+            for line in f:
+                parts = line.strip().split(",")
+                if len(parts) == 2 and parts[1] not in ("", "0"):
+                    old_counts[datetime.date.fromisoformat(parts[0])] = int(parts[1])
+    if old_counts:
+        cutoff = max(old_counts) - datetime.timedelta(days=NACHHOLEN_TAGE)
+        fetch_weeks = [(d, u) for (d, u) in weeks if d >= cutoff or d not in old_counts]
+        # Wochen vor dem Schnitt, die frueher 0 Meldungen hatten, nicht erneut holen
+        fetch_weeks = [(d, u) for (d, u) in fetch_weeks if d >= cutoff]
+    else:
+        cutoff = None
+        fetch_weeks = weeks
+
     def count_week(item):
         d, url = item
         try:
@@ -83,11 +107,21 @@ def main():
         return (d, n)
 
     counts = {}
+    if cutoff is not None:
+        counts = {d: n for d, n in old_counts.items() if d < cutoff}
+    fehlend = []
     with ThreadPoolExecutor(max_workers=WORKERS) as ex:
-        for d, n in ex.map(count_week, weeks):
+        for d, n in ex.map(count_week, fetch_weeks):
             if n is None:
+                fehlend.append(d)
                 continue
             counts[d] = counts.get(d, 0) + n
+    if cutoff is not None:
+        for d in fehlend:
+            if d in old_counts:
+                counts[d] = old_counts[d]
+            else:
+                raise RuntimeError("Wochenbericht %s nicht abrufbar" % d.isoformat())
 
     if not counts:
         raise RuntimeError("keine Wochenberichte erfolgreich abgerufen")
