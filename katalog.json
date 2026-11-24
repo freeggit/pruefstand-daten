@@ -8081,13 +8081,13 @@
     "url": "https://api.nasdaq.com/api/calendar/dividends?date={JJJJ-MM-TT} (Idee; Erreichbarkeit, Historie und Nutzungsbedingungen prüft der Scout; Ersatz: Ex-Daten aus SEC-Formularen)",
     "domain": "nasdaq.com",
     "bereich": "Firmenereignisse",
-    "status": "kandidat",
+    "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Dividendenjäger kaufen vor dem Ex-Tag und verkaufen danach; gehäufte Ex-Tage in dividendenstarken Sektoren (XLU, XLRE, XLP) erzeugen kurzfristigen Nachfragedruck gegenüber dem Weltindex.",
-    "grund": "Lernrunde 2026-11-24, Vorrat, Firmenereignisse (Unternehmenskalender). Abgrenzung zu dividendenerhoehungen_sp500_dichte (Erhöhungen, nicht Ex-Tage). Dividendenmonat-Prämie veröffentlicht (Hartzmark und Solomon 2013), evtl. abgeschwächt (L3).",
+    "grund": "Lernrunde 2026-11-24, Vorrat, Firmenereignisse (Unternehmenskalender). Abgrenzung zu dividendenerhoehungen_sp500_dichte (Erhöhungen, nicht Ex-Tage). Dividendenmonat-Prämie veröffentlicht (Hartzmark und Solomon 2013), evtl. abgeschwächt (L3). | Test 2026-11-24T12:20Z: api.nasdaq.com keine Verbindung (curl 000, Zeitlimit 30 s), wie nasdaq_ipo_kalender und nasdaq_earnings_kalender_dichte; Historie und Nutzungsbedingungen damit nicht prüfbar; Sperre nicht umgangen, nächster Lauf erneut. Ersatz über SEC-Formulare nur via Action auf main.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-24T10:30Z",
-    "geprueft_utc": "2026-11-24T10:30Z"
+    "geprueft_utc": "2026-11-24T12:20Z"
   },
   {
     "id": "us_praesidenten_reden_dichte",
@@ -8095,12 +8095,12 @@
     "url": "https://www.presidency.ucsb.edu/advanced-search (Idee; Suche nach Datum und Kategorie, Historie ab 1789; Erreichbarkeit prüft der Scout)",
     "domain": "presidency.ucsb.edu",
     "bereich": "Staat",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Viele Reden und Erklärungen bündeln politische Ankündigungen (Zölle, Steuern, Militär); das erhöht kurzfristig die Unsicherheit für betroffene Sektoren und Anleihen gegenüber dem Weltindex.",
-    "grund": "Lernrunde 2026-11-24, Vorrat, Historie vor 1990 (zweite Priorität, Zusatz 6 des Scouts). Abgrenzung zu fedregister_executive_orders und fedregister_proklamationen_handel (nur Rechtsakte ab 1994) und zu twitter_unsicherheit (ab 2011). Politische Unsicherheit als Preisfaktor veröffentlicht (Pastor und Veronesi 2013), evtl. abgeschwächt (L3).",
+    "grund": "Lernrunde 2026-11-24, Vorrat, Historie vor 1990 (zweite Priorität, Zusatz 6 des Scouts). Abgrenzung zu fedregister_executive_orders und fedregister_proklamationen_handel (nur Rechtsakte ab 1994) und zu twitter_unsicherheit (ab 2011). Politische Unsicherheit als Preisfaktor veröffentlicht (Pastor und Veronesi 2013), evtl. abgeschwächt (L3). | Test 2026-11-24T12:20Z: advanced-search HTTP 200 (z.B. 15 Dokumente am 15.3.1985, 142 im Nov. 2026), aber K3: robots.txt der Seite («Proactive Block for Major AI/LLM Scrapers») sperrt ClaudeBot/Anthropic ausdrücklich und begründet die Sperrliste mit Stabilität der Anwendung; ein KI-gesteuerter Massenabruf über die Suche widerspricht dem erkennbaren Willen des Betreibers, Kennung wird nicht gewechselt. Zudem K4 fraglich: kuratiertes Archiv, Dokumente werden nachträglich ergänzt (Zählung je Tag revidiert). Abgelehnt.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-24T10:30Z",
-    "geprueft_utc": "2026-11-24T10:30Z"
+    "geprueft_utc": "2026-11-24T12:20Z"
   }
 ]
