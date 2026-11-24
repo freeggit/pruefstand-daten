@@ -1,0 +1,12 @@
+{
+  "primaerinsider_handel": {
+    "beschreibung": "Oslo Boers NewsWeb: Anzahl veroeffentlichter Pflichtmeldungen der Kategorie MANAGERS' TRANSACTION (Meldepliktig handel for primaerinnsidere) (Kat.-Nr. 1102) je Tag; Datum = Veroeffentlichungstag (publishedTime, UTC); Berichtigungen und Testmeldungen nicht gezaehlt; 0 an Tagen ohne Meldung",
+    "einheit": "Anzahl Meldungen",
+    "hinweis_revision": "Kategorien vor Einfuehrung von MAR in Norwegen (2021) und vor 2016 wurden nachtraeglich der heutigen Kategorienliste zugeordnet; die Zuordnung ist ein einmaliger Umbau, keine Revision einzelner Werte. Geloeschte Meldungen waeren nicht sichtbar.",
+    "publikation": "taeglich: Pflichtmeldungen erscheinen auf NewsWeb im Moment der Veroeffentlichung (Oslo Boers ist Officially Appointed Mechanism nach Verdipapirhandelloven); Tageszahl am Abend bekannt",
+    "quelle_url": "https://newsweb.oslobors.no",
+    "revidiert": false,
+    "verdichtung": "Summe (Anzahl Meldungen je UTC-Kalendertag)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
