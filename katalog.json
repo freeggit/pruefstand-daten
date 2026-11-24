@@ -8102,5 +8102,72 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-24T10:30Z",
     "geprueft_utc": "2026-11-24T12:20Z"
+  },
+  {
+    "id": "amf_bdif_offres_publiques",
+    "name": "AMF Frankreich (BDIF): Dokumente zu öffentlichen Übernahmeangeboten je Tag",
+    "url": "https://bdif.amf-france.org/back/api/v1/informations?typesInformation=OPA",
+    "domain": "bdif.amf-france.org",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Gehäufte Einreichungen öffentlicher Angebote und Angebotsdokumente am französischen Markt zeigen Übernahmewellen mit Prämien (Jensen/Ruback 1983); sie könnten europäische Aktien (EWG als nächster Länderfonds im Spiegel) und Finanzwerte (XLF, Beratungs- und Finanzierungsgeschäft) über 1 bis 20 Tage gegenüber dem Weltindex stützen. Paarvorschlag für Reto: uek_uebernahmen_schweiz:angebote gegen amf_bdif_offres_publiques:angebote_eingereicht (gleiches Ereignis, zwei Länder).",
+    "grund": "Eigene Recherche Lauf 2026-11-24T16:30Z (Zusatz 6/8: Firmenereignisse zuerst; neues Land Frankreich). Offene JSON-Schnittstelle der AMF-Datenbank BDIF (ohne Login, ohne Schlüssel, HTTP 200; kein robots.txt, die Adresse liefert die Webseite). Filter dateDebut/dateFin wirkt auf das Aufschaltdatum; Abruf je Monat, 227 Anfragen, rund 50 s (K7). Datum = dateMiseEnLigne (urspruengliches Aufschaltdatum; datePublication ist das Migrationsdatum 2021/22 und wird nicht verwendet). Beginn 2008-01-01, davor nur Bruchstücke (1997: 13 Dokumente, 1998-2007 keine). Prüfung: je Reihe 6902 Zeilen 2008-01-01 bis 2026-11-23, Median-Abstand 1 Tag; dokumente 27821 Dokumente, Min 0, Max 38, Anteil gleicher Folgewerte 28.3%; angebote_eingereicht 860 Einreichungen (23 bis 77 je Jahr), Max 5, gleiche Folgewerte 81.3% (erwartet bei Ereigniszählung). 2020 auffällig hoch (4016 Dokumente, viele Kauf-/Verkaufsmeldungen), kein Fehler erkennbar. K4: Migration 2021/22 könnte einzelne Altdokumente nicht übernommen haben; Datum fix, revidiert false. Publikation taeglich, verfuegbar_nach_tagen 1. Nicht übernommen: Rubrik DD (Directors' Dealings, erst ab 2021 in BDIF, K2), FT (Schwellenmeldungen; Bruch 2015: 653 statt rund 3000 bis 8000 je Jahr, darum unzuverlässig), VISA (Prospekte). Aktiv: dokumente, angebote_eingereicht.",
+    "reihen": [
+      "dokumente",
+      "angebote_eingereicht"
+    ],
+    "aufgenommen_utc": "2026-11-24T16:55Z",
+    "geprueft_utc": "2026-11-24T16:55Z",
+    "pruefung": {
+      "dokumente": {
+        "zeilen": 6902,
+        "erste": "2008-01-01",
+        "letzte": "2026-11-23",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.283,
+        "min": 0,
+        "max": 38,
+        "ereignisse": 27821
+      },
+      "angebote_eingereicht": {
+        "zeilen": 6902,
+        "erste": "2008-01-01",
+        "letzte": "2026-11-23",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.813,
+        "min": 0,
+        "max": 5,
+        "ereignisse": 860
+      }
+    }
+  },
+  {
+    "id": "fi_insynsregistret_schweden",
+    "name": "Finansinspektionen Schweden: Insynsregistret (Transaktionen von Führungspersonen)",
+    "url": "https://marknadssok.fi.se/publiceringsklient",
+    "domain": "marknadssok.fi.se",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Insiderkäufe von Führungspersonen schwedischer Emittenten als Signal für den schwedischen Markt und Industriewerte gegenüber dem Weltindex.",
+    "grund": "Eigene Recherche Lauf 2026-11-24T16:20Z. CSV-Export offen (HTTP 200, UTF-16, 1000 Zeilen je Seite), aber erster Eintrag 2016-07-04 (Register nach MAR); Abfrage 2000-2010 leer. K2 nicht erfüllt (Beginn nach 31.12.2015). Keine Ablage.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-24T16:55Z",
+    "geprueft_utc": "2026-11-24T16:55Z"
+  },
+  {
+    "id": "nasdaq_nordic_unternehmensmeldungen",
+    "name": "Nasdaq Nordic: Unternehmensmeldungen (Inside information, Managers' transactions) je Tag",
+    "url": "https://api.news.eu.nasdaq.com/news/query.action",
+    "domain": "api.news.eu.nasdaq.com",
+    "bereich": "Firmenereignisse",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Dichte von Ad-hoc-Meldungen (Inside information) und Führungspersonen-Transaktionen an den Börsen Stockholm, Helsinki, Kopenhagen als Informationsfluss für nordische Märkte gegenüber dem Weltindex.",
+    "grund": "Eigene Recherche Lauf 2026-11-24T16:10Z. JSON-Schnittstelle der Nasdaq-Nordic-Webseite antwortet (HTTP 200, robots.txt leer), aber undokumentiert: Datumsparameter (fromDate/toDate, dateFrom/dateTo, from/to) werden ignoriert, Trefferzahl auf 10000 gedeckelt, Blättern (start) ohne Wirkung; Historie damit nicht abrufbar. Nutzungsbedingungen für automatisierten Abruf unklar (K3). Keine Ablage; nur weiter prüfen, wenn ein dokumentierter Weg mit Datumsfilter besteht.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-24T16:55Z",
+    "geprueft_utc": "2026-11-24T16:55Z"
   }
 ]

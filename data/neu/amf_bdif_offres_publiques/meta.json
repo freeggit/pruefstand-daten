@@ -1,0 +1,20 @@
+{
+  "angebote_eingereicht": {
+    "beschreibung": "AMF BDIF Frankreich: Anzahl Einreichungen oeffentlicher Angebote (typesDocument DepotOffre) je Tag",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich: die AMF schaltet Angebotsdokumente (Depot, Avis, Decisions de conformite, Declarations des achats et ventes) am Tag der Veroeffentlichung in BDIF auf (Reglement general AMF, Art. 231-14 ff. und 231-46); Tageszaehlung erst am Folgetag vollstaendig, darum 1 Tag",
+    "quelle_url": "https://bdif.amf-france.org/fr?typesInformation=OPA",
+    "revidiert": false,
+    "verdichtung": "Anzahl Dokumente vom Typ DepotOffre je Kalendertag (Datum = dateMiseEnLigne), 0 an Tagen ohne Dokument",
+    "verfuegbar_nach_tagen": 1
+  },
+  "dokumente": {
+    "beschreibung": "AMF BDIF Frankreich: Anzahl aufgeschalteter Dokumente zu oeffentlichen Angeboten (OPA, OPR, OPAS u.a.) je Tag",
+    "einheit": "Anzahl Dokumente",
+    "publikation": "taeglich: die AMF schaltet Angebotsdokumente (Depot, Avis, Decisions de conformite, Declarations des achats et ventes) am Tag der Veroeffentlichung in BDIF auf (Reglement general AMF, Art. 231-14 ff. und 231-46); Tageszaehlung erst am Folgetag vollstaendig, darum 1 Tag",
+    "quelle_url": "https://bdif.amf-france.org/fr?typesInformation=OPA",
+    "revidiert": false,
+    "verdichtung": "Anzahl Dokumente je Kalendertag (Datum = dateMiseEnLigne), 0 an Tagen ohne Dokument",
+    "verfuegbar_nach_tagen": 1
+  }
+}
