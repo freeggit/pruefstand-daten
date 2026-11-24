@@ -2963,6 +2963,24 @@
    "aufgenommen_utc": "2026-11-13T12:44:07Z",
    "lauf_id": "L20261113T124343Z"
   },
+  "n__neu__eex_eua_auktionsergebnisse__deckungsquote.csv.gz": {
+   "datei": "n__neu__eex_eua_auktionsergebnisse__deckungsquote.csv.gz@c44783de995c9672",
+   "sha": "c44783de995c96729bf449ba368cc818b765dc21e74bbee857c777d225318910",
+   "sha_inhalt": "78624fa0d946679fc80813497748df63fe03a6f6a308752f527caacfceddb92d",
+   "zeilen": 1633,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-24T15:24:54Z",
+   "lauf_id": "L20261124T152433Z"
+  },
+  "n__neu__eex_eua_auktionsergebnisse__preis.csv.gz": {
+   "datei": "n__neu__eex_eua_auktionsergebnisse__preis.csv.gz@dee05a54e1e700a4",
+   "sha": "dee05a54e1e700a4097197d47b39129bfd8d079a821f9df6513fb77e3dbde636",
+   "sha_inhalt": "d1ed5497e89fef620db949563b107d6325f94739df9719d30d5299f5ad06cd96",
+   "zeilen": 1660,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-24T15:24:54Z",
+   "lauf_id": "L20261124T152433Z"
+  },
   "n__neu__ema_zulassungsentscheide__zulassungen_biosimilar.csv.gz": {
    "datei": "n__neu__ema_zulassungsentscheide__zulassungen_biosimilar.csv.gz@5fbed9eb3dd36894",
    "sha": "5fbed9eb3dd36894014c28b0542e7edb3d69d52613b7e0db98421702d9e7e387",
@@ -3007,6 +3025,24 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:34Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__eu_handelsschutz_antidumping__einleitungen.csv.gz": {
+   "datei": "n__neu__eu_handelsschutz_antidumping__einleitungen.csv.gz@05cf8859de588b1c",
+   "sha": "05cf8859de588b1c2da430bf821249cae668bcf77a175551ea4bfe08fbac0107",
+   "sha_inhalt": "bfa3e38f2cdce980773882cf3d936dbf08e00a3aa6d6064b585acccc9e2ea861",
+   "zeilen": 14976,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-24T15:24:55Z",
+   "lauf_id": "L20261124T152433Z"
+  },
+  "n__neu__eu_handelsschutz_antidumping__massnahmen.csv.gz": {
+   "datei": "n__neu__eu_handelsschutz_antidumping__massnahmen.csv.gz@bbeb3430ccc3d443",
+   "sha": "bbeb3430ccc3d4437d7645ebc0570e2f9d97cc2284d26f4d8130581801d03afd",
+   "sha_inhalt": "4433d261c40a9f611b4d9509018cb7c55adf0e389ac50eddf958330d10b2adbb",
+   "zeilen": 14976,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-24T15:24:55Z",
+   "lauf_id": "L20261124T152433Z"
   },
   "n__neu__eu_safetygate_ruckrufe__meldungen.csv.gz": {
    "datei": "n__neu__eu_safetygate_ruckrufe__meldungen.csv.gz@86faafa65dd2dc10",
@@ -4268,6 +4304,15 @@
    "aufgenommen_utc": "2026-11-14T11:51:48Z",
    "lauf_id": "L20261114T115120Z"
   },
+  "n__neu__ssa_zahltage_sozialversicherung__zahltag_mittwoch.csv.gz": {
+   "datei": "n__neu__ssa_zahltage_sozialversicherung__zahltag_mittwoch.csv.gz@7dada55e72397f55",
+   "sha": "7dada55e72397f5576812a45e064420ec0757977908b9e91a25875bc337fe8a3",
+   "sha_inhalt": "ebd9e0d9efa97734ae68684654d9bfae9a38b3d57c27998ebc56236bb197a22a",
+   "zeilen": 8615,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-24T15:25:02Z",
+   "lauf_id": "L20261124T152433Z"
+  },
   "n__neu__treasury_auktionen__bid_to_cover.csv.gz": {
    "datei": "n__neu__treasury_auktionen__bid_to_cover.csv.gz@b93b7d4c94b7b0a9",
    "sha": "b93b7d4c94b7b0a995e750956e2d56602a7003b0acd04867beb3b2ca525f3572",
@@ -5324,90 +5369,34 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-23T15:44:38Z",
- "dateien_n": 588,
+ "stand_utc": "2026-11-24T15:25:09Z",
+ "dateien_n": 593,
  "vorgemerkt": {
-  "n__neu__eex_eua_auktionsergebnisse__deckungsquote.csv.gz": {
-   "erstmals_utc": "2026-11-22T12:56:34Z",
-   "beste_werte": 1633,
-   "frueheste_erste": "2012-06-12",
+  "n__neu__bodacc_insolvenzen_frankreich__liquidationen_eroeffnet.csv.gz": {
+   "erstmals_utc": "2026-11-24T15:24:53Z",
+   "beste_werte": 3226,
+   "frueheste_erste": "2008-02-03",
    "sichtungen": [
     {
-     "utc": "2026-11-22T12:56:34Z",
-     "lauf_id": "L20261122T125609Z",
-     "werte": 1633,
-     "erste": "2012-06-12",
-     "sha_inhalt": "78624fa0d946679fc80813497748df63fe03a6f6a308752f527caacfceddb92d"
-    },
-    {
-     "utc": "2026-11-23T15:44:22Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 1633,
-     "erste": "2012-06-12",
-     "sha_inhalt": "78624fa0d946679fc80813497748df63fe03a6f6a308752f527caacfceddb92d"
+     "utc": "2026-11-24T15:24:53Z",
+     "lauf_id": "L20261124T152433Z",
+     "werte": 3226,
+     "erste": "2008-02-03",
+     "sha_inhalt": "d454d018e8e07b5c91a55ec95c6eba71cbc60bc8bb4b6440d1ba209f074333d3"
     }
    ]
   },
-  "n__neu__eex_eua_auktionsergebnisse__preis.csv.gz": {
-   "erstmals_utc": "2026-11-22T12:56:34Z",
-   "beste_werte": 1660,
-   "frueheste_erste": "2012-01-03",
+  "n__neu__bodacc_insolvenzen_frankreich__verfahren_alle.csv.gz": {
+   "erstmals_utc": "2026-11-24T15:24:53Z",
+   "beste_werte": 3229,
+   "frueheste_erste": "2008-02-03",
    "sichtungen": [
     {
-     "utc": "2026-11-22T12:56:34Z",
-     "lauf_id": "L20261122T125609Z",
-     "werte": 1660,
-     "erste": "2012-01-03",
-     "sha_inhalt": "d1ed5497e89fef620db949563b107d6325f94739df9719d30d5299f5ad06cd96"
-    },
-    {
-     "utc": "2026-11-23T15:44:22Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 1660,
-     "erste": "2012-01-03",
-     "sha_inhalt": "d1ed5497e89fef620db949563b107d6325f94739df9719d30d5299f5ad06cd96"
-    }
-   ]
-  },
-  "n__neu__eu_handelsschutz_antidumping__einleitungen.csv.gz": {
-   "erstmals_utc": "2026-11-22T12:56:34Z",
-   "beste_werte": 859,
-   "frueheste_erste": "1980-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-22T12:56:34Z",
-     "lauf_id": "L20261122T125609Z",
-     "werte": 859,
-     "erste": "1980-01-01",
-     "sha_inhalt": "bfa3e38f2cdce980773882cf3d936dbf08e00a3aa6d6064b585acccc9e2ea861"
-    },
-    {
-     "utc": "2026-11-23T15:44:22Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 859,
-     "erste": "1980-01-01",
-     "sha_inhalt": "bfa3e38f2cdce980773882cf3d936dbf08e00a3aa6d6064b585acccc9e2ea861"
-    }
-   ]
-  },
-  "n__neu__eu_handelsschutz_antidumping__massnahmen.csv.gz": {
-   "erstmals_utc": "2026-11-22T12:56:34Z",
-   "beste_werte": 774,
-   "frueheste_erste": "1980-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-22T12:56:34Z",
-     "lauf_id": "L20261122T125609Z",
-     "werte": 774,
-     "erste": "1980-01-01",
-     "sha_inhalt": "4433d261c40a9f611b4d9509018cb7c55adf0e389ac50eddf958330d10b2adbb"
-    },
-    {
-     "utc": "2026-11-23T15:44:23Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 774,
-     "erste": "1980-01-01",
-     "sha_inhalt": "4433d261c40a9f611b4d9509018cb7c55adf0e389ac50eddf958330d10b2adbb"
+     "utc": "2026-11-24T15:24:53Z",
+     "lauf_id": "L20261124T152433Z",
+     "werte": 3229,
+     "erste": "2008-02-03",
+     "sha_inhalt": "255b964e09412ac7c29c04f7fe5ee96413c6d3bae9cc3decebc1d76746b68dda"
     }
    ]
   },
@@ -5422,27 +5411,55 @@
      "werte": 911,
      "erste": "1994-01-01",
      "sha_inhalt": "79d559ae9c190e6ec0944a80917e422903a0736f88c95e44fb66c96233415ad5"
+    },
+    {
+     "utc": "2026-11-24T15:24:57Z",
+     "lauf_id": "L20261124T152433Z",
+     "werte": 911,
+     "erste": "1994-01-01",
+     "sha_inhalt": "79d559ae9c190e6ec0944a80917e422903a0736f88c95e44fb66c96233415ad5"
     }
    ]
   },
-  "n__neu__ssa_zahltage_sozialversicherung__zahltag_mittwoch.csv.gz": {
-   "erstmals_utc": "2026-11-22T18:54:02Z",
-   "beste_werte": 849,
-   "frueheste_erste": "1997-06-01",
+  "n__neu__fedregister_proklamationen_handel__anzahl.csv.gz": {
+   "erstmals_utc": "2026-11-24T15:24:57Z",
+   "beste_werte": 167,
+   "frueheste_erste": "1994-01-01",
    "sichtungen": [
     {
-     "utc": "2026-11-22T18:54:02Z",
-     "lauf_id": "L20261122T185328Z",
-     "werte": 849,
-     "erste": "1997-06-01",
-     "sha_inhalt": "ebd9e0d9efa97734ae68684654d9bfae9a38b3d57c27998ebc56236bb197a22a"
-    },
+     "utc": "2026-11-24T15:24:57Z",
+     "lauf_id": "L20261124T152433Z",
+     "werte": 167,
+     "erste": "1994-01-01",
+     "sha_inhalt": "b339e338fca819df3921340588651ee1aa04f984c551403cf947c4408d7e179a"
+    }
+   ]
+  },
+  "n__neu__hackernews_krisenbegriffe__layoffs.csv.gz": {
+   "erstmals_utc": "2026-11-24T15:24:59Z",
+   "beste_werte": 723,
+   "frueheste_erste": "2007-02-01",
+   "sichtungen": [
     {
-     "utc": "2026-11-23T15:44:31Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 849,
-     "erste": "1997-06-01",
-     "sha_inhalt": "ebd9e0d9efa97734ae68684654d9bfae9a38b3d57c27998ebc56236bb197a22a"
+     "utc": "2026-11-24T15:24:59Z",
+     "lauf_id": "L20261124T152433Z",
+     "werte": 723,
+     "erste": "2007-02-01",
+     "sha_inhalt": "673e6d71b993ad1cad74d066f8bcd387dd8e3e218bcc370ed5b76fba830de0b6"
+    }
+   ]
+  },
+  "n__neu__oslo_newsweb_meldungen__primaerinsider_handel.csv.gz": {
+   "erstmals_utc": "2026-11-24T15:25:01Z",
+   "beste_werte": 5806,
+   "frueheste_erste": "1998-03-18",
+   "sichtungen": [
+    {
+     "utc": "2026-11-24T15:25:01Z",
+     "lauf_id": "L20261124T152433Z",
+     "werte": 5806,
+     "erste": "1998-03-18",
+     "sha_inhalt": "3d287be7b7e3bcc351d6c380c4e228069d38b55b42db5415c0b5b707e0783713"
     }
    ]
   },
@@ -5454,6 +5471,13 @@
     {
      "utc": "2026-11-23T15:44:32Z",
      "lauf_id": "L20261123T154353Z",
+     "werte": 164,
+     "erste": "1997-11-03",
+     "sha_inhalt": "1ce9fb6785acc2ad10593cdfd832209d2da6a175ac8304f3182d5425bb6dc1f2"
+    },
+    {
+     "utc": "2026-11-24T15:25:02Z",
+     "lauf_id": "L20261124T152433Z",
      "werte": 164,
      "erste": "1997-11-03",
      "sha_inhalt": "1ce9fb6785acc2ad10593cdfd832209d2da6a175ac8304f3182d5425bb6dc1f2"
@@ -5471,6 +5495,13 @@
      "werte": 397,
      "erste": "1997-11-03",
      "sha_inhalt": "13b89ba4dae7e18167d71e240b6e4f130886ecbdb57a5bb695745007504bf16e"
+    },
+    {
+     "utc": "2026-11-24T15:25:02Z",
+     "lauf_id": "L20261124T152433Z",
+     "werte": 397,
+     "erste": "1997-11-03",
+     "sha_inhalt": "13b89ba4dae7e18167d71e240b6e4f130886ecbdb57a5bb695745007504bf16e"
     }
    ]
   },
@@ -5482,6 +5513,13 @@
     {
      "utc": "2026-11-23T15:44:33Z",
      "lauf_id": "L20261123T154353Z",
+     "werte": 23426,
+     "erste": "1789-05-16",
+     "sha_inhalt": "81aed0cbbfd4aebae2958796d94c57e453ff03952f42bbcfb2f7c103f6731846"
+    },
+    {
+     "utc": "2026-11-24T15:25:04Z",
+     "lauf_id": "L20261124T152433Z",
      "werte": 23426,
      "erste": "1789-05-16",
      "sha_inhalt": "81aed0cbbfd4aebae2958796d94c57e453ff03952f42bbcfb2f7c103f6731846"

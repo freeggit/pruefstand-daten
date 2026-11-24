@@ -199,6 +199,18 @@
    "erst_zeit": "2026-10-28T13:44Z",
    "beleg": "suche/laeufe/L20261028T105311Z.json"
   },
+  "neu_bodacc_insolvenzen_frankreich_liquidationen_eroeffnet": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261124T152433Z",
+   "erst_zeit": "2026-11-24T18:05Z",
+   "beleg": "suche/laeufe/L20261124T152433Z.json"
+  },
+  "neu_bodacc_insolvenzen_frankreich_verfahren_alle": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261124T152433Z",
+   "erst_zeit": "2026-11-24T18:05Z",
+   "beleg": "suche/laeufe/L20261124T152433Z.json"
+  },
   "neu_boe_bankrate_aenderungstage_aenderungstage": {
    "erst_dokument": "S0011",
    "erst_lauf": null,
@@ -751,6 +763,12 @@
    "erst_zeit": "29.9.2026, 09:12 (Europe/Zurich)",
    "beleg": "suche/S0014_alle.csv.gz"
   },
+  "neu_fedregister_proklamationen_handel_anzahl": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261124T152433Z",
+   "erst_zeit": "2026-11-24T18:05Z",
+   "beleg": "suche/laeufe/L20261124T152433Z.json"
+  },
   "neu_fedregister_sec_regeln_anzahl": {
    "erst_dokument": "S0016",
    "erst_lauf": null,
@@ -978,6 +996,12 @@
    "erst_lauf": "L20261120T134206Z",
    "erst_zeit": "2026-11-20T16:52Z",
    "beleg": "suche/laeufe/L20261120T134206Z.json"
+  },
+  "neu_hackernews_krisenbegriffe_layoffs": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261124T152433Z",
+   "erst_zeit": "2026-11-24T18:05Z",
+   "beleg": "suche/laeufe/L20261124T152433Z.json"
   },
   "neu_healthcanada_noc_zulassungen_generika_zulassungen": {
    "erst_dokument": null,
@@ -1248,6 +1272,12 @@
    "erst_lauf": null,
    "erst_zeit": "26.9.2026, 07:31 (Europe/Zurich)",
    "beleg": "suche/S0010_alle.csv.gz"
+  },
+  "neu_oslo_newsweb_meldungen_primaerinsider_handel": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261124T152433Z",
+   "erst_zeit": "2026-11-24T18:05Z",
+   "beleg": "suche/laeufe/L20261124T152433Z.json"
   },
   "neu_quartalsende_pensionsrebalancing_quartalsende": {
    "erst_dokument": "S0022",
@@ -2396,8 +2426,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261123T154353Z",
-  "zeit_utc": "2026-11-23T18:37Z",
-  "grundreihen_n": 398
+  "lauf_id": "L20261124T152433Z",
+  "zeit_utc": "2026-11-24T18:05Z",
+  "grundreihen_n": 403
  }
 }

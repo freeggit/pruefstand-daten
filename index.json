@@ -1,5 +1,5 @@
 {
- "kumuliert": 822000,
+ "kumuliert": 829011,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -354,6 +354,16 @@
   "neu_bitcoin_onchain_transaktionen_z252",
   "neu_bls_jolts_veroeffentlichung_termine_jolts_stand",
   "neu_bls_ppi_termine_ppi_stand",
+  "neu_bodacc_insolvenzen_frankreich_liquidationen_eroeffnet_d1",
+  "neu_bodacc_insolvenzen_frankreich_liquidationen_eroeffnet_d20",
+  "neu_bodacc_insolvenzen_frankreich_liquidationen_eroeffnet_d5",
+  "neu_bodacc_insolvenzen_frankreich_liquidationen_eroeffnet_stand",
+  "neu_bodacc_insolvenzen_frankreich_liquidationen_eroeffnet_z252",
+  "neu_bodacc_insolvenzen_frankreich_verfahren_alle_d1",
+  "neu_bodacc_insolvenzen_frankreich_verfahren_alle_d20",
+  "neu_bodacc_insolvenzen_frankreich_verfahren_alle_d5",
+  "neu_bodacc_insolvenzen_frankreich_verfahren_alle_stand",
+  "neu_bodacc_insolvenzen_frankreich_verfahren_alle_z252",
   "neu_boe_bankrate_aenderungstage_aenderungstage_stand",
   "neu_boe_sonia_sonia_d1",
   "neu_boe_sonia_sonia_d20",
@@ -751,6 +761,11 @@
   "neu_fedregister_phmsa_pipeline_anzahl_d5",
   "neu_fedregister_phmsa_pipeline_anzahl_stand",
   "neu_fedregister_phmsa_pipeline_anzahl_z252",
+  "neu_fedregister_proklamationen_handel_anzahl_d1",
+  "neu_fedregister_proklamationen_handel_anzahl_d20",
+  "neu_fedregister_proklamationen_handel_anzahl_d5",
+  "neu_fedregister_proklamationen_handel_anzahl_stand",
+  "neu_fedregister_proklamationen_handel_anzahl_z252",
   "neu_fedregister_sec_regeln_anzahl_d1",
   "neu_fedregister_sec_regeln_anzahl_d20",
   "neu_fedregister_sec_regeln_anzahl_d5",
@@ -925,6 +940,11 @@
   "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat_stand",
   "neu_gpr_geopolitisches_risiko_taeglich_gprd_threat_z252",
   "neu_gpr_geopolitisches_risiko_taeglich_gprd_z252",
+  "neu_hackernews_krisenbegriffe_layoffs_d1",
+  "neu_hackernews_krisenbegriffe_layoffs_d20",
+  "neu_hackernews_krisenbegriffe_layoffs_d5",
+  "neu_hackernews_krisenbegriffe_layoffs_stand",
+  "neu_hackernews_krisenbegriffe_layoffs_z252",
   "neu_healthcanada_noc_zulassungen_generika_zulassungen_d1",
   "neu_healthcanada_noc_zulassungen_generika_zulassungen_d20",
   "neu_healthcanada_noc_zulassungen_generika_zulassungen_d5",
@@ -1110,6 +1130,11 @@
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_d5",
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_stand",
   "neu_openmeteo_wetter_anbau_soja_mato_grosso_z252",
+  "neu_oslo_newsweb_meldungen_primaerinsider_handel_d1",
+  "neu_oslo_newsweb_meldungen_primaerinsider_handel_d20",
+  "neu_oslo_newsweb_meldungen_primaerinsider_handel_d5",
+  "neu_oslo_newsweb_meldungen_primaerinsider_handel_stand",
+  "neu_oslo_newsweb_meldungen_primaerinsider_handel_z252",
   "neu_quartalsende_pensionsrebalancing_quartalsende_stand",
   "neu_ramadan_beginn_ende_aktiv_stand",
   "neu_ramadan_beginn_ende_beginn_stand",
@@ -2217,9 +2242,15 @@
    "datei": "suche/S0077.json",
    "kandidaten": 483407,
    "in_db": false
+  },
+  {
+   "nr": 78,
+   "datei": "suche/S0078.json",
+   "kandidaten": 490418,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-23T18:37Z",
+ "letzter_suchlauf_utc": "2026-11-24T18:05Z",
  "pruefung_lernrunde_utc": "2026-11-24T10:35:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2741,11 +2772,19 @@
    "ergebnis_hash": "d310954a2a4644bc",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261124T152433Z.json",
+   "lauf_id": "L20261124T152433Z",
+   "s_dokument": "suche/S0078.json",
+   "ergebnis_hash": "6e6f75fed6859236",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-23T18:37Z",
- "letztes_vollarchiv": "suche/S0077_alle.csv.gz",
- "letzter_ergebnis_hash": "d310954a2a4644bc",
+ "letzter_lauf_utc": "2026-11-24T18:05Z",
+ "letztes_vollarchiv": "suche/S0078_alle.csv.gz",
+ "letzter_ergebnis_hash": "6e6f75fed6859236",
  "konflikte": [
   {
    "wo": "index",
@@ -4980,10 +5019,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 398,
+  "grundreihen_n": 403,
   "neu_in_diesem_lauf": 5
  },
- "letztes_vollarchiv_ergebnis_hash": "d310954a2a4644bc",
+ "letztes_vollarchiv_ergebnis_hash": "6e6f75fed6859236",
  "pruefungen_bestanden": {
   "pruef_hash": "f3557dd6a676a619",
   "lauf_id": "L20261123T154353Z",
@@ -5001,7 +5040,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "612d84a208cc27c2",
- "letzter_gueltiger_lauf": "L20261123T154353Z",
- "letzter_entscheidung_hash": "09100e8657aa0d1d"
+ "letzter_eingabe_hash": "4985ba4e80ee00dc",
+ "letzter_gueltiger_lauf": "L20261124T152433Z",
+ "letzter_entscheidung_hash": "b6d17671aea4047c"
 }
