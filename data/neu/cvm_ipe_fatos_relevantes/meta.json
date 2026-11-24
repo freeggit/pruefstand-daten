@@ -1,0 +1,24 @@
+{
+  "comunicado_mercado": {
+    "beschreibung": "CVM Brasilien: Anzahl eingereichter Comunicados ao Mercado (Marktmitteilungen) aller Emittenten je Tag; Datum = Einreichungstag (Data_Entrega); Neuauflagen mit dem Original zusammengefasst; 0 an Tagen ohne Meldung",
+    "einheit": "Anzahl Meldungen",
+    "hinweis_revision": "Die Datei fuehrt bei manchen Neuauflagen nur die letzte Version; deren Einreichungstag kann spaeter liegen als das Original. Werte verschieben sich dadurch hoechstens auf spaetere Tage, nie frueher.",
+    "publikation": "taeglich: Fatos Relevantes muessen nach RCVM 44 Art. 3 (vorher ICVM 358) sofort ueber das CVM-System ENET veroeffentlicht werden und sind am Einreichungstag auf rad.cvm.gov.br und bei der B3 abrufbar; die Sammeldatei auf dados.cvm.gov.br wird woechentlich erneuert",
+    "quelle_url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-ipe",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "Summe (Anzahl Dokumente je Einreichungstag, Ortszeit Brasilien)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "fato_relevante": {
+    "beschreibung": "CVM Brasilien: Anzahl eingereichter Fatos Relevantes (Ad-hoc-Meldungen) aller Emittenten je Tag; Datum = Einreichungstag (Data_Entrega); Neuauflagen mit dem Original zusammengefasst; 0 an Tagen ohne Meldung",
+    "einheit": "Anzahl Meldungen",
+    "hinweis_revision": "Die Datei fuehrt bei manchen Neuauflagen nur die letzte Version; deren Einreichungstag kann spaeter liegen als das Original. Werte verschieben sich dadurch hoechstens auf spaetere Tage, nie frueher.",
+    "publikation": "taeglich: Fatos Relevantes muessen nach RCVM 44 Art. 3 (vorher ICVM 358) sofort ueber das CVM-System ENET veroeffentlicht werden und sind am Einreichungstag auf rad.cvm.gov.br und bei der B3 abrufbar; die Sammeldatei auf dados.cvm.gov.br wird woechentlich erneuert",
+    "quelle_url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-ipe",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "Summe (Anzahl Dokumente je Einreichungstag, Ortszeit Brasilien)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
