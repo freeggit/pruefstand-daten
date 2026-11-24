@@ -7988,5 +7988,22 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-23T20:30Z",
     "geprueft_utc": "2026-11-23T20:30Z"
+  },
+  {
+    "id": "bodacc_insolvenzen_frankreich",
+    "name": "BODACC Frankreich: amtliche Meldungen zu Insolvenzverfahren je Ausgabetag",
+    "url": "https://bodacc-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets/annonces-commerciales/records",
+    "domain": "bodacc-datadila.opendatasoft.com",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "normal",
+    "mechanismus": "Mehr französische Insolvenzmeldungen zeigen Kreditstress bei Firmen in der Eurozone; das könnte europäische Aktien (EWG) und Banken (XLF) in den folgenden 1 bis 20 Handelstagen gegenüber dem Weltindex belasten. Es ist eine Replikation von uk_gazette_insolvenzmeldungen in einem dritten Land.",
+    "grund": "Eigene Recherche Lauf 2026-11-24T00:15Z, weil alle offenen Firmenereignis-Kandidaten gesperrt sind oder nur über die SEC-Action laufen. Quelle: DILA (Licence Ouverte/Etalab), Opendatasoft-API ohne Login und ohne Schlüssel. Abruf mit zwei gruppierten Abfragen in rund 4 s (K7). Prüfung: je 6868 Zeilen von 2008-02-03 bis 2026-11-22; Median-Abstand 1 Tag; Anteil gleicher Folgewerte 2,9 % bzw. 3,1 %; verfahren_alle min 0, max 3007, Mittel 491; liquidationen_eroeffnet min 0, max 890, Mittel 122; je rund 2150 Nulltage (Tage ohne Ausgabe). Beginn erst 2008-02-03, weil im Januar 2008 nach dem 10.01. 24 Tage ohne Ausgabe fehlen. Datum ist dateparution. Französische Feiertage fehlen fast immer, wie erwartet. Einzelne Feiertage sind aber belegt (2023-08-15, 2025-11-11, 2025-12-25), und Sonntage erscheinen oft, Montage und Samstage selten. Eine Verschiebung um ±1 Tag ist deshalb nicht ganz auszuschliessen; deshalb vorsichtig verfuegbar_nach_tagen 1. Nachträgliche Ergänzungen sind nicht bekannt; der Datensatz enthält die amtlichen Meldungen der jeweiligen Ausgabe, also revidiert false. Nullen werden nur bis zum letzten Ausgabetag im Bestand gesetzt. Reihen aktiv: verfahren_alle, liquidationen_eroeffnet.",
+    "reihen": [
+      "verfahren_alle",
+      "liquidationen_eroeffnet"
+    ],
+    "aufgenommen_utc": "2026-11-24T00:20Z",
+    "geprueft_utc": "2026-11-24T00:20Z"
   }
 ]

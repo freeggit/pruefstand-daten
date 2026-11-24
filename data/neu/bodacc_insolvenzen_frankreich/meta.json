@@ -1,0 +1,22 @@
+{
+ "verfahren_alle": {
+  "einheit": "Anzahl Meldungen je Tag",
+  "beschreibung": "Anzahl BODACC-Meldungen zu Insolvenzverfahren (Procedures collectives: Eroeffnung, Plan, Liquidation, Abschluss) je Ausgabetag, Frankreich.",
+  "quelle_url": "https://bodacc-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets/annonces-commerciales/records?where=familleavis%3D%22collective%22",
+  "verdichtung": "Anzahl je Kalendertag (dateparution), 0 an Tagen ohne Ausgabe bis zum letzten Ausgabetag",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "publikation": "taeglich: BODACC A erscheint an Werktagen elektronisch auf bodacc.fr, der DILA-Datensatz annonces-commerciales wird mit jeder Ausgabe ergaenzt (Datum = dateparution); vorsichtig 1 Tag",
+  "status": "aktiv"
+ },
+ "liquidationen_eroeffnet": {
+  "einheit": "Anzahl Meldungen je Tag",
+  "beschreibung": "Davon Meldungen ueber die gerichtliche Eroeffnung einer Liquidation (Jugement d'ouverture de liquidation judiciaire) je Ausgabetag.",
+  "quelle_url": "https://bodacc-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets/annonces-commerciales/records?where=familleavis%3D%22collective%22%20and%20jugement%20like%20%22%2Aouverture%20de%20liquidation%2A%22",
+  "verdichtung": "Anzahl je Kalendertag (dateparution), 0 an Tagen ohne Ausgabe bis zum letzten Ausgabetag",
+  "verfuegbar_nach_tagen": 1,
+  "revidiert": false,
+  "publikation": "taeglich: BODACC A erscheint an Werktagen elektronisch auf bodacc.fr, der DILA-Datensatz annonces-commerciales wird mit jeder Ausgabe ergaenzt (Datum = dateparution); vorsichtig 1 Tag",
+  "status": "aktiv"
+ }
+}
