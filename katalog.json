@@ -8222,5 +8222,33 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-24T20:30Z",
     "geprueft_utc": "2026-11-24T20:30Z"
+  },
+  {
+    "id": "cvm_ofertas_acoes",
+    "name": "CVM Brasilien (Dados Abertos): registrierte öffentliche Aktienemissionen (IPO und Folgeemissionen) je Tag",
+    "url": "https://dados.cvm.gov.br/dados/OFERTA/DISTRIB/DADOS/oferta_distribuicao.zip",
+    "domain": "dados.cvm.gov.br",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Aktienemissionen bündeln neues Angebot und gelten als Signal für Überbewertung (Market Timing, Loughran und Ritter 1995; Baker und Wurgler 2000); gehäufte Registrierungen könnten Brasilien (EWZ) bzw. Schwellenländer (EEM) über 1 bis 20 Tage gegenüber dem Weltindex belasten. Paarvorschlag für Reto: keiner (kein gleichartiges Ereignis im Bestand ausserhalb EDGAR).",
+    "grund": "Eigene Recherche Lauf 2026-11-25T00:10Z (Zusatz 6/8: Firmenereignisse zuerst; alle offenen Firmenereignis-Kandidaten ausserhalb EDGAR weiterhin gesperrt oder ohne Abrufweg). Offenes Datenportal der CVM (CKAN, ohne Login, ohne Schlüssel, Lizenz ODbL, HTTP 200), eine ZIP-Datei 5.8 MB mit oferta_distribuicao.csv (ICVM 400/476, 1989-2022) und oferta_resolucao_160.csv (RCVM 160, ab 2023), Abruf 2 s (K7). Datum = Registrierungstag (Data_Registro_Oferta bzw. Data_Registro); gezählt nur Aktien (ON/PN bzw. «Ações») mit erteilter Registrierung; ON- und PN-Tranchen eines Angebots einmal (Numero_Processo + Tag). Nicht gezählt: ICVM 476 (eingeschränkte Angebote ohne Registrierung, 232 Zeilen 2015-2022) und registrierungsbefreite Angebote. Regelbruch 2.1.2023: RCVM 160 registriert automatisch, auch frühere 476-Fälle; im meta.json beschrieben. Beginn 1990-01-01 (1989 nur 5 Datensätze, Abdeckung unvollständig) – Historie vor 1990 (Zusatz 4). K4: Bestandsdatei, Registrierungstage fest, verspätet erfasste Angebote können nachträglich hinzukommen (revidiert false mit Hinweis). Publikation taeglich (CVM-Angebotsverzeichnis am Registrierungstag, Anúncio de Início nach ICVM 400 Art. 52 bzw. RCVM 160 Art. 59), verfuegbar_nach_tagen 1. Prüfung: 13477 Zeilen 1990-01-01 bis 2026-11-24, Median-Abstand 1 Tag, 788 Angebote an 676 Tagen, Min 0, Max 7 (1990-05-04), gleiche Folgewerte 91.2% (dünne Ereigniszählung, erwartbar; Suchmaschine wertet als Ereignistage); Jahreswerte plausibel (Boom 2007: 66, 2020/21: 28/32, Flaute 2014-2016: je 2). Nicht übernommen: Schuldtitel (Strukturbruch 2023 durch Wegfall ICVM 476), Valor_Total (Endbetrag erst nach Abschluss bekannt, Vorwegnahme), processo_sancionador (Eröffnung nicht sicher am Eröffnungstag öffentlich). Aktiv: aktien_angebote.",
+    "reihen": [
+      "aktien_angebote"
+    ],
+    "aufgenommen_utc": "2026-11-25T00:30Z",
+    "geprueft_utc": "2026-11-25T00:30Z",
+    "pruefung": {
+      "aktien_angebote": {
+        "zeilen": 13477,
+        "erste": "1990-01-01",
+        "letzte": "2026-11-24",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.912,
+        "min": 0,
+        "max": 7,
+        "ereignisse": 788
+      }
+    }
   }
 ]

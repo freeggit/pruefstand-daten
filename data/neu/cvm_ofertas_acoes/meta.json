@@ -1,0 +1,13 @@
+{
+  "aktien_angebote": {
+    "beschreibung": "CVM Brasilien: Anzahl oeffentlicher Aktienangebote (Erst- und Folgeemissionen, primaer, sekundaer, gemischt), deren Registrierung die CVM an diesem Tag erteilt hat; bis 2022 Regime ICVM 400 mit Registrierung (ohne ICVM 476 und ohne Registrierungsbefreiung), ab 2023 Regime RCVM 160 (automatische Registrierung, damit auch frueher nach ICVM 476 gefuehrte Angebote an professionelle Anleger: Regelbruch 2.1.2023); ON- und PN-Tranchen eines Angebots einmal gezaehlt; 0 an Tagen ohne Registrierung; ab 1990",
+    "einheit": "Anzahl Angebote",
+    "hinweis_revision": "Bestandsdatei, die laufend nachgefuehrt wird; Registrierungstage aendern sich nicht, verspaetet erfasste Angebote koennen aber nachtraeglich hinzukommen (Zaehlung kann rueckwirkend steigen, nie auf fruehere Tage verschoben).",
+    "publikation": "taeglich: die CVM veroeffentlicht erteilte Registrierungen am Registrierungstag im Angebotsverzeichnis (sistemas.cvm.gov.br, Ofertas Registradas); der Emittent muss danach das Anuncio de Inicio veroeffentlichen (ICVM 400 Art. 52, RCVM 160 Art. 59); die Datei auf dados.cvm.gov.br wird taeglich erneuert",
+    "quelle_url": "https://dados.cvm.gov.br/dataset/oferta-distrib",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "Summe (Anzahl Angebote je Registrierungstag, Ortszeit Brasilien)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
