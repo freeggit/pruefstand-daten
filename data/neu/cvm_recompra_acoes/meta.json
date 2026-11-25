@@ -1,0 +1,13 @@
+{
+  "firmen_rueckkaufbeschluss": {
+    "beschreibung": "CVM Brasilien: Anzahl verschiedener Publikumsgesellschaften, deren Verwaltungsrat an diesem Tag ein Aktienrueckkaufprogramm beschlossen hat (Data_Deliberacao); reine Verkaufsprogramme ausgeschlossen, mehrere Programme einer Firma am selben Tag einmal gezaehlt; 0 an Tagen ohne Beschluss; ab 1997",
+    "einheit": "Anzahl Firmen",
+    "hinweis_revision": "Bestandsdatei, laufend nachgefuehrt; Beschlusstage aendern sich nicht, die CVM traegt Programme aber bis rund 6 Wochen verspaetet ein (Stand 25.11.2026: 530 Eintraege mit frueherem Datum als ein zuvor erfasster); juengste Tage koennen rueckwirkend steigen.",
+    "publikation": "taeglich: der Rueckkaufbeschluss ist sofort als Fato Relevante bzw. Comunicado ao Mercado ueber das IPE-System zu veroeffentlichen (RCVM 77/2022 Art. 5 mit RCVM 44 Art. 3; vorher ICVM 567/2015 und ICVM 10/1980); Beschluesse fallen meist nach Handelsschluss, darum 1 Tag",
+    "quelle_url": "https://dados.cvm.gov.br/dataset/cia_aberta-eventos-recompra_acoes",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "Summe (Anzahl Firmen je Beschlusstag, Ortszeit Brasilien)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
