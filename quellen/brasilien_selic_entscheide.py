@@ -3,6 +3,7 @@ import gzip
 import io
 import json
 import os
+import time
 import urllib.request
 from datetime import date
 
@@ -15,10 +16,20 @@ URL = ("https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json"
        "&dataInicial={a}&dataFinal={b}")
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+def fetch(url, versuche=4):
+    # BCB-API antwortet zeitweise mit 502/503/304 oder haengt: wiederholen mit Wartezeit
+    letzter = None
+    for i in range(versuche):
+        req = urllib.request.Request(url, headers={"User-Agent": UA,
+                                                   "Accept": "application/json",
+                                                   "Cache-Control": "no-cache"})
+        try:
+            with urllib.request.urlopen(req, timeout=45) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except Exception as e:  # HTTPError, URLError, Zeitlimit, leere Antwort
+            letzter = e
+            time.sleep(5 * (i + 1))
+    raise letzter
 
 
 def gzip_write(path, rows, fmt):
