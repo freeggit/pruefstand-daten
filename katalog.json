@@ -5579,10 +5579,10 @@
     "bereich": "Firmenereignisse",
     "status": "fehler",
     "mechanismus": "Kartellverfahren gegen grosse Firmen aendern kurzfristig Erwartungen an Fusionen und Margen in Technologie und Gesundheit; unabhaengige Messung desselben Mechanismus wie EU-Kartellentscheide.",
-    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T04:25Z: weiter Bot-Pruefseite (bm-verify, 2.3 KB); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: justice.gov/atr/antitrust-case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: case-filings-alpha liefert weiterhin die Bot-Pruefseite (bm-verify, 2304 Bytes), case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-22T08:30Z: antitrust-case-filings HTTP 404, Liste weiter nicht abrufbar; Status bleibt fehler. | Test 2026-11-23T20:30Z: case-filings-alpha HTTP 200, aber weiterhin die Bot-Prüfseite (bm-verify, 2304 Bytes); Sperre nicht umgangen, nächster Lauf erneut.",
+    "grund": "Lernrunde 2026-11-13: Replikation von neu_eu_wettbewerbsentscheide_kartellverfahren_stand hoch -> EEM 5 Tage (t 3.91, S0066), Regel L1: keine Variante auf denselben Daten, nur unabhaengige Quelle. Mechanismus zu EEM schwach, daher tief. | Lauf 2026-11-13T20:07Z: www.justice.gov/atr/antitrust-case-filings-alpha liefert statt der Liste eine Bot-Pruefseite (Akamai bm-verify, Meta-Refresh mit JavaScript-Aufgabe) = Sperre; nicht umgangen, naechster Lauf erneut. Ausweg ueber die Presse-API justice.gov/api/v1/press_releases.json geprueft: Filter parameters[component] greift weiterhin nicht (Gesamtzahl 275991 unveraendert), Feld date bei aelteren Eintraegen leer, created = Migrationsdatum 2014 -> kein Bekanntgabedatum und Vollabruf weit ueber K7; wie doj_pressemitteilungen_dichte nicht nutzbar. | Test 2026-11-15T00:10Z: justice.gov liefert weiterhin Bot-Pruefseite (bm-verify); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-16T12:10Z: weiter gesperrt (Bot-Pruefseite 2.3 KB statt Liste); nicht umgangen, naechster Lauf erneut. | Test 2026-11-18T04:25Z: weiter Bot-Pruefseite (bm-verify, 2.3 KB); nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T08:20Z: justice.gov/atr/antitrust-case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T04:30Z: case-filings-alpha liefert weiterhin die Bot-Pruefseite (bm-verify, 2304 Bytes), case-filings HTTP 404; nicht umgangen, naechster Lauf erneut. | Test 2026-11-22T08:30Z: antitrust-case-filings HTTP 404, Liste weiter nicht abrufbar; Status bleibt fehler. | Test 2026-11-23T20:30Z: case-filings-alpha HTTP 200, aber weiterhin die Bot-Prüfseite (bm-verify, 2304 Bytes); Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-25T12:30Z: case-filings-alpha weiterhin Bot-Prüfseite (bm-verify, 2304 Bytes); nicht umgangen, nächster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-13T09:50Z",
-    "geprueft_utc": "2026-11-23T20:30Z",
+    "geprueft_utc": "2026-11-25T12:30Z",
     "prioritaet": "tief"
   },
   {
@@ -6558,10 +6558,10 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Bekanntgaben von FINMA-Verfahren gegen Schweizer Banken und Versicherer koennten den Schweizer Markt (EWL) kurzfristig gegenueber dem Weltindex bewegen, weil Finanzwerte dort ein grosses Gewicht haben.",
-    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: www.finma.ch/de/durchsetzung/ und /de/news/ HTTP 200, robots.txt erlaubt. Die News-Liste wird per Skript aus der internen Such-Schnittstelle /de/api/search/getresult nachgeladen; deren Abruf wurde in dieser Umgebung nicht zugelassen (Befund, nicht umgangen). Oeffentliche RSS-Feeds /de/rss/news/ und /de/rss/sanktionen/ reichen nur rund 5 Monate zurueck (erste pubDate 17.06.2026), damit K2 auf dem zulaessigen Weg nicht erfuellt. Keine Ablage. Naechster Lauf: pruefen, ob ein Archiv mit Tagesdatum als statische Seite besteht (z.B. Enforcementberichte je Jahr nennen Verfahren, aber ohne Bekanntgabetag). | Erneut 2026-11-20T00:25Z: /de/api/search/getresult antwortet auf GET mit HTTP 405 (nur Skript-Abfrage); kein statisches Archiv mit Tagesdatum gefunden, nicht umgangen. | Erneut 2026-11-22T04:25Z: /de/durchsetzung/ nun 301 auf /alles-zur-durchsetzung/; Liste weiter nur ueber Skript-Suche, kein statisches Archiv; nicht umgangen.",
+    "grund": "Lernrunde 2026-11-17 (Vorrat auf 15). Neuer Bereich: Schweizer Aufsicht. News-Liste mit Tagesdatum; HTTP 200 geprueft. | Test 2026-11-17T12:30Z: www.finma.ch/de/durchsetzung/ und /de/news/ HTTP 200, robots.txt erlaubt. Die News-Liste wird per Skript aus der internen Such-Schnittstelle /de/api/search/getresult nachgeladen; deren Abruf wurde in dieser Umgebung nicht zugelassen (Befund, nicht umgangen). Oeffentliche RSS-Feeds /de/rss/news/ und /de/rss/sanktionen/ reichen nur rund 5 Monate zurueck (erste pubDate 17.06.2026), damit K2 auf dem zulaessigen Weg nicht erfuellt. Keine Ablage. Naechster Lauf: pruefen, ob ein Archiv mit Tagesdatum als statische Seite besteht (z.B. Enforcementberichte je Jahr nennen Verfahren, aber ohne Bekanntgabetag). | Erneut 2026-11-20T00:25Z: /de/api/search/getresult antwortet auf GET mit HTTP 405 (nur Skript-Abfrage); kein statisches Archiv mit Tagesdatum gefunden, nicht umgangen. | Erneut 2026-11-22T04:25Z: /de/durchsetzung/ nun 301 auf /alles-zur-durchsetzung/; Liste weiter nur ueber Skript-Suche, kein statisches Archiv; nicht umgangen. | Erneut 2026-11-25T12:30Z: /de/alles-zur-durchsetzung/ HTTP 404; Liste weiter nur über Skript-Suche; nicht umgangen.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-17T10:00Z",
-    "geprueft_utc": "2026-11-22T04:25Z"
+    "geprueft_utc": "2026-11-25T12:30Z"
   },
   {
     "id": "eba_stresstest_termine",
@@ -7394,9 +7394,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Gehäufte Herabstufungen in einem Sektor (Fallen Angels) erzwingen Verkäufe regelgebundener Anleger und belasten kurzfristig LQD und Sektor-ETF gegenüber dem Weltindex (Ellul/Jotikasthira/Lundblad 2011).",
-    "grund": "Firmenereignisse aggregiert; öffentliche XBRL-Dateien ohne Login (HTTP 301 auf Download-Seite, Ziel prüfen); Tiefe je nach Datei ab 2012, damit 8 Jahre vor dem Siegel. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: disclosure.spglobal.com liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. | Erneut 2026-11-22T04:25Z: Weiterleitung auf www.spglobal.com, dort HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-23T08:15Z: ratingshistory.info ohne Antwort (Zeitlimit 30 s); nicht umgangen.",
+    "grund": "Firmenereignisse aggregiert; öffentliche XBRL-Dateien ohne Login (HTTP 301 auf Download-Seite, Ziel prüfen); Tiefe je nach Datei ab 2012, damit 8 Jahre vor dem Siegel. (Lernrunde 2026-11-20) | Test 2026-11-20T12:10Z: disclosure.spglobal.com liefert HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund), naechster Lauf erneut. | Erneut 2026-11-22T04:25Z: Weiterleitung auf www.spglobal.com, dort HTTP 403; nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-23T08:15Z: ratingshistory.info ohne Antwort (Zeitlimit 30 s); nicht umgangen. | Erneut 2026-11-25T12:30Z: disclosure.spglobal.com HTTP 403; nicht umgangen, nächster Lauf erneut.",
     "aufgenommen_utc": "2026-11-20T09:30:00Z",
-    "geprueft_utc": "2026-11-23T08:15Z"
+    "geprueft_utc": "2026-11-25T12:30Z"
   },
   {
     "id": "sec_form15_abmeldungen",
@@ -7457,9 +7457,9 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Gehäufte Durchsetzungsentscheide der indischen Börsenaufsicht können das Vertrauen ausländischer Anleger in Schwellenländer kurzfristig dämpfen (EEM gegenüber dem Weltindex).",
-    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen. | Test 2026-11-22T08:30Z: Listenseite HTTP 200; Seitenwechsel nicht erneut versucht, Entscheid Retos zum Browserweg steht aus. | Test 2026-11-23T20:30Z: Listenseite HTTP 200; Seitenwechsel nicht versucht, Entscheid Retos zum Browserweg steht weiter aus.",
+    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen. | Test 2026-11-22T08:30Z: Listenseite HTTP 200; Seitenwechsel nicht erneut versucht, Entscheid Retos zum Browserweg steht aus. | Test 2026-11-23T20:30Z: Listenseite HTTP 200; Seitenwechsel nicht versucht, Entscheid Retos zum Browserweg steht weiter aus. | Erneut 2026-11-25T12:30Z: www.sebi.gov.in/enforcement/orders HTTP 403; nicht umgangen.",
     "aufgenommen_utc": "2026-11-20T09:30:00Z",
-    "geprueft_utc": "2026-11-23T20:30Z"
+    "geprueft_utc": "2026-11-25T12:30Z"
   },
   {
     "id": "boc_leitzins_aenderungstage",
@@ -8320,5 +8320,33 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-25T09:00Z",
     "geprueft_utc": "2026-11-25T09:00Z"
+  },
+  {
+    "id": "amf_bdif_directors_dealings",
+    "name": "AMF Frankreich BDIF: Déclarations des dirigeants (Directors' Dealings) je Tag",
+    "url": "https://bdif.amf-france.org/back/api/v1/informations?typesInformation=DD",
+    "domain": "bdif.amf-france.org",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Gehäufte Meldungen von Geschäften der Führungspersonen französischer Emittenten (aggregierte Insiderkäufe) könnten kurzfristig den europäischen Markt (EWG) gegenüber dem Weltindex anzeigen (Lakonishok/Lee 2001, aggregiert).",
+    "grund": "Eigene Recherche Lauf 2026-11-25T12:30Z (Zusatz 6 Punkt 5, Firmenereignisse; dieselbe offene BDIF-Schnittstelle wie amf_bdif_offres_publiques). Typ DD liefert insgesamt 28355 Dokumente, aber nur ab 2025: Jahresabfragen 2006, 2010, 2015, 2020 je 0 Treffer, 2025 4874. Ältere Meldungen sind nicht migriert. K2 (Beginn spätestens 2015) nicht erfüllt. Keine Ablage.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-25T12:30Z",
+    "geprueft_utc": "2026-11-25T12:30Z"
+  },
+  {
+    "id": "cmf_hechos_esenciales",
+    "name": "CMF Chile: Hechos esenciales (Ad-hoc-Meldungen) je Tag",
+    "url": "https://www.cmfchile.cl/institucional/hechos/hechos.php?mercado=V",
+    "domain": "www.cmfchile.cl",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "tief",
+    "mechanismus": "Dichte der Ad-hoc-Meldungen chilenischer Emittenten als Informationsfluss für Schwellenländer und Rohstoffe (Kupfer, Lithium; XLB, EEM) gegenüber dem Weltindex; unabhängige Replikation von cvm_ipe_fatos_relevantes in einem zweiten Land.",
+    "grund": "Eigene Recherche Lauf 2026-11-25T12:30Z. Portalseite HTTP 200, aber Suchmaske hechos.php und robots.txt liefern HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Kein offener Datensatz oder Massendownload gefunden (WebSearch); Abfrage nur mit Suchkriterien. Nächster Lauf erneut; nur weiterverfolgen, wenn ein Weg mit Datumsfilter und Historie ab spätestens 2015 offen ist.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-25T12:30Z",
+    "geprueft_utc": "2026-11-25T12:30Z"
   }
 ]
