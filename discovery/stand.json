@@ -3413,6 +3413,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:35Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fedregister_itc_337_patentverfahren__einleitungen.csv.gz": {
+   "datei": "n__neu__fedregister_itc_337_patentverfahren__einleitungen.csv.gz@11ec02e7d45aff02",
+   "sha": "11ec02e7d45aff02e21613b2a3c574c394b4f5c607d98e194338f61f4955c884",
+   "sha_inhalt": "79d559ae9c190e6ec0944a80917e422903a0736f88c95e44fb66c96233415ad5",
+   "zeilen": 9862,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-25T15:05:34Z",
+   "lauf_id": "L20261125T150510Z"
+  },
   "n__neu__fedregister_nhtsa_regeln__anzahl.csv.gz": {
    "datei": "n__neu__fedregister_nhtsa_regeln__anzahl.csv.gz@585ef0f0db989a53",
    "sha": "585ef0f0db989a530fda5b8260be4e4beec89c3bf01eac7db2a73cab9310e630",
@@ -4376,6 +4385,24 @@
    "aufgenommen_utc": "2026-10-28T10:53:39Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__uek_uebernahmen_schweiz__angebote.csv.gz": {
+   "datei": "n__neu__uek_uebernahmen_schweiz__angebote.csv.gz@5d8d238e70830432",
+   "sha": "5d8d238e708304323ea82904924ac4612b435fe24fbf7d814430f8b60e2fbfd1",
+   "sha_inhalt": "1ce9fb6785acc2ad10593cdfd832209d2da6a175ac8304f3182d5425bb6dc1f2",
+   "zeilen": 8460,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-25T15:05:39Z",
+   "lauf_id": "L20261125T150510Z"
+  },
+  "n__neu__uek_uebernahmen_schweiz__rueckkaeufe.csv.gz": {
+   "datei": "n__neu__uek_uebernahmen_schweiz__rueckkaeufe.csv.gz@7b3a1cc98b0884c8",
+   "sha": "7b3a1cc98b0884c8dc32da0faf43276711293dfe2b28ab81faeb7f0b4ee7f68f",
+   "sha_inhalt": "13b89ba4dae7e18167d71e240b6e4f130886ecbdb57a5bb695745007504bf16e",
+   "zeilen": 8460,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-25T15:05:39Z",
+   "lauf_id": "L20261125T150510Z"
+  },
   "n__neu__uk_gazette_insolvenzmeldungen__abwicklungsantraege.csv.gz": {
    "datei": "n__neu__uk_gazette_insolvenzmeldungen__abwicklungsantraege.csv.gz@3c8f4262b44ccd05",
    "sha": "3c8f4262b44ccd05a10da9da756df9bfab8ddb25ef166d3db006eb462c23c381",
@@ -4552,6 +4579,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:40Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__voteview_gesetzesabstimmungen__abstimmungen.csv.gz": {
+   "datei": "n__neu__voteview_gesetzesabstimmungen__abstimmungen.csv.gz@aac564c653a9bc47",
+   "sha": "aac564c653a9bc47951e3ea45ec707530fd20b2977374382c5883f606b87cd47",
+   "sha_inhalt": "81aed0cbbfd4aebae2958796d94c57e453ff03952f42bbcfb2f7c103f6731846",
+   "zeilen": 84601,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-25T15:05:40Z",
+   "lauf_id": "L20261125T150510Z"
   },
   "n__neu__wikipedia_weitere__duerre.csv.gz": {
    "datei": "n__neu__wikipedia_weitere__duerre.csv.gz@96994e8cb24d8678",
@@ -5369,9 +5405,37 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-24T15:25:09Z",
- "dateien_n": 593,
+ "stand_utc": "2026-11-25T15:05:44Z",
+ "dateien_n": 597,
  "vorgemerkt": {
+  "n__neu__amf_bdif_offres_publiques__angebote_eingereicht.csv.gz": {
+   "erstmals_utc": "2026-11-25T15:05:30Z",
+   "beste_werte": 504,
+   "frueheste_erste": "2008-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-25T15:05:30Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 504,
+     "erste": "2008-01-01",
+     "sha_inhalt": "7416840a7050c9e540c588c02bfb037ca3b04c5da95dffc0791a17dfc936de94"
+    }
+   ]
+  },
+  "n__neu__amf_bdif_offres_publiques__dokumente.csv.gz": {
+   "erstmals_utc": "2026-11-25T15:05:30Z",
+   "beste_werte": 3100,
+   "frueheste_erste": "2008-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-25T15:05:30Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 3100,
+     "erste": "2008-01-01",
+     "sha_inhalt": "d3546ab786b99e62957d227eb4a21155019a34c35d7801dfc3aff25ee5dd0276"
+    }
+   ]
+  },
   "n__neu__bodacc_insolvenzen_frankreich__liquidationen_eroeffnet.csv.gz": {
    "erstmals_utc": "2026-11-24T15:24:53Z",
    "beste_werte": 3226,
@@ -5380,6 +5444,13 @@
     {
      "utc": "2026-11-24T15:24:53Z",
      "lauf_id": "L20261124T152433Z",
+     "werte": 3226,
+     "erste": "2008-02-03",
+     "sha_inhalt": "d454d018e8e07b5c91a55ec95c6eba71cbc60bc8bb4b6440d1ba209f074333d3"
+    },
+    {
+     "utc": "2026-11-25T15:05:30Z",
+     "lauf_id": "L20261125T150510Z",
      "werte": 3226,
      "erste": "2008-02-03",
      "sha_inhalt": "d454d018e8e07b5c91a55ec95c6eba71cbc60bc8bb4b6440d1ba209f074333d3"
@@ -5397,27 +5468,69 @@
      "werte": 3229,
      "erste": "2008-02-03",
      "sha_inhalt": "255b964e09412ac7c29c04f7fe5ee96413c6d3bae9cc3decebc1d76746b68dda"
+    },
+    {
+     "utc": "2026-11-25T15:05:30Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 3229,
+     "erste": "2008-02-03",
+     "sha_inhalt": "255b964e09412ac7c29c04f7fe5ee96413c6d3bae9cc3decebc1d76746b68dda"
     }
    ]
   },
-  "n__neu__fedregister_itc_337_patentverfahren__einleitungen.csv.gz": {
-   "erstmals_utc": "2026-11-23T15:44:25Z",
-   "beste_werte": 911,
-   "frueheste_erste": "1994-01-01",
+  "n__neu__cvm_ipe_fatos_relevantes__comunicado_mercado.csv.gz": {
+   "erstmals_utc": "2026-11-25T15:05:31Z",
+   "beste_werte": 4793,
+   "frueheste_erste": "2003-01-06",
    "sichtungen": [
     {
-     "utc": "2026-11-23T15:44:25Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 911,
-     "erste": "1994-01-01",
-     "sha_inhalt": "79d559ae9c190e6ec0944a80917e422903a0736f88c95e44fb66c96233415ad5"
-    },
+     "utc": "2026-11-25T15:05:31Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 4793,
+     "erste": "2003-01-06",
+     "sha_inhalt": "da318bba428a5ba3d8d2281fe22d8ea95c9a1eae8d961f742536b33e171e5cb6"
+    }
+   ]
+  },
+  "n__neu__cvm_ipe_fatos_relevantes__fato_relevante.csv.gz": {
+   "erstmals_utc": "2026-11-25T15:05:31Z",
+   "beste_werte": 4545,
+   "frueheste_erste": "2003-01-06",
+   "sichtungen": [
     {
-     "utc": "2026-11-24T15:24:57Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 911,
-     "erste": "1994-01-01",
-     "sha_inhalt": "79d559ae9c190e6ec0944a80917e422903a0736f88c95e44fb66c96233415ad5"
+     "utc": "2026-11-25T15:05:31Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 4545,
+     "erste": "2003-01-06",
+     "sha_inhalt": "12342ec0e5136429d3e81925a058b76d4848223daf20aac8e6843a30eb04ff83"
+    }
+   ]
+  },
+  "n__neu__cvm_ofertas_acoes__aktien_angebote.csv.gz": {
+   "erstmals_utc": "2026-11-25T15:05:31Z",
+   "beste_werte": 594,
+   "frueheste_erste": "1990-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-25T15:05:31Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 594,
+     "erste": "1990-01-01",
+     "sha_inhalt": "b09943068e8ee1fde88eb9ddfac785e812bf880f74b4793e321c132d2b288ae8"
+    }
+   ]
+  },
+  "n__neu__cvm_recompra_acoes__firmen_rueckkaufbeschluss.csv.gz": {
+   "erstmals_utc": "2026-11-25T15:05:31Z",
+   "beste_werte": 1132,
+   "frueheste_erste": "1997-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-25T15:05:31Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 1132,
+     "erste": "1997-01-01",
+     "sha_inhalt": "20af3086ddafb04418dc0c6531615c589c92f5df7045bd0d03ba730e1b9cafc1"
     }
    ]
   },
@@ -5429,6 +5542,13 @@
     {
      "utc": "2026-11-24T15:24:57Z",
      "lauf_id": "L20261124T152433Z",
+     "werte": 167,
+     "erste": "1994-01-01",
+     "sha_inhalt": "b339e338fca819df3921340588651ee1aa04f984c551403cf947c4408d7e179a"
+    },
+    {
+     "utc": "2026-11-25T15:05:34Z",
+     "lauf_id": "L20261125T150510Z",
      "werte": 167,
      "erste": "1994-01-01",
      "sha_inhalt": "b339e338fca819df3921340588651ee1aa04f984c551403cf947c4408d7e179a"
@@ -5446,6 +5566,13 @@
      "werte": 723,
      "erste": "2007-02-01",
      "sha_inhalt": "673e6d71b993ad1cad74d066f8bcd387dd8e3e218bcc370ed5b76fba830de0b6"
+    },
+    {
+     "utc": "2026-11-25T15:05:36Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 723,
+     "erste": "2007-02-01",
+     "sha_inhalt": "673e6d71b993ad1cad74d066f8bcd387dd8e3e218bcc370ed5b76fba830de0b6"
     }
    ]
   },
@@ -5460,69 +5587,13 @@
      "werte": 5806,
      "erste": "1998-03-18",
      "sha_inhalt": "3d287be7b7e3bcc351d6c380c4e228069d38b55b42db5415c0b5b707e0783713"
-    }
-   ]
-  },
-  "n__neu__uek_uebernahmen_schweiz__angebote.csv.gz": {
-   "erstmals_utc": "2026-11-23T15:44:32Z",
-   "beste_werte": 164,
-   "frueheste_erste": "1997-11-03",
-   "sichtungen": [
-    {
-     "utc": "2026-11-23T15:44:32Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 164,
-     "erste": "1997-11-03",
-     "sha_inhalt": "1ce9fb6785acc2ad10593cdfd832209d2da6a175ac8304f3182d5425bb6dc1f2"
     },
     {
-     "utc": "2026-11-24T15:25:02Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 164,
-     "erste": "1997-11-03",
-     "sha_inhalt": "1ce9fb6785acc2ad10593cdfd832209d2da6a175ac8304f3182d5425bb6dc1f2"
-    }
-   ]
-  },
-  "n__neu__uek_uebernahmen_schweiz__rueckkaeufe.csv.gz": {
-   "erstmals_utc": "2026-11-23T15:44:32Z",
-   "beste_werte": 397,
-   "frueheste_erste": "1997-11-03",
-   "sichtungen": [
-    {
-     "utc": "2026-11-23T15:44:32Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 397,
-     "erste": "1997-11-03",
-     "sha_inhalt": "13b89ba4dae7e18167d71e240b6e4f130886ecbdb57a5bb695745007504bf16e"
-    },
-    {
-     "utc": "2026-11-24T15:25:02Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 397,
-     "erste": "1997-11-03",
-     "sha_inhalt": "13b89ba4dae7e18167d71e240b6e4f130886ecbdb57a5bb695745007504bf16e"
-    }
-   ]
-  },
-  "n__neu__voteview_gesetzesabstimmungen__abstimmungen.csv.gz": {
-   "erstmals_utc": "2026-11-23T15:44:33Z",
-   "beste_werte": 23426,
-   "frueheste_erste": "1789-05-16",
-   "sichtungen": [
-    {
-     "utc": "2026-11-23T15:44:33Z",
-     "lauf_id": "L20261123T154353Z",
-     "werte": 23426,
-     "erste": "1789-05-16",
-     "sha_inhalt": "81aed0cbbfd4aebae2958796d94c57e453ff03952f42bbcfb2f7c103f6731846"
-    },
-    {
-     "utc": "2026-11-24T15:25:04Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 23426,
-     "erste": "1789-05-16",
-     "sha_inhalt": "81aed0cbbfd4aebae2958796d94c57e453ff03952f42bbcfb2f7c103f6731846"
+     "utc": "2026-11-25T15:05:38Z",
+     "lauf_id": "L20261125T150510Z",
+     "werte": 5806,
+     "erste": "1998-03-18",
+     "sha_inhalt": "3d287be7b7e3bcc351d6c380c4e228069d38b55b42db5415c0b5b707e0783713"
     }
    ]
   }

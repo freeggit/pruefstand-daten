@@ -1,5 +1,5 @@
 {
- "kumuliert": 829011,
+ "kumuliert": 838393,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -328,6 +328,16 @@
   "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe_stand",
   "neu_accc_produktrueckrufe_australien_anzahl_rueckrufe_z252",
   "neu_adp_beschaeftigung_termine_adp_stand",
+  "neu_amf_bdif_offres_publiques_angebote_eingereicht_d1",
+  "neu_amf_bdif_offres_publiques_angebote_eingereicht_d20",
+  "neu_amf_bdif_offres_publiques_angebote_eingereicht_d5",
+  "neu_amf_bdif_offres_publiques_angebote_eingereicht_stand",
+  "neu_amf_bdif_offres_publiques_angebote_eingereicht_z252",
+  "neu_amf_bdif_offres_publiques_dokumente_d1",
+  "neu_amf_bdif_offres_publiques_dokumente_d20",
+  "neu_amf_bdif_offres_publiques_dokumente_d5",
+  "neu_amf_bdif_offres_publiques_dokumente_stand",
+  "neu_amf_bdif_offres_publiques_dokumente_z252",
   "neu_asic_medienmitteilungen_anzahl_durchsetzung_d1",
   "neu_asic_medienmitteilungen_anzahl_durchsetzung_d20",
   "neu_asic_medienmitteilungen_anzahl_durchsetzung_d5",
@@ -460,6 +470,26 @@
   "neu_cpsc_ruckrufe_ruckrufe_d5",
   "neu_cpsc_ruckrufe_ruckrufe_stand",
   "neu_cpsc_ruckrufe_ruckrufe_z252",
+  "neu_cvm_ipe_fatos_relevantes_comunicado_mercado_d1",
+  "neu_cvm_ipe_fatos_relevantes_comunicado_mercado_d20",
+  "neu_cvm_ipe_fatos_relevantes_comunicado_mercado_d5",
+  "neu_cvm_ipe_fatos_relevantes_comunicado_mercado_stand",
+  "neu_cvm_ipe_fatos_relevantes_comunicado_mercado_z252",
+  "neu_cvm_ipe_fatos_relevantes_fato_relevante_d1",
+  "neu_cvm_ipe_fatos_relevantes_fato_relevante_d20",
+  "neu_cvm_ipe_fatos_relevantes_fato_relevante_d5",
+  "neu_cvm_ipe_fatos_relevantes_fato_relevante_stand",
+  "neu_cvm_ipe_fatos_relevantes_fato_relevante_z252",
+  "neu_cvm_ofertas_acoes_aktien_angebote_d1",
+  "neu_cvm_ofertas_acoes_aktien_angebote_d20",
+  "neu_cvm_ofertas_acoes_aktien_angebote_d5",
+  "neu_cvm_ofertas_acoes_aktien_angebote_stand",
+  "neu_cvm_ofertas_acoes_aktien_angebote_z252",
+  "neu_cvm_recompra_acoes_firmen_rueckkaufbeschluss_d1",
+  "neu_cvm_recompra_acoes_firmen_rueckkaufbeschluss_d20",
+  "neu_cvm_recompra_acoes_firmen_rueckkaufbeschluss_d5",
+  "neu_cvm_recompra_acoes_firmen_rueckkaufbeschluss_stand",
+  "neu_cvm_recompra_acoes_firmen_rueckkaufbeschluss_z252",
   "neu_dax_indexaenderungen_anzahl_aenderungen_d1",
   "neu_dax_indexaenderungen_anzahl_aenderungen_d20",
   "neu_dax_indexaenderungen_anzahl_aenderungen_d5",
@@ -2252,9 +2282,15 @@
    "datei": "suche/S0078.json",
    "kandidaten": 490418,
    "in_db": false
+  },
+  {
+   "nr": 79,
+   "datei": "suche/S0079.json",
+   "kandidaten": 499800,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-24T18:05Z",
+ "letzter_suchlauf_utc": "2026-11-25T17:18Z",
  "pruefung_lernrunde_utc": "2026-11-25T09:05:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2784,11 +2820,19 @@
    "ergebnis_hash": "6e6f75fed6859236",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261125T150510Z.json",
+   "lauf_id": "L20261125T150510Z",
+   "s_dokument": "suche/S0079.json",
+   "ergebnis_hash": "aa494b1fcf5383bd",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-24T18:05Z",
- "letztes_vollarchiv": "suche/S0078_alle.csv.gz",
- "letzter_ergebnis_hash": "6e6f75fed6859236",
+ "letzter_lauf_utc": "2026-11-25T17:18Z",
+ "letztes_vollarchiv": "suche/S0079_alle.csv.gz",
+ "letzter_ergebnis_hash": "aa494b1fcf5383bd",
  "konflikte": [
   {
    "wo": "index",
@@ -5023,10 +5067,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 403,
-  "neu_in_diesem_lauf": 5
+  "grundreihen_n": 409,
+  "neu_in_diesem_lauf": 6
  },
- "letztes_vollarchiv_ergebnis_hash": "6e6f75fed6859236",
+ "letztes_vollarchiv_ergebnis_hash": "aa494b1fcf5383bd",
  "pruefungen_bestanden": {
   "pruef_hash": "f3557dd6a676a619",
   "lauf_id": "L20261123T154353Z",
@@ -5044,7 +5088,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "4985ba4e80ee00dc",
- "letzter_gueltiger_lauf": "L20261124T152433Z",
- "letzter_entscheidung_hash": "b6d17671aea4047c"
+ "letzter_eingabe_hash": "3ec7e463741f702e",
+ "letzter_gueltiger_lauf": "L20261125T150510Z",
+ "letzter_entscheidung_hash": "7ef9d0b8ddb34a26"
 }

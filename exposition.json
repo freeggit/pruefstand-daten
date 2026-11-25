@@ -139,6 +139,18 @@
    "erst_zeit": "2026-10-27T12:54Z",
    "beleg": "suche/laeufe/L20261027T100646Z.json"
   },
+  "neu_amf_bdif_offres_publiques_angebote_eingereicht": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261125T150510Z",
+   "erst_zeit": "2026-11-25T17:18Z",
+   "beleg": "suche/laeufe/L20261125T150510Z.json"
+  },
+  "neu_amf_bdif_offres_publiques_dokumente": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261125T150510Z",
+   "erst_zeit": "2026-11-25T17:18Z",
+   "beleg": "suche/laeufe/L20261125T150510Z.json"
+  },
   "neu_asic_medienmitteilungen_anzahl_durchsetzung": {
    "erst_dokument": null,
    "erst_lauf": "L20261120T134206Z",
@@ -354,6 +366,30 @@
    "erst_lauf": null,
    "erst_zeit": "28.9.2026, 09:04 (Europe/Zurich)",
    "beleg": "suche/S0013_alle.csv.gz"
+  },
+  "neu_cvm_ipe_fatos_relevantes_comunicado_mercado": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261125T150510Z",
+   "erst_zeit": "2026-11-25T17:18Z",
+   "beleg": "suche/laeufe/L20261125T150510Z.json"
+  },
+  "neu_cvm_ipe_fatos_relevantes_fato_relevante": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261125T150510Z",
+   "erst_zeit": "2026-11-25T17:18Z",
+   "beleg": "suche/laeufe/L20261125T150510Z.json"
+  },
+  "neu_cvm_ofertas_acoes_aktien_angebote": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261125T150510Z",
+   "erst_zeit": "2026-11-25T17:18Z",
+   "beleg": "suche/laeufe/L20261125T150510Z.json"
+  },
+  "neu_cvm_recompra_acoes_firmen_rueckkaufbeschluss": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261125T150510Z",
+   "erst_zeit": "2026-11-25T17:18Z",
+   "beleg": "suche/laeufe/L20261125T150510Z.json"
   },
   "neu_dax_indexaenderungen_anzahl_aenderungen": {
    "erst_dokument": null,
@@ -2426,8 +2462,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261124T152433Z",
-  "zeit_utc": "2026-11-24T18:05Z",
-  "grundreihen_n": 403
+  "lauf_id": "L20261125T150510Z",
+  "zeit_utc": "2026-11-25T17:18Z",
+  "grundreihen_n": 409
  }
 }
