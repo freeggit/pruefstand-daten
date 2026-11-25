@@ -8376,5 +8376,47 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-25T16:30Z",
     "geprueft_utc": "2026-11-25T16:30Z"
+  },
+  {
+    "id": "fedregister_cpsc_verbraucherprodukte",
+    "name": "Federal Register: CPSC Sicherheitsstandards für Konsumgüter (Rules und Proposed Rules, Zählreihe)",
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=consumer-product-safety-commission",
+    "domain": "federalregister.gov",
+    "bereich": "Firmenereignisse",
+    "status": "aktiv",
+    "prioritaet": "normal",
+    "mechanismus": "Neue und vorgeschlagene Pflichtstandards, Produktverbote und Kennzeichnungsregeln der Consumer Product Safety Commission verursachen Kosten oder Absatzausfälle bei Herstellern und Händlern von Konsumgütern (Spielzeug, Möbel, Haushaltsgeräte, Fahrzeuge für Freizeit) und könnten den zyklischen Konsum (XLY) über 1 bis 20 Tage gegenüber dem Weltindex bewegen.",
+    "grund": "Eigene Recherche Lauf 2026-11-25T20:10Z (Zusatz 6: Firmenereignisse zuerst; alle offenen Firmenereignis-Kandidaten sind EDGAR (über die Action) oder innerhalb 24 h mit 403 geprüft). Lücke im Bestand: CPSC fehlte unter den Federal-Register-Behörden; Abgrenzung zu cpsc_ruckrufe (Rückrufe einzelner Produkte, hier Regeln für ganze Produktklassen). Nur Rule und Proposed Rule, ohne Notices (meist Sitzungsankündigungen und Formularverfahren, kein Mechanismus). Federal-Register-API, ohne Login und ohne Schlüssel (K3), Skript wie die übrigen fedregister_* (inkrementell über fr_inkrementell). Beginn 1995-01-01: für 1994 liefert das API keinen CPSC-Treffer (Indexlücke), darum nicht mit Nullen ab 1994 aufgefüllt. Prüfung: 11645 Zeilen 1995-01-01 bis 2026-11-18, Median-Abstand 1 Tag, Summe 684 Dokumente an 569 Tagen (2 bis 41 je Jahr), Min 0, Max 5 (2012-12-10), gleiche Folgewerte 91% (dünne Ereignisreihe mit Nullfüllung, erwartet, kein Fehler); Abruf 44 s (K7). Publikation taeglich (Federal Register erscheint an jedem Bankarbeitstag, Dokument ab Publikationsdatum öffentlich), verfuegbar_nach_tagen 0, revidiert false. Reihe endet am letzten Publikationstag mit Treffer (wie alle fedregister_*). Aktiv: anzahl.",
+    "reihen": [
+      "anzahl"
+    ],
+    "aufgenommen_utc": "2026-11-25T20:30Z",
+    "geprueft_utc": "2026-11-25T20:30Z",
+    "pruefung": {
+      "anzahl": {
+        "zeilen": 11645,
+        "erste": "1995-01-01",
+        "letzte": "2026-11-18",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.909,
+        "min": 0,
+        "max": 5,
+        "summe": 684
+      }
+    }
+  },
+  {
+    "id": "cafc_patenturteile",
+    "name": "US Court of Appeals for the Federal Circuit: Urteile (Precedential Opinions) je Tag",
+    "url": "https://www.cafc.uscourts.gov/home/case-information/opinions-orders/",
+    "domain": "cafc.uscourts.gov",
+    "bereich": "Justiz",
+    "status": "abgelehnt",
+    "prioritaet": "tief",
+    "mechanismus": "Leiturteile des Patentberufungsgerichts (Hatch-Waxman, Biotech- und Technologiepatente) könnten Gesundheit (XLV) und Technologie (XLK) kurzfristig gegenüber dem Weltindex bewegen.",
+    "grund": "Eigene Recherche Lauf 2026-11-25T20:15Z. Seite HTTP 200, robots.txt erlaubt alles; die Urteilsliste (Release_Date, Appeal_Number, Document_Type, Status) wird aber nur per JavaScript über einen internen WordPress-Endpunkt (admin-ajax.php, get_wdtable) mit Seiten-Nonce nachgeladen; kein dokumentierter Download und keine offene Schnittstelle. Abruf über diesen internen Endpunkt nicht vorgenommen (K3 unklar). Abgelehnt; erneut prüfen nur, wenn eine offene Liste (CSV/RSS mit Archiv) erscheint. Alternative für später: Gerichtsurteile über courtlistener (bereits im Katalog) nach Gericht cafc filtern.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-25T20:30Z",
+    "geprueft_utc": "2026-11-25T20:30Z"
   }
 ]
