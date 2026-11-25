@@ -3276,9 +3276,9 @@
     "status": "fehler",
     "prioritaet": "normal",
     "mechanismus": "Ankuendigungen zu Emissionsvolumen und Laufzeiten veraendern das erwartete Angebot an Laufzeitpraemie und bewegen kurzfristig Anleihen-ETFs.",
-    "grund": "Test 2026-10-09T12:50Z: aktuelle Seite nennt nur die laufenden Termine; Archivseite ohne datierte Liste (nur Verweis auf Daten 1976-2010). Historie ab 2000 nicht strukturiert abrufbar; Jahrseiten im naechsten Lauf pruefen. | Vier Termine pro Jahr (Februar, Mai, August, November), Historie seit 2000, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse, daher Prioritaet normal. | Test 2026-11-22T08:30Z: Seite HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Test 2026-11-24T04:08Z: Archivseite HTTP 200, enthält aber weiterhin keine datierte Liste der Ankündigungen (nur Verweise auf Zinsseiten); bleibt fehler.",
+    "grund": "Test 2026-10-09T12:50Z: aktuelle Seite nennt nur die laufenden Termine; Archivseite ohne datierte Liste (nur Verweis auf Daten 1976-2010). Historie ab 2000 nicht strukturiert abrufbar; Jahrseiten im naechsten Lauf pruefen. | Vier Termine pro Jahr (Februar, Mai, August, November), Historie seit 2000, deterministischer Kalender ohne Wertreihe. Wenige Ereignisse, daher Prioritaet normal. | Test 2026-11-22T08:30Z: Seite HTTP 200; nicht bearbeitet (Firmenereignisse haben Vorrang, Zusatz 6). | Test 2026-11-24T04:08Z: Archivseite HTTP 200, enthält aber weiterhin keine datierte Liste der Ankündigungen (nur Verweise auf Zinsseiten); bleibt fehler. | Test 2026-11-25T16:20Z: Archivseite HTTP 200, weiter keine datierte Liste der Ankündigungen; bleibt fehler.",
     "ergaenzt_utc": "2026-10-07T10:00Z",
-    "geprueft_utc": "2026-11-24T04:08Z"
+    "geprueft_utc": "2026-11-25T16:30Z"
   },
   {
     "id": "sec_nt_verspaetungsmeldungen",
@@ -3316,11 +3316,11 @@
     "domain": "api.nasdaq.com",
     "bereich": "Firmenereignisse",
     "status": "fehler",
-    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin keine Verbindung (curl 000, www.nasdaq.com); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: api.nasdaq.com keine Verbindung (Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T20:10Z: keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-22T20:35Z: keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-24T04:05Z: api.nasdaq.com keine Verbindung (curl 000); Sperre nicht umgangen, nächster Lauf erneut.",
+    "grund": "Test 2026-10-08T08:17Z: keine Verbindung (curl Code 000) von dieser Umgebung; Nutzungsbedingungen zudem unklar. Nächster Lauf erneut, Zusatz 6 Punkt 4. | Erneut 2026-10-15T16:24Z: weiter gesperrt/keine Verbindung, nicht umgangen. | 2026-10-18T00:15Z: erneut geprueft, weiterhin keine Verbindung; nicht umgangen. Erneut 2026-10-19T00:25Z: keine Verbindung, unveraendert. | Erneut 2026-10-20T00:27:00Z: keine Verbindung (curl 000). | Test 2026-10-22T08:15Z: weiterhin keine Verbindung (000), nicht umgangen. | Test 2026-10-29T20Z: keine Verbindung (000) zu api.nasdaq.com. | 2026-11-11T00:28Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut. | 2026-11-12T04:05Z: api.nasdaq.com weiterhin keine Verbindung (curl 000); nicht umgangen, naechster Lauf erneut. | Test 2026-11-14T00:08Z: weiterhin keine Verbindung (curl Code 000); naechster Lauf erneut. | Test 2026-11-15T12:15Z: weiterhin keine Verbindung (curl Code 000); nicht umgangen, naechster Lauf erneut. | Erneut 2026-11-16T16:08Z: api.nasdaq.com keine Verbindung (curl 000); nächster Lauf erneut. | Test 2026-11-18T00:25Z: weiterhin keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-19T04:30Z: weiterhin keine Verbindung (curl 000, www.nasdaq.com); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-20T08:20Z: api.nasdaq.com keine Verbindung (Code 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-21T20:10Z: keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-22T20:35Z: keine Verbindung (curl 000); Sperre nicht umgangen, naechster Lauf erneut. | Test 2026-11-24T04:05Z: api.nasdaq.com keine Verbindung (curl 000); Sperre nicht umgangen, nächster Lauf erneut. | Test 2026-11-25T16:15Z: api.nasdaq.com keine Verbindung (curl 000); Sperre nicht umgangen, nächster Lauf erneut.",
     "mechanismus": "Börsengänge je Tag zeigen Informationsdichte/Risikoappetit je Sektor.",
     "reihen": [],
     "aufgenommen_utc": "2026-10-08T08:17Z",
-    "geprueft_utc": "2026-11-24T04:05Z",
+    "geprueft_utc": "2026-11-25T16:30Z",
     "prioritaet": "normal"
   },
   {
@@ -7277,10 +7277,10 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Haeufung von Disziplinarmassnahmen gegen Broker-Dealer zeigt Aufsichtsdruck auf Finanzfirmen (XLF) gegenueber dem Weltindex.",
-    "grund": "Eigene Recherche Lauf 2026-11-20T08:20Z: Seite HTTP 200, Liste wird nur per JavaScript geladen (kein Tabelleninhalt im HTML, kein dokumentierter offener Endpunkt); robots.txt sperrt /sites/default/files/fda_documents/. Nicht weiter verfolgt; naechster Lauf allenfalls offenen Endpunkt pruefen. Daneben getestet: FCA Final Notices (www.fca.org.uk Suche HTTP 403, nicht umgangen). | Test 2026-11-24T04:05Z: Seite HTTP 200, weiter kein offener Endpunkt mit Tagesliste gefunden; bleibt fehler.",
+    "grund": "Eigene Recherche Lauf 2026-11-20T08:20Z: Seite HTTP 200, Liste wird nur per JavaScript geladen (kein Tabelleninhalt im HTML, kein dokumentierter offener Endpunkt); robots.txt sperrt /sites/default/files/fda_documents/. Nicht weiter verfolgt; naechster Lauf allenfalls offenen Endpunkt pruefen. Daneben getestet: FCA Final Notices (www.fca.org.uk Suche HTTP 403, nicht umgangen). | Test 2026-11-24T04:05Z: Seite HTTP 200, weiter kein offener Endpunkt mit Tagesliste gefunden; bleibt fehler. | Test 2026-11-25T16:15Z: Seite HTTP 200, weiter kein offener Endpunkt mit Tagesliste; bleibt fehler.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-20T08:20Z",
-    "geprueft_utc": "2026-11-24T04:05Z"
+    "geprueft_utc": "2026-11-25T16:30Z"
   },
   {
     "id": "sec_424b_emissionen_dichte",
@@ -8348,5 +8348,33 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-25T12:30Z",
     "geprueft_utc": "2026-11-25T12:30Z"
+  },
+  {
+    "id": "occ_infomemos_kontraktanpassungen",
+    "name": "OCC Information Memos: Kontraktanpassungen (Fusionen, Spin-offs, Sonderdividenden) je Tag",
+    "url": "https://infomemo.theocc.com/infomemo/search",
+    "domain": "infomemo.theocc.com",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "normal",
+    "mechanismus": "Anpassungsmemos der Options Clearing Corporation datieren Kapitalmassnahmen (Fusionsvollzug, Abspaltungen, Sonderdividenden) börsenweit; Häufungen je Sektor zeigen Umschichtungsdruck bei Index- und Optionshändlern in den Folgetagen.",
+    "grund": "Eigene Recherche Lauf 2026-11-25T16:20Z. infomemo.theocc.com und www.theocc.com (auch robots.txt) liefern HTTP 403 (Cloudflare-Prüfseite); Sperre nicht umgangen (Befund), nächster Lauf erneut. Offen: Historie (Archiv nach Angaben ab etwa 1990er), Nutzungsbedingungen, Sektorzuordnung über Ticker.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-25T16:30Z",
+    "geprueft_utc": "2026-11-25T16:30Z"
+  },
+  {
+    "id": "gleif_lei_neuregistrierungen",
+    "name": "GLEIF: neue LEI-Registrierungen je Tag",
+    "url": "https://api.gleif.org/api/v1/lei-records",
+    "domain": "api.gleif.org",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "tief",
+    "mechanismus": "Neuregistrierungen von Rechtsträger-Kennungen (Fonds, Zweckgesellschaften) als Mass für Gründungs- und Emissionstätigkeit; Bezug zu Sektor-ETF nur indirekt.",
+    "grund": "Eigene Recherche Lauf 2026-11-25T16:25Z. API offen (HTTP 200, ohne Schlüssel), Filter registration.initialRegistrationDate liefert nur Zählung je exaktem Tag: eine Anfrage je Kalendertag ab 2012 (über 5000 Anfragen) sprengt K7; keine Sektorangabe, Mechanismus für 1 bis 20 Tage schwach. Abgelehnt (K7, schwacher Mechanismus).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-25T16:30Z",
+    "geprueft_utc": "2026-11-25T16:30Z"
   }
 ]
