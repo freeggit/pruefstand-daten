@@ -673,6 +673,12 @@
    "erst_zeit": "30.9.2026, 09:14 (Europe/Zurich)",
    "beleg": "suche/S0015_alle.csv.gz"
   },
+  "neu_fedregister_cpsc_verbraucherprodukte_anzahl": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261126T143517Z",
+   "erst_zeit": "2026-11-26T16:48Z",
+   "beleg": "suche/laeufe/L20261126T143517Z.json"
+  },
   "neu_fedregister_dea_regeln_anzahl": {
    "erst_dokument": "S0018",
    "erst_lauf": null,
@@ -960,6 +966,18 @@
    "erst_lauf": "L20261102T130854Z",
    "erst_zeit": "2026-11-02T16:06Z",
    "beleg": "suche/laeufe/L20261102T130854Z.json"
+  },
+  "neu_fred_prime_aenderungstage_aenderung": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261126T143517Z",
+   "erst_zeit": "2026-11-26T16:48Z",
+   "beleg": "suche/laeufe/L20261126T143517Z.json"
+  },
+  "neu_fred_prime_aenderungstage_richtung": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261126T143517Z",
+   "erst_zeit": "2026-11-26T16:48Z",
+   "beleg": "suche/laeufe/L20261126T143517Z.json"
   },
   "neu_fred_propane_propan": {
    "erst_dokument": "S0009",
@@ -1290,6 +1308,24 @@
    "erst_lauf": "L20261116T132647Z",
    "erst_zeit": "2026-11-16T16:27Z",
    "beleg": "suche/laeufe/L20261116T132647Z.json"
+  },
+  "neu_oira_regelpruefungen_anzahl": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261126T143517Z",
+   "erst_zeit": "2026-11-26T16:48Z",
+   "beleg": "suche/laeufe/L20261126T143517Z.json"
+  },
+  "neu_oira_regelpruefungen_energie_umwelt": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261126T143517Z",
+   "erst_zeit": "2026-11-26T16:48Z",
+   "beleg": "suche/laeufe/L20261126T143517Z.json"
+  },
+  "neu_oira_regelpruefungen_gesundheit": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261126T143517Z",
+   "erst_zeit": "2026-11-26T16:48Z",
+   "beleg": "suche/laeufe/L20261126T143517Z.json"
   },
   "neu_openmeteo_wetter_anbau_mais_guertel": {
    "erst_dokument": "S0010",
@@ -2462,8 +2498,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261125T150510Z",
-  "zeit_utc": "2026-11-25T17:18Z",
-  "grundreihen_n": 409
+  "lauf_id": "L20261126T143517Z",
+  "zeit_utc": "2026-11-26T16:48Z",
+  "grundreihen_n": 415
  }
 }

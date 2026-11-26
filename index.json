@@ -1,5 +1,5 @@
 {
- "kumuliert": 838393,
+ "kumuliert": 846868,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -694,6 +694,11 @@
   "neu_fedregister_cms_medicare_anzahl_d5",
   "neu_fedregister_cms_medicare_anzahl_stand",
   "neu_fedregister_cms_medicare_anzahl_z252",
+  "neu_fedregister_cpsc_verbraucherprodukte_anzahl_d1",
+  "neu_fedregister_cpsc_verbraucherprodukte_anzahl_d20",
+  "neu_fedregister_cpsc_verbraucherprodukte_anzahl_d5",
+  "neu_fedregister_cpsc_verbraucherprodukte_anzahl_stand",
+  "neu_fedregister_cpsc_verbraucherprodukte_anzahl_z252",
   "neu_fedregister_dea_regeln_anzahl_d1",
   "neu_fedregister_dea_regeln_anzahl_d20",
   "neu_fedregister_dea_regeln_anzahl_d5",
@@ -930,6 +935,12 @@
   "neu_fred_kerosin_golf_taeglich_kerosin_d5",
   "neu_fred_kerosin_golf_taeglich_kerosin_stand",
   "neu_fred_kerosin_golf_taeglich_kerosin_z252",
+  "neu_fred_prime_aenderungstage_aenderung_stand",
+  "neu_fred_prime_aenderungstage_richtung_d1",
+  "neu_fred_prime_aenderungstage_richtung_d20",
+  "neu_fred_prime_aenderungstage_richtung_d5",
+  "neu_fred_prime_aenderungstage_richtung_stand",
+  "neu_fred_prime_aenderungstage_richtung_z252",
   "neu_fred_propane_propan_d1",
   "neu_fred_propane_propan_d20",
   "neu_fred_propane_propan_d5",
@@ -1153,6 +1164,21 @@
   "neu_ofac_recent_actions_vollzug_d5",
   "neu_ofac_recent_actions_vollzug_stand",
   "neu_ofac_recent_actions_vollzug_z252",
+  "neu_oira_regelpruefungen_anzahl_d1",
+  "neu_oira_regelpruefungen_anzahl_d20",
+  "neu_oira_regelpruefungen_anzahl_d5",
+  "neu_oira_regelpruefungen_anzahl_stand",
+  "neu_oira_regelpruefungen_anzahl_z252",
+  "neu_oira_regelpruefungen_energie_umwelt_d1",
+  "neu_oira_regelpruefungen_energie_umwelt_d20",
+  "neu_oira_regelpruefungen_energie_umwelt_d5",
+  "neu_oira_regelpruefungen_energie_umwelt_stand",
+  "neu_oira_regelpruefungen_energie_umwelt_z252",
+  "neu_oira_regelpruefungen_gesundheit_d1",
+  "neu_oira_regelpruefungen_gesundheit_d20",
+  "neu_oira_regelpruefungen_gesundheit_d5",
+  "neu_oira_regelpruefungen_gesundheit_stand",
+  "neu_oira_regelpruefungen_gesundheit_z252",
   "neu_openmeteo_wetter_anbau_mais_guertel_d1",
   "neu_openmeteo_wetter_anbau_mais_guertel_d20",
   "neu_openmeteo_wetter_anbau_mais_guertel_d5",
@@ -2292,9 +2318,15 @@
    "datei": "suche/S0079.json",
    "kandidaten": 499800,
    "in_db": false
+  },
+  {
+   "nr": 80,
+   "datei": "suche/S0080.json",
+   "kandidaten": 508275,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-25T17:18Z",
+ "letzter_suchlauf_utc": "2026-11-26T16:48Z",
  "pruefung_lernrunde_utc": "2026-11-26T09:30:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2832,11 +2864,19 @@
    "ergebnis_hash": "aa494b1fcf5383bd",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261126T143517Z.json",
+   "lauf_id": "L20261126T143517Z",
+   "s_dokument": "suche/S0080.json",
+   "ergebnis_hash": "9fc988ea3d5adb3f",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-25T17:18Z",
- "letztes_vollarchiv": "suche/S0079_alle.csv.gz",
- "letzter_ergebnis_hash": "aa494b1fcf5383bd",
+ "letzter_lauf_utc": "2026-11-26T16:48Z",
+ "letztes_vollarchiv": "suche/S0080_alle.csv.gz",
+ "letzter_ergebnis_hash": "9fc988ea3d5adb3f",
  "konflikte": [
   {
    "wo": "index",
@@ -5071,10 +5111,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 409,
+  "grundreihen_n": 415,
   "neu_in_diesem_lauf": 6
  },
- "letztes_vollarchiv_ergebnis_hash": "aa494b1fcf5383bd",
+ "letztes_vollarchiv_ergebnis_hash": "9fc988ea3d5adb3f",
  "pruefungen_bestanden": {
   "pruef_hash": "f3557dd6a676a619",
   "lauf_id": "L20261123T154353Z",
@@ -5092,7 +5132,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "3ec7e463741f702e",
- "letzter_gueltiger_lauf": "L20261125T150510Z",
- "letzter_entscheidung_hash": "7ef9d0b8ddb34a26"
+ "letzter_eingabe_hash": "8de39d60de629ac2",
+ "letzter_gueltiger_lauf": "L20261126T143517Z",
+ "letzter_entscheidung_hash": "f9e4c690fac8eb9c"
 }

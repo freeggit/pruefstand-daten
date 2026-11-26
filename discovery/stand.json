@@ -2648,6 +2648,24 @@
    "aufgenommen_utc": "2026-10-28T10:53:33Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__bodacc_insolvenzen_frankreich__liquidationen_eroeffnet.csv.gz": {
+   "datei": "n__neu__bodacc_insolvenzen_frankreich__liquidationen_eroeffnet.csv.gz@9367742becc7d1fd",
+   "sha": "9367742becc7d1fd29f3a518fb94ad6fa41f15ab32cdb886c49382d9d3a6f610",
+   "sha_inhalt": "d454d018e8e07b5c91a55ec95c6eba71cbc60bc8bb4b6440d1ba209f074333d3",
+   "zeilen": 4716,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-26T14:35:37Z",
+   "lauf_id": "L20261126T143517Z"
+  },
+  "n__neu__bodacc_insolvenzen_frankreich__verfahren_alle.csv.gz": {
+   "datei": "n__neu__bodacc_insolvenzen_frankreich__verfahren_alle.csv.gz@01613381e58160dc",
+   "sha": "01613381e58160dc8d16982dd53bde1fa4060abd6fe5b40e9857d41edf8fb837",
+   "sha_inhalt": "255b964e09412ac7c29c04f7fe5ee96413c6d3bae9cc3decebc1d76746b68dda",
+   "zeilen": 4716,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-26T14:35:37Z",
+   "lauf_id": "L20261126T143517Z"
+  },
   "n__neu__boe_bankrate_aenderungstage__aenderungstage.csv.gz": {
    "datei": "n__neu__boe_bankrate_aenderungstage__aenderungstage.csv.gz@65a500a3e4c3fb0c",
    "sha": "65a500a3e4c3fb0cf8be0a435d514631e298a9698358ee681a53859142161a07",
@@ -3458,6 +3476,15 @@
    "aufgenommen_utc": "2026-10-28T10:53:36Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__fedregister_proklamationen_handel__anzahl.csv.gz": {
+   "datei": "n__neu__fedregister_proklamationen_handel__anzahl.csv.gz@444e734f31fcff15",
+   "sha": "444e734f31fcff1510d617d664ab221fb808947555b2c62e66286df0dc195285",
+   "sha_inhalt": "b339e338fca819df3921340588651ee1aa04f984c551403cf947c4408d7e179a",
+   "zeilen": 9862,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-26T14:35:41Z",
+   "lauf_id": "L20261126T143517Z"
+  },
   "n__neu__fedregister_sec_regeln__anzahl.csv.gz": {
    "datei": "n__neu__fedregister_sec_regeln__anzahl.csv.gz@aebcd7de56bc7861",
    "sha": "aebcd7de56bc7861066112e3338ebb3c768f6124c01962cfa1adfde338ad4fda",
@@ -3799,6 +3826,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-11-22T12:56:39Z",
    "lauf_id": "L20261122T125609Z"
+  },
+  "n__neu__hackernews_krisenbegriffe__layoffs.csv.gz": {
+   "datei": "n__neu__hackernews_krisenbegriffe__layoffs.csv.gz@2b8690b0043ffab1",
+   "sha": "2b8690b0043ffab1ee0527f86804b76c339a7470e00b3d87931f9cb8b1a12396",
+   "sha_inhalt": "673e6d71b993ad1cad74d066f8bcd387dd8e3e218bcc370ed5b76fba830de0b6",
+   "zeilen": 5083,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-26T14:35:43Z",
+   "lauf_id": "L20261126T143517Z"
   },
   "n__neu__healthcanada_noc_zulassungen__generika_zulassungen.csv.gz": {
    "datei": "n__neu__healthcanada_noc_zulassungen__generika_zulassungen.csv.gz@c3ebfd5f34e9b84a",
@@ -4204,6 +4240,15 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:39Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__oslo_newsweb_meldungen__primaerinsider_handel.csv.gz": {
+   "datei": "n__neu__oslo_newsweb_meldungen__primaerinsider_handel.csv.gz@4b235e56040e4d65",
+   "sha": "4b235e56040e4d65479d08cadef244dc1eec39ea5a9c2b1230e388be0b5aebb6",
+   "sha_inhalt": "3d287be7b7e3bcc351d6c380c4e228069d38b55b42db5415c0b5b707e0783713",
+   "zeilen": 8325,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-26T14:35:45Z",
+   "lauf_id": "L20261126T143517Z"
   },
   "n__neu__quartalsende_pensionsrebalancing__quartalsende.csv.gz": {
    "datei": "n__neu__quartalsende_pensionsrebalancing__quartalsende.csv.gz@e2467dc1b82dc755",
@@ -5405,8 +5450,8 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-25T15:05:44Z",
- "dateien_n": 597,
+ "stand_utc": "2026-11-26T14:35:51Z",
+ "dateien_n": 602,
  "vorgemerkt": {
   "n__neu__amf_bdif_offres_publiques__angebote_eingereicht.csv.gz": {
    "erstmals_utc": "2026-11-25T15:05:30Z",
@@ -5416,6 +5461,13 @@
     {
      "utc": "2026-11-25T15:05:30Z",
      "lauf_id": "L20261125T150510Z",
+     "werte": 504,
+     "erste": "2008-01-01",
+     "sha_inhalt": "7416840a7050c9e540c588c02bfb037ca3b04c5da95dffc0791a17dfc936de94"
+    },
+    {
+     "utc": "2026-11-26T14:35:37Z",
+     "lauf_id": "L20261126T143517Z",
      "werte": 504,
      "erste": "2008-01-01",
      "sha_inhalt": "7416840a7050c9e540c588c02bfb037ca3b04c5da95dffc0791a17dfc936de94"
@@ -5433,48 +5485,13 @@
      "werte": 3100,
      "erste": "2008-01-01",
      "sha_inhalt": "d3546ab786b99e62957d227eb4a21155019a34c35d7801dfc3aff25ee5dd0276"
-    }
-   ]
-  },
-  "n__neu__bodacc_insolvenzen_frankreich__liquidationen_eroeffnet.csv.gz": {
-   "erstmals_utc": "2026-11-24T15:24:53Z",
-   "beste_werte": 3226,
-   "frueheste_erste": "2008-02-03",
-   "sichtungen": [
-    {
-     "utc": "2026-11-24T15:24:53Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 3226,
-     "erste": "2008-02-03",
-     "sha_inhalt": "d454d018e8e07b5c91a55ec95c6eba71cbc60bc8bb4b6440d1ba209f074333d3"
     },
     {
-     "utc": "2026-11-25T15:05:30Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 3226,
-     "erste": "2008-02-03",
-     "sha_inhalt": "d454d018e8e07b5c91a55ec95c6eba71cbc60bc8bb4b6440d1ba209f074333d3"
-    }
-   ]
-  },
-  "n__neu__bodacc_insolvenzen_frankreich__verfahren_alle.csv.gz": {
-   "erstmals_utc": "2026-11-24T15:24:53Z",
-   "beste_werte": 3229,
-   "frueheste_erste": "2008-02-03",
-   "sichtungen": [
-    {
-     "utc": "2026-11-24T15:24:53Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 3229,
-     "erste": "2008-02-03",
-     "sha_inhalt": "255b964e09412ac7c29c04f7fe5ee96413c6d3bae9cc3decebc1d76746b68dda"
-    },
-    {
-     "utc": "2026-11-25T15:05:30Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 3229,
-     "erste": "2008-02-03",
-     "sha_inhalt": "255b964e09412ac7c29c04f7fe5ee96413c6d3bae9cc3decebc1d76746b68dda"
+     "utc": "2026-11-26T14:35:37Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 3100,
+     "erste": "2008-01-01",
+     "sha_inhalt": "d3546ab786b99e62957d227eb4a21155019a34c35d7801dfc3aff25ee5dd0276"
     }
    ]
   },
@@ -5486,6 +5503,13 @@
     {
      "utc": "2026-11-25T15:05:31Z",
      "lauf_id": "L20261125T150510Z",
+     "werte": 4793,
+     "erste": "2003-01-06",
+     "sha_inhalt": "da318bba428a5ba3d8d2281fe22d8ea95c9a1eae8d961f742536b33e171e5cb6"
+    },
+    {
+     "utc": "2026-11-26T14:35:38Z",
+     "lauf_id": "L20261126T143517Z",
      "werte": 4793,
      "erste": "2003-01-06",
      "sha_inhalt": "da318bba428a5ba3d8d2281fe22d8ea95c9a1eae8d961f742536b33e171e5cb6"
@@ -5503,6 +5527,13 @@
      "werte": 4545,
      "erste": "2003-01-06",
      "sha_inhalt": "12342ec0e5136429d3e81925a058b76d4848223daf20aac8e6843a30eb04ff83"
+    },
+    {
+     "utc": "2026-11-26T14:35:38Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 4545,
+     "erste": "2003-01-06",
+     "sha_inhalt": "12342ec0e5136429d3e81925a058b76d4848223daf20aac8e6843a30eb04ff83"
     }
    ]
   },
@@ -5514,6 +5545,13 @@
     {
      "utc": "2026-11-25T15:05:31Z",
      "lauf_id": "L20261125T150510Z",
+     "werte": 594,
+     "erste": "1990-01-01",
+     "sha_inhalt": "b09943068e8ee1fde88eb9ddfac785e812bf880f74b4793e321c132d2b288ae8"
+    },
+    {
+     "utc": "2026-11-26T14:35:38Z",
+     "lauf_id": "L20261126T143517Z",
      "werte": 594,
      "erste": "1990-01-01",
      "sha_inhalt": "b09943068e8ee1fde88eb9ddfac785e812bf880f74b4793e321c132d2b288ae8"
@@ -5531,69 +5569,97 @@
      "werte": 1132,
      "erste": "1997-01-01",
      "sha_inhalt": "20af3086ddafb04418dc0c6531615c589c92f5df7045bd0d03ba730e1b9cafc1"
+    },
+    {
+     "utc": "2026-11-26T14:35:38Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 1132,
+     "erste": "1997-01-01",
+     "sha_inhalt": "20af3086ddafb04418dc0c6531615c589c92f5df7045bd0d03ba730e1b9cafc1"
     }
    ]
   },
-  "n__neu__fedregister_proklamationen_handel__anzahl.csv.gz": {
-   "erstmals_utc": "2026-11-24T15:24:57Z",
-   "beste_werte": 167,
-   "frueheste_erste": "1994-01-01",
+  "n__neu__fedregister_cpsc_verbraucherprodukte__anzahl.csv.gz": {
+   "erstmals_utc": "2026-11-26T14:35:40Z",
+   "beste_werte": 425,
+   "frueheste_erste": "1995-01-01",
    "sichtungen": [
     {
-     "utc": "2026-11-24T15:24:57Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 167,
-     "erste": "1994-01-01",
-     "sha_inhalt": "b339e338fca819df3921340588651ee1aa04f984c551403cf947c4408d7e179a"
-    },
-    {
-     "utc": "2026-11-25T15:05:34Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 167,
-     "erste": "1994-01-01",
-     "sha_inhalt": "b339e338fca819df3921340588651ee1aa04f984c551403cf947c4408d7e179a"
+     "utc": "2026-11-26T14:35:40Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 425,
+     "erste": "1995-01-01",
+     "sha_inhalt": "70b1a35f167437ae2f50065f006bb345cfe56f324275bcb8046b1063e4119ae6"
     }
    ]
   },
-  "n__neu__hackernews_krisenbegriffe__layoffs.csv.gz": {
-   "erstmals_utc": "2026-11-24T15:24:59Z",
-   "beste_werte": 723,
-   "frueheste_erste": "2007-02-01",
+  "n__neu__fred_prime_aenderungstage__aenderung.csv.gz": {
+   "erstmals_utc": "2026-11-26T14:35:42Z",
+   "beste_werte": 347,
+   "frueheste_erste": "1955-08-05",
    "sichtungen": [
     {
-     "utc": "2026-11-24T15:24:59Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 723,
-     "erste": "2007-02-01",
-     "sha_inhalt": "673e6d71b993ad1cad74d066f8bcd387dd8e3e218bcc370ed5b76fba830de0b6"
-    },
-    {
-     "utc": "2026-11-25T15:05:36Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 723,
-     "erste": "2007-02-01",
-     "sha_inhalt": "673e6d71b993ad1cad74d066f8bcd387dd8e3e218bcc370ed5b76fba830de0b6"
+     "utc": "2026-11-26T14:35:42Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 347,
+     "erste": "1955-08-05",
+     "sha_inhalt": "ca5e21d4a527254b35a6924d443b7b166c17df158a4d93554cf843111c956b6f"
     }
    ]
   },
-  "n__neu__oslo_newsweb_meldungen__primaerinsider_handel.csv.gz": {
-   "erstmals_utc": "2026-11-24T15:25:01Z",
-   "beste_werte": 5806,
-   "frueheste_erste": "1998-03-18",
+  "n__neu__fred_prime_aenderungstage__richtung.csv.gz": {
+   "erstmals_utc": "2026-11-26T14:35:42Z",
+   "beste_werte": 347,
+   "frueheste_erste": "1955-08-05",
    "sichtungen": [
     {
-     "utc": "2026-11-24T15:25:01Z",
-     "lauf_id": "L20261124T152433Z",
-     "werte": 5806,
-     "erste": "1998-03-18",
-     "sha_inhalt": "3d287be7b7e3bcc351d6c380c4e228069d38b55b42db5415c0b5b707e0783713"
-    },
+     "utc": "2026-11-26T14:35:42Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 347,
+     "erste": "1955-08-05",
+     "sha_inhalt": "33f0e35f9cd415b0bd224e7acf498b3a046ef1a0b7b60bfc2bc221a0bc48922a"
+    }
+   ]
+  },
+  "n__neu__oira_regelpruefungen__anzahl.csv.gz": {
+   "erstmals_utc": "2026-11-26T14:35:45Z",
+   "beste_werte": 2218,
+   "frueheste_erste": "2009-01-01",
+   "sichtungen": [
     {
-     "utc": "2026-11-25T15:05:38Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 5806,
-     "erste": "1998-03-18",
-     "sha_inhalt": "3d287be7b7e3bcc351d6c380c4e228069d38b55b42db5415c0b5b707e0783713"
+     "utc": "2026-11-26T14:35:45Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 2218,
+     "erste": "2009-01-01",
+     "sha_inhalt": "4af3f03c4e1424d0a3ef2c1cec43dbe8042ed8601649941820358b39f58e1e53"
+    }
+   ]
+  },
+  "n__neu__oira_regelpruefungen__energie_umwelt.csv.gz": {
+   "erstmals_utc": "2026-11-26T14:35:45Z",
+   "beste_werte": 773,
+   "frueheste_erste": "2009-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-26T14:35:45Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 773,
+     "erste": "2009-01-01",
+     "sha_inhalt": "9c425c7aa7a8f581ae4ce295cd8d04c034699138c4c0aca89d36211a8d65119f"
+    }
+   ]
+  },
+  "n__neu__oira_regelpruefungen__gesundheit.csv.gz": {
+   "erstmals_utc": "2026-11-26T14:35:45Z",
+   "beste_werte": 795,
+   "frueheste_erste": "2009-01-01",
+   "sichtungen": [
+    {
+     "utc": "2026-11-26T14:35:45Z",
+     "lauf_id": "L20261126T143517Z",
+     "werte": 795,
+     "erste": "2009-01-01",
+     "sha_inhalt": "cbd0aa4f977cdbc103d2394fa0d84bf9f044d529f19b4850ffeac6d5804607c3"
     }
    ]
   }
