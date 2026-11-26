@@ -8575,5 +8575,19 @@
         "ereignisse": 365
       }
     }
+  },
+  {
+    "id": "doe_oe417_netzstoerungen",
+    "name": "DOE OE-417: gemeldete Störungen im US-Stromnetz je Tag (Anzahl, betroffene Kunden), ab 2000",
+    "url": "https://doe417.pnnl.gov/ (Jahreszusammenfassungen OE-417 als Excel; früher www.oe.netl.doe.gov/OE417_annual_summary.aspx)",
+    "domain": "doe417.pnnl.gov",
+    "bereich": "Infrastruktur-Störungen",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Grosse Netzstörungen (Stürme, Cyberangriffe, Brennstoffmangel) belasten kurzfristig Versorger (XLU) und Erdgas (UNG) gegenüber dem Weltindex über Reparaturkosten, Regulierungsrisiko und ausgefallene Nachfrage.",
+    "grund": "Lernrunde 2026-11-26, neuer Bereich «Infrastruktur-Störungen» (fehlte; Stromdaten bisher nur Preise und Last). Meldepflicht binnen 1 bis 6 Stunden, Ereignisdatum je Zeile; Jahresdateien öffentlich ohne Login. Publikationsfrist der Jahreszusammenfassung prüfen (vorläufige Daten laufend): verfuegbar_nach_tagen konservativ setzen. Literatur zu Versorgern nach Ausfällen spärlich; Mechanismus ökonomisch, nicht aus Ergebnissen (L3).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-26T09:30Z",
+    "geprueft_utc": "2026-11-26T09:30Z"
   }
 ]
