@@ -8582,12 +8582,26 @@
     "url": "https://doe417.pnnl.gov/ (Jahreszusammenfassungen OE-417 als Excel; früher www.oe.netl.doe.gov/OE417_annual_summary.aspx)",
     "domain": "doe417.pnnl.gov",
     "bereich": "Infrastruktur-Störungen",
-    "status": "kandidat",
+    "status": "abgelehnt",
     "prioritaet": "normal",
     "mechanismus": "Grosse Netzstörungen (Stürme, Cyberangriffe, Brennstoffmangel) belasten kurzfristig Versorger (XLU) und Erdgas (UNG) gegenüber dem Weltindex über Reparaturkosten, Regulierungsrisiko und ausgefallene Nachfrage.",
-    "grund": "Lernrunde 2026-11-26, neuer Bereich «Infrastruktur-Störungen» (fehlte; Stromdaten bisher nur Preise und Last). Meldepflicht binnen 1 bis 6 Stunden, Ereignisdatum je Zeile; Jahresdateien öffentlich ohne Login. Publikationsfrist der Jahreszusammenfassung prüfen (vorläufige Daten laufend): verfuegbar_nach_tagen konservativ setzen. Literatur zu Versorgern nach Ausfällen spärlich; Mechanismus ökonomisch, nicht aus Ergebnissen (L3).",
+    "grund": "Lernrunde 2026-11-26, neuer Bereich «Infrastruktur-Störungen» (fehlte; Stromdaten bisher nur Preise und Last). Meldepflicht binnen 1 bis 6 Stunden, Ereignisdatum je Zeile; Jahresdateien öffentlich ohne Login. Publikationsfrist der Jahreszusammenfassung prüfen (vorläufige Daten laufend): verfuegbar_nach_tagen konservativ setzen. Literatur zu Versorgern nach Ausfällen spärlich; Mechanismus ökonomisch, nicht aus Ergebnissen (L3). | Lauf 2026-11-26T12:17:21Z: abgelehnt K5. doe417.pnnl.gov/summaries/<JJJJ>_Annual_Summary.xlsx (ab 2024 xlsx, sonst xls; 2000-2001 nur PDF) liefert nur Jahresdateien; 2025 erzeugt 10/7/2026 mit 426 Meldungen, letzter Eintrag 12/30/2025; 2026 nicht abrufbar (HTTP 200 mit HTML-Hülle). Laufendes Jahr nur hinter Login (/api, Microsoft-Anmeldung). Letzter Wert rund 11 Monate alt, Publikation Monate nach Jahresende; zudem nur gut 1 Ereignis je Tag (dünn).",
     "reihen": [],
     "aufgenommen_utc": "2026-11-26T09:30Z",
-    "geprueft_utc": "2026-11-26T09:30Z"
+    "geprueft_utc": "2026-11-26T12:17:21Z"
+  },
+  {
+    "id": "hkex_inside_information_dichte",
+    "name": "HKEXnews: Anzahl Meldungen «Inside Information» je Tag",
+    "url": "https://www1.hkexnews.hk/search/titleSearchServlet.do (t1code=10000, t2Gcode=9, t2code=19750)",
+    "domain": "hkexnews.hk",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Häufungen von Ad-hoc-Meldungen (Insiderinformation nach SFO Teil XIVA, seit 2013) bündeln kursrelevante Information über Hongkonger und chinesische Emittenten und könnten EWH/China kurzfristig gegenüber dem Weltindex bewegen.",
+    "grund": "Eigene Recherche Lauf 2026-11-26T12:17:21Z. Technisch machbar (JSON-Endpunkt antwortet HTTP 200 ohne Login, recordCnt je Tag, z.B. 740 Meldungen am 5.1.2015, Kategorie Inside Information vorhanden), aber K3 verletzt: HKEX Terms of Use (hkex.com.hk/Global/Exchange/Terms-of-Use) verbieten ausdrücklich «text or data mining or web scraping in relation to this Website ... for any purpose». Nicht abgerufen, keine Daten abgelegt.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-26T12:17:21Z",
+    "geprueft_utc": "2026-11-26T12:17:21Z"
   }
 ]
