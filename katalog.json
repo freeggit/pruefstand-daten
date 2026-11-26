@@ -8522,5 +8522,58 @@
     "grund": "K4/kein Mechanismus: Prüfung 2026-11-26T04:15Z: 11368 Berichte, davon 9556 am 2014-12-10 als Altbestand (Unfälle ab 1958) eingespielt; Datum ist Veröffentlichung des Berichts Monate nach dem Unfall, fast nur Allgemeine Luftfahrt; 96 bis 232 je Jahr. Datum der Erstbekanntgabe nicht abbildbar, Abdeckung durch ntsb_luftfahrtunfaelle; abgelehnt.",
     "aufgenommen_utc": "2026-11-26T04:25Z",
     "geprueft_utc": "2026-11-26T04:25Z"
+  },
+  {
+    "id": "wa_warn_entlassungsmeldungen",
+    "name": "Washington ESD: WARN-Meldungen (Entlassungen/Schliessungen) je Eingangstag",
+    "url": "https://fortress.wa.gov/esd/file/WARN/Public/SearchWARN.aspx",
+    "domain": "fortress.wa.gov",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "prioritaet": "normal",
+    "mechanismus": "Häufungen von Massenentlassungs-Anzeigen (Boeing, Amazon, Microsoft u.a.) könnten Industrie und Technologie (XLI, XLK) gegenüber dem Weltindex über 1 bis 20 Tage anzeigen.",
+    "grund": "Eigene Recherche Lauf 2026-11-26T08:05Z (Zusatz 6 Punkt 5; alle offenen Firmenereignis-Kandidaten sind EDGAR (Action) oder erneut 403/000). Dritter WARN-Versuch nach ca_warn (K2/Format) und texas_warn (K2/K5). ASP.NET-Tabelle ohne Login, 104 Seiten per Postback vollständig gelesen: 1554 Meldungen mit Eingangsdatum 2004-01-12 bis 2026-11-18 (K2 und K5 formal erfüllt), aber nur rund 70 je Jahr (0,19 je Kalendertag, über 85% Nulltage), ein einzelner Bundesstaat, Eingangsdatum bei der Behörde ist nicht der Tag der öffentlichen Bekanntgabe (Publikationsdatum nicht belegt, Zusatz 5). Abgelehnt: zu dünn und schwacher Mechanismus (wie wa_ag_datenlecks). Keine Ablage.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-26T08:15Z",
+    "geprueft_utc": "2026-11-26T08:15Z"
+  },
+  {
+    "id": "fred_prime_aenderungstage",
+    "name": "FRED DPRIME: Änderungstage der US-Bank-Prime-Rate",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPRIME",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Zinsen",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Vor 1994 gab die Fed Zielaenderungen nicht bekannt; die öffentlich angekündigte Prime-Rate-Änderung der Grossbanken war das sichtbare Signal einer geldpolitischen Wende und könnte Banken (XLF), zinsempfindliche Sektoren (XLU, XLRE) und Anleihen (TLT) gegenüber dem Weltindex über 1 bis 20 Tage bewegen.",
+    "grund": "Zusatz 4 (E11, Historie vor 1990) als Rückfall, da kein Firmenereignis-Kandidat erreichbar (Zusatz 6). Ergänzt fed_discount_rate_aenderungstage (abgelehnt, nur Wochenwerte) und leitzins_aenderungstage (erst ab 1994): DPRIME ist täglich ab 1955-08-04. Ereignis = Beobachtungswert weicht vom vorigen ab; keine Aufüllung, Beobachtungstage von FRED (US-Bankarbeitstage). Prüfung 2026-11-26T08:10Z: je Reihe 18174 Zeilen 1955-08-05 bis 2026-11-23, Median-Abstand 1 Tag, keine Lücke über 5 Tage; 365 Änderungstage (198 Erhöhungen, 167 Senkungen), davon 266 vor 1990 und 279 vor 1995; je Jahrzehnt 1950er 9, 1960er 15, 1970er 130, 1980er 112, 1990er 24, 2000er 43, 2010er 12, 2020er 20; Stichprobe 2007/08 deckt sich mit den FOMC-Tagen. Gleiche Folgewerte 96% (Ereignisreihe, erwartet). Min/Max 0/1 bzw. -1/+1. Abruf unter 2 s, 41 KB je Datei (K7). Publikation: Änderungen wurden von den Banken am Ankündigungstag öffentlich gemeldet, H.15 datiert auf den Geltungstag (nicht vor der Bekanntgabe); verfuegbar_nach_tagen 1 vorsichtig; revidiert false. Aktiv: aenderung, richtung (2 Reihen, unter Grenze Zusatz 3). Hinweis für Reto: ab 1994 meist gleichtags mit leitzins_aenderungstage (Redundanz), Nutzen vor allem in der Familie Langzeit.",
+    "reihen": [
+      "aenderung",
+      "richtung"
+    ],
+    "aufgenommen_utc": "2026-11-26T08:15Z",
+    "geprueft_utc": "2026-11-26T08:15Z",
+    "pruefung": {
+      "aenderung": {
+        "zeilen": 18174,
+        "erste": "1955-08-05",
+        "letzte": "2026-11-23",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.96,
+        "min": 0,
+        "max": 1,
+        "ereignisse": 365
+      },
+      "richtung": {
+        "zeilen": 18174,
+        "erste": "1955-08-05",
+        "letzte": "2026-11-23",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.96,
+        "min": -1,
+        "max": 1,
+        "ereignisse": 365
+      }
+    }
   }
 ]

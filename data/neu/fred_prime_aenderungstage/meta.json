@@ -1,0 +1,22 @@
+{
+  "aenderung": {
+    "beschreibung": "Tag einer Aenderung der US-Bank-Prime-Rate (FRED DPRIME, Fed H.15 'majority of top 25 banks'), ab 1955-08-05. Vor 1994 eigenstaendiges, oeffentlich angekuendigtes Signal der Grossbanken zur Geldpolitik; ab 1994 meist gleichtags mit FOMC-Zielaenderung.",
+    "einheit": "0/1 (1 = Ereignistag)",
+    "publikation": "taeglich (Prime-Rate-Aenderungen der Grossbanken wurden am Tag der Ankuendigung oeffentlich gemeldet und gelten meist ab dem Folgetag; FRED/H.15 datiert auf den Geltungstag, also nicht vor der Bekanntgabe; H.15 selbst erscheint werktaeglich, verfuegbar_nach_tagen 1 vorsichtig)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPRIME",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Beobachtungstage von DPRIME, US-Bankarbeitstage; Ereignis = Wert weicht vom vorigen Beobachtungswert ab)",
+    "verfuegbar_nach_tagen": 1
+  },
+  "richtung": {
+    "beschreibung": "Richtung der Aenderung der US-Bank-Prime-Rate am Ereignistag (FRED DPRIME), 0 an Tagen ohne Aenderung, ab 1955-08-05.",
+    "einheit": "-1/0/+1 (Senkung/keine/Erhoehung)",
+    "publikation": "taeglich (Prime-Rate-Aenderungen der Grossbanken wurden am Tag der Ankuendigung oeffentlich gemeldet und gelten meist ab dem Folgetag; FRED/H.15 datiert auf den Geltungstag, also nicht vor der Bekanntgabe; H.15 selbst erscheint werktaeglich, verfuegbar_nach_tagen 1 vorsichtig)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPRIME",
+    "revidiert": false,
+    "status": "aktiv",
+    "verdichtung": "keine (Beobachtungstage von DPRIME, US-Bankarbeitstage; Ereignis = Wert weicht vom vorigen Beobachtungswert ab)",
+    "verfuegbar_nach_tagen": 1
+  }
+}
