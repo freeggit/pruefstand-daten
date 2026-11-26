@@ -1,0 +1,29 @@
+{
+  "anzahl": {
+    "beschreibung": "Taegliche Anzahl abgeschlossener OIRA-Pruefungen (E.O. 12866) von Regeln aller Bundesbehoerden, alle Stufen (Prerule, Proposed, Final, Interim Final, Notice), ab 2009.",
+    "einheit": "Anzahl abgeschlossene Pruefungen",
+    "publikation": "taeglich (reginfo.gov fuehrt die Liste der in den letzten 30 Tagen abgeschlossenen E.O.-12866-Pruefungen mit taeglicher Aktualisierung; Abschlusstag dort am Folgetag sichtbar)",
+    "quelle_url": "https://www.reginfo.gov/public/do/XMLReportList",
+    "revidiert": false,
+    "verdichtung": "Anzahl Pruefungen je Kalendertag des Abschlusses (DATE_COMPLETED), ohne Withdrawn, 0 an Tagen ohne Abschluss",
+    "verfuegbar_nach_tagen": 1
+  },
+  "energie_umwelt": {
+    "beschreibung": "Wie anzahl, nur Behoerden EPA (RIN 20xx), Energieministerium DOE (19xx) und Innenministerium Interior (10xx).",
+    "einheit": "Anzahl abgeschlossene Pruefungen",
+    "publikation": "taeglich (reginfo.gov fuehrt die Liste der in den letzten 30 Tagen abgeschlossenen E.O.-12866-Pruefungen mit taeglicher Aktualisierung; Abschlusstag dort am Folgetag sichtbar)",
+    "quelle_url": "https://www.reginfo.gov/public/do/XMLReportList",
+    "revidiert": false,
+    "verdichtung": "Anzahl Pruefungen je Kalendertag des Abschlusses (DATE_COMPLETED), ohne Withdrawn, 0 an Tagen ohne Abschluss",
+    "verfuegbar_nach_tagen": 1
+  },
+  "gesundheit": {
+    "beschreibung": "Wie anzahl, nur Gesundheitsministerium HHS (RIN 09xx, u.a. FDA und CMS).",
+    "einheit": "Anzahl abgeschlossene Pruefungen",
+    "publikation": "taeglich (reginfo.gov fuehrt die Liste der in den letzten 30 Tagen abgeschlossenen E.O.-12866-Pruefungen mit taeglicher Aktualisierung; Abschlusstag dort am Folgetag sichtbar)",
+    "quelle_url": "https://www.reginfo.gov/public/do/XMLReportList",
+    "revidiert": false,
+    "verdichtung": "Anzahl Pruefungen je Kalendertag des Abschlusses (DATE_COMPLETED), ohne Withdrawn, 0 an Tagen ohne Abschluss",
+    "verfuegbar_nach_tagen": 1
+  }
+}
