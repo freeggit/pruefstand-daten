@@ -7457,9 +7457,9 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Gehäufte Durchsetzungsentscheide der indischen Börsenaufsicht können das Vertrauen ausländischer Anleger in Schwellenländer kurzfristig dämpfen (EEM gegenüber dem Weltindex).",
-    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen. | Test 2026-11-22T08:30Z: Listenseite HTTP 200; Seitenwechsel nicht erneut versucht, Entscheid Retos zum Browserweg steht aus. | Test 2026-11-23T20:30Z: Listenseite HTTP 200; Seitenwechsel nicht versucht, Entscheid Retos zum Browserweg steht weiter aus. | Erneut 2026-11-25T12:30Z: www.sebi.gov.in/enforcement/orders HTTP 403; nicht umgangen. | Test 2026-11-26T16:20Z: www.sebi.gov.in/enforcement/orders HTTP 403; nicht umgangen.",
+    "grund": "Ergänzt asic_medienmitteilungen und finma_durchsetzung_mitteilungen um Indien; hier HTTP 403 auf Unterseite, Erreichbarkeit über die Action prüfen; tief wegen fehlendem Indien-Ziel. (Lernrunde 2026-11-20) | Test 2026-11-21T00:15Z: Listenseite HTTP 200 (Orders of AO 12024 Eintraege ab Nov 2004, 481 Seiten zu 25); der Seitenwechsel (POST /sebiweb/ajax/home/getnewslistinfo.jsp) liefert bei direkter Anfrage die Firewall-Seite 'Unauthorized Request Blocked / Unauthorized Activity Has Been Detected' = Sperre. Ein Abruf mit Sitzungscookie und Referer wie im Browser wurde als Umgehung gewertet und nicht ausgefuehrt; Skript verworfen, keine Ablage. Vollabruf zudem nur in Etappen (481 Seiten) unter K7. Reto muss entscheiden, ob der Browserweg (Cookie der Listenseite) zulaessig ist; sonst ablehnen. | Test 2026-11-22T08:30Z: Listenseite HTTP 200; Seitenwechsel nicht erneut versucht, Entscheid Retos zum Browserweg steht aus. | Test 2026-11-23T20:30Z: Listenseite HTTP 200; Seitenwechsel nicht versucht, Entscheid Retos zum Browserweg steht weiter aus. | Erneut 2026-11-25T12:30Z: www.sebi.gov.in/enforcement/orders HTTP 403; nicht umgangen. | Test 2026-11-26T16:20Z: www.sebi.gov.in/enforcement/orders HTTP 403; nicht umgangen. | Erneut 2026-11-27T16:10Z: keine Verbindung (curl 000); nicht umgangen, nächster Lauf erneut.",
     "aufgenommen_utc": "2026-11-20T09:30:00Z",
-    "geprueft_utc": "2026-11-26T16:20Z"
+    "geprueft_utc": "2026-11-27T16:10Z"
   },
   {
     "id": "boc_leitzins_aenderungstage",
@@ -8344,10 +8344,10 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Dichte der Ad-hoc-Meldungen chilenischer Emittenten als Informationsfluss für Schwellenländer und Rohstoffe (Kupfer, Lithium; XLB, EEM) gegenüber dem Weltindex; unabhängige Replikation von cvm_ipe_fatos_relevantes in einem zweiten Land.",
-    "grund": "Eigene Recherche Lauf 2026-11-25T12:30Z. Portalseite HTTP 200, aber Suchmaske hechos.php und robots.txt liefern HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Kein offener Datensatz oder Massendownload gefunden (WebSearch); Abfrage nur mit Suchkriterien. Nächster Lauf erneut; nur weiterverfolgen, wenn ein Weg mit Datumsfilter und Historie ab spätestens 2015 offen ist. | Test 2026-11-26T16:20Z: hechos.php HTTP 403; nicht umgangen, nächster Lauf erneut.",
+    "grund": "Eigene Recherche Lauf 2026-11-25T12:30Z. Portalseite HTTP 200, aber Suchmaske hechos.php und robots.txt liefern HTTP 403 von dieser Umgebung; Sperre nicht umgangen (Befund). Kein offener Datensatz oder Massendownload gefunden (WebSearch); Abfrage nur mit Suchkriterien. Nächster Lauf erneut; nur weiterverfolgen, wenn ein Weg mit Datumsfilter und Historie ab spätestens 2015 offen ist. | Test 2026-11-26T16:20Z: hechos.php HTTP 403; nicht umgangen, nächster Lauf erneut. | Erneut 2026-11-27T16:10Z: hechos.php HTTP 403; nicht umgangen, nächster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-25T12:30Z",
-    "geprueft_utc": "2026-11-26T16:20Z"
+    "geprueft_utc": "2026-11-27T16:10Z"
   },
   {
     "id": "occ_infomemos_kontraktanpassungen",
@@ -8613,10 +8613,10 @@
     "status": "fehler",
     "prioritaet": "tief",
     "mechanismus": "Gehäufte Sicherheitswarnungen der deutschen Arzneimittelbehörde zu Wirkstoffen grosser Hersteller könnten Pharmawerte (XLV, EWG/EWL mit hohem Pharmagewicht) kurzfristig gegenüber dem Weltindex belasten; unabhängige Replikation von mhra_arzneimittel_sicherheitswarnungen.",
-    "grund": "Eigene Recherche Lauf 2026-11-26T16:20Z (alle Kandidaten SEC über die Action oder gesperrt). Test 2026-11-26T16:20Z: keine Verbindung zu www.bfarm.de (Tunnel geschlossen, curl Code 000), auch robots.txt nicht; nicht umgangen, nächster Lauf erneut. Historie und Nutzungsbedingungen noch ungeprüft.",
+    "grund": "Eigene Recherche Lauf 2026-11-26T16:20Z (alle Kandidaten SEC über die Action oder gesperrt). Test 2026-11-26T16:20Z: keine Verbindung zu www.bfarm.de (Tunnel geschlossen, curl Code 000), auch robots.txt nicht; nicht umgangen, nächster Lauf erneut. Historie und Nutzungsbedingungen noch ungeprüft. | Erneut 2026-11-27T16:10Z: bfarm.de Suche HTTP 403, robots.txt 404; nicht umgangen, nächster Lauf erneut.",
     "reihen": [],
     "aufgenommen_utc": "2026-11-26T16:20Z",
-    "geprueft_utc": "2026-11-26T16:20Z"
+    "geprueft_utc": "2026-11-27T16:10Z"
   },
   {
     "id": "fred_fx_schwellenlaender",
