@@ -1,5 +1,5 @@
 {
- "kumuliert": 846868,
+ "kumuliert": 854035,
  "lernberichte": [
   {
    "datum": "2026-09-25",
@@ -914,6 +914,21 @@
   "neu_fred_fx_lang_usdcad_d5",
   "neu_fred_fx_lang_usdcad_stand",
   "neu_fred_fx_lang_usdcad_z252",
+  "neu_fred_fx_schwellenlaender_usdinr_d1",
+  "neu_fred_fx_schwellenlaender_usdinr_d20",
+  "neu_fred_fx_schwellenlaender_usdinr_d5",
+  "neu_fred_fx_schwellenlaender_usdinr_stand",
+  "neu_fred_fx_schwellenlaender_usdinr_z252",
+  "neu_fred_fx_schwellenlaender_usdkrw_d1",
+  "neu_fred_fx_schwellenlaender_usdkrw_d20",
+  "neu_fred_fx_schwellenlaender_usdkrw_d5",
+  "neu_fred_fx_schwellenlaender_usdkrw_stand",
+  "neu_fred_fx_schwellenlaender_usdkrw_z252",
+  "neu_fred_fx_schwellenlaender_usdzar_d1",
+  "neu_fred_fx_schwellenlaender_usdzar_d20",
+  "neu_fred_fx_schwellenlaender_usdzar_d5",
+  "neu_fred_fx_schwellenlaender_usdzar_stand",
+  "neu_fred_fx_schwellenlaender_usdzar_z252",
   "neu_fred_heizoel_nyh_taeglich_heizoel_d1",
   "neu_fred_heizoel_nyh_taeglich_heizoel_d20",
   "neu_fred_heizoel_nyh_taeglich_heizoel_d5",
@@ -2328,9 +2343,15 @@
    "datei": "suche/S0080.json",
    "kandidaten": 508275,
    "in_db": false
+  },
+  {
+   "nr": 81,
+   "datei": "suche/S0081.json",
+   "kandidaten": 515442,
+   "in_db": false
   }
  ],
- "letzter_suchlauf_utc": "2026-11-26T16:48Z",
+ "letzter_suchlauf_utc": "2026-11-27T18:32Z",
  "pruefung_lernrunde_utc": "2026-11-27T09:40:00Z",
  "letzter_code_hash": "e3d001cba81fbfbd",
  "methode": "M4",
@@ -2876,11 +2897,19 @@
    "ergebnis_hash": "9fc988ea3d5adb3f",
    "gesamt": "vollständig",
    "importierbar": true
+  },
+  {
+   "datei": "suche/laeufe/L20261127T142948Z.json",
+   "lauf_id": "L20261127T142948Z",
+   "s_dokument": "suche/S0081.json",
+   "ergebnis_hash": "348924429e680e7d",
+   "gesamt": "vollständig",
+   "importierbar": true
   }
  ],
- "letzter_lauf_utc": "2026-11-26T16:48Z",
- "letztes_vollarchiv": "suche/S0080_alle.csv.gz",
- "letzter_ergebnis_hash": "9fc988ea3d5adb3f",
+ "letzter_lauf_utc": "2026-11-27T18:32Z",
+ "letztes_vollarchiv": "suche/S0081_alle.csv.gz",
+ "letzter_ergebnis_hash": "348924429e680e7d",
  "konflikte": [
   {
    "wo": "index",
@@ -5115,10 +5144,10 @@
  ],
  "exposition": {
   "datei": "exposition.json",
-  "grundreihen_n": 415,
-  "neu_in_diesem_lauf": 6
+  "grundreihen_n": 418,
+  "neu_in_diesem_lauf": 3
  },
- "letztes_vollarchiv_ergebnis_hash": "9fc988ea3d5adb3f",
+ "letztes_vollarchiv_ergebnis_hash": "348924429e680e7d",
  "pruefungen_bestanden": {
   "pruef_hash": "f3557dd6a676a619",
   "lauf_id": "L20261123T154353Z",
@@ -5136,7 +5165,7 @@
   },
   "ausnahmen_abgedeckt": []
  },
- "letzter_eingabe_hash": "8de39d60de629ac2",
- "letzter_gueltiger_lauf": "L20261126T143517Z",
- "letzter_entscheidung_hash": "f9e4c690fac8eb9c"
+ "letzter_eingabe_hash": "d22d6f025aca28d2",
+ "letzter_gueltiger_lauf": "L20261127T142948Z",
+ "letzter_entscheidung_hash": "118ff536b6d06754"
 }

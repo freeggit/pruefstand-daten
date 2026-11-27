@@ -2558,6 +2558,24 @@
    "aufgenommen_utc": "2026-10-28T10:53:33Z",
    "lauf_id": "L20261028T105311Z"
   },
+  "n__neu__amf_bdif_offres_publiques__angebote_eingereicht.csv.gz": {
+   "datei": "n__neu__amf_bdif_offres_publiques__angebote_eingereicht.csv.gz@75217807cd676c9f",
+   "sha": "75217807cd676c9f4511467e85df7a235d76e714fbb7391fb81d493682007001",
+   "sha_inhalt": "7416840a7050c9e540c588c02bfb037ca3b04c5da95dffc0791a17dfc936de94",
+   "zeilen": 4749,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-27T14:30:11Z",
+   "lauf_id": "L20261127T142948Z"
+  },
+  "n__neu__amf_bdif_offres_publiques__dokumente.csv.gz": {
+   "datei": "n__neu__amf_bdif_offres_publiques__dokumente.csv.gz@9681c75b1a712bd0",
+   "sha": "9681c75b1a712bd0d1f6f364c77e698a364bfcd9d79ebf8a342f0e8a0a7f3795",
+   "sha_inhalt": "d3546ab786b99e62957d227eb4a21155019a34c35d7801dfc3aff25ee5dd0276",
+   "zeilen": 4749,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-27T14:30:11Z",
+   "lauf_id": "L20261127T142948Z"
+  },
   "n__neu__asic_medienmitteilungen__anzahl_durchsetzung.csv.gz": {
    "datei": "n__neu__asic_medienmitteilungen__anzahl_durchsetzung.csv.gz@578d96605eb0bea2",
    "sha": "578d96605eb0bea2af28bf4a17690b7456d36d0991e5e35307cc180187e677cc",
@@ -2881,6 +2899,42 @@
    "datum": "iso:datum",
    "aufgenommen_utc": "2026-10-28T10:53:34Z",
    "lauf_id": "L20261028T105311Z"
+  },
+  "n__neu__cvm_ipe_fatos_relevantes__comunicado_mercado.csv.gz": {
+   "datei": "n__neu__cvm_ipe_fatos_relevantes__comunicado_mercado.csv.gz@a98fa9121f818b5f",
+   "sha": "a98fa9121f818b5f8bfd766f6f617f2d93584f6bdd54fe25b0067fefb7a92bc6",
+   "sha_inhalt": "da318bba428a5ba3d8d2281fe22d8ea95c9a1eae8d961f742536b33e171e5cb6",
+   "zeilen": 6570,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-27T14:30:12Z",
+   "lauf_id": "L20261127T142948Z"
+  },
+  "n__neu__cvm_ipe_fatos_relevantes__fato_relevante.csv.gz": {
+   "datei": "n__neu__cvm_ipe_fatos_relevantes__fato_relevante.csv.gz@9909e34f5f84c0b2",
+   "sha": "9909e34f5f84c0b2c44629c79f4c1d620d5e2dd51d944ec611e1c6be5e03a291",
+   "sha_inhalt": "12342ec0e5136429d3e81925a058b76d4848223daf20aac8e6843a30eb04ff83",
+   "zeilen": 6570,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-27T14:30:12Z",
+   "lauf_id": "L20261127T142948Z"
+  },
+  "n__neu__cvm_ofertas_acoes__aktien_angebote.csv.gz": {
+   "datei": "n__neu__cvm_ofertas_acoes__aktien_angebote.csv.gz@d4b50e9501f54eff",
+   "sha": "d4b50e9501f54effa2796a50ea4c3c7fefb123e3fc4aa40195082a972f8e8c3b",
+   "sha_inhalt": "b09943068e8ee1fde88eb9ddfac785e812bf880f74b4793e321c132d2b288ae8",
+   "zeilen": 11323,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-27T14:30:12Z",
+   "lauf_id": "L20261127T142948Z"
+  },
+  "n__neu__cvm_recompra_acoes__firmen_rueckkaufbeschluss.csv.gz": {
+   "datei": "n__neu__cvm_recompra_acoes__firmen_rueckkaufbeschluss.csv.gz@348ecd99698d3448",
+   "sha": "348ecd99698d3448c2bd94836714b322751f21ce804107a78d2c81dd4cc7576f",
+   "sha_inhalt": "20af3086ddafb04418dc0c6531615c589c92f5df7045bd0d03ba730e1b9cafc1",
+   "zeilen": 8766,
+   "datum": "iso:datum",
+   "aufgenommen_utc": "2026-11-27T14:30:12Z",
+   "lauf_id": "L20261127T142948Z"
   },
   "n__neu__dax_indexaenderungen__anzahl_aenderungen.csv.gz": {
    "datei": "n__neu__dax_indexaenderungen__anzahl_aenderungen.csv.gz@af7edbbcfa8bf6f4",
@@ -5450,135 +5504,9 @@
    "lauf_id": "L20261029T074958Z"
   }
  },
- "stand_utc": "2026-11-26T14:35:51Z",
- "dateien_n": 602,
+ "stand_utc": "2026-11-27T14:30:29Z",
+ "dateien_n": 608,
  "vorgemerkt": {
-  "n__neu__amf_bdif_offres_publiques__angebote_eingereicht.csv.gz": {
-   "erstmals_utc": "2026-11-25T15:05:30Z",
-   "beste_werte": 504,
-   "frueheste_erste": "2008-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-25T15:05:30Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 504,
-     "erste": "2008-01-01",
-     "sha_inhalt": "7416840a7050c9e540c588c02bfb037ca3b04c5da95dffc0791a17dfc936de94"
-    },
-    {
-     "utc": "2026-11-26T14:35:37Z",
-     "lauf_id": "L20261126T143517Z",
-     "werte": 504,
-     "erste": "2008-01-01",
-     "sha_inhalt": "7416840a7050c9e540c588c02bfb037ca3b04c5da95dffc0791a17dfc936de94"
-    }
-   ]
-  },
-  "n__neu__amf_bdif_offres_publiques__dokumente.csv.gz": {
-   "erstmals_utc": "2026-11-25T15:05:30Z",
-   "beste_werte": 3100,
-   "frueheste_erste": "2008-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-25T15:05:30Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 3100,
-     "erste": "2008-01-01",
-     "sha_inhalt": "d3546ab786b99e62957d227eb4a21155019a34c35d7801dfc3aff25ee5dd0276"
-    },
-    {
-     "utc": "2026-11-26T14:35:37Z",
-     "lauf_id": "L20261126T143517Z",
-     "werte": 3100,
-     "erste": "2008-01-01",
-     "sha_inhalt": "d3546ab786b99e62957d227eb4a21155019a34c35d7801dfc3aff25ee5dd0276"
-    }
-   ]
-  },
-  "n__neu__cvm_ipe_fatos_relevantes__comunicado_mercado.csv.gz": {
-   "erstmals_utc": "2026-11-25T15:05:31Z",
-   "beste_werte": 4793,
-   "frueheste_erste": "2003-01-06",
-   "sichtungen": [
-    {
-     "utc": "2026-11-25T15:05:31Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 4793,
-     "erste": "2003-01-06",
-     "sha_inhalt": "da318bba428a5ba3d8d2281fe22d8ea95c9a1eae8d961f742536b33e171e5cb6"
-    },
-    {
-     "utc": "2026-11-26T14:35:38Z",
-     "lauf_id": "L20261126T143517Z",
-     "werte": 4793,
-     "erste": "2003-01-06",
-     "sha_inhalt": "da318bba428a5ba3d8d2281fe22d8ea95c9a1eae8d961f742536b33e171e5cb6"
-    }
-   ]
-  },
-  "n__neu__cvm_ipe_fatos_relevantes__fato_relevante.csv.gz": {
-   "erstmals_utc": "2026-11-25T15:05:31Z",
-   "beste_werte": 4545,
-   "frueheste_erste": "2003-01-06",
-   "sichtungen": [
-    {
-     "utc": "2026-11-25T15:05:31Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 4545,
-     "erste": "2003-01-06",
-     "sha_inhalt": "12342ec0e5136429d3e81925a058b76d4848223daf20aac8e6843a30eb04ff83"
-    },
-    {
-     "utc": "2026-11-26T14:35:38Z",
-     "lauf_id": "L20261126T143517Z",
-     "werte": 4545,
-     "erste": "2003-01-06",
-     "sha_inhalt": "12342ec0e5136429d3e81925a058b76d4848223daf20aac8e6843a30eb04ff83"
-    }
-   ]
-  },
-  "n__neu__cvm_ofertas_acoes__aktien_angebote.csv.gz": {
-   "erstmals_utc": "2026-11-25T15:05:31Z",
-   "beste_werte": 594,
-   "frueheste_erste": "1990-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-25T15:05:31Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 594,
-     "erste": "1990-01-01",
-     "sha_inhalt": "b09943068e8ee1fde88eb9ddfac785e812bf880f74b4793e321c132d2b288ae8"
-    },
-    {
-     "utc": "2026-11-26T14:35:38Z",
-     "lauf_id": "L20261126T143517Z",
-     "werte": 594,
-     "erste": "1990-01-01",
-     "sha_inhalt": "b09943068e8ee1fde88eb9ddfac785e812bf880f74b4793e321c132d2b288ae8"
-    }
-   ]
-  },
-  "n__neu__cvm_recompra_acoes__firmen_rueckkaufbeschluss.csv.gz": {
-   "erstmals_utc": "2026-11-25T15:05:31Z",
-   "beste_werte": 1132,
-   "frueheste_erste": "1997-01-01",
-   "sichtungen": [
-    {
-     "utc": "2026-11-25T15:05:31Z",
-     "lauf_id": "L20261125T150510Z",
-     "werte": 1132,
-     "erste": "1997-01-01",
-     "sha_inhalt": "20af3086ddafb04418dc0c6531615c589c92f5df7045bd0d03ba730e1b9cafc1"
-    },
-    {
-     "utc": "2026-11-26T14:35:38Z",
-     "lauf_id": "L20261126T143517Z",
-     "werte": 1132,
-     "erste": "1997-01-01",
-     "sha_inhalt": "20af3086ddafb04418dc0c6531615c589c92f5df7045bd0d03ba730e1b9cafc1"
-    }
-   ]
-  },
   "n__neu__fedregister_cpsc_verbraucherprodukte__anzahl.csv.gz": {
    "erstmals_utc": "2026-11-26T14:35:40Z",
    "beste_werte": 425,
@@ -5590,6 +5518,55 @@
      "werte": 425,
      "erste": "1995-01-01",
      "sha_inhalt": "70b1a35f167437ae2f50065f006bb345cfe56f324275bcb8046b1063e4119ae6"
+    },
+    {
+     "utc": "2026-11-27T14:30:15Z",
+     "lauf_id": "L20261127T142948Z",
+     "werte": 425,
+     "erste": "1995-01-01",
+     "sha_inhalt": "70b1a35f167437ae2f50065f006bb345cfe56f324275bcb8046b1063e4119ae6"
+    }
+   ]
+  },
+  "n__neu__fred_fx_schwellenlaender__usdinr.csv.gz": {
+   "erstmals_utc": "2026-11-27T14:30:17Z",
+   "beste_werte": 12034,
+   "frueheste_erste": "1973-01-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-27T14:30:17Z",
+     "lauf_id": "L20261127T142948Z",
+     "werte": 12034,
+     "erste": "1973-01-02",
+     "sha_inhalt": "f5be8f5f0500d98db7c883475b41cb88e1af3fed509983881ddf6b783f4215f3"
+    }
+   ]
+  },
+  "n__neu__fred_fx_schwellenlaender__usdkrw.csv.gz": {
+   "erstmals_utc": "2026-11-27T14:30:17Z",
+   "beste_werte": 9928,
+   "frueheste_erste": "1981-04-13",
+   "sichtungen": [
+    {
+     "utc": "2026-11-27T14:30:17Z",
+     "lauf_id": "L20261127T142948Z",
+     "werte": 9928,
+     "erste": "1981-04-13",
+     "sha_inhalt": "4e043048d0aeefb1f9f9cc643cf23d0ea2784d50ca0b3c58213a56a242c89f7f"
+    }
+   ]
+  },
+  "n__neu__fred_fx_schwellenlaender__usdzar.csv.gz": {
+   "erstmals_utc": "2026-11-27T14:30:17Z",
+   "beste_werte": 10285,
+   "frueheste_erste": "1980-01-02",
+   "sichtungen": [
+    {
+     "utc": "2026-11-27T14:30:17Z",
+     "lauf_id": "L20261127T142948Z",
+     "werte": 10285,
+     "erste": "1980-01-02",
+     "sha_inhalt": "ff9d9b14354991fe524b61b72f09a7ad700ec57d61f36606b1131538652cdd54"
     }
    ]
   },
@@ -5601,6 +5578,13 @@
     {
      "utc": "2026-11-26T14:35:42Z",
      "lauf_id": "L20261126T143517Z",
+     "werte": 347,
+     "erste": "1955-08-05",
+     "sha_inhalt": "ca5e21d4a527254b35a6924d443b7b166c17df158a4d93554cf843111c956b6f"
+    },
+    {
+     "utc": "2026-11-27T14:30:18Z",
+     "lauf_id": "L20261127T142948Z",
      "werte": 347,
      "erste": "1955-08-05",
      "sha_inhalt": "ca5e21d4a527254b35a6924d443b7b166c17df158a4d93554cf843111c956b6f"
@@ -5618,6 +5602,13 @@
      "werte": 347,
      "erste": "1955-08-05",
      "sha_inhalt": "33f0e35f9cd415b0bd224e7acf498b3a046ef1a0b7b60bfc2bc221a0bc48922a"
+    },
+    {
+     "utc": "2026-11-27T14:30:18Z",
+     "lauf_id": "L20261127T142948Z",
+     "werte": 347,
+     "erste": "1955-08-05",
+     "sha_inhalt": "33f0e35f9cd415b0bd224e7acf498b3a046ef1a0b7b60bfc2bc221a0bc48922a"
     }
    ]
   },
@@ -5629,6 +5620,13 @@
     {
      "utc": "2026-11-26T14:35:45Z",
      "lauf_id": "L20261126T143517Z",
+     "werte": 2218,
+     "erste": "2009-01-01",
+     "sha_inhalt": "4af3f03c4e1424d0a3ef2c1cec43dbe8042ed8601649941820358b39f58e1e53"
+    },
+    {
+     "utc": "2026-11-27T14:30:21Z",
+     "lauf_id": "L20261127T142948Z",
      "werte": 2218,
      "erste": "2009-01-01",
      "sha_inhalt": "4af3f03c4e1424d0a3ef2c1cec43dbe8042ed8601649941820358b39f58e1e53"
@@ -5646,6 +5644,13 @@
      "werte": 773,
      "erste": "2009-01-01",
      "sha_inhalt": "9c425c7aa7a8f581ae4ce295cd8d04c034699138c4c0aca89d36211a8d65119f"
+    },
+    {
+     "utc": "2026-11-27T14:30:21Z",
+     "lauf_id": "L20261127T142948Z",
+     "werte": 773,
+     "erste": "2009-01-01",
+     "sha_inhalt": "9c425c7aa7a8f581ae4ce295cd8d04c034699138c4c0aca89d36211a8d65119f"
     }
    ]
   },
@@ -5657,6 +5662,13 @@
     {
      "utc": "2026-11-26T14:35:45Z",
      "lauf_id": "L20261126T143517Z",
+     "werte": 795,
+     "erste": "2009-01-01",
+     "sha_inhalt": "cbd0aa4f977cdbc103d2394fa0d84bf9f044d529f19b4850ffeac6d5804607c3"
+    },
+    {
+     "utc": "2026-11-27T14:30:21Z",
+     "lauf_id": "L20261127T142948Z",
      "werte": 795,
      "erste": "2009-01-01",
      "sha_inhalt": "cbd0aa4f977cdbc103d2394fa0d84bf9f044d529f19b4850ffeac6d5804607c3"

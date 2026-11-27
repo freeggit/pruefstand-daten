@@ -937,6 +937,24 @@
    "erst_zeit": "25.9.2026, 15:23 (Europe/Zurich)",
    "beleg": "suche/S0009_alle.csv.gz"
   },
+  "neu_fred_fx_schwellenlaender_usdinr": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261127T142948Z",
+   "erst_zeit": "2026-11-27T18:32Z",
+   "beleg": "suche/laeufe/L20261127T142948Z.json"
+  },
+  "neu_fred_fx_schwellenlaender_usdkrw": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261127T142948Z",
+   "erst_zeit": "2026-11-27T18:32Z",
+   "beleg": "suche/laeufe/L20261127T142948Z.json"
+  },
+  "neu_fred_fx_schwellenlaender_usdzar": {
+   "erst_dokument": null,
+   "erst_lauf": "L20261127T142948Z",
+   "erst_zeit": "2026-11-27T18:32Z",
+   "beleg": "suche/laeufe/L20261127T142948Z.json"
+  },
   "neu_fred_heizoel_nyh_taeglich_heizoel": {
    "erst_dokument": null,
    "erst_lauf": "L20261102T130854Z",
@@ -2498,8 +2516,8 @@
   "hinweis": "einmalig aus den vorhandenen Vollarchiven aufgebaut; frühere Läufe ohne Vollarchiv sind nicht belegt"
  },
  "stand": {
-  "lauf_id": "L20261126T143517Z",
-  "zeit_utc": "2026-11-26T16:48Z",
-  "grundreihen_n": 415
+  "lauf_id": "L20261127T142948Z",
+  "zeit_utc": "2026-11-27T18:32Z",
+  "grundreihen_n": 418
  }
 }
