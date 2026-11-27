@@ -1,0 +1,29 @@
+{
+  "usdinr": {
+    "beschreibung": "USD/INR-Wechselkurs Indien (Federal Reserve H.10, Noon Buying Rate in New York), taeglich an US-Bankarbeitstagen (Serie DEXINUS, ab 1973).",
+    "einheit": "INR je USD",
+    "publikation": "woechentlich (Fed H.10 Devisenkurse DEXKOUS/DEXINUS/DEXSFUS: H.10 erscheint seit 2009 woechentlich montags mit den Tageskursen der Vorwoche, Beleg federalreserve.gov/releases/h10, wie fred_fx_lang; geprueft 27.11.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXINUS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 8
+  },
+  "usdkrw": {
+    "beschreibung": "USD/KRW-Wechselkurs Suedkorea (Federal Reserve H.10, Noon Buying Rate in New York), taeglich an US-Bankarbeitstagen (Serie DEXKOUS, ab 1981).",
+    "einheit": "KRW je USD",
+    "publikation": "woechentlich (Fed H.10 Devisenkurse DEXKOUS/DEXINUS/DEXSFUS: H.10 erscheint seit 2009 woechentlich montags mit den Tageskursen der Vorwoche, Beleg federalreserve.gov/releases/h10, wie fred_fx_lang; geprueft 27.11.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXKOUS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 8
+  },
+  "usdzar": {
+    "beschreibung": "USD/ZAR-Wechselkurs Suedafrika (Federal Reserve H.10, Noon Buying Rate in New York), taeglich an US-Bankarbeitstagen (Serie DEXSFUS, ab 1971).",
+    "einheit": "ZAR je USD",
+    "publikation": "woechentlich (Fed H.10 Devisenkurse DEXKOUS/DEXINUS/DEXSFUS: H.10 erscheint seit 2009 woechentlich montags mit den Tageskursen der Vorwoche, Beleg federalreserve.gov/releases/h10, wie fred_fx_lang; geprueft 27.11.2026)",
+    "quelle_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXSFUS",
+    "revidiert": false,
+    "verdichtung": "keine (bereits taeglich)",
+    "verfuegbar_nach_tagen": 8
+  }
+}

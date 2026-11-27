@@ -8617,5 +8617,53 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-26T16:20Z",
     "geprueft_utc": "2026-11-26T16:20Z"
+  },
+  {
+    "id": "fred_fx_schwellenlaender",
+    "name": "Wechselkurse USD/KRW, USD/INR, USD/ZAR (FRED H.10, taeglich, ab 1973/1980/1981)",
+    "url": "https://fred.stlouisfed.org/series/DEXKOUS",
+    "domain": "fred.stlouisfed.org",
+    "bereich": "Waehrung",
+    "status": "aktiv",
+    "prioritaet": "hoch",
+    "mechanismus": "Abwertungsschuebe von Won, Rupie und Rand zeigen Kapitalabfluss und Risikoaversion gegenueber Schwellenlaendern (Korea: Halbleiter/Exportzyklus, Indien: Oelimporteur, Suedafrika: Bergbau/Gold) und koennen in 1 bis 20 Handelstagen Schwellenlaender- und Rohstoffsektoren gegenueber dem Weltindex vorauslaufen.",
+    "grund": "Eigene Recherche Lauf 2026-11-27T00:15Z; Zusatz 4 (E11, Historie vor 1990, FRED-Tagesreihen) - kein erreichbarer Firmenereignis-Kandidat offen (offene Kandidaten alle SEC/EDGAR ueber die Action, Fehler-Quellen juenger als 24 h). K1 Median-Abstand 1 Tag; K2 erste Werte usdinr 1973-01-02 (13506 Zeilen), usdzar 1980-01-02 (11757), usdkrw 1981-04-13 (11400); K3 oeffentliche fredgraph.csv ohne Schluessel; K4 H.10-Tageskurse nicht revidiert; K5 letzter Wert 2026-11-20 (7 Tage); K6 im Spiegel und Bestand nur JPY, CHF, GBP, CAD, AUD, EUR-Kreuze, Dollarindizes; K7 je Datei ca. 50 KB, Abruf wenige Sekunden. Drei verschiedene Laender (Ausnahme Zusatz 3). Anteil gleicher Folgewerte: usdkrw 9.6%, usdzar 3.6%, usdinr 21.7% (VERDAECHTIG, aber erklaert: administrierter Kurs; 1973-1989 42%, 1990-1999 29%, 2000-2009 11%, ab 2010 3%) - Suchmaschine sollte usdinr vor 2000 mit Vorsicht lesen. Min/Max plausibel: KRW 667.2-1960.0 (Asienkrise 1997/98), INR 7.19-96.82, ZAR 0.7371-19.8177. Publikation woechentlich (H.10 seit 2009 montags fuer die Vorwoche), verfuegbar_nach_tagen 8 wie fred_fx_lang. Paarvorschlag fuer Reto: usdkrw gegen fred_usdjpy (Nordostasien-Exporteure).",
+    "reihen": [
+      "usdkrw",
+      "usdinr",
+      "usdzar"
+    ],
+    "pruefung": {
+      "usdkrw": {
+        "zeilen": 11400,
+        "erste": "1981-04-13",
+        "letzte": "2026-11-20",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.096,
+        "min": 667.2,
+        "max": 1960.0
+      },
+      "usdinr": {
+        "zeilen": 13506,
+        "erste": "1973-01-02",
+        "letzte": "2026-11-20",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.217,
+        "min": 7.19,
+        "max": 96.82
+      },
+      "usdzar": {
+        "zeilen": 11757,
+        "erste": "1980-01-02",
+        "letzte": "2026-11-20",
+        "median_abstand_tage": 1,
+        "anteil_gleiche_folgewerte": 0.036,
+        "min": 0.7371,
+        "max": 19.8177
+      }
+    },
+    "aufgenommen_utc": "2026-11-27T00:20Z",
+    "geprueft_utc": "2026-11-27T00:20Z",
+    "herkunft": "eigene Recherche"
   }
 ]
