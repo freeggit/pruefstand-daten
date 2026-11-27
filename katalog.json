@@ -8723,5 +8723,29 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-27T08:10Z",
     "geprueft_utc": "2026-11-27T08:10Z"
+  },
+  {
+    "id": "fcc_frequenzauktionen_termine",
+    "name": "FCC: Beginn und Abschluss der Frequenzauktionen (Tagesdatum)",
+    "url": "https://www.fcc.gov/auctions (Auktionsliste ab Auktion 1, 1994; je Auktion Start- und Schlussdatum, Bruttoerlös)",
+    "domain": "fcc.gov",
+    "bereich": "Staatliche Lizenzvergabe",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Frequenzauktionen binden Milliardenbeträge der Netzbetreiber und legen Wettbewerb für Jahre fest; Abschlusstage mit hohem Erlös könnten Telekom (XLC) gegenüber dem Weltindex kurzfristig belasten (Cramton 1997 zu Erlösen und Bieterkosten).",
+    "grund": "Neuer Bereich «Staatliche Lizenzvergabe» (Lernrunde 2026-11-27, Schritt 5). Öffentlich ohne Login; in dieser Umgebung HTTP 403, Abruf über die Action. Tagesdatum der Schlussrunde ist am selben Tag öffentlich. Wenige Ereignisse (rund 100 Auktionen seit 1994), daher N_MIN zu prüfen.",
+    "aufgenommen_utc": "2026-11-27T09:30:00Z"
+  },
+  {
+    "id": "boem_offshore_pachtauktionen",
+    "name": "BOEM/MMS: Offshore-Pachtauktionen Öl und Gas (Lease Sales) mit Datum, Geboten und Höchstgebotssumme",
+    "url": "https://www.data.boem.gov/ (Leasing, Lease Sale Statistics; Auktionen ab 1954)",
+    "domain": "boem.gov",
+    "bereich": "Staatliche Lizenzvergabe",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Höhe der Höchstgebote an Offshore-Pachtauktionen zeigt die Erwartung der Ölfirmen zu Preisen und Investitionen; überraschend hohe oder tiefe Summen könnten Energie (XLE, ff_enrgy) gegenüber dem Weltindex kurzfristig bewegen (Hendricks/Porter 1988 zu Informationen in Pachtgeboten).",
+    "grund": "Neuer Bereich «Staatliche Lizenzvergabe» (Lernrunde 2026-11-27); Historie vor 1990 (zweite Priorität) für Familie L (ff_enrgy). Öffentlich ohne Login; alte Seite lease-sale-statistics HTTP 404, Datenportal zu prüfen. Kein Doppel zu fedregister_interior_energie (dort nur Zahl der Federal-Register-Dokumente, keine Gebotssummen).",
+    "aufgenommen_utc": "2026-11-27T09:30:00Z"
   }
 ]
