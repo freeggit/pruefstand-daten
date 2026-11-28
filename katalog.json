@@ -8778,5 +8778,33 @@
     "reihen": [],
     "aufgenommen_utc": "2026-11-28T04:20Z",
     "geprueft_utc": "2026-11-28T04:20Z"
+  },
+  {
+    "id": "nga_asam_schiffsangriffe",
+    "name": "NGA ASAM: Angriffe und Piraterie gegen Handelsschiffe je Tag (ab 1978)",
+    "url": "https://msi.nga.mil/api/publications/asam?sort=date&output=json (Anti-Shipping Activity Messages, je Vorfall Datum, Region, Beschreibung)",
+    "domain": "msi.nga.mil",
+    "bereich": "Seeschifffahrt-Sicherheit",
+    "status": "kandidat",
+    "prioritaet": "normal",
+    "mechanismus": "Häufungen von Angriffen auf Tanker und Frachter an Engpässen (Hormus, Golf von Aden, Rotes Meer) erhöhen Fracht- und Versicherungsprämien und die Risikoprämie im Öl; das kann Energie (XLE, USO) gegenüber dem Weltindex in den Folgetagen stützen.",
+    "grund": "Neuer Bereich «Seeschifffahrt-Sicherheit» (Lernrunde 2026-11-28, Schritt 5). Öffentliche API ohne Login, Historie ab 1978 (Schwerpunkt Historie vor 1990). Publikationsfrist zu prüfen: Meldungen erscheinen oft Tage nach dem Vorfall, daher Veröffentlichungs- statt Vorfalldatum oder konservative Frist. Test 2026-11-28 aus dieser Umgebung: HTTP 503, nächster Lauf erneut.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-28T10:00:00Z",
+    "geprueft_utc": null
+  },
+  {
+    "id": "marad_msci_warnungen",
+    "name": "MARAD MSCI: Sicherheitswarnungen für die US-Handelsschifffahrt (Ausgabetag)",
+    "url": "https://www.maritime.dot.gov/msci-advisories (Advisories und Alerts mit Ausgabedatum, Archiv ab etwa 2005)",
+    "domain": "maritime.dot.gov",
+    "bereich": "Seeschifffahrt-Sicherheit",
+    "status": "kandidat",
+    "prioritaet": "tief",
+    "mechanismus": "Eine neue Warnung der US-Seefahrtsbehörde für ein Seegebiet ist ein amtliches Risikosignal mit Tagesdatum; es kann Öl (USO) und Energie (XLE) gegenüber dem Weltindex kurzfristig verteuern, weil Umwege und Prämien folgen.",
+    "grund": "Neuer Bereich «Seeschifffahrt-Sicherheit» (Lernrunde 2026-11-28, Schritt 5), unabhängig von NGA ASAM. Ausgabedatum ist am selben Tag öffentlich. Wenige Ereignisse und erst ab 2005, daher Priorität tief. Test 2026-11-28 aus dieser Umgebung: HTTP 403; Sperre nicht umgehen, Abruf allenfalls über die Action.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-28T10:00:00Z",
+    "geprueft_utc": null
   }
 ]
