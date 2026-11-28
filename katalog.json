@@ -8749,5 +8749,32 @@
     "grund": "Neuer Bereich «Staatliche Lizenzvergabe» (Lernrunde 2026-11-27); Historie vor 1990 (zweite Priorität) für Familie L (ff_enrgy). Öffentlich ohne Login; alte Seite lease-sale-statistics HTTP 404, Datenportal zu prüfen. Kein Doppel zu fedregister_interior_energie (dort nur Zahl der Federal-Register-Dokumente, keine Gebotssummen). | Lauf 2026-11-27T12:25Z: abgelehnt. data.boem.gov liefert nur Pachtdaten ohne Auktionsdatum und Gebot (LABRawData/mv_lease_area_block.txt: LEASE_EFF_DATE, keine Sale-Spalte; lstleasefixed.zip ebenso). Einzige Gesamtliste ist das PDF «All Lease Offerings» (Stand Februar 2024, letzter Eintrag Sale 259 vom 29.3.2023; Sales 260, 261, BBG1, BBG2 fehlen) = K5 nicht fortgeschrieben; nur als PDF (mit Standardbibliothek nicht verlässlich lesbar); rund 2 Auktionen pro Jahr, zu wenige Ereignisse. Einzelseiten je Sale (boem.gov/Sale-NNN) wären ein Ausweg, aber ohne einheitliches Format.",
     "aufgenommen_utc": "2026-11-27T09:30:00Z",
     "geprueft_utc": "2026-11-27T12:25Z"
+  },
+  {
+    "id": "aviation_safety_network_unfaelle",
+    "name": "Aviation Safety Network – Flugunfälle weltweit je Tag",
+    "url": "https://aviation-safety.net/database/",
+    "domain": "aviation-safety.net",
+    "bereich": "Firmenereignisse",
+    "status": "fehler",
+    "prioritaet": "hoch",
+    "mechanismus": "Grosse Flugunfälle drücken kurzfristig Fluggesellschaften und Flugzeugbauer (XLI) gegenüber dem Weltindex (Kaplanski/Levy 2010, Journal of Financial Economics).",
+    "grund": "Eigene Recherche Lauf 2026-11-28T04:20Z (Zusatz 6 Punkt 5; offene Kandidaten alle EDGAR über die Action oder gesperrt). Weltweite Ergänzung zu ntsb_luftfahrtunfaelle (nur USA). Test: Datenbankseite dblist.php liefert HTTP 403 (Cloudflare-Prüfseite) von dieser Umgebung; robots.txt verlangt Content-Signals. Sperre nicht umgangen (Befund); nächster Lauf erneut. Hinweis: Datenbank wird nachträglich ergänzt (revidierte Zählung), Datum = Unfalltag ≈ Bekanntgabetag bei grossen Unfällen.",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-28T04:20Z",
+    "geprueft_utc": "2026-11-28T04:20Z"
+  },
+  {
+    "id": "ny_warn_entlassungsmeldungen",
+    "name": "New York DOL WARN-Meldungen je Tag",
+    "url": "https://dol.ny.gov/legacy-warn-notices",
+    "domain": "dol.ny.gov",
+    "bereich": "Firmenereignisse",
+    "status": "abgelehnt",
+    "mechanismus": "Häufung angekündigter Massenentlassungen signalisiert Schwäche in Konsum und Industrie (XLY, XLI) vor amtlicher Arbeitsmarktstatistik.",
+    "grund": "Eigene Recherche Lauf 2026-11-28T04:20Z. K2: Meldungen nur als einzelne HTML-Seiten, Jahresarchive ab 2023 verlinkt; /2015- und /2016-warn-notices HTTP 404, /2022-warn-notices HTTP 403; keine maschinenlesbare Historie bis 2015 belegt. Zudem vierter WARN-Versuch nach ca_warn, texas_warn, wa_warn (alle abgelehnt).",
+    "reihen": [],
+    "aufgenommen_utc": "2026-11-28T04:20Z",
+    "geprueft_utc": "2026-11-28T04:20Z"
   }
 ]
