@@ -1,0 +1,11 @@
+{
+  "anzahl_urteile": {
+    "beschreibung": "Anzahl am Tag verkuendeter Urteile des US Supreme Court, 0 an Tagen ohne Verkuendung. Bis 30.9.2019 aus der Supreme Court Database (Release 2026_01, case centered, Citation, dateDecision, ohne decisionType 4 Decrees), ab Term 2019 aus den offiziellen Slip-Opinion-Listen von supremecourt.gov (Opinions of the Court inkl. Per Curiam).",
+    "einheit": "Anzahl Urteile",
+    "publikation": "taeglich: Urteile werden an der Sitzung verkuendet und gleichentags um ca. 10 Uhr ET auf supremecourt.gov als Slip Opinion veroeffentlicht (Seite Opinions of the Court)",
+    "quelle_url": "https://www.supremecourt.gov/opinions/slipopinion/26",
+    "revidiert": false,
+    "verdichtung": "Anzahl Urteile je Kalendertag (Verkuendungstag)",
+    "verfuegbar_nach_tagen": 0
+  }
+}
